@@ -1,6 +1,11 @@
 <?php
-$_SERVER['STATIC_ROOT'] = $MYSITE;
-$_SERVER['MYSITE'] = $MYSITE;
+	
+	use phpweb\Config\Site;
+	use phpweb\Data\Countries;
+    use phpweb\Data\Languages;
+    
+    $_SERVER['STATIC_ROOT'] = Site::$BaseUrl;
+$_SERVER['MYSITE'] = Site::$BaseUrl;
 
 // Use class names instead of colors
 ini_set('highlight.comment', 'comment');
@@ -275,7 +280,6 @@ function display_errors($errors)
 // previews and event information displays
 function display_event($event, $include_date = 1)
 {
-    global $COUNTRIES;
     // Current month (int)($_GET['cm'] ?: 0)
     global $cm;
     // Current year (int)($_GET['cy'] ?: 0)
@@ -352,7 +356,7 @@ function display_event($event, $include_date = 1)
     }
 
     // Print out country information
-    echo ' (<span class="location">' , $COUNTRIES[$event['country']] , '</span>)';
+    echo ' (<span class="location">' , Countries::COUNTRIES_BY_ALPHA_3[$event['country']] , '</span>)';
 ?>
  </td></tr>
  <tr bgcolor="#eeeeee" class="description"><td>
@@ -471,8 +475,6 @@ EOT;
 
 function site_header($title = '', $config = array())
 {
-    global $MYSITE;
-
     $defaults = array(
         "lang" => myphpnet_language(),
         "current" => "",
@@ -492,7 +494,7 @@ function site_header($title = '', $config = array())
         $config["headsup"] = get_near_usergroups();
     }
 
-    $lang = language_convert($config["lang"]);
+    $lang = Languages::Convert($config["lang"]);
     $curr = $config["current"];
     $classes = $config['classes'];
 
@@ -514,7 +516,6 @@ function site_header($title = '', $config = array())
 }
 function site_footer($config = array())
 {
-    global $MYSITE;
     require __DIR__ . "/footer.inc";
 }
 
@@ -530,7 +531,7 @@ function get_news_changes()
     if (!isset($_SERVER["BASE_PAGE"])) {
         return false;
     }
-    if ($_SERVER["BASE_PAGE"] == "index.php") {
+    if ($_SERVER["BASE_PAGE"] === "index.php") {
         return false;
     }
 
@@ -543,12 +544,12 @@ function get_news_changes()
 }
 function get_near_usergroups()
 {
-    global $COUNTRIES, $COUNTRY;
+    global  $COUNTRY;
 
     if (!myphpnet_showug()) {
         return false;
     }
-    if ($_SERVER["BASE_PAGE"] == "ug.php") {
+    if ($_SERVER["BASE_PAGE"] === "ug.php") {
         return false;
     }
     if (isset($_COOKIE["LAST_UG"]) && $_COOKIE["LAST_UG"] >= $_SERVER["REQUEST_TIME"]) {
@@ -568,21 +569,21 @@ function get_near_usergroups()
         $count,
         $COUNTRY,
         $count == 1 ? "" : "s",
-        $COUNTRIES[$COUNTRY]
+	    Countries::COUNTRIES_BY_ALPHA_3[$COUNTRY]
     );
 
 
 }
 function get_usergroups_in($country, &$allcountries = array()) {
-    global $COUNTRY_ALPHA_2_TO_3;
-
+    $alpha_2_to_3 = Countries::GetAlpha2To3();
+    
     $filename = $_SERVER["DOCUMENT_ROOT"] . "/backend/usergroups.json";
-
+    
     $matches = array();
     $data = json_decode(file_get_contents($filename), true);
     foreach($data["groups"] as $group) {
         if (isset($group["country"])) {
-            $allcountries[$COUNTRY_ALPHA_2_TO_3[$group["country"]]] = 1;
+            $allcountries[$alpha_2_to_3[$group["country"]]] = 1;
             if ($group["country"] == $country) {
                 $matches[] = $group;
             }

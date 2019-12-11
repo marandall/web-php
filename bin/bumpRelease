@@ -3,7 +3,6 @@
 (PHP_SAPI === 'cli') or die("Please run this script using the cli sapi");
 
 require_once __DIR__ . "/../include/branches.inc";
-require_once __DIR__ . "/../include/version.inc";
 require_once __DIR__ . "/../include/releases.inc";
 
 if ($_SERVER['argc'] < 1) {
@@ -12,11 +11,11 @@ if ($_SERVER['argc'] < 1) {
 }
 
 $major = intval($_SERVER['argv'][1]);
-isset($RELEASES[$major]) or die("Unkown major version $major");
+isset(\phpweb\Data\Versions::GetVersions()[$major]) or die("Unkown major version $major");
 $minor = isset($_SERVER['argv'][2]) ? intval($_SERVER['argv'][2]) : null;
 
 $version = get_current_release_for_branch($major, $minor);
-$info = $RELEASES[$major][$version] ?? null;
+$info = \phpweb\Data\Versions::GetVersions()[$major][$version] ?? null;
 
 if ($info === null) {
 	fwrite(STDERR, "Unable to find a current PHP release for {$major}.{$minor}\n");

@@ -1,6 +1,9 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'results.php';
-include __DIR__ . '/include/prepend.inc';
+	
+	use phpweb\Data\Languages;
+	
+	$_SERVER['BASE_PAGE'] = 'results.php';
+require_once __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/results.inc';
 
 if (!isset($_GET['l']) || !is_string($_GET['l'])) {
@@ -10,7 +13,7 @@ if (!isset($_GET['l']) || !is_string($_GET['l'])) {
 $lang = isset($_GET["l"]) ? (string)$_GET["l"] : "en";
 $query = isset($_GET["q"]) ? (string)$_GET["q"] : '';
 
-if (!isset($LANGUAGES[$lang])) {
+if (!isset(Languages::ACTIVE[$lang])) {
     $lang = "en";
 }
 

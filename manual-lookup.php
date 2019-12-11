@@ -1,6 +1,6 @@
 <?php
 $_SERVER['BASE_PAGE'] = 'manual-lookup.php';
-include __DIR__ . '/include/prepend.inc';
+require_once __DIR__ . '/include/prepend.inc';
 include __DIR__ . '/include/loadavg.inc';
 include __DIR__ . '/include/manual-lookup.inc';
 

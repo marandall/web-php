@@ -2,9 +2,11 @@
  name="PHP.net"
  description="PHP.net - Search"
  method="GET"
- action="<?php echo $MYSITE; ?>manual-lookup.php"
- searchForm="<?php echo $MYSITE; ?>"
- update="<?php echo $MYSITE; ?>phpnetsearch.src"
+ action="<?php use phpweb\Config\Site;
+	
+	 echo Site::$BaseUrl; ?>manual-lookup.php"
+ searchForm="<?php echo Site::$BaseUrl; ?>"
+ update="<?php echo Site::$BaseUrl; ?>phpnetsearch.src"
  updateCheckDays="7"
 >
 
@@ -19,8 +21,8 @@
 >
 
 <browser
- update="<?php echo $MYSITE; ?>phpnetsearch.src"
- updateIcon="<?php echo $MYSITE; ?>images/phpnetsearch.png"
+ update="<?php echo Site::$BaseUrl; ?>phpnetsearch.src"
+ updateIcon="<?php echo Site::$BaseUrl; ?>images/phpnetsearch.png"
  updateCheckDays="7"
 >
 

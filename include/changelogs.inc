@@ -34,4 +34,4 @@ function release_date($in) {
     echo "<time class='releasedate' datetime='{$for_tools}'>{$human_readable}</time>";
 }
 
-?>
+

@@ -1,5 +1,8 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'manual/help-translate.php';
+	
+	use phpweb\Data\Languages;
+	
+	$_SERVER['BASE_PAGE'] = 'manual/help-translate.php';
 include_once __DIR__ . '/../include/prepend.inc';
 include_once __DIR__ . '/../include/shared-manual.inc';
 site_header("Help translate the PHP Manual");
@@ -26,7 +29,7 @@ The following list of languages already contain SVN modules, and will show up on
 // $archived are manuals we have old versions of
 $archived = array('da', 'kr', 'pl', 'tw');
 
-foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
+foreach (Languages::INACTIVE_ONLINE as $cc => $lang) {
     $link = 'no archive';
     if (in_array($cc, $archived)) {
         $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';

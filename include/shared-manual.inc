@@ -13,7 +13,10 @@
 */
 
 // Ensure that our environment is set up
-include_once __DIR__ . '/prepend.inc';
+	use phpweb\Config\Site;
+	use phpweb\Data\Languages;
+	
+	include_once __DIR__ . '/prepend.inc';
 
 // Set variable defaults
 $PGI = array(); $SIDEBAR_DATA = '';
@@ -138,7 +141,7 @@ class ManualNotesSorter {
 // Print out all user notes for this manual page
 function manual_notes($notes) {
     // Get needed values
-    list($filename, $title) = $GLOBALS['PGI']['this'];
+    [$filename, $title] = $GLOBALS['PGI']['this'];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
@@ -211,7 +214,7 @@ function manual_notes_load($id)
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
-            @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
+            @[$id, $sect, $rate, $ts, $user, $note, $up, $down] = explode("|", $line);
             $notes[$id] = array(
                 "id"    => $id,
                 "sect"  => $sect,
@@ -249,7 +252,7 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 
     // Vote User Notes Div
     if ($voteOption) {
-        list($redir_filename) = $GLOBALS['PGI']['this'];
+        [$redir_filename] = $GLOBALS['PGI']['this'];
         if (substr($redir_filename, -4) == '.php') {
             $redir_filename = substr($redir_filename, 0, -4);
         }
@@ -381,8 +384,7 @@ function manual_navigation_methodname($methodname) {
 // Set up variables important for this page
 // including HTTP header information
 function manual_setup($setup) {
-    global $PGI, $MYSITE, $USERNOTES;
-    global $ACTIVE_ONLINE_LANGUAGES;
+    global $PGI, Site::$BaseUrl, $USERNOTES;
 
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED;
@@ -392,12 +394,12 @@ function manual_setup($setup) {
     }
     $PGI = $setup;
     // Set base href for this manual page
-    $base = 'manual/' . language_convert($setup['head'][1]) . "/";
+    $base = 'manual/' . Languages::Convert($setup['head'][1]) . "/";
     $_SERVER['BASE_PAGE'] = $base . $setup['this'][0];
-    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+    $_SERVER['BASE_HREF'] = Site::$BaseUrl . $_SERVER['BASE_PAGE'];
 
     // Load user note for this page
-    list($filename, $title) = $PGI['this'];
+    [$filename, $title] = $PGI['this'];
 
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
@@ -420,20 +422,20 @@ function manual_setup($setup) {
     $__RELATED['toc_deprecated'] = manual_navigation_deprecated($setup);
 
     $config = array(
-        "current" => "docs",
-        "breadcrumbs" => $breadcrumbs,
-        "languages"   => array_keys($ACTIVE_ONLINE_LANGUAGES),
-        "meta-navigation" => array(
+	    "current" => "docs",
+	    "breadcrumbs" => $breadcrumbs,
+	    "languages"   => array_keys(Languages::GetActiveLanguages()),
+	    "meta-navigation" => array(
             "contents" => $base . $setup["home"][0],
             "index"    => $base . $setup["up"][0],
             "prev"     => $base . $setup["prev"][0],
             "next"     => $base . $setup["next"][0],
         ),
-        "lang" => $setup["head"][1],
-        "thispage" => $setup["this"][0],
-        "prev" => $setup["prev"],
-        "next" => $setup["next"],
-        "cache" => $lastmod,
+	    "lang" => $setup["head"][1],
+	    "thispage" => $setup["this"][0],
+	    "prev" => $setup["prev"],
+	    "next" => $setup["next"],
+	    "cache" => $lastmod,
     );
     site_header($setup["this"][1] . " - Manual ", $config);
 
@@ -453,11 +455,9 @@ PAGE_TOOLS;
 }
 
 function manual_language_chooser($currentlang, $currentpage) {
-    global $ACTIVE_ONLINE_LANGUAGES;
-
     $links = array();
 
-    foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
+    foreach (Languages::GetActiveLanguages() as $lang => $name) {
         $links[] = array("$lang/$currentpage", $name, $lang);
     }
 
@@ -467,7 +467,7 @@ function manual_language_chooser($currentlang, $currentpage) {
         $out = '';
         $tab = str_repeat('  ', 6);
         foreach ($links as $link) {
-            list($value, $text, $lang) = $link;
+            [$value, $text, $lang] = $link;
             $selected = '';
             if ($lang == $currentlang) {
                 $selected = ' selected="selected"';

@@ -1,0 +1,118 @@
+<?php
+	
+	declare(strict_types=1);
+	
+	namespace phpweb\UI\Controllers;
+	
+	use phpweb\Data\Languages;
+	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\BasicCallbackPanel;
+	
+	class DocsController extends PHPWebTemplate
+	{
+		public function setup() {
+			$this->setPageTitle('Documentation');
+			$this->setActivePage('docs');
+			
+			$this->render([$this, 'renderContents']);
+		}
+		
+		protected function renderContents() {
+			?>
+            <div class="content-box">
+
+                <p>
+                    The PHP Manual is available online in a selection of languages.
+                    Please pick a language from the list below.
+                </p>
+
+                <p>
+                    More information about php.net URL shortcuts by visiting our
+                    <a href="urlhowto.php">URL howto page</a>.
+                </p>
+
+                <p>
+                    Note, that many languages are just under translation, and
+                    the untranslated parts are still in English. Also some translated
+                    parts might be outdated. The translation teams are open to
+                    contributions.
+                </p>
+            </div>
+
+            <table class="standard">
+                <tr>
+                    <th>Formats</th>
+                    <th>Destinations</th>
+                </tr>
+                <tr>
+                    <th class="sub">View Online</th>
+                    <td>
+						<?php
+							
+							// List all manual languages viewable online
+                            $languages = Languages::ACTIVE;
+							$lastlang = end($languages);
+							foreach ($languages as $langcode => $langname) {
+								if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
+									continue;
+								}
+								
+								// Make preferred language bold
+								if ($langcode === $this->getLanguage()) {
+									echo "<strong>";
+								}
+								
+								echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
+								echo ($lastlang != $langname) ? ",\n" : "\n";
+								
+								if ($langcode === $this->getLanguage()) {
+									echo "</strong>";
+								}
+							}
+						
+						?>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="sub">Downloads</th>
+                    <td>
+                        For downloadable formats, please visit our
+                        <a href="download-docs.php">documentation downloads</a> page.
+                    </td>
+                </tr>
+            </table>
+
+            <div>
+                <p>
+                    Documentation for PHP 4 has been removed from the
+                    manual, but there is archived version still available. For
+                    more information, please read <a href="/manual/php4.php">
+                        Documentation for PHP 4</a>.
+                </p>
+            </div>
+
+            <h2 class="content-header">More documentation</h2>
+            <ul class="content-box listed">
+                <li>
+                    If you are interested in how the documentation is edited and translated,
+                    you should read the <a href="http://doc.php.net/tutorial/">Documentation HOWTO</a>.
+                </li>
+                <li>
+                    <a href="http://gtk.php.net/">PHP-GTK related documentation</a>
+                    is hosted on the PHP-GTK website.
+                </li>
+                <li>
+                    <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
+                        packages</a> can be found on a separate server.
+                </li>
+                <li>
+                    You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
+                        2.0 Manual</a> on our site, which we only host for historical purposes.
+                    The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>, and
+                    the <a href="/manual/php4.php">PHP 4 Manual</a>.
+                </li>
+            </ul>
+			<?php
+		}
+	}
+	

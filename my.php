@@ -1,12 +1,15 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'my.php';
+	
+	use phpweb\Data\Countries;
+	
+	$_SERVER['BASE_PAGE'] = 'my.php';
 include_once __DIR__ . '/include/prepend.inc';
 
 // Try to make this page non-cached
 header_nocache();
 
 // Languages array copy and options to list
-$langs   = $ACTIVE_ONLINE_LANGUAGES;
+$langs   = \phpweb\Data\Languages::GetActiveLanguages();
 $options = array();
 
 // We have post data, and it is an available language
@@ -158,7 +161,7 @@ foreach ($langinfo as $lin => $lid) {
 <div class="indent">
 <?php
 if (i2c_valid_country()) {
-    echo "We detected that you are from <b>" . $COUNTRIES[$COUNTRY] . "</b>";
+    echo "We detected that you are from <b>" . Countries::COUNTRIES_BY_ALPHA_3[$COUNTRY] . "</b>";
 } else {
     echo "We were unable to detect your country";
 }

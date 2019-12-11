@@ -10,8 +10,9 @@
 */
 
 // Ensure that our environment is set up
-include_once __DIR__ . '/include/prepend.inc';
-include_once __DIR__ . '/include/languages.inc';
+    use phpweb\Data\Versions;
+    
+    include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/loadavg.inc';
 include_once __DIR__ . '/include/errors.inc';
 
@@ -78,7 +79,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 //     default language manual accessibility on mirror sites through /manual/filename)
 // @todo do we rely on this? how about removing it...
 if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
-    if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
+    if (!isset(\phpweb\Data\Languages::INACTIVE_ONLINE[$array[1]])) {
         mirror_redirect("/manual/$LANG/$array[1]");
     }
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
@@ -136,8 +137,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 
     $df = $dlinfo[1];
     if(strpos($df, "7-LATEST") !== false) {
-        include_once __DIR__ . "/include/version.inc";
-        [ $latest ] = release_get_latest();
+        [ $latest ] = Versions::GetLatestRelease();
         $df = str_replace("7-LATEST", $latest, $df);
     }
 
@@ -623,10 +623,10 @@ if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
 // ============================================================================
 // For manual pages for inactive languages, point visitors to the English page
 if (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
-    isset($INACTIVE_ONLINE_LANGUAGES[$match[1]])) {
+    isset(\phpweb\Data\Languages::INACTIVE_ONLINE[$match[1]])) {
     $try = find_manual_page("en", $match[2]);
     if ($try) {
-        error_inactive_manual_page($INACTIVE_ONLINE_LANGUAGES[$match[1]], $try);
+        error_inactive_manual_page(\phpweb\Data\Languages::INACTIVE_ONLINE[$match[1]], $try);
     }
 }
 

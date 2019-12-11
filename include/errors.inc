@@ -6,13 +6,16 @@
 */
 
 // A 'good looking' 404 error message page
-function error_404()
+	use phpweb\Config\Site;
+	use phpweb\Data\Languages;
+	
+	function error_404()
 {
-    global $MYSITE;
+    global Site::$BaseUrl;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n<p><strong>" .
-         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> not found on this server.</p>\n";
     site_footer();
     exit;
@@ -21,12 +24,12 @@ function error_404()
 // A 'good looking' 404 error message page for manual pages
 function error_404_manual()
 {
-    global $MYSITE;
+    global Site::$BaseUrl;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n" .
          "<p>The manual page you are looking for (<strong>" .
-         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is not available on this server right now. " .
          "Please check back later, or if the problem persists, " .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
@@ -37,22 +40,23 @@ function error_404_manual()
 // An error message page for manual pages from inactive languages
 function error_inactive_manual_page($lang_name, $en_page)
 {
-    global $MYSITE, $ACTIVE_ONLINE_LANGUAGES;
+    global Site::$BaseUrl;
     status_header(404);
     site_header('Page gone', array("noindex"));
     echo "<h1>Page gone</h1>\n" .
          "<p>The " . htmlspecialchars($lang_name) . " manual page you are looking for (<strong>" .
-         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is no longer available.</p>\n";
-    $en_url = htmlspecialchars(substr($MYSITE, 0, -1) . $en_page);
+    $en_url = htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . $en_page);
     echo "<p>The English page is available at <a href=\"{$en_url}\">{$en_url}</a></p>\n";
     echo "<p>Several other languages are also available:</p>\n";
     echo "<ul>\n";
-    foreach ($ACTIVE_ONLINE_LANGUAGES as $alt_lang => $alt_lang_name) {
+    
+    foreach (Languages::GetActiveLanguages() as $alt_lang => $alt_lang_name) {
         if ($alt_lang === "en") {
             continue;
         }
-        $alt_url = htmlspecialchars(substr($MYSITE, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
+        $alt_url = htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . str_replace("/en/", "/{$alt_lang}/", $en_page));
         echo "<li><a href=\"{$alt_url}\">" . htmlspecialchars($alt_lang_name) . "</a></li>\n";
     }
     echo "</ul>\n";
@@ -63,11 +67,11 @@ function error_inactive_manual_page($lang_name, $en_page)
 // This service is not working right now
 function error_noservice()
 {
-    global $MYSITE;
+    global Site::$BaseUrl;
     site_header('Service not working', array("noindex"));
     echo "<h1>Service not working</h1>\n" .
          "<p>The service you tried to access with <strong>" .
-         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr(Site::$BaseUrl, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> is not available on this server right now. " .
          "Please check back later, or if the problem persists, " .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";

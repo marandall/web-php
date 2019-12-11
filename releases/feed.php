@@ -1,7 +1,6 @@
 <?php
 header("Content-Type: application/atom+xml");
 
-include __DIR__ . "/../include/version.inc";
 
 echo <<< XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -21,7 +20,7 @@ XML;
 /* FIX silly editor highlighting */?><?php
 
 // Flatten major versions out of RELEASES.
-$RELEASED_VERSIONS = array_reduce($RELEASES, 'array_merge', []);
+$RELEASED_VERSIONS = array_reduce(\phpweb\Data\Versions::GetVersions(), 'array_merge', []);
 $FEED_UPDATED =  0;
 krsort($RELEASED_VERSIONS);
 foreach ($RELEASED_VERSIONS as $version => $release) {

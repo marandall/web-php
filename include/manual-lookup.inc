@@ -80,7 +80,7 @@ function find_manual_page_slow($lang, $keyword)
 
     // Fall back to English, if the language was not English,
     // and nothing was found so far for any of the prefixes
-    if ($lang != "en") {
+    if ($lang !== "en") {
         foreach ($sections as $section) {
             $found = tryprefix("en", $keyword, $section);
             if ($found) { return $found; }
@@ -124,10 +124,10 @@ function find_manual_page($lang, $keyword)
 
     // Try the preferred language first, then the
     // English one in case no page is found
-    $langs = ($lang != 'en') ? array($lang, 'en') : array('en');
+    $langs = ($lang !== 'en') ? array($lang, 'en') : array('en');
 
     // Reformat keyword, drop anything in parenthesis --- except a search for the underscore only. (Bug #63490)
-    if ($keyword != '_') {
+    if ($keyword !== '_') {
         $keyword = str_replace('_', '-', $keyword);
     }
     if (strpos($keyword, '(') !== FALSE) {

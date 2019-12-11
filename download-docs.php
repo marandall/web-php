@@ -3,7 +3,7 @@ $_SERVER['BASE_PAGE'] = 'download-docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
 if (!empty($_GET['active_langs'])) {
-    echo serialize($ACTIVE_ONLINE_LANGUAGES);
+    echo serialize(\phpweb\Data\Languages::GetActiveLanguages());
     exit;
 }
 
@@ -88,8 +88,8 @@ $files = array(); $found_formats = array();
 $filepath = $filename = '';
 
 // Go through all possible manual languages
-foreach ($LANGUAGES as $langcode => $language) {
-    if(isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && $MYSITE !== 'http://docs.php.net/') {
+foreach (\phpweb\Data\Languages::ACTIVE as $langcode => $language) {
+    if(isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && \phpweb\Config\Site::$BaseUrl !== 'http://docs.php.net/') {
        continue;
     }
 
@@ -178,7 +178,7 @@ if (count($found_formats) == 0) {
             $cellclass = "";
         }
 
-        echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</th>\n";
+        echo "<tr>\n<th class=\"subl\">" . \phpweb\Data\Languages::ACTIVE[$langcode] . "</th>\n";
 
         foreach ($formats as $formatname => $extension) {
 

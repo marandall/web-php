@@ -1,7 +1,9 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'git-php.php';
+	
+	use phpweb\Tools\EmailValidation;
+	
+	$_SERVER['BASE_PAGE'] = 'git-php.php';
 include_once __DIR__ . '/include/prepend.inc';
-include_once __DIR__ . '/include/email-validation.inc';
 include_once __DIR__ . '/include/posttohost.inc';
 
 // Force the account requests to php.net
@@ -71,7 +73,8 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['password'])) {
         $error .= "You must supply a desired password. <br>";
     }
-    if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
+    
+    if (empty($_POST['email']) || !EmailValidation::IsEmailable($cleaned['email'])) {
         $error .= "You must supply a proper email address. <br>";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
@@ -113,7 +116,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 <p>
  Thank you. Your request has been sent. You should hear something within the
  next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time()+604800); ?>
- then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
+ then please send an email to the appropriate <a href="/lists/">mailing list</a>:
 </p>
 <ul>
  <li>Internals:     <a href="mailto:internals@lists.php.net">internals@lists.php.net</a></li>
@@ -141,7 +144,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 <p>
  All Git commit messages to the PHP sources get sent to the php-git mailing lists.
  You should subscribe yourself to one or more of these mailing lists. Instructions
- for subscribing are on the <a href="/mailing-lists.php">Mailing Lists</a> page.
+ for subscribing are on the <a href="/lists/">Mailing Lists</a> page.
 </p>
 
 <p>

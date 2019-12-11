@@ -1,5 +1,8 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'urlhowto.php';
+	
+	use phpweb\Config\Site;
+	
+	$_SERVER['BASE_PAGE'] = 'urlhowto.php';
 include_once __DIR__ . '/include/prepend.inc';
 
 $SIDEBAR_DATA='
@@ -9,11 +12,11 @@ $SIDEBAR_DATA='
  examples you can try out:
 </p>
 <ul class="simple">
- <li><a href="'.$MYSITE.'echo">/echo</a></li>
- <li><a href="'.$MYSITE.'it/echo">/it/echo</a></li>
- <li><a href="'.$MYSITE.'imap">/imap</a></li>
- <li><a href="'.$MYSITE.'downloads">/downloads</a></li>
- <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
+ <li><a href="'. Site::$BaseUrl.'echo">/echo</a></li>
+ <li><a href="'. Site::$BaseUrl.'it/echo">/it/echo</a></li>
+ <li><a href="'. Site::$BaseUrl.'imap">/imap</a></li>
+ <li><a href="'. Site::$BaseUrl.'downloads">/downloads</a></li>
+ <li><a href="'. Site::$BaseUrl.'searchterm">/searchterm</a></li>
 </ul>
 
 <h3>My PHP.net</h3>
@@ -26,8 +29,8 @@ $SIDEBAR_DATA='
 
 site_header("URL Howto", array("current" => "help"));
 function a($href) {
-    global $MYSITE;
-	echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
+    global Site::$BaseUrl;
+	echo '<a href="' . Site::$BaseUrl . $href . '">' . Site::$BaseUrl . $href . '</a>';
 }
 
 ?>
@@ -41,21 +44,13 @@ function a($href) {
 </p>
 
 <p>
- Note, that these shortcuts are expected to work on all mirror
- sites, not just at the main site. If you find that some of these
- shortcuts are not working on your mirror site, please report them
- as a "PHP.net Website Problem" at
- <a href="http://bugs.php.net/">http://bugs.php.net/</a>.
-</p>
-
-<p>
  There are currently three types of URLs you can use this way.
 </p>
 
 <h2>Page shortcuts</h2>
 
 <p>
- If you write in a PHP.net URL (e.g. <kbd><?php echo $MYSITE; ?>get-involved</kbd>,
+ If you write in a PHP.net URL (e.g. <kbd><?php echo Site::$BaseUrl; ?>get-involved</kbd>,
  first this URL is matched against the PHP.net pages. If there is
  a page named <em>get-involved.php</em>, then you'll get that page
  immediately. This type of shortcut makes easy to type in a link
@@ -68,7 +63,7 @@ function a($href) {
 <p>
  If your URL can't be matched with a page name, a manual page
  is searched for your query. This is the case for the
- <kbd><?php echo $MYSITE; ?>preg_match</kbd> URL. The following pages
+ <kbd><?php echo Site::$BaseUrl; ?>preg_match</kbd> URL. The following pages
  are searched for in the manual:</p>
 <ul>
  <li>Chapter pages (e.g. <?php a("installation") ?>)</li>
@@ -85,43 +80,43 @@ function a($href) {
 </p>
 <ul>
  <li>Extension <abbr title="Table of Contents">TOC</abbr>:
-  <kbd><?php echo $MYSITE ?><var>book.extname</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>book.extname</var></kbd>
   (e.g. <?php a("book.dom")?>).
  </li>
  <li>Extension intro pages:
-  <kbd><?php echo $MYSITE ?><var>intro.extname</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>intro.extname</var></kbd>
   (e.g. <?php a("intro.array") ?>).
  </li>
  <li>Extension setup <abbr title="Table of Contents">TOC</abbr>:
-  <kbd><?php echo $MYSITE ?><var>extname.setup</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>extname.setup</var></kbd>
   (e.g. <?php a("intl.setup") ?>).
  </li>
  <li>Extension install chapter:
-  <kbd><?php echo $MYSITE ?><var>extname.installation</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>extname.installation</var></kbd>
   (e.g. <?php a("apc.installation") ?>).
  </li>
  <li>Extension configuration:
-  <kbd><?php echo $MYSITE ?><var>extname.configuration</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>extname.configuration</var></kbd>
   (e.g. <?php a("session.configuration") ?>).
  </li>
  <li>Extension resources:
-  <kbd><?php echo $MYSITE ?><var>extname.resources</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>extname.resources</var></kbd>
   (e.g. <?php a("mysql.resources") ?>).
  </li>
  <li>Extension constants:
-  <kbd><?php echo $MYSITE ?><var>extname.constants</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>extname.constants</var></kbd>
   (e.g. <?php a("image.constants") ?>).
  </li>
  <li>Class synopsis:
-  <kbd><?php echo $MYSITE ?><var>class.classname</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>class.classname</var></kbd>
   (e.g. <?php a("class.xmlreader") ?>).
  </li>
  <li>Class method:
-  <kbd><?php echo $MYSITE ?><var>classname.methodname</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>classname.methodname</var></kbd>
   (e.g. <?php a("pdo.query") ?>).
  </li>
  <li>Functions:
-  <kbd><?php echo $MYSITE ?><var>function.functionname</var></kbd>
+  <kbd><?php echo Site::$BaseUrl ?><var>function.functionname</var></kbd>
   (e.g. <?php a("function.strpos") ?>).
  </li>
 </ul>
@@ -132,7 +127,7 @@ function a($href) {
  always override this setting by explicitly providing
  the language you want to get to. You can embed the language
  in the URL before the manual search term.
- <kbd><?php echo $MYSITE; ?>hu/sort</kbd> will bring up
+ <kbd><?php echo Site::$BaseUrl; ?>hu/sort</kbd> will bring up
  the Hungarian manual page for sort() for example.
 </p>
 
@@ -142,7 +137,7 @@ function a($href) {
  At last, if there is no PHP page, and there is no manual
  page matching your query, a search is issued on the site with
  the query you typed into the URL. An example of this kind
- of URL is <kbd><?php echo $MYSITE; ?><var>search_for_this</var></kbd>.
+ of URL is <kbd><?php echo Site::$BaseUrl; ?><var>search_for_this</var></kbd>.
  The exact behaviour of this search is affected by
  <a href="/my.php">your own My PHP.net settings</a>.
 </p>

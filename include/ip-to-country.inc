@@ -38,7 +38,9 @@
 */
 
 // Start the detection
-i2c_go();
+	use phpweb\Data\Countries;
+	
+	i2c_go();
 
 // Try to find out the country of the user and
 // set a cookie in the browser (in case there is no
@@ -52,7 +54,7 @@ function i2c_go()
 
     // User already has a country detected with this IP stored
     if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== FALSE) {
-       list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
+       [$COUNTRY, $storedip] = explode(",", $_COOKIE['COUNTRY']);
        if ($storedip == $ipnum) { return TRUE; }
     }
 
@@ -179,8 +181,8 @@ function i2c_search_in_db($ip, $idx)
 // Check if the current country is valid
 function i2c_valid_country()
 {
-    global $COUNTRY, $COUNTRIES;
-    return (!empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
+    global $COUNTRY;
+    return (!empty($COUNTRY) && $COUNTRY != "NA" && isset(Countries::COUNTRIES_BY_ALPHA_3[$COUNTRY]));
 }
 
 // Returns the real IP address of the user

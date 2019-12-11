@@ -8,7 +8,7 @@ if (empty($_SERVER["DOCUMENT_ROOT"])) {
     $_SERVER["DOCUMENT_ROOT"] = __DIR__ . "/../";
 }
 include __DIR__ . '/../include/prepend.inc';
-if (!isset($ACTIVE_ONLINE_LANGUAGES[$_GET["lang"]])) {
+if (!isset(\phpweb\Data\Languages::GetActiveLanguages()[$_GET["lang"]])) {
     header("Location: http://php.net");
 }
 $lang = $_GET["lang"];

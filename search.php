@@ -31,13 +31,13 @@ if (!empty($_FORM['pattern'])) {
 
         case "manual":
         case "404manual":
-            mirror_redirect($MYSITE . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
+            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
             break;
 
         // Covers the rest
         default:
             $p = urlencode($_FORM['show']);
-            mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG&p=$p");
+            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "results.php?q={$ucp}&l=$LANG&p=$p");
             break;
     }
 }
@@ -47,10 +47,10 @@ else {
 
     // Print out common header
     $link = array(
-        "rel"   => "search",
-        "type"  => "application/opensearchdescription+xml",
-        "href"  => $MYSITE . "phpnetimprovedsearch.src",
-        "title" => "Add PHP.net search"
+	    "rel"   => "search",
+	    "type"  => "application/opensearchdescription+xml",
+	    "href"  => \phpweb\Config\Site::$BaseUrl . "phpnetimprovedsearch.src",
+	    "title" => "Add PHP.net search"
     );
     site_header("Search", array("link" => array($link), "current" => "help"));
 

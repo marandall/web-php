@@ -124,10 +124,7 @@ if ($process) {
 
         // There was no error returned
         else {
-            echo '<p>Your submission was successful -- thanks for contributing! Note ',
-                 'that it will not show up for up to a few hours on some of the <a ',
-                 'href="/mirrors.php">mirrors</a>, but it will find its way to all of ',
-                 'our mirrors in due time.</p>';
+            echo '<p>Your submission was successful -- thanks for contributing!</p>';
         }
 
         // Print out common footer, and end page

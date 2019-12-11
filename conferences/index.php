@@ -6,9 +6,9 @@ include_once __DIR__ . '/../include/pregen-news.inc';
 
 mirror_setcookie("LAST_NEWS", $_SERVER["REQUEST_TIME"], 60*60*24*365);
 site_header("PHP Conferences around the world", array(
-    'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'feed.atom">',
-    'current'  => 'community',
-    'css' => array('home.css'),
+	'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . \phpweb\Config\Site::$BaseUrl . 'feed.atom">',
+	'current'  => 'community',
+	'css' => array('home.css'),
 ));
 
 $content = "<div class='home-content'>";
@@ -33,7 +33,7 @@ foreach($frontpage as $entry) {
     $id   = parse_url($entry["id"], PHP_URL_FRAGMENT);
     $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
-    $content .= '<h3 class="newstitle title"><a href="'. $MYSITE.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
+    $content .= '<h3 class="newstitle title"><a href="'. \phpweb\Config\Site::$BaseUrl.$link .'" name="' . $id . '">' . $entry["title"] . '</a></h3>';
     $content .= '<div class="newsimage">';
     $content .= sprintf('<a href="%s"><img src="/images/news/%s"></a>', $entry["newsImage"]["link"], $entry["newsImage"]["content"]);
     $content .= '</div>';

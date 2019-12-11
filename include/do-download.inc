@@ -5,8 +5,10 @@
    download, and logs the download if it's something
    we would like to know about (PHP binary or source).
 */
-
-function get_actual_download_file($file)
+	
+	use phpweb\Config\Site;
+	
+	function get_actual_download_file($file)
 {
     // Could be a normal download or a manual download file
     $possible_files = array($file => TRUE, "manual/$file" => FALSE);
@@ -25,7 +27,7 @@ function get_actual_download_file($file)
 // Download a file from a mirror site
 function download_file($mirror, $file)
 {
-    global $MYSITE;
+    global Site::$BaseUrl;
 
     // Redirect to the particular file
     if (!headers_sent()) {

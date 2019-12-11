@@ -2,106 +2,106 @@
 
 // Define some constants, and $MIRRORS array
 // Mirror type constants
-define('MIRROR_DOWNLOAD', 0);
-define('MIRROR_STANDARD', 1);
-define('MIRROR_SPECIAL',  2);
-define('MIRROR_VIRTUAL',  3);
+	use phpweb\Config\Site;
+	use phpweb\Data\Languages;
+	
+	define('MIRROR_DOWNLOAD', 0);
+	define('MIRROR_STANDARD', 1);
+	define('MIRROR_SPECIAL', 2);
+	define('MIRROR_VIRTUAL', 3);
 
 // Mirror status constants
-define('MIRROR_OK',          0);
-define('MIRROR_NOTACTIVE',   1);
-define('MIRROR_OUTDATED',    2);
-define('MIRROR_DOESNOTWORK', 3);
-
-$MIRRORS = array(
-    "https://www.php.net/" => array(
-    "DEU", "MyraCloud", FALSE,
-    "https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
-    "en", MIRROR_OK),
-);
-
-// Define $COUNTRIES array
-include __DIR__ . '/countries.inc';
-
-// Define $COUNTRIES_ALPHA2 array
-include __DIR__ . '/countries-alpha2.inc';
-
-// Define $COUNTRY_ALPHA_2_TO_3 array
-include __DIR__ . '/countries_alpha_mapping.inc';
-
-// Define $LANGUAGES array
-include __DIR__ . '/languages.inc';
+	define('MIRROR_OK', 0);
+	define('MIRROR_NOTACTIVE', 1);
+	define('MIRROR_OUTDATED', 2);
+	define('MIRROR_DOESNOTWORK', 3);
+	
+	$MIRRORS = [
+		"https://www.php.net/" => [
+			"DEU", "MyraCloud", FALSE,
+			"https://myracloud.com/en/", MIRROR_SPECIAL, TRUE,
+			"en", MIRROR_OK,
+		],
+	];
 
 // Returns true if the current (or specified)
 // site is the primary mirror site
-function is_primary_site($site = FALSE)
-{
-    global $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return ($site == "https://www.php.net/" );
-}
+	function is_primary_site($site = FALSE) {
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		return ($site == "https://www.php.net/");
+	}
 
 // Returns true if the current (or specified)
 // mirror site is an official mirror site
-function is_official_mirror($site = FALSE)
-{
-    return (mirror_type($site) != MIRROR_VIRTUAL);
-}
+	function is_official_mirror($site = FALSE) {
+		return (mirror_type($site) != MIRROR_VIRTUAL);
+	}
 
 // Returns the current (or specified)
 // mirror site's default language
-function default_language($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : FALSE);
-}
+	function default_language($site = FALSE) {
+		global $MIRRORS;
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		
+		return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : FALSE);
+	}
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local search support
-function have_search($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
-}
+	function have_search($site = FALSE) {
+		global $MIRRORS;
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
+	}
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local stats support
-function have_stats($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][2] : FALSE);
-}
+	function have_stats($site = FALSE) {
+		global $MIRRORS;
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		return (isset($MIRRORS[$site]) ? $MIRRORS[$site][2] : FALSE);
+	}
 
 // Returns the current (or specified)
 // mirror site's provider's name
-function mirror_provider($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-
-    if (isset($MIRRORS[$site])) {
-       return $MIRRORS[$site][1];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-       return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
-    }
-
-    return false;
-}
+	function mirror_provider($site = FALSE) {
+		global $MIRRORS;
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		
+		if (isset($MIRRORS[$site])) {
+			return $MIRRORS[$site][1];
+		}
+		elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+			return $MIRRORS[$_SERVER['SERVER_ADDR']][1];
+		}
+		
+		return false;
+	}
 
 // Returns the current (or specified)
 // mirror site's provider's URL
-function mirror_provider_url($site = FALSE)
-{
-    global $MIRRORS,$MYSITE;
-    if (!$site) { $site = $MYSITE; }
+	function mirror_provider_url($site = FALSE) {
+		global $MIRRORS;
+		
+    if (!$site) {
+	    $site = Site::$BaseUrl;
+    }
 
     if (isset($MIRRORS[$site])) {
-        return $MIRRORS[$site][3];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-        return $MIRRORS[$_SERVER['SERVER_ADDR']][3];
+	    return $MIRRORS[$site][3];
+    }
+    elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+	    return $MIRRORS[$_SERVER['SERVER_ADDR']][3];
     }
 
     return false;
@@ -109,334 +109,345 @@ function mirror_provider_url($site = FALSE)
 
 // Returns the current (or specified)
 // mirror site's type (use the constants!)
-function mirror_type($site = FALSE)
-{
-    global $MIRRORS, $MYSITE;
-    if (!$site) { $site = $MYSITE; }
-
-    if (isset($MIRRORS[$site])) {
-        return $MIRRORS[$site][4];
-    } elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-        return $MIRRORS[$_SERVER['SERVER_ADDR']][4];
-    }
-
-    return false;
-}
+	function mirror_type($site = FALSE) {
+		global $MIRRORS;
+		if (!$site) {
+			$site = Site::$BaseUrl;
+		}
+		
+		if (isset($MIRRORS[$site])) {
+			return $MIRRORS[$site][4];
+		}
+		elseif (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
+			return $MIRRORS[$_SERVER['SERVER_ADDR']][4];
+		}
+		
+		return false;
+	}
 
 // Redirect to an URI on this mirror site or outside this site
-function mirror_redirect($absoluteURI)
-{
-    global $MYSITE;
-
-    // Test if there is no protocol spec
-    // in the URL, then prepend local site URI
-    if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
-        $absoluteURI = substr($MYSITE, 0, -1) . $absoluteURI;
-    }
-
-    // Do a redirection, if headers are not sent
-    if (!headers_sent()) {
-        header("Location: $absoluteURI");
-    }
-
-    // Always exit (the page is not to be displayed)
-    exit;
-}
+	function mirror_redirect($absoluteURI) {
+		
+		// Test if there is no protocol spec
+		// in the URL, then prepend local site URI
+		if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
+			$absoluteURI = substr(Site::$BaseUrl, 0, -1) . $absoluteURI;
+		}
+		
+		// Do a redirection, if headers are not sent
+		if (!headers_sent()) {
+			header("Location: $absoluteURI");
+		}
+		
+		// Always exit (the page is not to be displayed)
+		exit;
+	}
 
 // Set a cookie for all the .php.net sites for the root
 // dir with $name and $content. Provide $exptime relatively
 // to the current time!
-function mirror_setcookie($name, $content, $exptime)
-{
-    if (!headers_sent()) {
-        if (is_official_mirror()) {
-            return setcookie($name, $content, time() + $exptime, '/', '.php.net');
-        } else {
-            return setcookie($name, $content, time() + $exptime, '/');
-        }
-    } else {
-        return FALSE;
-    }
-}
+	function mirror_setcookie($name, $content, $exptime) {
+		if (!headers_sent()) {
+			if (is_official_mirror()) {
+				return setcookie($name, $content, time() + $exptime, '/', '.php.net');
+			}
+			else {
+				return setcookie($name, $content, time() + $exptime, '/');
+			}
+		}
+		else {
+			return FALSE;
+		}
+	}
 
 // Use this function to write out proper headers on
 // pages where the content should not be publicly cached
-function header_nocache()
-{
-    // Only try to send out headers in case
-    // those were not sent already
-    if (!headers_sent()) {
-        header("Cache-Control: private");
-        header("Pragma: no-cache");
-    }
-}
+	function header_nocache() {
+		// Only try to send out headers in case
+		// those were not sent already
+		if (!headers_sent()) {
+			header("Cache-Control: private");
+			header("Pragma: no-cache");
+		}
+	}
 
 
 // Compatibility function to fetch data from external source
-function fetch_contents($url, $headers = false) {
-
-    $terrors_setting = ini_set('track_errors', true);
-
-    // A mysterious and elusive bug on us3 allows this to work, but the other methods do not
-    // So for now, use Curl first (curl++)
-    if(function_exists('curl_exec')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
-        curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
-
-        $data = curl_exec($ch);
-        curl_close($ch);
-
-        if ($headers) {
-            $array = explode("\n", $data);
-            foreach($array as $line) {
-                if (strlen($line)<=2) {
-                    return $header;
-                } else {
-                    $header[] = $line;
-                }
-            }
-        }
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
-                'ERROR_LAST' => $php_errormsg,
-            );
-        }
-
-        return $data;
-    }
-
-    if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-        $context = null;
-        $opts    = array('user_agent'  => 'php.net');
-
-        if (version_compare(PHP_VERSION, '5.1.0', '>')) {
-            $context = stream_context_get_default(array('http' => $opts));
-        }
-        elseif (version_compare(PHP_VERSION, '5.0.0', '>')) {
-            $context = stream_context_create(array('http' => $opts));
-        }
-        if ($context) {
-            $data = @file_get_contents($url, false, $context);
-        } else {
-            $data = @file_get_contents($url, false);
-        }
-
-        if ($headers) {
-            return $http_response_header;
-        }
-
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
-                'ERROR_LAST' => $php_errormsg,
-                'URL'        => $url,
-            );
-        }
-
-        return $data;
-    }
-
-    $array = parse_url($url);
-    if(function_exists('fsockopen') && $fd = @fsockopen($array["host"], 80, $errno, $errstr, 15)) {
-        $data = "";
-        $header = array();
-        $body = false;
-
-        $path = $array["path"];
-        if (isset($array["query"])) {
-            $path .= "?" . $array["query"];
-        }
-        fputs($fd,"GET {$path} HTTP/1.0\r\n");
-        fputs($fd,"Host: {$array["host"]}\r\n");
-        fputs($fd,"User-Agent: php.net\r\n");
-        fputs($fd,"Connection: close\r\n\r\n");
-
-        while($line = fgets($fd)) {
-            if($body) {
-                $data .= $line;
-            } elseif(strlen($line)<=2) {
-                $body = true;
-            } else {
-                $header[] = $line;
-            }
-        }
-        fclose($fd);
-
-        if ($headers) {
-            return $header;
-        }
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with fsockopen',
-                'ERROR_LAST' => $php_errormsg,
-            );
-        }
-
-        return $data;
-    }
-
-    // TODO: Log if we get here
-    // Redirect to www.php.net ?
-    return array(
-        'ERROR_NOTE' => 'Unable to find a way to retrieve data',
-        'ERROR_LAST' => $php_errormsg,
-    );
-}
+	function fetch_contents($url, $headers = false) {
+		
+		$terrors_setting = ini_set('track_errors', true);
+		
+		// A mysterious and elusive bug on us3 allows this to work, but the other methods do not
+		// So for now, use Curl first (curl++)
+		if (function_exists('curl_exec')) {
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
+			curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
+			
+			$data = curl_exec($ch);
+			curl_close($ch);
+			
+			if ($headers) {
+				$array = explode("\n", $data);
+				foreach ($array as $line) {
+					if (strlen($line) <= 2) {
+						return $header;
+					}
+					else {
+						$header[] = $line;
+					}
+				}
+			}
+			if (!$data) {
+				return [
+					'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
+					'ERROR_LAST' => $php_errormsg,
+				];
+			}
+			
+			return $data;
+		}
+		
+		if (function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
+			$context = null;
+			$opts    = ['user_agent' => 'php.net'];
+			
+			if (version_compare(PHP_VERSION, '5.1.0', '>')) {
+				$context = stream_context_get_default(['http' => $opts]);
+			}
+			elseif (version_compare(PHP_VERSION, '5.0.0', '>')) {
+				$context = stream_context_create(['http' => $opts]);
+			}
+			if ($context) {
+				$data = @file_get_contents($url, false, $context);
+			}
+			else {
+				$data = @file_get_contents($url, false);
+			}
+			
+			if ($headers) {
+				return $http_response_header;
+			}
+			
+			if (!$data) {
+				return [
+					'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
+					'ERROR_LAST' => $php_errormsg,
+					'URL'        => $url,
+				];
+			}
+			
+			return $data;
+		}
+		
+		$array = parse_url($url);
+		if (function_exists('fsockopen') && $fd = @fsockopen($array["host"], 80, $errno, $errstr, 15)) {
+			$data   = "";
+			$header = [];
+			$body   = false;
+			
+			$path = $array["path"];
+			if (isset($array["query"])) {
+				$path .= "?" . $array["query"];
+			}
+			fputs($fd, "GET {$path} HTTP/1.0\r\n");
+			fputs($fd, "Host: {$array["host"]}\r\n");
+			fputs($fd, "User-Agent: php.net\r\n");
+			fputs($fd, "Connection: close\r\n\r\n");
+			
+			while ($line = fgets($fd)) {
+				if ($body) {
+					$data .= $line;
+				}
+				elseif (strlen($line) <= 2) {
+					$body = true;
+				}
+				else {
+					$header[] = $line;
+				}
+			}
+			fclose($fd);
+			
+			if ($headers) {
+				return $header;
+			}
+			if (!$data) {
+				return [
+					'ERROR_NOTE' => 'Unable to find a way to retrieve data with fsockopen',
+					'ERROR_LAST' => $php_errormsg,
+				];
+			}
+			
+			return $data;
+		}
+		
+		// TODO: Log if we get here
+		// Redirect to www.php.net ?
+		return [
+			'ERROR_NOTE' => 'Unable to find a way to retrieve data',
+			'ERROR_LAST' => $php_errormsg,
+		];
+	}
 
 // Compatibility function to fetch headers from external source
-function fetch_header($url, $header) {
-    $headers = array();
-
-    if(function_exists("get_headers") && ini_get('allow_url_fopen')) {
-        $headers = get_headers($url, 1);
-    } else {
-        $data = fetch_contents($url, true);
-        if (isset($data["ERROR_NOTE"])) {
-            return null;
-        }
-        foreach($data as $line) {
-            if (($pos = strpos($line, ":")) !== false) {
-                $headers[substr($line, 0, $pos)] = trim(substr($line, $pos+1));
-            } else {
-                $headers[0] = trim($line);
-            }
-        }
-    }
-    if (!is_array($headers) || empty($headers)) {
-        return null;
-    }
-    if (is_string($header)) {
-        $header = strtolower($header);
-        $headers = array_change_key_case($headers, CASE_LOWER);
-    }
-
-    return isset($headers[$header]) ? $headers[$header] : null;
-}
-
-function get_available_sqlites() {
-
-	$allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
-	$avail      = 0;
-
-	if (function_exists('sqlite_open')) {
-		$avail += 1;
-	}
-	if (class_exists('sqlite3')) {
-		$avail += 2;
-	}
-	if (method_exists('PDO', 'getavailabledrivers')) {
-		foreach (PDO::getavailabledrivers() as $driver) {
-			switch ($driver) {
-				case 'sqlite':
-					$avail += 4;
-					break;
-				case 'sqlite2':
-					$avail += 8;
-					break;
+	function fetch_header($url, $header) {
+		$headers = [];
+		
+		if (function_exists("get_headers") && ini_get('allow_url_fopen')) {
+			$headers = get_headers($url, 1);
+		}
+		else {
+			$data = fetch_contents($url, true);
+			if (isset($data["ERROR_NOTE"])) {
+				return null;
+			}
+			foreach ($data as $line) {
+				if (($pos = strpos($line, ":")) !== false) {
+					$headers[substr($line, 0, $pos)] = trim(substr($line, $pos + 1));
+				}
+				else {
+					$headers[0] = trim($line);
+				}
 			}
 		}
+		if (!is_array($headers) || empty($headers)) {
+			return null;
+		}
+		if (is_string($header)) {
+			$header  = strtolower($header);
+			$headers = array_change_key_case($headers, CASE_LOWER);
+		}
+		
+		return isset($headers[$header]) ? $headers[$header] : null;
 	}
-	return $avail;
-}
+	
+	function get_available_sqlites() {
+		
+		$allsqlites = [1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2'];
+		$avail      = 0;
+		
+		if (function_exists('sqlite_open')) {
+			$avail += 1;
+		}
+		if (class_exists('sqlite3')) {
+			$avail += 2;
+		}
+		if (method_exists('PDO', 'getavailabledrivers')) {
+			foreach (PDO::getavailabledrivers() as $driver) {
+				switch ($driver) {
+					case 'sqlite':
+						$avail += 4;
+						break;
+					case 'sqlite2':
+						$avail += 8;
+						break;
+				}
+			}
+		}
+		return $avail;
+	}
 
 // Get all manual prefix search sections
-function get_manual_search_sections() {
-    return array(
-        "", "book.", "ref.", "function.", "class.",
-        "features.", "control-structures.", "language.",
-        "about.", "faq.",
-    );
-}
-
-function get_shortname($page) {
-    // We can at the very least kill the .php
-    $shorturl = substr($page, 0, -4);
-
-    // If its a "root page", we can't shorten it more
-    if (strpos($shorturl, "/") === false) {
-        return $shorturl;
-    }
-
-    // Manual pages get be quite short
-    if (strpos($page, "manual/") !== false) {
-        $sections = get_manual_search_sections();
-        // Kill the first entry (empty)
-        array_shift($sections);
-
-        // We can atleast remove manual/xx/
-        $shorturl = substr($page, strrpos($page, "/")+1);
-
-        foreach($sections as $section) {
-            // If we know this section
-            if (strpos($shorturl, $section) === 0) {
-                // We can make it even shorter
-                return substr($shorturl, strlen($section), -4);
-                break;
-            }
-        }
-
-        // Didn't recognize the section, we better not shorten it at all
-        return $page;
-    }
-
-    // /conferences/index.php can be shortened to /conferences
-    if (strpos($page, "conferences/") !== false) {
-        return "conferences";
-    }
-
-    return $shorturl;
-}
+	function get_manual_search_sections() {
+		return [
+			"", "book.", "ref.", "function.", "class.",
+			"features.", "control-structures.", "language.",
+			"about.", "faq.",
+		];
+	}
+	
+	function get_shortname($page) {
+		// We can at the very least kill the .php
+		$shorturl = substr($page, 0, -4);
+		
+		// If its a "root page", we can't shorten it more
+		if (strpos($shorturl, "/") === false) {
+			return $shorturl;
+		}
+		
+		// Manual pages get be quite short
+		if (strpos($page, "manual/") !== false) {
+			$sections = get_manual_search_sections();
+			// Kill the first entry (empty)
+			array_shift($sections);
+			
+			// We can atleast remove manual/xx/
+			$shorturl = substr($page, strrpos($page, "/") + 1);
+			
+			foreach ($sections as $section) {
+				// If we know this section
+				if (strpos($shorturl, $section) === 0) {
+					// We can make it even shorter
+					return substr($shorturl, strlen($section), -4);
+					break;
+				}
+			}
+			
+			// Didn't recognize the section, we better not shorten it at all
+			return $page;
+		}
+		
+		// /conferences/index.php can be shortened to /conferences
+		if (strpos($page, "conferences/") !== false) {
+			return "conferences";
+		}
+		
+		return $shorturl;
+	}
 
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
-
-if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
-    $proto = "http";
-} else {
-    $proto = "https";
-}
-
-if($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-    $msite  =      'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
-} else {
-    $MYSITE = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
-    $msite  =     'https://' . $_SERVER["SERVER_NAME"] . '/';
-}
+	
+	if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on") {
+		$proto = "http";
+	}
+	else {
+		$proto = "https";
+	}
+	
+	if ($_SERVER["SERVER_PORT"] != '80' && $_SERVER["SERVER_PORT"] != 443) {
+		Site::$BaseUrl = $proto . '://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+		$msite                        = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/';
+	}
+	else {
+		Site::$BaseUrl = $proto . '://' . $_SERVER["SERVER_NAME"] . '/';
+		$msite                        = 'https://' . $_SERVER["SERVER_NAME"] . '/';
+	}
 
 
 // If the mirror is not registered with this name, provide defaults
 // (no country code, no search, no stats, English default language ...)
-if (!isset($MIRRORS[$MYSITE])) {
-    $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
-}
+	if (!isset($MIRRORS[Site::$BaseUrl])) {
+		$MIRRORS[Site::$BaseUrl] = ["xx", Site::$BaseUrl, FALSE, Site::$BaseUrl, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK];
+	}
 
 // Override mirror language with local preference
-if (isset($_SERVER['MIRROR_LANGUAGE'])) {
-    if (isset($LANGUAGES[$_SERVER['MIRROR_LANGUAGE']])) {
-        $MIRRORS[$MYSITE][6] = $_SERVER['MIRROR_LANGUAGE'];
-    }
-}
+	if (isset($_SERVER['MIRROR_LANGUAGE'])) {
+		if (isset(Languages::ACTIVE[$_SERVER['MIRROR_LANGUAGE']])) {
+			$MIRRORS[Site::$BaseUrl][6] = $_SERVER['MIRROR_LANGUAGE'];
+		}
+	}
 
 // Fallback to English in case the language
 // set is definitely not supported
-if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
-    $MIRRORS[$MYSITE][6] = "en";
-}
+	if (!isset(Languages::ACTIVE[$MIRRORS[Site::$BaseUrl][6]])) {
+		$MIRRORS[Site::$BaseUrl][6] = "en";
+	}
 
 // Override central stats information if specified in vhost
-if (isset($_SERVER['MIRROR_STATS'])) {
-    $MIRRORS[$MYSITE][2] = TRUE;
-}
+	if (isset($_SERVER['MIRROR_STATS'])) {
+		$MIRRORS[Site::$BaseUrl][2] = TRUE;
+	}
 
 // Provide base href information to make relative links on
 // shortcut URL accessed pages work without redirection
-if (isset($_SERVER['BASE_PAGE'])) {
-    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-} else { unset($_SERVER['BASE_HREF']); }
+	if (isset($_SERVER['BASE_PAGE'])) {
+		$_SERVER['BASE_HREF'] = Site::$BaseUrl . $_SERVER['BASE_PAGE'];
+	}
+	else {
+		unset($_SERVER['BASE_HREF']);
+	}

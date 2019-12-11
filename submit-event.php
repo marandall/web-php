@@ -1,8 +1,11 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'submit-event.php';
+	
+	use phpweb\Data\Countries;
+	use phpweb\Tools\EmailValidation;
+	
+	$_SERVER['BASE_PAGE'] = 'submit-event.php';
 include_once __DIR__ . '/include/prepend.inc';
 include_once __DIR__ . '/include/posttohost.inc';
-include_once __DIR__ . '/include/email-validation.inc';
 site_header("Submit an Event", array("current" => "community"));
 
 // No errors, processing depends on POST data
@@ -32,7 +35,7 @@ foreach($vars as $varname) {
 if ($process) {
 
     // Clean and validate data
-    if (!is_emailable_address($_POST['email'])) {
+    if (!EmailValidation::IsEmailable($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
     }
 
@@ -42,7 +45,8 @@ if ($process) {
      * in include/email-validation.inc :: blacklisted().
      */
     $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
-    if (blacklisted($uemail)) {
+    
+    if (EmailValidation::CheckBlacklist($uemail)) {
         $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
 
@@ -221,7 +225,7 @@ if ($process && count($errors) === 0) {
   <td>
    <select name="country" class="max">
     <option value="">- Select a country -</option>
-    <?php display_options($COUNTRIES, $_POST['country']);?>
+    <?php display_options(Countries::COUNTRIES_BY_ALPHA_3, $_POST['country']);?>
    </select>
   </td>
  </tr>

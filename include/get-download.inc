@@ -33,7 +33,7 @@ $size = 0;
 if ($file === FALSE) {
         $info = "<p>
  The file you requested (<strong>" . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . "</strong>) is not found on
- this server (<strong>{$MYSITE}</strong>).</p>";
+ this server (<strong>{\phpweb\Data\Site::$BaseUrl}</strong>).</p>";
 
     echo <<<EOT
 <h1>Download not found</h1>

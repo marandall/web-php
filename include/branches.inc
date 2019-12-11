@@ -1,6 +1,8 @@
 <?php
-include_once __DIR__ . '/releases.inc';
-include_once __DIR__ . '/version.inc';
+	
+	use phpweb\Data\Versions;
+	
+	include_once __DIR__ . '/releases.inc';
 
 /* Branch overrides. For situations where we've changed the exact dates for a
  * branch's active support and security fix EOLs, these can be reflected here.
@@ -381,14 +383,14 @@ function version_array($version, $length = null)
 }
 
 function get_current_release_for_branch(int $major, ?int $minor): ?string {
-	global $RELEASES, $OLDRELEASES;
+	global $OLDRELEASES;
 
 	$prefix = "{$major}.";
 	if ($minor !== null) {
 		$prefix .= "{$minor}.";
 	}
 
-	foreach (($RELEASES[$major] ?? []) as $version => $_) {
+	foreach ((Versions::GetVersions()[$major] ?? []) as $version => $_) {
 		if (!strncmp($prefix, $version, strlen($prefix))) {
 			return $version;
 		}

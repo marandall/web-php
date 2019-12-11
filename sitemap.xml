@@ -71,16 +71,7 @@
   <loc>http://php.net/manual/</loc>
  </url>
  <url>
-  <loc>http://php.net/mailing-lists.php</loc>
- </url>
- <url>
-  <loc>http://php.net/mirror-info.php</loc>
- </url>
- <url>
-  <loc>http://php.net/mirror.php</loc>
- </url>
- <url>
-  <loc>http://php.net/mirroring.php</loc>
+  <loc>http://php.net/lists/</loc>
  </url>
  <url>
   <loc>http://php.net/my.php</loc>
