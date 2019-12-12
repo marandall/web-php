@@ -4,14 +4,17 @@
 	
 	namespace phpweb\UI\Controllers;
 	
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class SecurityNoteController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('A note on security in PHP');
 			$this->setActivePage('docs');
-			$this->render([$this, 'renderContents']);
+			
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

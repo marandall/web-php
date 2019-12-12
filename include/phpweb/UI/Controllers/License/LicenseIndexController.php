@@ -4,17 +4,19 @@
 	
 	namespace phpweb\UI\Controllers\License;
 	
-	use phpweb\UI\Templates\BasicCallbackPanel;
+	use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class LicenseIndexController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle("License Information");
 			$this->setActivePage('help');
 			
 			$this->addSidePanel(new BasicCallbackPanel('', [$this, 'renderPanel']));
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderPanel() {

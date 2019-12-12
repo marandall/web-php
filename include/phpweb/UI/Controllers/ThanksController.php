@@ -7,15 +7,17 @@
 	use phpweb\Data\Countries;
 	use phpweb\Data\Mirrors;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class ThanksController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Thanks');
 			$this->setActivePage('community');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderContents() {

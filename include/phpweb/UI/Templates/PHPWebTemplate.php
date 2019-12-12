@@ -6,8 +6,10 @@
 	
 	
 	use Exception;
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	
-	class PHPWebTemplate
+	abstract class PHPWebTemplate
 	{
 		/** @var string[] */
 		private $css_files = [
@@ -40,13 +42,7 @@
 		];
 		
 		
-		public function __invoke() {
-			$this->setup();
-		}
-		
-		public function setup() {
-		
-		}
+		abstract public function __invoke(Request $request): Response;
 		
 		public function getLanguage(): string {
 			return 'en';
@@ -81,15 +77,16 @@
 			$this->page_title = $page_title;
 		}
 		
-		protected function render(callable $internal): void {
+		protected function render(callable $internal): Response {
 			try {
 				ob_start();
 				$this->renderInternal($internal);
-				echo ob_get_clean();
+
+				return new Response(ob_get_clean(), 200, ['Content-Type' => 'text/html']);
 			}
 			catch (Exception $ex) {
 				ob_get_clean();
-				die('Error: ' . $ex->getMessage());
+				return new Response('Unexpected error: ' . (string)$ex, 500, ['Content-Type' => 'text/html']);
 			}
 		}
 		

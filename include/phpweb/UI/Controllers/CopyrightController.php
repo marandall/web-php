@@ -4,17 +4,19 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class CopyrightController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Website Copyright');
 			$this->setActivePage('footer');
 			
 			$this->addSidePanel(new BasicCallbackPanel('', [$this, 'renderPanel']));
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderPanel() {

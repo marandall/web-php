@@ -4,15 +4,17 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class PrivacyController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Privacy Policy');
 			$this->setActivePage('footer');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderContents() {

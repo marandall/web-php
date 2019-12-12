@@ -163,7 +163,11 @@ function recentEOLBranchesHTML(int $count): string {
 	foreach (get_eol_branches() as $major => $branches) {
 		foreach ($branches as $branch => $detail) {
 			$detail_date = $detail['date'];
-			while (isset($eol[$detail_date])) $detail_date++;
+			
+			while (isset($eol[$detail_date])) {
+				$detail_date++;
+			}
+			
 			$eol[$detail_date] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail_date));
 		}
 	}

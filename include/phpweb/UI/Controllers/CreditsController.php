@@ -4,17 +4,19 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\BasicCallbackPanel as BasicCallbackPanelAlias;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class CreditsController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Credits');
 			$this->setActivePage('community');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderContents() {

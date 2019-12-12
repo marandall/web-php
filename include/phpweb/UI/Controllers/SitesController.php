@@ -5,17 +5,19 @@
 	namespace phpweb\UI\Controllers;
 	
 	use Closure;
-	use phpweb\UI\Templates\BasicCallbackPanel;
+    use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class SitesController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('A Tourist\'s Guide');
 			$this->setActivePage('help');
 			
 			$this->addSidePanel(new BasicCallbackPanel('', Closure::fromCallable([$this, 'renderPanel'])));
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderPanel() {

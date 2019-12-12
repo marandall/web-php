@@ -4,15 +4,17 @@
 	
 	namespace phpweb\UI\Controllers\License;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class ContributorGuidelinesController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('PHP Contributor Guidelines for Code Developers');
 			$this->setActivePage('help');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

@@ -5,15 +5,17 @@
 	namespace phpweb\UI\Controllers;
 	
 	use Closure;
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class GetInvolvedController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Get Involved');
 			$this->addSidePanel(new BasicCallbackPanel('', Closure::fromCallable([$this, 'renderPanel'])));
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderPanel() {

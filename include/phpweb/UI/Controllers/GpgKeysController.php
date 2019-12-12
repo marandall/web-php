@@ -5,15 +5,17 @@
 	namespace phpweb\UI\Controllers;
 	
 	use phpweb\Data\GpgKeys;
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class GpgKeysController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('GPG Keys');
 			$this->setActivePage('download');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

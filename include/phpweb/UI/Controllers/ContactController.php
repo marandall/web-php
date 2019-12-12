@@ -4,16 +4,18 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class ContactController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Contact');
 			$this->setActivePage('community');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderContents() {

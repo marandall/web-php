@@ -5,16 +5,18 @@
 	namespace phpweb\UI\Controllers;
 	
 	use phpweb\Data\Languages;
-	use phpweb\UI\Templates\PHPWebTemplate;
+    use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\PHPWebTemplate;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class DocsController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Documentation');
 			$this->setActivePage('docs');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderContents() {

@@ -4,15 +4,17 @@
 	
 	namespace phpweb\UI\Controllers\Lists;
 	
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class UnsubscribeController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Unsubscribe from Mailing Lists');
 			$this->setActivePage('community');
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

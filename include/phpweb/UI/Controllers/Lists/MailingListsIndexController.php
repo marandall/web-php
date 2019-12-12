@@ -5,13 +5,15 @@
 	namespace phpweb\UI\Controllers\Lists;
 	
 	use phpweb\Data\MailingLists;
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\Tools\EmailValidation;
 	use phpweb\UI\Templates\BasicPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class MailingListsIndexController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Mailing Lists');
 			$this->setActivePage('community');
 			
@@ -19,7 +21,7 @@
 			    $this->submit();
             }
 			
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

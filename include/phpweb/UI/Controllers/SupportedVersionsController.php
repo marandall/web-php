@@ -4,14 +4,16 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class SupportedVersionsController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 		    $this->setPageTitle('Supported Versions');
 		    $this->setActivePage('docs');
-		    $this->render([$this, 'renderContents']);
+		    return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

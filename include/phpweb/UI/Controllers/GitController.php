@@ -5,18 +5,20 @@
 	namespace phpweb\UI\Controllers;
 	
 	use Closure;
-	use phpweb\UI\Templates\BasicCallbackPanel as BasicCallbackPanelAlias;
+    use phpweb\Framework\Request;
+    use phpweb\Framework\Response;
+    use phpweb\UI\Templates\BasicCallbackPanel as BasicCallbackPanelAlias;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class GitController extends PHPWebTemplate
 	{
-		public function setup() {
+		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Git Access');
 			$this->setActivePage('community');
 			
 			$this->addSidePanel(new BasicCallbackPanelAlias('', Closure::fromCallable([$this, 'renderPanel'])));
-			$this->render([$this, 'renderContents']);
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderPanel() {

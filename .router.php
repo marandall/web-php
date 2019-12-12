@@ -1,5 +1,10 @@
 <?php
 	
+	use phpweb\Config\Site;
+	use phpweb\Framework\Request;
+	use phpweb\Framework\Response;
+	use phpweb\Framework\Visitor;
+	
 	require_once __DIR__ . '/include/prepend.inc';
 	
 	$_SERVER["SERVER_ADDR"] = $_SERVER["HTTP_HOST"];
@@ -8,6 +13,8 @@
 	$afilename = $_SERVER["DOCUMENT_ROOT"] . $filename;
 	$afilename = realpath($afilename);
 	$len       = strlen($_SERVER["DOCUMENT_ROOT"]);
+	
+	Site::$BaseUrl = $_SERVER['STATIC_ROOT'];
 	
 	$redirects = [
 		'/mailing-lists.php' => '/lists/',
@@ -43,9 +50,21 @@
 	];
 	
 	$request_uri = $_SERVER['REQUEST_URI'] ?? '';
-	$class_id    = $routes[$request_uri] ?? null;
+	
+	$visitor = new Visitor($_COOKIE);
+	$request = new Request(
+		$request_uri,
+		$_GET,
+		$_POST,
+		$_SERVER,
+		$visitor
+	);
+	
+	$class_id = $routes[$request_uri] ?? null;
 	if ($class_id !== null) {
-		(new $class_id)();
+		/** @var Response $response */
+		$response = (new $class_id)($request);
+		$response->write();
 		return;
 	}
 	
