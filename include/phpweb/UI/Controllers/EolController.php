@@ -4,6 +4,7 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Data\Branches;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
@@ -11,7 +12,7 @@
 	class EolController extends PHPWebTemplate
 	{
 		public function __invoke(Request $request): Response {
-			// TODO: Implement __invoke() method.
+		    return $this->render([$this, 'renderContent']);
 		}
 		
 		public function renderContent() {
@@ -27,7 +28,7 @@
 				</tr>
 				</thead>
 				<tbody>
-				<?php foreach (get_eol_branches() as $major => $branches): ?>
+				<?php foreach (Branches::GetEolBranches() as $major => $branches): ?>
 					<?php foreach ($branches as $branch => $detail): ?>
 						<?php $eolDate = get_branch_security_eol_date($branch) ?>
 						<?php $eolPeriod = format_interval($eolDate, null) ?>
@@ -45,7 +46,7 @@
 								</a>
 							</td>
 							<td>
-								<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
+								<?= Branches::MIGRATION_NOTES[$branch] ?? '' ?>
 							</td>
 						</tr>
 					<?php endforeach ?>

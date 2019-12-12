@@ -48,6 +48,64 @@
 			'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a><br>The end of life for PHP 4.4 also marks the end of life for PHP 4 as a whole.',
 		];
 		
+		public static function GetAllBranches(): array {
+			$branches = array();
+			
+			foreach (Releases::GetOldReleases() as $major => $releases) {
+				foreach ($releases as $version => $release) {
+					if ($branch = version_number_to_branch($version)) {
+						if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+							$branches[$major][$branch] = $release;
+							$branches[$major][$branch]['version'] = $version;
+						}
+					}
+				}
+			}
+			
+			foreach (Releases::GetCurrentReleases() as $major => $releases) {
+				foreach ($releases as $version => $release) {
+					if ($branch = version_number_to_branch($version)) {
+						if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
+							$branches[$major][$branch] = $release;
+							$branches[$major][$branch]['version'] = $version;
+						}
+					}
+				}
+			}
+			
+			krsort($branches);
+			foreach ($branches as $major => &$branch) {
+				krsort($branch);
+			}
+			
+			return $branches;
+		}
+		
+		public static function GetActiveBranches($include_recent_eols = true): array {
+			$branches = array();
+			$now = new \DateTime();
+			
+			foreach (Releases::GetCurrentReleases() as $major => $releases) {
+				foreach ($releases as $version => $release) {
+					if ($branch = version_number_to_branch($version)) {
+						$threshold = get_branch_security_eol_date($branch);
+						if ($include_recent_eols) {
+							$threshold->add(new \DateInterval('P28D'));
+						}
+						if ($now < $threshold) {
+							$branches[$major][$branch] = $release;
+							$branches[$major][$branch]['version'] = $version;
+						}
+					}
+				}
+				if (!empty($branches[$major])) {
+					ksort($branches[$major]);
+				}
+			}
+			
+			ksort($branches);
+			return $branches;
+		}
 		
 		/**
 		 * If you provide an array to $always_include, note that the version numbers
@@ -57,7 +115,7 @@
 		public static function GetEolBranches($always_include = null) {
 			$always_include = $always_include ?: [];
 			$branches       = [];
-			$now            = new DateTime();
+			$now            = new \DateTime();
 			
 			// Gather the last release on each branch into a convenient array.
 			foreach (Releases::GetOldReleases() as $major => $releases) {
@@ -78,7 +136,7 @@
 			
 			/* Exclude releases from active branches, where active is defined as "in
 			 * the $RELEASES array and not explicitly marked as EOL there". */
-			foreach ($GLOBALS['RELEASES'] as $major => $releases) {
+			foreach (Releases::GetCurrentReleases() as $major => $releases) {
 				foreach ($releases as $version => $release) {
 					if ($branch = version_number_to_branch($version)) {
 						if ($now < get_branch_security_eol_date($branch)) {
@@ -102,8 +160,8 @@
 					$parts = explode('.', $version);
 					$major = $parts[0];
 					
-					if (isset($GLOBALS['RELEASES'][$major][$version])) {
-						$release = $GLOBALS['RELEASES'][$major][$version];
+					$release = Releases::GetCurrentReleases()[$major][$version] ?? null;
+					if ($release !== null) {
 						if ($branch = version_number_to_branch($version)) {
 							$branches[$major][$branch] = [
 								'date'    => strtotime($release['source'][0]['date']),

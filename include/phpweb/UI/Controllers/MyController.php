@@ -4,6 +4,7 @@
 	
 	namespace phpweb\UI\Controllers;
 	
+	use phpweb\Data\Countries;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
