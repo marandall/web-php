@@ -11,7 +11,6 @@
 	
 	function error_404()
 {
-    global Site::$BaseUrl;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n<p><strong>" .
@@ -24,7 +23,6 @@
 // A 'good looking' 404 error message page for manual pages
 function error_404_manual()
 {
-    global Site::$BaseUrl;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n" .
@@ -40,7 +38,6 @@ function error_404_manual()
 // An error message page for manual pages from inactive languages
 function error_inactive_manual_page($lang_name, $en_page)
 {
-    global Site::$BaseUrl;
     status_header(404);
     site_header('Page gone', array("noindex"));
     echo "<h1>Page gone</h1>\n" .
@@ -67,7 +64,6 @@ function error_inactive_manual_page($lang_name, $en_page)
 // This service is not working right now
 function error_noservice()
 {
-    global Site::$BaseUrl;
     site_header('Service not working', array("noindex"));
     echo "<h1>Service not working</h1>\n" .
          "<p>The service you tried to access with <strong>" .

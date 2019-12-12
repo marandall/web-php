@@ -384,7 +384,7 @@ function manual_navigation_methodname($methodname) {
 // Set up variables important for this page
 // including HTTP header information
 function manual_setup($setup) {
-    global $PGI, Site::$BaseUrl, $USERNOTES;
+    global $PGI, $USERNOTES;
 
     //TODO: get rid of this hack to get the related items into manual_footer
     global $__RELATED;
