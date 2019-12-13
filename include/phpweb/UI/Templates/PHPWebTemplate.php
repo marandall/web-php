@@ -13,10 +13,10 @@
 	{
 		/** @var string[] */
 		private $css_files = [
-			'/fonts/Fira/fira.css',
-			'/fonts/Font-Awesome/css/fontello.css',
-			'/styles/theme-base.css',
-			'/styles/theme-medium.css',
+			'/static/fonts/Fira/fira.css',
+			'/static/fonts/Font-Awesome/css/fontello.css',
+			'/static/styles/theme-base.css',
+			'/static/styles/theme-medium.css',
 		];
 		
 		/** @var string[] */
@@ -132,7 +132,7 @@
 				<?php endforeach ?>
 
                 <!--[if IE]>
-                <script src="/js/ext/html5.js"></script>
+                <script src="/static/js/ext/html5.js"></script>
                 <![endif]-->
             </head>
             <body>
@@ -214,10 +214,10 @@
 			<?php
 				$jsfiles = ["ext/modernizr.js", "ext/hogan-2.0.0.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "search.js", "common.js"];
 				foreach ($jsfiles as $filename) {
-					$path = dirname(__DIR__) . '/js/' . $filename;
+					$path = dirname(__DIR__) . '/static/js/' . $filename;
 					echo '<script src="/cached.php?t=' . @filemtime(
 							$path
-						) . '&amp;f=/js/' . $filename . '"></script>' . "\n";
+						) . '&amp;f=/static/js/' . $filename . '"></script>' . "\n";
 				}
 			?>
 

@@ -44,6 +44,10 @@
 			<br />
 			
 			<a href="<?= htmlspecialchars($base) ?>changelog">Combined Changelog</a>
+   
+			<h4>Install Guides</h4>
+			
+			<a href="<?= htmlspecialchars($base) ?>install/ubuntu_ppa">Ubuntu (PPA)</a>
 			<?php
 		}
 		

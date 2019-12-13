@@ -500,7 +500,7 @@ function site_header($title = '', $config = array())
 
     if (isset($_COOKIE["MD"]) || isset($_GET["MD"])) {
         $classes .= "markdown-content";
-        $config["css_overwrite"] = array("/styles/i-love-markdown.css");
+        $config["css_overwrite"] = array("/static/styles/i-love-markdown.css");
     }
 
     if (empty($title)) {

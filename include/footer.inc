@@ -86,8 +86,8 @@
 <?php
  $jsfiles = array("ext/modernizr.js", "ext/hogan-2.0.0.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "search.js", "common.js");
  foreach ($jsfiles as $filename) {
-   $path = dirname(__DIR__).'/js/'.$filename;
-   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/js/' . $filename . '"></script>'."\n";
+   $path = dirname(__DIR__) . '/static/js/' .$filename;
+   echo '<script src="/cached.php?t=' . @filemtime($path) . '&amp;f=/static/js/' . $filename . '"></script>'."\n";
  }
 ?>
 

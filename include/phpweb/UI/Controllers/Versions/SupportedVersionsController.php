@@ -2,9 +2,11 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\UI\Controllers;
+	namespace phpweb\UI\Controllers\Versions;
 	
+	use Cassandra\Date;
 	use phpweb\Data\Branches\Branches;
+	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
@@ -17,9 +19,11 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
+		private function formatInterval(\DateTime $time) {
+		    return $time->diff(new \DateTime())->format('%d Days');
+        }
+		
 		public function renderContents() {
-			require_once __DIR__ . '/../../../branches.inc';
-			
 			?>
             <h1>Supported Versions</h1>
 
@@ -38,7 +42,7 @@
 
             <p>
                 Once the three years of support are completed, the branch reaches its end of
-                life and is no longer supported. <a href="/eol.php">A table of end of life
+                life and is no longer supported. <a href="./eol.php">A table of end of life
                     branches is available.</a>
             </p>
 
@@ -56,40 +60,41 @@
                 <tbody>
 				
 				<?php
-					foreach (Branches::GetActiveBranches(false) as $major => $releases): ?>
-						<?php ksort($releases) ?>
-						<?php foreach ($releases as $branch => $release): ?>
-							<?php
-							$state = get_branch_support_state($branch);
-							$initial = get_branch_release_date($branch);
-							$until = get_branch_bug_eol_date($branch);
-							$eol = get_branch_security_eol_date($branch);
-							?>
-                            <tr class="<?php echo $state ?>">
-                                <td>
-                                    <a href="/downloads.php#v<?php echo htmlspecialchars(
-										$release['version']
-									) ?>"><?php echo htmlspecialchars($branch) ?></a>
-									<?php if (isset($VERSION_NOTES[$branch])): ?>
-                                        <a class="version-notes"
-                                           href="<?php echo htmlspecialchars($VERSION_NOTES[$branch]) ?>">*</a>
-									<?php endif ?>
-                                </td>
-                                <td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
-                                <td class="collapse-phone"><em><?php echo htmlspecialchars(
-											format_interval($initial, null)
-										) ?></em></td>
-                                <td><?php echo htmlspecialchars($until->format('j M Y')) ?></td>
-                                <td class="collapse-phone"><em><?php echo htmlspecialchars(
-											format_interval($until, null)
-										) ?></em></td>
-                                <td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
-                                <td class="collapse-phone"><em><?php echo htmlspecialchars(
-											format_interval($eol, null)
-										) ?></em></td>
-                            </tr>
-						<?php endforeach ?>
-					<?php endforeach ?>
+					foreach (Branches::GetBranches() as $branch) {
+						$stability = $branch->getStability();
+						if (!\in_array($stability, [StabilityEnum::STABLE, StabilityEnum::SECURITY], true)) {
+							continue;
+						}
+						
+						$first_release = $branch->getInitialRelease();
+						$latest_release    = $branch->getLatestRelease();
+						
+						$initial = $first_release ? $first_release->getDate() : new \DateTime();
+						$until   = $first_release ? $first_release->getDate()->add(new \DateInterval('P2Y')) : new \DateTime();
+						$eol     = $branch->getEolSecurityDate();
+						
+						?>
+                        <tr class="<?php echo $stability ?>">
+                            <td>
+                                <a href="<?= htmlspecialchars($branch->getUrl()) ?>">
+									<?= htmlspecialchars($branch->getBranchId()) ?></a>
+                            </td>
+                            <td><?php echo htmlspecialchars($initial->format('j M Y')) ?></td>
+                            <td class="collapse-phone"><em><?php echo htmlspecialchars(
+										$this->formatInterval($initial, null)
+									) ?></em></td>
+                            <td><?php echo htmlspecialchars($until->format('j M Y')) ?></td>
+                            <td class="collapse-phone"><em><?php echo htmlspecialchars(
+			                            $this->formatInterval($until, null)
+									) ?></em></td>
+                            <td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
+                            <td class="collapse-phone"><em><?php echo htmlspecialchars(
+			                            $this->formatInterval($eol, null)
+									) ?></em></td>
+                        </tr>
+						<?php
+					}
+				?>
                 </tbody>
             </table>
 
@@ -98,7 +103,7 @@
             </p>
 			
 			<?php
-			include __DIR__ . '/../../../../images/supported-versions.php';
+			include __DIR__ . '/../../../../../images/supported-versions.php';
 			?>
 
             <h4>Key</h4>

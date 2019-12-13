@@ -18,10 +18,12 @@
 	Site::$BaseUrl = $_SERVER['STATIC_ROOT'];
 	
 	$redirects = [
-		'/mailing-lists.php'  => '/lists/',
-		'/unsub.php'          => '/lists/unsubscribe.php',
-		'/download-logos.php' => '/downloads/logos.php',
-		'/downloads.php'      => '/downloads/',
+		'/mailing-lists.php'      => '/lists/',
+		'/unsub.php'              => '/lists/unsubscribe.php',
+		'/download-logos.php'     => '/downloads/logos.php',
+		'/downloads.php'          => '/downloads/',
+		'/supported-versions.php' => '/versions/supported.php',
+		'/security/'              => '/manual/en/security.php',
 	];
 	
 	$routes = [
@@ -33,7 +35,7 @@
 		'/gpg-keys.php'                                                => \phpweb\UI\Controllers\GpgKeysController::class,
 		'/privacy.php'                                                 => \phpweb\UI\Controllers\PrivacyController::class,
 		'/security-note.php'                                           => \phpweb\UI\Controllers\SecurityNoteController::class,
-		'/supported-versions.php'                                      => \phpweb\UI\Controllers\SupportedVersionsController::class,
+		'/supported-versions.php'                                      => \phpweb\UI\Controllers\Versions\SupportedVersionsController::class,
 		'/sitemap.php'                                                 => \phpweb\UI\Controllers\SitemapController::class,
 		'/support.php'                                                 => \phpweb\UI\Controllers\SupportController::class,
 		'/software.php'                                                => \phpweb\UI\Controllers\SoftwareController::class,
@@ -48,6 +50,10 @@
 		'/versions/{major:\d+}.{minor:\d+}/'                           => \phpweb\UI\Controllers\Versions\Branches\BranchController::class,
 		'/versions/{major:\d+}.{minor:\d+}/changelog'                  => \phpweb\UI\Controllers\Versions\Branches\BranchChangelogController::class,
 		'/versions/{major:\d+}.{minor:\d+}/install/ubuntu_ppa'         => \phpweb\UI\Controllers\Versions\Branches\Install\InstallBranchFromPPAController::class,
+		'/versions/supported.php'                                      => \phpweb\UI\Controllers\Versions\SupportedVersionsController::class,
+		
+		/* misc security that should probably be put in an archive */
+		'/security/crypt_blowfish.php'                                 => \phpweb\UI\Controllers\Security\BlowfishArchiveController::class,
 		
 		/* general downloads */
 		'/downloads/'                                                  => \phpweb\UI\Controllers\Downloads\DownloadsIndexController::class,

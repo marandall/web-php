@@ -260,7 +260,7 @@
                     }
                     success(backends);
                 },
-                url: "/js/search-index.php?lang=" + language
+                url: "/static/js/search-index.php?lang=" + language
             });
         };
 

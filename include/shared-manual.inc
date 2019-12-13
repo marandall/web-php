@@ -412,7 +412,7 @@ function manual_setup($setup) {
     $timestamps = array(
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/" . $_SERVER["BASE_PAGE"]),
         filemtime($_SERVER["DOCUMENT_ROOT"] . "/include/prepend.inc"),
-        filemtime($_SERVER["DOCUMENT_ROOT"] . "/styles/theme-base.css"),
+        filemtime($_SERVER["DOCUMENT_ROOT"] . "/static/styles/theme-base.css"),
         $lastusernote,
     );
     $lastmod = max($timestamps);

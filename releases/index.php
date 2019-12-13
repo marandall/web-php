@@ -66,7 +66,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 // Human Readable.
 site_header("Releases", array(
     'current' => 'downloads',
-    'css' => '/styles/releases.css',
+    'css' => '/static/styles/releases.css',
 ));
 
 echo "<h1>Unsupported Historical Releases</h1>\n\n";

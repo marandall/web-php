@@ -5,7 +5,7 @@ if (!isset($_GET["lang"])) {
     exit;
 }
 if (empty($_SERVER["DOCUMENT_ROOT"])) {
-    $_SERVER["DOCUMENT_ROOT"] = __DIR__ . "/../";
+    $_SERVER["DOCUMENT_ROOT"] = __DIR__ . "/web-php/";
 }
 include __DIR__ . '/../include/prepend.inc';
 if (!isset(\phpweb\Data\Languages::GetActiveLanguages()[$_GET["lang"]])) {

@@ -3,10 +3,10 @@
     use phpweb\Config\Site;
     
     $css_files = array(
-    '/fonts/Fira/fira.css',
-    '/fonts/Font-Awesome/css/fontello.css',
-    '/styles/theme-base.css',
-    '/styles/theme-medium.css',
+    '/static/fonts/Fira/fira.css',
+    '/static/fonts/Font-Awesome/css/fontello.css',
+    '/static/styles/theme-base.css',
+    '/static/styles/theme-medium.css',
 );
 
 if (isset($config['css'])) {
@@ -85,7 +85,7 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="<?php echo Site::$BaseUrl ?>styles/workarounds.ie7.css" media="screen">
+ <link rel="stylesheet" type="text/css" href="/static/styles/workarounds.ie7.css" media="screen">
  <![endif]-->
 
  <!--[if lte IE 8]>
@@ -94,12 +94,8 @@ if (!isset($config["languages"])) {
  </script>
  <![endif]-->
 
- <!--[if lte IE 9]>
- <link rel="stylesheet" type="text/css" href="<?php echo Site::$BaseUrl ?>styles/workarounds.ie9.css" media="screen">
- <![endif]-->
-
  <!--[if IE]>
- <script src="<?php echo Site::$BaseUrl ?>js/ext/html5.js"></script>
+ <script src="/static/js/ext/html5.js"></script>
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>

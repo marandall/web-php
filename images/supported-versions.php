@@ -63,7 +63,7 @@ $height = $header_height + $footer_height + (count($branches) * $branch_height);
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 <?php echo $width ?> <?php echo $height ?>" width="<?php echo $width ?>" height="<?php echo $height ?>">
 	<style type="text/css">
 		<![CDATA[
-			@import url(/fonts/Fira/fira.css);
+			@import url(/static/fonts/Fira/fira.css);
 
 			text {
 				fill: #333;

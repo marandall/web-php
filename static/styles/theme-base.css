@@ -1028,7 +1028,7 @@ fieldset {
 }
 
 .tt-dropdown-menu .result-heading .collapsible {
-    background: url(../images/search-sprites.png) no-repeat left center;
+    background: url(../../images/search-sprites.png) no-repeat left center;
     background-position: 0 -15px;
     width: 30px;
     height: 13px;

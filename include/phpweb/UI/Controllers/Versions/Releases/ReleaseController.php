@@ -6,15 +6,19 @@
 	
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Release\Release;
+	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\UI\Notices\BranchReleaseNotMostRecent;
+	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
+	use phpweb\UI\Notices\BranchUnsupportedNotice;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	
 	class ReleaseController extends ReleaseRouter
 	{
 		protected function invokeForRelease(Request $request, Release $release, Branch $branch): Response {
 			$version_id = $release->getVersionId();
-			$this->setPageTitle('Release Announcement for PHP ' . $version_id);
+			$this->setPageTitle('PHP Version ' . $version_id);
 			
 			$changelog = $release->getChangelogText();
 			
@@ -51,21 +55,22 @@
 		
 		public function renderContents(Release $release, Branch $branch, string $changelog) {
 			$latest_release = $branch->getLatestRelease();
-			if ($latest_release !== $release) {
-				?>
-                <div style="padding: 10px; margin-bottom: 1em; background-color: firebrick; color: white">
-                    <span style="font-weight: bold; ">Important:</span>
-                    This version is not the most recent release of the <?= htmlspecialchars($branch->getBranchId()) ?>
-                    branch
-                    -
-                    For the most recent version please see
-                    <a href="<?= htmlspecialchars($latest_release->getUrl()) ?>"><?= htmlspecialchars(
-							$latest_release->getVersionId()
-						) ?></a>
-                </div>
-				<?php
+			if ($latest_release->getVersionId() !== $release->getVersionId()) {
+                (new BranchReleaseNotMostRecent($release))->draw();
 			}
 			
+			$stability = $branch->getStability();
+			if ($stability === StabilityEnum::UNSUPPORTED) {
+				(new BranchUnsupportedNotice($branch))->draw();
+			}
+			else if ($stability === StabilityEnum::SECURITY) {
+				(new BranchSecurityOnlyNotice($branch))->draw();
+			}
+			
+			
+            ?>
+            <h2>Release Announcement</h2>
+            <?php
 			echo $release->getAnnouncementHTML();
 			
 			?>
