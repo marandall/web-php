@@ -4,8 +4,13 @@
 	
 	namespace phpweb\Data;
 	
+	use phpweb\Data\Release\Release;
+	
 	class Releases
 	{
+		/** @var null|Release[] */
+		private static $release_cache = null;
+		
 		public static function GetOldReleases(): array {
 			return require __DIR__ . '/../../releases_old.inc';
 		}
@@ -14,8 +19,51 @@
 			return require __DIR__ . '/../../releases_current.inc';
 		}
 		
-		public static function GetAllReleases(): array {
-			return self::GetCurrentReleases() + self::GetOldReleases();
+		/**
+		 * @return Release[]
+		 */
+		
+		public static function GetReleases(): array {
+			if (self::$release_cache !== null) {
+				return self::$release_cache;
+			}
+			
+			$releases = [];
+			foreach (self::GetOldReleases() as $major => $branch_releases) {
+				foreach ($branch_releases as $version => $branch_release) {
+					$releases[$version] = new Release($version, $branch_release);
+				}
+			}
+			
+			foreach (self::GetCurrentReleases() as $major => $branch_releases) {
+				foreach ($branch_releases as $version => $branch_release) {
+					$releases[$version] = new Release($version, $branch_release);
+				}
+			}
+			
+			return self::$release_cache = $releases;
+		}
+		
+		/**
+		 * @return Release[]
+		 */
+		
+		public static function GetFlatReleases(): array {
+			$dx = [];
+			
+			foreach (self::GetCurrentReleases() as $major => $minor) {
+				foreach ($minor as $ver_id => $data) {
+					$dx[$ver_id] = $data;
+				}
+			}
+			
+			foreach (self::GetOldReleases() as $major => $minor) {
+				foreach ($minor as $ver_id => $data) {
+					$dx[$ver_id] = $data;
+				}
+			}
+			
+			return $dx;
 		}
 		
 		/**
@@ -62,5 +110,14 @@
 			}
 			
 			return 0;
+		}
+		
+		/**
+		 * @param string $version
+		 * @return array|null
+		 */
+		
+		public static function Lookup(string $version): ?Release {
+			return self::GetReleases()[$version] ?? null;
 		}
 	}

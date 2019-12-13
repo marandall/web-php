@@ -16,7 +16,7 @@ site_header("News Archive - 2005", array("cache" => true));
 <h1>PHP 5.1.1 Released</h1>
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
- The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br>
+ The PHP Development Team would like to announce the immediate release of <a href="/downloads/">PHP 5.1.1</a>.<br>
  This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows:
 <ul>
 <li>Native date class is withdrawn to prevent namespace conflict with PEAR's date package.</li>

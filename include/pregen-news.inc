@@ -122,7 +122,7 @@
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.32">ChangeLog</a>.
        </p>
@@ -171,7 +171,7 @@
      
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.2.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.2.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.22">ChangeLog</a>.
        </p>
@@ -220,7 +220,7 @@
     
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
-      <p>For source downloads of PHP 7.3.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.9">ChangeLog</a>.
       </p>
@@ -621,7 +621,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.31">ChangeLog</a>.
        </p>
@@ -670,7 +670,7 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.21">ChangeLog</a>.
      </p>
@@ -719,7 +719,7 @@ Sorry for the inconvenience.</p>
     
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
-      <p>For source downloads of PHP 7.3.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.8">ChangeLog</a>.
       </p>
@@ -1110,7 +1110,7 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.20">ChangeLog</a>.
      </p>
@@ -1159,7 +1159,7 @@ Sorry for the inconvenience.</p>
     
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
-      <p>For source downloads of PHP 7.3.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.7">ChangeLog</a>.
       </p>
@@ -1528,7 +1528,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.30">ChangeLog</a>.
        </p>
@@ -1577,7 +1577,7 @@ Sorry for the inconvenience.</p>
      
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
-     <p>For source downloads of PHP 7.2.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.19">ChangeLog</a>.
      </p>
@@ -1626,7 +1626,7 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.6">ChangeLog</a>.
       </p>
@@ -1876,7 +1876,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.29">ChangeLog</a>.
        </p>
@@ -1925,7 +1925,7 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.18">ChangeLog</a>.
      </p>
@@ -1974,7 +1974,7 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.5">ChangeLog</a>.
       </p>
@@ -2126,7 +2126,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.28">ChangeLog</a>.
        </p>
@@ -2175,7 +2175,7 @@ Sorry for the inconvenience.</p>
      
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
-     <p>For source downloads of PHP 7.2.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.17">ChangeLog</a>.
      </p>
@@ -2224,7 +2224,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.3.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.3.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.4">ChangeLog</a>.
        </p>
@@ -2950,7 +2950,7 @@ Sorry for the inconvenience.</p>
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.27">ChangeLog</a>.
        </p>
@@ -2999,7 +2999,7 @@ Sorry for the inconvenience.</p>
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.16">ChangeLog</a>.
      </p>
@@ -3048,7 +3048,7 @@ Sorry for the inconvenience.</p>
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.3">ChangeLog</a>.
       </p>
@@ -3246,7 +3246,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
 
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.2.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.2.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.15">ChangeLog</a>.
       </p>
@@ -3295,7 +3295,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
     
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
     
-      <p>For source downloads of PHP 7.3.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.2">ChangeLog</a>.
       </p>
@@ -3620,7 +3620,7 @@ At Longhorn PHP you\'ll get to learn from and alongside a diverse group of devel
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p>
@@ -3642,7 +3642,7 @@ the upgrade
      in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.40 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.40">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2019.php#id2019-01-10-4\' class>&hellip; read full article</a></p></div>',
@@ -3687,7 +3687,7 @@ the upgrade
      
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-       <p>For source downloads of PHP 7.1.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.26">ChangeLog</a>.
        </p>
@@ -3736,7 +3736,7 @@ the upgrade
 
       <p>All PHP 7.3 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.3.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.3.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.1">ChangeLog</a>.
       </p>
@@ -3785,7 +3785,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.14">ChangeLog</a>.
      </p>
@@ -3950,7 +3950,7 @@ the upgrade
          All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
       </p>
@@ -3966,7 +3966,7 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
          7.0.33. Five security-related issues were fixed in this release.
          All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
          Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
          The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.33">ChangeLog</a>.
       </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-5\' class>&hellip; read full article</a></p></div>',
@@ -4011,7 +4011,7 @@ the upgrade
      
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-     <p>For source downloads of PHP 7.1.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.1.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.25">ChangeLog</a>.
      </p>
@@ -4060,7 +4060,7 @@ the upgrade
      
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
      
-     <p>For source downloads of PHP 7.2.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.13">ChangeLog</a>.
      </p>
@@ -4111,7 +4111,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
      </p>
@@ -4133,7 +4133,7 @@ the upgrade
      in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2018.php#id2018-12-06-2\' class>&hellip; read full article</a></p></div>',
@@ -4188,7 +4188,7 @@ the upgrade
       <li><a href="http://php.net/manual/migration73.deprecated.php">Several Deprecations</a></li>
       </ul>
 
-      <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
+      <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads/">downloads</a> page
       Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
 
@@ -4428,7 +4428,7 @@ the upgrade
      
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
      
-     <p>For source downloads of PHP 7.1.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.1.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.24">ChangeLog</a>.
      </p>
@@ -4477,7 +4477,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.12">ChangeLog</a>.
      </p>
@@ -4807,7 +4807,7 @@ the upgrade
 
      <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.1.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.1.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.23">ChangeLog</a>.
      </p>
@@ -4856,7 +4856,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.11">ChangeLog</a>.
      </p>
@@ -5068,7 +5068,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p>
@@ -5078,7 +5078,7 @@ the upgrade
         5.6.38. This is a security release. One security bug has been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
      </p></div>',
@@ -5124,7 +5124,7 @@ the upgrade
 
      All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p>
@@ -5135,7 +5135,7 @@ the upgrade
      7.1.22. This is a security release. One security bug has been fixed
      in this release.
 
-     All PHP 7.1 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.1 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.1.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.22">ChangeLog</a>.
      </p></div>',
@@ -5181,7 +5181,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p>
@@ -5191,7 +5191,7 @@ the upgrade
 	7.0.32. This is a security release. One security bug has been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.32">ChangeLog</a>.
      </p></div>',
@@ -5317,7 +5317,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.10">ChangeLog</a>.
      </p>
@@ -5600,7 +5600,7 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p>
@@ -5610,7 +5610,7 @@ the upgrade
           7.1.21. This is a bugfix release.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 7.1.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.21">ChangeLog</a>.
           </p></div>',
@@ -5655,7 +5655,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.9">ChangeLog</a>.
      </p>
@@ -6011,7 +6011,7 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p>
@@ -6022,7 +6022,7 @@ the upgrade
           in this release.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 7.1.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.20">ChangeLog</a>.
           </p></div>',
@@ -6068,7 +6068,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p>
@@ -6078,7 +6078,7 @@ the upgrade
         5.6.37. This is a security release. Several security bugs have been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.37">ChangeLog</a>.
      </p></div>',
@@ -6124,7 +6124,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p>
@@ -6134,7 +6134,7 @@ the upgrade
 	7.0.31. This is a security release. Several security bugs have been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.31">ChangeLog</a>.
      </p></div>',
@@ -6179,7 +6179,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.8">ChangeLog</a>.
      </p>
@@ -6598,7 +6598,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p>
@@ -6608,7 +6608,7 @@ the upgrade
        7.1.19.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.19">ChangeLog</a>.
        </p></div>',
@@ -6653,7 +6653,7 @@ the upgrade
 
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.7">ChangeLog</a>.
      </p>
@@ -7228,7 +7228,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p>
@@ -7238,7 +7238,7 @@ the upgrade
        7.1.18.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.18">ChangeLog</a>.
        </p></div>',
@@ -7283,7 +7283,7 @@ the upgrade
 
      <p>PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.6">ChangeLog</a>.
      </p>
@@ -7425,7 +7425,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p>
@@ -7435,7 +7435,7 @@ the upgrade
         5.6.36. This is a security release. Several security bugs have been fixed
         in this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
      </p></div>',
@@ -7481,7 +7481,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p>
@@ -7491,7 +7491,7 @@ the upgrade
        7.1.17. This is a security fix release, containing many bugfixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.17">ChangeLog</a>.
        </p></div>',
@@ -7537,7 +7537,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p>
@@ -7547,7 +7547,7 @@ the upgrade
 	7.0.30. This is a security release. Several security bugs have been fixed
 	in this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.30">ChangeLog</a>.
      </p></div>',
@@ -7592,7 +7592,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.5">ChangeLog</a>.
      </p>
@@ -7899,7 +7899,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p>
@@ -7909,7 +7909,7 @@ the upgrade
        7.1.16. This is a security fix release, containing one security fix and many bug fixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.16">ChangeLog</a>.
        </p></div>',
@@ -8004,7 +8004,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p>
@@ -8014,7 +8014,7 @@ the upgrade
      5.6.35. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.35 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.35">ChangeLog</a>.
      </p></div>',
@@ -8059,7 +8059,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.4">ChangeLog</a>.
      </p>
@@ -8109,7 +8109,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p>
@@ -8119,7 +8119,7 @@ the upgrade
      7.0.29. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.29">ChangeLog</a>.
      </p></div>',
@@ -8279,7 +8279,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p>
@@ -8289,7 +8289,7 @@ the upgrade
        7.1.15. This is a security fix release, containing one security fix and many bug fixes.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.15">ChangeLog</a>.
        </p></div>',
@@ -8426,7 +8426,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p>
@@ -8436,7 +8436,7 @@ the upgrade
      5.6.34. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
      </p></div>',
@@ -8481,7 +8481,7 @@ the upgrade
 
      <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.2.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.2.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.3">ChangeLog</a>.
      </p>
@@ -8531,7 +8531,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p>
@@ -8541,7 +8541,7 @@ the upgrade
      7.0.28. This is a security release. One security bug was fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.28">ChangeLog</a>.
      </p></div>',
@@ -8959,7 +8959,7 @@ the upgrade
 
       <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.1.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+      <p>For source downloads of PHP 7.1.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.14">ChangeLog</a>.
       </p>
     </div>
@@ -9003,7 +9003,7 @@ the upgrade
 
       <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-      <p>For source downloads of PHP 7.2.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.2.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.2">ChangeLog</a>.
       </p>
@@ -9192,7 +9192,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p>
@@ -9202,7 +9202,7 @@ the upgrade
      5.6.33. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
      </p></div>',
@@ -9248,7 +9248,7 @@ the upgrade
 
        <p>All PHP 7.1 users are encouraged to upgrade to this version.</p>
 
-       <p>For source downloads of PHP 7.1.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+       <p>For source downloads of PHP 7.1.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,  Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.13">ChangeLog</a>.
        </p>
     </div>
@@ -9298,7 +9298,7 @@ the upgrade
 
        <p>All PHP 7.2 users are encouraged to upgrade to this version.</p>
 
-       <p>For source downloads of PHP 7.2.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.2.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.1">ChangeLog</a>.
        </p>
@@ -9356,7 +9356,7 @@ the upgrade
 	     is a good time to plan the migration to PHP 7.1 or 7.2.
      </p>
 
-     <p>For source downloads of PHP 7.0.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.27">ChangeLog</a>.
      </p>
@@ -9472,7 +9472,7 @@ the upgrade
 	<li><a href="https://wiki.php.net/rfc/libsodium">New sodium extension</a></li>
 	</ul>
 
-	<p>For source downloads of PHP 7.2.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
+	<p>For source downloads of PHP 7.2.0 please visit our <a href="http://www.php.net/downloads/">downloads</a> page
 	Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
 	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.2.0">ChangeLog</a>.</p>
 
@@ -9526,7 +9526,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p>
@@ -9536,7 +9536,7 @@ the upgrade
        7.1.12. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.12">ChangeLog</a>.
        </p></div>',
@@ -9582,7 +9582,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p>
@@ -9592,7 +9592,7 @@ the upgrade
       7.0.26. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.26">ChangeLog</a>.
       </p></div>',
@@ -10058,7 +10058,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p>
@@ -10068,7 +10068,7 @@ the upgrade
        7.1.11. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.11">ChangeLog</a>.
        </p></div>',
@@ -10114,7 +10114,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p>
@@ -10124,7 +10124,7 @@ the upgrade
      5.6.32. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.32">ChangeLog</a>.
      </p></div>',
@@ -10244,7 +10244,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p>
@@ -10254,7 +10254,7 @@ the upgrade
      7.0.25. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.25">ChangeLog</a>.
      </p></div>',
@@ -10437,7 +10437,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p>
@@ -10447,7 +10447,7 @@ the upgrade
        7.1.10. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.10">ChangeLog</a>.
        </p></div>',
@@ -10562,7 +10562,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p>
@@ -10572,7 +10572,7 @@ the upgrade
       7.0.24. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.24">ChangeLog</a>.
       </p></div>',
@@ -10739,7 +10739,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p>
@@ -10749,7 +10749,7 @@ the upgrade
        7.1.9. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.9">ChangeLog</a>.
        </p></div>',
@@ -10864,7 +10864,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p>
@@ -10874,7 +10874,7 @@ the upgrade
       7.0.23. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.23">ChangeLog</a>.
       </p></div>',
@@ -11092,7 +11092,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p>
@@ -11102,7 +11102,7 @@ the upgrade
        7.1.8. This is a bugfix release, with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.8">ChangeLog</a>.
        </p></div>',
@@ -11222,7 +11222,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p>
@@ -11232,7 +11232,7 @@ the upgrade
       7.0.22. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.22">ChangeLog</a>.
       </p></div>',
@@ -11532,7 +11532,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p>
@@ -11542,7 +11542,7 @@ the upgrade
      5.6.31. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
      </p></div>',
@@ -11588,7 +11588,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p>
@@ -11598,7 +11598,7 @@ the upgrade
        7.1.7. This is a security release with several bug fixes included.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.7">ChangeLog</a>.
        </p></div>',
@@ -11702,7 +11702,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p>
@@ -11712,7 +11712,7 @@ the upgrade
      7.0.21. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.21">ChangeLog</a>.
      </p></div>',
@@ -12122,7 +12122,7 @@ the upgrade
       All PHP 7.1 users are encouraged to upgrade to this version.
       </p>
 
-	  <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 7.1.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+	  <p xmlns="http://www.w3.org/2005/Atom">For source downloads of PHP 7.1.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.6">ChangeLog</a>.
       </p>
@@ -12233,7 +12233,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p>
@@ -12243,7 +12243,7 @@ the upgrade
       7.0.20. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.20">ChangeLog</a>.
       </p></div>',
@@ -12527,7 +12527,7 @@ the upgrade
      	All PHP 7.1 users are encouraged to upgrade to this version.
      	</p>
 
-     	<p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     	<p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p>
@@ -12537,7 +12537,7 @@ the upgrade
      	7.1.5. Several bugs have been fixed.
 
      	All PHP 7.1 users are encouraged to upgrade to this version.
-     	</p><p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     	</p><p>For source downloads of PHP 7.1.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      	Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      	The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.5">ChangeLog</a>.
      	</p></div>',
@@ -12583,7 +12583,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p>
@@ -12593,7 +12593,7 @@ the upgrade
       7.0.19. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.19">ChangeLog</a>.
       </p></div>',
@@ -12857,7 +12857,7 @@ the upgrade
        All PHP 7.1 users are encouraged to upgrade to this version.
        </p>
 
-       <p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       <p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p>
@@ -12867,7 +12867,7 @@ the upgrade
        7.1.4. Several bugs have been fixed.
 
        All PHP 7.1 users are encouraged to upgrade to this version.
-       </p><p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+       </p><p>For source downloads of PHP 7.1.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
        Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
        The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.4">ChangeLog</a>.
        </p></div>',
@@ -12913,7 +12913,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p>
@@ -12923,7 +12923,7 @@ the upgrade
       7.0.18. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.18">ChangeLog</a>.
       </p></div>',
@@ -13070,7 +13070,7 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p>
@@ -13080,7 +13080,7 @@ the upgrade
           7.1.3. Several bugs have been fixed.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 7.1.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.3">ChangeLog</a>.
           </p></div>',
@@ -13126,7 +13126,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p>
@@ -13136,7 +13136,7 @@ the upgrade
       7.0.17. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.17">ChangeLog</a>.
       </p></div>',
@@ -13513,7 +13513,7 @@ the upgrade
           All PHP 7.1 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p>
@@ -13523,7 +13523,7 @@ the upgrade
           7.1.2. Several bugs have been fixed.
 
           All PHP 7.1 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 7.1.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.2">ChangeLog</a>.
           </p></div>',
@@ -13569,7 +13569,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p>
@@ -13579,7 +13579,7 @@ the upgrade
       7.0.16. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.16">ChangeLog</a>.
       </p></div>',
@@ -13729,7 +13729,7 @@ the upgrade
      PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.
      </p>
 
-     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
@@ -13751,7 +13751,7 @@ the upgrade
      PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.
      </p>
 
-     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
      </p>
@@ -13798,7 +13798,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p>
@@ -13808,7 +13808,7 @@ the upgrade
      7.0.15. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.15">ChangeLog</a>.
      </p></div>',
@@ -13854,7 +13854,7 @@ the upgrade
      All PHP 7.1 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p>
@@ -13864,7 +13864,7 @@ the upgrade
      7.1.1. Several bugs have been fixed.
 
      All PHP 7.1 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 7.1.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.1">ChangeLog</a>.
      </p></div>',
@@ -14007,7 +14007,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p>
@@ -14017,7 +14017,7 @@ the upgrade
      5.6.29. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
      </p></div>',
@@ -14063,7 +14063,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p>
@@ -14073,7 +14073,7 @@ the upgrade
      7.0.14. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.14">ChangeLog</a>.
      </p></div>',
@@ -14172,7 +14172,7 @@ the upgrade
      <li><a href="https://wiki.php.net/rfc#php_71">Many more features and changes…</a></li>
      </ul>
 
-     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
+     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads/">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
 
      <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
 
@@ -14454,7 +14454,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p>
@@ -14464,7 +14464,7 @@ the upgrade
      5.6.28. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
      </p></div>',
@@ -14573,7 +14573,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p>
@@ -14583,7 +14583,7 @@ the upgrade
      7.0.13. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.13">ChangeLog</a>.
      </p></div>',
@@ -15055,7 +15055,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p>
@@ -15065,7 +15065,7 @@ the upgrade
      5.6.27. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.27">ChangeLog</a>.
      </p></div>',
@@ -15111,7 +15111,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p>
@@ -15121,7 +15121,7 @@ the upgrade
      7.0.12. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.12">ChangeLog</a>.
      </p></div>',
@@ -15359,7 +15359,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p>
@@ -15369,7 +15369,7 @@ the upgrade
      5.6.26. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
      </p></div>',
@@ -15415,7 +15415,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p>
@@ -15425,7 +15425,7 @@ the upgrade
      7.0.11. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.11">ChangeLog</a>.
      </p></div>',
@@ -15886,7 +15886,7 @@ the upgrade
 
      All PHP 5.6 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p>
@@ -15896,7 +15896,7 @@ the upgrade
      5.6.25. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 5.6 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
      </p></div>',
@@ -15942,7 +15942,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p>
@@ -15952,7 +15952,7 @@ the upgrade
      7.0.10. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.10">ChangeLog</a>.
      </p></div>',
@@ -16209,7 +16209,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p>
@@ -16220,7 +16220,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
      </p></div>',
@@ -16321,7 +16321,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p>
@@ -16331,7 +16331,7 @@ the upgrade
      7.0.9. This is a security release. Several security bugs were fixed in
      this release, including the HTTP_PROXY issue.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.9">ChangeLog</a>.
      </p></div>',
@@ -16615,7 +16615,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p>
@@ -16625,7 +16625,7 @@ the upgrade
      5.5.37. This is a security release, several security bugs were fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.37">ChangeLog</a>.
      </p></div>',
@@ -16671,7 +16671,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p>
@@ -16681,7 +16681,7 @@ the upgrade
      5.6.23. Several bugs were fixed in this release, including security-related ones.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.23">ChangeLog</a>.
      </p></div>',
@@ -16727,7 +16727,7 @@ the upgrade
 
      All PHP 7.0 users are encouraged to upgrade to this version.</p>
 
-     <p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p>
@@ -16737,7 +16737,7 @@ the upgrade
      7.0.8. This is a security release. Several security bugs were fixed in
      this release.
 
-     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     All PHP 7.0 users are encouraged to upgrade to this version.</p><p>For source downloads of PHP 7.0.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.8">ChangeLog</a>.
      </p></div>',
@@ -17195,7 +17195,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p>
@@ -17206,7 +17206,7 @@ the upgrade
      this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.22">ChangeLog</a>.
      </p></div>',
@@ -17253,7 +17253,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p>
@@ -17264,7 +17264,7 @@ the upgrade
      this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.36">ChangeLog</a>.
      </p></div>',
@@ -17311,7 +17311,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p>
@@ -17322,7 +17322,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 7.0.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.7">ChangeLog</a>.
      </p></div>',
@@ -17470,7 +17470,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.6">ChangeLog</a>.
      </p>
@@ -17524,7 +17524,7 @@ the upgrade
      <p>
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
-     <p>For source downloads of PHP 5.6.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.21">ChangeLog</a>.
      </p>
@@ -17577,7 +17577,7 @@ the upgrade
      <p>
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
-     <p>For source downloads of PHP 5.5.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.35 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.35">ChangeLog</a>.
      </p>
@@ -17751,7 +17751,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p>
@@ -17761,7 +17761,7 @@ the upgrade
      5.6.20. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.20">ChangeLog</a>.
      </p></div>',
@@ -17854,7 +17854,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p>
@@ -17864,7 +17864,7 @@ the upgrade
      5.5.34. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.34">ChangeLog</a>.
      </p></div>',
@@ -17911,7 +17911,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p>
@@ -17922,7 +17922,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 7.0.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.5">ChangeLog</a>.
      </p></div>',
@@ -18062,7 +18062,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p>
@@ -18073,7 +18073,7 @@ the upgrade
      5.6.19. This is a security release in which several security bugs were fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.19">ChangeLog</a>.
      </p></div>',
@@ -18119,7 +18119,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p>
@@ -18130,7 +18130,7 @@ the upgrade
      5.5.33. This is a security release in which two security bugs were fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.33">ChangeLog</a>.
      </p></div>',
@@ -18177,7 +18177,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p>
@@ -18188,7 +18188,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 7.0.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.4">ChangeLog</a>.
      </p></div>',
@@ -18413,7 +18413,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p>
@@ -18423,7 +18423,7 @@ the upgrade
      5.6.18. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.18">ChangeLog</a>.
      </p></div>',
@@ -18469,7 +18469,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p>
@@ -18479,7 +18479,7 @@ the upgrade
      5.5.32. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
      </p></div>',
@@ -18526,7 +18526,7 @@ the upgrade
      All PHP 7.0 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p>
@@ -18537,7 +18537,7 @@ the upgrade
      this release.
 
      All PHP 7.0 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 7.0.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.3">ChangeLog</a>.
      </p></div>',
@@ -18713,7 +18713,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p>
@@ -18723,7 +18723,7 @@ the upgrade
      5.6.17. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
      </p></div>',
@@ -18769,7 +18769,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p>
@@ -18779,7 +18779,7 @@ the upgrade
      5.5.31. This is a security release. Several security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.31">ChangeLog</a>.
      </p></div>',
@@ -18825,7 +18825,7 @@ the upgrade
 	     All PHP 7.0 users are encouraged to upgrade to this version.
 	     </p>
 
-	     <p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+	     <p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
 	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
 	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p>
@@ -18835,7 +18835,7 @@ the upgrade
 	     7.0.2. 31 reported bugs has been fixed, including 6 security related issues.
 
 	     All PHP 7.0 users are encouraged to upgrade to this version.
-	     </p><p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+	     </p><p>For source downloads of PHP 7.0.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
 	     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
 	     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.2">ChangeLog</a>.
 	     </p></div>',
@@ -18881,7 +18881,7 @@ the upgrade
       All PHP 7.0 users are encouraged to upgrade to this version.
       </p>
 
-      <p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p>
@@ -18891,7 +18891,7 @@ the upgrade
       7.0.1. Several bugs have been fixed.
 
       All PHP 7.0 users are encouraged to upgrade to this version.
-      </p><p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      </p><p>For source downloads of PHP 7.0.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.1">ChangeLog</a>.
       </p></div>',
@@ -19008,7 +19008,7 @@ the upgrade
 	<li>Zero cost asserts</li>
      </ul>
 
-     <p>For source downloads of PHP 7.0.0 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 7.0.0 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.0.0">ChangeLog</a>.
      </p>
@@ -19150,7 +19150,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p>
@@ -19161,7 +19161,7 @@ the upgrade
      5.6.16. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
      </p></div>',
@@ -19399,7 +19399,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p>
@@ -19410,7 +19410,7 @@ the upgrade
      5.6.15. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
      </p></div>',
@@ -19835,7 +19835,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p>
@@ -19845,7 +19845,7 @@ the upgrade
      5.6.14. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
      </p></div>',
@@ -19891,7 +19891,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p>
@@ -19901,7 +19901,7 @@ the upgrade
      5.5.30. This is a security release. Two security bugs were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.30">ChangeLog</a>.
      </p></div>',
@@ -20314,7 +20314,7 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p>
@@ -20329,7 +20329,7 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.45. Ten security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.45 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.45">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-09-04-4\' class>&hellip; read full article</a></p></div>',
@@ -20375,7 +20375,7 @@ the upgrade
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p>
@@ -20386,7 +20386,7 @@ the upgrade
      5.5.29. This is a security release. Many security-related issues were fixed in this release.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.29">ChangeLog</a>.
      </p></div>',
@@ -20433,7 +20433,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p>
@@ -20444,7 +20444,7 @@ the upgrade
      5.6.13. 11 security-related issues were fixed in this release.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.13">ChangeLog</a>.
      </p></div>',
@@ -20756,7 +20756,7 @@ the upgrade
           All PHP 5.6 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p>
@@ -20766,7 +20766,7 @@ the upgrade
           5.6.12. 12 security-related issues were fixed in this release.
 
           All PHP 5.6 users are encouraged to upgrade to this version.
-          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          </p><p>For source downloads of PHP 5.6.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.12">ChangeLog</a>.
           </p></div>',
@@ -20819,7 +20819,7 @@ the upgrade
           PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
           </p>
 
-          <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 5.5.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.28">ChangeLog</a>.
           </p>
@@ -20876,7 +20876,7 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p>
@@ -20889,7 +20889,7 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.44. 11 security-related issues were fixed in this release.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-08-06-2\' class>&hellip; read full article</a></p></div>',
@@ -21217,7 +21217,7 @@ the upgrade
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p>
@@ -21227,7 +21227,7 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
      </p></div>',
@@ -21280,7 +21280,7 @@ the upgrade
      PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
      </p>
 
-     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
      </p>
@@ -21337,7 +21337,7 @@ the upgrade
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p>
@@ -21351,7 +21351,7 @@ the upgrade
     'intro' => '<div><p>The PHP development team announces the immediate availability of PHP
      5.4.43. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.43 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.43">ChangeLog</a>.
      </p><p class=\'fullArticleLink\'><a href=\'http://php.net/archive/2015.php#id2015-07-09-1\' class>&hellip; read full article</a></p></div>',
@@ -21793,7 +21793,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p>
@@ -21804,7 +21804,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      as well as several security issues in bundled sqlite library (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416).
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.42 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.42">ChangeLog</a>.
      </p></div>',
@@ -21940,7 +21940,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p>
@@ -21951,7 +21951,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
      </p></div>',
@@ -21998,7 +21998,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p>
@@ -22009,7 +22009,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      bundled libraries (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.26">ChangeLog</a>.
      </p></div>',
@@ -22326,7 +22326,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p>
@@ -22336,7 +22336,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.9. Several bugs have been fixed.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
    </p></div>',
@@ -22382,7 +22382,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p>
@@ -22392,7 +22392,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.41. Seven security-related issues were fixed in this version.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.41 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.41">ChangeLog</a>.
      </p></div>',
@@ -22438,7 +22438,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p>
@@ -22448,7 +22448,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.25. Several bugs have been fixed.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
      </p></div>',
@@ -22559,7 +22559,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p>
@@ -22570,7 +22570,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      CVE-2014-9709, CVE-2015-2301, CVE-2015-2783, CVE-2015-1352.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.40 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.40">ChangeLog</a>.
      </p></div>',
@@ -22616,7 +22616,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p>
@@ -22626,7 +22626,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
      </p></div>',
@@ -22672,7 +22672,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p>
@@ -22682,7 +22682,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.24. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.24">ChangeLog</a>.
      </p></div>',
@@ -22729,7 +22729,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p>
@@ -22739,7 +22739,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.6.7. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.7">ChangeLog</a>.
      </p></div>',
@@ -22785,7 +22785,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p>
@@ -22795,7 +22795,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.5.23. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
      </p></div>',
@@ -22841,7 +22841,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p>
@@ -22851,7 +22851,7 @@ In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in
      5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
      </p></div>',
@@ -23134,7 +23134,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p>
@@ -23144,7 +23144,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.6. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.6 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.6">ChangeLog</a>.
      </p></div>',
@@ -23190,7 +23190,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p>
@@ -23200,7 +23200,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.22. This release fixes several bugs and addresses CVE-2015-0235 and CVE-2015-0273.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.22">ChangeLog</a>.
      </p></div>',
@@ -23246,7 +23246,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p>
@@ -23256,7 +23256,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.4.38. Seven security-related bugs were fixed in this release, including CVE-2015-0273 and mitigation for CVE-2015-0235.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.38 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.38">ChangeLog</a>.
      </p></div>',
@@ -23304,7 +23304,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p>
@@ -23315,7 +23315,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      and CVE-2015-0232.
 
      All PHP 5.4 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.4.37 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.37">ChangeLog</a>.
      </p></div>',
@@ -23361,7 +23361,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p>
@@ -23371,7 +23371,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.6.5. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.6 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
      </p></div>',
@@ -23417,7 +23417,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p>
@@ -23427,7 +23427,7 @@ Presentation length is 45 minutes which includes question time. 3 hours workshop
      5.5.21. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
 
      All PHP 5.5 users are encouraged to upgrade to this version.
-     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     </p><p>For source downloads of PHP 5.5.21 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.21">ChangeLog</a>.
      </p></div>',

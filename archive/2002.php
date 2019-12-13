@@ -353,7 +353,7 @@ site_header("News Archive - 2002", array("cache" => true));
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
 <p>
  <span class="newsdate">[30-Jun-2002]</span>
- The second alpha release of PHP w/ Zend Engine 2 is <a href="/downloads.php">now
+ The second alpha release of PHP w/ Zend Engine 2 is <a href="/downloads/">now
  available</a>. It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new
  scripting engine which greatly improves the object model, adds exception
  handling and provides a much better infrastructure for the integration
@@ -418,7 +418,7 @@ site_header("News Archive - 2002", array("cache" => true));
 <h1>PHP 4.2.1 released</h1>
 <p>
  <span class="newsdate">[13-May-2002]</span>
- The PHP Group is happy to announce the <a href="/downloads.php">immediate
+ The PHP Group is happy to announce the <a href="/downloads/">immediate
  availability</a> of PHP 4.2.1, the latest version of the widely-used,
  general-purpose scripting language that is especially well-suited for
  Web development.
@@ -465,7 +465,7 @@ site_header("News Archive - 2002", array("cache" => true));
 <h1>PHP 4.2.0 released</h1>
 <p>
  <span class="newsdate">[22-Apr-2002]</span>
- The PHP Group is happy to announce the <a href="/downloads.php">immediate
+ The PHP Group is happy to announce the <a href="/downloads/">immediate
  availability</a> of PHP 4.2.0, the latest version of the widely-used,
  general-purpose scripting language that is especially well-suited for Web development.
 </p>
@@ -546,7 +546,7 @@ site_header("News Archive - 2002", array("cache" => true));
  windows. The delayed release is due to the fix of a further security issue only
  relating to the PHP for Windows version. More information on this change can be
  found <a href="/release_4_1_2_win32.php">here</a>. All PHP - Windows users are
- encouraged to upgrade to the <a href="/downloads.php">latest version</a>.
+ encouraged to upgrade to the <a href="/downloads/">latest version</a>.
 </p>
 
 <hr>
@@ -558,8 +558,8 @@ site_header("News Archive - 2002", array("cache" => true));
  new version of PHP has been released.  Details about the security issue are <a
  href="http://security.e-matters.de/advisories/012002.html">available here</a>.
  All users of PHP are strongly encouraged to either upgrade to <a
- href="/downloads.php">PHP 4.1.2</a>, or install the patch (<a
- href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
+ href="/downloads/">PHP 4.1.2</a>, or install the patch (<a
+ href="/downloads/">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
 </p>
 
 <hr>

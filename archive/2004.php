@@ -56,7 +56,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
   The PHP Development Team would like to announce the immediate release of
-  <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>.
+  <a href="/downloads/">PHP 4.3.10</a> and <a href="/downloads/">PHP 5.0.3</a>.
   These are maintenance releases that in addition to non-critical bug fixes
   address several very serious security issues. All Users of PHP are strongly
   encouraged to upgrade to one of these releases as soon as possible.
@@ -193,7 +193,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <h1>PHP 4.3.9 released!</h1>
 <p>
  <span class="newsdate">[22-Sep-2004]</span>
- The PHP Development Team is proud to announce the immediate release of <a href="/downloads.php">PHP 4.3.9</a>.
+ The PHP Development Team is proud to announce the immediate release of <a href="/downloads/">PHP 4.3.9</a>.
  This is a maintenance release that in addition to over 50 non-critical bug fixes, addresses a problem
  with GPC input processing. This release also re-introduces ability to write
  GIF images via the bundled GD extension.
@@ -258,7 +258,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <h1>PHP 5.0.1 Released!</h1>
 <p>
  <span class="newsdate">[12-Aug-2004]</span>
- The PHP Development Team would like to announce the immediate availability of <a href="/downloads.php">PHP 5.0.1</a>.
+ The PHP Development Team would like to announce the immediate availability of <a href="/downloads/">PHP 5.0.1</a>.
  This is a maintenance release that in addition to many non-critical bug fixes also includes new UNIX and
  Windows installation docs which are now auto-generated from the PHP Manual.
 </p>
@@ -342,7 +342,7 @@ site_header("News Archive - 2004", array("cache" => true));
 <h1>PHP 4.3.8 released!</h1>
 <p>
  <span class="newsdate">[13-Jul-2004]</span>
- PHP Development Team would like to announce the immediate availability of <a href="/downloads.php">PHP 4.3.8</a>.
+ PHP Development Team would like to announce the immediate availability of <a href="/downloads/">PHP 4.3.8</a>.
  This release is made in response to several security issues that have been discovered since the
  4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
 </p>

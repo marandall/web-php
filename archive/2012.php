@@ -89,7 +89,7 @@ site_header("News Archive - 2012", array("cache" => true));
         <div>
      <div>
        <p>The PHP development team announces the immediate availability of PHP 5.4.10 and PHP 5.3.20. These releases fix about 15 bugs. Please note that the PHP 5.3 series will enter an end of life cycle and receive only critical fixes as of March 2013. All users of PHP are encouraged to upgrade to PHP 5.4.</p>
-       <p>For source downloads of PHP 5.4.10 and PHP 5.3.20 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+       <p>For source downloads of PHP 5.4.10 and PHP 5.3.20 please visit our <a href="/downloads/">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
        <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
      </div>
     </div>
@@ -122,7 +122,7 @@ site_header("News Archive - 2012", array("cache" => true));
         <abbr class="published newsdate" title="2012-11-22T17:54:29+01:00">22-Nov-2012</abbr>
         <div>
      <p>The PHP development team announces the immediate availability of PHP 5.4.9 and PHP 5.3.19. These releases fix over 15 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.9, or at least 5.3.19.</p>
-     <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     <p>For source downloads of PHP 5.4.9 and PHP 5.3.19 please visit our <a href="/downloads/">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
      <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
 
@@ -247,7 +247,7 @@ site_header("News Archive - 2012", array("cache" => true));
 
      <p>
       For source downloads of PHP 5.4.8 and PHP 5.3.18 please visit
-      our <a href="/downloads.php">downloads page</a>, Windows binaries
+      our <a href="/downloads/">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
 
@@ -338,7 +338,7 @@ site_header("News Archive - 2012", array("cache" => true));
 
      <p>
       For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit
-      our <a href="/downloads.php">downloads page</a>, Windows binaries
+      our <a href="/downloads/">downloads page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      </p>
 
@@ -493,7 +493,7 @@ site_header("News Archive - 2012", array("cache" => true));
         <div>
 	    <p>The PHP development team announces the immediate availability of PHP 5.4.6 and PHP 5.3.16. These releases fix over 20 bugs. All users of PHP are encouraged to upgrade to PHP 5.4.6, or at least 5.3.16.</p>
 
-     <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.6 and PHP 5.3.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
@@ -559,7 +559,7 @@ site_header("News Archive - 2012", array("cache" => true));
      stream implementation. All users of PHP are encouraged to upgrade to
      PHP 5.4.5 or PHP 5.3.15.</p>
 
-     <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.5 and PHP 5.3.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
 
@@ -613,7 +613,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>PHP 5.4.4 and PHP 5.3.14 fixes over 30 bugs. Please note that the
      use of <i>php://fd</i> streams is now restricted to the CLI SAPI</p>
 
-      <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      <p>For source downloads of PHP 5.4.4 and PHP 5.3.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
       Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
       The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
@@ -637,7 +637,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <a href="http://php.net/manual/function.apache-request-headers.php">apache_request_headers()</a> (CVE-2012-2329).
      The PHP 5.3 series is not vulnerable to this issue.</p>
 
-     <p>For source downloads of PHP 5.4.3 and PHP 5.3.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.3 and PHP 5.3.13 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
@@ -734,7 +734,7 @@ site_header("News Archive - 2012", array("cache" => true));
      the level we would like. Please report any issues via <a href="https://bugs.php.net/">bugs.php.net</a>.</p>
 
      <p>For source downloads of PHP 5.3.12 and PHP 5.4.2 please visit
-     our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
+     our <a href="/downloads/">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. A
      <a href="/ChangeLog-5.php#5.4.2">ChangeLog</a> exists.</p>
 
@@ -807,7 +807,7 @@ site_header("News Archive - 2012", array("cache" => true));
      </ul>
 
      <p>For a full list of changes in PHP 5.3.11 and PHP 5.4.1, see the <a href="/ChangeLog-5.php">ChangeLog</a>. For source downloads please visit
-     our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
+     our <a href="/downloads/">downloads page</a>, Windows binaries can be found
      on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
      <p>All users of PHP are strongly encouraged to upgrade to PHP 5.3.11 or PHP 5.4.1.</p>
@@ -969,7 +969,7 @@ site_header("News Archive - 2012", array("cache" => true));
      <p>All users are strongly encouraged to upgrade to PHP 5.3.10.</p>
 
      <p>For source downloads please visit
-            our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
+            our <a href="/downloads/">downloads page</a>, Windows binaries can be found
             on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
 
@@ -1033,7 +1033,7 @@ site_header("News Archive - 2012", array("cache" => true));
      </ul>
 
      <p>For a full list of changes in PHP 5.3.9, see the <a href="/ChangeLog-5.php#5.3.9">ChangeLog</a>. For source downloads please visit
-       our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
+       our <a href="/downloads/">downloads page</a>, Windows binaries can be found
        on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
      <p>All users are strongly encouraged to upgrade to PHP 5.3.9.</p>

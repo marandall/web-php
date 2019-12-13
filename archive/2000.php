@@ -18,7 +18,7 @@ site_header("News Archive - 2000", array("cache" => true));
  <span class="newsdate">[19-Dec-2000]</span>
  This release includes improvements for a large number of defects
  and numerous enhancements in the PHP core, the language implementation and
- extensions. <a href="/downloads.php">Download</a>,
+ extensions. <a href="/downloads/">Download</a>,
  <a href="ChangeLog-4.php#4.0.4">ChangeLog</a>.
 </p>
 
@@ -37,7 +37,7 @@ site_header("News Archive - 2000", array("cache" => true));
 <h1>Patch Level 1 available for PHP 4.0.3</h1>
 <p>
  <span class="newsdate">[15-Oct-2000]</span>
- Due to two problems discovered in PHP 4.0.3, <a href="/downloads.php">PHP 4.0.3pl1
+ Due to two problems discovered in PHP 4.0.3, <a href="/downloads/">PHP 4.0.3pl1
  is now available</a>. This release fixes an issue that prevented the
  Apache php_value mechanism from working correctly with .conf files, and a
  memory leak that was discovered in the module versions of PHP.
@@ -48,7 +48,7 @@ site_header("News Archive - 2000", array("cache" => true));
 <h1>PHP 4.0.3 Released</h1>
 <p>
  <span class="newsdate">[11-Oct-2000]</span>
- <a href="/downloads.php">Version 4.0.3</a> includes several security-oriented
+ <a href="/downloads/">Version 4.0.3</a> includes several security-oriented
  fixes and enhancements, as well as several new features and bug fixes.
  It is strongly recommended for all users of PHP to upgrade to this version.
  You can read the <a href="/ChangeLog-4.php#4.0.3">changelog</a> here.
@@ -69,7 +69,7 @@ site_header("News Archive - 2000", array("cache" => true));
 <p>
  <span class="newsdate">[29-Aug-2000]</span>
  The new version features new functions, many bug fixes, and increased
- performance. <a href="/downloads.php">Download now!</a> You can read the
+ performance. <a href="/downloads/">Download now!</a> You can read the
  <a href="/ChangeLog-4.php#4.0.2">changelog</a> here.
 </p>
 
@@ -78,7 +78,7 @@ site_header("News Archive - 2000", array("cache" => true));
 <h1>PHP 4.0.1 Patch Level 2 available</h1>
 <p>
  <span class="newsdate">[30-June-2000]</span>
- <a href="/downloads.php">PHP 4.0.1pl2</a> addresses two bugs that were
+ <a href="/downloads/">PHP 4.0.1pl2</a> addresses two bugs that were
  discovered in PHP 4.0.1, that prevent error_reporting() and readdir()
  from working properly.
 </p>
@@ -92,7 +92,7 @@ site_header("News Archive - 2000", array("cache" => true));
  increased stability under Windows, improved error handling, several new features
  and lots of bug fixes. (the full list of changes is
  <a href="/ChangeLog-4.php#4.0.1">available</a>) It's a recommended upgrade
- for all PHP users. <a href="/downloads.php">Download now!</a>
+ for all PHP users. <a href="/downloads/">Download now!</a>
 </p>
 
 <hr>
@@ -102,7 +102,7 @@ site_header("News Archive - 2000", array("cache" => true));
  <span class="newsdate">[22-May-2000]</span>
  It's here, it's ready, and it has the long awaited 'Release' tag. The successor of
  PHP 3.0 has finally been released. At this point, everyone is encouraged to begin
- upgrading their systems to use this version. <a href="/downloads.php">Download it
+ upgrading their systems to use this version. <a href="/downloads/">Download it
  now!</a>
 </p>
 

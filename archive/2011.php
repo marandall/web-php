@@ -490,7 +490,7 @@ site_header("News Archive - 2011", array("cache" => true));
         anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</p>
 
      <p>For a full list of changes in PHP 5.3.8, see the <a href="/ChangeLog-5.php#5.3.8">ChangeLog</a>. For source downloads please
-        visit our <a href="/downloads.php">downloads page</a>, Windows binaries
+        visit our <a href="/downloads/">downloads page</a>, Windows binaries
     can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     <p>
          <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="http://php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
@@ -609,7 +609,7 @@ site_header("News Archive - 2011", array("cache" => true));
 
     <p xmlns="http://www.w3.org/2005/Atom">For a full list of changes in PHP 5.3.7, see the
      <a href="/ChangeLog-5.php#5.3.7">ChangeLog</a>. For source downloads
-     please visit our <a href="/downloads.php">downloads page</a>, Windows
+     please visit our <a href="/downloads/">downloads page</a>, Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
 
     </div>
@@ -925,7 +925,7 @@ site_header("News Archive - 2011", array("cache" => true));
 
      <p>For a full list of changes in PHP 5.3.6, see the
      <a href="/ChangeLog-5.php#5.3.6">ChangeLog</a>. For source downloads
-     please visit our <a href="/downloads.php">downloads page</a>, Windows
+     please visit our <a href="/downloads/">downloads page</a>, Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
 

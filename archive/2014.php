@@ -62,7 +62,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.36 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.36">ChangeLog</a>.
      </p>
@@ -85,7 +85,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.4 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.4">ChangeLog</a>.
      </p>
@@ -107,7 +107,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.20 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.20">ChangeLog</a>.
      </p>
@@ -129,7 +129,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.35 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.35 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.35">ChangeLog</a>.
      </p>
@@ -150,7 +150,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.3 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.3">ChangeLog</a>.
      </p>
@@ -171,7 +171,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.19 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.19">ChangeLog</a>.
      </p>
@@ -310,7 +310,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.2 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.2">ChangeLog</a>.
      </p>
@@ -334,7 +334,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.34 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.34">ChangeLog</a>.
      </p>
@@ -358,7 +358,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.18">ChangeLog</a>.
      </p>
@@ -380,7 +380,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.6 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.6.1 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.6.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.1">ChangeLog</a>.
      </p>
@@ -441,7 +441,7 @@ site_header("News Archive - 2014", array("cache" => true));
      PHP 5.4 users that need further bugfixes are encouraged to upgrade to PHP 5.6 or PHP 5.5.
      </p>
 
-     <p>For source downloads of PHP 5.4.33 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.33">ChangeLog</a>.
      </p>
@@ -463,7 +463,7 @@ site_header("News Archive - 2014", array("cache" => true));
      All PHP 5.5 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.17 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.17">ChangeLog</a>.
      </p>
@@ -513,7 +513,7 @@ This new version comes with new features, some backward incompatible changes and
          For users upgrading from PHP 5.5, <a href="http://php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
         </p>
 
-        <p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+        <p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
         Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
         The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
         </p>
@@ -585,7 +585,7 @@ CVE-2014-2497, CVE-2014-5120 and CVE-2014-3597.
 
 <p>All PHP users are encouraged to upgrade to this new version.</p>
 
-<p>For source downloads of PHP 5.5.16, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+<p>For source downloads of PHP 5.5.16, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.16">ChangeLog</a>.
 </p>
@@ -608,7 +608,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.32 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.32">ChangeLog</a>.
      </p>
@@ -634,7 +634,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      <p>PHP 5.3.29 contains about 25 potentially security related fixes
 	     backported from PHP 5.4 and 5.5.</p>
 
-     <p>For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>. Windows
+     <p>For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads/">downloads page</a>. Windows
      binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. The list of changes is recorded in
      the <a href="http://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
 
@@ -862,7 +862,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.31 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.31">ChangeLog</a>.
      </p>
@@ -884,7 +884,7 @@ This release fixes several bugs against PHP 5.5.14.
 
 <p>All PHP users are encouraged to upgrade to this new version.</p>
 
-<p>For source downloads of PHP 5.5.15, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+<p>For source downloads of PHP 5.5.15, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
 The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.15">ChangeLog</a>.
 </p>
@@ -1005,7 +1005,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
         <a href="http://git.php.net/?p=php-src.git;a=blob_plain;f=UPGRADING;hb=refs/heads/PHP-5.5">upgrading guide</a>.
         We apologize for any inconvenience you may have experienced with this behavior.</p>
 
-        <p>For source downloads of PHP 5.5.14, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+        <p>For source downloads of PHP 5.5.14, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
         Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.14">ChangeLog</a>.
         </p>
@@ -1039,7 +1039,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      We apologize for any inconvenience you may have experienced with this behavior.</p>
 
 
-     <p>For source downloads of PHP 5.4.30 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.30">ChangeLog</a>.
      </p>
@@ -1233,7 +1233,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.29 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.29">ChangeLog</a>.
      </p>
@@ -1255,7 +1255,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
         <p>All PHP users are encouraged to upgrade to this new version.</p>
 
-        <p>For source downloads of PHP 5.5.13, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+        <p>For source downloads of PHP 5.5.13, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
         Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.13">ChangeLog</a>.
         </p>
@@ -1482,7 +1482,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.28 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.28">ChangeLog</a>.
      </p>
@@ -1503,7 +1503,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
 
         <p>All PHP users are encouraged to upgrade to this new version.</p>
 
-        <p>For source downloads of PHP 5.5.12, please visit our <a href="http://www.php.net/downloads.php">downloads page</a>.
+        <p>For source downloads of PHP 5.5.12, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
         Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
         The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.12">ChangeLog</a>.
         </p>
@@ -1577,7 +1577,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.27">ChangeLog</a>.
      </p>
@@ -1599,7 +1599,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      has been fixed : CVE-2013-7345. We recommand all PHP 5.5 users to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.11 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.11">ChangeLog</a>.
      </p>
@@ -1695,7 +1695,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.26 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.26">ChangeLog</a>.
      </p>
@@ -1770,7 +1770,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      We recommand all PHP 5.5 users to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.5.10 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.5.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.10">ChangeLog</a>.
      </p>
@@ -1841,7 +1841,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
      All PHP 5.4 users are encouraged to upgrade to this version.
      </p>
 
-     <p>For source downloads of PHP 5.4.25 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+     <p>For source downloads of PHP 5.4.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.25">ChangeLog</a>.
      </p>
@@ -1861,7 +1861,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
       PHP 5.5.8.</p>
 
     <p>
-      For source downloads of PHP 5.5.9 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      For source downloads of PHP 5.5.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries are located on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes can be found in the <a href="http://www.php.net/ChangeLog-5.php#5.5.9">ChangeLog</a>.
    </p>
@@ -2063,7 +2063,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
           5.4.24. About 14 bugs were fixed. All PHP 5.4 users are encouraged to upgrade to this version.
           </p>
 
-          <p>For source downloads of PHP 5.4.24 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+          <p>For source downloads of PHP 5.4.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
           Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
           The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.24">ChangeLog</a>.
           </p>
@@ -2083,7 +2083,7 @@ The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.p
       PHP 5.5.7 components.</p>
 
     <p>
-      For source downloads of PHP 5.5.8 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+      For source downloads of PHP 5.5.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
      Windows binaries are located on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
      The list of changes can be found in the <a href="http://www.php.net/ChangeLog-5.php#5.5.8">ChangeLog</a>.
    </p>

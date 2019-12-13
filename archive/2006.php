@@ -238,7 +238,7 @@ including business and technical professionals from around the world.
 <h1>PHP 5.1.4 Released</h1>
 <p>
  <span class="newsdate">[04-May-2006]</span>
- A critical bug with $_POST array handling as well as the FastCGI sapi have been discovered in PHP 5.1.3. A new PHP release <a href="/downloads.php">5.1.4</a> is now
+ A critical bug with $_POST array handling as well as the FastCGI sapi have been discovered in PHP 5.1.3. A new PHP release <a href="/downloads/">5.1.4</a> is now
  available to address these issues. All PHP users are encouraged to upgrade to this release as soon as possible.
 </p>
 <p>
@@ -253,7 +253,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4
 <h1>PHP 5.1.3 Released</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>
- The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.3</a>.
+ The PHP development team is proud to announce the release of <a href="/downloads/">PHP 5.1.3</a>.
  This release combines small number of feature enhancements with a significant amount of bug fixes and resolves a number of security issues.
  Some of the key changes of PHP 5.1.3 include:
 </p>
@@ -427,7 +427,7 @@ discount is available until March 1st</a>.
 <h1>PHP 4.4.2 Released</h1>
 <p>
  <span class="newsdate">[13-Jan-2006]</span>
- The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 4.4.2</a>.
+ The PHP development team is proud to announce the release of <a href="/downloads/">PHP 4.4.2</a>.
  This release address a few small security issues, and also corrects some
  regressions that occurred in PHP 4.4.1.  All PHP 4 users are encouraged to
  upgrade to this release. Some of the key changes of PHP 4.4.2 include:
@@ -448,7 +448,7 @@ and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2
 <h1>PHP 5.1.2 Released</h1>
 <p>
  <span class="newsdate">[12-Jan-2006]</span>
- The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.2</a>.
+ The PHP development team is proud to announce the release of <a href="/downloads/">PHP 5.1.2</a>.
  This release combines small feature enhancements with a fair number of
  bug fixes and addresses three security issues. All PHP 5 users are encouraged to
  upgrade to this release. Some of the key changes of PHP 5.1.2 include:

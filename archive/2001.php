@@ -17,7 +17,7 @@ site_header("News Archive - 2001", array("cache" => true));
 
 <p>
  <span class="newsdate">[10-Dec-2001]</span>
- <a href="/downloads.php">PHP 4.1.0</a> is a key new release in the PHP 4 family.  It includes
+ <a href="/downloads/">PHP 4.1.0</a> is a key new release in the PHP 4 family.  It includes
  highly-improved performance, especially under Windows; a more security-friendly
  way of accepting form variables; output compression; and much, much more.  Read the full
  <a href="/release_4_1_0.php">release announcement</a>, or check out the
@@ -197,7 +197,7 @@ site_header("News Archive - 2001", array("cache" => true));
 <h1>PHP 4.0.6 Released!</h1>
 <p>
  <span class="newsdate">[23-Jun-2001]</span>
- <a href="/downloads.php">PHP 4.0.6</a> is a maintenance release, that features
+ <a href="/downloads/">PHP 4.0.6</a> is a maintenance release, that features
  many bug fixes from PHP 4.0.5, and is especially much more efficient in its
  memory requirements. Users that skipped the 4.0.5 upgrade may wish to jump
  directly from 4.0.4 to the much more stable 4.0.6. For a full list of changes,
@@ -244,7 +244,7 @@ site_header("News Archive - 2001", array("cache" => true));
 <h1>PHP 4.0.5 Released!</h1>
 <p>
  <span class="newsdate">[30-Apr-2001]</span>
- <a href="/downloads.php">PHP 4.0.5</a> is a maintenance release, that
+ <a href="/downloads/">PHP 4.0.5</a> is a maintenance release, that
  features many bug fixes from PHP 4.0.4, as well as output compression, new
  experimental FastCGI support, and significantly improved thread-safe versions.
  For a full list of changes, check out the <a href="/ChangeLog-4.php#4.0.5">ChangeLog</a>.

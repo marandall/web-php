@@ -35,7 +35,7 @@
 		/** @var array[] */
 		private $page_headers = [
 			'main'          => ['url' => '/', 'title' => ''],
-			'downloads'     => ['url' => '/downloads', 'title' => 'Downloads'],
+			'downloads'     => ['url' => '/downloads/', 'title' => 'Downloads'],
 			'documentation' => ['url' => '/docs.php', 'title' => 'Documentation'],
 			'community'     => ['url' => '/get-involved.php', 'title' => 'Get Involved'],
 			'help'          => ['url' => '/support.php', 'title' => 'Help'],
@@ -81,7 +81,7 @@
 			try {
 				ob_start();
 				$this->renderInternal($internal);
-
+				
 				return new Response(ob_get_clean(), 200, ['Content-Type' => 'text/html']);
 			}
 			catch (Exception $ex) {
@@ -179,12 +179,20 @@
                     <h1><?= htmlspecialchars($this->page_title) ?></h1>
 					
 					<?php foreach ($this->error_panels as $panel) { ?>
-					<div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
-                        <?php $panel->draw(); ?>
-                    </div>
+                        <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
+							<?php $panel->draw(); ?>
+                        </div>
 					<?php } ?>
 					
 					<?php $internal(); ?>
+                </section>
+				<?php foreach ($this->side_panels as $panel) { ?>
+					<aside>
+                        <div style="padding-left: 10px">
+	                        <?php $panel->draw(); ?>
+                        </div>
+					</aside>
+				<?php } ?>
             </div><!-- layout -->
 
             <footer>

@@ -1,9 +1,13 @@
 <?php
-$_SERVER['BASE_PAGE'] = 'download-docs.php';
+	
+	use phpweb\Config\Site;
+	use phpweb\Data\Languages;
+	
+	$_SERVER['BASE_PAGE'] = 'download-docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
 if (!empty($_GET['active_langs'])) {
-    echo serialize(\phpweb\Data\Languages::GetActiveLanguages());
+    echo serialize(Languages::GetActiveLanguages());
     exit;
 }
 
@@ -88,8 +92,8 @@ $files = array(); $found_formats = array();
 $filepath = $filename = '';
 
 // Go through all possible manual languages
-foreach (\phpweb\Data\Languages::ACTIVE as $langcode => $language) {
-    if(isset($INACTIVE_ONLINE_LANGUAGES[$langcode]) && \phpweb\Config\Site::$BaseUrl !== 'http://docs.php.net/') {
+foreach (Languages::ACTIVE as $langcode => $language) {
+    if(isset(Languages::INACTIVE_ONLINE[$langcode]) && Site::$BaseUrl !== 'http://docs.php.net/') {
        continue;
     }
 
@@ -178,7 +182,7 @@ if (count($found_formats) == 0) {
             $cellclass = "";
         }
 
-        echo "<tr>\n<th class=\"subl\">" . \phpweb\Data\Languages::ACTIVE[$langcode] . "</th>\n";
+        echo "<tr>\n<th class=\"subl\">" . Languages::ACTIVE[$langcode] . "</th>\n";
 
         foreach ($formats as $formatname => $extension) {
 

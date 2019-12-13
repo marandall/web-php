@@ -25,7 +25,7 @@
       <li><a href="http://php.net/manual/migration73.deprecated.php">Several Deprecations</a></li>
       </ul>
 
-      <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads">downloads</a> page
+      <p>For source downloads of PHP 7.3.0 please visit our <a href="http://www.php.net/downloads/">downloads</a> page
       Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site.
       The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.3.0">ChangeLog</a>.</p>
 

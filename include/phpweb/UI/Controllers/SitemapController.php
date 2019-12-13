@@ -33,7 +33,7 @@
 			<h2>Getting PHP</h2>
 			
 			<ul>
-				<li><a href="/downloads.php">Downloads</a></li>
+				<li><a href="/downloads/">Downloads</a></li>
 				<li><a href="/releases/">Older releases</a></li>
 				<li><a href="/software.php">Software</a></li>
 			</ul>
@@ -94,7 +94,7 @@
 			<h2>Other pages</h2>
 			
 			<ul>
-				<li><a href="/download-logos.php">Download Logos</a></li>
+				<li><a href="/downloads/logos.php">Download Logos</a></li>
 				<li><a href="/contact.php">Contact</a></li>
 				<li><a href="/copyright.php">Copyright</a></li>
 				<li><a href="/credits.php">Credits</a></li>

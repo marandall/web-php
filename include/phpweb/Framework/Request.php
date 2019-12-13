@@ -9,7 +9,6 @@
 	 *
 	 * Because politics
 	 */
-	
 	class Request
 	{
 		/** @var string */
@@ -24,21 +23,32 @@
 		/** @var PropertyBag */
 		private $server;
 		
+		
 		/** @var Visitor */
 		private $visitor;
+		
+		/** @var PropertyBag */
+		private $cookies;
+		
+		/** @var PropertyBag */
+		private $attributes;
 		
 		public function __construct(
 			string $url,
 			array $query,
 			array $post,
 			array $server,
+			array $cookies,
+			array $attributes,
 			Visitor $visitor
 		) {
-			$this->url     = $url;
-			$this->query   = new PropertyBag($query);
-			$this->post    = new PropertyBag($post);
-			$this->server  = new PropertyBag($server);
-			$this->visitor = $visitor;
+			$this->url        = $url;
+			$this->query      = new PropertyBag($query);
+			$this->post       = new PropertyBag($post);
+			$this->server     = new PropertyBag($server);
+			$this->cookies    = new PropertyBag($cookies);
+			$this->attributes = new PropertyBag($attributes);
+			$this->visitor    = $visitor;
 		}
 		
 		/**
@@ -62,5 +72,13 @@
 		
 		public function getVisitor(): Visitor {
 			return $this->visitor;
+		}
+		
+		public function getCookiesBag(): PropertyBag {
+			return $this->cookies;
+		}
+		
+		public function getAttributesBag(): PropertyBag {
+			return $this->attributes;
 		}
 	}

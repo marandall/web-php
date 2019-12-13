@@ -188,7 +188,7 @@ site_header("News Archive - 2003", array("cache" => true));
 <h1>PHP 5.0.0 Beta 2 released</h1>
 <p>
  <span class="newsdate">[30-Oct-2003]</span>
- <a href="/downloads.php">PHP 5.0.0 Beta 2</a> has been released.
+ <a href="/downloads/">PHP 5.0.0 Beta 2</a> has been released.
  This is the first feature complete version of PHP 5, and we recommend for PHP users
  to try it. PHP 5 is still not ready for production use!
 </p>
@@ -523,7 +523,7 @@ site_header("News Archive - 2003", array("cache" => true));
  <span class="newsdate">[29-Jun-2003]</span>
  The PHP development community is proud to announce the release of PHP 5
  Beta 1. Both source packages, and a Windows build are available in the
- <a href="/downloads.php">Downloads Section</a>. A list of changes
+ <a href="/downloads/">Downloads Section</a>. A list of changes
  can be found in the <a href="/ChangeLog-5.php#5.0.0b1">ChangeLog</a>.
 </p>
 <p>
