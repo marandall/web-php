@@ -1,0 +1,17 @@
+{
+  "require": {
+    "nikic/fast-route": "*",
+    "ext-simplexml": "*"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "prepend-autoloader": false
+  },
+  "autoload": {
+    "psr-4": {
+      "phpweb\\": "./phpweb"
+    }
+  }
+}

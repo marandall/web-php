@@ -146,7 +146,7 @@ if ($error) {
     $error_div = <<<EOL
       <div style="width: 90%; padding: 15px; margin: auto; border: 1px dotted red; background-color: #9999cc; color: white;">
         <div style="float: left; padding: 15px;">
-          <img src="/images/docs-warning.png">
+          <img src="/static/images/docs-warning.png">
         </div>
         <p>
           <strong>There was an error with your request!</strong>

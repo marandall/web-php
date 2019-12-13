@@ -85,8 +85,8 @@ if (!isset($config["languages"])) {
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="/static/styles/workarounds.ie7.css" media="screen">
- <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/public/static/styles/workarounds.ie7.css" media="screen">
+    <![endif]-->
 
  <!--[if lte IE 8]>
  <script>
@@ -95,8 +95,8 @@ if (!isset($config["languages"])) {
  <![endif]-->
 
  <!--[if IE]>
- <script src="/static/js/ext/html5.js"></script>
- <![endif]-->
+    <script src="/public/static/js/ext/html5.js"></script>
+    <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
@@ -107,7 +107,7 @@ if (!isset($config["languages"])) {
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
   <div class="navbar-inner clearfix">
-    <a href="/" class="brand"><img src="/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+    <a href="/" class="brand"><img src="/static/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
     <div id="mainmenu-toggle-overlay"></div>
     <input type="checkbox" id="mainmenu-toggle">
     <ul class="nav">

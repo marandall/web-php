@@ -17,7 +17,7 @@ function print_cc_header($country) {
     ?>
     <div class="country" id="<?php echo $country ?>">
     <h2 class="title countrytitle">User Groups in <?php echo Countries::COUNTRIES_BY_ALPHA_3[$country] ?>
-        <img height="25" width="45" src="/images/flags/beta/<?php echo strtolower($country) ?>.png">
+        <img height="25" width="45" src="/static/images/flags/beta/<?php echo strtolower($country) ?>.png">
     </h2>
     <ul class="ugs">
     <?php

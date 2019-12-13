@@ -321,7 +321,7 @@ else {
  Please note that periodically the developers go through the notes and
  may incorporate information from them into the documentation. This means
  that any note submitted here becomes the property of the PHP Documentation
- Group and will be available under the <a href="/license/index.php#doc-lic">same license</a> as the documentation.
+ Group and will be available under the <a href="/public/static/license/index.php#doc-lic">same license</a> as the documentation.
 </p>
 <p>
  Your IP Address will be logged with the submitted note and made public on the

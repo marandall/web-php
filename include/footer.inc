@@ -91,7 +91,7 @@
  }
 ?>
 
-<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/images/to-top@2x.png"></a>
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="/static/images/to-top@2x.png"></a>
 
 </body>
 </html>

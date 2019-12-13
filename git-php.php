@@ -389,7 +389,7 @@ foreach ($purposes as $i => $p) { ?>
  <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
-<th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
+<th class="subr">Do you agree to follow the <a href="public/static/license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
 <td><input type="checkbox" name="guidelines" value="1" id="vcs-guidelines"> <label for="vcs-guidelines">Check the box if you agree</label></td>
 </tr>
 <tr>

@@ -212,7 +212,7 @@ function getImage(): ?array {
 		fwrite(STDOUT, "Enter the image name (note: the image has to exist in './images/news'): ");
 		$path = basename(rtrim(fgets(STDIN)));
 
-		if (true === file_exists(PHPWEB . "/images/news/$path")) {
+		if (true === file_exists(PHPWEB . "/static/images/news/$path")) {
 			$isValidImage = true;
 
 			if (extension_loaded('gd')) {

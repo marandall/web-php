@@ -67,7 +67,7 @@ EOB;
 	if($show_attrib):
 	echo <<<EOB
 <span style="margin-left: 3em; margin-top: 1em; float: right; font-family: Verdana, Tahoma, Helvetica, Arial;
-font-size: 11px; color:#555;">results by <img style="margin-bottom:4px;" src="/images/bing.png" align="center"/></span>
+font-size: 11px; color:#555;">results by <img style="margin-bottom:4px;" src="/static/images/bing.png" align="center"/></span>
 EOB;
 	endif;
 	if($show_foot):
