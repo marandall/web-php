@@ -25,44 +25,48 @@
 	];
 	
 	$routes = [
-		'/contact.php'                             => \phpweb\UI\Controllers\ContactController::class,
-		'/copyright.php'                           => \phpweb\UI\Controllers\CopyrightController::class,
-		'/credits.php'                             => \phpweb\UI\Controllers\CreditsController::class,
-		'/docs.php'                                => \phpweb\UI\Controllers\DocsController::class,
-		'/git.php'                                 => \phpweb\UI\Controllers\GitController::class,
-		'/gpg-keys.php'                            => \phpweb\UI\Controllers\GpgKeysController::class,
-		'/privacy.php'                             => \phpweb\UI\Controllers\PrivacyController::class,
-		'/security-note.php'                       => \phpweb\UI\Controllers\SecurityNoteController::class,
-		'/supported-versions.php'                  => \phpweb\UI\Controllers\SupportedVersionsController::class,
-		'/sitemap.php'                             => \phpweb\UI\Controllers\SitemapController::class,
-		'/support.php'                             => \phpweb\UI\Controllers\SupportController::class,
-		'/software.php'                            => \phpweb\UI\Controllers\SoftwareController::class,
-		'/sites.php'                               => \phpweb\UI\Controllers\SitesController::class,
-		'/thanks.php'                              => \phpweb\UI\Controllers\ThanksController::class,
-		'/get-involved.php'                        => \phpweb\UI\Controllers\GetInvolvedController::class,
-		'/elephpant.php'                           => \phpweb\UI\Controllers\ElephpantController::class,
+		'/contact.php'                                                 => \phpweb\UI\Controllers\ContactController::class,
+		'/copyright.php'                                               => \phpweb\UI\Controllers\CopyrightController::class,
+		'/credits.php'                                                 => \phpweb\UI\Controllers\CreditsController::class,
+		'/docs.php'                                                    => \phpweb\UI\Controllers\DocsController::class,
+		'/git.php'                                                     => \phpweb\UI\Controllers\GitController::class,
+		'/gpg-keys.php'                                                => \phpweb\UI\Controllers\GpgKeysController::class,
+		'/privacy.php'                                                 => \phpweb\UI\Controllers\PrivacyController::class,
+		'/security-note.php'                                           => \phpweb\UI\Controllers\SecurityNoteController::class,
+		'/supported-versions.php'                                      => \phpweb\UI\Controllers\SupportedVersionsController::class,
+		'/sitemap.php'                                                 => \phpweb\UI\Controllers\SitemapController::class,
+		'/support.php'                                                 => \phpweb\UI\Controllers\SupportController::class,
+		'/software.php'                                                => \phpweb\UI\Controllers\SoftwareController::class,
+		'/sites.php'                                                   => \phpweb\UI\Controllers\SitesController::class,
+		'/thanks.php'                                                  => \phpweb\UI\Controllers\ThanksController::class,
+		'/get-involved.php'                                            => \phpweb\UI\Controllers\GetInvolvedController::class,
+		'/elephpant.php'                                               => \phpweb\UI\Controllers\ElephpantController::class,
 		
 		/* release information */
-		'/releases/{major:\d+}_{minor:\d+}_{patch}/' => \phpweb\UI\Controllers\Releases\ReleaseController::class,
+		'/versions/{major:\d+}.{minor:\d+}.{patch}/'                   => \phpweb\UI\Controllers\Versions\Releases\ReleaseController::class,
+		'/versions/{major:\d+}.{minor:\d+}.{patch}/install/ubuntu_ppa' => \phpweb\UI\Controllers\Versions\Releases\Install\InstallReleaseFromPPAController::class,
+		'/versions/{major:\d+}.{minor:\d+}/'                           => \phpweb\UI\Controllers\Versions\Branches\BranchController::class,
+		'/versions/{major:\d+}.{minor:\d+}/changelog'                  => \phpweb\UI\Controllers\Versions\Branches\BranchChangelogController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/ubuntu_ppa'         => \phpweb\UI\Controllers\Versions\Branches\Install\InstallBranchFromPPAController::class,
 		
 		/* general downloads */
-		'/downloads/'                              => \phpweb\UI\Controllers\Downloads\DownloadsIndexController::class,
-		'/downloads/logos.php'                     => \phpweb\UI\Controllers\Downloads\LogosController::class,
+		'/downloads/'                                                  => \phpweb\UI\Controllers\Downloads\DownloadsIndexController::class,
+		'/downloads/logos.php'                                         => \phpweb\UI\Controllers\Downloads\LogosController::class,
 		
 		/* mailing list */
-		'/lists/'                                  => \phpweb\UI\Controllers\Lists\MailingListsIndexController::class,
-		'/lists/unsubscribe.php'                   => \phpweb\UI\Controllers\Lists\UnsubscribeController::class,
+		'/lists/'                                                      => \phpweb\UI\Controllers\Lists\MailingListsIndexController::class,
+		'/lists/unsubscribe.php'                                       => \phpweb\UI\Controllers\Lists\UnsubscribeController::class,
 		
 		/* licensing */
-		'/license/'                                => \phpweb\UI\Controllers\License\LicenseIndexController::class,
-		'/license/contrib-guidelines-code.php'     => \phpweb\UI\Controllers\License\ContributorGuidelinesController::class,
-		'/license/distrib-guidelines-code'         => \phpweb\UI\Controllers\License\DistributionGuidelinesController::class,
+		'/license/'                                                    => \phpweb\UI\Controllers\License\LicenseIndexController::class,
+		'/license/contrib-guidelines-code.php'                         => \phpweb\UI\Controllers\License\ContributorGuidelinesController::class,
+		'/license/distrib-guidelines-code'                             => \phpweb\UI\Controllers\License\DistributionGuidelinesController::class,
 	];
 	
 	$dispatcher = FastRoute\simpleDispatcher(
 		static function (\FastRoute\RouteCollector $r) use ($routes) {
 			foreach ($routes as $uri => $class_id) {
-				$r->addRoute('GET', $uri, $class_id);
+				$r->addRoute(['GET', 'POST'], $uri, $class_id);
 			}
 		}
 	);

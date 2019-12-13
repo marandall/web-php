@@ -11,11 +11,11 @@
 		/** @var null|Release[] */
 		private static $release_cache = null;
 		
-		public static function GetOldReleases(): array {
+		public static function GetOldReleasesData(): array {
 			return require __DIR__ . '/../../releases_old.inc';
 		}
 		
-		public static function GetCurrentReleases(): array {
+		public static function GetCurrentReleasesData(): array {
 			return require __DIR__ . '/../../releases_current.inc';
 		}
 		
@@ -29,13 +29,13 @@
 			}
 			
 			$releases = [];
-			foreach (self::GetOldReleases() as $major => $branch_releases) {
+			foreach (self::GetOldReleasesData() as $major => $branch_releases) {
 				foreach ($branch_releases as $version => $branch_release) {
 					$releases[$version] = new Release($version, $branch_release);
 				}
 			}
 			
-			foreach (self::GetCurrentReleases() as $major => $branch_releases) {
+			foreach (self::GetCurrentReleasesData() as $major => $branch_releases) {
 				foreach ($branch_releases as $version => $branch_release) {
 					$releases[$version] = new Release($version, $branch_release);
 				}
@@ -45,37 +45,15 @@
 		}
 		
 		/**
-		 * @return Release[]
-		 */
-		
-		public static function GetFlatReleases(): array {
-			$dx = [];
-			
-			foreach (self::GetCurrentReleases() as $major => $minor) {
-				foreach ($minor as $ver_id => $data) {
-					$dx[$ver_id] = $data;
-				}
-			}
-			
-			foreach (self::GetOldReleases() as $major => $minor) {
-				foreach ($minor as $ver_id => $data) {
-					$dx[$ver_id] = $data;
-				}
-			}
-			
-			return $dx;
-		}
-		
-		/**
 		 * Finds the latest version by iterating over the entire list of
 		 * supported versions
 		 *
-		 * @return array - of form [major, minor]
+		 * @return Release[] - of form [major, minor]
 		 */
 		public static function GetLatestReleaseVersionArray(): array {
 			$version = null;
 			$current = null;
-			foreach (self::GetCurrentReleases() as $versions) {
+			foreach (self::GetCurrentReleasesData() as $versions) {
 				foreach ($versions as $ver => $info) {
 					if (version_compare($ver, $version) > 0) {
 						$version = $ver;

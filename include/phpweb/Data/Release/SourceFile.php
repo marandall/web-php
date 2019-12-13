@@ -40,4 +40,8 @@
 		public function getDate(): \DateTime {
 			return $this->date;
 		}
+		
+		public function getUrl(): string {
+			return '/distributions/' . $this->getFilename();
+		}
 	}

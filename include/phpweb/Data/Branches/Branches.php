@@ -72,14 +72,14 @@
 			
 			$branches = [];
 			foreach ($releases_by_branch as $branch_id => $releases) {
-				usort(
+				uasort(
 					$releases,
 					function (Release $a, Release $b) {
 						return $a->getDate()->getTimestamp() - $b->getDate()->getTimestamp();
 					}
 				);
 				
-				$branches[$branch_id] = new Branch($branch_id, [], $releases);
+				$branches[$branch_id] = new Branch($branch_id, self::BRANCHES[$branch_id] ?? [], $releases);
 			}
 			
 			return self::$branches = $branches;
@@ -89,7 +89,7 @@
 			$branches = [];
 			$now      = new \DateTime();
 			
-			foreach (Releases::GetCurrentReleases() as $major => $releases) {
+			foreach (Releases::GetCurrentReleasesData() as $major => $releases) {
 				foreach ($releases as $version => $release) {
 					if ($branch = version_number_to_branch($version)) {
 						$threshold = get_branch_security_eol_date($branch);
@@ -122,7 +122,7 @@
 			$now            = new \DateTime();
 			
 			// Gather the last release on each branch into a convenient array.
-			foreach (Releases::GetOldReleases() as $major => $releases) {
+			foreach (Releases::GetOldReleasesData() as $major => $releases) {
 				foreach ($releases as $version => $release) {
 					if ($branch = version_number_to_branch($version)) {
 						if (!isset($branches[$major][$branch]) || version_compare(
@@ -140,7 +140,7 @@
 			
 			/* Exclude releases from active branches, where active is defined as "in
 			 * the $RELEASES array and not explicitly marked as EOL there". */
-			foreach (Releases::GetCurrentReleases() as $major => $releases) {
+			foreach (Releases::GetCurrentReleasesData() as $major => $releases) {
 				foreach ($releases as $version => $release) {
 					if ($branch = version_number_to_branch($version)) {
 						if ($now < get_branch_security_eol_date($branch)) {
@@ -164,7 +164,7 @@
 					$parts = explode('.', $version);
 					$major = $parts[0];
 					
-					$release = Releases::GetCurrentReleases()[$major][$version] ?? null;
+					$release = Releases::GetCurrentReleasesData()[$major][$version] ?? null;
 					if ($release !== null) {
 						if ($branch = version_number_to_branch($version)) {
 							$branches[$major][$branch] = [
@@ -183,5 +183,12 @@
 			}
 			
 			return $branches;
+		}
+		
+		public static function VersionNumberToBranchID($version) {
+			$parts = explode('.', $version);
+			if (count($parts) > 1) {
+				return "$parts[0].$parts[1]";
+			}
 		}
 	}

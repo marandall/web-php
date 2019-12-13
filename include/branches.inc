@@ -100,7 +100,7 @@ function get_all_branches() {
 
 	foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
-			if ($branch = version_number_to_branch($version)) {
+			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
 				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
 					$branches[$major][$branch] = $release;
 					$branches[$major][$branch]['version'] = $version;
@@ -111,7 +111,7 @@ function get_all_branches() {
 
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
-			if ($branch = version_number_to_branch($version)) {
+			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
 				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
 					$branches[$major][$branch] = $release;
 					$branches[$major][$branch]['version'] = $version;
@@ -134,7 +134,7 @@ function get_active_branches($include_recent_eols = true) {
 
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
-			if ($branch = version_number_to_branch($version)) {
+			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
         $threshold = get_branch_security_eol_date($branch);
         if ($include_recent_eols) {
           $threshold->add($GLOBALS['KEEP_EOL']);
@@ -165,7 +165,7 @@ function get_eol_branches($always_include = null) {
 	// Gather the last release on each branch into a convenient array.
 	foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
-			if ($branch = version_number_to_branch($version)) {
+			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
 				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
 					$branches[$major][$branch] = array(
 						'date' => strtotime($release['date']),
@@ -181,7 +181,7 @@ function get_eol_branches($always_include = null) {
 	 * the $RELEASES array and not explicitly marked as EOL there". */
 	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
 		foreach ($releases as $version => $release) {
-			if ($branch = version_number_to_branch($version)) {
+			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
 				if ($now < get_branch_security_eol_date($branch)) {
 					/* This branch isn't EOL: remove it from our array. */
 					if (isset($branches[$major][$branch])) {
@@ -204,7 +204,7 @@ function get_eol_branches($always_include = null) {
 
 			if (isset($GLOBALS['RELEASES'][$major][$version])) {
 				$release = $GLOBALS['RELEASES'][$major][$version];
-				if ($branch = version_number_to_branch($version)) {
+				if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
 					$branches[$major][$branch] = array(
 						'date' => strtotime($release['source'][0]['date']),
 						'link' => "/downloads#v$version",
@@ -228,11 +228,14 @@ function get_eol_branches($always_include = null) {
  * return either null (if no release exists on the given branch), or the usual
  * version metadata from $RELEASES for a single release. */
 function get_initial_release($branch) {
-	$branch = version_number_to_branch($branch);
+	$branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($branch);
 	if (!$branch) {
 		return null;
 	}
+	
 	$major = substr($branch, 0, strpos($branch, '.'));
+	
+	
 
 	if (isset($GLOBALS['OLDRELEASES'][$major]["$branch.0"])) {
 		return $GLOBALS['OLDRELEASES'][$major]["$branch.0"];
@@ -252,7 +255,7 @@ function get_initial_release($branch) {
 }
 
 function get_final_release($branch) {
-	$branch = version_number_to_branch($branch);
+	$branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($branch);
 	if (!$branch) {
 		return null;
 	}
@@ -260,7 +263,7 @@ function get_final_release($branch) {
 
 	$last = "$branch.0";
 	foreach ($GLOBALS['OLDRELEASES'][$major] as $version => $release) {
-		if (version_number_to_branch($version) == $branch && version_compare($version, $last, '>')) {
+		if (\phpweb\Data\Branches\Branches::VersionNumberToBranchID($version) == $branch && version_compare($version, $last, '>')) {
 			$last = $version;
 		}
 	}

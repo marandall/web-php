@@ -4,7 +4,9 @@
 	
 	namespace phpweb\UI\Controllers\Downloads;
 	
-	use phpweb\Data\Releases;
+	use phpweb\Data\Branches\Branch;
+	use phpweb\Data\Branches\Branches;
+	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
@@ -21,57 +23,81 @@
 		public function renderContents() {
 			$SHOW_COUNT = 4;
 			
-			?>
-			<?php foreach (Releases::GetCurrentReleases() as $MAJOR => $major_releases) {
-				$releases = array_slice($major_releases, 0, $SHOW_COUNT);
+			/** @var Branch[] $branches */
+			$branches = [];
+			foreach (Branches::GetBranches() as $branch_id => $branch) {
+				if (!$branch->isSupported()) {
+					continue;
+				}
+				
+				$branches[] = $branch;
+			}
+			
+			foreach (array_reverse($branches) as $index => $branch) {
+				$latest = $branch->getLatestRelease();
+				if ($latest === null) {
+					continue;
+				}
+				
+				$current = ($index === 0);
 				?>
-                <a id="v<?php echo $MAJOR; ?>"></a>
-				<?php $i = 0;
-				foreach ($releases as $v => $a) { ?>
-					<?php $mver = substr($v, 0, strrpos($v, '.')); ?>
-					<?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
-                    <h3 id="v<?php echo $v; ?>" class="title">
-                        <span class="release-state"><?php echo $stable; ?></span>
-                        PHP <?php echo $v; ?>
-                        (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
-                    </h3>
-                    <div class="content-box">
-
-                        <ul>
-							<?php foreach ($a['source'] as $rel): ?>
-                                <li>
-									<?php download_link($rel['filename'], $rel['filename']); ?>
-                                    <span class="releasedate"><?php echo date(
-											'd M Y', strtotime($rel['date'])
-										); ?></span>
-									<?php
-										if (isset($rel['md5'])) {
-											echo '<span class="md5sum">', $rel['md5'], '</span>';
-										}
-										if (isset($rel['sha256'])) {
-											echo '<span class="sha256">', $rel['sha256'], '</span>';
-										}
-									?>
-									<?php if (isset($rel['note']) && $rel['note']): ?>
-                                        <p>
-                                            <strong>Note:</strong>
-											<?php echo $rel['note']; ?>
-                                        </p>
-									<?php endif; ?>
-                                </li>
-							<?php endforeach; ?>
-                            <li>
-                                <a href="https://windows.php.net/download#php-<?php echo urlencode($mver); ?>">
-                                    Windows downloads
+                <h3>
+					<?= htmlspecialchars(
+						($current ? 'Current Stable' : 'Old Stable') . ' ' . $latest->getVersionId()
+					) ?>
+                </h3>
+                
+                <?php
+                    $support = $branch->getStability();
+                    if ($support === StabilityEnum::SECURITY) {
+                        ?>
+                        <div style="padding: 10px; margin-bottom: 1em">
+                            <span style="font-weight: bold">Advisory: </span>
+                            The PHP <?= htmlspecialchars($branch->getBranchId())?> branch is currently only receiving security updates until
+                            <?= htmlspecialchars($branch->getEolSecurityDate()->format('d M Y')) ?>
+                            and it is recommended that you make plans to upgrade to the latest branch.
+                        </div>
+                        <?php
+                    }
+                ?>
+                
+                View the release announcement and changelog for
+                <a href="<?= htmlspecialchars($latest->getUrl()) ?>"><?= htmlspecialchars($latest->getVersionId()) ?></a>.
+                <br />
+                <br />
+                
+                <ul>
+					<?php
+						foreach ($latest->getSources() as $source) {
+							?>
+                            <li style="padding-bottom: 0.25em">
+                                <a href="<?= htmlspecialchars($source->getUrl()) ?>" target="_blank">
+									<?= htmlspecialchars($source->getName()) ?>
                                 </a>
+                                <span style="float: right">
+                                         <?= htmlspecialchars($source->getDate()->format('d M Y')) ?>
+                                    </span>
+                                <div class="sha256" style="font-size: smaller; font-family: 'Courier New' ">
+                                    SHA256: <?= htmlspecialchars($source->getSha256()) ?>
+                                </div>
                             </li>
-                        </ul>
+							<?php
+						}
+					?>
 
-                        <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
-                    </div>
-				<?php } ?>
-			<?php } ?>
+                    <li class="margin-bottom: 0.25em">
+                        <a href="<?= htmlspecialchars($latest->getWindowsDownloadUrl()) ?>" target="_blank">
+                            Windows Downloads
+                        </a>
+                    </li>
+                </ul>
+
+                <br/>
+				<?php
+			}
+			
+			?>
 
             <hr>
             <h2>GPG Keys</h2>
@@ -81,32 +107,6 @@
                 to verify the tags:
             </p>
 			
-			<?php
-			$gpg_keys = \phpweb\Data\GpgKeys::GetKeys();
-			
-			foreach (Releases::GetCurrentReleases() as $MAJOR => $major_releases) {
-				$releases = array_slice($major_releases, 0, $SHOW_COUNT);
-				foreach ($releases as $v => $_) {
-					$branch = implode('.', array_slice(explode('.', $v), 0, 2));
-					if (isset($gpg_keys[$branch])) {
-						?>
-                        <h3 id="gpg-<?php echo $branch; ?>" class="content-header">PHP <?php echo $branch; ?></h3>
-                        <div class="content-box">
-      <pre>
-<?php echo $gpg_keys[$branch]; ?>
-      </pre>
-                        </div>
-						<?php
-					}
-				}
-			}
-			?>
-            <p>
-                <a href="gpg-keys.php">
-                    A full list of GPG keys used for current and older releases is also
-                    available.
-                </a>
-            </p>
 			<?php
 		}
 	}
