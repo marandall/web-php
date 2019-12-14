@@ -86,7 +86,7 @@ EOB;
             $class = 'current';
         }
 
-		printf('<li class="%s"><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $class, urlencode($q), $start, $profile, urlencode($l), $z);
+		printf('<li class="%s"><a href="/search/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $class, urlencode($q), $start, $profile, urlencode($l), $z);
 		$start += $per_page;
 	}
 	echo '</ul></div>';

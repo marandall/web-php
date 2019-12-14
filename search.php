@@ -25,19 +25,19 @@ if (!empty($_FORM['pattern'])) {
         case "quickref" :
         case "404quickref" :
             $langparam = (isset($EXPL_LANG) ? "&lang=$EXPL_LANG" : "");
-            mirror_redirect("/manual-lookup.php?pattern={$ucp}{$langparam}&scope={$_FORM['show']}");
+            mirror_redirect("/search/manual.php?pattern={$ucp}{$langparam}&scope={$_FORM['show']}");
             break;
 
 
         case "manual":
         case "404manual":
-            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
+            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "/search/results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
             break;
 
         // Covers the rest
         default:
             $p = urlencode($_FORM['show']);
-            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "results.php?q={$ucp}&l=$LANG&p=$p");
+            mirror_redirect(\phpweb\Config\Site::$BaseUrl . "/search/results.php?q={$ucp}&l=$LANG&p=$p");
             break;
     }
 }

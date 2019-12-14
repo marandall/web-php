@@ -483,7 +483,7 @@ function manual_language_chooser($currentlang, $currentpage) {
           <label for="changelang-langs">Change language:</label>
           <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
             {$format_options($links)}
-            <option value="help-translate.php"{$othersel}>Other</option>
+            <option value="/manual/help-translate.php"{$othersel}>Other</option>
           </select>
         </fieldset>
       </form>

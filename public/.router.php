@@ -23,18 +23,19 @@
 		'/downloads.php'          => '/downloads/',
 		'/supported-versions.php' => '/versions/supported.php',
 		'/security/'              => '/manual/en/security.php',
+		'/build-setup.php'        => '/developers/tools/build-setup.php',
+		'/git.php'                => '/developers/git/',
 	];
 	
 	$routes = [
 		'/'                                                            => \phpweb\Controllers\IndexController::class,
 		'/docs.php'                                                    => \phpweb\Controllers\DocsController::class,
-		'/git.php'                                                     => \phpweb\Controllers\GitController::class,
 		'/gpg-keys.php'                                                => \phpweb\Controllers\GpgKeysController::class,
 		'/security-note.php'                                           => \phpweb\Controllers\SecurityNoteController::class,
 		'/supported-versions.php'                                      => \phpweb\Controllers\Versions\SupportedVersionsController::class,
 		'/support.php'                                                 => \phpweb\Controllers\SupportController::class,
 		'/software.php'                                                => \phpweb\Controllers\SoftwareController::class,
-		'/sites.php'                                                   => \phpweb\Controllers\SitesController::class,
+		'/sites.php'                                                   => \phpweb\Controllers\About\SitesController::class,
 		'/thanks.php'                                                  => \phpweb\Controllers\ThanksController::class,
 		'/get-involved.php'                                            => \phpweb\Controllers\Developers\GetInvolvedController::class,
 		'/elephpant.php'                                               => \phpweb\Controllers\ElephpantController::class,
@@ -46,8 +47,24 @@
 		'/about/contact.php'                                           => \phpweb\Controllers\About\ContactController::class,
 		'/about/sitemap.php'                                           => \phpweb\Controllers\About\SitemapController::class,
 		
+		/* developers */
+		'/developers/tools/build-setup.php'                            => \phpweb\Controllers\Developers\Tools\BuildSetupController::class,
+		'/developers/git/'                                             => \phpweb\Controllers\Developers\Git\GitController::class,
+		'/developers/git/register'                                     => \phpweb\Controllers\Developers\Git\RegisterGitAccountController::class,
+		
 		/* community + developers section */
 		'/community/'                                                  => \phpweb\Controllers\Developers\GetInvolvedController::class,
+		'/community/events/calendar'                                   => \phpweb\Controllers\Community\Events\CalendarController::class,
+		'/community/events/submit'                                     => \phpweb\Controllers\Community\Events\SubmitEventController::class,
+		
+		/* search terms */
+		'/search/search.php'                                           => \phpweb\Controllers\Search\SearchController::class,
+		'/search/manual.php'                                           => \phpweb\Controllers\Search\SearchManualController::class,
+		
+		/* manual data */
+		'/manual/help-translate.php'                                   => \phpweb\Controllers\Manual\HelpTranslateController::class,
+		'/manual/php4.php'                                             => \phpweb\Controllers\Manual\PHP4ManualArchiveController::class,
+		'/manual/php3.php'                                             => \phpweb\Controllers\Manual\PHP3ManualArchiveController::class,
 		
 		/* release information */
 		'/versions/{major:\d+}.{minor:\d+}.{patch}/'                   => \phpweb\Controllers\Versions\Releases\ReleaseController::class,

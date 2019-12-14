@@ -95,10 +95,10 @@
 			
 			<ul>
 				<li><a href="/downloads/logos.php">Download Logos</a></li>
-				<li><a href="/contact.php">Contact</a></li>
+				<li><a href="/about/contact.php">Contact</a></li>
 				<li><a href="/copyright.php">Copyright</a></li>
 				<li><a href="/credits.php">Credits</a></li>
-				<li><a href="/contact.php#ads">Advertising at PHP.net</a></li>
+				<li><a href="/about/contact.php#ads">Advertising at PHP.net</a></li>
 				<li><a href="/public/static/license/">License Information</a></li>
 			</ul>
 			<?php

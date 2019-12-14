@@ -20,7 +20,15 @@
 		];
 		
 		/** @var string[] */
-		private $jscript_files = [];
+		private $jscript_files = [
+			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+			'/static/js/ext/modernizr.js',
+			'/static/js/ext/hogan-2.0.0.min.js',
+			'/static/js/ext/typeahead.min.js',
+			'/static/js/ext/mousetrap.min.js',
+			'/static/js/search.js',
+			'/static/js/common.js'
+		];
 		
 		private $active_page = 'main';
 		
@@ -134,6 +142,10 @@
                 <!--[if IE]>
                 <script src="/public/static/js/ext/html5.js"></script>
                 <![endif]-->
+                
+                <?php foreach ($this->jscript_files as $file) { ?>
+                <script type="text/javascript" src="<?= htmlspecialchars($file) ?>" ></script>
+                <?php } ?>
             </head>
             <body>
 
@@ -187,11 +199,11 @@
 					<?php $internal(); ?>
                 </section>
 				<?php foreach ($this->side_panels as $panel) { ?>
-					<aside>
+                    <aside>
                         <div style="padding-left: 10px">
-	                        <?php $panel->draw(); ?>
+							<?php $panel->draw(); ?>
                         </div>
-					</aside>
+                    </aside>
 				<?php } ?>
             </div><!-- layout -->
 
@@ -199,7 +211,8 @@
                 <div class="container footer-content">
                     <div class="row-fluid">
                         <ul class="footmenu">
-                            <li><a href="/about/copyright.php">Copyright &copy; 2001-<?= date('Y') ?> The PHP Group</a></li>
+                            <li><a href="/about/copyright.php">Copyright &copy; 2001-<?= date('Y') ?> The PHP Group</a>
+                            </li>
                             <li><a href="/my.php">My PHP.net</a></li>
                             <li><a href="/about/contact.php">Contact</a></li>
                             <li><a href="/about/sites.php">Other PHP.net sites</a></li>
@@ -208,19 +221,7 @@
                     </div>
                 </div>
             </footer>
-
-            <!-- External and third party libraries. -->
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-			<?php
-				$jsfiles = ["ext/modernizr.js", "ext/hogan-2.0.0.min.js", "ext/typeahead.min.js", "ext/mousetrap.min.js", "search.js", "common.js"];
-				foreach ($jsfiles as $filename) {
-					$path = dirname(__DIR__) . '/static/js/' . $filename;
-					echo '<script src="/cached.php?t=' . @filemtime(
-							$path
-						) . '&amp;f=/static/js/' . $filename . '"></script>' . "\n";
-				}
-			?>
-
+            
             <a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top"
                                                                                 src="/static/images/to-top@2x.png"></a>
 

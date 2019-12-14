@@ -115,7 +115,7 @@
 
             <p>
                 If you have a problem or suggestion <em>in connection with the PHP.net
-                    website</em>, <a href="/contact.php">please
+                    website</em>, <a href="/about/contact.php">please
                     contact the webmasters</a>. If you have problems setting up PHP
                 or using some functionality, please ask your question on a support
                 channel detailed above, the webmasters will not answer any such

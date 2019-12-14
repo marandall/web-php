@@ -1,7 +1,8 @@
 {
   "require": {
     "nikic/fast-route": "*",
-    "ext-simplexml": "*"
+    "ext-simplexml": "*",
+    "ext-pdo": "*"
   },
   "require-dev": {
   },
