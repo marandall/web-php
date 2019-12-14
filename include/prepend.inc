@@ -66,9 +66,6 @@
 	unset($MYPHPNET);
 	unset($LAST_UPDATED);
 
-// Load the My PHP.net settings before any includes
-	myphpnet_load();
-
 // Site details (mirror site information)
 	include __DIR__ . '/site.inc';
 
