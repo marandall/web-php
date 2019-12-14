@@ -81,11 +81,6 @@
 // Common layout functions
 	include __DIR__ . '/layout.inc';
 
-// This file is generated on rsync.php.net and propagated
-// from there. It just defines $LAST_UPDATED, which is the
-// mirror's last updated time.
-	include __DIR__ . '/last_updated.inc';
-
 // -----------------------------------------------------------------------------
 
 // Load in the user preferences

@@ -22,21 +22,6 @@ include_once __DIR__ . '/include/errors.inc';
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
 
 // ============================================================================
-// Mozilla Search Sidebar plugin resource file handling (need to be mirror
-// dependent, so the search results will show up in the sidebar)
-if ($URI == 'phpnetsearch.src') {
-    status_header(200);
-    include_once __DIR__ . '/include/mozsearch.inc';
-    exit;
-}
-// FIXME: Nuke the old firefox search plugin
-if ($URI == 'phpnetimprovedsearch.src') {
-    status_header(200);
-    include_once __DIR__ . '/include/mozopensearch.inc';
-    exit;
-}
-
-// ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
     mirror_redirect("https://bugs.php.net/?$array[1]");
@@ -157,9 +142,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         status_header(200);
         download_file($mr, $filename);
     } else {
-        status_header(404);
-        /* The file didn't exist on this server.. ask the user to pick another mirror */
-        include __DIR__ . "/include/get-download.inc";
+        die("Does not have this file on this server");
     }
     exit;
 }

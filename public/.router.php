@@ -40,6 +40,7 @@
 		'/crossdomain.xml'                                             => \phpweb\Controllers\StaticRootAssetController::class,
 		'/robots.txt'                                                  => \phpweb\Controllers\StaticRootAssetController::class,
 		'/favicon.ico'                                                 => \phpweb\Controllers\StaticRootAssetController::class,
+		'/opensearch.xml'                                              => \phpweb\Controllers\StaticRootAssetController::class,
 		
 		/* moar */
 		'/docs.php'                                                    => \phpweb\Controllers\DocsController::class,

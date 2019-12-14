@@ -117,10 +117,13 @@
                 <title>PHP: <?= htmlspecialchars($this->page_title) ?></title>
 
                 <link rel="shortcut icon" href="/favicon.ico">
+                
                 <link rel="search" type="application/opensearchdescription+xml"
-                      href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
-                <link rel="alternate" type="application/atom+xml" href="/releases/feed.php"
+                      href="/opensearch.xml" title="Add PHP.net search">
+                
+                <link rel="alternate" type="application/atom+xml" href="/releases/api/releases.xml"
                       title="PHP Release feed">
+                
                 <link rel="alternate" type="application/atom+xml" href="/feed.atom"
                       title="PHP: Hypertext Preprocessor">
 				

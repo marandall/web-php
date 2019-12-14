@@ -511,12 +511,10 @@ function site_header($title = '', $config = array())
     if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
         $shorturl = "https://www.php.net/" . $shortname;
     }
-
-    require __DIR__ ."/header.inc";
 }
+
 function site_footer($config = array())
 {
-    require __DIR__ . "/footer.inc";
 }
 
 function get_news_changes()
