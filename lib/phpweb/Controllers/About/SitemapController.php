@@ -60,7 +60,7 @@
 						<li>Other support pages
 							<ul>
 								<li><a href="/lists/">Mailing Lists</a>, <a href="/lists/unsubscribe.php">Unsubscribe</a></li>
-								<li><a href="/cal.php">Events</a></li>
+								<li><a href="/community/events/calendar">Events</a></li>
 							</ul>
 						</li>
 					</ul>

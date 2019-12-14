@@ -91,7 +91,7 @@
             <p>
                 A list of upcoming events (such as user group meetings and PHP training
                 sessions) is included in the right-hand column of the front page, and
-                on the <a href="/cal.php">event calendar page</a>. If you want to list
+                on the <a href="/community/events/calendar">event calendar page</a>. If you want to list
                 an upcoming event, just fill out the form <a
                         href="/submit-event.php">on this page</a>.
             </p>
