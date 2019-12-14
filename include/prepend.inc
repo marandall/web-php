@@ -11,11 +11,6 @@
 
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
-
-// Provide default content-type, charset and language information
-// Manual pages will override this, and maybe others too
-	header("Content-language: en");
-	header("Content-type: text/html; charset=utf-8");
 	
 	/* Fix Silly Same Origin Policies */
 	if (isset($_SERVER["HTTP_ORIGIN"])) {

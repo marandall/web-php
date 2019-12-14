@@ -35,6 +35,13 @@
 	
 	$routes = [
 		'/'                                                            => \phpweb\Controllers\IndexController::class,
+		
+		/* there are several static files which live in the root, all get passed through the same controller  */
+		'/crossdomain.xml'                                             => \phpweb\Controllers\StaticRootAssetController::class,
+		'/robots.txt'                                                  => \phpweb\Controllers\StaticRootAssetController::class,
+		'/favicon.ico'                                                 => \phpweb\Controllers\StaticRootAssetController::class,
+		
+		/* moar */
 		'/docs.php'                                                    => \phpweb\Controllers\DocsController::class,
 		'/gpg-keys.php'                                                => \phpweb\Controllers\GpgKeysController::class,
 		'/security-note.php'                                           => \phpweb\Controllers\SecurityNoteController::class,

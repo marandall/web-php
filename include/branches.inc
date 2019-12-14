@@ -384,26 +384,3 @@ function version_array($version, $length = null)
 
 	return $versionArray;
 }
-
-function get_current_release_for_branch(int $major, ?int $minor): ?string {
-	global $OLDRELEASES;
-
-	$prefix = "{$major}.";
-	if ($minor !== null) {
-		$prefix .= "{$minor}.";
-	}
-
-	foreach ((Versions::GetVersions()[$major] ?? []) as $version => $_) {
-		if (!strncmp($prefix, $version, strlen($prefix))) {
-			return $version;
-		}
-	}
-
-	foreach (($OLDRELEASES[$major] ?? []) as $version => $_) {
-		if (!strncmp($prefix, $version, strlen($prefix))) {
-			return $version;
-		}
-	}
-
-	return NULL;
-}
