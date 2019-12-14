@@ -81,4 +81,8 @@
 		public function getAttributesBag(): PropertyBag {
 			return $this->attributes;
 		}
+		
+		public function getClientIp(): string {
+			return $this->server->getString('REMOTE_ADDR', '');
+		}
 	}

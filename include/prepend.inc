@@ -75,33 +75,11 @@
 // Choose language used for translated parts
 	include __DIR__ . '/langchooser.inc';
 
-// Get country of the user and set it in a cookie
-	include __DIR__ . '/ip-to-country.inc';
-
 // Common layout functions
 	include __DIR__ . '/layout.inc';
 
 // -----------------------------------------------------------------------------
 
-// Load in the user preferences
-	function myphpnet_load() {
-		global $MYPHPNET;
-		
-		// Empty the preferences array
-		$MYPHPNET = [FALSE, FALSE, "NONE", 0, FALSE];
-		
-		if (Site::$BaseUrl === 'http://docs.php.net/') {
-			$MYPHPNET[4] = TRUE;
-		}
-		
-		// If we have a cookie, set the values in the array
-		if (!empty($_COOKIE['MYPHPNET'])) {
-			$MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
-		}
-		
-		// Ignore site part, and always use https://www.php.net
-		$MYPHPNET[2] = 'https://www.php.net';
-	}
 
 // Get or set preferred language code
 	function myphpnet_language($langcode = FALSE) {
@@ -162,42 +140,4 @@
 		return false;
 	}
 
-// Save user settings in cookie
-	function myphpnet_save() {
-		global $MYPHPNET;
-		
-		// Fill in values not specified
-		for ($i = 0; $i <= 3; $i++) {
-			if (!isset($MYPHPNET[$i])) {
-				$MYPHPNET[$i] = FALSE;
-			}
-		}
-		
-		// Set all the preferred values for a year
-		mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60 * 60 * 24 * 365);
-		
-	}
 
-// Default: Default search.
-// Lang: Not yet implemented (TODO: Compare google lang codes with ours. We did this for bing already, so maybe it's an easy fix)
-// TODO: Possible $default escaping issues
-	function google_cse($default = '', $lang = 'en') {
-		?>
-        <noscript>
-            php.net's search functionality requires JavaScript to operate. Please enable
-            JavaScript and reload to continue.
-        </noscript>
-        <script>
-            (function () {
-                var cx = '011570197911755000456:fip9wopfz_u';
-                var gcse = document.createElement('script');
-                gcse.type = 'text/javascript';
-                gcse.async = true;
-                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(gcse, s);
-            })();
-        </script>
-        <div class="gcse-search" data-linktarget></div>
-		<?php
-	}

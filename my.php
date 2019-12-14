@@ -65,7 +65,6 @@ if (isset($_POST["showug"])) {
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
-myphpnet_save();
 
 site_header("My PHP.net", array("current" => "community"));
 ?>

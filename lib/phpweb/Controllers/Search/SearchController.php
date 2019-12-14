@@ -8,6 +8,11 @@
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
+	/**
+     * Not really sure if this has any relevance in the current website
+     * as there's an async dropdown attached to it instead
+	 */
+	
 	class SearchController extends PHPWebTemplate
 	{
 		public function __invoke(Request $request): Response {

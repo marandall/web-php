@@ -189,7 +189,7 @@
 			echo "</table>\n";
 		}
 		
-		protected function submit() {
+		protected function submit(Request $fr_request) {
 			// No error found yet
 			$error = "";
 			
@@ -207,7 +207,7 @@
 				if ($request !== "subscribe" && $request !== "unsubscribe") {
 					$request = "subscribe";
 				}
-				$remote_addr = i2c_realip();
+				$remote_addr = $fr_request->getClientIp();
 				
 				// Get in contact with master server to [un]subscribe the user
 				$result = posttohost(

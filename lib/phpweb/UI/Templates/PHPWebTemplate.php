@@ -167,7 +167,7 @@
                             </li>
 						<?php } ?>
                     </ul>
-                    <form class="navbar-search" id="topsearch" action="/search.php">
+                    <form class="navbar-search" id="topsearch" action="/search/search.php">
                         <input type="hidden" name="show" value="quickref">
                         <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
                     </form>

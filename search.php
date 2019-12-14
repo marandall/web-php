@@ -54,6 +54,5 @@ else {
     );
     site_header("Search", array("link" => array($link), "current" => "help"));
 
-    google_cse();
     site_footer();
 }

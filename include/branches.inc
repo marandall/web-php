@@ -95,38 +95,6 @@ function version_number_to_branch($version) {
 	}
 }
 
-function get_all_branches() {
-	$branches = array();
-
-	foreach ($GLOBALS['OLDRELEASES'] as $major => $releases) {
-		foreach ($releases as $version => $release) {
-			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
-				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
-					$branches[$major][$branch] = $release;
-					$branches[$major][$branch]['version'] = $version;
-				}
-			}
-		}
-	}
-
-	foreach ($GLOBALS['RELEASES'] as $major => $releases) {
-		foreach ($releases as $version => $release) {
-			if ($branch = \phpweb\Data\Branches\Branches::VersionNumberToBranchID($version)) {
-				if (!isset($branches[$major][$branch]) || version_compare($version, $branches[$major][$branch]['version'], 'gt')) {
-					$branches[$major][$branch] = $release;
-					$branches[$major][$branch]['version'] = $version;
-				}
-			}
-		}
-	}
-
-	krsort($branches);
-	foreach ($branches as $major => &$branch) {
-		krsort($branch);
-	}
-
-	return $branches;
-}
 
 function get_active_branches($include_recent_eols = true) {
 	$branches = array();
