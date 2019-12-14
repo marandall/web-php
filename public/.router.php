@@ -14,7 +14,13 @@
 	$afilename = realpath($afilename);
 	$len       = strlen($_SERVER["DOCUMENT_ROOT"]);
 	
-	Site::$BaseUrl = substr($_SERVER['STATIC_ROOT'], 0, -1);
+	
+	if (isset($_SERVER['HTTP_HOST'])) {
+		Site::$BaseUrl = ($_SERVER['REQUEST_SCHEME'] ?? 'https') . '://' . $_SERVER['HTTP_HOST'];
+	}
+	else {
+		Site::$BaseUrl = substr($_SERVER['STATIC_ROOT'], 0, -1);
+	}
 	
 	$redirects = [
 		'/mailing-lists.php'      => '/lists/',

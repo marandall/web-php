@@ -2,3 +2,4 @@ backend/GeoIP.dat
 .idea
 .DS_Store
 .DS_Store?
+docker
