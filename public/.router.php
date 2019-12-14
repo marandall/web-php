@@ -70,6 +70,7 @@
 		'/community/'                                                  => \phpweb\Controllers\Developers\GetInvolvedController::class,
 		'/community/events/calendar'                                   => \phpweb\Controllers\Community\Events\CalendarController::class,
 		'/community/events/submit'                                     => \phpweb\Controllers\Community\Events\SubmitEventController::class,
+		'/community/conferences/'                                      => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
 		
 		/* search terms */
 		'/search/search.php'                                           => \phpweb\Controllers\Search\SearchController::class,

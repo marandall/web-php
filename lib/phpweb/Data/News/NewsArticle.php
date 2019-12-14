@@ -72,4 +72,8 @@
 			
 			return $this->links;
 		}
+		
+		public function getNewsImage(): ?array {
+			return $this->data['newsImage'];
+		}
 	}
