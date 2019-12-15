@@ -57,14 +57,20 @@
 				],
 			];
 			
+			$latest = $branch->getLatestRelease();
+			
 			?>
             
-            <div style="text-align: center; margin-bottom: 1em">
+            <div style="text-align: center">
                 Here are the methods available for downloading and installing
-                PHP <?= htmlspecialchars($branch->getBranchId()) ?> on a variety of different platforms.
+                <a href="<?= htmlspecialchars($branch->getUrl()) ?>">PHP <?= htmlspecialchars($branch->getBranchId()) ?></a> on a variety of different platforms.
+            </div>
+
+            <div style="font-size: 150%; text-align: center; padding: 1em">
+                Latest Release: <a href="<?= htmlspecialchars($latest->getUrl())?>">PHP <?= htmlspecialchars($latest->getVersionId()) ?></a> <?= htmlspecialchars('(' . $latest->getDate()->format('d M Y') . ')') ?>
             </div>
             
-            <div style="text-align: center">
+            <div style="text-align: center; margin-bottom: 1em">
 				<?php
 					foreach ($methods as $method) {
 						?>
