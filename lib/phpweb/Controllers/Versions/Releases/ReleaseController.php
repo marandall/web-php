@@ -5,6 +5,7 @@
 	namespace phpweb\Controllers\Versions\Releases;
 	
 	use phpweb\Data\Branches\Branch;
+	use phpweb\Data\GpgKeys;
 	use phpweb\Data\Release\Release;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;

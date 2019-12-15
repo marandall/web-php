@@ -6,6 +6,7 @@
 	
 	use phpweb\Controllers\Versions\Branches\BranchRouter;
 	use phpweb\Data\Branches\Branch;
+	use phpweb\Data\GpgKeys;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	
@@ -21,7 +22,7 @@
 		}
 		
 		public function renderContents(Branch $branch) {
-		    $release = $branch->getLatestRelease();
+			$release = $branch->getLatestRelease();
 			foreach ($release->getSources() as $source) {
 				?>
                 <div style="margin-bottom: 5px">
@@ -36,5 +37,9 @@
                 </div>
 				<?php
 			}
+			?>
+            <h2>GPG Keys</h2>
+            <pre><?= htmlspecialchars(GpgKeys::GetKeys()[$branch->getBranchId()] ?? 'Not Available') ?></pre>
+			<?php
 		}
 	}
