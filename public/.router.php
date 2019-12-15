@@ -54,6 +54,9 @@
 		'/get-involved.php'                                            => \phpweb\Controllers\Developers\GetInvolvedController::class,
 		'/elephpant.php'                                               => \phpweb\Controllers\ElephpantController::class,
 		
+		/* everything in distribution gets redirected to main website */
+		'/distributions/{path}'                                        => \phpweb\Controllers\DistroRedirectController::class,
+		
 		/* about pages */
 		'/about/privacy.php'                                           => \phpweb\Controllers\About\PrivacyController::class,
 		'/about/copyright.php'                                         => \phpweb\Controllers\About\ContactController::class,
