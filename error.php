@@ -133,17 +133,6 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
         error_nomirror($mr);
         exit;
     }
-
-    // Start the download process
-    include __DIR__ . "/include/do-download.inc";
-    $filename = get_actual_download_file($df);
-    if ($filename) {
-        status_header(200);
-        download_file($mr, $filename);
-    } else {
-        die("Does not have this file on this server");
-    }
-    exit;
 }
 
 // php.net/42 --> likely a bug number
