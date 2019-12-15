@@ -28,12 +28,11 @@
 				case StabilityEnum::SECURITY:
 					(new BranchSecurityOnlyNotice($branch))->draw();
 					break;
-					
+				
 				case StabilityEnum::UNSUPPORTED:
 					(new BranchUnsupportedNotice($branch))->draw();
 					break;
 			}
-			
 			
 			$initial = $branch->getInitialRelease();
 			if ($initial) {
@@ -41,24 +40,35 @@
 			}
 			?>
 			
+			<?php if ($branch->isSupported()) { ?>
+                <div style="text-align: center; margin-bottom: 1em">
+                    <a href="./install/"
+                       style="text-align: center; padding: 20px; background: #dddddd; margin: 10px; display: inline-block; width: 50%; font-size: large">
+                        Download / Install PHP <?= htmlspecialchars($branch->getBranchId()) ?>
+                    </a>
+                </div>
+			<?php } ?>
+
             <a id="history"></a>
             <h3>Version History</h3>
-			
-			<div style="margin-bottom: 1em;">
-				The following <?= count($branch->getReleasesByVersion()) ?> versions of PHP <?= htmlspecialchars($branch->getBranchId()) ?> have been released:
-			</div>
-			
+
+            <div style="margin-bottom: 1em;">
+                The following <?= count($branch->getReleasesByVersion()) ?> versions of PHP <?= htmlspecialchars(
+					$branch->getBranchId()
+				) ?> have been released:
+            </div>
+
             <ul>
 				<?php
 					foreach ($branch->getReleasesByVersion() as $release) {
 						?>
-						<li>
-							<a href="<?= htmlspecialchars($release->getUrl()) ?>">
-								PHP <?= htmlspecialchars($release->getVersionId()) ?>
-							</a>
-							-
+                        <li>
+                            <a href="<?= htmlspecialchars($release->getUrl()) ?>">
+                                PHP <?= htmlspecialchars($release->getVersionId()) ?>
+                            </a>
+                            -
 							<?= htmlspecialchars($release->getDate()->format('d M Y')) ?>
-						</li>
+                        </li>
 						<?php
 					}
 				?>

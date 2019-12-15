@@ -6,6 +6,8 @@
 	
 	
 	use Exception;
+	use phpweb\Data\Branches\Branches;
+	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	
@@ -27,7 +29,7 @@
 			'/static/js/ext/typeahead.min.js',
 			'/static/js/ext/mousetrap.min.js',
 			'/static/js/search.js',
-			'/static/js/common.js'
+			'/static/js/common.js',
 		];
 		
 		private $active_page = 'main';
@@ -42,13 +44,74 @@
 		
 		/** @var array[] */
 		private $page_headers = [
-			'main'          => ['url' => '/', 'title' => ''],
-			'downloads'     => ['url' => '/downloads/', 'title' => 'Downloads'],
-			'documentation' => ['url' => '/docs.php', 'title' => 'Documentation'],
-			'community'     => ['url' => '/community/', 'title' => 'Community'],
-			'help'          => ['url' => '/support.php', 'title' => 'Help'],
+			'main'          => [
+				'url'      => '/',
+				'title'    => '',
+				'sections' => [
+				
+				],
+			],
+			'downloads'     => [
+				'url'      => '/downloads/',
+				'title'    => 'Download / Install',
+				'sections' => [
+				
+				],
+			],
+			'documentation' => [
+				'url'      => '/docs.php',
+				'title'    => 'Documentation',
+				'sections' => [
+				],
+			],
+			'developers'    => [
+				'url'      => '/developers/',
+				'title'    => 'Developers',
+				'sections' => [
+					'Get Involved' => [
+						'/developers/git/'         => 'Using GIT',
+						'/developers/git/register' => 'Register for Access',
+					],
+					'Tools'        => [
+						'/developers/tools/build-setup' => 'Setting Up Tool',
+					],
+				],
+			],
+			'community'     => [
+				'url'      => '/community/',
+				'title'    => 'Community',
+				'sections' => [
+					'Events' => [
+						'/community/events/calendar'     => 'Events'
+                        ],
+                    'Conferences' => [
+						'/community/conferences/'        => 'Conferences & CFP',
+						'/community/conferences/archive' => 'Archive',
+					],
+				],
+			],
+			'help'          => [
+				'url'      => '/support.php',
+				'title'    => 'Help',
+				'sections' => [
+				
+				],
+			],
 		];
 		
+		public function __construct() {
+		    $download_links = [];
+		    foreach (array_reverse(Branches::GetBranches()) as $branch) {
+		        if (in_array($branch->getStability(), [ StabilityEnum::STABLE, StabilityEnum::SECURITY ], true)) {
+		            $this->page_headers['downloads']['sections']['Major Versions'][$branch->getUrl() . 'install/'] = 'Get PHP ' . $branch->getBranchId();
+                }
+            }
+			
+			$this->page_headers['downloads']['sections']['Support'] = [
+			    '/versions/supported.php' => 'Supported Versions',
+                '/versions/eol.php' => 'End of Life'
+            ];
+		}
 		
 		abstract public function __invoke(Request $request): Response;
 		
@@ -117,13 +180,13 @@
                 <title>PHP: <?= htmlspecialchars($this->page_title) ?></title>
 
                 <link rel="shortcut icon" href="/favicon.ico">
-                
+
                 <link rel="search" type="application/opensearchdescription+xml"
                       href="/opensearch.xml" title="Add PHP.net search">
-                
+
                 <link rel="alternate" type="application/atom+xml" href="/releases/api/releases.xml"
                       title="PHP Release feed">
-                
+
                 <link rel="alternate" type="application/atom+xml" href="/feed.atom"
                       title="PHP: Hypertext Preprocessor">
 				
@@ -145,10 +208,10 @@
                 <!--[if IE]>
                 <script src="/public/static/js/ext/html5.js"></script>
                 <![endif]-->
-                
-                <?php foreach ($this->jscript_files as $file) { ?>
-                <script type="text/javascript" src="<?= htmlspecialchars($file) ?>" ></script>
-                <?php } ?>
+				
+				<?php foreach ($this->jscript_files as $file) { ?>
+                    <script type="text/javascript" src="<?= htmlspecialchars($file) ?>"></script>
+				<?php } ?>
             </head>
             <body>
 
@@ -160,7 +223,9 @@
                     <input type="checkbox" id="mainmenu-toggle">
                     <ul class="nav">
 						<?php foreach ($this->page_headers as $k => $header) { ?>
-                            <li class="<?= ($this->active_page === $k) ? 'active' : '' ?>">
+                            <li class="<?= ($this->active_page === $k) ? 'active' : '' ?> top-menu top-menu-<?= htmlspecialchars(
+								$k
+							) ?>" data-menu="<?= htmlspecialchars($k) ?>">
                                 <a href="<?= htmlspecialchars($header['url']) ?>">
 									<?= htmlspecialchars($header['title']) ?>
                                 </a>
@@ -224,10 +289,66 @@
                     </div>
                 </div>
             </footer>
-            
+
             <a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top"
                                                                                 src="/static/images/to-top@2x.png"></a>
+			
+			<?php foreach ($this->page_headers as $nav_id => $header) {
+			    if (count($header['sections']) === 0) {
+			        continue;
+                }
+			    ?>
+                <div style="line-height: 1em; display: none; width: 100%; height: 200px; background-color: #eeeeee; position: fixed; top: 48px; left: 0; right: 0; z-index: 10000"
+                     class="nav-<?= $nav_id ?> top-menu" data-menu="<?= $nav_id ?>">
+                    <div class="inner-align" style="margin-left: auto; margin-right: auto; padding: 10px">
+                        <div style="display: flex; flex-direction: row">
+							<?php foreach ($header['sections'] as $category_label => $links) { ?>
+                                <div style="padding: 10px; width: 200px">
+                                    <div style="font-weight: bold; margin-bottom: 0.5em; color: #555555">
+										<?= htmlspecialchars($category_label) ?>
+                                    </div>
+									<?php foreach ($links as $url => $link_label) { ?>
+                                        <div style="margin-bottom: 0.5em">
+                                            <a href="<?= htmlspecialchars($url) ?>"
+                                               style="text-decoration: none !important; font-size: 14px; color: #333333"><?= htmlspecialchars(
+													$link_label
+												) ?></a>
+                                        </div>
+									<?php } ?>
+                                </div>
+							<?php } ?>
+                        </div>
+                    </div>
+                </div>
+			<?php } ?>
+            <script type="text/javascript">
+                $(function () {
+                    var top_bar = $('#head-nav'),
+                        layout_area = $('#layout-content');
+                    
+                    $('.top-menu').each(function () {
+                        var self = $(this),
+                            menu_id = $(this).attr('data-menu'),
+                            target = $('.nav-' + menu_id);
 
+                        function show() {
+                            if ($(window).width() > 900) {
+                                target.find('.inner-align').css('width', layout_area.width() + 'px');
+                                target.show();
+                            }
+                        }
+
+                        function hide() {
+                            target.hide();
+                        }
+                        
+                        target.css('top', (top_bar.outerHeight() - 5) + 'px');
+                        
+                        self.mouseenter(show).mouseleave(hide);
+                        target.mouseenter(show).mouseleave(hide);
+                    });
+                });
+            </script>
             </body>
             </html>
 			<?php

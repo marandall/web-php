@@ -77,8 +77,7 @@
 		}
 		
 		public function isSupported(): bool {
-			$eol = $this->getEolSecurityDate();
-			return $eol ? ($eol > new \DateTime()) : false;
+			return in_array($this->getStability(), [StabilityEnum::SECURITY, StabilityEnum::STABLE], true);
 		}
 		
 		/**

@@ -76,4 +76,12 @@
 		public function getNewsImage(): ?array {
 			return $this->data['newsImage'];
 		}
+		
+		public function getTeaserLimit(): ?\DateTimeImmutable {
+			if (isset($this->data['finalTeaserDate'])) {
+				return new \DateTimeImmutable($this->data['finalTeaserDate']);
+			}
+			
+			return null;
+		}
 	}

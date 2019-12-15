@@ -16,7 +16,7 @@
 	
 	
 	if (isset($_SERVER['HTTP_HOST'])) {
-		Site::$BaseUrl = ($_SERVER['REQUEST_SCHEME'] ?? 'https') . '://' . $_SERVER['HTTP_HOST'];
+		Site::$BaseUrl = ($_SERVER['REQUEST_SCHEME'] ?? (($_SERVER['SECURE'] ?? 'off') === 'on' ? 'https' : 'http')) . '://' . $_SERVER['HTTP_HOST'];
 	}
 	else {
 		Site::$BaseUrl = substr($_SERVER['STATIC_ROOT'], 0, -1);
@@ -29,7 +29,7 @@
 		'/downloads.php'          => '/downloads/',
 		'/supported-versions.php' => '/versions/supported.php',
 		'/security/'              => '/manual/en/security.php',
-		'/build-setup.php'        => '/developers/tools/build-setup.php',
+		'/build-setup.php'        => '/developers/tools/build-setup',
 		'/git.php'                => '/developers/git/',
 	];
 	
@@ -60,9 +60,10 @@
 		'/about/credits.php'                                           => \phpweb\Controllers\About\CopyrightController::class,
 		'/about/contact.php'                                           => \phpweb\Controllers\About\ContactController::class,
 		'/about/sitemap.php'                                           => \phpweb\Controllers\About\SitemapController::class,
+		'/about/sitemap.xml'                                           => \phpweb\Controllers\About\SitemapXMLController::class,
 		
 		/* developers */
-		'/developers/tools/build-setup.php'                            => \phpweb\Controllers\Developers\Tools\BuildSetupController::class,
+		'/developers/tools/build-setup'                                => \phpweb\Controllers\Developers\Tools\BuildSetupController::class,
 		'/developers/git/'                                             => \phpweb\Controllers\Developers\Git\GitController::class,
 		'/developers/git/register'                                     => \phpweb\Controllers\Developers\Git\RegisterGitAccountController::class,
 		
@@ -71,6 +72,7 @@
 		'/community/events/calendar'                                   => \phpweb\Controllers\Community\Events\CalendarController::class,
 		'/community/events/submit'                                     => \phpweb\Controllers\Community\Events\SubmitEventController::class,
 		'/community/conferences/'                                      => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
+		'/community/conferences/archive'                               => \phpweb\Controllers\Community\Conferences\ConferencesArchiveController::class,
 		
 		/* search terms */
 		'/search/search.php'                                           => \phpweb\Controllers\Search\SearchController::class,
@@ -86,7 +88,11 @@
 		'/versions/{major:\d+}.{minor:\d+}.{patch}/install/ubuntu_ppa' => \phpweb\Controllers\Versions\Releases\Install\InstallReleaseFromPPAController::class,
 		'/versions/{major:\d+}.{minor:\d+}/'                           => \phpweb\Controllers\Versions\Branches\BranchController::class,
 		'/versions/{major:\d+}.{minor:\d+}/changelog'                  => \phpweb\Controllers\Versions\Branches\BranchChangelogController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/'                   => \phpweb\Controllers\Versions\Branches\Install\BranchInstallController::class,
 		'/versions/{major:\d+}.{minor:\d+}/install/ubuntu_ppa'         => \phpweb\Controllers\Versions\Branches\Install\InstallBranchFromPPAController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/iis'                => \phpweb\Controllers\Versions\Branches\Install\InstallBranchWindowsIISController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/docker'             => \phpweb\Controllers\Versions\Branches\Install\InstallBranchDockerController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/source'             => \phpweb\Controllers\Versions\Branches\Install\InstallBranchSourceController::class,
 		'/versions/{major:\d+}.{minor:\d+}/api/releases.atom'          => \phpweb\Controllers\Versions\Branches\BranchAtomFeedController::class,
 		'/versions/supported.php'                                      => \phpweb\Controllers\Versions\SupportedVersionsController::class,
 		'/versions/eol.php'                                            => \phpweb\Controllers\Versions\EOLController::class,
@@ -124,6 +130,10 @@
 	}
 	$uri = rawurldecode($uri);
 	
+	/* this is for the inbuilt server, everything in static is not passed through here */
+	if (strpos($uri, '/static/') === 0) {
+		// return;
+	}
 	
 	$handler = null;
 	$route   = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'] ?? 'GET', $uri);

@@ -87,7 +87,7 @@
 			<ul class="content-box listed">
 				<li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
 					by which developers can suggest and discuss new ideas with the community</li>
-				<li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
+				<li><a href="/developers/tools/build-setup">Developer Setup Help</a> - some helpful information
 					regarding setting up a development environment for PHP</li>
 				<li><a href="/lists/">Mailing List</a> - list of general and internal mailing lists
 					used by PHP</li>

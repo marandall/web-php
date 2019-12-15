@@ -37,17 +37,24 @@
 		private function renderNavigation(Branch $branch) {
 		    $base = $branch->getUrl();
 			?>
-			<a href="<?= htmlspecialchars($base) ?>"><?= htmlspecialchars($branch->getBranchId()) ?></a>
-			<br />
+            <aside>
+                <a href="<?= htmlspecialchars($base) ?>"><?= htmlspecialchars($branch->getBranchId()) ?></a>
+                <br />
+
+                <a href="<?= htmlspecialchars($base) ?>#history">Version History</a>
+                <br />
+                
+                <a href="<?= htmlspecialchars($base) ?>changelog">Combined Changelog</a>
+            </aside>
 			
-			<a href="<?= htmlspecialchars($base) ?>#history">Version History</a>
-			<br />
-			
-			<a href="<?= htmlspecialchars($base) ?>changelog">Combined Changelog</a>
+            <aside style="padding: 20px">
+                <h3 style="color: white">Install Guides</h3>
+
+                <a href="<?= htmlspecialchars($base) ?>install/iis">Internet Information Services</a>
+                <br />
+                <a href="<?= htmlspecialchars($base) ?>install/ubuntu_ppa">Ubuntu (PPA)</a>
+            </aside>
    
-			<h4>Install Guides</h4>
-			
-			<a href="<?= htmlspecialchars($base) ?>install/ubuntu_ppa">Ubuntu (PPA)</a>
 			<?php
 		}
 		

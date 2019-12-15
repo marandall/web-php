@@ -12,6 +12,7 @@
 	{
 		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Build Setup - OS Preperation');
+			return $this->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

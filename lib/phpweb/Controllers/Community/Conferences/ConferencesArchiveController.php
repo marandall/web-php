@@ -10,10 +10,10 @@
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
-	class ConferencesIndexController extends PHPWebTemplate
+	class ConferencesArchiveController extends PHPWebTemplate
 	{
 		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Worldwide PHP Conferences');
+			$this->setPageTitle('Worldwide PHP Conferences (Archive)');
 			return $this->render([$this, 'renderContents']);
 		}
 		
@@ -25,7 +25,7 @@
 				}
 				
 				$teaser_end = $entry->getTeaserLimit();
-				if ($teaser_end && $teaser_end->getTimestamp() > time()) {
+				if (!$teaser_end || $teaser_end->getTimestamp() < time()) {
 					$this->renderConference($entry);
 				}
 			}
@@ -38,12 +38,12 @@
                 <h3 class="newstitle title"><a href=""><?= htmlspecialchars($article->getTitle()) ?></a></h3>
 				<?php if ($image !== null) { ?>
                     <div class="newsimage" style="float: right; padding: 1em">
-						<img src="/static/images/news/<?= htmlspecialchars($image['content']) ?>" alt="<?= htmlspecialchars($article->getTitle()) ?>"/>
+                        <img src="/static/images/news/<?= htmlspecialchars($image['content']) ?>" alt="<?= htmlspecialchars($article->getTitle()) ?>"/>
                     </div>
 				<?php } ?>
-	            <div class="newscontent">
-		            <?= $article->getContentsHTML() ?>
-	            </div>
+                <div class="newscontent">
+					<?= $article->getContentsHTML() ?>
+                </div>
             </div>
 			<?php
 		}
