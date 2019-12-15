@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.39">
+  <release>5.6.39</release>
+  <date>06 Dec 2018</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>39</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.39.tar.bz2</filename>
+      <name>PHP 5.6.39 (tar.bz2)</name>
+      <sha256>b3db2345f50c010b01fe041b4e0f66c5aa28eb325135136f153e18da01583ad5</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.39.tar.gz</filename>
+      <name>PHP 5.6.39 (tar.gz)</name>
+      <sha256>127b122b7d6c7f3c211c0ffa554979370c3131196137404a51a391d8e2e9c7bb</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.39.tar.xz</filename>
+      <name>PHP 5.6.39 (tar.xz)</name>
+      <sha256>8147576001a832ff3d03cb2980caa2d6b584a10624f87ac459fcd3948c6e4a10</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.39. This is a security release. Several security bugs have been fixed
+     in this release.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.39">ChangeLog</a>.
+     </p>
+
+     <p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version
+support timelines</a>,
+        PHP 5.6.39 is the last scheduled release of PHP 5.6 branch. There may be additional release if we
+discover
+        important security issues that warrant it, otherwise this release will be the final one in the PHP
+5.6 branch.
+        If your PHP installation is based on PHP 5.6, it may be a good time to start making the plans for
+the upgrade
+        to PHP 7.1, PHP 7.2 or PHP 7.3.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

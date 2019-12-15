@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.2">
+  <release>5.6.2</release>
+  <date>16 Oct 2014</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.2.tar.bz2</filename>
+      <name>PHP 5.6.2 (tar.bz2)</name>
+      <sha256>671dcf1f636410c63bb9eb015c4c180d904f5436f81217be0adbf52da9becdb5</sha256>
+      <md5/>
+      <date>16 Oct 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.2.tar.gz</filename>
+      <name>PHP 5.6.2 (tar.gz)</name>
+      <sha256>4bb316831979317caf738bb9e2c590bf3b7951ce60c69b9ca33f26069d9a2f39</sha256>
+      <md5/>
+      <date>16 Oct 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.2.tar.xz</filename>
+      <name>PHP 5.6.2 (tar.xz)</name>
+      <sha256>9be1322d33520fb2164282fb0fcdc212f66ffedcd912bff60955d5696454fe39</sha256>
+      <md5/>
+      <date>16 Oct 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP 5.6.2.
+Four security-related bugs were fixed in this release, including fixes for CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670.
+All PHP 5.6 users are encouraged to upgrade to this version.
+</p>
+
+<p>For source downloads of PHP 5.6.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.2">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

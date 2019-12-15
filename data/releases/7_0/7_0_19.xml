@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.0.19">
+  <release>7.0.19</release>
+  <date>11 May 2017</date>
+  <version>
+    <major>7</major>
+    <minor>0</minor>
+    <release>19</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.0.19.tar.bz2</filename>
+      <name>PHP 7.0.19 (tar.bz2)</name>
+      <sha256>0f3ac0afc02aec22f6b1659045da9287453e9309439d0499622bc8e94a7f7d59</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+    <source>
+      <filename>php-7.0.19.tar.gz</filename>
+      <name>PHP 7.0.19 (tar.gz)</name>
+      <sha256>4b4120acdbb8cbf5f7a18625c2eb5cdd2fdb4fc69a4831bc7ffdfd1ee78b1ce0</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+    <source>
+      <filename>php-7.0.19.tar.xz</filename>
+      <name>PHP 7.0.19 (tar.xz)</name>
+      <sha256>640e5e3377d15a6d19adce2b94a9d876eeddabdb862d154a5e347987f4225ef6</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     7.0.19. Several bugs have been fixed.
+
+     All PHP 7.0 users are encouraged to upgrade to this version.
+     </p>
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

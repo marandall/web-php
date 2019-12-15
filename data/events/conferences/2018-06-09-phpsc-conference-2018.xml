@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHPSC Conference 2018</title>
+  <id>2018-06-09-phpsc-conference-2018</id>
+  <start_date>2018-06-09</start_date>
+  <end_date>2018-06-10</end_date>
+  <image>phpsc_conf2018.png</image>
+  <website>https://conf.phpsc.com.br</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Santa Catarina PHP user group (PHPSC) announce the <b><a href="https://conf.phpsc.com.br/">8th edition</a></b> of the <b>PHPSC Conference</b>, taking place on June 8-9th, 2018 in Florianópolis, Brazil.</p>
+
+     <p>This Conference aims to discuss best practices in PHP technology and related areas such as design, development techniques, database, open source, agile methodologies, design patterns, etc.</p>
+
+     <p>The event is held each year, preferably in a different city of the state, and it happens in partnership with a local educational institution or company. This year: <a href="http://unisul.br">Unisul</a>.</p>
+
+     <p>All of this is in line with the group's goal, which is to cross the state in order to get more people to participate, presenting PHP through the professionals who actually use the language, increasing the technical quality of the information discussed. The conference counts on renowned speakers from outside the state, who are considered a reference in Brazil, for this purpose; but it also includes local speakers.</p>
+
+     <p>Get your ticket now at: <a href="https://conf.phpsc.com.br/">https://conf.phpsc.com.br/</a>.</p>
+    </div>
+  </content>
+</conference>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="4.0.3">
+  <release>4.0.3</release>
+  <date>11 October 2000</date>
+  <version>
+    <major>4</major>
+    <minor>0</minor>
+    <release>3</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-4.0.3.tar.gz</filename>
+      <name>Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+    <source>
+      <filename>php-4.0.3pl1.tar.gz</filename>
+      <name>4.0.3pl1 Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements/>
+  <changes/>
+</release>

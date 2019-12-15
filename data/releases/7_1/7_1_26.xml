@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.26">
+  <release>7.1.26</release>
+  <date>10 Jan 2019</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>26</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.26.tar.bz2</filename>
+      <name>PHP 7.1.26 (tar.bz2)</name>
+      <sha256>5b351ca86bc7e4600778aaf1d61ab9e4e38864efa86ab4cc4d5b02ea7f542ae6</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.26.tar.gz</filename>
+      <name>PHP 7.1.26 (tar.gz)</name>
+      <sha256>069315d3c3f964fd165bbbb3c2fc56005813e2cf97bed05055318dcc4e775328</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.26.tar.xz</filename>
+      <name>PHP 7.1.26 (tar.xz)</name>
+      <sha256>10b7ae634c12852fae52a22dc2262e5f12418ad59fd20da2d00d71a212235d31</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.1.26. This is a security release which also contains several bug fixes.</p>
+
+
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.0.12">
+  <release>7.0.12</release>
+  <date>13 Oct 2016</date>
+  <version>
+    <major>7</major>
+    <minor>0</minor>
+    <release>12</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.0.12.tar.bz2</filename>
+      <name>PHP 7.0.12 (tar.bz2)</name>
+      <sha256>38c47294fe8fb239b0230dc63a93c3e4044f472ab93b5dff8b65feb4103a6a27</sha256>
+      <md5/>
+      <date>13 Oct 2016</date>
+    </source>
+    <source>
+      <filename>php-7.0.12.tar.gz</filename>
+      <name>PHP 7.0.12 (tar.gz)</name>
+      <sha256>c4693cc363b4bbc7224294cc94faf3598e616cbe8540dd6975f68c7d3c52682f</sha256>
+      <md5/>
+      <date>13 Oct 2016</date>
+    </source>
+    <source>
+      <filename>php-7.0.12.tar.xz</filename>
+      <name>PHP 7.0.12 (tar.xz)</name>
+      <sha256>f3d6c49e1c242e5995dec15e503fde996c327eb86cd7ec45c690e93c971b83ff</sha256>
+      <md5/>
+      <date>13 Oct 2016</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     7.0.12. This is a security release. Several security bugs were fixed in
+     this release.
+
+     All PHP 7.0 users are encouraged to upgrade to this version.
+     </p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

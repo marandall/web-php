@@ -34,6 +34,8 @@
 		/** @var string */
 		private $release_ver = '';
 		
+		private $data;
+		
 		public function __construct(string $version_id, array $data) {
 			if (($data['announcement'] ?? '') === true) {
 				$this->announcements['en'] = true;
@@ -51,6 +53,7 @@
 			$this->minor_ver   = (int)($eq[1] ?? 0);
 			$this->release_ver = $eq[2] ?? '';
 			
+			$this->data       = $data;
 			$this->version_id = $version_id;
 		}
 		
@@ -104,50 +107,27 @@
 		}
 		
 		/**
-		 * Looks up the owning branch
-		 *
-		 * We don't inject the branch into this to start with due to how it's generated, so instead
-		 * the branch is looked up in the branch table (which will contain this instance)
-		 *
-		 * @return Branch
-		 */
-		
-		public function getBranch(): Branch {
-			return Branches::GetBranch($this->getBranchVersion());
-		}
-		
-		public function getBranchVersion(): string {
-			return $this->major_ver . '.' . $this->minor_ver;
-		}
-		
-		/**
 		 * Provides a URL to the general page for this release
 		 *
 		 * @return string
 		 */
 		
 		public function getUrl(): string {
-			return Site::$BaseUrl . '/versions/' . $this->major_ver . '.' . $this->minor_ver . '.' . urlencode($this->release_ver) . '/';
+			return Site::$BaseUrl . '/versions/' . $this->major_ver . '.' . $this->minor_ver . '.' . urlencode(
+					$this->release_ver
+				) . '/';
 		}
 		
 		public function getWindowsDownloadUrl(): string {
 			return 'https://windows.php.net/download#php-' . $this->getBranchVersion();
 		}
 		
-		public function getAnnouncementHTML(): string {
-			return file_get_contents(
-				Site::GetDataDir() .
-				'/releases/' . $this->major_ver . '/' . $this->major_ver . '_' . $this->minor_ver . '/' . str_replace(
-					'.', '_', $this->getVersionId()
-				) . '.html'
-			);
+		public function getBranchVersion(): string {
+			return $this->major_ver . '.' . $this->minor_ver;
 		}
 		
-		/**
-		 * @return string
-		 */
-		public function getVersionId(): string {
-			return $this->version_id;
+		public function getAnnouncementHTML(): string {
+			return $this->data['announcements']['en']['content'] ?? '';
 		}
 		
 		/**
@@ -162,7 +142,9 @@
 			}
 			
 			$changelog_contents = file_get_contents($changelog_path);
-			$changelog_start    = strpos($changelog_contents, '<section class="version" id="' . $this->getVersionId() . '">');
+			$changelog_start    = strpos(
+				$changelog_contents, '<section class="version" id="' . $this->getVersionId() . '">'
+			);
 			
 			if ($changelog_start !== false) {
 				$changelog_end = strpos($changelog_contents, '</section>', $changelog_start);
@@ -177,5 +159,25 @@
 			}
 			
 			return '';
+		}
+		
+		/**
+		 * Looks up the owning branch
+		 *
+		 * We don't inject the branch into this to start with due to how it's generated, so instead
+		 * the branch is looked up in the branch table (which will contain this instance)
+		 *
+		 * @return Branch
+		 */
+		
+		public function getBranch(): Branch {
+			return Branches::GetBranch($this->getBranchVersion());
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getVersionId(): string {
+			return $this->version_id;
 		}
 	}

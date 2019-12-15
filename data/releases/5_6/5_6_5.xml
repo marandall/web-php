@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.5">
+  <release>5.6.5</release>
+  <date>22 Jan 2015</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>5</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.5.tar.bz2</filename>
+      <name>PHP 5.6.5 (tar.bz2)</name>
+      <sha256>adab4c0775512a5ca0ae74e08efdc941d92529b75283e0f44d3f53822cdfd06d</sha256>
+      <md5/>
+      <date>22 Jan 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.5.tar.gz</filename>
+      <name>PHP 5.6.5 (tar.gz)</name>
+      <sha256>f67c480bcf2f6f703ec8d8a772540f4a518f766b08d634d7a919402c13a636cf</sha256>
+      <md5/>
+      <date>22 Jan 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.5.tar.xz</filename>
+      <name>PHP 5.6.5 (tar.xz)</name>
+      <sha256>c5ef4abaef8c1ea66dcfd5a075a2f357b666aff5c5b686fca7c78c1cfd64e996</sha256>
+      <md5/>
+      <date>22 Jan 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+      <p>The PHP development team announces the immediate availability of PHP
+     5.6.5. This release fixes several bugs as well as CVE-2015-0231, CVE-2014-9427 and CVE-2015-0232.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.5 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.5">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

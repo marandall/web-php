@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.5">
+  <release>7.1.5</release>
+  <date>11 May 2017</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>5</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.5.tar.bz2</filename>
+      <name>PHP 7.1.5 (tar.bz2)</name>
+      <sha256>28eaa4784f1bd8b7dc71206dc8c4375510199432dc17af6906b14d16b3058697</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.5.tar.gz</filename>
+      <name>PHP 7.1.5 (tar.gz)</name>
+      <sha256>f7ff8039f5c3a7da4d62a3cce6378280224acfa27ab5a5bee25b7439bce01c17</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.5.tar.xz</filename>
+      <name>PHP 7.1.5 (tar.xz)</name>
+      <sha256>d149a3c396c45611f5dc6bf14be190f464897145a76a8e5851cf18ff7094f6ac</sha256>
+      <md5/>
+      <date>11 May 2017</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+    <p>The PHP development team announces the immediate availability of PHP
+	7.1.5. Several bugs have been fixed.
+
+	All PHP 7.1 users are encouraged to upgrade to this version.
+	</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

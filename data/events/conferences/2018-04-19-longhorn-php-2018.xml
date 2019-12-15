@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Longhorn PHP 2018</title>
+  <id>2018-04-19-longhorn-php-2018</id>
+  <start_date>2018-04-19</start_date>
+  <end_date>2018-04-20</end_date>
+  <image>longhorn-php-2018.png</image>
+  <website>https://www.longhornphp.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The Austin PHP Meetup, the longest-running tech meetup in Texas’ capital, is excited to announce a brand-new PHP conference: Longhorn PHP. 2018 will be the inaugural year for Longhorn PHP, which follows in the tradition of the now-retired Lone Star PHP conference in Dallas.</p>
+
+     <p>At Longhorn PHP you’ll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of one tutorial day with in-depth workshops, and two main conference days with multiple tracks of traditional 1 hour sessions. <a href="https://www.longhornphp.com/register/">Register now</a> to take the next step toward leveling up your development career!</p>
+
+     <p><strong>Dates:</strong> April 19th-21st, 2018</p>
+     <p><strong>Website:</strong> <a href="https://www.longhornphp.com">https://www.longhornphp.com</a></p>
+    </div>
+  </content>
+</conference>

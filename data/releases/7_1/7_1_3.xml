@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.3">
+  <release>7.1.3</release>
+  <date>16 Mar 2017</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>3</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.3.tar.bz2</filename>
+      <name>PHP 7.1.3 (tar.bz2)</name>
+      <sha256>c145924d91b7a253eccc31f8d22f15b61589cd24d78105e56240c1bb6413b94f</sha256>
+      <md5/>
+      <date>16 Mar 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.3.tar.gz</filename>
+      <name>PHP 7.1.3 (tar.gz)</name>
+      <sha256>4bfadd0012b966eced448497272150ffeede13136a961aacb9e71553b8e929ec</sha256>
+      <md5/>
+      <date>16 Mar 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.3.tar.xz</filename>
+      <name>PHP 7.1.3 (tar.xz)</name>
+      <sha256>e4887c2634778e37fd962fbdf5c4a7d32cd708482fe07b448804625570cb0bb0</sha256>
+      <md5/>
+      <date>16 Mar 2017</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     7.1.3. Several bugs have been fixed.
+
+     All PHP 7.1 users are encouraged to upgrade to this version.
+     </p>
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.4.28">
+  <release>5.4.28</release>
+  <date>2 May 2014</date>
+  <version>
+    <major>5</major>
+    <minor>4</minor>
+    <release>28</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.4.28.tar.bz2</filename>
+      <name>PHP 5.4.28 (tar.bz2)</name>
+      <sha256>3fe780e5179e90c4d37276e79acc0d0692f1bc0911985af694b92c664c0ef3c4</sha256>
+      <md5/>
+      <date>2 May 2014</date>
+    </source>
+    <source>
+      <filename>php-5.4.28.tar.gz</filename>
+      <name>PHP 5.4.28 (tar.gz)</name>
+      <sha256>5140292c94a0301db7a807e6b3aadf6ee966346d0005aa3d15464bd4c595a786</sha256>
+      <md5/>
+      <date>2 May 2014</date>
+    </source>
+    <source>
+      <filename>Windows 5.4.28 binaries and source</filename>
+      <name>Windows 5.4.28 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+5.4.28. 19 bugs were fixed in this release, including CVE-2014-0185.
+All PHP 5.4 users are encouraged to upgrade to this version.
+</p>
+
+<p>For source downloads of PHP 5.4.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.28">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

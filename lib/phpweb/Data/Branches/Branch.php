@@ -166,7 +166,7 @@
 		 */
 		
 		public function getChangelogPath(): string {
-			$path = Site::GetDataDir() . '/releases/' . $this->major_ver . '/changelog.php';
+			$path = Site::GetDataDir() . '/releases/changelog' . $this->major_ver . '.php';
 			return file_exists($path) ? $path : '';
 		}
 		

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.17">
+  <release>7.2.17</release>
+  <date>02 May 2019</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>17</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.17.tar.bz2</filename>
+      <name>PHP 7.2.17 (tar.bz2)</name>
+      <sha256>91a811ab6f6d7acb312159cf6b0a3cffe968676fdebf042e9253245cc6094f75</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.17.tar.gz</filename>
+      <name>PHP 7.2.17 (tar.gz)</name>
+      <sha256>e1c6c2553cdb7edbfa65b89e259690ed01b31b12d57349c90b6ed00a410f62b5</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.17.tar.xz</filename>
+      <name>PHP 7.2.17 (tar.xz)</name>
+      <sha256>a3e5f51a9ae08813b3925bea3a4de02cd4906fcccf75646e267a213bb63bcf84</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.17.
+This is a security release which also contains several minor bug fixes.</p>
+
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

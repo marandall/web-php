@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.32">
+  <release>5.5.32</release>
+  <date>04 Feb 2016</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>32</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.32.tar.bz2</filename>
+      <name>PHP 5.5.32 (tar.bz2)</name>
+      <sha256>b0f2c108db8e05db9f6366aaba9a754fd0ee31f3f86ee889561b608dfd6e92ee</sha256>
+      <md5/>
+      <date>04 Feb 2016</date>
+    </source>
+    <source>
+      <filename>php-5.5.32.tar.gz</filename>
+      <name>PHP 5.5.32 (tar.gz)</name>
+      <sha256>419aa62a68a640192799928a29e5cd4cd5b965458223bea2b3209a68c3e95989</sha256>
+      <md5/>
+      <date>04 Feb 2016</date>
+    </source>
+    <source>
+      <filename>php-5.5.32.tar.xz</filename>
+      <name>PHP 5.5.32 (tar.xz)</name>
+      <sha256>02f569dcf5bd57dd5e390ddcab8609e3957a698e2db0b793cf2c11a7e33743c9</sha256>
+      <md5/>
+      <date>04 Feb 2016</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.5.32. This is a security release. Several security bugs were fixed in this release.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

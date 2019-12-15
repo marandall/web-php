@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.12">
+  <release>5.5.12</release>
+  <date>30 Apr 2014</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>12</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.12.tar.bz2</filename>
+      <name>PHP 5.5.12 (tar.bz2)</name>
+      <sha256>519ee29e28532782676f3d8e31a808ffbfee383e0279ccc8cbd2b12ed53c2335</sha256>
+      <md5/>
+      <date>30 Apr 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.12.tar.gz</filename>
+      <name>PHP 5.5.12 (tar.gz)</name>
+      <sha256>a10c6e6ce1145762d6c15ca7ce1aeaab69662c197d24e1294c2519aa85c97bd6</sha256>
+      <md5/>
+      <date>30 Apr 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP Development Team announces the immediate availability of PHP 5.5.12.
+This release fixes several bugs against PHP 5.5.11, as well as CVE-2014-0185 regarding PHP-FPM.</p>
+
+<p>All PHP users are encouraged to upgrade to this new version.</p>
+
+<p>For source downloads of PHP 5.5.12, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.12">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

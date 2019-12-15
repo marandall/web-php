@@ -44,8 +44,6 @@
 		
 		protected function renderContents() {
 			?>
-            <h1>Git Access</h1>
-
             <p>
                 If you wish to get the latest PHP source tree, you can obtain it through Git.
                 You should be warned that the Git version is a development version, and as

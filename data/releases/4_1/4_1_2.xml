@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="4.1.2">
+  <release>4.1.2</release>
+  <date>12 March 2002</date>
+  <version>
+    <major>4</major>
+    <minor>1</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-4.1.2.tar.gz</filename>
+      <name>Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements/>
+  <changes/>
+</release>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.0.4">
+  <release>5.0.4</release>
+  <date>31 Mar 2005</date>
+  <version>
+    <major>5</major>
+    <minor>0</minor>
+    <release>4</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.0.4.tar.gz</filename>
+      <name>Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements/>
+  <changes/>
+</release>

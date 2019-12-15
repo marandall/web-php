@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Longhorn PHP 2019 CFP is open!</title>
+  <id>2018-12-15-longhorn-php-2019-cfp-is-open!</id>
+  <start_date>2018-12-15</start_date>
+  <end_date>2018-12-16</end_date>
+  <image>longhornphp.png</image>
+  <website>https://www.longhornphp.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Longhorn PHP is back for another exciting weekend of fun and learning!</p>
+     <p>At Longhorn PHP you'll get to learn from and alongside a diverse group of developers from all over the region, country, and even the globe. The conference will consist of a tutorial day with in-depth workshops, followed by two main conference days with multiple tracks of traditional 1 hour sessions, and new 30 minute sessions! <a href="https://www.longhornphp.com/register/">Register now</a> to take the next step toward leveling up your development career!</p>
+     <p>If you are interested in presenting at Longhorn PHP, <a href="https://cfp.longhornphp.com/">our CFP is open</a> through December 15th, 2018.</p>
+          <p><strong>Dates:</strong> May 2nd-4th, 2019</p>
+          <p><strong>Website:</strong> <a href="https://www.longhornphp.com">https://www.longhornphp.com</a></p>
+
+
+    </div>
+  </content>
+</conference>

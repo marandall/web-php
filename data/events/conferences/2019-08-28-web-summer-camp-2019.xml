@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Web Summer Camp 2019</title>
+  <id>2019-08-28-web-summer-camp-2019</id>
+  <start_date>2019-08-28</start_date>
+  <end_date>2019-08-29</end_date>
+  <image>wsc.png</image>
+  <website>http://websummercamp.com</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     With days getting longer and our jackets lighter, we start to look forward to meeting you all once again in Rovinj. For the 8th time in a row, we are organizing our <a href="https://2019.websummercamp.com/">learn &amp; fun summer event</a>. Mark your calendar for August 28th - 30th and join us in beautiful Rovinj.
+
+     This year you can expect hands-on and engaging workshops related to <b>PHP</b>, <b>Symfony</b>, Javascript and Project Management, as well as fun and relaxing after-workshop programme for attendees and their companions.
+
+     If you feel your workshop could add value to the event, we encourage you to <a href="https://sessionize.com/web-summer-camp-2019/">submit your proposal</a> by April 30th. All the information on this year's topics of our interest you can find <a href="https://2019.websummercamp.com/call-for-papers">here</a>.
+
+     And while waiting for Early Bird tickets sale to start, here is a short reminder on <a href="https://www.netgenlabs.com/Blog/Why-Web-Summer-Camp-of-all-events">Why Web Summer Camp of all events</a>.
+
+     Summer is coming, follow us on <a href="https://twitter.com/websummercamp">@websummercamp</a> and stay tuned!
+    </div>
+  </content>
+</conference>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.16">
+  <release>5.5.16</release>
+  <date>21 Aug 2014</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>16</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.16.tar.bz2</filename>
+      <name>PHP 5.5.16 (tar.bz2)</name>
+      <sha256>a1d7c4556a80bed744a348211b33bc35303edd56dd0a34e0a75a948c879cc5f6</sha256>
+      <md5/>
+      <date>21 Aug 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.16.tar.gz</filename>
+      <name>PHP 5.5.16 (tar.gz)</name>
+      <sha256>cdea80ab1b0466f4656b46155e341b700799e78569a5cc582eeaededb448086c</sha256>
+      <md5/>
+      <date>21 Aug 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.16.tar.xz</filename>
+      <name>PHP 5.5.16 (tar.xz)</name>
+      <sha256>8276e8de4928e8e7011d1ac6c841c5adfc4561c7329ef2f5e055e7f4e1af0e48</sha256>
+      <md5/>
+      <date>21 Aug 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP Development Team announces the immediate availability of PHP 5.5.16.
+This release fixes several bugs against PHP 5.5.15 and resolves CVE-2014-3538, CVE-2014-3587,
+CVE-2014-2497, CVE-2014-5120 and CVE-2014-3597.
+</p>
+
+<p>All PHP users are encouraged to upgrade to this new version.</p>
+
+<p>For source downloads of PHP 5.5.16, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.16">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

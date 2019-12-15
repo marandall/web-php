@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Lightning PHP Conference</title>
+  <id>2019-10-04-lightning-php-conference</id>
+  <start_date>2019-10-04</start_date>
+  <end_date>2019-10-05</end_date>
+  <image>lightningphp2019.png</image>
+  <website>https://lightningphp.org</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     The inaugural <a href="https://lightningphp.org" title="Lightning PHP 2019">Lightning PHP Conference</a>
+     - this one day event will be held in Tampa, Florida on Friday, October 4th, 2019.
+     We look forward to an incredible day of learning, networking, and fun as we invite
+     the PHP world to join us as part of our Lightning PHP community!
+    </div>
+  </content>
+</conference>

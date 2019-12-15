@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>LaravelConf Taiwan 2018</title>
+  <id>2018-07-08-laravelconf-taiwan-2018</id>
+  <start_date>2018-07-08</start_date>
+  <end_date>2018-07-09</end_date>
+  <image>LaravelConfTaiwan_2018.jpg</image>
+  <website>https://laravelconf.tw/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>As the biggest PHP and Laravel community in Taiwan, we are proud to announce <a href="https://laravelconf.tw/">LaravelConf Taiwan</a> will take place on July 8, 2018.</p>
+     <p>Come and enjoy inspirational talks and making friends with enthusiastic developers like you!</p>
+     <br/>
+     <p>Date: July 8, 2018</p>
+     <p>Location: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City, 100 Taiwan</p>
+     <br/>
+     <p>Check out <a href="https://laravelconf.tw/">more information</a> and get your <a href="https://laravel-dojo.kktix.cc/events/laravelconftw2018">ticket</a> now!</p>
+    </div>
+  </content>
+</conference>

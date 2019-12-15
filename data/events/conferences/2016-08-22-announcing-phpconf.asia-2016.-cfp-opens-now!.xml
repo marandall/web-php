@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Announcing PHPConf.Asia 2016. CFP Opens Now!</title>
+  <id>2016-08-22-announcing-phpconf.asia-2016.-cfp-opens-now!</id>
+  <start_date>2016-08-22</start_date>
+  <end_date>2016-08-23</end_date>
+  <image>phpconfasia-logo.png</image>
+  <website>https://2016.phpconf.asia</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p><strong>Announcing <a href="http://2016.phpconf.asia" target="_blank">PHPConf.Asia 2016</a> - The Pan-Asian PHP Conference - CFP Opens Now</strong></p>
+     <p>The second pan-Asian PHP conference will take place between 22<sup>nd</sup> and 24<sup>th</sup> August 2016 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Monday, 22<sup>nd</sup> August 2016 will be a <strong>Tutorial</strong> day. Followed by 2 days of <strong>Conference</strong>.</p>
+     <p>Come and meet with the fastest growing PHP communities in Asia. More than 300 attendees are expected in this single track conference.</p>
+     <p><a href="https://cfp.phpconf.asia/" target="_blank">CFP Opens Now!</a>. Hop over to <a href="http://2016.phpconf.asia" target="_blank">http://2016.phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</conference>

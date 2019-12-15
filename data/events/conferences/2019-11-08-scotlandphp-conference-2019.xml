@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>ScotlandPHP Conference 2019</title>
+  <id>2019-11-08-scotlandphp-conference-2019</id>
+  <start_date>2019-11-08</start_date>
+  <end_date>2019-11-09</end_date>
+  <image>scotlandphp-logo.png</image>
+  <website>https://scophp.co</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>Friday 8th (Workshops) and Saturday 9th November 2019, EICC, Edinburgh</p>
+      <p>We are delighted to announce we are back in 2019 to do it all again! We will be staying put this year at the EICC in Edinburgh but the date has shifted forward a little to the 8th and 9th of November. Make sure to stick it in your diary!</p>
+      <p><a href="https://conference.scotlandphp.co.uk">More Information...</a></p>
+
+      <p>Follow us on twitter: <a href="https://www.twitter.com/scotlandphp">@scotlandphp</a></p>
+    </div>
+  </content>
+</conference>

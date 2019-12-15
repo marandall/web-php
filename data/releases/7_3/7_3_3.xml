@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.3.3">
+  <release>7.3.3</release>
+  <date>07 Mar 2019</date>
+  <version>
+    <major>7</major>
+    <minor>3</minor>
+    <release>3</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.3.3.tar.bz2</filename>
+      <name>PHP 7.3.3 (tar.bz2)</name>
+      <sha256>61969e943adfea79701a34b8e701edd3f95be829d16601a4aabeb05f83023ce6</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+    <source>
+      <filename>php-7.3.3.tar.gz</filename>
+      <name>PHP 7.3.3 (tar.gz)</name>
+      <sha256>9bde40cbf8608ae9c595a6643a02cf0c692c131e2b3619af3fd2af8425d8e677</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+    <source>
+      <filename>php-7.3.3.tar.xz</filename>
+      <name>PHP 7.3.3 (tar.xz)</name>
+      <sha256>6bb03e79a183d0cb059a6d117bbb2e0679cab667fb713a13c6a16f56bebab9b3</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.3.3. This is a security release which also contains several bug fixes.</p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

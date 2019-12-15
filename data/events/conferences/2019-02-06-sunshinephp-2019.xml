@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>SunshinePHP 2019</title>
+  <id>2019-02-06-sunshinephp-2019</id>
+  <start_date>2019-02-06</start_date>
+  <end_date>2019-02-07</end_date>
+  <image>sunshinephp2019.png</image>
+  <website>http://sunshinephp.com</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>In February 2019 come to Miami, Florida and escape the cold to learn more about PHP and speak with other developers, like you, to see what others are doing. The <a href="http://sunshinephp.com/speakers" title="SunshinePHP 2019 Speaker List">SunshinePHP 2019 speaker list</a> has been announced, and we've assembled a great line-up with the most current PHP related topics for you.</p>
+
+			<p>Topics include:</p>
+
+			<ul>
+				<li>API Development</li>
+				<li>Middleware</li>
+				<li>Security</li>
+				<li>Blockchain</li>
+				<li>DevOps</li>
+				<li>Progressive Web Apps (PWA)</li>
+				<li>Continuous Delivery</li>
+				<li>Databases</li>
+				<li>Javascript</li>
+				<li>PHP Core</li>
+				<li>Unit Testing</li>
+				<li>UI/UX</li>
+				<li>Async PHP</li>
+				<li>Scalability</li>
+				<li>Team Development</li>
+			</ul>
+
+			<p>Come celebrate our 7th year from February 7th to 9th, 2019 in sunny Miami, Florida. There will be a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.</p>
+
+			<p>Register now! <a href="http://sunshinephp.com/register" title="SunshinePHP">SunshinePHP.com</a></p>
+		</div>
+	</content>
+</conference>

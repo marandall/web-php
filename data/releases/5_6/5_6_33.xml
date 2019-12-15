@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.33">
+  <release>5.6.33</release>
+  <date>04 Jan 2018</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>33</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.33.tar.bz2</filename>
+      <name>PHP 5.6.33 (tar.bz2)</name>
+      <sha256>07f696a9761dcd839e2045c95c3a4d2ffb52c54417477cca9d30a14975b831cc</sha256>
+      <md5/>
+      <date>04 Jan 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.33.tar.gz</filename>
+      <name>PHP 5.6.33 (tar.gz)</name>
+      <sha256>bedfac81cfaa25961812a1aec458c4109411a14991b43a416343ffb830b8da6a</sha256>
+      <md5/>
+      <date>04 Jan 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.33.tar.xz</filename>
+      <name>PHP 5.6.33 (tar.xz)</name>
+      <sha256>9004995fdf55f111cd9020e8b8aff975df3d8d4191776c601a46988c375f3553</sha256>
+      <md5/>
+      <date>04 Jan 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.33. This is a security release. Several security bugs were fixed in
+     this release.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.33">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

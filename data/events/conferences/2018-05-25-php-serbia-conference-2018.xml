@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHP Serbia Conference 2018</title>
+  <id>2018-05-25-php-serbia-conference-2018</id>
+  <start_date>2018-05-25</start_date>
+  <end_date>2018-05-26</end_date>
+  <image>phpsrb18.png</image>
+  <website>https://conf2018.phpsrbija.rs</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>"PHP Srbija" is happy to announce a brand new PHP Serbia Conference 2018!</p>
+
+      <p>This year's edition features Workshop Day prior to the main 2-day event of awesome talks on PHP and related technologies presented by best speakers from all over the globe.</p>
+
+      <p>If you are interested in speaking at PHP Serbia Conference, <a href="https://cfp.phpsrbija.rs/">our CFP</a> is open until January 21st, 2018.</p>
+    </div>
+  </content>
+</conference>

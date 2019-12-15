@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>JestPHP Conference - February 22nd 2019, Mesa Arizona</title>
+  <id>2018-12-01-jestphp-conference---february-22nd-2019,-mesa-arizona</id>
+  <start_date>2018-12-01</start_date>
+  <end_date>2018-12-02</end_date>
+  <image>jest-php-logo.png</image>
+  <website>https://jestphp.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     JestPHP is a 1-day, 1-track, affordable, community conference for PHP developers in Arizona and beyond. Join us for a day of learning and laughter that you will not forget.
+    </div>
+  </content>
+</conference>

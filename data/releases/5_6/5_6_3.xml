@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.3">
+  <release>5.6.3</release>
+  <date>13 Nov 2014</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>3</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.3.tar.bz2</filename>
+      <name>PHP 5.6.3 (tar.bz2)</name>
+      <sha256>8986b20124d14430d795165e47801ef065a38d5855bea39d0d47b13ab9ad4009</sha256>
+      <md5/>
+      <date>13 Nov 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.3.tar.gz</filename>
+      <name>PHP 5.6.3 (tar.gz)</name>
+      <sha256>7ac79fe7ef50c2d5893375f5d8854909337adf1632e42bb08b36b66a0d8016a7</sha256>
+      <md5/>
+      <date>13 Nov 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.3.tar.xz</filename>
+      <name>PHP 5.6.3 (tar.xz)</name>
+      <sha256>fad244506cc7f10fe56aba8129b3c39a4f9316d9544a4fba932c3f81fc2244b5</sha256>
+      <md5/>
+      <date>13 Nov 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP 5.6.3.
+This release fixes several bugs and one CVE in the fileinfo extension.
+All PHP 5.6 users are encouraged to upgrade to this version.
+</p>
+
+<p>For source downloads of PHP 5.6.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.3">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

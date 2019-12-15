@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>php Central Europe 2019</title>
+  <id>2019-10-04-php-central-europe-2019</id>
+  <start_date>2019-10-04</start_date>
+  <end_date>2019-10-05</end_date>
+  <image>phpce-logo.png</image>
+  <website>https://2019.phpce.eu/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Thanks to the support of PHP Usergroup Dresden, our conference will be held in the Federal Republic of Germany. phpCE is an event addressed to a vast group of developers and PHP enthusiasts from Central Europe. We hope that you enjoy our diverse <a href="https://2019.phpce.eu/en/#agenda">line-up</a> and it will turn out to be so interesting that you too will want to join us. In addition, for the first time we will meet at... the cinema!</p>
+     <p><strong>Location and dates:</strong><br/><strong>October 4, 2019</strong> - the Workshop Day in the <strong>Pullman Dresden Newa</strong> hotel,<br/><strong>October 5-6, 2019</strong> - Conference Days in the <strong>UFA Kristallpalast</strong> multiplex.</p>
+     <p>Tickets are still available under <a href="https://2019.phpce.eu/en/#tickets">2019.phpce.eu/#tickets</a>. Welcome!</p>
+    </div>
+  </content>
+</conference>

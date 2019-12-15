@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.25">
+  <release>5.6.25</release>
+  <date>18 Aug 2016</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>25</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.25.tar.bz2</filename>
+      <name>PHP 5.6.25 (tar.bz2)</name>
+      <sha256>58ce6032aced7f3e42ced492bd9820e5b3f2a3cd3ef71429aa92fd7b3eb18dde</sha256>
+      <md5/>
+      <date>18 Aug 2016</date>
+    </source>
+    <source>
+      <filename>php-5.6.25.tar.gz</filename>
+      <name>PHP 5.6.25 (tar.gz)</name>
+      <sha256>733f1c811d51c2d4031a0c058dc94d09d03858d781ca2eb2cce78853bc76db58</sha256>
+      <md5/>
+      <date>18 Aug 2016</date>
+    </source>
+    <source>
+      <filename>php-5.6.25.tar.xz</filename>
+      <name>PHP 5.6.25 (tar.xz)</name>
+      <sha256>7535cd6e20040ccec4594cc386c6f15c3f2c88f24163294a31068cf7dfe7f644</sha256>
+      <md5/>
+      <date>18 Aug 2016</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.25. This is a security release. Several security bugs were fixed in
+     this release.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.25">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

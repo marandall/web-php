@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.2">
+  <release>7.2.2</release>
+  <date>1 Feb 2018</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.2.tar.bz2</filename>
+      <name>PHP 7.2.2 (tar.bz2)</name>
+      <sha256>f841ac58e17471f2241ea892b34edb01dc9b93ad9f661ffe4e3f1f476a8f4aee</sha256>
+      <md5/>
+      <date>1 Feb 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.2.tar.gz</filename>
+      <name>PHP 7.2.2 (tar.gz)</name>
+      <sha256>5963df05fec21927c03fe9f7bf379be2d1eacde6c0f9dcde6143c7133e55abd4</sha256>
+      <md5/>
+      <date>1 Feb 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.2.tar.xz</filename>
+      <name>PHP 7.2.2 (tar.xz)</name>
+      <sha256>47d7607d38a1d565fc43ea942c92229a7cd165f156737f210937e375b243cb11</sha256>
+      <md5/>
+      <date>1 Feb 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.2.2. This is a bugfix release, with several bug fixes included.</p>
+
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -6,6 +6,8 @@
 	
 	use phpweb\Config\Site;
 	use phpweb\Data\Release\Release;
+	use phpweb\Data\Release\ReleasesRepository;
+	use phpweb\Services;
 	
 	class Releases
 	{
@@ -25,24 +27,7 @@
 		 */
 		
 		public static function GetReleases(): array {
-			if (self::$release_cache !== null) {
-				return self::$release_cache;
-			}
-			
-			$releases = [];
-			foreach (self::GetOldReleasesData() as $major => $branch_releases) {
-				foreach ($branch_releases as $version => $branch_release) {
-					$releases[$version] = new Release($version, $branch_release);
-				}
-			}
-			
-			foreach (self::GetCurrentReleasesData() as $major => $branch_releases) {
-				foreach ($branch_releases as $version => $branch_release) {
-					$releases[$version] = new Release($version, $branch_release);
-				}
-			}
-			
-			return self::$release_cache = $releases;
+			return Services::get(ReleasesRepository::class)->all();
 		}
 		
 		/**

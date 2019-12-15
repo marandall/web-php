@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+    <title>AFUP ForumPHP 2015</title>
+    <id>2015-08-15-afup-forumphp-2015</id>
+    <start_date>2015-08-15</start_date>
+    <end_date>2015-08-16</end_date>
+    <image>forumphp-afup-2015.png</image>
+    <website>http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php</website>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Come and join us at Forum PHP 2015, our annual conference gathering all PHP and Open Source communities,
+                pros and PHP lovers.
+            </p>
+
+            <p>This year, the event will be held at Beffroi de Montrouge, on November, 23rd and 24th.</p>
+
+            <p>“PHP’s 20th anniversary : 20 years of web, 20 years of global success, 20 years of innovation”
+                In 1995, Rasmus Lerdorf started creating PHP. 20 years later, 80% of websites in the world use the
+                language. Celebrate with us this worldwide success, during 2 days, 3 tracks, and all the best developers
+                involved in PHP7 !
+            </p>
+
+            <p>The call for papers is open until August, 15th:
+                <a href="http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php">
+                    http://www.afup.org/pages/forumphp2015/appel-a-conferenciers-en.php
+                </a>
+            </p>
+        </div>
+    </content>
+</conference>

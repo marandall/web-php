@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Cascadia PHP</title>
+  <id>2018-09-14-cascadia-php</id>
+  <start_date>2018-09-14</start_date>
+  <end_date>2018-09-15</end_date>
+  <image>cascadiaphp-2018.jpg</image>
+  <website>https://www.cascadiaphp.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     Join us at Cascadia PHP for Developers by Developers. Exceptional speakers. Actionable tactics. Learning for all. Join us for a two-day, three-track conference full of forward-thinking, tactical sessions in PHP, Security, API’s, Dev Ops, web technologies, and more.
+    </div>
+  </content>
+</conference>

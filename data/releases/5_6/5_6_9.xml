@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.9">
+  <release>5.6.9</release>
+  <date>14 May 2015</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>9</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.9.tar.bz2</filename>
+      <name>PHP 5.6.9 (tar.bz2)</name>
+      <sha256>19d3b87b7b8bba3be24cf6d757d16b723a98881c3af8d15469fd25501e9abcb9</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.9.tar.gz</filename>
+      <name>PHP 5.6.9 (tar.gz)</name>
+      <sha256>49527ba66357fe65bcd463dfb8dcff1b8879419f88b3c334f50696a2aceacb87</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.9.tar.xz</filename>
+      <name>PHP 5.6.9 (tar.xz)</name>
+      <sha256>1fac497b596f5e4e87d87a7ca90f8725e39a8ca3f9d7adb500fa83c4bb70a73f</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.9. Several bugs have been fixed.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

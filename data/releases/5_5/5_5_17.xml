@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.17">
+  <release>5.5.17</release>
+  <date>18 Sep 2014</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>17</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.17.tar.bz2</filename>
+      <name>PHP 5.5.17 (tar.bz2)</name>
+      <sha256>5d81db0c8b2a68da05715c363d037922b82a45c966785d64a77482e5c01e4e1b</sha256>
+      <md5/>
+      <date>18 Sep 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.17.tar.gz</filename>
+      <name>PHP 5.5.17 (tar.gz)</name>
+      <sha256>657169be88ae70625d97bb94dd29140c2b602f1ba8d5e42ca14a400b63cf4720</sha256>
+      <md5/>
+      <date>18 Sep 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.17.tar.xz</filename>
+      <name>PHP 5.5.17 (tar.xz)</name>
+      <sha256>382b2a1cfbf67ca9e30171c9c49bfe260d5e458e07850d4b036e8430e1829093</sha256>
+      <md5/>
+      <date>18 Sep 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+     5.5.17. Several bugs were fixed in this release.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.5.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.17">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

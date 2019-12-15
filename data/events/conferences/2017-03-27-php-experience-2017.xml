@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHP Experience 2017</title>
+  <id>2017-03-27-php-experience-2017</id>
+  <start_date>2017-03-27</start_date>
+  <end_date>2017-03-28</end_date>
+  <image>php-experience-2017_logo.png</image>
+  <website/>
+  <content type="html">
+      <p>iMasters PHP Experience 2017 brings together about 1,200 PHP developers in São Paulo, for <a href="http://phpexperience2017en.imasters.com.br/?paref=phpnet&amp;utm_campaign=phpnet">national and international lectures, workshops, community areas and various networking actions, divided into two days of great content</a>. In 2017 taking place from March 27-28 in São Paulo - Brazil.</p>
+      <p>Curatorship by <a href="http://phpsp.org.br/?paref=phpnet&amp;utm_campaign=phpnet">PHPSP - São Paulo PHP User Group</a>.</p>
+  </content>
+</conference>

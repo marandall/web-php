@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHP fwdays'20</title>
+  <id>2019-12-24-php-fwdays'20</id>
+  <start_date>2019-12-24</start_date>
+  <end_date>2019-12-25</end_date>
+  <image>fwdays.png</image>
+  <website>https://fwdays.com/en/event/php-fwdays-2020</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>We are thrilled to announce the 8th edition of <a href="https://fwdays.com/en/event/php-fwdays-2020">PHP fwdays conference</a> — the biggest PHP conf of Eastern Europe, which will be held on <strong>May 30, 2020 in Kyiv, Ukraine</strong>.</p>
+        <p>Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Join more than 900 developers from all over the world to learn, discuss and solve.</p>
+        <p>You are welcome to submit the talk via <a href="https://php.cfp.fwdays.com/">Call For Papers</a> till December 24th and visit awesome Kyiv in summer!</p>
+    </div>
+  </content>
+</conference>

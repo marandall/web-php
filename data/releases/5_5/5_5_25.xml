@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.25">
+  <release>5.5.25</release>
+  <date>14 May 2015</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>25</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.25.tar.bz2</filename>
+      <name>PHP 5.5.25 (tar.bz2)</name>
+      <sha256>68df37e725ddd05675c0df906041038127938ecc52113a54d10e1e4029262c63</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.25.tar.gz</filename>
+      <name>PHP 5.5.25 (tar.gz)</name>
+      <sha256>c9397f60bff139e0df441c5e2766108c5bc7ad690de136eb9f5b2f9bbf771240</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.25.tar.xz</filename>
+      <name>PHP 5.5.25 (tar.xz)</name>
+      <sha256>ac10015dddfc103b58ccc949504bd50f0d79d0abe74a0cc7842251af06ce8b07</sha256>
+      <md5/>
+      <date>14 May 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.5.25. Several bugs have been fixed.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.5.25 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.25">ChangeLog</a>.
+
+
+</p></announcement>
+  </announcements>
+  <changes/>
+</release>

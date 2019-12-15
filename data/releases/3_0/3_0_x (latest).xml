@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="3.0.x (latest)">
+  <release>3.0.x (latest)</release>
+  <date>20 Oct 2000</date>
+  <version>
+    <major>3</major>
+    <minor>0</minor>
+    <release>0</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-3.0.18.tar.gz</filename>
+      <name>PHP 3.0.18 Source Code</name>
+      <sha256/>
+      <md5>b4b8f7f1151ce66d5f3910a066651133</md5>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements/>
+  <changes/>
+</release>

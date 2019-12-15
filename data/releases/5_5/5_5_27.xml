@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.27">
+  <release>5.5.27</release>
+  <date>09 Jul 2015</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>27</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.27.tar.bz2</filename>
+      <name>PHP 5.5.27 (tar.bz2)</name>
+      <sha256>c4b4c6a534c0ca67a9ae39bec4f51e52d13e820135dd016eae230e15337e1f70</sha256>
+      <md5/>
+      <date>09 Jul 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.27.tar.gz</filename>
+      <name>PHP 5.5.27 (tar.gz)</name>
+      <sha256>57cc716ebb37a62654c154582e48a282055b08ce91995c79b0be41b9940237f0</sha256>
+      <md5/>
+      <date>09 Jul 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.27.tar.xz</filename>
+      <name>PHP 5.5.27 (tar.xz)</name>
+      <sha256>7ee398058067a7d8184e402fcdccb25003852cb8dc94eefa3cda051a3e47fdd8</sha256>
+      <md5/>
+      <date>09 Jul 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.5.27. Several bugs were fixed in this release as well as CVE-2015-3152.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>
+     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.5 version
+     is the last planned release that contains regular bugfixes. All the consequent releases
+     will contain only security-relevant fixes, for the term of one year.
+     PHP 5.5 users that need further bugfixes are encouraged to upgrade to PHP 5.6.
+     </p>
+
+     <p>For source downloads of PHP 5.5.27 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.27">ChangeLog</a>.
+
+
+</p></announcement>
+  </announcements>
+  <changes/>
+</release>

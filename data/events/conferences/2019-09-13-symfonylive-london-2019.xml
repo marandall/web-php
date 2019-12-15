@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>SymfonyLive London 2019</title>
+  <id>2019-09-13-symfonylive-london-2019</id>
+  <start_date>2019-09-13</start_date>
+  <end_date>2019-09-14</end_date>
+  <image>symfonylive-london-2019.png</image>
+  <website>https://london2019.live.symfony.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Join us from September 12th to 13th 2019 for SymfonyLive London 2019! We are
+     proud to organize the 8th edition of the Symfony conference in London and to
+     welcome the Symfony community from all over the UK.</p>
+     
+     <p>Come for 2 days of Symfony to share best practices, experience, knowledge, make
+     new contacts, and hear the latest developments with the framework!</p>
+    </div>
+  </content>
+</conference>

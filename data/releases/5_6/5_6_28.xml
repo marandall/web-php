@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.28">
+  <release>5.6.28</release>
+  <date>10 Nov 2016</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>28</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.28.tar.bz2</filename>
+      <name>PHP 5.6.28 (tar.bz2)</name>
+      <sha256>c55ea3f4aad5a0b65631d01c4468930fd981ad208ffcd242acdf731bcb47548f</sha256>
+      <md5/>
+      <date>10 Nov 2016</date>
+    </source>
+    <source>
+      <filename>php-5.6.28.tar.gz</filename>
+      <name>PHP 5.6.28 (tar.gz)</name>
+      <sha256>27a47ac15e0868d51181d3909cfe3c63ae9b643a3ab40dc30a75b5b500bce500</sha256>
+      <md5/>
+      <date>10 Nov 2016</date>
+    </source>
+    <source>
+      <filename>php-5.6.28.tar.xz</filename>
+      <name>PHP 5.6.28 (tar.xz)</name>
+      <sha256>07187ba2870f89cef334cd2ad6cb801aeec5eaf283da0293a9a6be75d6786d11</sha256>
+      <md5/>
+      <date>10 Nov 2016</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.28. This is a security release. Several security bugs were fixed in
+     this release.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

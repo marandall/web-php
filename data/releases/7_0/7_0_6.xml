@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.0.6">
+  <release>7.0.6</release>
+  <date>28 Apr 2016</date>
+  <version>
+    <major>7</major>
+    <minor>0</minor>
+    <release>6</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.0.6.tar.bz2</filename>
+      <name>PHP 7.0.6 (tar.bz2)</name>
+      <sha256>14ddf192a9965c858c1e742a61456be2f34a4db87556172c0d76f08de96329b7</sha256>
+      <md5/>
+      <date>28 Apr 2016</date>
+    </source>
+    <source>
+      <filename>php-7.0.6.tar.gz</filename>
+      <name>PHP 7.0.6 (tar.gz)</name>
+      <sha256>f6b47cb3e02530d96787ae5c7888aefbd1db6ae4164d68b88808ee6f4da94277</sha256>
+      <md5/>
+      <date>28 Apr 2016</date>
+    </source>
+    <source>
+      <filename>php-7.0.6.tar.xz</filename>
+      <name>PHP 7.0.6 (tar.xz)</name>
+      <sha256>1b237a9455e5476a425dbb9d99966bad68107747c601958cb9558a7fb49ab419</sha256>
+      <md5/>
+      <date>28 Apr 2016</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     7.0.6. This is a security release. Several security bugs were fixed in
+     this release, including</p>
+     <ul>
+         <li>CVE-2016-3078</li>
+         <li>CVE-2016-3074</li>
+     </ul>
+     <p>
+     All PHP 7.0 users are encouraged to upgrade to this version.
+     </p>
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

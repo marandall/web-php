@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.28">
+  <release>7.1.28</release>
+  <date>02 May 2019</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>28</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.28.tar.bz2</filename>
+      <name>PHP 7.1.28 (tar.bz2)</name>
+      <sha256>739e8733fe1fc5e69e6226da6dba7a31bacfd2e3871ad2c97a792638f22c54c9</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.28.tar.gz</filename>
+      <name>PHP 7.1.28 (tar.gz)</name>
+      <sha256>4df587338d4c5dfe27050c7ac72a6b7583ecaee9d3fbfc03427667a86e081999</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.28.tar.xz</filename>
+      <name>PHP 7.1.28 (tar.xz)</name>
+      <sha256>45131497ec0a947e3f9145c000e8fcc1f86b46518ee3f6810d80efa2d39521e2</sha256>
+      <md5/>
+      <date>04 Apr 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.1.28. This is a security release.</p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

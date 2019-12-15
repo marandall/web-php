@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.3.10">
+  <release>7.3.10</release>
+  <date>26 Sep 2019</date>
+  <version>
+    <major>7</major>
+    <minor>3</minor>
+    <release>10</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.3.10.tar.bz2</filename>
+      <name>PHP 7.3.10 (tar.bz2)</name>
+      <sha256>506dd871c0fb8f00f872f53dd3b1dfa5f23a9edb4dfc521e5669c78a78c45448</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+    <source>
+      <filename>php-7.3.10.tar.gz</filename>
+      <name>PHP 7.3.10 (tar.gz)</name>
+      <sha256>fb670723a9b8fda31c89529f27e0dda289d8af4b6ce9f152c8010876639c0fb4</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+    <source>
+      <filename>php-7.3.10.tar.xz</filename>
+      <name>PHP 7.3.10 (tar.xz)</name>
+      <sha256>42f00a15419e05771734b7159c8d39d639b8a5a6770413adfa2615f6f923d906</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.3.10. This is a security release which also contains several bug fixes.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

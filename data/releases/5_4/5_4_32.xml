@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.4.32">
+  <release>5.4.32</release>
+  <date>21 Aug 2014</date>
+  <version>
+    <major>5</major>
+    <minor>4</minor>
+    <release>32</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.4.32.tar.bz2</filename>
+      <name>PHP 5.4.32 (tar.bz2)</name>
+      <sha256>26d0717669a098f18cd22dc3ae8282101d38508054500c26775ddcc26ca7c826</sha256>
+      <md5/>
+      <date>21 Aug 2014</date>
+    </source>
+    <source>
+      <filename>php-5.4.32.tar.gz</filename>
+      <name>PHP 5.4.32 (tar.gz)</name>
+      <sha256>80ebdf34f91b8e1d516080363804137177368777aa9ecffee600f2957e8b0f94</sha256>
+      <md5/>
+      <date>21 Aug 2014</date>
+    </source>
+    <source>
+      <filename>Windows 5.4.32 binaries and source</filename>
+      <name>Windows 5.4.32 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+5.4.32. 16 bugs were fixed in this release, including the following security-related issues:
+CVE-2014-2497, CVE-2014-3538, CVE-2014-3587, CVE-2014-3597, CVE-2014-4670, CVE-2014-4698, CVE-2014-5120.
+
+All PHP 5.4 users are encouraged to upgrade to this version.
+</p>
+
+<p>For source downloads of PHP 5.4.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.32">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

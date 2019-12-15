@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.1">
+  <release>5.5.1</release>
+  <date>18 Jul 2013</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>1</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.1.tar.bz2</filename>
+      <name>PHP 5.5.1 (tar.bz2)</name>
+      <sha256/>
+      <md5>e6520ba8f86e03451f1e9226ca2be681</md5>
+      <date>18 Jul 2013</date>
+    </source>
+    <source>
+      <filename>php-5.5.1.tar.gz</filename>
+      <name>PHP 5.5.1 (tar.gz)</name>
+      <sha256/>
+      <md5>a7d9598c0e60b47960b8e803e51c4309</md5>
+      <date>18 Jul 2013</date>
+    </source>
+    <source>
+      <filename>php-5.5.1.tar.xz</filename>
+      <name>PHP 5.5.1 (tar.xz)</name>
+      <sha256/>
+      <md5>365403c216d22255c3aa57fe54944f8e</md5>
+      <date>18 Jul 2013</date>
+    </source>
+    <source>
+      <filename>Windows 5.5.1 binaries and source</filename>
+      <name>Windows 5.5.1 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>
+The PHP development team is proud to announce the immediate availability
+of PHP <a href="http://php.net/downloads.php#v5.5.1">5.5.1</a>.
+This release fixes several bugs.
+</p>
+
+<p>The PHP development team announces the immediate availability of PHP
+5.5.1. About 20 bugs were fixed, including a security fix in the XML parser (Bug #65236).
+All users of PHP are encouraged to upgrade to this release.</p>
+
+<p>For source downloads of PHP 5.5.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.1">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

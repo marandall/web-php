@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.14">
+  <release>7.2.14</release>
+  <date>07 Feb 2019</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>14</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.14.tar.bz2</filename>
+      <name>PHP 7.2.14 (tar.bz2)</name>
+      <sha256>f56132d248c7bf1e0efc8a680a4b598d6ff73fc6b9c84b5d7b539ad8db7a6597</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.14.tar.gz</filename>
+      <name>PHP 7.2.14 (tar.gz)</name>
+      <sha256>87e13d80b0c3a66bd463d1cb47dc101335884a0d192ab924f547f8aed7f70c08</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.14.tar.xz</filename>
+      <name>PHP 7.2.14 (tar.xz)</name>
+      <sha256>ee3f1cc102b073578a3c53ba4420a76da3d9f0c981c02b1664ae741ca65af84f</sha256>
+      <md5/>
+      <date>10 Jan 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.14.
+This is a security release which also contains several minor bug fixes.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.3.0">
+    <release>7.3.0</release>
+    <date>06 Dec 2018</date>
+    <version>
+        <major>7</major>
+        <minor>3</minor>
+        <release>0</release>
+    </version>
+    <source>
+        <source>
+            <filename>php-7.3.0.tar.bz2</filename>
+            <name>PHP 7.3.0 (tar.bz2)</name>
+            <sha256>7a267daec9969a997c5c8028c350229646748e0fcc71e2f2dbb157ddcee87c67</sha256>
+            <md5/>
+            <date>06 Dec 2018</date>
+        </source>
+        <source>
+            <filename>php-7.3.0.tar.gz</filename>
+            <name>PHP 7.3.0 (tar.gz)</name>
+            <sha256>391bd0f91d9bdd01ab47ef9607bad8c65e35bc9bb098fb7777b2556e2c847b11</sha256>
+            <md5/>
+            <date>06 Dec 2018</date>
+        </source>
+        <source>
+            <filename>php-7.3.0.tar.xz</filename>
+            <name>PHP 7.3.0 (tar.xz)</name>
+            <sha256>7d195cad55af8b288c3919c67023a14ff870a73e3acc2165a6d17a4850a560b5</sha256>
+            <md5/>
+            <date>06 Dec 2018</date>
+        </source>
+    </source>
+    <tags/>
+    <announcements>
+        <announcement lang="en">
+
+
+            <p>The PHP development team announces the immediate availability of PHP 7.3.0.
+                This release marks the third feature update to the PHP 7 series.
+            </p>
+
+            <p>PHP 7.3.0 comes with numerous improvements and new features such as</p>
+
+            <ul>
+                <li>
+                    <a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.core.heredoc">
+                        Flexible Heredoc and Nowdoc Syntax
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.other-changes.php#migration73.other-changes.pcre">PCRE2
+                        Migration
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.mbstring">
+                        Multiple MBString Improvements
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.ldap">LDAP
+                        Controls Support
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.new-features.php#migration73.new-features.fpm">Improved
+                        FPM Logging
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.windows-support.php#migration73.windows-support.core.file-descriptors">
+                        Windows File Deletion Improvements
+                    </a>
+                </li>
+                <li>
+                    <a href="http://php.net/manual/migration73.deprecated.php">Several Deprecations</a>
+                </li>
+            </ul>
+
+            <p>The <a href="http://php.net/manual/en/migration73.php">migration guide</a> is available in the PHP
+                Manual.
+                Please consult it for the detailed list of new features and backward incompatible changes.
+            </p>
+
+            <p>Many thanks to all the contributors and supporters!</p>
+
+
+        </announcement>
+    </announcements>
+    <changes/>
+</release>

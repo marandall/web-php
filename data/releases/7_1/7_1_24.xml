@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.24">
+  <release>7.1.24</release>
+  <date>08 Nov 2018</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>24</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.24.tar.bz2</filename>
+      <name>PHP 7.1.24 (tar.bz2)</name>
+      <sha256>66de24e73c7f6006f090c1b187d6b218c8fa6a513acca4ff5c14b695a7391e0b</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+    <source>
+      <filename>php-7.1.24.tar.gz</filename>
+      <name>PHP 7.1.24 (tar.gz)</name>
+      <sha256>1e780b1af3eeb8fba9e5af6205c960184a0c3a0ef091aaa192e7b7d6b67405d0</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+    <source>
+      <filename>php-7.1.24.tar.xz</filename>
+      <name>PHP 7.1.24 (tar.xz)</name>
+      <sha256>e70dcec0ae28b6bc308b78972ec15aa850808819cc765f505aa51e5a7e2fa5d7</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.1.24.
+This is a bugfix release.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

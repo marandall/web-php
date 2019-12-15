@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.3.20">
+  <release>5.3.20</release>
+  <date>20 Dec 2012</date>
+  <version>
+    <major>5</major>
+    <minor>3</minor>
+    <release>20</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.3.20.tar.bz2</filename>
+      <name>PHP 5.3.20 (tar.bz2)</name>
+      <sha256/>
+      <md5>00241b9e89e93adf3baac32c56211e4e</md5>
+      <date>20 Dec 2012</date>
+    </source>
+    <source>
+      <filename>php-5.3.20.tar.gz</filename>
+      <name>PHP 5.3.20 (tar.gz)</name>
+      <sha256/>
+      <md5>1e202851bf2ba1ee96d7dc5b48944119</md5>
+      <date>20 Dec 2012</date>
+    </source>
+    <source>
+      <filename>Windows 5.3.20 binaries and source</filename>
+      <name>Windows 5.3.20 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+5.3.20. About 15 bugs were fixed. Please note that the PHP 5.3 series will enter an end of life cycle and receive only critical fixes as of March 2013. All users of PHP are encouraged to upgrade to PHP 5.4. PHP 5.3.20 is recommended for those wishing to remain on the 5.3 series.</p>
+
+<p>For source downloads of PHP 5.3.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.20">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.4.0">
+    <release>7.4.0</release>
+    <date>28 Nov 2019</date>
+    <version>
+        <major>7</major>
+        <minor>4</minor>
+        <release>0</release>
+    </version>
+    <source>
+        <source>
+            <filename>php-7.4.0.tar.bz2</filename>
+            <name>PHP 7.4.0 (tar.bz2)</name>
+            <sha256>bf206be96a39e643180013df39ddcd0493966692a2422c4b7d3355b6a15a01c0</sha256>
+            <md5/>
+            <date>28 Nov 2019</date>
+        </source>
+        <source>
+            <filename>php-7.4.0.tar.gz</filename>
+            <name>PHP 7.4.0 (tar.gz)</name>
+            <sha256>004a1a8176176ee1b5c112e73d705977507803f425f9e48cb4a84f42b22abf22</sha256>
+            <md5/>
+            <date>28 Nov 2019</date>
+        </source>
+        <source>
+            <filename>php-7.4.0.tar.xz</filename>
+            <name>PHP 7.4.0 (tar.xz)</name>
+            <sha256>9bb751b20e5d6cc1ea9b1ebf23ef2d5f07f99b2d9cc417bf1d70c04f8b20ec42</sha256>
+            <md5/>
+            <date>28 Nov 2019</date>
+        </source>
+    </source>
+    <tags/>
+    <announcements>
+        <announcement lang="en">
+            <p>The PHP development team announces the immediate availability of PHP 7.4.0.
+                This release marks the fourth feature update to the PHP 7 series.
+            </p>
+
+            <p>PHP 7.4.0 comes with numerous improvements and new features such as:</p>
+
+            <ul>
+
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.typed-properties">
+                        Typed Properties
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.arrow-functions">
+                        Arrow Functions
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.type-variance">
+                        Limited Return Type Covariance and Argument Type Contravariance
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.unpack-inside-array">
+                        Unpacking Inside Arrays
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.numeric-literal-separator">
+                        Numeric Literal Separator
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.weakreference">
+                        Weak References
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.new-features.php#migration74.new-features.core.tostring-exceptions">
+                        Allow Exceptions from __toString()
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/opcache.configuration.php#ini.opcache.preload">Opcache
+                        Preloading
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.deprecated.php">Several Deprecations</a>
+                </li>
+                <li>
+                    <a href="https://www.php.net/manual/migration74.removed-extensions.php">Extensions Removed from the
+                        Core
+                    </a>
+                </li>
+            </ul>
+
+            <p>The <a href="http://php.net/manual/en/migration74.php">migration guide</a> is available in the PHP
+                Manual.
+                Please consult it for the detailed list of new features and backward incompatible changes.
+            </p>
+
+            <p>Many thanks to all the contributors and supporters!</p>
+        </announcement>
+    </announcements>
+    <changes/>
+</release>

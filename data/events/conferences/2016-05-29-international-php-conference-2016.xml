@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>International PHP Conference 2016</title>
+  <id>2016-05-29-international-php-conference-2016</id>
+  <start_date>2016-05-29</start_date>
+  <end_date>2016-05-30</end_date>
+  <image>ipc_se_2016.jpg</image>
+  <website>https://phpconference.com</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="html">
+	  <div xmlns="http://www.w3.org/1999/xhtml">
+		<p><a href="https://phpconference.com">The International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
+		<p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://webinale.de">webinale</a> taking place at the same time.</p>
+		<p>Basic facts:</p>
+		<p><strong>Date: May 29 - June 2, 2016</strong></p>
+		<p><strong>Location: Maritim proArte Hotel, Berlin</strong></p>
+		<p>Highlights:</p>
+		<ul>
+			<li>90+ best practice sessions</li>
+			<li>Cool PHP &amp; the Gang: 60+ international top speakers</li>
+			<li>PHPower: Hands-on Power Workshops</li>
+			<li>Expo with exiting exhibitors</li>
+			<li>Conference Combo: Visit the <a href="https://webinale.de">webinale</a> For Free</li>
+			<li>All inclusive: Changing buffets, snacks &amp; refreshing drinks</li>
+			<li>Official certificate for attendees</li>
+			<li>Free Swag: Developer bag, T-Shirt, magazines etc.</li>
+			<li>Exclusive networking events</li>
+		</ul>
+		<p>Topics:</p>
+		<ul>
+			<li>Core PHP / PHP 7</li>
+			<li>Security</li>
+			<li>Testing &amp; Quality</li>
+			<li>Scaling &amp; Performance</li>
+			<li>PHP Frameworks</li>
+			<li>Architecture</li>
+			<li>Cloud</li>
+			<li>Agile</li>
+			<li>JavaScript &amp; Frameworks</li>
+			<li>AngularJS</li>
+			<li>Offline Strategies</li>
+			<li>API Design</li>
+			<li>Continuous Delivery / DevOps</li>
+			<li>HTML5 &amp; CSS</li>
+			<li>Responsive Design</li>
+			<li>Open Web Technologies</li>
+		</ul>
+		<p>For further information on International PHP Conference's sessions and speakers visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+	  </div>
+  </content>
+</conference>

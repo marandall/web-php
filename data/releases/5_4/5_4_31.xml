@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.4.31">
+  <release>5.4.31</release>
+  <date>24 Jul 2014</date>
+  <version>
+    <major>5</major>
+    <minor>4</minor>
+    <release>31</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.4.31.tar.bz2</filename>
+      <name>PHP 5.4.31 (tar.bz2)</name>
+      <sha256>5e8e491431fd1d99df925d762b05da05c80b02cb38c9b3db616e8894a307914d</sha256>
+      <md5/>
+      <date>24 Jul 2014</date>
+    </source>
+    <source>
+      <filename>php-5.4.31.tar.gz</filename>
+      <name>PHP 5.4.31 (tar.gz)</name>
+      <sha256>332f62e4f751482d40ad08544ee97e004170d0382c84d01ce8efe405d0972f66</sha256>
+      <md5/>
+      <date>24 Jul 2014</date>
+    </source>
+    <source>
+      <filename>Windows 5.4.31 binaries and source</filename>
+      <name>Windows 5.4.31 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+5.4.31. Over 10 bugs were fixed in this release.
+
+All PHP 5.4 users are encouraged to upgrade to this version.
+</p>
+
+<p>For source downloads of PHP 5.4.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.31">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.15">
+  <release>7.2.15</release>
+  <date>07 Mar 2019</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>15</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.15.tar.bz2</filename>
+      <name>PHP 7.2.15 (tar.bz2)</name>
+      <sha256>c93e7616946a463911818c7e9f9e21276c7793fb8c7cb15877188dd0546d0554</sha256>
+      <md5/>
+      <date>07 Feb 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.15.tar.gz</filename>
+      <name>PHP 7.2.15 (tar.gz)</name>
+      <sha256>9b13bde9f5a32d6f6bdb8b911bb55bb818d0c4073538f8dc48aa2deb560f55a3</sha256>
+      <md5/>
+      <date>07 Feb 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.15.tar.xz</filename>
+      <name>PHP 7.2.15 (tar.xz)</name>
+      <sha256>75e90012faef700dffb29311f3d24fa25f1a5e0f70254a9b8d5c794e25e938ce</sha256>
+      <md5/>
+      <date>07 Feb 2019</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.15.
+This is a bugfix release.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

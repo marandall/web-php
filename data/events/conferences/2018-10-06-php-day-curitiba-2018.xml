@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHP Day Curitiba 2018</title>
+  <id>2018-10-06-php-day-curitiba-2018</id>
+  <start_date>2018-10-06</start_date>
+  <end_date>2018-10-07</end_date>
+  <image>php-day-curitiba-2018.jpg</image>
+  <website>http://www.phpdaycuritiba.com.br</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>PHP Day Curitiba is an annual conference that has been shaking up the community of Paraná state, in southern Brazil. It'll be a single and full day of networking, learning, sharing, and great fun!</p>
+
+      <ul>
+       <li>+120 attendees</li>
+       <li>7 High quality talks</li>
+       <li>2 Keynote Speakers</li>
+       <li>Free Admission + Coffee-break + A lot of networking</li>
+      </ul>
+
+      <p>Save the date: <strong>Saturday, October 6th.</strong></p>
+
+      <p><a href="http://www.phpdaycuritiba.com.br">http://www.phpdaycuritiba.com.br</a></p>
+    </div>
+  </content>
+</conference>

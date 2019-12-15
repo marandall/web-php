@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.12">
+  <release>7.2.12</release>
+  <date>08 Nov 2018</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>12</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.12.tar.bz2</filename>
+      <name>PHP 7.2.12 (tar.bz2)</name>
+      <sha256>b724c4c20347b6105be109d98cc395a610174e8aadb506c82e8cb645b65ef6b6</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.12.tar.gz</filename>
+      <name>PHP 7.2.12 (tar.gz)</name>
+      <sha256>d7cabdf4e51db38121daf0d494dc074743b24b6c79e592037eeedd731f1719dd</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.12.tar.xz</filename>
+      <name>PHP 7.2.12 (tar.xz)</name>
+      <sha256>989c04cc879ee71a5e1131db867f3c5102f1f7565f805e2bb8bde33f93147fe1</sha256>
+      <md5/>
+      <date>08 Nov 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.12.
+This is a bugfix release.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

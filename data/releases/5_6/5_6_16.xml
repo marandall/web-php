@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.16">
+  <release>5.6.16</release>
+  <date>26 Nov 2015</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>16</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.16.tar.bz2</filename>
+      <name>PHP 5.6.16 (tar.bz2)</name>
+      <sha256>4fe6f40964c1bfaba05fc144ba20a2cdad33e11685f4f101ea5a48b98bbcd2ae</sha256>
+      <md5/>
+      <date>26 Nov 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.16.tar.gz</filename>
+      <name>PHP 5.6.16 (tar.gz)</name>
+      <sha256>b6618df6b11a275fa28596f1775727679f8492e100f3bd488d8a8bfbfc19349f</sha256>
+      <md5/>
+      <date>26 Nov 2015</date>
+    </source>
+    <source>
+      <filename>php-5.6.16.tar.xz</filename>
+      <name>PHP 5.6.16 (tar.xz)</name>
+      <sha256>8ef43271d9bd8cc8f8d407d3ba569de9fa14a28985ae97c76085bb50d597de98</sha256>
+      <md5/>
+      <date>26 Nov 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.16. Several bugs have been fixed.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

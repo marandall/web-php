@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Madison PHP Conference 2015</title>
+  <id>2015-11-14-madison-php-conference-2015</id>
+  <start_date>2015-11-14</start_date>
+  <end_date>2015-11-15</end_date>
+  <image>madison-php-2013.png</image>
+  <website>http://www.madisonphpconference.com/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Join us on Saturday, November 14th, 2015 for a one day, three track conference in Madison, Wisconsin, USA that focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be a day of networking, learning, sharing, and great fun!</p>
+
+     <p>Our Call for Papers is open until August 4th, 2015:<br/><a href="http://cfp.madisonphpconference.com/">http://cfp.madisonphpconference.com/</a></p>
+    </div>
+  </content>
+</conference>

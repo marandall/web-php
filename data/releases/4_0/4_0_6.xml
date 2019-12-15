@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="4.0.6">
+  <release>4.0.6</release>
+  <date>23 June 2001</date>
+  <version>
+    <major>4</major>
+    <minor>0</minor>
+    <release>6</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-4.0.6.tar.gz</filename>
+      <name>Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements/>
+  <changes/>
+</release>

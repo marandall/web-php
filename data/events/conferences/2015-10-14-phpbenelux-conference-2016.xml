@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHPBenelux Conference 2016</title>
+  <id>2015-10-14-phpbenelux-conference-2016</id>
+  <start_date>2015-10-14</start_date>
+  <end_date>2015-10-15</end_date>
+  <image>phpconf_logo_2.png</image>
+  <website>https://conference.phpbenelux.eu/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     	With great pleasure we would like to announce the 7th edition of
+     PHPBenelux Conference 2016 which will take place on January 29 and 30,
+     2016 in Antwerp, Belgium.
+     </p><p>
+     PHPBenelux is a great conference bringing local and foreign speakers
+     to an international crowd where the main language is English to allow
+     foreigners to feel comfortable talking with others, inspiring the
+     hallway tracks between and after the sessions.
+     </p><p>
+     On the first day in the morning we offer 3-hour tutorials by experts
+     to get hands-down experience on the subjects offered. The afternoon
+     and second day are all devoted to multi-track hour sessions about
+     trends, best practices and solutions for common PHP development
+     challenges. Each evening we provide a social event for people to
+     network and socialize in a friendly, unpressured environment.
+     </p><p>
+     The "Call for Papers" is open until October 14 if you have interest
+     presenting at PHPBenelux Conference 2016. Check out our
+     <a href="http://cfp.phpbenelux.eu">http://cfp.phpbenelux.eu</a> website for further details.
+     </p><p>
+     Come to PHPBenelux Conference 2016. You will learn from the experts,
+     meet interesting people and have fun will doing all this. See you in Antwerp!
+     </p><p>
+     The PHPBenelux Crew
+     </p>
+    </div>
+  </content>
+</conference>

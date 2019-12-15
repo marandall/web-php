@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.2">
+  <release>5.5.2</release>
+  <date>15 Aug 2013</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.2.tar.bz2</filename>
+      <name>PHP 5.5.2 (tar.bz2)</name>
+      <sha256/>
+      <md5>caf7f4d86514a568fb3c8021b096a9f0</md5>
+      <date>15 Aug 2013</date>
+    </source>
+    <source>
+      <filename>php-5.5.2.tar.gz</filename>
+      <name>PHP 5.5.2 (tar.gz)</name>
+      <sha256/>
+      <md5>2a90884749f97868071538098b3debc1</md5>
+      <date>15 Aug 2013</date>
+    </source>
+    <source>
+      <filename>php-5.5.2.tar.xz</filename>
+      <name>PHP 5.5.2 (tar.xz)</name>
+      <sha256/>
+      <md5>95c6d7a4c36c475b10447954dea056a5</md5>
+      <date>15 Aug 2013</date>
+    </source>
+    <source>
+      <filename>Windows 5.5.2 binaries and source</filename>
+      <name>Windows 5.5.2 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team announces the immediate availability of PHP
+5.5.2. About 20 bugs were fixed, including security issue in OpenSSL module (CVE-2013-4248) and session fixation problem (CVE-2011-4718).
+</p>
+
+<p><b>NOTE:</b> Please do not use this release, due to the bug in the fix for CVE-2013-4248. This bug is fixed in
+PHP 5.5.3.</p>
+
+<p>For source downloads of PHP 5.5.2 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.2">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

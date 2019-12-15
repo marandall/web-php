@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.20">
+  <release>5.5.20</release>
+  <date>18 Dec 2014</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>20</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.20.tar.bz2</filename>
+      <name>PHP 5.5.20 (tar.bz2)</name>
+      <sha256>f28a150d1cd8991bd1a41dce4fdff4e343d1dbe01a48b9b44bea74532ce0391a</sha256>
+      <md5/>
+      <date>18 Dec 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.20.tar.gz</filename>
+      <name>PHP 5.5.20 (tar.gz)</name>
+      <sha256>7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295</sha256>
+      <md5/>
+      <date>18 Dec 2014</date>
+    </source>
+    <source>
+      <filename>php-5.5.20.tar.xz</filename>
+      <name>PHP 5.5.20 (tar.xz)</name>
+      <sha256>a0649450f8b0a23cd4c9ad15d0aa271d956f9516fc37b9e9dc492459b57721c8</sha256>
+      <md5/>
+      <date>18 Dec 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.5.20. This release fixes several bugs and one CVE related to unserialization.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.5.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.20">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.0">
+  <release>5.6.0</release>
+  <date>28 Aug 2014</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>0</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.0.tar.bz2</filename>
+      <name>PHP 5.6.0 (tar.bz2)</name>
+      <sha256>097af1be34fc73965e6f8401fd10e73eb56e1969ed4ffd691fb7e91606d0fc09</sha256>
+      <md5/>
+      <date>28 Aug 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.0.tar.gz</filename>
+      <name>PHP 5.6.0 (tar.gz)</name>
+      <sha256>284b85376c630a6a7163e5278d64b8526fa1324fe5fd5d21174b54e2c056533f</sha256>
+      <md5/>
+      <date>28 Aug 2014</date>
+    </source>
+    <source>
+      <filename>php-5.6.0.tar.xz</filename>
+      <name>PHP 5.6.0 (tar.xz)</name>
+      <sha256>8fc5411cd05cc6cc663247e588931fe67b1dc0e42550fa28ab2c943ad84eda02</sha256>
+      <md5/>
+      <date>28 Aug 2014</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP Development Team announces the immediate availability of PHP 5.6.0.
+This new version comes with new features, some backward incompatible changes and many improvements.
+</p>
+
+<p><b>The main features of PHP 5.6.0 include:</b></p>
+<ul>
+ <li><a href="http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
+ <li><a href="http://php.net/functions.arguments#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
+<li><a href="http://php.net/language.operators.arithmetic">Exponentiation using the <code>**</code> operator</a>.</li>
+ <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing">use keyword</a>.</li>
+ <li><a href="http://phpdbg.com/docs">phpdbg</a> as an interactive integrated debugger SAPI.</li>
+ <li><a href="http://php.net/wrappers#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
+ <li><a href="http://php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
+ <li>File uploads larger than 2 gigabytes in size are now accepted.</li>
+</ul>
+
+<p>For a full list of new features, you may read <a href="http://php.net/migration56.new-features">the new features chapter of the migration guide</a>.</p>
+
+<p>
+<b>PHP 5.6.0 also introduces changes that affect compatibility:</b>
+</p>
+
+<ul>
+ <li>Array keys won't be overwritten when defining an array as a property of a class via an array literal.</li>
+ <li><a href="http://php.net/function.json-decode">json_decode()</a> is more strict in JSON syntax parsing.</li>
+ <li>Stream wrappers now verify peer certificates and host names by default when using SSL/TLS.</li>
+ <li><a href="http://php.net/book.gmp">GMP</a> resources are now objects.</li>
+ <li><a href="http://php.net/book.mcrypt">Mcrypt</a> functions now require valid keys and IVs.</li>
+</ul>
+
+<p>
+ For users upgrading from PHP 5.5, <a href="http://php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
+</p>
+
+<p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

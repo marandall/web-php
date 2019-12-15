@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="4.4.2">
+  <release>4.4.2</release>
+  <date>13 Jan 2006</date>
+  <version>
+    <major>4</major>
+    <minor>4</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-4.4.2.tar.gz</filename>
+      <name>Source (tar.gz)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+    <source>
+      <filename>php-4.4.2.tar.bz2</filename>
+      <name>Source (tar.bz2)</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>
+The PHP Development Team would like to announce the immediate release of
+<a href="/downloads/">PHP 4.4.2</a>.
+</p>
+<p>
+This is a bug fix release, which addresses some security problems too. The
+major points that this release corrects are:
+</p><ul>
+<li>Prevent header injection by limiting each header to a single line.</li>
+<li>Possible XSS inside error reporting functionality.</li>
+<li>Missing safe_mode/open_basedir checks into cURL extension.</li>
+<li>Apache 2 regression with sub-request handling on non-Linux systems.</li>
+<li>key() and current() regression related to references.</li>
+</ul>
+
+<p>
+This release also fixes about 30 other defects.
+</p>
+<p>
+ For a full list of changes in PHP 4.4.2, see the
+ <a href="/ChangeLog-4.php#4.4.2">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.23">
+  <release>7.2.23</release>
+  <date>26 Sep 2019</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>23</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.23.tar.bz2</filename>
+      <name>PHP 7.2.23 (tar.bz2)</name>
+      <sha256>a17af3643d29d7e730f977e3776dc3e325d5ca00b361e41dbfc2368ebad5430d</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.23.tar.gz</filename>
+      <name>PHP 7.2.23 (tar.gz)</name>
+      <sha256>b32b426c84ff45154d6c11f00aff433bcac831a5c0a09bf0297075eefaea8fcc</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.23.tar.xz</filename>
+      <name>PHP 7.2.23 (tar.xz)</name>
+      <sha256>74e045ec8ff26290db6a3688826dcdf43b87bc509e508e9cb76dab742804ca14</sha256>
+      <md5/>
+      <date>26 Sep 2019</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.2.23. This is a bugfix release.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

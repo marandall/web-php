@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.0">
+  <release>7.1.0</release>
+  <date>01 Dec 2016</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>0</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.0.tar.bz2</filename>
+      <name>PHP 7.1.0 (tar.bz2)</name>
+      <sha256>68bcfd7deed5b3474d81dec9f74d122058327e2bed0ac25bbc9ec70995228e61</sha256>
+      <md5/>
+      <date>01 Dec 2016</date>
+    </source>
+    <source>
+      <filename>php-7.1.0.tar.gz</filename>
+      <name>PHP 7.1.0 (tar.gz)</name>
+      <sha256>9e84c5b13005c56374730edf534fe216f6a2e63792a9703d4b894e770bbccbae</sha256>
+      <md5/>
+      <date>01 Dec 2016</date>
+    </source>
+    <source>
+      <filename>php-7.1.0.tar.xz</filename>
+      <name>PHP 7.1.0 (tar.xz)</name>
+      <sha256>a810b3f29c21407c24caa88f50649320d20ba6892ae1923132598b8a0ca145b6</sha256>
+      <md5/>
+      <date>01 Dec 2016</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP 7.1.0. This release is the first point release in the 7.x series.</p>
+
+     <p>PHP 7.1.0 comes with numerous improvements and new features such as</p>
+
+     <ul>
+          <li><a href="https://wiki.php.net/rfc/nullable_types">Nullable types</a></li>
+          <li><a href="https://wiki.php.net/rfc/void_return_type">Void return type</a></li>
+          <li><a href="https://wiki.php.net/rfc/iterable">Iterable pseudo-type</a></li>
+          <li><a href="https://wiki.php.net/rfc/class_const_visibility">Class constant visiblity modifiers</a></li>
+          <li><a href="https://wiki.php.net/rfc/short_list_syntax">Square bracket syntax for <code>list()</code></a> and <a href="https://wiki.php.net/rfc/list_keys">the ability to specify keys in <code>list()</code></a></li>
+          <li><a href="https://wiki.php.net/rfc/multiple-catch">Catching multiple exceptions types</a></li>
+          <li><a href="https://wiki.php.net/rfc#php_71">Many more features and changesâ¦</a></li>
+     </ul>
+
+     <p>For source downloads of PHP 7.1.0 please visit our <a href="http://www.php.net/downloads/">downloads</a> page, Windows binaries can be found on the <a href="http://windows.php.net/download">PHP for Windows</a> site. The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-7.php#7.1.0">ChangeLog</a>.</p>
+
+     <p>The <a href="http://php.net/manual/en/migration71.php">migration guide</a> is available in the PHP Manual. Please consult it for the detailed list of new features and backward incompatible changes.</p>
+
+     <p>Many thanks to all the contributors and supporters!</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

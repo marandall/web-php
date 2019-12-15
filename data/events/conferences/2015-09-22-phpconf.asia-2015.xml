@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>PHPConf.Asia 2015</title>
+  <id>2015-09-22-phpconf.asia-2015</id>
+  <start_date>2015-09-22</start_date>
+  <end_date>2015-09-23</end_date>
+  <image>phpconfasia2015-logo.png</image>
+  <website>http://phpconf.asia</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p><strong>Join us at <a href="http://phpconf.asia" target="_blank">PHPConf.Asia 2015</a> - The First Pan-Asian PHP Conference</strong></p>
+
+      <p>The inaugural pan-Asian PHP conference will take place on 22 &amp; 23 September 2015 in <a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Singapore</a> - the Garden City of the East! Come and meet with the fastest growing PHP communities in Asia. More than 200 attendees are expected in this single track conference.</p>
+
+      <p>Our keynote speakers are Rasmus Ledorf (<a href="https://twitter.com/rasmus" target="_blank">@rasmus</a>), the creator of PHP and Jenny Wong (<a href="https://twitter.com/miss_jwo" target="_blank">@miss_jwo</a>) advocate for both the PHP and WordPress communities and an evangelist for PHP Women. Heard from <a href="http://phpconf.asia#speakers" target="_blank">21 regional and international speakers</a>!</p>
+
+      <p><a href="https://phpconfasia.codecraft.com.sg/" target="_blank">Early Bird Tickets</a> are still available! Hop over to <a href="http://phpconf.asia" target="_blank">http://phpconf.asia</a> for more details.</p>
+    </div>
+  </content>
+</conference>

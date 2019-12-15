@@ -5,7 +5,9 @@
 	namespace phpweb\Data\Branches;
 	
 	use phpweb\Data\Release\Release;
+	use phpweb\Data\Release\ReleasesRepository;
 	use phpweb\Data\Releases;
+	use phpweb\Services;
 	
 	class Branches
 	{
@@ -66,7 +68,7 @@
 			
 			/** @var Release[][] $releases_by_branch */
 			$releases_by_branch = [];
-			foreach (Releases::GetReleases() as $release_id => $release) {
+			foreach (Services::get(ReleasesRepository::class)->all() as $release_id => $release) {
 				$releases_by_branch[$release->getBranchVersion()][$release_id] = $release;
 			}
 			

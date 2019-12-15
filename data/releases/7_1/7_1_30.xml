@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.30">
+  <release>7.1.30</release>
+  <date>30 May 2019</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>30</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.30.tar.bz2</filename>
+      <name>PHP 7.1.30 (tar.bz2)</name>
+      <sha256>664850774fca19d2710b9aa35e9ae91214babbde9cd8d27fd3479cc97171ecb3</sha256>
+      <md5/>
+      <date>30 May 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.30.tar.gz</filename>
+      <name>PHP 7.1.30 (tar.gz)</name>
+      <sha256>a604edf85d5dfc28e6ff3016dad3954c50b93db69afc42295178b4fdf42e026c</sha256>
+      <md5/>
+      <date>30 May 2019</date>
+    </source>
+    <source>
+      <filename>php-7.1.30.tar.xz</filename>
+      <name>PHP 7.1.30 (tar.xz)</name>
+      <sha256>6310599811536dbe87e4bcf212bf93196bdfaff519d0c821e4c0068efd096a7c</sha256>
+      <md5/>
+      <date>30 May 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.1.30. This is a security release.</p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

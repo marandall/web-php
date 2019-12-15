@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.5.23">
+  <release>5.5.23</release>
+  <date>20 Feb 2015</date>
+  <version>
+    <major>5</major>
+    <minor>5</minor>
+    <release>23</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.5.23.tar.bz2</filename>
+      <name>PHP 5.5.23 (tar.bz2)</name>
+      <sha256>a99ab264dcd40181baa9defeaa4b21eb2c20d4e9316b904cc05f628762e6ada7</sha256>
+      <md5/>
+      <date>20 Feb 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.23.tar.gz</filename>
+      <name>PHP 5.5.23 (tar.gz)</name>
+      <sha256>bf1246d4aca5b1a4e26f5cea273565ad3ee4607f20b7f28a508e3cab1a4d0c82</sha256>
+      <md5/>
+      <date>20 Feb 2015</date>
+    </source>
+    <source>
+      <filename>php-5.5.23.tar.xz</filename>
+      <name>PHP 5.5.23 (tar.xz)</name>
+      <sha256>2fc8315606cd6a51dae2e1fe9ac7a9bead76dace3eaf888ba372506695403af4</sha256>
+      <md5/>
+      <date>20 Feb 2015</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+ <p>The PHP development team announces the immediate availability of PHP
+     5.5.23. Several bugs have been fixed as well as CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
+
+     All PHP 5.5 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.5.23 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.23">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

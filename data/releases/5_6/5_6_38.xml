@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.6.38">
+  <release>5.6.38</release>
+  <date>13 Sep 2018</date>
+  <version>
+    <major>5</major>
+    <minor>6</minor>
+    <release>38</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.6.38.tar.bz2</filename>
+      <name>PHP 5.6.38 (tar.bz2)</name>
+      <sha256>d65b231bbdd63be4439ef5ced965cfd63e62983429dbd4dfcfb49981593ebc03</sha256>
+      <md5/>
+      <date>13 Sep 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.38.tar.gz</filename>
+      <name>PHP 5.6.38 (tar.gz)</name>
+      <sha256>3b74d46cd79a45cce90c8059e09d8bd0beeb5de562cbb0cb42f96ff8fa665fd4</sha256>
+      <md5/>
+      <date>13 Sep 2018</date>
+    </source>
+    <source>
+      <filename>php-5.6.38.tar.xz</filename>
+      <name>PHP 5.6.38 (tar.xz)</name>
+      <sha256>c2fac47dc6316bd230f0ea91d8a5498af122fb6a3eb43f796c9ea5f59b04aa1e</sha256>
+      <md5/>
+      <date>13 Sep 2018</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     5.6.38. This is a security release. One security bug has been fixed
+     in this release.
+
+     All PHP 5.6 users are encouraged to upgrade to this version.
+     </p>
+
+     <p>For source downloads of PHP 5.6.38 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.38">ChangeLog</a>.
+     </p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

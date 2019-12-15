@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.7">
+  <release>7.1.7</release>
+  <date>06 Jul 2017</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>7</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.7.tar.bz2</filename>
+      <name>PHP 7.1.7 (tar.bz2)</name>
+      <sha256>079b6792987f38dc485f92258c04f9e02dedd593f9d260ebe725343f812d1ff8</sha256>
+      <md5/>
+      <date>06 Jul 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.7.tar.gz</filename>
+      <name>PHP 7.1.7 (tar.gz)</name>
+      <sha256>e0dbab8da601ee5119368d6f93dc1a86ad53b799d2f8c1209d6b827a2b259f92</sha256>
+      <md5/>
+      <date>06 Jul 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.7.tar.xz</filename>
+      <name>PHP 7.1.7 (tar.xz)</name>
+      <sha256>0d42089729be7b2bb0308cbe189c2782f9cb4b07078c8a235495be5874fff729</sha256>
+      <md5/>
+      <date>06 Jul 2017</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+
+  <p>The PHP development team announces the immediate availability of PHP
+  7.1.7. This is a security release with several bug fixes included.
+
+  All PHP 7.1 users are encouraged to upgrade to this version.
+  </p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

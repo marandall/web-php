@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.13">
+  <release>7.2.13</release>
+  <date>06 Dec 2018</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>13</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.13.tar.bz2</filename>
+      <name>PHP 7.2.13 (tar.bz2)</name>
+      <sha256>5b4a46fb76491bcd3eee1213773382e570f6ecf9b22d623b24e2822298b3e92d</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.13.tar.gz</filename>
+      <name>PHP 7.2.13 (tar.gz)</name>
+      <sha256>e563cee406b1ec96649c22ed2b35796cfe4e9aa9afa6eab6be4cf2fe5d724744</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+    <source>
+      <filename>php-7.2.13.tar.xz</filename>
+      <name>PHP 7.2.13 (tar.xz)</name>
+      <sha256>14b0429abdb46b65c843e5882c9a8c46b31dfbf279c747293b8ab950c2644a4b</sha256>
+      <md5/>
+      <date>06 Dec 2018</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.13.
+This is a security release.</p>
+
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

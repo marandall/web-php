@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>DevCOnf 2017</title>
+  <id>2017-06-17-devconf-2017</id>
+  <start_date>2017-06-17</start_date>
+  <end_date>2017-06-18</end_date>
+  <image>devconfru2012.png</image>
+  <website>http://devconf.ru</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      DevConf 2017 in Moscow, Russia on June 17-18.
+     </p>
+     <p>
+      DevConf is the ultimate meeting place for russian-speaking web-developers,
+      combining several language-specific conferences under one roof.
+      This year the conference will take place in <a href="http://devconf.ru/ru/members/location">Izmaylovo</a>.
+     </p>
+     <p>
+      DevConf 2017 will include the following sections:
+     </p>
+     <ul>
+      <li>DevConf::Backend();</li>
+      <li>DevConf::Frontend();</li>
+      <li>DevConf::Management();</li>
+      <li>DevConf::Storage();</li>
+      <li>DevConf::DevOps();</li>
+     </ul>
+     <p>
+      Special Events:
+     </p>
+     <ul>
+      <li>DevConf::YiiConf(); - June 16</li>
+      <li>Joomla Day - June 17</li>
+     </ul>
+     <p>
+      Each section will feature several talks from the active contributors/authors of the language.
+      Among the invited speakers are Valentin Bartenev (NGINX), Ilya Gusev (PHP7.1)
+      Dmitry Lenev (MySQL), Oleg Bartunov (Postgres),
+      Ivan Panchenko (Postgres), Grigory Kochanov (Oracle),
+      Vladimir Yldashev (Laravel), Anton Shramko (Rust),
+      Konstantin Osipov (Tarantool), Andrey Trifanov (Lua),
+      Ilya Alexeev (OpenStack), Ilya Klimov (VueJS),
+      Alexey Pirogov (Haskell), Alexey Ohrimenko (Angular),
+      Grigory Petrov (React VR), Adel Fayzrakhmanov (Toptal)
+      and speakers from other companies. See more details on the official website.
+     </p>
+    </div>
+  </content>
+</conference>

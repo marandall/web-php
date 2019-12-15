@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="5.3.14">
+  <release>5.3.14</release>
+  <date>14 June 2012</date>
+  <version>
+    <major>5</major>
+    <minor>3</minor>
+    <release>14</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-5.3.14.tar.bz2</filename>
+      <name>PHP 5.3.14 (tar.bz2)</name>
+      <sha256/>
+      <md5>370be99c5cdc2e756c82c44d774933c8</md5>
+      <date>14 June 2012</date>
+    </source>
+    <source>
+      <filename>php-5.3.14.tar.gz</filename>
+      <name>PHP 5.3.14 (tar.gz)</name>
+      <sha256/>
+      <md5>148730865242a031a638ee3bab4a9d4d</md5>
+      <date>14 June 2012</date>
+    </source>
+    <source>
+      <filename>Windows 5.3.14 binaries and source</filename>
+      <name>Windows 5.3.14 binaries and source</name>
+      <sha256/>
+      <md5/>
+      <date/>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+<p>The PHP development team would like to announce the immediate
+availability of PHP 5.3.14. This release fixes two security related
+issues. All users of PHP 5.3 are encouraged to upgrade to this release.</p>
+
+<p>PHP 5.3.14 fixes an security issue in the implementation of crypt() and a
+heap overflow in the Phar extension. Over 30 bugs were fixed</p>
+
+<p>Please note that php://fd is now only available if the CLI SAPI is used</p>
+
+<p>For source downloads of PHP 5.3.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
+Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.14">ChangeLog</a>.
+</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

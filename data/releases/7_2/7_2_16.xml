@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.2.16">
+  <release>7.2.16</release>
+  <date>04 Apr 2019</date>
+  <version>
+    <major>7</major>
+    <minor>2</minor>
+    <release>16</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.2.16.tar.bz2</filename>
+      <name>PHP 7.2.16 (tar.bz2)</name>
+      <sha256>2c0ad10053d58694cd14323248ecd6d9ba71d2733d160973c356ad01d09e7f38</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.16.tar.gz</filename>
+      <name>PHP 7.2.16 (tar.gz)</name>
+      <sha256>fb95e0bb69caba1dfd3bbac4eeef7a0485e5ea3d6191d35ad5657e18243aa02d</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+    <source>
+      <filename>php-7.2.16.tar.xz</filename>
+      <name>PHP 7.2.16 (tar.xz)</name>
+      <sha256>7d91ed3c1447c6358a3d53f84599ef854aca4c3622de7435e2df115bf196e482</sha256>
+      <md5/>
+      <date>07 Mar 2019</date>
+    </source>
+  </source>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <announcements>
+    <announcement lang="en">
+
+
+<p>The PHP development team announces the immediate availability of PHP 7.2.16.
+This is a security release which also contains several minor bug fixes.</p>
+
+
+</announcement>
+  </announcements>
+  <changes/>
+</release>

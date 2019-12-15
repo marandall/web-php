@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<release id="7.1.2">
+  <release>7.1.2</release>
+  <date>16 Feb 2017</date>
+  <version>
+    <major>7</major>
+    <minor>1</minor>
+    <release>2</release>
+  </version>
+  <source>
+    <source>
+      <filename>php-7.1.2.tar.bz2</filename>
+      <name>PHP 7.1.2 (tar.bz2)</name>
+      <sha256>e0f2214e2366434ee231156ba70cfefd0c59790f050d8727a3f1dc2affa67004</sha256>
+      <md5/>
+      <date>16 Feb 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.2.tar.gz</filename>
+      <name>PHP 7.1.2 (tar.gz)</name>
+      <sha256>e6773217c9c719ca22abb104ae3d437d53daceaf31faf2e5eeb1f9f5028005d8</sha256>
+      <md5/>
+      <date>16 Feb 2017</date>
+    </source>
+    <source>
+      <filename>php-7.1.2.tar.xz</filename>
+      <name>PHP 7.1.2 (tar.xz)</name>
+      <sha256>d815a0c39fd57bab1434a77ff0610fb507c22f790c66cd6f26e27030c4b3e971</sha256>
+      <md5/>
+      <date>16 Feb 2017</date>
+    </source>
+  </source>
+  <tags/>
+  <announcements>
+    <announcement lang="en">
+
+
+
+     <p>The PHP development team announces the immediate availability of PHP
+     7.1.2. Several bugs have been fixed.
+
+     All PHP 7.1 users are encouraged to upgrade to this version.
+     </p>
+</announcement>
+  </announcements>
+  <changes/>
+</release>

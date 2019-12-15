@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>Laracon EU 2019 Madrid</title>
+  <id>2019-05-23-laracon-eu-2019-madrid</id>
+  <start_date>2019-05-23</start_date>
+  <end_date>2019-05-24</end_date>
+  <image>laracon-logo.png</image>
+  <website>https://laracon.eu/2019/</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     We re bringing Laracon EU to Madrid on May 23rd for a new one-day event. Join speakers Adam Wathan, Matt Stauffer, and many more for a brain-crunching day of talks and community celebration.
+    </div>
+  </content>
+</conference>

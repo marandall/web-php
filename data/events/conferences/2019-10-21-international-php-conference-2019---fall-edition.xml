@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conference>
+  <title>International PHP Conference 2019 - Fall Edition</title>
+  <id>2019-10-21-international-php-conference-2019---fall-edition</id>
+  <start_date>2019-10-21</start_date>
+  <end_date>2019-10-22</end_date>
+  <image>ipc_se2019.png</image>
+  <website>https://phpconference.com</website>
+  <content xmlns:default="http://www.w3.org/1999/xhtml" type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The <a href="https://phpconference.com">International PHP Conference</a> is the world's first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born - the IPC signifies knowledge transfer at highest level.</p>
+     		 <p>All delegates of the International PHP Conference have, in addition to PHP program, free access to the entire range of the <a href="https://javascript-conference.com">International JavaScript Conference</a> taking place at the same time.</p>
+     		 <p>Basic facts:</p>
+     		 <p><strong>Date: October 21 - 25, 2019</strong></p>
+     		 <p><strong>Location: Holiday Inn Munich City Centre, Munich</strong></p>
+     		 <p>Highlights:</p>
+     		 <ul>
+     			 <li>60+ best practice sessions</li>
+     		   <li>50+ international top speakers</li>
+     			 <li>PHPower: Hands-on Power Workshops</li>
+     			 <li>Expo with exciting exhibitors on October 22nd &amp; 23rd</li>
+     			 <li>Conference Combo: Visit the <a href="https://javascript-conference.com">International JavaScript Conference</a> for free</li>
+     			 <li>All inclusive: Changing buffets, snacks &amp; refreshing drinks</li>
+     			 <li>Official certificate for attendees</li>
+     			 <li>Free Swag: Developer bag, T-Shirt, magazines etc.</li>
+     			 <li>Exclusive networking events</li>
+     		 </ul>
+     		 <p>Topics:</p>
+     		 <ul>
+     		     <li>PHP Development</li>
+     		     <li>Web Development</li>
+     			 <li>JavaScript Development</li>
+     			 <li>Agile &amp; Culture</li>
+     			 <li>DevOps</li>
+     			 <li>Architecture</li>
+     			 <li>Web Security</li>
+     			 <li>Testing &amp; Quality</li>
+     		 </ul>
+     		 <p>For further information on the International PHP Conference visit: <a href="https://phpconference.com">www.phpconference.com</a></p>
+    </div>
+  </content>
+</conference>
