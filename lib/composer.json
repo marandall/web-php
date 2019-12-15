@@ -1,9 +1,11 @@
 {
   "require": {
     "nikic/fast-route": "*",
+    "symfony/console": "*",
     "ext-simplexml": "*",
     "ext-pdo": "*",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-dom": "*"
   },
   "require-dev": {
   },
