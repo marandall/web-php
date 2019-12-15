@@ -87,6 +87,7 @@
 		'/manual/php3.php'                                             => \phpweb\Controllers\Manual\PHP3ManualArchiveController::class,
 		
 		/* release information */
+		'/versions/'                                                   => \phpweb\Controllers\Versions\VersionsIndexController::class,
 		'/versions/{major:\d+}.{minor:\d+}.{patch}/'                   => \phpweb\Controllers\Versions\Releases\ReleaseController::class,
 		'/versions/{major:\d+}.{minor:\d+}.{patch}/install/ubuntu_ppa' => \phpweb\Controllers\Versions\Releases\Install\InstallReleaseFromPPAController::class,
 		'/versions/{major:\d+}.{minor:\d+}/'                           => \phpweb\Controllers\Versions\Branches\BranchController::class,
@@ -100,6 +101,7 @@
 		'/versions/supported.php'                                      => \phpweb\Controllers\Versions\SupportedVersionsController::class,
 		'/versions/eol.php'                                            => \phpweb\Controllers\Versions\EOLController::class,
 		'/versions/api/supported.atom'                                 => \phpweb\Controllers\Versions\API\SupportedReleaseFeedController::class,
+		'/versions/api/releases.atom'                                 => \phpweb\Controllers\Versions\API\AllReleasesFeedController::class,
 		'/versions/api/supported_chart.svg'                            => \phpweb\Controllers\Versions\API\SupportedVersionGraphController::class,
 		
 		/* misc security that should probably be put in an archive */
