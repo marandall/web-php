@@ -36,7 +36,7 @@
 			
 			$methods = [
 				[
-					'label' => 'Ubuntu via Ondřej PPA',
+					'label' => 'Ubuntu / Debian',
 					'icon'  => '/static/images/logos/installers/launchpad.png',
 					'url'   => $branch->getUrl() . 'install/ubuntu_ppa',
 				],

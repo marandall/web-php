@@ -39,7 +39,7 @@
 		];
 		
 		protected function invokeForBranch(Request $request, Branch $branch): Response {
-			$this->setPageTitle('Install ' . $branch->getBranchId() . ' on Ubuntu using Ondřej PPA');
+			$this->setPageTitle('Install ' . $branch->getBranchId() . ' on Ubuntu / Debian using Ondřej PPA');
 			return $this->render(
 				function () use ($request, $branch) {
 					$this->renderContents($request, $branch);

@@ -12,7 +12,7 @@
 	class InstallBranchWindowsIISController extends BranchRouter
 	{
 		protected function invokeForBranch(Request $request, Branch $branch): Response {
-			$this->setPageTitle('Install ' . $branch->getBranchId() . ' on Windows IIS');
+			$this->setPageTitle('Install ' . $branch->getBranchId() . ' on Windows + IIS');
 			return $this->render(
 				function () use ($branch) {
 					$this->renderContents($branch);
@@ -22,7 +22,9 @@
 		
 		public function renderContents(Branch $branch) {
 			?>
-            <h2>Downloading PHP <?= htmlspecialchars($branch->getBranchId()) ?></h2>
+            <p style="float: right">
+                <img src="/static/images/logos/installers/iis.png" alt="IIS" style="padding: 1em; padding-top: 0"/>
+            </p>
             <p>
                 If you're wanting to run PHP <?= htmlspecialchars($branch->getBranchId()) ?> on Windows using
                 IIS (Internet Information Services) then you will first need to download the ZIP file from the
@@ -38,6 +40,7 @@
                 This article assumes that you already have IIS installed and have already setup a
                 local site with suitable permissions.
             </p>
+            <div class="clearfix"></div>
 
             <h2>Unzipping PHP <?= htmlspecialchars($branch->getBranchId()) ?></h2>
             <p>
@@ -259,7 +262,7 @@
                 additional configuration options to be added to tell PHP not only that they should be enabled,
                 but how they should work.
             </p>
-            
+
             <p>
                 The <em>php.ini</em> file already has entries for all of the extensions it ships with, but they
                 are commented out with semicolons. To enable an extension, just remove the semicolon from before
@@ -270,7 +273,7 @@
                 <img src="/static/tutorials/install_iis/extensions.png"
                      alt="PHP Extensions"/>
             </p>
-            
+
             <p>
                 Save the <em>php.ini</em> file. If you configured the monitor changes file earlier, your IIS
                 server should automatically restart PHP with the new settings. If it doesnt you will need to do
