@@ -35,7 +35,7 @@
 			
 			?>
 			<div>
-				Happening <?= ($start_date !== $end_date) ? ($start_date . ' - ' . $end_date) : ($start_date) ?>
+				<?= (($conference->getEndDate()->getTimestamp() > time()) ? 'Happening' : 'Happened')  ?> <?= ($start_date !== $end_date) ? ($start_date . ' - ' . $end_date) : ($start_date) ?>
 			</div>
 			
 			<hr style="border: 1px dashed #eeeeee; margin-top: 1em; margin-bottom: 1em"/>
