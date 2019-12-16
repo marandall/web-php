@@ -18,7 +18,7 @@
 			$this->values = $values;
 		}
 		
-		public function getInt(string $key, int $default): int {
+		public function getInt(string $key, int $default = 0): int {
 			if (!array_key_exists($key, $this->values)) {
 				return $default;
 			}
@@ -31,7 +31,7 @@
 			return $default;
 		}
 		
-		public function getFloat(string $key, float $default): float {
+		public function getFloat(string $key, float $default = 0): float {
 			if (!array_key_exists($key, $this->values)) {
 				return $default;
 			}
@@ -44,7 +44,7 @@
 			return $default;
 		}
 		
-		public function getString(string $key, string $default): string {
+		public function getString(string $key, string $default = ''): string {
 			if (!array_key_exists($key, $this->values)) {
 				return $default;
 			}
@@ -57,7 +57,7 @@
 			return $default;
 		}
 		
-		public function get(string $key, $default) {
+		public function get(string $key, $default = null) {
 			if (!array_key_exists($key, $this->values)) {
 				return $default;
 			}

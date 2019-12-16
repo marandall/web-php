@@ -8,6 +8,8 @@
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services;
+	use phpweb\Tools\ReleaseTableRenderer;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
 	
@@ -57,22 +59,8 @@
 					$branch->getBranchId()
 				) ?> have been released:
             </div>
-
-            <ul>
-				<?php
-					foreach ($branch->getReleasesByVersion() as $release) {
-						?>
-                        <li>
-                            <a href="<?= htmlspecialchars($release->getUrl()) ?>">
-                                PHP <?= htmlspecialchars($release->getVersionId()) ?>
-                            </a>
-                            -
-							<?= htmlspecialchars($release->getDate()->format('d M Y')) ?>
-                        </li>
-						<?php
-					}
-				?>
-            </ul>
+            
 			<?php
+            Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
 		}
 	}

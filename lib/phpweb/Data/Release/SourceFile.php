@@ -21,14 +21,10 @@
 		private $date;
 		
 		public function __construct(array $data) {
-			$this->filename   = $data['filename'] ?? '';
-			$this->name       = $data['name'] ?? '';
-			$this->sha256     = $data['sha256'] ?? '';
-			$this->date       = new \DateTime($data['date'] ?? '1970-01-01' );
-		}
-		
-		public function getFilename(): string {
-			return $this->filename;
+			$this->filename = $data['filename'] ?? '';
+			$this->name     = $data['name'] ?? '';
+			$this->sha256   = $data['sha256'] ?? '';
+			$this->date     = new \DateTime($data['date'] ?? '1970-01-01');
 		}
 		
 		public function getName(): string {
@@ -45,5 +41,18 @@
 		
 		public function getUrl(): string {
 			return Site::$BaseUrl . '/distributions/' . $this->getFilename();
+		}
+		
+		public function getFilename(): string {
+			return $this->filename;
+		}
+		
+		public function toArray(): array {
+			return [
+				'filename' => $this->filename,
+				'name'     => $this->name,
+				'sha256'   => $this->sha256,
+				'date'     => $this->date->format(DATE_ATOM),
+			];
 		}
 	}

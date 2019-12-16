@@ -2,19 +2,21 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Data\Release;
+	namespace phpweb\Tools\ReleaseFeedBuilder;
 	
+	use phpweb\Data\Release\Release;
+	use phpweb\Framework\Response;
 	
 	/**
 	 * Helper for preparing ATOM feeds of releases
 	 */
 	
-	class AtomFeedBuilder
+	class AtomFeedBuilder implements FeedBuilderInterface
 	{
 		/**
 		 * @param Release[] $releases
 		 */
-		public function build(array $releases, string $id): \SimpleXMLElement {
+		public function buildResponse(array $releases, string $id): Response {
 			$xml = simplexml_load_string('<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/releases"></feed>');
 			$xml->addChild('title', 'PHP.net Releases');
 			
@@ -63,6 +65,6 @@
 				$xml->addChild('updated', $latest_timestamp->format(DATE_ATOM));
 			}
 			
-			return $xml;
+			return new Response($xml->asXML(), 200, ['Content-Type' => 'application/atom+xml']);
 		}
 	}

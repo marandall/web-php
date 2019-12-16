@@ -97,11 +97,11 @@
 		'/versions/{major:\d+}.{minor:\d+}/install/iis'                => \phpweb\Controllers\Versions\Branches\Install\InstallBranchWindowsIISController::class,
 		'/versions/{major:\d+}.{minor:\d+}/install/docker'             => \phpweb\Controllers\Versions\Branches\Install\InstallBranchDockerController::class,
 		'/versions/{major:\d+}.{minor:\d+}/install/source'             => \phpweb\Controllers\Versions\Branches\Install\InstallBranchSourceController::class,
-		'/versions/{major:\d+}.{minor:\d+}/api/releases.atom'          => \phpweb\Controllers\Versions\Branches\BranchAtomFeedController::class,
+		'/versions/{major:\d+}.{minor:\d+}/api/releases.{format}'      => \phpweb\Controllers\Versions\Branches\BranchAtomFeedController::class,
 		'/versions/supported.php'                                      => \phpweb\Controllers\Versions\SupportedVersionsController::class,
 		'/versions/eol.php'                                            => \phpweb\Controllers\Versions\EOLController::class,
-		'/versions/api/supported.atom'                                 => \phpweb\Controllers\Versions\API\SupportedReleaseFeedController::class,
-		'/versions/api/releases.atom'                                 => \phpweb\Controllers\Versions\API\AllReleasesFeedController::class,
+		'/versions/api/supported.{format}'                             => \phpweb\Controllers\Versions\API\SupportedReleaseFeedController::class,
+		'/versions/api/releases.{format}'                              => \phpweb\Controllers\Versions\API\AllReleasesFeedController::class,
 		'/versions/api/supported_chart.svg'                            => \phpweb\Controllers\Versions\API\SupportedVersionGraphController::class,
 		
 		/* misc security that should probably be put in an archive */
