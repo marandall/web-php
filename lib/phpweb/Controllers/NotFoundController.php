@@ -16,6 +16,9 @@
 		
 		public function renderContents() {
 			?>
+			<p style="text-align: center">
+				Page Not Found
+			</p>
 			<?php
 		}
 		

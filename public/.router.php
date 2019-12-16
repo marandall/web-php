@@ -135,20 +135,18 @@
 	}
 	$uri = rawurldecode($uri);
 	
-	/* this is for the inbuilt server, everything in static is not passed through here */
-	if (strpos($uri, '/static/') === 0) {
-		// return;
-	}
 	
 	$handler = null;
 	$route   = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'] ?? 'GET', $uri);
 	
 	if ($route[0] === Dispatcher::NOT_FOUND) {
-		if (strncmp($_SERVER["DOCUMENT_ROOT"], $afilename, $len) == 0) {
-			if (file_exists($afilename)) {
-				/* This could be an image or whatever, so don't try to compress it */
-				ini_set("zlib.output_compression", 0);
-				return false;
+		if (strpos($uri, '/static/') === 0) {
+			if (strncmp($_SERVER["DOCUMENT_ROOT"], $afilename, $len) == 0) {
+				if (file_exists($afilename)) {
+					/* This could be an image or whatever, so don't try to compress it */
+					ini_set("zlib.output_compression", 0);
+					return false;
+				}
 			}
 		}
 		
