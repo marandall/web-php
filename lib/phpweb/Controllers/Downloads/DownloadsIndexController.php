@@ -140,9 +140,15 @@
                         </a>
                     </li>
                 </ul>
-
                 <br/>
 				<?php
 			}
+			?>
+            <h2>Older Versions</h2>
+            <p>
+                If you're looking to download older versions of PHP please check the
+                <a href="/versions/">entire release history</a>.
+            </p>
+            <?php
 		}
 	}

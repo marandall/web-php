@@ -86,28 +86,17 @@ a:hover { text-decoration: underline; }
 }
 
 .r2-side-panel-title {
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     border: 1px solid #aaaaaa;
-    border-bottom: none;
-    background-color: #555555;
-    color: white;
+    border-bottom: 3px solid #4F5B93;
+    background-color: #8892BF;
+    color: black;
     padding: 3px;
     padding-left: 5px;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .r2-side-panel-contents {
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
     border: 1px solid #aaaaaa;
     border-top: none;
     background-color: #fafafa;
