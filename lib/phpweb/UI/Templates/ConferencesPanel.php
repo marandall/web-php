@@ -47,7 +47,7 @@
                 </div>
 				<?php
                 if ($index !== count($conferences) - 1) {
-                    echo '<hr style="border: 1px dotted #cccccc; margin-top: 1em; margin-bottom: 1em" />';
+                    echo '<hr style="border: 1px dotted #cccccc; margin-top: 0.5em; margin-bottom: 0.5em" />';
                 }
 			}
 		}
