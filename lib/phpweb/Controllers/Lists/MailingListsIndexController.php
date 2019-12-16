@@ -8,6 +8,7 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Tools\EmailValidation;
+	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\BasicPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
@@ -18,10 +19,75 @@
 			$this->setActivePage('community');
 			
 			if (isset($_POST['email'])) {
-			    $this->submit();
-            }
+				$this->submit();
+			}
 			
+			$this->addSidePanel(new BasicCallbackPanel('Unsubscribe Help', [$this, 'renderPanel']));
 			return $this->render([$this, 'renderContents']);
+		}
+		
+		protected function submit(Request $fr_request) {
+			// No error found yet
+			$error = "";
+			
+			// Check email address
+			if (empty($_POST['email']) || $_POST['email'] === 'user@example.com' ||
+				$_POST['email'] === 'fake@from.net' || !EmailValidation::IsEmailable($_POST['email'])) {
+				$error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
+					"<br>Please go back and try again.";
+			}
+			
+			// Seems to be a valid email address
+			else {
+				// Decide on request mode, email address part and IP address
+				$request = strtolower($_POST['action']);
+				if ($request !== "subscribe" && $request !== "unsubscribe") {
+					$request = "subscribe";
+				}
+				$remote_addr = $fr_request->getClientIp();
+				
+				// Get in contact with master server to [un]subscribe the user
+				$result = posttohost(
+					"http://master.php.net/entry/subscribe.php",
+					[
+						"request"  => $request,
+						"email"    => $_POST['email'],
+						"maillist" => $_POST['maillist'],
+						"remoteip" => $remote_addr,
+						"referer"  => 'https://' . $_SERVER['HTTP_HOST'] . "/lists/",
+					]
+				);
+				
+				// Provide error if unable to [un]subscribe
+				if ($result) {
+					$error = "We were unable to subscribe you due to some technical problems.<br>" .
+						"Please try again later.";
+				}
+			}
+			
+			if ($error !== '') {
+				$this->addErrorPanel(new BasicPanel('Subscribe Error', $error));
+			}
+		}
+		
+		public function renderPanel() {
+			?>
+            <p>
+                If you have trouble getting off from any of our mailing lists, or
+                would like to unsubscribe from a mailing list not listed here, we
+                have more information for you on <a href="/lists/unsubscribe">the
+                    unsubscription page</a>.
+            </p>
+
+            <h3>Other PHP related mailing lists</h3>
+
+            <p>
+            Find the <a href="http://pear.php.net/support/lists.php">PEAR
+                lists</a>, the <a href="http://pecl.php.net/support.php">PECL
+                lists</a>, and the <a href="http://gtk.php.net/resources.php">PHP-GTK
+                lists</a> on their own pages.
+			
+			<?php
 		}
 		
 		public function renderContents() {
@@ -101,11 +167,11 @@
 
             <form method="post" action="/lists/">
 
-                <h2 id="general">General Mailing Lists</h2>
+                <h2>General Mailing Lists</h2>
 				
 				<?php $this->drawLists(MailingLists::GENERAL_LISTS); ?>
 
-                <h2 id="internals">Internals Mailing Lists</h2>
+                <h2>Internals Mailing Lists</h2>
 				
 				<?php $this->drawLists(MailingLists::INTERNALS_LISTS); ?>
 
@@ -187,49 +253,5 @@
 				}
 			}
 			echo "</table>\n";
-		}
-		
-		protected function submit(Request $fr_request) {
-			// No error found yet
-			$error = "";
-			
-			// Check email address
-			if (empty($_POST['email']) || $_POST['email'] === 'user@example.com' ||
-				$_POST['email'] === 'fake@from.net' || !EmailValidation::IsEmailable($_POST['email'])) {
-				$error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
-					"<br>Please go back and try again.";
-			}
-			
-			// Seems to be a valid email address
-			else {
-				// Decide on request mode, email address part and IP address
-				$request = strtolower($_POST['action']);
-				if ($request !== "subscribe" && $request !== "unsubscribe") {
-					$request = "subscribe";
-				}
-				$remote_addr = $fr_request->getClientIp();
-				
-				// Get in contact with master server to [un]subscribe the user
-				$result = posttohost(
-					"http://master.php.net/entry/subscribe.php",
-					[
-						"request"  => $request,
-						"email"    => $_POST['email'],
-						"maillist" => $_POST['maillist'],
-						"remoteip" => $remote_addr,
-						"referer"  => 'https://' . $_SERVER['HTTP_HOST'] . "/lists/",
-					]
-				);
-				
-				// Provide error if unable to [un]subscribe
-				if ($result) {
-					$error = "We were unable to subscribe you due to some technical problems.<br>" .
-						"Please try again later.";
-				}
-			}
-			
-			if ($error !== '') {
-				$this->addErrorPanel(new BasicPanel('Subscribe Error', $error));
-            }
 		}
 	}

@@ -11,6 +11,8 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
+	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
+	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class DownloadsIndexController extends PHPWebTemplate
@@ -19,7 +21,37 @@
 			$this->setPageTitle('Download PHP');
 			$this->setActivePage('downloads');
 			
+			$this->addSidePanel(new BasicCallbackPanel('GPG Keys', [$this, 'renderGpgInfo']));
+			$this->addSidePanel(new BasicCallbackPanel('How to Install PHP', [$this, 'renderInstallPolicy']));
+			
 			return $this->render([$this, 'renderContents']);
+		}
+		
+		public function renderInstallPolicy() {
+		    ?>
+            <p>
+                Due to the nature of PHP, it is typically installed through platform vendors
+                who download the source code, compile it themselves, and distribute it via their
+                own platform-specific package managers such as apt and apk.
+            </p>
+            <p>
+                You can download the source code directly from PHP.net and compile it yourself,
+                or use one of our interactive guides to help you install it.
+            </p>
+            <?php
+        }
+		
+		public function renderGpgInfo() {
+			?>
+            <p>
+                The releases are tagged and signed in the <a href="/developers/git/">PHP Git Repository</a>.
+            </p>
+            
+            <p>
+                The following official GnuPG keys of the current PHP Release Manager can be found
+                at <a href="/downloads/gpg-keys.php">here</a>.
+            </p>
+			<?php
 		}
 		
 		public function renderContents() {
@@ -44,25 +76,15 @@
 				$current = ($index === 0);
 				?>
 
-                <h2>
-					<?= htmlspecialchars(
-						($current ? 'Current Stable' : 'Old Stable') . ' ' . $latest->getVersionId()
-					) ?>
-                </h2>
+                <h2><?= htmlspecialchars(
+						($current ? 'Current Stable' : 'Old Stable') . ' ' . $branch->getBranchId()
+					) ?></h2>
 				
 				<?php
 				$helpers = Services::get(HelperSearch::class)->findHelpers($branch);
 				$support = $branch->getStability();
 				if ($support === StabilityEnum::SECURITY) {
-					?>
-                    <div style="padding: 10px; margin-bottom: 1em">
-                        <span style="font-weight: bold">Advisory: </span>
-                        The PHP <?= htmlspecialchars($branch->getBranchId()) ?> branch is currently only receiving
-                        security updates until
-						<?= htmlspecialchars($branch->getEolSecurityDate()->format('d M Y')) ?>
-                        and it is recommended that you make plans to upgrade to the latest branch.
-                    </div>
-					<?php
+					(new BranchSecurityOnlyNotice($branch))->draw();
 				}
 				?>
 
@@ -76,12 +98,15 @@
                 <table class="standard" style="width: 100%">
                     <tbody>
 					<?php foreach ($helpers as $helper) { ?>
-					    <tr>
+                        <tr>
                             <td style="width: 80px">
-                                <img src="<?= htmlspecialchars($helper->getImageUri()) ?>" alt="<?= htmlspecialchars($helper->getDescription()) ?>" style="max-width: 100%" />
+                                <img src="<?= htmlspecialchars($helper->getImageUri()) ?>"
+                                     alt="<?= htmlspecialchars($helper->getDescription()) ?>" style="max-width: 100%"/>
                             </td>
                             <td>
-                                <a href="<?= htmlspecialchars($helper->getUri()) ?>">Using <?= htmlspecialchars($helper->getDescription()) ?></a>
+                                <a href="<?= htmlspecialchars($helper->getUri()) ?>">Using <?= htmlspecialchars(
+										$helper->getDescription()
+									) ?></a>
                             </td>
                         </tr>
 					
@@ -89,7 +114,7 @@
                     </tbody>
                 </table>
 
-                <h4>Latest Source Code</h4>
+                <h4>Latest Source Code for <?= htmlspecialchars($latest->getVersionId()) ?></h4>
                 <ul>
 					<?php
 						foreach ($latest->getSources() as $source) {
@@ -119,17 +144,5 @@
                 <br/>
 				<?php
 			}
-			
-			?>
-
-            <hr>
-            <h2>GPG Keys</h2>
-            <p>
-                The releases are tagged and signed in the <a href="/developers/git/">PHP Git Repository</a>.
-                The following official GnuPG keys of the current PHP Release Manager can be used
-                to verify the tags:
-            </p>
-			
-			<?php
 		}
 	}

@@ -16,32 +16,13 @@
 			$this->setPageTitle('Getting Help');
 			$this->setActivePage('help');
 			
-			$this->addSidePanel(new BasicCallbackPanel('', Closure::fromCallable([$this, 'renderPanel'])));
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		public function renderPanel() {
-			?>
-            <div class="panel" style="position:fixed">
-                <div class="headline">Table of Contents</div>
-                <div class="body">
-                    <ul>
-                        <li><a href="#documentation">Documentation</a></li>
-                        <li><a href="#mailing-lists">Mailing Lists</a></li>
-                        <li><a href="#newsgroups">Newsgroups</a></li>
-                        <li><a href="#user-groups">User Groups</a></li>
-                        <li><a href="#events-training">Events &amp; Training</a></li>
-                        <li><a href="#irc">IRC</a></li>
-                        <!-- Purposefully no link to the webmasters -->
-                    </ul>
-                </div>
-            </div>
-			<?php
-		}
 		
 		public function renderContents() {
 			?>
-            <h2 id="documentation">Documentation</h2>
+            <h2>Documentation</h2>
 
             <p>
                 A good place to start is by skimming through the ever-growing list of
@@ -51,7 +32,7 @@
                 <a href="/docs.php">documentation</a> section.
             </p>
 
-            <h2 id="mailing-lists">Mailing Lists</h2>
+            <h2>Mailing Lists</h2>
 
             <p>
                 There are a number of mailing lists devoted to talking about PHP and related
@@ -60,7 +41,7 @@
                 subscribe to the lists.
             </p>
 
-            <h2 id="newsgroups">Newsgroups</h2>
+            <h2>Newsgroups</h2>
 
             <p>
                 The PHP language newsgroup is comp.lang.php, available on any
@@ -77,7 +58,7 @@
                 that these newsgroups are only available on this server.
             </p>
 
-            <h2 id="user-groups">User Groups</h2>
+            <h2>User Groups</h2>
 
             <p>
                 Chances are that there is a User Group in your neighborhood, which are generally
@@ -86,7 +67,7 @@
                 is one close by.
             </p>
 
-            <h2 id="events-training">Events &amp; Training</h2>
+            <h2>Events &amp; Training</h2>
 
             <p>
                 A list of upcoming events (such as user group meetings and PHP training
@@ -96,7 +77,7 @@
                         href="/submit-event.php">on this page</a>.
             </p>
 
-            <h2 id="irc">Internet Relay Chat</h2>
+            <h2>Internet Relay Chat</h2>
 
             <p>
                 Otherwise known as IRC. Here you can usually find experienced PHP people
@@ -111,7 +92,7 @@
                 <a href="http://oftc.net">OFTC</a>).
             </p>
 
-            <h2 id="webmasters">PHP.net webmasters</h2>
+            <h2>PHP.net webmasters</h2>
 
             <p>
                 If you have a problem or suggestion <em>in connection with the PHP.net

@@ -2,7 +2,7 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Controllers;
+	namespace phpweb\Controllers\Downloads;
 	
 	use phpweb\Data\GpgKeys;
 	use phpweb\Framework\Request;

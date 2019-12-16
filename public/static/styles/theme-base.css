@@ -55,17 +55,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
-a {
-  border-bottom:1px solid;
-}
-a:focus {
-  outline: thin dotted #333;
-  outline-offset: -2px;
-}
-a:hover,
-a:active {
-  outline: 0;
-}
+
 sub,
 sup {
   position: relative;
@@ -125,7 +115,7 @@ textarea {
   }
   a,
   a:visited {
-    text-decoration: underline;
+
   }
   a[href]:after {
     content: " (" attr(href) ")";

@@ -50,7 +50,7 @@
                 Come with me, I'll show you.
             </p>
 
-            <h2 id="www" class="content-header"><a href="http://php.net/">php.net</a>: Main Website</h2>
+            <h2>php.net</a>: Main Website</h2>
 
             <div class="content-box">
                 <p>
@@ -88,7 +88,7 @@
                 </p>
             </div>
 
-            <h2 id="talks" class="content-header">
+            <h2>
                 <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials
             </h2>
 
@@ -99,7 +99,7 @@
                 those slides are available within the PHP slide application.
             </p>
 
-            <h2 id="news" class="content-header">
+            <h2>
                 <a href="http://news.php.net/">news.php.net</a>:
                 Mailing Lists Web and NNTP Interface
             </h2>
@@ -112,7 +112,7 @@
                 lists.
             </p>
 
-            <h2 id="pear" class="content-header">
+            <h2>
                 <a href="http://pear.php.net/">pear.php.net</a>:
                 The PHP Extension and Application Repository
             </h2>
@@ -125,7 +125,7 @@
                 library.
             </p>
 
-            <h2 id="pecl" class="content-header">
+            <h2>
                 <a href="http://pecl.php.net/">pecl.php.net</a>:
                 The PHP Extension Community Library
             </h2>
@@ -139,7 +139,7 @@
                 its sister, PEAR.
             </p>
 
-            <h2 id="bugs" class="content-header"><a href="https://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
+            <h2>bugs.php.net</a>: Bug Database</h2>
 
             <p class="content-box">
                 The bug database is where you can bring problems with PHP to the attention of
@@ -147,14 +147,14 @@
                 reported the same problem!).
             </p>
 
-            <h2 id="doc" class="content-header"><a href="http://doc.php.net/">doc.php.net</a>: Documentation Tools</h2>
+            <h2>doc.php.net</a>: Documentation Tools</h2>
 
             <p class="content-box">
                 This page provides set of useful tools for PHP Manual translators
                 and contributors.
             </p>
 
-            <h2 id="edit" class="content-header"><a href="https://edit.php.net/">edit.php.net</a>: PhD Online Editor</h2>
+            <h2>edit.php.net</a>: PhD Online Editor</h2>
 
             <p class="content-box">
                 PhD O.E. is an online documentation editor. Its a great tool for users that are looking for a way to get into
@@ -162,7 +162,7 @@
                 and commit changes directly from the editor.
             </p>
 
-            <h2 id="docs" class="content-header"><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
+            <h2>docs.php.net</a>: Documentation dev server</h2>
 
             <p class="content-box">
                 The documentation developmental server is a PHP mirror that contains upcoming
@@ -171,7 +171,7 @@
                 before being made official. Documentation is built here four times a day.
             </p>
 
-            <h2 id="qa" class="content-header"><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
+            <h2>qa.php.net</a>: Quality Assurance Team</h2>
 
             <p class="content-box">
                 The Quality Assurance team is one of the most important pieces of the PHP
@@ -180,7 +180,7 @@
                 process.
             </p>
 
-            <h2 id="git" class="content-header"><a href="http://git.php.net/">git.php.net</a>: Git Repository</h2>
+            <h2>git.php.net</a>: Git Repository</h2>
 
             <div class="content-box">
                 <p>
@@ -202,7 +202,7 @@
                 </p>
             </div>
 
-            <h2 id="svn" class="content-header"><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
+            <h2>svn.php.net</a>: Archived SVN Repository</h2>
 
             <p class="content-box">
                 The PHP project used to be organized under the SVN revision control system, but
@@ -214,7 +214,7 @@
             <!--
 			XXX: The following sites are offline and should be re-added once they are back online in a more permanent state (Kalle, 17/10/2017)
 			
-			<h2 id="cvs" class="content-header"><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
+			<h2>cvsold.php.net</a>: Archived CVS Repository</h2>
 			
 			<p class="content-box">
 			 The PHP project used to be organized under the CVS revision control system, but
@@ -224,7 +224,7 @@
 			 via HTTP.
 			</p>
 			
-			<h2 id="lxr" class="content-header"><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
+			<h2>lxr.php.net</a>: Cross Reference</h2>
 			
 			<div  class="content-box">
 			<p>
@@ -242,7 +242,7 @@
 			</div>
 			-->
 
-            <h2 id="gtk" class="content-header"><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
+            <h2>gtk.php.net</a>: PHP-GTK</h2>
 
             <p class="content-box">
                 This web site is the home of the PHP-GTK project, which allows PHP to be
@@ -251,7 +251,7 @@
                 and the latest news from the project.
             </p>
 
-            <h2 id="gcov" class="content-header"><a href="http://gcov.php.net/">gcov.php.net</a>: Test and Code Coverage analysis</h2>
+            <h2>gcov.php.net</a>: Test and Code Coverage analysis</h2>
 
             <p class="content-box">
                 This site is dedicated to automatic PHP code coverage testing. On a regular
@@ -260,7 +260,7 @@
                 analysis.
             </p>
 
-            <h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
+            <h2>wiki.php.net</a>: The PHP Wiki</h2>
 
             <p class="content-box">
                 Home of the official PHP wiki, this site contains information related to php.net like
@@ -268,7 +268,7 @@
                 has a wiki section and everyone is able to apply for wiki commit access.
             </p>
 
-            <h2 id="people" class="content-header"><a href="http://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
+            <h2>people.php.net</a>: The PHP Developers Profiles</h2>
 
             <p class="content-box">
                 A list of the developers behind PHP along with quick profiles for each of them.

@@ -26,6 +26,10 @@
 			return $this->data['title'];
 		}
 		
+		public function getUri(): string {
+			return Site::$BaseUrl . '/community/conferences/' . urlencode($this->getId()) . '/';
+		}
+		
 		public function getStartDate(): \DateTimeImmutable {
 			return new \DateTimeImmutable($this->data['start_date']);
 		}

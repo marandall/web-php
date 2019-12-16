@@ -33,9 +33,12 @@
 
                             </td>
                             <td style="padding-left: 20px; text-align: left">
-                                <div style="font-weight: bold; left; margin-bottom: 0.5em"><?= htmlspecialchars(
-				                        $conference->getTitle()
-			                        ) ?></div>
+                                <div style="font-weight: bold; left; margin-bottom: 0.5em">
+                                    <a href="<?= htmlspecialchars($conference->getUri() )?>" style="color: black">
+	                                    <?= htmlspecialchars(
+		                                    $conference->getTitle()
+	                                    ) ?></div>
+                                    </a>
                                 <div><?= htmlspecialchars($conference->getStartDate()->format('d M Y')) ?></div>
                             </td>
                         </tr>

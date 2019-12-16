@@ -46,7 +46,6 @@
 		
 		/* moar */
 		'/docs.php'                                                    => \phpweb\Controllers\DocsController::class,
-		'/gpg-keys.php'                                                => \phpweb\Controllers\GpgKeysController::class,
 		'/security-note.php'                                           => \phpweb\Controllers\SecurityNoteController::class,
 		'/supported-versions.php'                                      => \phpweb\Controllers\Versions\SupportedVersionsController::class,
 		'/support.php'                                                 => \phpweb\Controllers\SupportController::class,
@@ -78,6 +77,8 @@
 		'/community/events/submit'                                     => \phpweb\Controllers\Community\Events\SubmitEventController::class,
 		'/community/conferences/'                                      => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
 		'/community/conferences/archive'                               => \phpweb\Controllers\Community\Conferences\ConferencesArchiveController::class,
+		'/community/conferences/{conference}/'                         => \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController::class,
+		
 		
 		/* search terms */
 		'/search/search.php'                                           => \phpweb\Controllers\Search\SearchController::class,
@@ -112,6 +113,7 @@
 		/* general downloads */
 		'/downloads/'                                                  => \phpweb\Controllers\Downloads\DownloadsIndexController::class,
 		'/downloads/logos.php'                                         => \phpweb\Controllers\Downloads\LogosController::class,
+		'/downloads/gpg-keys.php'                                      => \phpweb\Controllers\Downloads\GpgKeysController::class,
 		
 		/* mailing list */
 		'/lists/'                                                      => \phpweb\Controllers\Lists\MailingListsIndexController::class,
@@ -147,7 +149,6 @@
 		header('location: ' . Site::$BaseUrl . $redirect);
 		exit();
 	}
-	
 	
 	
 	$handler = null;

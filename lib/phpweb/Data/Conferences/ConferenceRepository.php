@@ -51,4 +51,15 @@
 			
 			return $results;
 		}
+		
+		
+		public function find(string $conference_id): ?Conference {
+			foreach ($this->all() as $conference) {
+				if ($conference->getId() === $conference_id) {
+					return $conference;
+				}
+			}
+			
+			return null;
+		}
 	}

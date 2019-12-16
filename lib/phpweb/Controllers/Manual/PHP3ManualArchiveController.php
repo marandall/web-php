@@ -32,7 +32,7 @@
             </ol>
             <hr>
 
-            <h2 id="introduction">Introduction</h2>
+            <h2>Introduction</h2>
 
             <p>
                 The PHP 3 documentation was removed from the PHP Manual and placed here for
@@ -47,7 +47,7 @@
                 information about PHP 3.
             </p>
 
-            <h2 id="directives">Configuration Directives</h2>
+            <h2>Configuration Directives</h2>
 
             <p>
                 Most directives are prepended with php3_ instead of php_. These differences
@@ -107,7 +107,7 @@
                 </dd>
             </dl>
 
-            <h2 id="changed_bahaviour">Changed Behaviour</h2>
+            <h2>Changed Behaviour</h2>
 
             <dl>
                 <dt><span class="big">Return values</span></dt>
@@ -194,7 +194,7 @@
                 </dd>
             </dl>
 
-            <h2 id="miscellaneous">Miscellaneous</h2>
+            <h2>Miscellaneous</h2>
 
             <dl>
                 <dd>
@@ -267,21 +267,21 @@
                 </dd>
             </dl>
 
-            <h2 id="migration">Migration</h2>
+            <h2>Migration</h2>
 
             <p>
                 There are a few migration specific documents involving PHP 3 but due to
                 their size and structure they were not added to this document.
             </p>
 
-            <h2 id="debugger">Debugger</h2>
+            <h2>Debugger</h2>
 
             <p>
                 Information related to the debugger that comes standard with PHP 3 was
                 not added to this document.
             </p>
 
-            <h2 id="internals">Internals</h2>
+            <h2>Internals</h2>
 
             <p>
                 Information related to the internal workings of PHP 3 that is commonly used

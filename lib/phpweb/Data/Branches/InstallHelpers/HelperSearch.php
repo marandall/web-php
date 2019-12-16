@@ -26,16 +26,17 @@
 			}
 			
 			$helpers[] = new  HelperDescription(
+				'Docker',
+				$branch->getUrl() . 'install/docker',
+				'/static/images/logos/installers/docker.png'
+			);
+			
+			$helpers[] = new  HelperDescription(
 				'Windows IIS',
 				$branch->getUrl() . 'install/iis',
 				'/static/images/logos/installers/iis.png'
 			);
 			
-			$helpers[] = new  HelperDescription(
-				'Docker',
-				$branch->getUrl() . 'install/docker',
-				'/static/images/logos/installers/docker.png'
-			);
 			
 			
 			$helpers[] = new  HelperDescription(

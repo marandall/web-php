@@ -17,13 +17,12 @@
 			$this->setPageTitle('Git Access');
 			$this->setActivePage('community');
 			
-			$this->addSidePanel(new BasicCallbackPanelAlias('', Closure::fromCallable([$this, 'renderPanel'])));
+			$this->addSidePanel(new BasicCallbackPanelAlias('What is Git?', Closure::fromCallable([$this, 'renderPanel'])));
 			return $this->render([$this, 'renderContents']);
 		}
 		
 		protected function renderPanel() {
 		    ?>
-            <h3>What is Git?</h3>
             <p>
                 You can find more information about Git and download clients for most major
                 platforms at <a href="http://git-scm.com/">the official Git site</a>.
@@ -37,7 +36,7 @@
             <p>
             If you would like to join PHP development or would like to
             contribute to the PHP documentation, contact the relevant
-            group. You may want <a href="/git-php.php">your own Git account</a>
+            group. You may want <a href="/developers/git/register">your own Git account</a>
             to contribute.
             <?php
         }

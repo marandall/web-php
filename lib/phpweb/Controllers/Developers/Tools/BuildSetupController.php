@@ -17,7 +17,7 @@
 		
 		public function renderContents() {
 			?>
-			<h2 id="os-prep" class="content-header">Operating System Preparation</h2>
+			<h2>Operating System Preparation</h2>
 			<div class="content-box">
 				<p>
 					Improving PHP requires a working build environment to test changes, the following section deals with setting up a working build environment.
@@ -89,7 +89,7 @@
 				<p><b>Note:</b>&nbsp;If a Windows SDK is required, it is advised to install the SDK <i>before</i> Visual Studio.</p>
 			</div>
 			
-			<h2 id="workspace-prep" class="content-header">Workspace Preparation</h2>
+			<h2>Workspace Preparation</h2>
 			<div class="content-box">
 				<p>
 					Windows users should now download and unzip the PHP SDK to their workspace and execute the following commands in an appropriate Visual Studio Console:
@@ -123,7 +123,7 @@
 			</div>
 			
 			
-			<h2 id="build-dev" class="content-header">Building Your Development PHP</h2>
+			<h2>Building Your Development PHP</h2>
 			<div class="content-box">
 				<p>
 					All operating systems now converge on (near as makes no difference) the same solutions for the rest of the build process:

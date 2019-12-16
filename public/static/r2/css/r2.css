@@ -63,9 +63,15 @@ html {
     color: #fff;
 }
 
+/*
+ * Hyperlinks
+ */
+
 a, a:visited {
     text-decoration: none;
 }
+
+a:hover { text-decoration: underline; }
 
 /*
  * Side Panels
@@ -84,7 +90,7 @@ a, a:visited {
     border-top-right-radius: 5px;
     border: 1px solid #aaaaaa;
     border-bottom: none;
-    background-color: #333333;
+    background-color: #555555;
     color: white;
     padding: 3px;
     padding-left: 5px;
