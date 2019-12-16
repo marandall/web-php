@@ -86,7 +86,6 @@ a:hover { text-decoration: underline; }
 }
 
 .r2-side-panel-title {
-    border: 1px solid #aaaaaa;
     border-bottom: 3px solid #4F5B93;
     background-color: #8892BF;
     color: black;
@@ -94,6 +93,7 @@ a:hover { text-decoration: underline; }
     padding-left: 5px;
     font-size: 14px;
     font-weight: bold;
+    color: white;
 }
 
 .r2-side-panel-contents {
