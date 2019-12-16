@@ -12,7 +12,7 @@
 			$image = $conference->getImageUrl();
 			?>
 			<div class="newsentry" style="clear: both">
-				<h3 class="newstitle title"><a href=""><?= htmlspecialchars($conference->getTitle()) ?></a></h3>
+				<h3><a href="<?= htmlspecialchars($conference->getUri()) ?>"><?= htmlspecialchars($conference->getTitle()) ?></a></h3>
 				<div style="margin-bottom: 0.5em">Starting <?= htmlspecialchars($conference->getStartDate()->format('d M Y')) ?></div>
 				<?php if ($image) { ?>
 					<div class="newsimage" style="float: right; padding: 1em">

@@ -34,17 +34,25 @@
 			}
 			
 			if (count($matches) !== 0) {
-				
+			    $total_added = 0;
 				foreach ($matches as $match) {
 					[$tag, $label] = $match;
+					
+					/* avoid cases where there's a tag in for the time being */
+                    if (strpos($label, '<') !== false) {
+                        continue;
+                    }
 					
 					$id         = str_replace(' ', '_', strtolower($label));
 					$inner_html = str_replace($tag, '<a id="' . htmlspecialchars($id) . '"></a>' . $tag, $inner_html);
 					
 					$toc->add('#' . urlencode($id), $label);
+					$total_added++;
 				}
 				
-				array_unshift($panels, $toc);
+				if ($total_added) {
+					array_unshift($panels, $toc);
+				}
 			}
 			
 			?>

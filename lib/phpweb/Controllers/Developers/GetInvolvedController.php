@@ -14,29 +14,12 @@
 	{
 		public function __invoke(Request $request): Response {
 			$this->setPageTitle('Get Involved');
-			$this->addSidePanel(new BasicCallbackPanel('', Closure::fromCallable([$this, 'renderPanel'])));
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		public function renderPanel() {
-		    ?>
-            <div class="panel">
-                <div class="headline">Table of Contents</div>
-                <div class="body">
-                    <ul>
-                        <li><a href="#contributing-to-php">Contributing to PHP</a></li>
-                        <li><a href="#ways-to-contribute">Four Best Ways to Contribute</a></li>
-                        <li><a href="#php-src">Development of the PHP source</a></li>
-                        <li><a href="#references">Useful links for developers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <?php
-        }
 		
 		public function renderContents() {
 			?>
-			<h2 class="content-title" id="contributing-to-php">Contributing to PHP</h2>
 			<div class="content-box">
 				
 				<p>
@@ -54,7 +37,7 @@
 				</p>
 			</div>
 			
-			<h3 class="content-title" id="ways-to-contribute">Four Best Ways to Contribute</h3>
+			<h3>Four Best Ways to Contribute</h3>
 			
 			<ol class="content-box listed">
 				<li>Running test suites in <a href="http://qa.php.net/">RC</a>
@@ -68,7 +51,7 @@
 					<a href="http://doc.php.net/tutorial/">guide for contributors</a>.</li>
 			</ol>
 			
-			<h3 class="content-header" id="php-src">Development of the PHP source</h3>
+			<h3>Development of the PHP source</h3>
 			
 			<div class="content-box">
 				<p>
@@ -83,7 +66,7 @@
 				</p>
 			</div>
 			
-			<h3 class="content-title" id="references">Useful links for developers</h3>
+			<h3>Useful links for developers</h3>
 			<ul class="content-box listed">
 				<li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
 					by which developers can suggest and discuss new ideas with the community</li>

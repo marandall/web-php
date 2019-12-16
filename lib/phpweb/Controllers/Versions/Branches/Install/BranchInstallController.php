@@ -55,7 +55,7 @@
 				<?php
 					foreach ($helpers as $method) {
 						?>
-                        <a style="display: inline-block; width: 160px; background-color: #eeeeee; padding: 10px; border: 1px solid #aaaaaa; text-align: center; margin: 10px; border-radius: 10px"
+                        <a style="display: inline-block; width: 160px; background-color: #fafafa; padding: 10px; border: 1px solid #aaaaaa; text-align: center; margin: 10px; border-radius: 10px"
                            href="<?= htmlspecialchars($method->getUri()) ?>">
                             <img src="<?= htmlspecialchars($method->getImageUri()) ?>"
                                  alt="<?= htmlspecialchars($method->getDescription()) ?>"

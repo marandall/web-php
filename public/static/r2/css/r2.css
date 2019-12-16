@@ -3,6 +3,10 @@ html {
     color: #CCC;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 /* {{{ Navbar */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
