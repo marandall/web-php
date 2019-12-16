@@ -17,7 +17,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 			?>
             <p>
                 The change as implemented in PHP 5.3.7+ favors security and correctness over

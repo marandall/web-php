@@ -22,21 +22,25 @@
 		}
 		
 		public function renderContents(Branch $branch) {
-			$release = $branch->getLatestRelease();
-			foreach ($release->getSources() as $source) {
-				?>
-                <div style="margin-bottom: 5px">
-                    <a style="font-weight: bold"
-                       href="/distributions/<?= htmlspecialchars($source->getFilename()) ?>">
-						<?= htmlspecialchars($source->getName()) ?>
-                    </a>
+		    foreach (array_reverse($branch->getReleasesByVersion()) as $release) {
+		        ?>
+                <h2>PHP Version <?= htmlspecialchars($release->getVersionId()) ?></h2>
+                <?php
+			    foreach ($release->getSources() as $source) {
+				    ?>
+                    <div style="margin-bottom: 5px">
+                        <a style="font-weight: bold"
+                           href="/distributions/<?= htmlspecialchars($source->getFilename()) ?>">
+						    <?= htmlspecialchars($source->getName()) ?>
+                        </a>
 
-                    (<?= htmlspecialchars($source->getDate()->format('Y-m-d')) ?>)
-                    <br/>
-                    SHA256: <?= htmlspecialchars($source->getSha256()) ?>
-                </div>
-				<?php
-			}
+                        (<?= htmlspecialchars($source->getDate()->format('Y-m-d')) ?>)
+                        <br/>
+                        SHA256: <?= htmlspecialchars($source->getSha256()) ?>
+                    </div>
+				    <?php
+			    }
+		    }
 			?>
             <h2>GPG Keys</h2>
             <pre><?= htmlspecialchars(GpgKeys::GetKeys()[$branch->getBranchId()] ?? 'Not Available') ?></pre>

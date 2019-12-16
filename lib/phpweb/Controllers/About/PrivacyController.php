@@ -17,7 +17,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 			?>
 			<p>
 				This privacy policy covers php.net and its associated mirrors.

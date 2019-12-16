@@ -14,10 +14,10 @@
 	class RegisterGitAccountController extends PHPWebTemplate
 	{
 		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Git Access');
+			$this->setPageTitle('Register for Git Access');
 			$this->setActivePage('community');
 			
-			$this->addSidePanel(new BasicCallbackPanelAlias('', Closure::fromCallable([$this, 'renderPanel'])));
+			$this->addSidePanel(new BasicCallbackPanelAlias('More About Git', Closure::fromCallable([$this, 'renderPanel'])));
 			return $this->render([$this, 'renderContents']);
 		}
 		
@@ -136,11 +136,21 @@
 		
 		protected function renderPanel() {
 			?>
-			
+            <p>
+                You can find more information about Git and download clients for most major
+                platforms at <a href="http://git-scm.com/">the official Git site</a>.
+            </p>
+
+            <h3>Git access</h3>
+            <p>
+                If you would like to grab PHP sources or other PHP.net
+                hosted project data from PHP.net, you can also use
+                <a href="./">Github</a>. No Git account is required.
+            </p>
 			<?php
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 			$groups = array(
 				"none" => "Choose One",
 				"php"  => "PHP Group",
@@ -149,8 +159,8 @@
 				"doc"  => "Doc Group",
 			);
 			?>
-            <form action="" method="post">
-                <table border="0" class="standard" style="width: 80%;">
+            <form action="" method="post" >
+                <table border="0" class="standard" style="width: 100%;">
                     <tr>
                         <th class="subr">Full Name:</th>
                         <td><input type="text" size="50" name="fullname"
@@ -191,11 +201,12 @@
         </tr>
         <tr>
             <th class=" subr">If your intended purpose is not in the list, <br>please state it here:
-                        </th>
-                        <td><textarea cols="50" rows="5" name="realpurpose"
+                            <textarea cols="50" rows="5" name="realpurpose"
                                       class="max"><?php if (isset($_POST['realpurpose'])) {
-									echo clean($_POST['realpurpose']);
-								} ?></textarea></td>
+			                        echo clean($_POST['realpurpose']);
+		                        } ?></textarea>
+                        
+                        </th>
                     </tr>
                     <tr>
                         <th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution

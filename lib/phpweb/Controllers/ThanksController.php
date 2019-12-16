@@ -19,7 +19,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 		    ?>
             <ul>
                 <li>

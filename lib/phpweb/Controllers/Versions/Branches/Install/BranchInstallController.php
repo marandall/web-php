@@ -6,9 +6,11 @@
 	
 	use phpweb\Controllers\Versions\Branches\BranchRouter;
 	use phpweb\Data\Branches\Branch;
+	use phpweb\Data\Branches\InstallHelpers\HelperSearch;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
 	
@@ -34,30 +36,9 @@
 					break;
 			}
 			
-			$methods = [
-				[
-					'label' => 'Ubuntu / Debian',
-					'icon'  => '/static/images/logos/installers/launchpad.png',
-					'url'   => $branch->getUrl() . 'install/ubuntu_ppa',
-				],
-				[
-					'label' => 'Windows IIS',
-					'icon'  => '/static/images/logos/installers/iis.png',
-					'url'   => $branch->getUrl() . 'install/iis',
-				],
-				[
-					'label' => 'Docker',
-					'icon'  => '/static/images/logos/installers/docker.png',
-					'url'   => $branch->getUrl() . 'install/docker',
-				],
-				[
-					'label' => 'Compile From Source',
-					'icon'  => '/static/images/logos/installers/php.png',
-					'url'   => $branch->getUrl() . 'install/source',
-				],
-			];
-			
 			$latest = $branch->getLatestRelease();
+			
+			$helpers = Services::get(HelperSearch::class)->findHelpers($branch);
 			
 			?>
             
@@ -72,16 +53,16 @@
             
             <div style="text-align: center; margin-bottom: 1em">
 				<?php
-					foreach ($methods as $method) {
+					foreach ($helpers as $method) {
 						?>
-                        <a style="display: inline-block; width: 200px; background-color: #eeeeee; padding: 10px; border: 1px solid #aaaaaa; text-align: center; margin: 10px"
-                           href="<?= htmlspecialchars($method['url']) ?>">
-                            <img src="<?= htmlspecialchars($method['icon']) ?>"
-                                 alt="<?= htmlspecialchars($method['label']) ?>"
+                        <a style="display: inline-block; width: 160px; background-color: #eeeeee; padding: 10px; border: 1px solid #aaaaaa; text-align: center; margin: 10px; border-radius: 10px"
+                           href="<?= htmlspecialchars($method->getUri()) ?>">
+                            <img src="<?= htmlspecialchars($method->getImageUri()) ?>"
+                                 alt="<?= htmlspecialchars($method->getDescription()) ?>"
                                  style="width: 100%"/>
                             
                             <div>
-	                            <?= htmlspecialchars($method['label']) ?>
+	                            <?= htmlspecialchars($method->getDescription()) ?>
                             </div>
                         </a>
 						<?php

@@ -14,6 +14,7 @@
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
 	use phpweb\UI\Templates\BasicCallbackPanel;
+	use phpweb\UI\Templates\LinkPanel;
 	
 	class ReleaseController extends ReleaseRouter
 	{
@@ -23,14 +24,19 @@
 			
 			$changelog = $release->getChangelogText();
 			
-			$this->addSidePanel(
-				new BasicCallbackPanel(
-					'Branch Info',
-					function () use ($release, $branch) {
-						$this->renderReleaseInfo($release, $branch);
-					}
-				)
-			);
+			/* list order is inverted so this goes at the top */
+			$release_list = new LinkPanel('Other Releases in ' . $branch->getBranchId());
+			foreach ($branch->getReleasesByVersion() as $branch_release) {
+				$release_list->add($branch_release->getUrl(), $branch_release->getVersionId());
+			}
+			$this->addSidePanel($release_list);
+			
+			
+			$branch_menu = new LinkPanel('PHP ' . $branch->getBranchId());
+			$branch_menu->add($branch->getUrl(), 'About ' . $branch->getBranchId());
+			$branch_menu->add($branch->getUrl() . 'install/', 'Download / Install');
+			$this->addSidePanel($branch_menu);
+			
 			
 			return $this->render(
 				function () use ($release, $branch, $changelog) {

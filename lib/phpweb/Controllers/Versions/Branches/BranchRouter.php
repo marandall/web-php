@@ -26,7 +26,7 @@
 			
 			/* include the branch navigation panel on every page that uses this router */
 			$this->addSidePanel(
-				new BasicCallbackPanel('', function() use ($branch) {
+				new BasicCallbackPanel('PHP ' . $branch->getBranchId(), function() use ($branch) {
 					$this->renderNavigation($branch);
 				})
 			);
@@ -37,24 +37,12 @@
 		private function renderNavigation(Branch $branch) {
 		    $base = $branch->getUrl();
 			?>
-            <aside>
-                <a href="<?= htmlspecialchars($base) ?>"><?= htmlspecialchars($branch->getBranchId()) ?></a>
-                <br />
-
-                <a href="<?= htmlspecialchars($base) ?>#history">Version History</a>
-                <br />
-                
-                <a href="<?= htmlspecialchars($base) ?>changelog">Combined Changelog</a>
-            </aside>
-			
-            <aside style="padding: 20px">
-                <h3 style="color: white">Install Guides</h3>
-
-                <a href="<?= htmlspecialchars($base) ?>install/iis">Internet Information Services</a>
-                <br />
-                <a href="<?= htmlspecialchars($base) ?>install/ubuntu_ppa">Ubuntu (PPA)</a>
-            </aside>
-   
+            <ul style="margin-bottom: 0px">
+                <li><a href="<?= htmlspecialchars($base) ?>">About <?= htmlspecialchars($branch->getBranchId()) ?></a></li>
+                <li><a href="<?= htmlspecialchars($base) ?>#history">Version History</a></li>
+                <li><a href="<?= htmlspecialchars($base) ?>changelog">Combined Changelog</a></li>
+                <li><a href="<?= htmlspecialchars($base) ?>install/">Download / Install </a></li>
+            </ul>
 			<?php
 		}
 		

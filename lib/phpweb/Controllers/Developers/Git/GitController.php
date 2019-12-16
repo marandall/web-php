@@ -42,7 +42,7 @@
             <?php
         }
 		
-		protected function renderContents() {
+		public function renderContents() {
 			?>
             <p>
                 If you wish to get the latest PHP source tree, you can obtain it through Git.

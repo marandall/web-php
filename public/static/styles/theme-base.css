@@ -378,13 +378,6 @@ a {
     text-decoration:none;
 }
 
-hr {
-    margin:1.5rem 0;
-    border:0;
-    height:0;
-    border-top:.25rem solid #99c;
-}
-
 .navbar .brand img {
     padding:0;
     opacity:.75;

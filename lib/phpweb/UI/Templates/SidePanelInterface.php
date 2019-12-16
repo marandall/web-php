@@ -6,5 +6,6 @@
 	
 	interface SidePanelInterface
 	{
+		public function getTitle(): string;
 		public function draw();
 	}

@@ -17,7 +17,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
             // Put credits information to $credits
 			ob_start();
 			phpcredits();

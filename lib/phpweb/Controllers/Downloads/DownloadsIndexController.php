@@ -6,9 +6,11 @@
 	
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\Branches;
+	use phpweb\Data\Branches\InstallHelpers\HelperSearch;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services;
 	use phpweb\UI\Templates\PHPWebTemplate;
 	
 	class DownloadsIndexController extends PHPWebTemplate
@@ -42,31 +44,52 @@
 				$current = ($index === 0);
 				?>
 
-                <h3>
+                <h2>
 					<?= htmlspecialchars(
 						($current ? 'Current Stable' : 'Old Stable') . ' ' . $latest->getVersionId()
 					) ?>
-                </h3>
-                
-                <?php
-                    $support = $branch->getStability();
-                    if ($support === StabilityEnum::SECURITY) {
-                        ?>
-                        <div style="padding: 10px; margin-bottom: 1em">
-                            <span style="font-weight: bold">Advisory: </span>
-                            The PHP <?= htmlspecialchars($branch->getBranchId())?> branch is currently only receiving security updates until
-                            <?= htmlspecialchars($branch->getEolSecurityDate()->format('d M Y')) ?>
-                            and it is recommended that you make plans to upgrade to the latest branch.
-                        </div>
-                        <?php
-                    }
-                ?>
-                
+                </h2>
+				
+				<?php
+				$helpers = Services::get(HelperSearch::class)->findHelpers($branch);
+				$support = $branch->getStability();
+				if ($support === StabilityEnum::SECURITY) {
+					?>
+                    <div style="padding: 10px; margin-bottom: 1em">
+                        <span style="font-weight: bold">Advisory: </span>
+                        The PHP <?= htmlspecialchars($branch->getBranchId()) ?> branch is currently only receiving
+                        security updates until
+						<?= htmlspecialchars($branch->getEolSecurityDate()->format('d M Y')) ?>
+                        and it is recommended that you make plans to upgrade to the latest branch.
+                    </div>
+					<?php
+				}
+				?>
+
                 View the release announcement and changelog for
-                <a href="<?= htmlspecialchars($latest->getUrl()) ?>"><?= htmlspecialchars($latest->getVersionId()) ?></a>.
-                <br />
-                <br />
-                
+                <a href="<?= htmlspecialchars($latest->getUrl()) ?>"><?= htmlspecialchars(
+						$latest->getVersionId()
+					) ?></a>.
+                <br/>
+                <br/>
+
+                <table class="standard" style="width: 100%">
+                    <tbody>
+					<?php foreach ($helpers as $helper) { ?>
+					    <tr>
+                            <td style="width: 80px">
+                                <img src="<?= htmlspecialchars($helper->getImageUri()) ?>" alt="<?= htmlspecialchars($helper->getDescription()) ?>" style="max-width: 100%" />
+                            </td>
+                            <td>
+                                <a href="<?= htmlspecialchars($helper->getUri()) ?>">Using <?= htmlspecialchars($helper->getDescription()) ?></a>
+                            </td>
+                        </tr>
+					
+					<?php } ?>
+                    </tbody>
+                </table>
+
+                <h4>Latest Source Code</h4>
                 <ul>
 					<?php
 						foreach ($latest->getSources() as $source) {
@@ -102,7 +125,7 @@
             <hr>
             <h2>GPG Keys</h2>
             <p>
-                The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.
+                The releases are tagged and signed in the <a href="/developers/git/">PHP Git Repository</a>.
                 The following official GnuPG keys of the current PHP Release Manager can be used
                 to verify the tags:
             </p>

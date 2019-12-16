@@ -22,13 +22,13 @@
 		}
 		
 		public function draw() {
-			?>
-			<div>
-				<h2><?= htmlspecialchars($this->title) ?></h2>
-				<div>
-					<?= $this->contents ?>
-				</div>
-			</div>
-			<?php
+			echo $this->contents;
+		}
+		
+		/**
+		 * @return string
+		 */
+		public function getTitle(): string {
+			return $this->title;
 		}
 	}

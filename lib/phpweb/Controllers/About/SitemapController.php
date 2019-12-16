@@ -17,7 +17,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 			?>
 			<h2>News</h2>
 			<ul>

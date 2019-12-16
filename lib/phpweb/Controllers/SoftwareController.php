@@ -17,7 +17,7 @@
 			return $this->render([$this, 'renderContents']);
 		}
 		
-		protected function renderContents() {
+		public function renderContents() {
 		    ?>
             <p>
                 This page contains a list of sites where you can find software distributed
