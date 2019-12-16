@@ -1502,14 +1502,8 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 @media (min-width: 768px) {
 
-  .navbar-fixed-top {
-    top: 0;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    transform: translateZ(0);
-  }
   body {
-    margin:3.25rem 0 0;
+    margin: 0;
   }
   #breadcrumbs {
     display:block;
@@ -1526,13 +1520,6 @@ div.soft-deprecation-notice blockquote.sidebar {
   #intro .blurb, #layout-content {
     float:left;
     width:75%;
-  }
-  .navbar-fixed-top {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    margin-bottom: 0;
   }
 }
 

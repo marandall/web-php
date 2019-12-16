@@ -109,3 +109,12 @@ a:hover { text-decoration: underline; }
     background-color: #fafafa;
     padding: 0.5em;
 }
+
+.r2-outer {
+    background-color: #ffffff;
+    color: black;
+}
+
+.r2-inner {
+    background-color: white;
+}

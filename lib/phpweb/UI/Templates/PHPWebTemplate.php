@@ -47,13 +47,6 @@
 		
 		/** @var array[] */
 		private $page_headers = [
-			'main'          => [
-				'url'      => '/',
-				'title'    => '',
-				'sections' => [
-				
-				],
-			],
 			'downloads'     => [
 				'url'      => '/downloads/',
 				'title'    => 'Download / Install',

@@ -31,7 +31,7 @@
 			
 			if (count($matches) === 0) {
 				preg_match_all('|<h3>(.*)</h3>|u', $inner_html, $matches, PREG_SET_ORDER);
-            }
+			}
 			
 			if (count($matches) !== 0) {
 				
@@ -92,8 +92,8 @@
             </head>
             <body>
 
-            <nav id="head-nav" class="navbar navbar-fixed-top">
-                <div class="navbar-inner clearfix">
+            <nav id="head-nav" class="navbar">
+                <div class="navbar-inner clearfix" style="width: 1200px; margin-left: auto; margin-right: auto">
                     <a href="/" class="brand"><img src="/static/images/logos/php-logo.svg" width="48" height="24"
                                                    alt="php"></a>
                     <div id="mainmenu-toggle-overlay"></div>
@@ -126,32 +126,33 @@
                 </div>
             </div>
 
-            <div class="r2-outer" style="width: 100%; background-color: white; color: black">
-                <div style="height: 15px"></div>
-                <div style="width: 1200px; display: grid; grid-template-columns: auto 330px; margin-left: auto; margin-right: auto; grid-column-gap: 10px">
-                    <div class="r2-inner-left" style="background-color: #ffffff">
-                        <div style="padding: 10px; padding-left: 0">
-							
-							<?php foreach ($tpl->getErrorPanels() as $panel) { ?>
-                                <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
-									<?php $panel->draw(); ?>
+            <div class="r2-outer" style="width: 100%">
+                <div class="r2-inner" style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
+                    <div style="display: grid; grid-template-columns: auto 330px;  grid-column-gap: 10px">
+                        <div class="r2-inner-left" style="background-color: #ffffff">
+                            <div style="padding: 10px; padding-left: 0">
+								
+								<?php foreach ($tpl->getErrorPanels() as $panel) { ?>
+                                    <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
+										<?php $panel->draw(); ?>
+                                    </div>
+								<?php } ?>
+								
+								<?= $inner_html ?>
+                            </div>
+                        </div>
+                        <div class="r2-inner-nav">
+							<?php foreach ($panels as $panel) { ?>
+                                <div class="r2-side-panel">
+                                    <div class="r2-side-panel-title">
+										<?= htmlspecialchars($panel->getTitle()) ?>
+                                    </div>
+                                    <div class="r2-side-panel-contents">
+										<?php $panel->draw(); ?>
+                                    </div>
                                 </div>
 							<?php } ?>
-							
-							<?= $inner_html ?>
                         </div>
-                    </div>
-                    <div class="r2-inner-nav">
-						<?php foreach ($panels as $panel) { ?>
-                            <div class="r2-side-panel">
-                                <div class="r2-side-panel-title">
-									<?= htmlspecialchars($panel->getTitle()) ?>
-                                </div>
-                                <div class="r2-side-panel-contents">
-									<?php $panel->draw(); ?>
-                                </div>
-                            </div>
-						<?php } ?>
                     </div>
                 </div>
             </div>
@@ -182,7 +183,8 @@
 				?>
                 <div style="line-height: 1em; display: none; width: 100%; height: 200px; background-color: #eeeeee; position: fixed; top: 48px; left: 0; right: 0; z-index: 10000"
                      class="nav-<?= $nav_id ?> top-menu" data-menu="<?= $nav_id ?>">
-                    <div class="inner-align" style="margin-left: auto; margin-right: auto; padding: 10px">
+                    <div class="inner-align"
+                         style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
                         <div style="display: flex; flex-direction: row">
 							<?php foreach ($header['sections'] as $category_label => $links) { ?>
                                 <div style="padding: 10px; width: 200px">
