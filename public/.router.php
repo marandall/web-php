@@ -31,6 +31,8 @@
 		'/security/'              => '/manual/en/security.php',
 		'/build-setup.php'        => '/developers/tools/build-setup',
 		'/git.php'                => '/developers/git/',
+		'/releases/feed.php'      => '/versions/api/supported.atom',
+		'/releases/active.php'    => '/versions/api/supported.json',
 	];
 	
 	$routes = [
@@ -134,6 +136,18 @@
 		$uri = substr($uri, 0, $pos);
 	}
 	$uri = rawurldecode($uri);
+	
+	/*
+	 * There are several redirects which exist because this is a major redesign of
+	 * the URI structure.
+	 */
+	
+	$redirect = $redirects[$uri] ?? null;
+	if ($redirect !== null) {
+		header('location: ' . Site::$BaseUrl . $redirect);
+		exit();
+	}
+	
 	
 	
 	$handler = null;
