@@ -27,9 +27,11 @@
 			});
 			
 			?>
-			This is the human-readable index of every version of PHP. There are also various APIs available
-			to allow you to read the data programmatically such as <a href="api/releases.atom" target="_blank">releases.atom</a>
-			and <a href="api/supported.atom" target="_blank">supported.atom</a>.
+            <p>
+                This is the human-readable index of every version of PHP. There are also various APIs available
+                to allow you to read the data programmatically such as <a href="api/releases.atom" target="_blank">releases.atom</a>
+                and <a href="api/supported.atom" target="_blank">supported.atom</a>.
+            </p>
 			<?php
 			
 			foreach ($branches as $branch) {
