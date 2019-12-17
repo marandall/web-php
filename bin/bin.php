@@ -7,5 +7,7 @@
 	$application->add(new \phpweb\Data\Conferences\Tasks\ExtractTasksFromNews());
 	$application->add(new \phpweb\Data\Release\Commands\ReleasesToXMLCommand());
 	$application->add(new \phpweb\Data\Release\Commands\CompileReleasesCommand());
+	$application->add(new \phpweb\Data\Videos\Commands\AddYoutubeVideoCommand());
+	$application->add(new \phpweb\Data\Videos\Commands\CompileVideosCommand());
 	
 	$application->run();

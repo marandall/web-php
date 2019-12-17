@@ -11,4 +11,8 @@
 		public static function GetDataDir(): string {
 			return realpath(__DIR__ . '/../../../data');
 		}
+		
+		public static function GetContentDir(): string {
+			return realpath(__DIR__ . '/../../../public/static/content');
+		}
 	}

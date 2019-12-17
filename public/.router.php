@@ -78,7 +78,7 @@
 		'/community/conferences/'                                      => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
 		'/community/conferences/archive'                               => \phpweb\Controllers\Community\Conferences\ConferencesArchiveController::class,
 		'/community/conferences/{conference}/'                         => \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController::class,
-		
+		'/community/videos/'                                           => \phpweb\Controllers\Community\Videos\VideosIndexController::class,
 		
 		/* search terms */
 		'/search/search.php'                                           => \phpweb\Controllers\Search\SearchController::class,
