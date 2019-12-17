@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<video id="yt_jbwgvurb-q8"><type>youtube</type><thumbnail>yt_jbwgvurb-q8.jpg</thumbnail><group>php_barcelona_2019</group><title>Nikita Popov &#x2013; PHP Performance Trivia</title><description>This talk discusses various issues of low-level PHP performance, such as: When is it more efficient to use arrays or objects? What causes catastrophic garbage collection? Does adding type annotations make PHP faster or slower?
+
+I will answer these types of question with a (shallow) dive into PHP internals, touching on various topics like value representation, bytecode optimization and GC.</description><watch_url>https://www.youtube.com/watch?v=JBWgvUrb-q8</watch_url><embeddable>0</embeddable><added_time>2019-12-17T01:30:35+00:00</added_time><added_by>marandall</added_by><rel_conference>php_barcelona_2019</rel_conference></video>

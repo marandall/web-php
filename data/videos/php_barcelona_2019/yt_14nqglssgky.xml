@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<video id="yt_14nqglssgky"><type>youtube</type><thumbnail>yt_14nqglssgky.jpg</thumbnail><group>php_barcelona_2019</group><title>Lorna Mitchell &#x2013; Working with webhooks</title><description>In an increasingly connected world, APIs are key to great tools and effective workflows.
+
+What is better than an API? A webhook of course! Webhooks are a key building block of a modern application, allowing systems to exchange data in response to events.
+
+This session covers the basic theory of webhooks and shows some examples of how to handle them in your own applications. We'll also talk about when webhooks are a helpful design choice, and some pitfalls to look out for when you're working with them!
+
+This session is recommended for anyone interested in teaching their applications to play nicely with others.</description><watch_url>https://www.youtube.com/watch?v=14nQGlSSGkY</watch_url><embeddable>0</embeddable><added_time>2019-12-17T01:30:32+00:00</added_time><added_by>marandall</added_by><rel_conference>php_barcelona_2019</rel_conference></video>

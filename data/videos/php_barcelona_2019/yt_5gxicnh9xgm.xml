@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<video id="yt_5gxicnh9xgm"><type>youtube</type><thumbnail>yt_5gxicnh9xgm.jpg</thumbnail><group>php_barcelona_2019</group><title>Chris Riley &#x2013; Nuclear powered software security</title><description>It seems to be almost a weekly occurrence that another company makes the news headlines for being hacked and in the process disclosing sensitive user data and company secrets. These security meltdowns can cause catastrophic effects to the company in lost user trust and huge costs putting things right.
+
+A nuclear power plant is considered one of the most dangerous things mankind has built, yet they very rarely go wrong. The systems engineering that goes into making nuclear power plants safe is a fascinating topic to study but on the surface it seems entirely irrelevant to PHP developers.
+
+In this talk I'm going to show you how this level of safety is achieved, what happens when it goes wrong and then see what lessons we, as PHP developers, can learn from it to help us secure our applications from meltdown.</description><watch_url>https://www.youtube.com/watch?v=5GXiCnh9XgM</watch_url><embeddable>0</embeddable><added_time>2019-12-17T01:30:37+00:00</added_time><added_by>marandall</added_by><rel_conference>php_barcelona_2019</rel_conference></video>

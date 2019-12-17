@@ -1,0 +1,16 @@
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=14nQGlSSGkY php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=Qa_xVjTiOUw php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=MjpiHy_e8kQ php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=F_AVGKdlXpI php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=9xcfEAEjjnA php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=ZATfsy9wOG4 php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=-Fe-qUSUl7Q php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=JBWgvUrb-q8 php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=mT6hop_dKKI php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=kpsw6IYrUXE php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=FXo85zItAzg php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=Tt6WwCYhWMU php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=GRB0sTweUVY php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=5GXiCnh9XgM php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=Nh-AMUzDqlQ php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
+c:\php\php74\php bin.php videos:add-yt https://www.youtube.com/watch?v=tqdpwuF3mVc php_barcelona_2019 --added-by=marandall --conference=php_barcelona_2019
