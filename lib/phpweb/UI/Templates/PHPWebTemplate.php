@@ -83,6 +83,7 @@
                     'Conferences' => [
 						'/community/conferences/'        => 'Conferences & CFP',
 						'/community/conferences/archive' => 'Archive',
+						'/community/videos/' => 'Videos and Talks',
 					],
 					'Mailing Lists'        => [
 						'/lists/' => 'Mailing List Guide',
