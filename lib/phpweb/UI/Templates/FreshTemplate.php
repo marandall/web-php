@@ -113,7 +113,7 @@
                                                    alt="php"></a>
                     <div id="mainmenu-toggle-overlay"></div>
                     <input type="checkbox" id="mainmenu-toggle">
-                    <ul class="nav">
+                    <ul class="nav" style="line-height: 25px">
 						<?php foreach ($tpl->getPageHeaders() as $k => $header) { ?>
                             <li class="<?= ($tpl->getActivePage(
 								) === $k) ? 'active' : '' ?> top-menu top-menu-<?= htmlspecialchars(

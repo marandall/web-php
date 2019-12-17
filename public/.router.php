@@ -88,6 +88,7 @@
 		'/manual/help-translate.php'                                   => \phpweb\Controllers\Manual\HelpTranslateController::class,
 		'/manual/php4.php'                                             => \phpweb\Controllers\Manual\PHP4ManualArchiveController::class,
 		'/manual/php3.php'                                             => \phpweb\Controllers\Manual\PHP3ManualArchiveController::class,
+		'/manual/en/{manual_path}.php'                                 => \phpweb\Controllers\Manual\En\EnglishManualRouter::class,
 		
 		/* release information */
 		'/versions/'                                                   => \phpweb\Controllers\Versions\VersionsIndexController::class,
@@ -123,6 +124,7 @@
 		'/license/'                                                    => \phpweb\Controllers\License\LicenseIndexController::class,
 		'/license/contrib-guidelines-code.php'                         => \phpweb\Controllers\License\ContributorGuidelinesController::class,
 		'/license/distrib-guidelines-code'                             => \phpweb\Controllers\License\DistributionGuidelinesController::class,
+	
 	];
 	
 	$dispatcher = FastRoute\simpleDispatcher(

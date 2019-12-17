@@ -126,3 +126,44 @@ a:hover { text-decoration: underline; }
     background: #cccccc;
 }
 
+.r2-manual .methodsynopsis {
+    padding: 1em;
+    background: #eeeeee;
+}
+
+.r2-manual .phpcode {
+    background: #F2F2F2;
+    padding: 10px;
+}
+
+.r2-manual .type {
+    color: #693;
+}
+
+.r2-manual .parameter {
+    color: #369;
+}
+
+.r2-manual .initializer {
+    color: #936;
+}
+
+.r2-manual .doctable  {
+    width: 100%;
+}
+
+.r2-manual .doctable thead tr {
+    background-color: #8892BF;
+}
+
+.r2-manual .doctable tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.r2-manual .doctable tbody th {
+    padding: 5px;
+}
+
+.r2-manual .doctable tbody td {
+    padding: 5px;
+}
