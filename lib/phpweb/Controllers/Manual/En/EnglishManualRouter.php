@@ -26,9 +26,19 @@
 				die('Manual page could not be fetched');
 			}
 			
+			$map = [
+				'ref'      => 'reference',
+				'function' => 'refentry',
+				'refs'     => 'set',
+				'class'    => 'reference',
+				'install'  => 'chapter',
+			];
+			
+			$seg    = explode('.', $manual_path);
+			$prefix = $seg[0];
 			
 			$inner = $this->clip(
-				$contents, '<div id="' . $manual_path . '" class="refentry">',
+				$contents, '<div id="' . $manual_path . '" class="' . ($map[$prefix] ?? 'reference') . '">',
 				'<section id="usernotes">',
 				-6
 			);
