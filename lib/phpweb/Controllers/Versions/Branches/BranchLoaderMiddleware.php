@@ -9,15 +9,15 @@
 	use phpweb\Data\Branches\BranchRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\FreshTemplate;
+	use phpweb\UI\Templates\LinkPanel;
 	
 	class BranchLoaderMiddleware implements MiddlewareInterface
 	{
 		/** @var BranchRepository */
 		private $repository;
 		
-		public function __construct(BranchRepository  $repository) {
+		public function __construct(BranchRepository $repository) {
 			$this->repository = $repository;
 		}
 		
@@ -34,15 +34,16 @@
 			
 			/* include the branch navigation panel on every page that uses this router */
 			if ($request->has(FreshTemplate::class)) {
-				$request->get(FreshTemplate::class)
-					->addSidePanel(
-						new BasicCallbackPanel('PHP ' . $branch->getBranchId(), function() use ($branch) {
-							$this->renderNavigation($branch);
-						})
-					);
+				$nav = new LinkPanel('PHP ' . $branch->getBranchId());
+				$nav->add($branch->getUrl(), 'About');
+				$nav->add($branch->getUrl() . '#history', 'Version History');
+				$nav->add($branch->getUrl() . 'changelog', 'Combined Changelog');
+				$nav->add($branch->getUrl() . 'install/', 'Download / Install');
+				
+				$request->get(FreshTemplate::class)->addSidePanel($nav);
 			}
 			
 			$request->store(Branch::class, '', $branch);
-			$next($request);
+			return $next($request);
 		}
 	}
