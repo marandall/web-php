@@ -4,7 +4,6 @@
 	
 	namespace phpweb\Controllers\Versions\API;
 	
-	use Cassandra\Date;
 	use phpweb\Data\Branches\Branches;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;

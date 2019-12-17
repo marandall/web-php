@@ -5,8 +5,9 @@
 	namespace phpweb\Data\Release;
 	
 	use phpweb\Config\Site;
+	use phpweb\Services\Builder\InjectableService;
 	
-	class ReleasesRepository
+	class ReleasesRepository implements InjectableService
 	{
 		/** @var Release[]|null */
 		private $cache = null;
@@ -29,5 +30,9 @@
 			}
 			
 			return $this->cache = $output;
+		}
+		
+		public function find(string $release_version): ?Release {
+			return $this->all()[$release_version] ?? null;
 		}
 	}

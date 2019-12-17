@@ -4,19 +4,28 @@
 	
 	namespace phpweb\Controllers\Community\Videos;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Videos\VideosRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class VideosIndexController extends PHPWebTemplate
+	class VideosIndexController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Community and Conference Videos');
-			$this->setActivePage('community');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Community and Conference Videos')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

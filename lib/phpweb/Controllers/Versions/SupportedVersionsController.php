@@ -4,24 +4,31 @@
 	
 	namespace phpweb\Controllers\Versions;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
 	use phpweb\Data\Branches\Branches;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Tools\Formatting;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class SupportedVersionsController extends PHPWebTemplate
+	class SupportedVersionsController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Supported Versions');
-			$this->setActivePage('docs');
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				UiReleasesMiddleware::class,
+				$this,
+			];
 		}
 		
-		private function formatInterval(\DateTime $time, \DateTime $when) {
-		    return Formatting::FormatInterval($time, $when);
-        }
+		public function __invoke(Request $request, ?callable $next): Response {
+		    $request->get(FreshTemplate::class)
+                ->setPageTitle('Supported Versions')
+                ->render([$this, 'renderContents']);
+		}
 		
 		public function renderContents() {
 			?>
@@ -58,18 +65,20 @@
                 <tbody>
 				
 				<?php
-                    $now = new \DateTime();
+					$now = new \DateTime();
 					foreach (Branches::GetBranches() as $branch) {
 						$stability = $branch->getStability();
 						if (!\in_array($stability, [StabilityEnum::STABLE, StabilityEnum::SECURITY], true)) {
 							continue;
 						}
 						
-						$first_release = $branch->getInitialRelease();
-						$latest_release    = $branch->getLatestRelease();
+						$first_release  = $branch->getInitialRelease();
+						$latest_release = $branch->getLatestRelease();
 						
 						$initial = $first_release ? $first_release->getDate() : new \DateTime();
-						$until   = $first_release ? $first_release->getDate()->add(new \DateInterval('P2Y')) : new \DateTime();
+						$until   = $first_release ? $first_release->getDate()->add(
+							new \DateInterval('P2Y')
+						) : new \DateTime();
 						$eol     = $branch->getEolSecurityDate();
 						
 						?>
@@ -85,12 +94,12 @@
                             <td><?php echo htmlspecialchars($until->format('j M Y')) ?></td>
                             <td class="collapse-phone">
                                 <em><?= htmlspecialchars(
-			                            $this->formatInterval($until, $now)
+										$this->formatInterval($until, $now)
 									) ?></em>
                             </td>
                             <td><?php echo htmlspecialchars($eol->format('j M Y')) ?></td>
                             <td class="collapse-phone"><em><?php echo htmlspecialchars(
-			                            $this->formatInterval($eol, $now)
+										$this->formatInterval($eol, $now)
 									) ?></em></td>
                         </tr>
 						<?php
@@ -102,8 +111,8 @@
             <p>
                 Or, visualised as a calendar:
             </p>
-			
-            <img src="./api/unsupported_chart.svg" />
+
+            <img src="./api/unsupported_chart.svg"/>
 
             <h4>Key</h4>
 
@@ -132,5 +141,9 @@
                 </tr>
             </table>
 			<?php
+		}
+		
+		private function formatInterval(\DateTime $time, \DateTime $when) {
+			return Formatting::FormatInterval($time, $when);
 		}
 	}

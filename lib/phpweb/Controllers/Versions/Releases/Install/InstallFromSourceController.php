@@ -4,17 +4,32 @@
 	
 	namespace phpweb\Controllers\Versions\Release\Install;
 	
-	use phpweb\Controllers\Versions\Releases\ReleaseRouter;
-	use phpweb\Data\Branches\Branch;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
+	use phpweb\Controllers\Versions\Releases\ReleaseLoaderMiddleware;
 	use phpweb\Data\Release\Release;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class InstallFromSourceController extends ReleaseRouter
+	class InstallFromSourceController implements ControllerInterface
 	{
-		protected function invokeForRelease(Request $request, Release $release, Branch $branch): Response {
-			$this->setPageTitle('Install ' . $release->getVersionId() . ' From Source');
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				UiReleasesMiddleware::class,
+				ReleaseLoaderMiddleware::class,
+				$this
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$release = $request->get(Release::class);
+			
+			return $request->get(FreshTemplate::class)
+				->setPageTitle('Install ' . $release->getVersionId() . ' From Source')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

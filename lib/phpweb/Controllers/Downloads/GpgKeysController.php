@@ -4,19 +4,29 @@
 	
 	namespace phpweb\Controllers\Downloads;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\GpgKeys;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class GpgKeysController extends PHPWebTemplate
+	class GpgKeysController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('GPG Keys');
-			$this->setActivePage('download');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('GPG Keys')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 			?>

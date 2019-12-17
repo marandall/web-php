@@ -2,66 +2,71 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Controllers\Lists;
+	namespace phpweb\Controllers\Community\Lists;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\MailingLists;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Tools\EmailValidation;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\BasicPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class MailingListsIndexController extends PHPWebTemplate
+	class MailingListsIndexController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Mailing Lists');
-			$this->setActivePage('community');
-			
-			if (isset($_POST['email'])) {
-				$this->submit();
-			}
-			
-			$this->addSidePanel(new BasicCallbackPanel('Unsubscribe Help', [$this, 'renderPanel']));
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+                ->addSidePanel(new BasicCallbackPanel('Unsubscribe Help', fn() => $this->renderPanel()))
+				->setPageTitle('Mailing Lists')
+				->render([$this, 'renderContents']);
 		}
 		
 		protected function submit(Request $fr_request) {
 			// No error found yet
-			$error = "";
+			$error = '';
 			
 			// Check email address
 			if (empty($_POST['email']) || $_POST['email'] === 'user@example.com' ||
 				$_POST['email'] === 'fake@from.net' || !EmailValidation::IsEmailable($_POST['email'])) {
-				$error = "You forgot to specify an email address to be added to the list, or specified an invalid address." .
-					"<br>Please go back and try again.";
+				$error = 'You forgot to specify an email address to be added to the list, or specified an invalid address.' .
+					'<br>Please go back and try again.';
 			}
 			
 			// Seems to be a valid email address
 			else {
 				// Decide on request mode, email address part and IP address
 				$request = strtolower($_POST['action']);
-				if ($request !== "subscribe" && $request !== "unsubscribe") {
-					$request = "subscribe";
+				if ($request !== 'subscribe' && $request !== 'unsubscribe') {
+					$request = 'subscribe';
 				}
 				$remote_addr = $fr_request->getClientIp();
 				
 				// Get in contact with master server to [un]subscribe the user
 				$result = posttohost(
-					"http://master.php.net/entry/subscribe.php",
+					'http://master.php.net/entry/subscribe.php',
 					[
-						"request"  => $request,
-						"email"    => $_POST['email'],
-						"maillist" => $_POST['maillist'],
-						"remoteip" => $remote_addr,
-						"referer"  => 'https://' . $_SERVER['HTTP_HOST'] . "/lists/",
+						'request'  => $request,
+						'email'    => $_POST['email'],
+						'maillist' => $_POST['maillist'],
+						'remoteip' => $remote_addr,
+						'referer'  => 'https://' . $_SERVER['HTTP_HOST'] . '/lists/',
 					]
 				);
 				
 				// Provide error if unable to [un]subscribe
 				if ($result) {
-					$error = "We were unable to subscribe you due to some technical problems.<br>" .
-						"Please try again later.";
+					$error = 'We were unable to subscribe you due to some technical problems.<br>' .
+						'Please try again later.';
 				}
 			}
 			
@@ -75,7 +80,7 @@
             <p>
                 If you have trouble getting off from any of our mailing lists, or
                 would like to unsubscribe from a mailing list not listed here, we
-                have more information for you on <a href="/lists/unsubscribe">the
+                have more information for you on <a href="/community/lists/unsubscribe">the
                     unsubscription page</a>.
             </p>
 
@@ -165,7 +170,7 @@
                     Rules</a>.
             </p>
 
-            <form method="post" action="/lists/">
+            <form method="post" action="/community/lists/">
 
                 <h2>General Mailing Lists</h2>
 				

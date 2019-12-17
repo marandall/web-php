@@ -4,18 +4,27 @@
 	
 	namespace phpweb\Controllers;
 	
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class SoftwareController extends PHPWebTemplate
+	class SoftwareController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('PHP Software');
-			$this->setActivePage('help');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Useful Software')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 		    ?>
@@ -25,17 +34,17 @@
             </p>
 
             <p>
-				<?php echo make_image("logos/php-icon-white.gif", $alt = "php.net", "left") ?>&nbsp;
+				<?php echo make_image('logos/php-icon-white.gif', $alt = 'php.net', 'left') ?>&nbsp;
                 <a href="http://php.net/">php.net</a><br>
                 &nbsp;Main site for the PHP project.<br clear="left">
             </p>
             <p>
-				<?php echo make_image("pear-icon.png", $alt = "pear.php.net", "left") ?>&nbsp;
+				<?php echo make_image('pear-icon.png', $alt = 'pear.php.net', 'left') ?>&nbsp;
                 <a href="http://pear.php.net/">pear.php.net</a><br>
                 &nbsp;The PEAR project where you can find reusable components for PHP .<br clear="left">
             </p>
             <p>
-				<?php echo make_image("pecl-icon.png", $alt = "pecl.php.net", "left") ?>&nbsp;
+				<?php echo make_image('pecl-icon.png', $alt = 'pecl.php.net', 'left') ?>&nbsp;
                 <a href="http://pecl.php.net/">pecl.php.net</a><br>
                 &nbsp;The PECL project where you can find PHP extensions.<br clear="left">
             </p>

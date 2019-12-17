@@ -4,6 +4,9 @@
 	
 	namespace phpweb\Controllers\Versions\Branches;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
@@ -12,17 +15,29 @@
 	use phpweb\Tools\ReleaseTableRenderer;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class BranchController extends BranchRouter
+	class BranchController implements ControllerInterface
 	{
-		protected function invokeForBranch(Request $request, Branch $branch): Response {
-			$this->setPageTitle('PHP ' . $branch->getBranchId());
-			
-			return $this->render(
-				function () use ($branch) {
-					$this->renderContents($branch);
-				}
-			);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				UiReleasesMiddleware::class,
+				BranchLoaderMiddleware::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$branch = $request->get(Branch::class);
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('PHP ' . $branch->getBranchId())
+				->render(
+					function () use ($branch) {
+						$this->renderContents($branch);
+					}
+				);
 		}
 		
 		public function renderContents(Branch $branch) {
@@ -59,8 +74,8 @@
 					$branch->getBranchId()
 				) ?> have been released:
             </div>
-            
+			
 			<?php
-            Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
+			Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
 		}
 	}

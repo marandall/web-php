@@ -12,26 +12,29 @@
 	class Request
 	{
 		/** @var string */
-		private $url;
+		private string $url;
 		
 		/** @var PropertyBag */
-		private $query;
+		private PropertyBag $query;
 		
 		/** @var PropertyBag */
-		private $post;
+		private PropertyBag $post;
 		
 		/** @var PropertyBag */
-		private $server;
+		private PropertyBag $server;
 		
 		
 		/** @var Visitor */
-		private $visitor;
+		private Visitor $visitor;
 		
 		/** @var PropertyBag */
-		private $cookies;
+		private PropertyBag $cookies;
 		
 		/** @var PropertyBag */
-		private $attributes;
+		private PropertyBag $attributes;
+		
+		/** @var object[]  */
+		private array $object_cache = [];
 		
 		public function __construct(
 			string $url,
@@ -84,5 +87,22 @@
 		
 		public function getClientIp(): string {
 			return $this->server->getString('REMOTE_ADDR', '');
+		}
+		
+		public function get(string $class_id, string $instance = ''): object {
+			$obj = $this->object_cache[$class_id . ':' . $instance];
+			if ($obj === null) {
+				throw new \DomainException('Could not find container property ' . $class_id);
+			}
+			
+			return $obj;
+		}
+		
+		public function has(string $class_id, string $instance = ''): bool {
+			return isset($this->object_cache[$class_id . ':' . $instance]);
+		}
+		
+		public function store(string $class_id, string $instance, object $obj) {
+			$this->object_cache[$class_id . ':' . $instance] = $obj;
 		}
 	}

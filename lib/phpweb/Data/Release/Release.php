@@ -152,9 +152,15 @@
 					$changelog = substr($changelog_contents, $changelog_start, $changelog_end - $changelog_start + 10);
 					$changelog = preg_replace('/\<h3\>(.+?)\<\/h3\>/', '', $changelog);
 					
-					ob_start();
-					eval('?>' . $changelog);
-					return ob_get_clean();
+					try {
+						ob_start();
+						eval('?>' . $changelog);
+						return ob_get_clean();
+					}
+					catch (\Error $ex) {
+						ob_get_clean();
+						return '-- Cannot Parse --';
+					}
 				}
 			}
 			

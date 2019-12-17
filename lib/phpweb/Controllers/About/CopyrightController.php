@@ -4,29 +4,38 @@
 	
 	namespace phpweb\Controllers\About;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class CopyrightController extends PHPWebTemplate
+	class CopyrightController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Website Copyright');
-			$this->setActivePage('footer');
-			
-			$this->addSidePanel(new BasicCallbackPanel('', [$this, 'renderPanel']));
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				AboutMiddleware::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request->get(FreshTemplate::class)
+				->setPageTitle('Website Copyright')
+				->addSidePanel(new BasicCallbackPanel('About', fn() => $this->renderPanel()))
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderPanel() {
 			?>
-			<a name="license"></a>
-			<h3>PHP License</h3>
-			<p>
-				For information on the PHP License (i.e. using the PHP language),
-				<a href="/public/static/license/">see our licensing information page</a>.
-			</p>
+            <a name="license"></a>
+            <h3>PHP License</h3>
+            <p>
+                For information on the PHP License (i.e. using the PHP language),
+                <a href="/public/static/license/">see our licensing information page</a>.
+            </p>
 			<?php
 		}
 		
@@ -34,7 +43,7 @@
 			?>
             <p>
                 The code, text, PHP logo, and graphical elements on this website
-                and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date("Y") ?>
+                and the mirror websites (the "Site") are Copyright &copy; 2001-<?php echo date('Y') ?>
                 the <a href="/credits.php">PHP Group</a>. All rights reserved.
             </p>
 

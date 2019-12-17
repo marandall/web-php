@@ -55,319 +55,319 @@
 		public const uri_aliases = [
 			
 			# PHP page shortcuts
-			"download"      => "downloads",
-			"getphp"        => "downloads",
-			"getdocs"       => "download-docs",
-			"documentation" => "docs",
-			"mailinglists"  => "mailing-lists",
-			"mailinglist"   => "mailing-lists",
-			"changelog"     => "ChangeLog-7",
-			"gethelp"       => "support",
-			"help"          => "support",
-			"unsubscribe"   => "unsub",
-			"subscribe"     => "mailing-lists",
-			"logos"         => "download-logos",
+			'download'      => 'downloads',
+			'getphp'        => 'downloads',
+			'getdocs'       => 'download-docs',
+			'documentation' => 'docs',
+			'mailinglists'  => 'mailing-lists',
+			'mailinglist'   => 'mailing-lists',
+			'changelog'     => 'ChangeLog-7',
+			'gethelp'       => 'support',
+			'help'          => 'support',
+			'unsubscribe'   => 'unsub',
+			'subscribe'     => 'mailing-lists',
+			'logos'         => 'download-logos',
 			
 			# manual shortcuts
-			"intro"         => "introduction",
-			"whatis"        => "introduction",
-			"whatisphp"     => "introduction",
-			"what_is_php"   => "introduction",
+			'intro'         => 'introduction',
+			'whatis'        => 'introduction',
+			'whatisphp'     => 'introduction',
+			'what_is_php'   => 'introduction',
 			
-			"windows" => "install.windows",
-			"win32"   => "install.windows",
+			'windows' => 'install.windows',
+			'win32'   => 'install.windows',
 			
-			"globals"                                => "language.variables.predefined",
-			"register_globals"                       => "security.globals",
-			"registerglobals"                        => "security.globals",
-			"manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
-			"magic_quotes"                           => "security.magicquotes",
-			"magicquotes"                            => "security.magicquotes",
-			"gd"                                     => "image",
-			"bcmath"                                 => "bc",
+			'globals'                                => 'language.variables.predefined',
+			'register_globals'                       => 'security.globals',
+			'registerglobals'                        => 'security.globals',
+			'manual/en/security.registerglobals.php' => 'security.globals', // fix for 4.3.8 configure
+			'magic_quotes'                           => 'security.magicquotes',
+			'magicquotes'                            => 'security.magicquotes',
+			'gd'                                     => 'image',
+			'bcmath'                                 => 'bc',
 			'streams'                                => 'book.stream',
-			"mongodb"                                => "set.mongodb",
+			'mongodb'                                => 'set.mongodb',
 			
-			"callback" => "language.pseudo-types",
-			"number"   => "language.pseudo-types",
-			"mixed"    => "language.pseudo-types",
-			"bool"     => "language.types.boolean",
-			"boolean"  => "language.types.boolean",
-			"int"      => "language.types.integer",
-			"integer"  => "language.types.integer",
-			"float"    => "language.types.float",
-			"string"   => "language.types.string",
-			"heredoc"  => "language.types.string",
-			"<<<"      => "language.types.string",
-			"object"   => "language.types.object",
-			"null"     => "language.types.null",
+			'callback' => 'language.pseudo-types',
+			'number'   => 'language.pseudo-types',
+			'mixed'    => 'language.pseudo-types',
+			'bool'     => 'language.types.boolean',
+			'boolean'  => 'language.types.boolean',
+			'int'      => 'language.types.integer',
+			'integer'  => 'language.types.integer',
+			'float'    => 'language.types.float',
+			'string'   => 'language.types.string',
+			'heredoc'  => 'language.types.string',
+			'<<<'      => 'language.types.string',
+			'object'   => 'language.types.object',
+			'null'     => 'language.types.null',
 			'callable' => 'language.types.callable',
 			
-			"htaccess"  => "configuration.changes",
-			"php_value" => "configuration.changes",
+			'htaccess'  => 'configuration.changes',
+			'php_value' => 'configuration.changes',
 			
-			"ternary"    => "language.operators.comparison",
-			"instanceof" => "language.operators.type",
-			"if"         => "language.control-structures",
-			"static"     => "language.variables.scope",
-			"global"     => "language.variables.scope",
-			"@"          => "language.operators.errorcontrol",
-			"&"          => "language.references",
-			"**"         => "language.operators.arithmetic",
-			"..."        => "functions.arguments",
-			"splat"      => "functions.arguments",
+			'ternary'    => 'language.operators.comparison',
+			'instanceof' => 'language.operators.type',
+			'if'         => 'language.control-structures',
+			'static'     => 'language.variables.scope',
+			'global'     => 'language.variables.scope',
+			'@'          => 'language.operators.errorcontrol',
+			'&'          => 'language.references',
+			'**'         => 'language.operators.arithmetic',
+			'...'        => 'functions.arguments',
+			'splat'      => 'functions.arguments',
 			
-			"dowhile" => "control-structures.do.while",
+			'dowhile' => 'control-structures.do.while',
 			
-			"tut"     => "tutorial",
-			"tut.php" => "tutorial", // BC
+			'tut'     => 'tutorial',
+			'tut.php' => 'tutorial', // BC
 			
-			"faq.php"       => "faq",      // BC
-			"bugs.php"      => "bugs",     // BC
-			"bugstats.php"  => "bugstats", // BC
-			"docs-echm.php" => "download-docs", // BC
+			'faq.php'       => 'faq',      // BC
+			'bugs.php'      => 'bugs',     // BC
+			'bugstats.php'  => 'bugstats', // BC
+			'docs-echm.php' => 'download-docs', // BC
 			
-			"odbc" => "uodbc", // BC
+			'odbc' => 'uodbc', // BC
 			
-			"links"     => "support", // BC
-			"links.php" => "support", // BC
-			"oracle"    => "oci8",
-			"_"         => "function.gettext",
-			"cli"       => "features.commandline",
+			'links'     => 'support', // BC
+			'links.php' => 'support', // BC
+			'oracle'    => 'oci8',
+			'_'         => 'function.gettext',
+			'cli'       => 'features.commandline',
 			
-			"oop4" => "language.oop",
-			"oop"  => "language.oop5",
+			'oop4' => 'language.oop',
+			'oop'  => 'language.oop5',
 			
-			"const"                    => "language.constants.syntax",
-			"class"                    => "language.oop5.basic",
-			"new"                      => "language.oop5.basic",
-			"extends"                  => "language.oop5.basic",
-			"clone"                    => "language.oop5.cloning",
-			"construct"                => "language.oop5.decon",
-			"destruct"                 => "language.oop5.decon",
-			"public"                   => "language.oop5.visibility",
-			"private"                  => "language.oop5.visibility",
-			"protected"                => "language.oop5.visibility",
-			"var"                      => "language.oop5.visibility",
-			"abstract"                 => "language.oop5.abstract",
-			"interface"                => "language.oop5.interfaces",
-			"interfaces"               => "language.oop5.interfaces",
-			"autoload"                 => "language.oop5.autoload",
-			"__autoload"               => "language.oop5.autoload",
-			"language.oop5.reflection" => "book.reflection", // BC
-			"::"                       => "language.oop5.paamayim-nekudotayim",
+			'const'                    => 'language.constants.syntax',
+			'class'                    => 'language.oop5.basic',
+			'new'                      => 'language.oop5.basic',
+			'extends'                  => 'language.oop5.basic',
+			'clone'                    => 'language.oop5.cloning',
+			'construct'                => 'language.oop5.decon',
+			'destruct'                 => 'language.oop5.decon',
+			'public'                   => 'language.oop5.visibility',
+			'private'                  => 'language.oop5.visibility',
+			'protected'                => 'language.oop5.visibility',
+			'var'                      => 'language.oop5.visibility',
+			'abstract'                 => 'language.oop5.abstract',
+			'interface'                => 'language.oop5.interfaces',
+			'interfaces'               => 'language.oop5.interfaces',
+			'autoload'                 => 'language.oop5.autoload',
+			'__autoload'               => 'language.oop5.autoload',
+			'language.oop5.reflection' => 'book.reflection', // BC
+			'::'                       => 'language.oop5.paamayim-nekudotayim',
 			
-			"__construct"  => "language.oop5.decon",
-			"__destruct"   => "language.oop5.decon",
-			"__call"       => "language.oop5.overloading",
-			"__callstatic" => "language.oop5.overloading",
-			"__get"        => "language.oop5.overloading",
-			"__set"        => "language.oop5.overloading",
-			"__isset"      => "language.oop5.overloading",
-			"__unset"      => "language.oop5.overloading",
-			"__sleep"      => "language.oop5.magic",
-			"__wakeup"     => "language.oop5.magic",
-			"__tostring"   => "language.oop5.magic",
-			"__set_state"  => "language.oop5.magic",
-			"__debuginfo"  => "language.oop5.magic",
-			"__clone"      => "language.oop5.cloning",
+			'__construct'  => 'language.oop5.decon',
+			'__destruct'   => 'language.oop5.decon',
+			'__call'       => 'language.oop5.overloading',
+			'__callstatic' => 'language.oop5.overloading',
+			'__get'        => 'language.oop5.overloading',
+			'__set'        => 'language.oop5.overloading',
+			'__isset'      => 'language.oop5.overloading',
+			'__unset'      => 'language.oop5.overloading',
+			'__sleep'      => 'language.oop5.magic',
+			'__wakeup'     => 'language.oop5.magic',
+			'__tostring'   => 'language.oop5.magic',
+			'__set_state'  => 'language.oop5.magic',
+			'__debuginfo'  => 'language.oop5.magic',
+			'__clone'      => 'language.oop5.cloning',
 			
-			"throw"     => "language.exceptions",
-			"try"       => "language.exceptions",
-			"catch"     => "language.exceptions",
-			"lsb"       => "language.oop5.late-static-bindings",
-			"namespace" => "language.namespaces",
-			"use"       => "language.namespaces.using",
-			"iterator"  => "language.oop5.iterations",
+			'throw'     => 'language.exceptions',
+			'try'       => 'language.exceptions',
+			'catch'     => 'language.exceptions',
+			'lsb'       => 'language.oop5.late-static-bindings',
+			'namespace' => 'language.namespaces',
+			'use'       => 'language.namespaces.using',
+			'iterator'  => 'language.oop5.iterations',
 			
-			"factory"   => "language.oop5.patterns",
-			"singleton" => "language.oop5.patterns",
+			'factory'   => 'language.oop5.patterns',
+			'singleton' => 'language.oop5.patterns',
 			
-			"trait"  => "language.oop5.traits",
-			"traits" => "language.oop5.traits",
+			'trait'  => 'language.oop5.traits',
+			'traits' => 'language.oop5.traits',
 			
-			"news.php"      => "archive/index", // BC
-			"readme.mirror" => "mirroring", // BC
+			'news.php'      => 'archive/index', // BC
+			'readme.mirror' => 'mirroring', // BC
 			
-			"php5"                         => "language.oop5",
-			"zend_changes.txt"             => "language.oop5", // BC
-			"zend2_example.phps"           => "language.oop5", // BC
-			"zend_changes_php_5_0_0b2.txt" => "language.oop5", // BC
-			"zend-engine-2"                => "language.oop5", // BC
-			"zend-engine-2.php"            => "language.oop5", // BC
+			'php5'                         => 'language.oop5',
+			'zend_changes.txt'             => 'language.oop5', // BC
+			'zend2_example.phps'           => 'language.oop5', // BC
+			'zend_changes_php_5_0_0b2.txt' => 'language.oop5', // BC
+			'zend-engine-2'                => 'language.oop5', // BC
+			'zend-engine-2.php'            => 'language.oop5', // BC
 			
-			"news_php_5_0_0b2.txt" => "ChangeLog-5", // BC
-			"news_php_5_0_0b3.txt" => "ChangeLog-5", // BC
+			'news_php_5_0_0b2.txt' => 'ChangeLog-5', // BC
+			'news_php_5_0_0b3.txt' => 'ChangeLog-5', // BC
 			
-			"manual/about-notes.php" => "manual/add-note",   // BC
-			"software/index.php"     => "software",          // BC
-			"releases.php"           => "releases/index",    // BC
+			'manual/about-notes.php' => 'manual/add-note',   // BC
+			'software/index.php'     => 'software',          // BC
+			'releases.php'           => 'releases/index',    // BC
 			
-			"migration7"                      => "migration70",      // Consistent with migration5
-			"update_5_2.txt"                  => "migration52",      // BC
-			"readme_upgrade_51.php"           => "migration51",      // BC
-			"internals"                       => "internals2",       // BC
-			"configuration.directives"        => "ini.core",       // BC
+			'migration7'                      => 'migration70',      // Consistent with migration5
+			'update_5_2.txt'                  => 'migration52',      // BC
+			'readme_upgrade_51.php'           => 'migration51',      // BC
+			'internals'                       => 'internals2',       // BC
+			'configuration.directives'        => 'ini.core',       // BC
 			
 			# regexp. BC
-			"regexp.reference.backslash"      => "regexp.reference.escape",
-			"regexp.reference.circudollar"    => "regexp.reference.anchors",
-			"regexp.reference.squarebrackets" => "regexp.reference.character-classes",
-			"regexp.reference.verticalbar"    => "regexp.reference.alternation",
+			'regexp.reference.backslash'      => 'regexp.reference.escape',
+			'regexp.reference.circudollar'    => 'regexp.reference.anchors',
+			'regexp.reference.squarebrackets' => 'regexp.reference.character-classes',
+			'regexp.reference.verticalbar'    => 'regexp.reference.alternation',
 			
 			# external shortcut aliases ;)
-			"dochowto"                        => "phpdochowto",
+			'dochowto'                        => 'phpdochowto',
 			
 			# CVS -> SVN
-			"anoncvs.php"                     => "git",
-			"cvs-php.php"                     => "git-php",
+			'anoncvs.php'                     => 'git',
+			'cvs-php.php'                     => 'git-php',
 			
 			# SVN -> Git
-			"svn"                             => "git",
-			"svn.php"                         => "git",
-			"svn-php"                         => "git-php",
-			"svn-php.php"                     => "git-php",
+			'svn'                             => 'git',
+			'svn.php'                         => 'git',
+			'svn-php'                         => 'git-php',
+			'svn-php.php'                     => 'git-php',
 			
 			# CVSUp -> Nada
-			"cvsup"                           => "mirroring",
+			'cvsup'                           => 'mirroring',
 			
 			# Other items
-			"security/crypt"                  => "security/crypt_blowfish",
+			'security/crypt'                  => 'security/crypt_blowfish',
 			
 			# Bugfixes
-			"array_sort"                      => "sort", // #64743
-			"array-sort"                      => "sort", // #64743
+			'array_sort'                      => 'sort', // #64743
+			'array-sort'                      => 'sort', // #64743
 			
 			# Removed pages
-			"tips.php"                        => "urlhowto",
-			"tips"                            => "urlhowto",
+			'tips.php'                        => 'urlhowto',
+			'tips'                            => 'urlhowto',
 		];
 		
 		public const external_redirects = [
-			"php4news"          => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-4.4",
-			"php5news"          => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
-			"php53news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.3",
-			"php54news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
-			"php55news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.5",
-			"php56news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6",
-			"php70news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.0",
-			"php71news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.1",
-			"php72news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.2",
-			"php73news"         => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.3",
-			"phptrunknews"      => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
-			"pear"              => "http://pear.php.net/",
-			"bugs"              => "https://bugs.php.net/",
-			"bugstats"          => "https://bugs.php.net/stats.php",
-			"phpdochowto"       => "http://doc.php.net/tutorial/",
-			"release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
-			"ideas.php"         => "http://wiki.php.net/ideas", // BC
-			"releases.atom"     => "/releases/feed.php", // BC, No need to pre-generate it
-			"spec"              => "https://github.com/php/php-langspec",
-			"sunglasses"        => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easter egg for bug#66144
+			'php4news'          => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-4.4',
+			'php5news'          => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6',
+			'php53news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.3',
+			'php54news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4',
+			'php55news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.5',
+			'php56news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.6',
+			'php70news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.0',
+			'php71news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.1',
+			'php72news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.2',
+			'php73news'         => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-7.3',
+			'phptrunknews'      => 'https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master',
+			'pear'              => 'http://pear.php.net/',
+			'bugs'              => 'https://bugs.php.net/',
+			'bugstats'          => 'https://bugs.php.net/stats.php',
+			'phpdochowto'       => 'http://doc.php.net/tutorial/',
+			'release/5_3_0.php' => '/releases/5_3_0.php', // PHP 5.3.0 release announcement had a typo
+			'ideas.php'         => 'http://wiki.php.net/ideas', // BC
+			'releases.atom'     => '/releases/feed.php', // BC, No need to pre-generate it
+			'spec'              => 'https://github.com/php/php-langspec',
+			'sunglasses'        => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Temporary easter egg for bug#66144
 		];
 
 		// Temporary hack to fix bug #49956 for mysqli -- Please don't hate me for this. Data taken from mysqli/summary.xml
 		public const mysqli_redirects = [
-			"mysqli_affected_rows"            => "mysqli.affected-rows",
-			"mysqli_get_client_info"          => "mysqli.client-info",
-			"mysqli_get_client_version"       => "mysqli.client-version",
-			"mysqli_connect_errno"            => "mysqli.connect-errno",
-			"mysqli_connect_error"            => "mysqli.connect-error",
-			"mysqli_errno"                    => "mysqli.errno",
-			"mysqli_error"                    => "mysqli.error",
-			"mysqli_field_count"              => "mysqli.field-count",
-			"mysqli_get_host_info"            => "mysqli.host-info",
-			"mysqli_get_proto_info"           => "mysqli.protocol-version",
-			"mysqli_get_server_info"          => "mysqli.server-info",
-			"mysqli_get_server_version"       => "mysqli.server-version",
-			"mysqli_info"                     => "mysqli.info",
-			"mysqli_insert_id"                => "mysqli.insert-id",
-			"mysqli_sqlstate"                 => "mysqli.sqlstate",
-			"mysqli_warning_count"            => "mysqli.warning-count",
-			"mysqli_autocommit"               => "mysqli.autocommit",
-			"mysqli_change_user"              => "mysqli.change-user",
-			"mysqli_character_set_name"       => "mysqli.character-set-name",
-			"mysqli_close"                    => "mysqli.close",
-			"mysqli_commit"                   => "mysqli.commit",
-			"mysqli_connect"                  => "mysqli.construct",
-			"mysqli_debug"                    => "mysqli.debug",
-			"mysqli_dump_debug_info"          => "mysqli.dump-debug-info",
-			"mysqli_get_charset"              => "mysqli.get-charset",
-			"mysqli_get_connection_stats"     => "mysqli.get-connection-stats",
-			"mysqli_get_client_info"          => "mysqli.get-client-info",
-			"mysqli_get_client_stats"         => "mysqli.get-client-stats",
-			"mysqli_get_cache_stats"          => "mysqli.get-cache-stats",
-			"mysqli_get_server_info"          => "mysqli.get-server-info",
-			"mysqli_get_warnings"             => "mysqli.get-warnings",
-			"mysqli_init"                     => "mysqli.init",
-			"mysqli_kill"                     => "mysqli.kill",
-			"mysqli_more_results"             => "mysqli.more-results",
-			"mysqli_multi_query"              => "mysqli.multi-query",
-			"mysqli_next_result"              => "mysqli.next-result",
-			"mysqli_options"                  => "mysqli.options",
-			"mysqli_ping"                     => "mysqli.ping",
-			"mysqli_prepare"                  => "mysqli.prepare",
-			"mysqli_query"                    => "mysqli.query",
-			"mysqli_real_connect"             => "mysqli.real-connect",
-			"mysqli_real_escape_string"       => "mysqli.real-escape-string",
-			"mysqli_real_query"               => "mysqli.real-query",
-			"mysqli_refresh"                  => "mysqli.refresh",
-			"mysqli_rollback"                 => "mysqli.rollback",
-			"mysqli_select_db"                => "mysqli.select-db",
-			"mysqli_set_charset"              => "mysqli.set-charset",
-			"mysqli_set_local_infile_default" => "mysqli.set-local-infile-default",
-			"mysqli_set_local_infile_handler" => "mysqli.set-local-infile-handler",
-			"mysqli_ssl_set"                  => "mysqli.ssl-set",
-			"mysqli_stat"                     => "mysqli.stat",
-			"mysqli_stmt_init"                => "mysqli.stmt-init",
-			"mysqli_store_result"             => "mysqli.store-result",
-			"mysqli_thread_id"                => "mysqli.thread-id",
-			"mysqli_thread_safe"              => "mysqli.thread-safe",
-			"mysqli_use_result"               => "mysqli.use-result",
-			"mysqli_stmt_affected_rows"       => "mysqli-stmt.affected-rows",
-			"mysqli_stmt_errno"               => "mysqli-stmt.errno",
-			"mysqli_stmt_error"               => "mysqli-stmt.error",
-			"mysqli_stmt_field_count"         => "mysqli-stmt.field-count",
-			"mysqli_stmt_insert_id"           => "mysqli-stmt.insert-id",
-			"mysqli_stmt_num_rows"            => "mysqli-stmt.num-rows",
-			"mysqli_stmt_param_count"         => "mysqli-stmt.param-count",
-			"mysqli_stmt_sqlstate"            => "mysqli-stmt.sqlstate",
-			"mysqli_stmt_attr_get"            => "mysqli-stmt.attr-get",
-			"mysqli_stmt_attr_set"            => "mysqli-stmt.attr-set",
-			"mysqli_stmt_bind_param"          => "mysqli-stmt.bind-param",
-			"mysqli_stmt_bind_result"         => "mysqli-stmt.bind-result",
-			"mysqli_stmt_close"               => "mysqli-stmt.close",
-			"mysqli_stmt_data_seek"           => "mysqli-stmt.data-seek",
-			"mysqli_stmt_execute"             => "mysqli-stmt.execute",
-			"mysqli_stmt_fetch"               => "mysqli-stmt.fetch",
-			"mysqli_stmt_free_result"         => "mysqli-stmt.free-result",
-			"mysqli_stmt_get_result"          => "mysqli-stmt.get-result",
-			"mysqli_stmt_get_warnings"        => "mysqli-stmt.get-warnings",
-			"mysqli_stmt_more_results"        => "mysqli-stmt.more-results",
-			"mysqli_stmt_next_result"         => "mysqli-stmt.next-result",
-			"mysqli_stmt_num_rows"            => "mysqli-stmt.num-rows",
-			"mysqli_stmt_prepare"             => "mysqli-stmt.prepare",
-			"mysqli_stmt_reset"               => "mysqli-stmt.reset",
-			"mysqli_stmt_result_metadata"     => "mysqli-stmt.result-metadata",
-			"mysqli_stmt_send_long_data"      => "mysqli-stmt.send-long-data",
-			"mysqli_stmt_store_result"        => "mysqli-stmt.store-result",
-			"mysqli_field_tell"               => "mysqli-result.current-field",
-			"mysqli_num_fields"               => "mysqli-result.field-count",
-			"mysqli_fetch_lengths"            => "mysqli-result.lengths",
-			"mysqli_num_rows"                 => "mysqli-result.num-rows",
-			"mysqli_data_seek"                => "mysqli-result.data-seek",
-			"mysqli_fetch_all"                => "mysqli-result.fetch-all",
-			"mysqli_fetch_array"              => "mysqli-result.fetch-array",
-			"mysqli_fetch_assoc"              => "mysqli-result.fetch-assoc",
-			"mysqli_fetch_field_direct"       => "mysqli-result.fetch-field-direct",
-			"mysqli_fetch_field"              => "mysqli-result.fetch-field",
-			"mysqli_fetch_fields"             => "mysqli-result.fetch-fields",
-			"mysqli_fetch_object"             => "mysqli-result.fetch-object",
-			"mysqli_fetch_row"                => "mysqli-result.fetch-row",
-			"mysqli_field_seek"               => "mysqli-result.field-seek",
-			"mysqli_free_result"              => "mysqli-result.free",
-			"mysqli_embedded_server_end"      => "mysqli-driver.embedded-server-end",
-			"mysqli_embedded_server_start"    => "mysqli-driver.embedded-server-start",
+			'mysqli_affected_rows'            => 'mysqli.affected-rows',
+			'mysqli_get_client_info'          => 'mysqli.client-info',
+			'mysqli_get_client_version'       => 'mysqli.client-version',
+			'mysqli_connect_errno'            => 'mysqli.connect-errno',
+			'mysqli_connect_error'            => 'mysqli.connect-error',
+			'mysqli_errno'                    => 'mysqli.errno',
+			'mysqli_error'                    => 'mysqli.error',
+			'mysqli_field_count'              => 'mysqli.field-count',
+			'mysqli_get_host_info'            => 'mysqli.host-info',
+			'mysqli_get_proto_info'           => 'mysqli.protocol-version',
+			'mysqli_get_server_info'          => 'mysqli.server-info',
+			'mysqli_get_server_version'       => 'mysqli.server-version',
+			'mysqli_info'                     => 'mysqli.info',
+			'mysqli_insert_id'                => 'mysqli.insert-id',
+			'mysqli_sqlstate'                 => 'mysqli.sqlstate',
+			'mysqli_warning_count'            => 'mysqli.warning-count',
+			'mysqli_autocommit'               => 'mysqli.autocommit',
+			'mysqli_change_user'              => 'mysqli.change-user',
+			'mysqli_character_set_name'       => 'mysqli.character-set-name',
+			'mysqli_close'                    => 'mysqli.close',
+			'mysqli_commit'                   => 'mysqli.commit',
+			'mysqli_connect'                  => 'mysqli.construct',
+			'mysqli_debug'                    => 'mysqli.debug',
+			'mysqli_dump_debug_info'          => 'mysqli.dump-debug-info',
+			'mysqli_get_charset'              => 'mysqli.get-charset',
+			'mysqli_get_connection_stats'     => 'mysqli.get-connection-stats',
+			'mysqli_get_client_info'          => 'mysqli.get-client-info',
+			'mysqli_get_client_stats'         => 'mysqli.get-client-stats',
+			'mysqli_get_cache_stats'          => 'mysqli.get-cache-stats',
+			'mysqli_get_server_info'          => 'mysqli.get-server-info',
+			'mysqli_get_warnings'             => 'mysqli.get-warnings',
+			'mysqli_init'                     => 'mysqli.init',
+			'mysqli_kill'                     => 'mysqli.kill',
+			'mysqli_more_results'             => 'mysqli.more-results',
+			'mysqli_multi_query'              => 'mysqli.multi-query',
+			'mysqli_next_result'              => 'mysqli.next-result',
+			'mysqli_options'                  => 'mysqli.options',
+			'mysqli_ping'                     => 'mysqli.ping',
+			'mysqli_prepare'                  => 'mysqli.prepare',
+			'mysqli_query'                    => 'mysqli.query',
+			'mysqli_real_connect'             => 'mysqli.real-connect',
+			'mysqli_real_escape_string'       => 'mysqli.real-escape-string',
+			'mysqli_real_query'               => 'mysqli.real-query',
+			'mysqli_refresh'                  => 'mysqli.refresh',
+			'mysqli_rollback'                 => 'mysqli.rollback',
+			'mysqli_select_db'                => 'mysqli.select-db',
+			'mysqli_set_charset'              => 'mysqli.set-charset',
+			'mysqli_set_local_infile_default' => 'mysqli.set-local-infile-default',
+			'mysqli_set_local_infile_handler' => 'mysqli.set-local-infile-handler',
+			'mysqli_ssl_set'                  => 'mysqli.ssl-set',
+			'mysqli_stat'                     => 'mysqli.stat',
+			'mysqli_stmt_init'                => 'mysqli.stmt-init',
+			'mysqli_store_result'             => 'mysqli.store-result',
+			'mysqli_thread_id'                => 'mysqli.thread-id',
+			'mysqli_thread_safe'              => 'mysqli.thread-safe',
+			'mysqli_use_result'               => 'mysqli.use-result',
+			'mysqli_stmt_affected_rows'       => 'mysqli-stmt.affected-rows',
+			'mysqli_stmt_errno'               => 'mysqli-stmt.errno',
+			'mysqli_stmt_error'               => 'mysqli-stmt.error',
+			'mysqli_stmt_field_count'         => 'mysqli-stmt.field-count',
+			'mysqli_stmt_insert_id'           => 'mysqli-stmt.insert-id',
+			'mysqli_stmt_num_rows'            => 'mysqli-stmt.num-rows',
+			'mysqli_stmt_param_count'         => 'mysqli-stmt.param-count',
+			'mysqli_stmt_sqlstate'            => 'mysqli-stmt.sqlstate',
+			'mysqli_stmt_attr_get'            => 'mysqli-stmt.attr-get',
+			'mysqli_stmt_attr_set'            => 'mysqli-stmt.attr-set',
+			'mysqli_stmt_bind_param'          => 'mysqli-stmt.bind-param',
+			'mysqli_stmt_bind_result'         => 'mysqli-stmt.bind-result',
+			'mysqli_stmt_close'               => 'mysqli-stmt.close',
+			'mysqli_stmt_data_seek'           => 'mysqli-stmt.data-seek',
+			'mysqli_stmt_execute'             => 'mysqli-stmt.execute',
+			'mysqli_stmt_fetch'               => 'mysqli-stmt.fetch',
+			'mysqli_stmt_free_result'         => 'mysqli-stmt.free-result',
+			'mysqli_stmt_get_result'          => 'mysqli-stmt.get-result',
+			'mysqli_stmt_get_warnings'        => 'mysqli-stmt.get-warnings',
+			'mysqli_stmt_more_results'        => 'mysqli-stmt.more-results',
+			'mysqli_stmt_next_result'         => 'mysqli-stmt.next-result',
+			'mysqli_stmt_num_rows'            => 'mysqli-stmt.num-rows',
+			'mysqli_stmt_prepare'             => 'mysqli-stmt.prepare',
+			'mysqli_stmt_reset'               => 'mysqli-stmt.reset',
+			'mysqli_stmt_result_metadata'     => 'mysqli-stmt.result-metadata',
+			'mysqli_stmt_send_long_data'      => 'mysqli-stmt.send-long-data',
+			'mysqli_stmt_store_result'        => 'mysqli-stmt.store-result',
+			'mysqli_field_tell'               => 'mysqli-result.current-field',
+			'mysqli_num_fields'               => 'mysqli-result.field-count',
+			'mysqli_fetch_lengths'            => 'mysqli-result.lengths',
+			'mysqli_num_rows'                 => 'mysqli-result.num-rows',
+			'mysqli_data_seek'                => 'mysqli-result.data-seek',
+			'mysqli_fetch_all'                => 'mysqli-result.fetch-all',
+			'mysqli_fetch_array'              => 'mysqli-result.fetch-array',
+			'mysqli_fetch_assoc'              => 'mysqli-result.fetch-assoc',
+			'mysqli_fetch_field_direct'       => 'mysqli-result.fetch-field-direct',
+			'mysqli_fetch_field'              => 'mysqli-result.fetch-field',
+			'mysqli_fetch_fields'             => 'mysqli-result.fetch-fields',
+			'mysqli_fetch_object'             => 'mysqli-result.fetch-object',
+			'mysqli_fetch_row'                => 'mysqli-result.fetch-row',
+			'mysqli_field_seek'               => 'mysqli-result.field-seek',
+			'mysqli_free_result'              => 'mysqli-result.free',
+			'mysqli_embedded_server_end'      => 'mysqli-driver.embedded-server-end',
+			'mysqli_embedded_server_start'    => 'mysqli-driver.embedded-server-start',
 		];
 		
 		public const KNOWN_INIS = array(

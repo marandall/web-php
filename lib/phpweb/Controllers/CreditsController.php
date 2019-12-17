@@ -4,18 +4,27 @@
 	
 	namespace phpweb\Controllers;
 	
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class CreditsController extends PHPWebTemplate
+	class CreditsController  implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Credits');
-			$this->setActivePage('community');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Credits')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
             // Put credits information to $credits
@@ -31,8 +40,8 @@
             // Fix for PHP bug #24839,
             // which affects the page layout
 			$credits = str_replace(
-				array("</center>", "& ", 'class="center"'),
-				array("</div>", "&amp; ", ''),
+				array('</center>', '& ', 'class="center"'),
+				array('</div>', '&amp; ', ''),
 				$credits
 			);
 			

@@ -4,8 +4,9 @@
 	
 	namespace phpweb\Controllers\Versions\Releases;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Branches\Branch;
-	use phpweb\Data\GpgKeys;
 	use phpweb\Data\Release\Release;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
@@ -13,36 +14,17 @@
 	use phpweb\UI\Notices\BranchReleaseNotMostRecent;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
-	use phpweb\UI\Templates\BasicCallbackPanel;
+	use phpweb\UI\Templates\FreshTemplate;
 	use phpweb\UI\Templates\LinkPanel;
 	
-	class ReleaseController extends ReleaseRouter
+	class ReleaseController implements ControllerInterface
 	{
-		protected function invokeForRelease(Request $request, Release $release, Branch $branch): Response {
-			$version_id = $release->getVersionId();
-			$this->setPageTitle('PHP Version ' . $version_id);
-			
-			$changelog = $release->getChangelogText();
-			
-			/* list order is inverted so this goes at the top */
-			$release_list = new LinkPanel('Other Releases in ' . $branch->getBranchId());
-			foreach ($branch->getReleasesByVersion() as $branch_release) {
-				$release_list->add($branch_release->getUrl(), $branch_release->getVersionId());
-			}
-			$this->addSidePanel($release_list);
-			
-			
-			$branch_menu = new LinkPanel('PHP ' . $branch->getBranchId());
-			$branch_menu->add($branch->getUrl(), 'About ' . $branch->getBranchId());
-			$branch_menu->add($branch->getUrl() . 'install/', 'Download / Install');
-			$this->addSidePanel($branch_menu);
-			
-			
-			return $this->render(
-				function () use ($release, $branch, $changelog) {
-					$this->renderContents($release, $branch, $changelog);
-				}
-			);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				ReleaseLoaderMiddleware::class,
+				$this,
+			];
 		}
 		
 		public function renderReleaseInfo(Release $release, Branch $branch) {
@@ -60,10 +42,37 @@
 			<?php
 		}
 		
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$release = $request->get(Release::class);
+			$branch = $request->get(Branch::class);
+			
+			$version_id = $release->getVersionId();
+			$changelog = $release->getChangelogText();
+			
+			/* list order is inverted so this goes at the top */
+			$release_list = new LinkPanel('Other Releases in ' . $branch->getBranchId());
+			foreach ($branch->getReleasesByVersion() as $branch_release) {
+				$release_list->add($branch_release->getUrl(), $branch_release->getVersionId());
+			}
+			
+			$branch_menu = new LinkPanel('PHP ' . $branch->getBranchId());
+			$branch_menu->add($branch->getUrl(), 'About ' . $branch->getBranchId());
+			$branch_menu->add($branch->getUrl() . 'install/', 'Download / Install');
+			
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('PHP Version ' . $version_id)
+				->addSidePanel($release_list)
+				->addSidePanel($branch_menu)
+				->render(fn() => $this->renderContents($release, $branch, $changelog));
+			
+		}
+		
 		public function renderContents(Release $release, Branch $branch, string $changelog) {
 			$latest_release = $branch->getLatestRelease();
 			if ($latest_release->getVersionId() !== $release->getVersionId()) {
-                (new BranchReleaseNotMostRecent($release))->draw();
+				(new BranchReleaseNotMostRecent($release))->draw();
 			}
 			
 			$stability = $branch->getStability();
@@ -75,9 +84,9 @@
 			}
 			
 			
-            ?>
+			?>
             <h2>Release Announcement</h2>
-            <?php
+			<?php
 			echo $release->getAnnouncementHTML();
 			
 			?>

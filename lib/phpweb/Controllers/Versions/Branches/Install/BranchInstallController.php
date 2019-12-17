@@ -4,7 +4,10 @@
 	
 	namespace phpweb\Controllers\Versions\Branches\Install;
 	
-	use phpweb\Controllers\Versions\Branches\BranchRouter;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
+	use phpweb\Controllers\Versions\Branches\BranchLoaderMiddleware;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\InstallHelpers\HelperSearch;
 	use phpweb\Data\StabilityEnum;
@@ -13,19 +16,28 @@
 	use phpweb\Services;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class BranchInstallController extends BranchRouter
+	class BranchInstallController implements ControllerInterface
 	{
-		protected function invokeForBranch(Request $request, Branch $branch): Response {
-			$this->setPageTitle('Download & Install PHP ' . $branch->getBranchId());
-			return $this->render(
-				function () use ($request, $branch) {
-					$this->renderContents($request, $branch);
-				}
-			);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				UiReleasesMiddleware::class,
+                BranchLoaderMiddleware::class,
+                $this
+			];
 		}
 		
-		public function renderContents(Request $request, Branch $branch) {
+		public function __invoke(Request $request, ?callable $next): Response {
+			$branch = $request->get(Branch::class);
+			return $request
+                ->get(FreshTemplate::class)
+                ->setPageTitle('Download and Install ' . $branch->getBranchId())
+                ->render(fn() => $this->renderContents($branch));
+		}
+		
+		public function renderContents(Branch $branch) {
 			switch ($branch->getStability()) {
 				case StabilityEnum::SECURITY:
 					(new BranchSecurityOnlyNotice($branch))->draw();
@@ -41,16 +53,20 @@
 			$helpers = Services::get(HelperSearch::class)->findHelpers($branch);
 			
 			?>
-            
+
             <div style="text-align: center">
                 Here are the methods available for downloading and installing
-                <a href="<?= htmlspecialchars($branch->getUrl()) ?>">PHP <?= htmlspecialchars($branch->getBranchId()) ?></a> on a variety of different platforms.
+                <a href="<?= htmlspecialchars($branch->getUrl()) ?>">PHP <?= htmlspecialchars(
+						$branch->getBranchId()
+					) ?></a> on a variety of different platforms.
             </div>
 
             <div style="font-size: 150%; text-align: center; padding: 1em">
-                Latest Release: <a href="<?= htmlspecialchars($latest->getUrl())?>">PHP <?= htmlspecialchars($latest->getVersionId()) ?></a> <?= htmlspecialchars('(' . $latest->getDate()->format('d M Y') . ')') ?>
+                Latest Release: <a href="<?= htmlspecialchars($latest->getUrl()) ?>">PHP <?= htmlspecialchars(
+						$latest->getVersionId()
+					) ?></a> <?= htmlspecialchars('(' . $latest->getDate()->format('d M Y') . ')') ?>
             </div>
-            
+
             <div style="text-align: center; margin-bottom: 1em">
 				<?php
 					foreach ($helpers as $method) {
@@ -60,9 +76,9 @@
                             <img src="<?= htmlspecialchars($method->getImageUri()) ?>"
                                  alt="<?= htmlspecialchars($method->getDescription()) ?>"
                                  style="width: 100%"/>
-                            
+
                             <div>
-	                            <?= htmlspecialchars($method->getDescription()) ?>
+								<?= htmlspecialchars($method->getDescription()) ?>
                             </div>
                         </a>
 						<?php

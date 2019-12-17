@@ -4,16 +4,120 @@
 	
 	namespace phpweb\UI\Templates;
 	
-	class FreshTemplate implements RendererInterface
+	use phpweb\Framework\Response;
+	
+	class FreshTemplate
 	{
 		/** @var callable */
 		private $header_callback;
+		
+		/** @var SidePanelInterface[] */
+		private array $side_panels = [];
+		
+		private string $page_title = '';
+		
+		/** @var string */
+		private string $active_page = '';
+		
+		/** @var string[] */
+		private array $css_files = [
+			'/static/fonts/Fira/fira.css',
+			'/static/fonts/Font-Awesome/css/fontello.css',
+			'/static/styles/theme-base.css',
+		];
+		
+		/** @var string[] */
+		private array $jscript_files = [
+			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+			'/static/js/ext/modernizr.js',
+			'/static/js/ext/hogan-2.0.0.min.js',
+			'/static/js/ext/typeahead.min.js',
+			'/static/js/ext/mousetrap.min.js',
+			'/static/js/search.js',
+			'/static/js/common.js',
+		];
+		
+		
+		/** @var array[] */
+		private array $page_headers = [
+			'downloads'     => [
+				'url'      => '/downloads/',
+				'title'    => 'Download / Install',
+				'sections' => [
+				
+				],
+			],
+			'documentation' => [
+				'url'      => '/docs.php',
+				'title'    => 'Documentation',
+				'sections' => [
+				],
+			],
+			'developers'    => [
+				'url'      => '/developers/',
+				'title'    => 'Contribute',
+				'sections' => [
+					'Get Involved' => [
+						'/developers/git/'         => 'Using GIT',
+						'/developers/git/register' => 'Register for Access',
+					],
+					'Tools'        => [
+						'/developers/tools/build-setup' => 'Setting Up Tool',
+					],
+				],
+			],
+			'community'     => [
+				'url'      => '/community/',
+				'title'    => 'Community',
+				'sections' => [
+					'Events' => [
+						'/community/events/calendar'     => 'Events'
+					],
+					'Conferences' => [
+						'/community/conferences/'        => 'Conferences & CFP',
+						'/community/conferences/archive' => 'Archive',
+						'/community/videos/' => 'Videos and Talks',
+					],
+					'Mailing Lists'        => [
+						'/community/lists/' => 'Mailing Lists',
+					],
+				],
+			],
+			'help'          => [
+				'url'      => '/support.php',
+				'title'    => 'Help',
+				'sections' => [
+				
+				],
+			],
+		];
+		
+		private $error_panels = [];
+		
+		public function addErrorPanel(SidePanelInterface $panel) {
+			$this->error_panels[] = $panel;
+			return $this;
+		}
 		
 		public function __construct() {
 			$this->header_callback = [$this, 'renderHeader'];
 		}
 		
-		public function render(PHPWebTemplate $tpl, callable $body) {
+		/**
+         * @return $this
+		 */
+		public function addSidePanel(SidePanelInterface $panel, string $id = '') {
+		    if ($id) {
+		        $this->side_panels[$id] = $panel;
+            }
+		    else {
+		        $this->side_panels[] =  $panel;
+            }
+		    
+		    return $this;
+        }
+		
+		public function render(callable $body) {
 			$config = [
 				'headsup'         => '',
 				'meta-navigation' => [],
@@ -21,10 +125,10 @@
 				'thispage'        => '',
 			];
 			
-			$css   = $tpl->getCssFiles();
+			$css   = $this->css_files;
 			$css[] = '/static/r2/css/r2.css';
 			
-			$panels = array_reverse($tpl->getSidePanels());
+			$panels = array_reverse($this->side_panels);
 			
 			/* this will allow pulling out headers shortly */
 			ob_start();
@@ -62,6 +166,7 @@
 				}
 			}
 			
+			ob_start();
 			?>
             <!DOCTYPE html>
             <html xmlns="http://www.w3.org/1999/xhtml">
@@ -69,7 +174,7 @@
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <title>PHP: <?= htmlspecialchars($tpl->getPageTitle()) ?></title>
+                <title>PHP: <?= htmlspecialchars($this->page_title) ?></title>
 
                 <link rel="shortcut icon" href="/favicon.ico">
 
@@ -82,13 +187,13 @@
                 <link rel="alternate" type="application/atom+xml" href="/feed.atom"
                       title="PHP: Hypertext Preprocessor">
 				
-				<?php foreach ($config["meta-navigation"] as $rel => $page): ?>
+				<?php foreach ($config['meta-navigation'] as $rel => $page): ?>
                     <link rel="<?php echo $rel ?>" href="/<?php echo $page ?>">
 				<?php endforeach ?>
 				
-				<?php foreach ($config["languages"] as $code): ?>
+				<?php foreach ($config['languages'] as $code): ?>
                     <link rel="alternate"
-                          href="/manual/<?php echo $code ?>/<?php echo $config["thispage"] ?>"
+                          href="/manual/<?php echo $code ?>/<?php echo $config['thispage'] ?>"
                           hreflang="<?php echo $code ?>">
 				<?php endforeach ?>
 				
@@ -101,7 +206,7 @@
                 <script src="/public/static/js/ext/html5.js"></script>
                 <![endif]-->
 				
-				<?php foreach ($tpl->getJscriptFiles() as $file) { ?>
+				<?php foreach ($this->jscript_files as $file) { ?>
                     <script type="text/javascript" src="<?= htmlspecialchars($file) ?>"></script>
 				<?php } ?>
             </head>
@@ -114,9 +219,8 @@
                     <div id="mainmenu-toggle-overlay"></div>
                     <input type="checkbox" id="mainmenu-toggle">
                     <ul class="nav" style="line-height: 25px">
-						<?php foreach ($tpl->getPageHeaders() as $k => $header) { ?>
-                            <li class="<?= ($tpl->getActivePage(
-								) === $k) ? 'active' : '' ?> top-menu top-menu-<?= htmlspecialchars(
+						<?php foreach ($this->page_headers as $k => $header) { ?>
+                            <li class="<?= ($this->active_page === $k) ? 'active' : '' ?> top-menu top-menu-<?= htmlspecialchars(
 								$k
 							) ?>" data-menu="<?= htmlspecialchars($k) ?>">
                                 <a href="<?= htmlspecialchars($header['url']) ?>">
@@ -133,7 +237,7 @@
                 <div id="flash-message"></div>
             </nav>
 			
-			<?php ($this->header_callback)($tpl) ?>
+			<?php ($this->header_callback)($this) ?>
 
             <div class="r2-outer" style="width: 100%; line-height: 1.5">
                 <div class="r2-inner" style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
@@ -141,7 +245,7 @@
                         <div class="r2-inner-left" style="background-color: #ffffff">
                             <div style="padding: 10px; padding-left: 0; padding-top: 0">
 								
-								<?php foreach ($tpl->getErrorPanels() as $panel) { ?>
+								<?php foreach ($this->error_panels as $panel) { ?>
                                     <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
 										<?php $panel->draw(); ?>
                                     </div>
@@ -185,7 +289,7 @@
             <a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top"
                                                                                 src="/static/images/to-top@2x.png"></a>
 			
-			<?php foreach ($tpl->getPageHeaders() as $nav_id => $header) {
+			<?php foreach ($this->page_headers as $nav_id => $header) {
 				if (count($header['sections']) === 0) {
 					continue;
 				}
@@ -245,6 +349,7 @@
             </body>
             </html>
 			<?php
+            return new Response(ob_get_clean(), 200, ['Content-Type' => 'text/html']);
 		}
 		
 		/**
@@ -256,12 +361,26 @@
 			return $this;
 		}
 		
-		private function renderHeader(PHPWebTemplate $tpl) {
+		/**
+		 * @param string $page_title
+         * @return $this
+		 */
+		public function setPageTitle(string $page_title) {
+			$this->page_title = $page_title;
+			return $this;
+		}
+		
+		public function setActivePage(string $active) {
+		    $this->active_page = $active;
+		    return $this;
+        }
+		
+		private function renderHeader() {
 			?>
             <div style="background: #f2f2f2">
                 <div style="width: 1200px; margin-left: auto; margin-right: auto; background: #f2f2f2">
                     <h1 style="margin: 0; padding: 0; padding-top: 15px; padding-bottom: 15px; color: black"><?= htmlspecialchars(
-							$tpl->getPageTitle()
+							$this->page_title
 						) ?></h1>
                 </div>
             </div>

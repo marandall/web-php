@@ -4,19 +4,28 @@
 	
 	namespace phpweb\Controllers;
 	
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Languages;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class DocsController extends PHPWebTemplate
+	class DocsController  implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Documentation');
-			$this->setActivePage('docs');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Documentation')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 			?>
@@ -54,20 +63,20 @@
                             $languages = Languages::ACTIVE;
 							$lastlang = end($languages);
 							foreach ($languages as $langcode => $langname) {
-								if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
+								if (!file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/{$langcode}/index.php")) {
 									continue;
 								}
 								
 								// Make preferred language bold
 								if ($langcode === $this->getLanguage()) {
-									echo "<strong>";
+									echo '<strong>';
 								}
 								
 								echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
 								echo ($lastlang != $langname) ? ",\n" : "\n";
 								
 								if ($langcode === $this->getLanguage()) {
-									echo "</strong>";
+									echo '</strong>';
 								}
 							}
 						

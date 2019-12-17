@@ -5,8 +5,9 @@
 	namespace phpweb\Data\Conferences;
 	
 	use phpweb\Config\Site;
+	use phpweb\Services\Builder\InjectableService;
 	
-	class ConferenceRepository
+	class ConferenceRepository implements InjectableService
 	{
 		/** @var Conference[]|null */
 		private $cache = null;

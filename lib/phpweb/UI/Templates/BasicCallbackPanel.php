@@ -9,7 +9,7 @@
 		/**
 		 * @var string
 		 */
-		private $title;
+		private string $title;
 		
 		/**
 		 * @var callable

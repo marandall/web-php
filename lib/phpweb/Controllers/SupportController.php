@@ -4,19 +4,25 @@
 	
 	namespace phpweb\Controllers;
 	
-	use Closure;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class SupportController extends PHPWebTemplate
+	class SupportController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Getting Help');
-			$this->setActivePage('help');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Getting Help')
+				->render([$this, 'renderContents']);
 		}
 		
 		
@@ -27,7 +33,7 @@
             <p>
                 A good place to start is by skimming through the ever-growing list of
                 <a href="/FAQ.php">frequently asked questions (with answers, of course)</a>.
-                
+
                 Then have a look at the rest of the online manual and other resources in the
                 <a href="/docs.php">documentation</a> section.
             </p>
@@ -36,7 +42,7 @@
 
             <p>
                 There are a number of mailing lists devoted to talking about PHP and related
-                projects. <a href="/lists/">This list</a> describes them all, has
+                projects. <a href="/community/lists/">This list</a> describes them all, has
                 links to searchable archives for all of the lists, and explains how to
                 subscribe to the lists.
             </p>

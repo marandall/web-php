@@ -9,8 +9,8 @@
 		// Try to remove anti-SPAM bits
 		public static function CleanAntiSPAM(string $email)
 		{
-			$remove_spam = "![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i";
-			return preg_replace($remove_spam, "", trim($email));
+			$remove_spam = '![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i';
+			return preg_replace($remove_spam, '', trim($email));
 		}
 
 		public static function IsEmailable(string $email): bool

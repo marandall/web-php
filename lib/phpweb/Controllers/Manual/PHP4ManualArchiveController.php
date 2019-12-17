@@ -4,23 +4,31 @@
 	
 	namespace phpweb\Controllers\Manual;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class PHP4ManualArchiveController extends PHPWebTemplate
+	class PHP4ManualArchiveController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('PHP 4 Manual Archive');
-			$this->setActivePage('docs');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('PHP 4 Manual Archive')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 			?>
-
-            <h2>Introduction</h2>
             <p>
                 The PHP 4 documentation was removed from the PHP Manual in August 2014,
                 approximately six years after PHP 4 reached its end of life. However, we have

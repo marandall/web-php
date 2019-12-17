@@ -5,19 +5,29 @@
 	namespace phpweb\Controllers\Community\Events;
 	
 	use phpweb\Config\Site;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Countries;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class CalendarController extends PHPWebTemplate
+	class CalendarController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Event Calendar');
-			$this->setActivePage('community');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Events Calendar')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 			/*
@@ -41,7 +51,7 @@
 			// This excludes all the "too old", or "too far in the future"
 			// calendar displays (so search engines can handle this page too)
 			if ($cy != 0 && !$this->valid_year($cy)) {
-				$cy = date("Y");
+				$cy = date('Y');
 			}
 
 			// We need to look up an event with an ID
@@ -72,25 +82,25 @@
 					if ($events = $this->load_events($date)) {
 						$site_header_config = ['classes' => 'calendar calendar-day'] + $site_header_config;
 						
-						echo "<h2>", date("F j, Y", $date), "</h2>\n";
+						echo '<h2>', date('F j, Y', $date), "</h2>\n";
 						foreach ($events as $event) {
 							$this->display_event($event, 0);
-							echo "<br>";
+							echo '<br>';
 						}
 						$begun = TRUE;
 					}
 					
 					// Unable to load events for that day
 					else {
-						$errors[] = "There are no events for the specified date (" . date("F j, Y", $date) . ").";
+						$errors[] = 'There are no events for the specified date (' . date('F j, Y', $date) . ').';
 					}
 				}
 				
 				// Wrong date specified
 				else {
-					$errors[] = "The specified date (" . htmlentities(
+					$errors[] = 'The specified date (' . htmlentities(
 							"$cy/$cm/$cd", ENT_QUOTES | ENT_IGNORE, 'UTF-8'
-						) . ") was not valid.";
+						) . ') was not valid.';
 					unset($cm);
 					unset($cd);
 					unset($cy);
@@ -99,19 +109,19 @@
 
 			// Check if month and year is valid
 			if ($cm && $cy && !checkdate($cm, 1, $cy)) {
-				$errors[] = "The specified year and month (" . htmlentities(
+				$errors[] = 'The specified year and month (' . htmlentities(
 						"$cy, $cm", ENT_QUOTES | ENT_IGNORE, 'UTF-8'
-					) . ") are not valid.";
+					) . ') are not valid.';
 				unset($cm);
 				unset($cy);
 			}
 
 			// Give defaults for the month and day values if they were invalid
 			if (!isset($cm) || $cm == 0) {
-				$cm = idate("m");
+				$cm = idate('m');
 			}
 			if (!isset($cy) || $cy == 0) {
-				$cy = idate("Y");
+				$cy = idate('Y');
 			}
 
 			// Start of the month date
@@ -138,7 +148,7 @@
 
 			// If there was an error, or there are no events, this is an error
 			if ($events === FALSE || count($events) == 0) {
-				$errors[] = "No events found for this month";
+				$errors[] = 'No events found for this month';
 			}
 
 			// If there were any error, display them
@@ -154,7 +164,7 @@
 
 			// Link to previous month (but do not link to too early dates)
 			$lm = mktime(0, 0, 1, $cm, 0, $cy);
-			if ($this->valid_year(idate("Y", $lm))) {
+			if ($this->valid_year(idate('Y', $lm))) {
 				$prev_link = '<a href="' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $lm);
 			}
 			else {
@@ -163,7 +173,7 @@
 
 			// Link to next month (but do not link to too early dates)
 			$nm = mktime(0, 0, 1, $cm + 1, 1, $cy);
-			if ($this->valid_year(idate("Y", $nm))) {
+			if ($this->valid_year(idate('Y', $nm))) {
 				$next_link = '<a href="' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
 			}
 			else {
@@ -182,22 +192,22 @@
 
 			// Print out headers for weekdays
 			for ($i = 0; $i < 7; $i++) {
-				echo '<th width="14%">', date("l", mktime(0, 0, 1, 4, $i + 1, 2001)), "</th>\n";
+				echo '<th width="14%">', date('l', mktime(0, 0, 1, 4, $i + 1, 2001)), "</th>\n";
 			}
 			echo "</tr>\n<tr>";
 
 			// Generate the requisite number of blank days to get things started
-			for ($days = $i = date("w", $bom); $i > 0; $i--) {
+			for ($days = $i = date('w', $bom); $i > 0; $i--) {
 				echo '<td class="notaday">&nbsp;</td>';
 			}
 
 			// Print out all the days in this month
-			for ($i = 1; $i <= date("t", $bom); $i++) {
+			for ($i = 1; $i <= date('t', $bom); $i++) {
 				
 				// Print out day number and all events for the day
 				echo '<td><a class="day" href="', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
 				'">', $i, '</a>';
-				$this->display_events_for_day(date("Y-m-", $bom) . sprintf("%02d", $i), $events);
+				$this->display_events_for_day(date('Y-m-', $bom) . sprintf('%02d', $i), $events);
 				echo '</td>';
 				
 				// Break HTML table row if at end of week
@@ -218,7 +228,7 @@
 		// Generate the date on which a recurring event falls for a given month
 		// $bom and $eom are the first and last day of the month to look at
 
-		function display_events_for_day($day, $events) {
+		public function display_events_for_day($day, $events) {
 			// For preservation of state in the links
 			global $cm, $cy, $COUNTRY;
 			
@@ -229,12 +239,12 @@
 				if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
 					|| ($event['start'] == $day)) {
 					echo '<div class="event">',
-					($COUNTRY == $event['country'] ? "<strong>" : ""),
+					($COUNTRY == $event['country'] ? '<strong>' : ''),
 						'<a class="cat' . $event['category'] . '" href="',
 					"?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
 					stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')),
 					'</a>',
-					($COUNTRY == $event['country'] ? "</strong>" : ""),
+					($COUNTRY == $event['country'] ? '</strong>' : ''),
 					'</div>';
 				}
 			}
@@ -242,9 +252,9 @@
 		
 		// Display a <div> for each of the events that are on a given day
 
-		function load_event($id) {
+		public function load_event($id) {
 			// Open events CSV file, return on error
-			$fp = @fopen(Site::GetDataDir() . "/events/events.csv", 'r');
+			$fp = @fopen(Site::GetDataDir() . '/events/events.csv', 'r');
 			if (!$fp) {
 				return FALSE;
 			}
@@ -269,7 +279,7 @@
 		
 		// Find a single event in the events file by ID
 
-		function read_event($fp) {
+		public function read_event($fp) {
 			// We were unable to read a line from the file, return
 			if (($linearr = fgetcsv($fp, 8192)) === FALSE) {
 				return FALSE;
@@ -287,7 +297,7 @@
 			] = $linearr;
 			
 			// Get info on recurring event
-			@list($recur, $recur_day) = explode(":", $recur, 2);
+			@list($recur, $recur_day) = explode(':', $recur, 2);
 			
 			// Return with SQL-resultset like array
 			return [
@@ -308,18 +318,18 @@
 		// Load a list of events. Either for a particular day ($from) or a whole
 		// month (if second parameter specified with TRUE)
 
-		function load_events($from, $whole_month = FALSE) {
+		public function load_events($from, $whole_month = FALSE) {
 			// Take advantage of the equality behavior of this date format
-			$from_date = date("Y-m-d", $from);
-			$bom       = mktime(0, 0, 1, idate("m", $from), 1, idate("Y", $from));
-			$eom       = mktime(0, 0, 1, idate("m", $from) + 1, 0, idate("Y", $from));
-			$to_date   = date("Y-m-d", $whole_month ? $eom : $from);
+			$from_date = date('Y-m-d', $from);
+			$bom       = mktime(0, 0, 1, idate('m', $from), 1, idate('Y', $from));
+			$eom       = mktime(0, 0, 1, idate('m', $from) + 1, 0, idate('Y', $from));
+			$to_date   = date('Y-m-d', $whole_month ? $eom : $from);
 			
 			// Set arrays to their default
 			$events = $seen = [];
 			
 			// Try to open the events file for reading, return if unable to
-			$fp = @fopen(Site::GetDataDir() . "/events/events.csv", 'r');
+			$fp = @fopen(Site::GetDataDir() . '/events/events.csv', 'r');
 			if (!$fp) {
 				return FALSE;
 			}
@@ -348,7 +358,7 @@
 					// Recurring event
 					case 3:
 						$date           = $this->date_for_recur($event['recur'], $event['recur_day'], $bom, $eom);
-						$event['start'] = date("Y-m-d", $date);
+						$event['start'] = date('Y-m-d', $date);
 					// Fall through. Now it is just like a single-day event
 					
 					// Single-day event
@@ -377,31 +387,31 @@
 		// Reads an event from the event listing
 		// Parameter: opened event listing file
 
-		function date_for_recur($recur, $day, $bom, $eom) {
+		public function date_for_recur($recur, $day, $bom, $eom) {
 			
 			// $day == 1 == 'Sunday' == date("w",'some sunday')+1
 			
 			// ${recur}th $day of the month
 			if ($recur > 0) {
-				$bomd = date("w", $bom) + 1;
+				$bomd = date('w', $bom) + 1;
 				$days = (($day - $bomd + 7) % 7) + (($recur - 1) * 7);
-				return mktime(0, 0, 1, idate("m", $bom), $days + 1, idate("Y", $bom));
+				return mktime(0, 0, 1, idate('m', $bom), $days + 1, idate('Y', $bom));
 			}
 			
 			// ${recur}th to last $day of the month
 			else {
-				$eomd = date("w", $eom) + 1;
+				$eomd = date('w', $eom) + 1;
 				$days = (($eomd - $day + 7) % 7) + ((abs($recur) - 1) * 7);
-				return mktime(0, 0, 1, idate("m", $bom) + 1, -$days, idate("Y", $bom));
+				return mktime(0, 0, 1, idate('m', $bom) + 1, -$days, idate('Y', $bom));
 			}
 		}
 		
 		// We would not like to allow any year to be viewed, because
 		// it would fool some [not clever enough] search engines
 
-		function valid_year($year) {
+		public function valid_year($year) {
 			// Get current year and compare to one sent in
-			$current_year = date("Y");
+			$current_year = date('Y');
 			
 			// We only allow this and the next year for displays
 			if ($year != $current_year && $year != $current_year + 1) {
@@ -415,7 +425,7 @@
 
 		// Displays an event. Used in event submission
 		// previews and event information displays
-		function display_event($event, $include_date = 1)
+		public function display_event($event, $include_date = 1)
 		{
 			// Current month (int)($_GET['cm'] ?: 0)
 			global $cm;
@@ -456,39 +466,40 @@
 							
 							// Print out date if needed
 							if ($include_date && (isset($event['start']))) {
-								echo "<b>", date("F j, Y", $sday), "</b>\n";
+								echo '<b>', date('F j, Y', $sday), "</b>\n";
 							}
 							
 							// Print link in case we have one
 							if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
 							// Print event description
-							echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
+							echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), '</b>';
 							// End link
-							if ($event['url']) { echo "</a>"; }
+							if ($event['url']) { echo '</a>'; }
 							
 							// Print extra date info for recurring and multiday events
 							switch ($event['type']) {
 								case 2:
 								case 'multi':
-									$dtend = date("Y-m-d", strtotime("+1 day", $eday));
-									echo " (<abbr class='dtstart'>", date("Y-m-d",$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d",$eday), "</abbr>)";
+									$dtend = date('Y-m-d', strtotime('+1 day', $eday));
+									echo " (<abbr class='dtstart'>", date('Y-m-d',$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date(
+										'Y-m-d',$eday), '</abbr>)';
 									break;
 								case 3:
 								case 'recur':
-									$days = $re[$event['recur']]. " " .$days[$event['recur_day']];
+									$days = $re[$event['recur']]. ' ' . $days[$event['recur_day']];
 									if (!$cm || $cy) {
-										$cm = idate("m");
-										$cy = idate("Y");
+										$cm = idate('m');
+										$cy = idate('Y');
 									}
-									$month = date("M", mktime(0, 0, 0, (int)$cm, 1, (int)$cy));
-									$dtstart = date("Y-m-d", strtotime($days . ' 0st' .$month. ' ' .$cy));
-									echo ' (Every <abbr class="dtstart" title="'.$dtstart.'">', $days, "</abbr> of the month)";
+									$month = date('M', mktime(0, 0, 0, $cm, 1, $cy));
+									$dtstart = date('Y-m-d', strtotime($days . ' 0st' .$month. ' ' .$cy));
+									echo ' (Every <abbr class="dtstart" title="'.$dtstart.'">', $days, '</abbr> of the month)';
 									break;
 							}
 							
 							// Event category
 							if(isset($event['category']) && $event['category']) {
-								$cat = array("unknown", "User Group Event", "Conference", "Training");
+								$cat = array('unknown', 'User Group Event', 'Conference', 'Training');
 								echo ' [' . $cat[$event['category']] . '] ';
 							}
 							
@@ -500,7 +511,7 @@
 						<?php
 							
 							// Print long description
-							echo preg_replace("/\r?\n\r?\n/", "<br><br>", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
+							echo preg_replace("/\r?\n\r?\n/", '<br><br>', trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
 							// If we have an URL, print it out
 							if ($event['url']) {
 								echo '<br><br><b>URL:</b> ',

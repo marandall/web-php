@@ -4,15 +4,30 @@
 	
 	namespace phpweb\Controllers\News;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class NewsIndexController extends PHPWebTemplate
+	class NewsIndexController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			// TODO: Implement __invoke() method.
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
 		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('News')
+				->render([$this, 'renderContents']);
+		}
+		
+		public function renderContents() {
+		
+		}
 		
 	}

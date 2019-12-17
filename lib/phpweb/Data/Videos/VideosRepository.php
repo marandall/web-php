@@ -58,6 +58,6 @@
 				}
 			}
 			
-			return $promoted;
+			return array_slice($promoted, 0, $limit);
 		}
 	}

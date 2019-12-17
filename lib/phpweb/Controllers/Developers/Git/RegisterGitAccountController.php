@@ -4,21 +4,30 @@
 	
 	namespace phpweb\Controllers\Developers\Git;
 	
-	use Closure;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Tools\EmailValidation;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\BasicCallbackPanel as BasicCallbackPanelAlias;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class RegisterGitAccountController extends PHPWebTemplate
+	class RegisterGitAccountController  implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Register for Git Access');
-			$this->setActivePage('community');
-			
-			$this->addSidePanel(new BasicCallbackPanelAlias('More About Git', Closure::fromCallable([$this, 'renderPanel'])));
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Register for GIT Access')
+                ->addSidePanel(new BasicCallbackPanelAlias('More About Git', fn() => $this->renderPanel()))
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderThanksContent() {
@@ -26,7 +35,7 @@
             <p>
                 Thank you. Your request has been sent. You should hear something within the
                 next week or so. If you haven't heard anything by around <?php echo date('l, F jS', time() + 604800); ?>
-                then please send an email to the appropriate <a href="/lists/">mailing list</a>:
+                then please send an email to the appropriate <a href="/community/lists/">mailing list</a>:
             </p>
             <ul>
                 <li>Internals: <a href="mailto:internals@lists.php.net">internals@lists.php.net</a></li>
@@ -54,7 +63,7 @@
             <p>
                 All Git commit messages to the PHP sources get sent to the php-git mailing lists.
                 You should subscribe yourself to one or more of these mailing lists. Instructions
-                for subscribing are on the <a href="/lists/">Mailing Lists</a> page.
+                for subscribing are on the <a href="/community/lists/">Mailing Lists</a> page.
             </p>
 
             <p>
@@ -77,49 +86,51 @@
 		}
 		
 		protected function onFormSubmission(Request $request) {
+		    $error = '';
+		    
 			// Check for errors
 			if (empty($_POST['id'])) {
-				$error .= "You must supply a desired Git user id. <br>";
+				$error .= 'You must supply a desired Git user id. <br>';
 			}
             elseif (!preg_match('!^[a-z]\w+$!', $_POST['id']) || strlen($_POST['id']) > 16) {
-				$error .= "Your user id must be from 1-16 characters long, start with " .
-					"a letter and contain nothing but a-z, 0-9, and _ <br>";
+				$error .= 'Your user id must be from 1-16 characters long, start with ' .
+					'a letter and contain nothing but a-z, 0-9, and _ <br>';
 			}
 			if (empty($_POST['fullname'])) {
-				$error .= "You must supply your real name. <br>";
+				$error .= 'You must supply your real name. <br>';
 			}
 			if (empty($_POST['realpurpose'])) {
-				$error .= "You must supply a reason for requesting the Git account. <br>";
+				$error .= 'You must supply a reason for requesting the Git account. <br>';
 			}
 			if (empty($_POST['password'])) {
-				$error .= "You must supply a desired password. <br>";
+				$error .= 'You must supply a desired password. <br>';
 			}
 			
 			if (empty($_POST['email']) || !EmailValidation::IsEmailable($cleaned['email'])) {
-				$error .= "You must supply a proper email address. <br>";
+				$error .= 'You must supply a proper email address. <br>';
 			}
 			if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-				$error .= "You did not fill the form out correctly. <br>";
+				$error .= 'You did not fill the form out correctly. <br>';
 			}
 			if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
-				$error .= "You did not fill out where to send the request. <br>";
+				$error .= 'You did not fill out where to send the request. <br>';
 			}
 			if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
-				$error .= "You did not agree to follow the contribution guidelines. <br>";
+				$error .= 'You did not agree to follow the contribution guidelines. <br>';
 			}
 			
 			// Post the request if there is no error
 			if (!$error) {
 				$error = posttohost(
-					"http://master.php.net/entry/svn-account.php",
+					'http://master.php.net/entry/svn-account.php',
 					[
-						"username" => $cleaned['id'],
-						"name"     => $cleaned['fullname'],
-						"email"    => $cleaned['email'],
-						"passwd"   => $cleaned['password'],
-						"note"     => $cleaned['realpurpose'],
-						"yesno"    => $cleaned['yesno'],
-						"group"    => $cleaned['group'],
+						'username' => $cleaned['id'],
+						'name'     => $cleaned['fullname'],
+						'email'    => $cleaned['email'],
+						'passwd'   => $cleaned['password'],
+						'note'     => $cleaned['realpurpose'],
+						'yesno'    => $cleaned['yesno'],
+						'group'    => $cleaned['group'],
 					]
 				);
 				// Error while posting
@@ -152,11 +163,11 @@
 		
 		public function renderContents() {
 			$groups = array(
-				"none" => "Choose One",
-				"php"  => "PHP Group",
-				"pear" => "PEAR Group",
-				"pecl" => "PECL Group",
-				"doc"  => "Doc Group",
+				'none' => 'Choose One',
+				'php'  => 'PHP Group',
+				'pear' => 'PEAR Group',
+				'pecl' => 'PECL Group',
+				'doc'  => 'Doc Group',
 			);
 			?>
             <form action="" method="post" >
@@ -183,10 +194,10 @@
                         </th>
                         <td>
 							<?php
-								$purposes = ["Learning PHP", "Coding in PHP", "Reading the PHP source",
-								             "Using PHP extensions", "Creating experimental PHP extensions",
-								             "Submitting a patch to PHP", "Adding notes to the documentation",
-								             "Writing web pages with PHP",
+								$purposes = ['Learning PHP', 'Coding in PHP', 'Reading the PHP source',
+								             'Using PHP extensions', 'Creating experimental PHP extensions',
+								             'Submitting a patch to PHP', 'Adding notes to the documentation',
+								             'Writing web pages with PHP',
 								];
 								
 								foreach ($purposes
@@ -240,7 +251,7 @@
                             <select name="group">
 								<?php
 									foreach ($groups as $group => $name) {
-										$selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+										$selected = (isset($_POST['group']) && $_POST['group'] == $group) ? ' selected="selected"' : '';
 										echo "<option value='$group'$selected>$name</option>\n";
 									}
 								?>

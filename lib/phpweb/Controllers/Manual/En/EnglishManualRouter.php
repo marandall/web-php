@@ -4,10 +4,12 @@
 	
 	namespace phpweb\Controllers\Manual\En;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\BasicPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
 	/**
 	 * Oh oh oh, this is a terrible idea...
@@ -15,9 +17,16 @@
 	 * Pulls data straight from the live site, and attempts to parse it to get just the
 	 * meat of the information, and then reformats it to use here
 	 */
-	class EnglishManualRouter extends PHPWebTemplate
+	class EnglishManualRouter implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
 			$manual_path = $request->getAttributesBag()->getString('manual_path');
 			
 			$manual_uri = 'https://www.php.net/manual/en/' . $manual_path;
@@ -50,7 +59,7 @@
 			$menu_html = $this->clip(
 				$contents,
 				"<aside class='layout-menu'>",
-				"</aside>",
+				'</aside>',
 				0
 			);
 			
@@ -64,12 +73,12 @@
 			/* prevents title duplication */
 			$inner = str_replace('<h1 class="refname">' . $refname . '</h1>', '', $inner);
 			
-			$this->setPageTitle((string)$refname);
-			
-			$this->addSidePanel(new BasicPanel('Navigation', $menu_html));
-			
-			return $this->render(
-				function () use ($inner) {
+			return $request
+				->get(FreshTemplate::class)
+				->addSidePanel(new BasicPanel('Navigation', $menu_html))
+				->setPageTitle((string)$refname)
+				->render(
+					static function () use ($inner) {
 					echo '<div class="r2-manual">' . $inner . '</div>';
 				}
 			);
@@ -95,7 +104,7 @@
 		
 		private function badRequestResponse(string $error): Response {
 			return $this->render(
-				function () use ($error) {
+				static function () use ($error) {
 					echo 'Cannot handle that page - ' . htmlspecialchars($error);
 				}
 			);

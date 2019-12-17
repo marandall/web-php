@@ -4,6 +4,7 @@
 	
 	namespace phpweb\Controllers;
 	
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Branches\BranchRepository;
 	use phpweb\Data\News\ArticlesRepository;
 	use phpweb\Data\Videos\VideosRepository;
@@ -11,18 +12,20 @@
 	use phpweb\Framework\Response;
 	use phpweb\Services;
 	use phpweb\UI\Templates\FreshTemplate;
-	use phpweb\UI\Templates\PHPWebTemplate;
 	
-	class IndexController extends PHPWebTemplate
+	class IndexController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('PHP - Powering the Web');
-			
-			$renderer = new FreshTemplate();
-			$renderer->overrideHeader([$this, 'renderCustomHeader']);
-			$this->setRenderer($renderer);
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+			    UiInjector::class,
+                $this
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+		    return $request->get(FreshTemplate::class)
+                ->setPageTitle('PHP - Powering The Web')
+			    ->render([$this, 'renderContents']);
 		}
 		
 		public function renderCustomHeader() {
@@ -56,9 +59,12 @@
                             </div>
 
                             <div><?= htmlspecialchars($latest->getVersionId()) ?></div>
-                            <div style="margin-bottom: 0.5em">Released <?= htmlspecialchars($latest->getDate()->format('d M Y')) ?></div>
-                            
-                            <a href="<?= htmlspecialchars($branch->getUrl()) ?>" style="display: block; padding: 10px" class="r2-hover-gray-2">Find out more</a>
+                            <div style="margin-bottom: 0.5em">Released <?= htmlspecialchars(
+									$latest->getDate()->format('d M Y')
+								) ?></div>
+
+                            <a href="<?= htmlspecialchars($branch->getUrl()) ?>" style="display: block; padding: 10px"
+                               class="r2-hover-gray-2">Find out more</a>
                         </div>
 						<?php
 					}

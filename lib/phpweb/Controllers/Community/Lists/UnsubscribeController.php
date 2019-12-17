@@ -2,19 +2,28 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Controllers\Lists;
+	namespace phpweb\Controllers\Community\Lists;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class UnsubscribeController extends PHPWebTemplate
+	class UnsubscribeController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Unsubscribe from Mailing Lists');
-			$this->setActivePage('community');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Unsubscribe from Mailing Lists')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {
@@ -22,7 +31,7 @@
             <div class="tip">
                 <p class="tip">
                     If the mailing list you would like to unsubscribe from is
-                    in the list on our <a href="/lists/">mailing lists page</a>,
+                    in the list on our <a href="/community/lists/">mailing lists page</a>,
                     then you don't need to use your mail client to unsubscribe, you can do
                     so on the web, using the form on the page. If you still need
                     to find out what email address you used to subscribe, the instructions

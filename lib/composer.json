@@ -2,7 +2,10 @@
   "require": {
     "nikic/fast-route": "*",
     "symfony/console": "*",
+    "symfony/dependency-injection": "*",
+    "symfony/config": "*",
     "ext-simplexml": "*",
+    "psr/log": "*",
     "ext-pdo": "*",
     "ext-json": "*",
     "ext-dom": "*",
@@ -12,7 +15,8 @@
   },
   "config": {
     "vendor-dir": "vendor",
-    "prepend-autoloader": false
+    "prepend-autoloader": false,
+    "optimize-autoloader": true
   },
   "autoload": {
     "psr-4": {

@@ -4,17 +4,25 @@
 	
 	namespace phpweb\Controllers;
 	
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class SecurityNoteController extends PHPWebTemplate
+	class SecurityNoteController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('A note on security in PHP');
-			$this->setActivePage('docs');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('A note on security in PHP')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

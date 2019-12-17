@@ -12,4 +12,13 @@
 				]
 			)
 		);
+		
+		override(
+			\phpweb\Framework\Request::get(0),
+			map(
+				[
+					'' => '@'
+				]
+			)
+		);
 	}

@@ -4,19 +4,27 @@
 	
 	namespace phpweb\Controllers\Developers;
 	
-	use Closure;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class GetInvolvedController extends PHPWebTemplate
+	class GetInvolvedController  implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Get Involved');
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
 		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Get Involved')
+				->render([$this, 'renderContents']);
+		}
 		
 		public function renderContents() {
 			?>
@@ -77,7 +85,7 @@
                             by which developers can suggest and discuss new ideas with the community</li>
                         <li><a href="/developers/tools/build-setup">Developer Setup Help</a> - some helpful information
                             regarding setting up a development environment for PHP</li>
-                        <li><a href="/lists/">Mailing List</a> - list of general and internal mailing lists
+                        <li><a href="/community/lists/">Mailing List</a> - list of general and internal mailing lists
                             used by PHP</li>
                     </ul>
                 </div>

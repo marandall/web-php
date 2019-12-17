@@ -4,15 +4,24 @@
 	
 	namespace phpweb\Controllers\Versions\Branches;
 	
+	use phpweb\Controllers\ControllerInterface;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
 	use phpweb\Tools\ReleaseFeedBuilder\FeedBuilderFactory;
 	
-	class BranchAtomFeedController extends BranchRouter
+	class BranchAtomFeedController implements ControllerInterface
 	{
-		protected function invokeForBranch(Request $request, Branch $branch): Response {
+		public function load(): array {
+			return [
+				BranchLoaderMiddleware::class,
+				$this
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$branch = $request->get(Branch::class);
 			$format = $request->getAttributesBag()->getString('format');
 			
 			return Services::get(FeedBuilderFactory::class)

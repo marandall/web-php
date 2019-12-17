@@ -19,7 +19,7 @@
 		private const CV_SEARCH_FALLBACK = 'search';
 		
 		/** @var array */
-		private $cookies;
+		private array $cookies;
 		
 		public function __construct(array $cookies) {
 			$this->cookies = $cookies;

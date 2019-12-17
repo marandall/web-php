@@ -4,19 +4,32 @@
 	
 	namespace phpweb\Controllers\Versions;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
 	use phpweb\Data\Branches\Branches;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Tools\Formatting;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class EOLController extends PHPWebTemplate
+	class EOLController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Unsupported / End-of-Life Branches');
-			$this->setActivePage('docs');
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+		    return [
+		        UiInjector::class,
+                UiReleasesMiddleware::class,
+                $this
+            ];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+		    return $request
+                ->get(FreshTemplate::class)
+                ->setPageTitle('Unsupported / End-of-Life Branches')
+                ->setActivePage('docs')
+                ->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {
@@ -93,9 +106,5 @@
                 </tbody>
             </table>
 			<?php
-		}
-		
-		private function formatInterval(\DateTime $time) {
-			return $time->diff(new \DateTime())->format('%d Days');
 		}
 	}

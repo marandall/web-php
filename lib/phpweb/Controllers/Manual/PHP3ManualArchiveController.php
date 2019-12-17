@@ -4,18 +4,28 @@
 	
 	namespace phpweb\Controllers\Manual;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class PHP3ManualArchiveController extends PHPWebTemplate
+	class PHP3ManualArchiveController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('PHP 3 Manual Archive');
-			$this->setActivePage('docs');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('PHP 3 Manual Archive')
+				->render([$this, 'renderContents']);
+		}
+		
 		
 		public function renderContents() {
 			?>

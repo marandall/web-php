@@ -5,11 +5,12 @@
 	namespace phpweb\Data\News;
 	
 	use phpweb\Config\Site;
+	use phpweb\Services\Builder\InjectableService;
 	
-	class ArticlesRepository
+	class ArticlesRepository implements InjectableService
 	{
 		/** @var NewsArticle[]|null */
-		private $cache = null;
+		private ?array $cache = null;
 		
 		protected static function GetArticlesData(): array {
 			return require Site::GetDataDir() . '/news/compiled.inc';
@@ -27,7 +28,7 @@
 				$this->cache[] = new NewsArticle($article_data);
 			}
 			
-			usort($this->cache, function(NewsArticle $a, NewsArticle $b) {
+			usort($this->cache, static function(NewsArticle $a, NewsArticle $b) {
 				return $b->getTime()->getTimestamp() <=> $a->getTime()->getTimestamp();
 			});
 			

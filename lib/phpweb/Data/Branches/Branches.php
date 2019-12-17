@@ -76,7 +76,7 @@
 			foreach ($releases_by_branch as $branch_id => $releases) {
 				uasort(
 					$releases,
-					function (Release $a, Release $b) {
+					static function (Release $a, Release $b) {
 						return $a->getDate()->getTimestamp() - $b->getDate()->getTimestamp();
 					}
 				);

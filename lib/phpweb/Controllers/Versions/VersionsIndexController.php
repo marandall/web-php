@@ -4,19 +4,31 @@
 	
 	namespace phpweb\Controllers\Versions;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\BranchRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
 	use phpweb\Tools\ReleaseTableRenderer;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class VersionsIndexController extends PHPWebTemplate
+	class VersionsIndexController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Version History');
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				UiReleasesMiddleware::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$request->get(FreshTemplate::class)
+				->setPageTitle('Version History')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

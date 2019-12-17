@@ -4,41 +4,26 @@
 	
 	namespace phpweb\Controllers\About;
 	
-	use Closure;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class SitesController extends PHPWebTemplate
+	class SitesController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('A Tourist\'s Guide');
-			$this->setActivePage('help');
-			
-			$this->addSidePanel(new BasicCallbackPanel('', Closure::fromCallable([$this, 'renderPanel'])));
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				AboutMiddleware::class,
+				$this,
+			];
 		}
 		
-		public function renderPanel() {
-			?>
-            <p class="panel"><a href="#www">Main Website</a></p>
-            <p class="panel"><a href="#talks">Conference Materials</a></p>
-            <p class="panel"><a href="#news">Mailing Lists Web and NNTP Interface</a></p>
-            <p class="panel"><a href="#pear">The PHP Extension and Application Repository</a></p>
-            <p class="panel"><a href="#pecl">The PHP Extension Community Library</a></p>
-            <p class="panel"><a href="#bugs">Bug Database</a></p>
-            <p class="panel"><a href="#doc">Documentation collaboration</a></p>
-            <p class="panel"><a href="#docs">Documentation dev server</a></p>
-            <p class="panel"><a href="#qa">Quality Assurance Team</a></p>
-            <p class="panel"><a href="#git">Git Repository</a></p>
-            <p class="panel"><a href="#svn">Archived SVN Repository</a></p>
-            <p class="panel"><a href="#gtk">PHP-GTK</a></p>
-            <p class="panel"><a href="#gcov">Test and Code Coverage analysis</a></p>
-            
-            <p class="panel"><a href="#wiki">The PHP Wiki</a></p>
-            <p class="panel"><a href="#people">The PHP Developers Profiles</a></p>
-			<?php
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request->get(FreshTemplate::class)
+				->setPageTitle('The Tourist Guide')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {

@@ -4,23 +4,30 @@
 	
 	namespace phpweb\Controllers\Developers\Git;
 	
-	use Closure;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\BasicCallbackPanel as BasicCallbackPanelAlias;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class GitController extends PHPWebTemplate
+	class GitController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Git Access');
-			$this->setActivePage('community');
-			
-			$this->addSidePanel(new BasicCallbackPanelAlias('What is Git?', Closure::fromCallable([$this, 'renderPanel'])));
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
 		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('PHP Community GIT Usage')
+                ->addSidePanel(new BasicCallbackPanel('What is Git?', fn() => $this->renderPanel()))
+				->render([$this, 'renderContents']);
+		}
+	
 		protected function renderPanel() {
 		    ?>
             <p>

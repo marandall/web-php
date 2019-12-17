@@ -4,7 +4,9 @@
 	
 	namespace phpweb\Data\Branches;
 	
-	class BranchRepository
+	use phpweb\Services\Builder\InjectableService;
+	
+	class BranchRepository implements InjectableService
 	{
 		/**
 		 * @return Branch[]
@@ -28,5 +30,16 @@
 			}
 			
 			return array_reverse($supported);
+		}
+		
+		/**
+		 * Locate an individual branch
+		 *
+		 * @param string $branch_id
+		 * @return Branch|null
+		 */
+		
+		public function find(string $branch_id): ?Branch {
+			return $this->all()[$branch_id] ?? null;
 		}
 	}

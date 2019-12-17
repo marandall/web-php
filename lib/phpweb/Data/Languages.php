@@ -111,7 +111,7 @@
 							return $langcode;
 						}
 						// Fallback on english if we got something wacky
-						return "en";
+						return 'en';
 				}
 			}
 			else {
@@ -125,7 +125,7 @@
 							return $langcode;
 						}
 						// Fallback on english if we got something wacky
-						return "en";
+						return 'en';
 				}
 			}
 		}

@@ -4,17 +4,26 @@
 	
 	namespace phpweb\Controllers\Security;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class BlowfishArchiveController extends PHPWebTemplate
+	class BlowfishArchiveController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('PHP 5.3 CRYPT_BLOWFISH security fix details');
-			$this->setActivePage('docs');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+                ->get(FreshTemplate::class)
+                ->setPageTitle('')
+                ->render([$this, 'renderContents']);
 		}
 		
 		public function renderContents() {
@@ -29,9 +38,9 @@
 
             <p>
                 In versions of PHP older than 5.3.7, $2a$ inadvertently resulted in
-                system-specific behavior for passwords with non-ASCII characters in them.  On
+                system-specific behavior for passwords with non-ASCII characters in them. On
                 some installs (mostly on PowerPC and ARM, as well as sometimes on *BSD's and
-                Solaris regardless of CPU architecture), they were processed correctly.  On
+                Solaris regardless of CPU architecture), they were processed correctly. On
                 most installs (most Linux, many others), they were processed incorrectly most
                 of the time (but not always), and moreover in a way where security was
                 weakened.
@@ -47,7 +56,7 @@
 
             <p>
                 $2y$ results in perfectly correct behavior (without the countermeasure), so it
-                may be used (if desired) when hashing newly set passwords.  For practical
+                may be used (if desired) when hashing newly set passwords. For practical
                 purposes, it does not really matter if you use $2a$ or $2y$ for newly set
                 passwords, as the countermeasure is only triggered on some obscure passwords
                 (not even valid UTF-8) that are unlikely to be seen outside of a deliberate
@@ -56,14 +65,14 @@
 
             <p>
                 Summary: for passwords without characters with the 8th bit set, there's no
-                issue, all three prefixes work exactly the same.  For occasional passwords with
+                issue, all three prefixes work exactly the same. For occasional passwords with
                 characters with the 8th bit set, if the app prefers security and correctness
                 over backwards compatibility, no action is needed - just upgrade to new PHP and
-                use its new behavior (with $2a$).  However, if an app install admin truly
+                use its new behavior (with $2a$). However, if an app install admin truly
                 prefers backwards compatibility over security, and the problem is seen on the
                 specific install (which is not always the case because not all platforms/builds
                 were affected), then $2a$ in existing hashes in the database may be changed to
-                $2x$.  Alternatively, a similar thing may be achieved by changing $2a$ to $2x$
+                $2x$. Alternatively, a similar thing may be achieved by changing $2a$ to $2x$
                 in PHP app code after database queries, and using $2y$ on newly set passwords
                 (such that the app's automatic change to $2x$ on queries is not triggered for
                 them).

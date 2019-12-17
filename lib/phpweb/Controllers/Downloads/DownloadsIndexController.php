@@ -4,6 +4,8 @@
 	
 	namespace phpweb\Controllers\Downloads;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\Branches;
 	use phpweb\Data\Branches\InstallHelpers\HelperSearch;
@@ -13,18 +15,24 @@
 	use phpweb\Services;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Templates\BasicCallbackPanel;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class DownloadsIndexController extends PHPWebTemplate
+	class DownloadsIndexController  implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Download PHP');
-			$this->setActivePage('downloads');
-			
-			$this->addSidePanel(new BasicCallbackPanel('GPG Keys', [$this, 'renderGpgInfo']));
-			$this->addSidePanel(new BasicCallbackPanel('How to Install PHP', [$this, 'renderInstallPolicy']));
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Download PHP')
+                ->addSidePanel(new BasicCallbackPanel('GPG Keys', [$this, 'renderGpgInfo']))
+                ->addSidePanel(new BasicCallbackPanel('How to Install PHP', [$this, 'renderInstallPolicy']))
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderInstallPolicy() {
@@ -49,7 +57,7 @@
             
             <p>
                 The following official GnuPG keys of the current PHP Release Manager can be found
-                at <a href="/downloads/gpg-keys.php">here</a>.
+                at <a href="/downloads/gpg-keys">here</a>.
             </p>
 			<?php
 		}

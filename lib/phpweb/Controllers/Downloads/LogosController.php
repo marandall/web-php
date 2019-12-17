@@ -4,18 +4,34 @@
 	
 	namespace phpweb\Controllers\Downloads;
 	
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\UI\Templates\PHPWebTemplate;
+	use phpweb\UI\Templates\FreshTemplate;
 	
-	class LogosController extends PHPWebTemplate
+	class LogosController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$this->setPageTitle('Download PHP Logos');
-			$this->setActivePage('downloads');
-			
-			return $this->render([$this, 'renderContents']);
+		public function load(): array {
+			return [
+				UiInjector::class,
+				$this,
+			];
 		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			return $request
+				->get(FreshTemplate::class)
+				->setPageTitle('Download PHP Logos')
+				->render([$this, 'renderContents']);
+		}
+		
+		
+		private function print_image(string $src) {
+		    ?>
+            <img src="/static/images/<?= htmlspecialchars($src) ?>" /> 
+            <?php
+        }
 		
 		public function renderContents() {
 			?><p class="warn">
@@ -54,7 +70,7 @@
             </p>
 
             <div class="center logo-list">
-				<?php print_image("logos/new-php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+				<?php $this->print_image('logos/new-php-logo.svg', 'PHP logo', FALSE, 'width="200"'); ?>
                 <br>
                 <a href="/static/images/logos/new-php-logo.svg">SVG</a> |
                 <a href="/static/images/logos/new-php-logo.png">PNG</a>
@@ -67,7 +83,7 @@
             </p>
 
             <div class="center logo-list">
-				<?php print_image("logos/php-logo.svg", "PHP logo", FALSE, 'width="200"'); ?>
+				<?php $this->print_image('logos/php-logo.svg', 'PHP logo', FALSE, 'width="200"'); ?>
                 <br>
                 <a href="/static/images/logos/php-logo.svg">SVG</a> |
                 <a href="/static/images/logos/php-logo-bigger.png">PNG</a>
@@ -87,7 +103,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
+							<?php $this->print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?><br>
                             (not exactly as shown)
                         </td>
 						<?php $this->print_star(); ?>
@@ -104,7 +120,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br>
+							<?php $this->print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?><br>
                             (not exactly as shown)
                         </td>
                         <td></td>
@@ -120,7 +136,7 @@
 
                     <tr>
                         <td class="logo" <?php $this->printRandomBackgroundStyle(0, 5); ?>>
-							<?php print_image("logos/php-med-trans.png", "PHP logo"); ?>
+							<?php $this->print_image('logos/php-med-trans.png', 'PHP logo'); ?>
                         </td>
 						<?php $this->print_star(); ?>
                         <td>
@@ -135,7 +151,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?>
+							<?php $this->print_image('logos/php-med-trans-light.gif', 'PHP logo'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -150,7 +166,7 @@
 
                     <tr>
                         <td class="logob">
-							<?php print_image("logos/php-med-trans-dark.gif", "PHP logo"); ?>
+							<?php $this->print_image('logos/php-med-trans-dark.gif', 'PHP logo'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -165,7 +181,7 @@
 
                     <tr>
                         <td class="logo" <?php $this->printRandomBackgroundStyle(3, 5); ?>>
-							<?php print_image("logos/php-power-white.png", "Powered by PHP"); ?>
+							<?php $this->print_image('logos/php-power-white.png', 'Powered by PHP'); ?>
                         </td>
 						<?php $this->print_star(); ?>
                         <td>
@@ -180,7 +196,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-power-white.gif", "Powered by PHP"); ?>
+							<?php $this->print_image('logos/php-power-white.gif', 'Powered by PHP'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -195,7 +211,7 @@
 
                     <tr>
                         <td class="logo" <?php $this->printRandomBackgroundStyle(0, 2); ?>>
-							<?php print_image("logos/php-power-black.png", "Powered by PHP"); ?>
+							<?php $this->print_image('logos/php-power-black.png', 'Powered by PHP'); ?>
                         </td>
 						<?php $this->print_star(); ?>
                         <td>
@@ -210,7 +226,7 @@
 
                     <tr>
                         <td class="logob">
-							<?php print_image("logos/php-power-black.gif", "Powered by PHP"); ?>
+							<?php $this->print_image('logos/php-power-black.gif', 'Powered by PHP'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -225,9 +241,9 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br><br>
-							<?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br><br>
-							<?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
+							<?php $this->print_image('logos/php-power-micro.png', 'PHP Powered'); ?><br><br>
+							<?php $this->print_image('logos/php-power-micro2.png', 'PHP Powered'); ?><br><br>
+							<?php $this->print_image('logos/php5-power-micro.png', 'PHP 5 Powered'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -246,7 +262,7 @@
 
                     <tr>
                         <td class="logo" <?php $this->printRandomBackgroundStyle(0, 5); ?>>
-							<?php print_image("logos/php-icon.png", "PHP icon"); ?>
+							<?php $this->print_image('logos/php-icon.png', 'PHP icon'); ?>
                         </td>
 						<?php $this->print_star(); ?>
                         <td>
@@ -261,7 +277,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-icon-white.gif", "PHP icon"); ?>
+							<?php $this->print_image('logos/php-icon-white.gif', 'PHP icon'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -276,7 +292,7 @@
 
                     <tr>
                         <td class="logob">
-							<?php print_image("logos/php-icon-black.gif", "PHP icon"); ?>
+							<?php $this->print_image('logos/php-icon-black.gif', 'PHP icon'); ?>
                         </td>
                         <td></td>
                         <td>
@@ -291,7 +307,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br>
+							<?php $this->print_image('logos/php-icon-white.gif', 'PHP icons'); ?><br>
                             (not exactly as shown)
                         </td>
                         <td></td>
@@ -311,7 +327,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br>
+							<?php $this->print_image('logos/php_file_ico.gif', 'PHP file icons'); ?><br>
                             (not exactly as shown)
                         </td>
                         <td></td>
@@ -328,7 +344,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br>
+							<?php $this->print_image('logos/php_script_ico.png', 'PHP script icons'); ?><br>
                             (not exactly as shown)
                         </td>
                         <td></td>
@@ -347,7 +363,7 @@
 
                     <tr>
                         <td class="logo">
-							<?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br>
+							<?php $this->print_image('logos/php_xpstyle_ico.gif', 'Windows XP PHP file icons'); ?><br>
                             (not exactly as shown)
                         </td>
                         <td></td>
@@ -371,9 +387,9 @@
 		}
 		
 		private function printRandomBackgroundStyle($min, $max) {
-			echo "style=\"background-color: #" .
+			echo 'style="background-color: #' .
 				sprintf('%02x%02x%02x', rand($min, $max) * 51, rand($min, $max) * 51, rand($min, $max) * 51) .
-				";\"";
+				';"';
 		}
 		
 		private function print_star() {
