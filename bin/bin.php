@@ -9,5 +9,6 @@
 	$application->add(new \phpweb\Data\Release\Commands\CompileReleasesCommand());
 	$application->add(new \phpweb\Data\Videos\Commands\AddYoutubeVideoCommand());
 	$application->add(new \phpweb\Data\Videos\Commands\CompileVideosCommand());
+	$application->add(new \phpweb\Data\Videos\Commands\SetPromotedVideoCommand());
 	
 	$application->run();

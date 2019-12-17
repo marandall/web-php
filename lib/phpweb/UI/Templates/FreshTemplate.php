@@ -6,6 +6,13 @@
 	
 	class FreshTemplate implements RendererInterface
 	{
+		/** @var callable */
+		private $header_callback;
+		
+		public function __construct() {
+			$this->header_callback = [$this, 'renderHeader'];
+		}
+		
 		public function render(PHPWebTemplate $tpl, callable $body) {
 			$config = [
 				'headsup'         => '',
@@ -34,14 +41,14 @@
 			}
 			
 			if (count($matches) !== 0) {
-			    $total_added = 0;
+				$total_added = 0;
 				foreach ($matches as $match) {
 					[$tag, $label] = $match;
 					
 					/* avoid cases where there's a tag in for the time being */
-                    if (strpos($label, '<') !== false) {
-                        continue;
-                    }
+					if (strpos($label, '<') !== false) {
+						continue;
+					}
 					
 					$id         = str_replace(' ', '_', strtolower($label));
 					$inner_html = str_replace($tag, '<a id="' . htmlspecialchars($id) . '"></a>' . $tag, $inner_html);
@@ -125,20 +132,14 @@
                 </div>
                 <div id="flash-message"></div>
             </nav>
+			
+			<?php ($this->header_callback)($tpl) ?>
 
-            <div style="background: #f2f2f2">
-                <div style="width: 1200px; margin-left: auto; margin-right: auto; background: #f2f2f2">
-                    <h1 style="margin: 0; padding: 0; padding-top: 15px; padding-bottom: 15px; color: black"><?= htmlspecialchars(
-							$tpl->getPageTitle()
-						) ?></h1>
-                </div>
-            </div>
-
-            <div class="r2-outer" style="width: 100%">
+            <div class="r2-outer" style="width: 100%; line-height: 1.5">
                 <div class="r2-inner" style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
                     <div style="display: grid; grid-template-columns: auto 330px;  grid-column-gap: 10px">
                         <div class="r2-inner-left" style="background-color: #ffffff">
-                            <div style="padding: 10px; padding-left: 0">
+                            <div style="padding: 10px; padding-left: 0; padding-top: 0">
 								
 								<?php foreach ($tpl->getErrorPanels() as $panel) { ?>
                                     <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">
@@ -243,6 +244,27 @@
             </script>
             </body>
             </html>
+			<?php
+		}
+		
+		/**
+		 * Allows replacing the standard grey banner that contains the title
+		 * @return $this
+		 */
+		public function overrideHeader(callable $header_callback) {
+			$this->header_callback = $header_callback;
+			return $this;
+		}
+		
+		private function renderHeader(PHPWebTemplate $tpl) {
+			?>
+            <div style="background: #f2f2f2">
+                <div style="width: 1200px; margin-left: auto; margin-right: auto; background: #f2f2f2">
+                    <h1 style="margin: 0; padding: 0; padding-top: 15px; padding-bottom: 15px; color: black"><?= htmlspecialchars(
+							$tpl->getPageTitle()
+						) ?></h1>
+                </div>
+            </div>
 			<?php
 		}
 	}

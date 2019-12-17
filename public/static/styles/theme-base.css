@@ -290,7 +290,6 @@ dl code {
 
 body {
     font-size: 1rem;
-    line-height: 1.5rem;
     padding-left:0;
     padding-right:0;
     padding-bottom:0;
@@ -316,7 +315,6 @@ input[type="search"] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 3rem;
   margin:0 0 1.5rem;
   overflow:hidden;
   text-rendering: optimizeLegibility;

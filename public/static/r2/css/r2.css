@@ -97,7 +97,7 @@ a:hover { text-decoration: underline; }
 }
 
 .r2-side-panel-contents {
-    border: 1px solid #aaaaaa;
+    x-border: 1px solid #aaaaaa;
     border-top: none;
     background-color: #fafafa;
     padding: 0.5em;
@@ -111,3 +111,18 @@ a:hover { text-decoration: underline; }
 .r2-inner {
     background-color: white;
 }
+
+.r2-cbox {
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+
+.r2-hover-gray-2 {
+    background: #dddddd;
+}
+
+.r2-hover-gray-2:hover {
+    background: #cccccc;
+}
+

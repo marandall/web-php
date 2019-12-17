@@ -194,6 +194,15 @@
 			return $this->page_headers;
 		}
 		
+		/**
+		 * @param RendererInterface $renderer
+		 * @return $this
+		 */
+		public function setRenderer(RendererInterface $renderer) {
+			$this->renderer = $renderer;
+			return $this;
+		}
+		
 		protected function render(callable $internal): Response {
 			try {
 				ob_start();
