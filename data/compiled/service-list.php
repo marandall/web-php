@@ -1,9 +1,15 @@
 <?php
-	
-	use Symfony\Component\DependencyInjection\Container;
-	use Symfony\Component\DependencyInjection\Exception\LogicException;
-	
-	/**
+
+use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use Symfony\Component\DependencyInjection\Exception\LogicException;
+use Symfony\Component\DependencyInjection\Exception\RuntimeException;
+use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
+
+/**
  * This class has been auto-generated
  * by the Symfony Dependency Injection Component.
  *
@@ -29,6 +35,8 @@ class ServiceList extends Container
             'phpweb\\Controllers\\Community\\Conferences\\ConferencesIndexController' => 'getConferencesIndexControllerService',
             'phpweb\\Controllers\\Community\\Events\\CalendarController' => 'getCalendarControllerService',
             'phpweb\\Controllers\\Community\\Events\\SubmitEventController' => 'getSubmitEventControllerService',
+            'phpweb\\Controllers\\Community\\Lists\\MailingListsIndexController' => 'getMailingListsIndexControllerService',
+            'phpweb\\Controllers\\Community\\Lists\\UnsubscribeController' => 'getUnsubscribeControllerService',
             'phpweb\\Controllers\\Community\\Videos\\VideosIndexController' => 'getVideosIndexControllerService',
             'phpweb\\Controllers\\ControllerInterface' => 'getControllerInterfaceService',
             'phpweb\\Controllers\\CreditsController' => 'getCreditsControllerService',
@@ -45,8 +53,6 @@ class ServiceList extends Container
             'phpweb\\Controllers\\License\\ContributorGuidelinesController' => 'getContributorGuidelinesControllerService',
             'phpweb\\Controllers\\License\\DistributionGuidelinesController' => 'getDistributionGuidelinesControllerService',
             'phpweb\\Controllers\\License\\LicenseIndexController' => 'getLicenseIndexControllerService',
-            'phpweb\\Controllers\\Lists\\MailingListsIndexController' => 'getMailingListsIndexControllerService',
-            'phpweb\\Controllers\\Lists\\UnsubscribeController' => 'getUnsubscribeControllerService',
             'phpweb\\Controllers\\Manual\\En\\EnglishManualRouter' => 'getEnglishManualRouterService',
             'phpweb\\Controllers\\Manual\\HelpTranslateController' => 'getHelpTranslateControllerService',
             'phpweb\\Controllers\\Manual\\PHP3ManualArchiveController' => 'getPHP3ManualArchiveControllerService',
@@ -65,6 +71,8 @@ class ServiceList extends Container
             'phpweb\\Controllers\\SoftwareController' => 'getSoftwareControllerService',
             'phpweb\\Controllers\\SupportController' => 'getSupportControllerService',
             'phpweb\\Controllers\\ThanksController' => 'getThanksControllerService',
+            'phpweb\\Controllers\\Versions\\API\\AllReleasesFeedController' => 'getAllReleasesFeedControllerService',
+            'phpweb\\Controllers\\Versions\\API\\SupportedReleaseFeedController' => 'getSupportedReleaseFeedControllerService',
             'phpweb\\Controllers\\Versions\\Branches\\BranchAtomFeedController' => 'getBranchAtomFeedControllerService',
             'phpweb\\Controllers\\Versions\\Branches\\BranchChangelogController' => 'getBranchChangelogControllerService',
             'phpweb\\Controllers\\Versions\\Branches\\BranchController' => 'getBranchControllerService',
@@ -84,6 +92,8 @@ class ServiceList extends Container
             'phpweb\\Data\\Conferences\\ConferenceRepository' => 'getConferenceRepositoryService',
             'phpweb\\Data\\News\\ArticlesRepository' => 'getArticlesRepositoryService',
             'phpweb\\Data\\Release\\ReleasesRepository' => 'getReleasesRepositoryService',
+            'phpweb\\Services\\Http\\HttpFetcher' => 'getHttpFetcherService',
+            'phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory' => 'getFeedBuilderFactoryService',
         ];
 
         $this->aliases = [];
@@ -225,6 +235,26 @@ class ServiceList extends Container
     protected function getSubmitEventControllerService()
     {
         return $this->services['phpweb\\Controllers\\Community\\Events\\SubmitEventController'] = new \phpweb\Controllers\Community\Events\SubmitEventController();
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Community\Lists\MailingListsIndexController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Community\Lists\MailingListsIndexController
+     */
+    protected function getMailingListsIndexControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Community\\Lists\\MailingListsIndexController'] = new \phpweb\Controllers\Community\Lists\MailingListsIndexController();
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Community\Lists\UnsubscribeController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Community\Lists\UnsubscribeController
+     */
+    protected function getUnsubscribeControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Community\\Lists\\UnsubscribeController'] = new \phpweb\Controllers\Community\Lists\UnsubscribeController();
     }
 
     /**
@@ -385,26 +415,6 @@ class ServiceList extends Container
     protected function getLicenseIndexControllerService()
     {
         return $this->services['phpweb\\Controllers\\License\\LicenseIndexController'] = new \phpweb\Controllers\License\LicenseIndexController();
-    }
-
-    /**
-     * Gets the public 'phpweb\Controllers\Lists\MailingListsIndexController' shared autowired service.
-     *
-     * @return \phpweb\Controllers\Community\Lists\MailingListsIndexController
-     */
-    protected function getMailingListsIndexControllerService()
-    {
-        return $this->services['phpweb\\Controllers\\Lists\\MailingListsIndexController'] = new \phpweb\Controllers\Community\Lists\MailingListsIndexController();
-    }
-
-    /**
-     * Gets the public 'phpweb\Controllers\Lists\UnsubscribeController' shared autowired service.
-     *
-     * @return \phpweb\Controllers\Community\Lists\UnsubscribeController
-     */
-    protected function getUnsubscribeControllerService()
-    {
-        return $this->services['phpweb\\Controllers\\Lists\\UnsubscribeController'] = new \phpweb\Controllers\Community\Lists\UnsubscribeController();
     }
 
     /**
@@ -588,6 +598,26 @@ class ServiceList extends Container
     }
 
     /**
+     * Gets the public 'phpweb\Controllers\Versions\API\AllReleasesFeedController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Versions\API\AllReleasesFeedController
+     */
+    protected function getAllReleasesFeedControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Versions\\API\\AllReleasesFeedController'] = new \phpweb\Controllers\Versions\API\AllReleasesFeedController(($this->services['phpweb\\Data\\Release\\ReleasesRepository'] ?? ($this->services['phpweb\\Data\\Release\\ReleasesRepository'] = new \phpweb\Data\Release\ReleasesRepository())), ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] ?? ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] = new \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory())));
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Versions\API\SupportedReleaseFeedController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Versions\API\SupportedReleaseFeedController
+     */
+    protected function getSupportedReleaseFeedControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Versions\\API\\SupportedReleaseFeedController'] = new \phpweb\Controllers\Versions\API\SupportedReleaseFeedController(($this->services['phpweb\\Data\\Branches\\BranchRepository'] ?? ($this->services['phpweb\\Data\\Branches\\BranchRepository'] = new \phpweb\Data\Branches\BranchRepository())), ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] ?? ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] = new \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory())));
+    }
+
+    /**
      * Gets the public 'phpweb\Controllers\Versions\Branches\BranchAtomFeedController' shared autowired service.
      *
      * @return \phpweb\Controllers\Versions\Branches\BranchAtomFeedController
@@ -734,7 +764,7 @@ class ServiceList extends Container
      */
     protected function getVersionsIndexControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\VersionsIndexController'] = new \phpweb\Controllers\Versions\VersionsIndexController();
+        return $this->services['phpweb\\Controllers\\Versions\\VersionsIndexController'] = new \phpweb\Controllers\Versions\VersionsIndexController(($this->services['phpweb\\Data\\Branches\\BranchRepository'] ?? ($this->services['phpweb\\Data\\Branches\\BranchRepository'] = new \phpweb\Data\Branches\BranchRepository())), ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] ?? ($this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] = new \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory())));
     }
 
     /**
@@ -775,5 +805,25 @@ class ServiceList extends Container
     protected function getReleasesRepositoryService()
     {
         return $this->services['phpweb\\Data\\Release\\ReleasesRepository'] = new \phpweb\Data\Release\ReleasesRepository();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\Http\HttpFetcher' shared autowired service.
+     *
+     * @return \phpweb\Services\Http\HttpFetcher
+     */
+    protected function getHttpFetcherService()
+    {
+        return $this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory' shared autowired service.
+     *
+     * @return \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory
+     */
+    protected function getFeedBuilderFactoryService()
+    {
+        return $this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] = new \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory();
     }
 }

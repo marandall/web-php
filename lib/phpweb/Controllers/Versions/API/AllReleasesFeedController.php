@@ -4,19 +4,36 @@
 	
 	namespace phpweb\Controllers\Versions\API;
 	
+	use phpweb\Controllers\ControllerInterface;
 	use phpweb\Data\Release\ReleasesRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\Services;
-	use phpweb\Tools\ReleaseFeedBuilder\FeedBuilderFactory;
+	use phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory;
 	
-	class AllReleasesFeedController
+	class AllReleasesFeedController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
-			$format = $request->getAttributesBag()->getString('format');
-			$visible = Services::get(ReleasesRepository::class)->all();
+		private ReleasesRepository $repository;
+		
+		private FeedBuilderFactory $feed_factory;
+		
+		public function __construct(
+			ReleasesRepository $repository,
+			FeedBuilderFactory $feed_factory
+		) {
+			$this->repository   = $repository;
+			$this->feed_factory = $feed_factory;
+		}
+		
+		public function load(): array {
+			return [$this];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
+			$format  = $request->getAttributesBag()->getString('format');
+			$visible = $this->repository->all();
 			
-			return Services::get(FeedBuilderFactory::class)
+			return $this
+				->feed_factory
 				->build($format)
 				->buildResponse($visible, '/releases/api/releases.' . $format);
 		}

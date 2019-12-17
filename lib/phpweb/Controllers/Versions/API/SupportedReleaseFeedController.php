@@ -4,20 +4,36 @@
 	
 	namespace phpweb\Controllers\Versions\API;
 	
-	use phpweb\Data\Branches\Branches;
+	use phpweb\Controllers\ControllerInterface;
+	use phpweb\Data\Branches\BranchRepository;
 	use phpweb\Data\Release\Release;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\Services;
-	use phpweb\Tools\ReleaseFeedBuilder\FeedBuilderFactory;
+	use phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory;
 	
-	class SupportedReleaseFeedController
+	class SupportedReleaseFeedController implements ControllerInterface
 	{
-		public function __invoke(Request $request): Response {
+		private BranchRepository $repository;
+		
+		private FeedBuilderFactory $feed_factory;
+		
+		public function __construct(
+			BranchRepository $repository,
+			FeedBuilderFactory $feed_factory
+		) {
+			$this->repository   = $repository;
+			$this->feed_factory = $feed_factory;
+		}
+		
+		public function load(): array {
+			return [$this];
+		}
+		
+		public function __invoke(Request $request, ?callable $next): Response {
 			/** @var Release[] $visible */
 			$visible = [];
 			
-			foreach (Branches::GetBranches() as $branch) {
+			foreach ($this->repository->all() as $branch) {
 				if (!$branch->isSupported()) {
 					continue;
 				}
@@ -32,7 +48,8 @@
 			
 			$format = $request->getAttributesBag()->getString('format');
 			
-			return Services::get(FeedBuilderFactory::class)
+			return $this
+				->feed_factory
 				->build($format)
 				->buildResponse($visible, '/versions/api/supported.' . $format);
 		}

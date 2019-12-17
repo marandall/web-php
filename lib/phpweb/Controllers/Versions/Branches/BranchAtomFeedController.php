@@ -9,7 +9,7 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
-	use phpweb\Tools\ReleaseFeedBuilder\FeedBuilderFactory;
+	use phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory;
 	
 	class BranchAtomFeedController implements ControllerInterface
 	{

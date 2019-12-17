@@ -2,9 +2,11 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Tools\ReleaseFeedBuilder;
+	namespace phpweb\Services\ReleaseFeedBuilder;
 	
-	class FeedBuilderFactory
+	use phpweb\Services\Builder\InjectableService;
+	
+	class FeedBuilderFactory implements InjectableService
 	{
 		public function build(string $format): FeedBuilderInterface {
 			if ($format === 'atom') {

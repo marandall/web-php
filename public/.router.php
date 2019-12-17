@@ -155,7 +155,6 @@
 	}
 	
 	try {
-		
 		$handler = null;
 		$route   = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'] ?? 'GET', $uri);
 		
@@ -179,7 +178,7 @@
 			$services = ServiceLoader::load();
 			
 			if (class_exists($route[1])) {
-				$handler = new $route[1]();
+				$handler = $services->get($route[1]);
 			}
 			else {
 				die('class ' . $route[1] . ' does not exist');
