@@ -50,10 +50,10 @@
 					$announcements = [];
 					foreach ($xml->announcements->announcement as $announcement) {
 						$lang = (string)$announcement->attributes()->lang;
-
+						
 						$announcements[$lang ?: 'en'] = [
 							'format'  => 'html',
-							'content' => (string)$announcement->asXML(),
+							'content' => (string)$announcement,
 						];
 					}
 					
@@ -62,12 +62,31 @@
 						$tags[] = (string)$tag;
 					}
 					
+					
+					$modules_data = [];
+					foreach ($xml->changes->children() as $xml_module) {
+						$module_id = (string)$xml_module->attributes()->id;
+						foreach ($xml_module->change as $xml_change) {
+							$references = [];
+							foreach ($xml_change->references->reference as $ref) {
+								$ref_attr     = $ref->attributes();
+								$references[] = ['type' => (string)$ref_attr->type, 'value' => (string)$ref];
+							}
+							
+							$modules_data[$module_id][] = [
+								'description' => (string)$xml_change->description,
+								'references'  => $references,
+							];
+						}
+					}
+					
 					$results[$version] = [
 						'version'       => $version,
 						'date'          => (string)$xml->date,
 						'source'        => $sources_array,
 						'tags'          => $tags,
 						'announcements' => $announcements,
+						'changes'       => $modules_data,
 					];
 				}
 			}

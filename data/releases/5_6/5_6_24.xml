@@ -1,54 +1,230 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.24">
+<?xml version="1.0"?>
+<release version="1" id="5.6.24">
   <release>5.6.24</release>
   <date>21 Jul 2016</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>24</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.24.tar.bz2</filename>
       <name>PHP 5.6.24 (tar.bz2)</name>
+      <filename>php-5.6.24.tar.bz2</filename>
+      <date>21 Jul 2016</date>
       <sha256>bf23617ec3ed0a125ec8bde2b7bca9d3804b2ff4df8de192890c84dc9fac38c6</sha256>
-      <md5/>
-      <date>21 Jul 2016</date>
     </source>
     <source>
-      <filename>php-5.6.24.tar.gz</filename>
       <name>PHP 5.6.24 (tar.gz)</name>
-      <sha256>5f8b2e4e00360fee6eb1b89447266ae45993265955bd1ea9866270d75cdb6ec1</sha256>
-      <md5/>
+      <filename>php-5.6.24.tar.gz</filename>
       <date>21 Jul 2016</date>
+      <sha256>5f8b2e4e00360fee6eb1b89447266ae45993265955bd1ea9866270d75cdb6ec1</sha256>
     </source>
     <source>
-      <filename>php-5.6.24.tar.xz</filename>
       <name>PHP 5.6.24 (tar.xz)</name>
-      <sha256>ed7c38c6dac539ade62e08118258f4dac0c49beca04d8603bee4e0ea6ca8250b</sha256>
-      <md5/>
+      <filename>php-5.6.24.tar.xz</filename>
       <date>21 Jul 2016</date>
+      <sha256>ed7c38c6dac539ade62e08118258f4dac0c49beca04d8603bee4e0ea6ca8250b</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.24. This is a security release. Several security bugs were fixed in this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.24">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Segmentation fault destroying HTTP_RAW_POST_DATA).</description>
+        <references>
+          <reference type="bugfix">71936</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cannot declare public method with signature incompatible with parent private method).</description>
+        <references>
+          <reference type="bugfix">72496</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in Length of String-typed ZVAL).</description>
+        <references>
+          <reference type="bugfix">72138</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Stack-based buffer overflow vulnerability in virtual_file_ex). (CVE-2016-6289)</description>
+        <references>
+          <reference type="bugfix">72513</reference>
+          <reference type="cve">CVE-2016-6289</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free in unserialize() with Unexpected Session Deserialization). (CVE-2016-6290)</description>
+        <references>
+          <reference type="bugfix">72562</reference>
+          <reference type="cve">CVE-2016-6290</reference>
+        </references>
+      </change>
+      <change>
+        <description>(HTTP_PROXY is improperly trusted by some PHP libraries and applications). (CVE-2016-5385)</description>
+        <references>
+          <reference type="bugfix">72573</reference>
+          <reference type="cve">CVE-2016-5385</reference>
+        </references>
+      </change>
+    </module>
+    <module id="bz2">
+      <change>
+        <description>(Type Confusion in php_bz2_filter_create()).</description>
+        <references>
+          <reference type="bugfix">72447</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Inadequate error handling in bzread()). (CVE-2016-5399)</description>
+        <references>
+          <reference type="bugfix">72613</reference>
+          <reference type="cve">CVE-2016-5399</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DateTime::createFromFormat 'U' with pre 1970 dates fails parsing).</description>
+        <references>
+          <reference type="bugfix">66836</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(exif_read_data() returns corrupted exif headers).</description>
+        <references>
+          <reference type="bugfix">50845</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bound read in exif_process_IFD_in_MAKERNOTE). (CVE-2016-6291)</description>
+        <references>
+          <reference type="bugfix">72603</reference>
+          <reference type="cve">CVE-2016-6291</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NULL Pointer Dereference in exif_process_user_comment). (CVE-2016-6292)</description>
+        <references>
+          <reference type="bugfix">72618</reference>
+          <reference type="cve">CVE-2016-6292</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Thick styled lines have scrambled patterns).</description>
+        <references>
+          <reference type="bugfix">43475</reference>
+        </references>
+      </change>
+      <change>
+        <description>(XBM images require width to be multiple of 8).</description>
+        <references>
+          <reference type="bugfix">53640</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagefilledpolygon doesn't draw horizontal line).</description>
+        <references>
+          <reference type="bugfix">64641</reference>
+        </references>
+      </change>
+      <change>
+        <description>(gdImageTrueColorToPaletteBody allows arbitrary write/read access).</description>
+        <references>
+          <reference type="bugfix">72512</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagegif/output out-of-bounds access).</description>
+        <references>
+          <reference type="bugfix">72519</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow error within _gdContributionsAlloc()). (CVE-2016-6207)</description>
+        <references>
+          <reference type="bugfix">72558</reference>
+          <reference type="cve">CVE-2016-6207</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(locale_accept_from_http out-of-bounds access). (CVE-2016-6294)</description>
+        <references>
+          <reference type="bugfix">72533</reference>
+          <reference type="cve">CVE-2016-6294</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(openssl_random_pseudo_bytes is not fork-safe).</description>
+        <references>
+          <reference type="bugfix">71915</reference>
+        </references>
+      </change>
+      <change>
+        <description>(openssl_pkey_new does not fail for invalid DSA params).</description>
+        <references>
+          <reference type="bugfix">72336</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SNMP">
+      <change>
+        <description>(Use After Free Vulnerability in SNMP with GC and unserialize()). (CVE-2016-6295)</description>
+        <references>
+          <reference type="bugfix">72479</reference>
+          <reference type="cve">CVE-2016-6295</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(GlobIterator throws LogicException).</description>
+        <references>
+          <reference type="bugfix">55701</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(Clearing bindings on an SQLite3 statement doesn't work).</description>
+        <references>
+          <reference type="bugfix">70628</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(Stream socket with remote address leads to a segmentation fault).</description>
+        <references>
+          <reference type="bugfix">72439</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Xmlrpc">
+      <change>
+        <description>(heap-buffer-overflow (write) simplestring_addn simplestring.c). (CVE-2016-6296)</description>
+        <references>
+          <reference type="bugfix">72606</reference>
+          <reference type="cve">CVE-2016-6296</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(Stack-based buffer overflow vulnerability in php_stream_zip_opener). (CVE-2016-6297)</description>
+        <references>
+          <reference type="bugfix">72520</reference>
+          <reference type="cve">CVE-2016-6297</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

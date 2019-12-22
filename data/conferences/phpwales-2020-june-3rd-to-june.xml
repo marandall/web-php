@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpwales-2020-june-3rd-to-june</id>
+  <title>PHPWales 2020 - June 3rd to June 4th</title>
+  <start_date>2020-06-03</start_date>
+  <end_date>2020-06-03</end_date>
+  <location country=""/>
+  <summary type="text"> Held in the picturesque setting of **Central Cardiff**, accessible from local airports and train stations - **PHP Wales** will be bringing together around **400 PHP developers** from around the world.</summary>
+  <content type="markdown"> Held in the picturesque setting of **Central Cardiff**, accessible from local airports and train stations - **PHP Wales** will be bringing together around **400 PHP developers** from around the world.
+
+ With your help we can put on our inaugural conference at PHPWales, bringing together 400 developers from around the world. Spread over 2 days in the capital city of Wales (Cardiff). Hosted in the Cardiff City Hall be sure to come along for the chance to learn from some of the best in the industry. With this being our first run, we wanted to set the theme to ensure the message was clear. Our theme is community, inclusion, and the importance of these. We have all seen when a community goes bad, or individuals are excluded from a community for one reason or another. We want to remind people that we are all one community of developers - but for these 2 days we are uniting under the banner of PHP.</content>
+  <updated>2019-12-12T09:04:51+01:00</updated>
+  <logo width="350" height="150">cfe3887bbd10610a163527efa18e3b0823820fe836814ac1219550195ae6d503.png</logo>
+</conference>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>confoo-vancouver-montreal</id>
+  <title/>
+  <start_date>2016-12-05</start_date>
+  <end_date>2016-12-05</end_date>
+  <location country=""/>
+  <summary type="text">We recently released the presentations for [ConFoo Montreal](https://confoo.ca/en/yul2017/sessions). This giant conference will be held on March 8-10, 2017.</summary>
+  <content type="markdown">We recently released the presentations for [ConFoo Montreal](https://confoo.ca/en/yul2017/sessions). This giant conference will be held on March 8-10, 2017.
+
+It's also the last chance to get tickets for [ConFoo Vancouver](https://confoo.ca/en/yvr2016/sessions), held on December 5-7, 2016.
+
+ConFoo is a multi-technology conference aimed specifically at web developers. It has between 100 and more than 150 presentations by local and international speakers. This conference offers a great diversity in content to expand your knowledge and increase your productivity. It is the perfect place to sharpen those hard tech skills and discover the latest practices.
+
+There is a great range of topics, including PHP, many other programming languages, databases, security, performance, machine learning and project management.</content>
+  <updated>2016-10-28T12:22:24-04:00</updated>
+  <logo width="320" height="168">e7bde3af7ca6758467cc0e659a895602b0458475488fdf257fb71acf070d5fb5.jpg</logo>
+</conference>

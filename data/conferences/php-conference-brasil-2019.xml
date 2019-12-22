@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-conference-brasil-2019</id>
+  <title>PHP Conference Brasil 2019</title>
+  <start_date>2019-04-15</start_date>
+  <end_date>2019-04-15</end_date>
+  <location country=""/>
+  <summary type="text"> PHP Conference Brasil, the Main PHP Event in Latin America, will have it's 14th Edition on December 5-7th in Porto Alegre, RS, Brazil. Keynotes will feature Adam Culp, Enrico Zimuel, Diana Arnos and Flavio Lisboa. On Sunday the 8th the event will hold a recreational day at Vinicola Stopassola, a Vineyard located at Serra Gaucha. Participants who opt-in will be treated to a genuine Gaucho Barbecue and a tour through the vineyard.</summary>
+  <content type="markdown"> PHP Conference Brasil, the Main PHP Event in Latin America, will have it's 14th Edition on December 5-7th in Porto Alegre, RS, Brazil. Keynotes will feature Adam Culp, Enrico Zimuel, Diana Arnos and Flavio Lisboa. On Sunday the 8th the event will hold a recreational day at Vinicola Stopassola, a Vineyard located at Serra Gaucha. Participants who opt-in will be treated to a genuine Gaucho Barbecue and a tour through the vineyard.</content>
+  <updated>2019-08-12T05:21:22-03:00</updated>
+  <logo width="250" height="250">bafe305ccc7a282f62a18e549525451f7637cd79a159125210f1bac922c2a7b8.png</logo>
+</conference>

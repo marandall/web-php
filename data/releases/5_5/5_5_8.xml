@@ -1,46 +1,174 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.8">
+<?xml version="1.0"?>
+<release version="1" id="5.5.8">
   <release>5.5.8</release>
   <date>9 Jan 2014</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.8.tar.bz2</filename>
       <name>PHP 5.5.8 (tar.bz2)</name>
-      <sha256>6d5f45659d13383fc8429f185cc9da0b30c7bb72dcae9baf568f0511eb7f8b68</sha256>
-      <md5/>
+      <filename>php-5.5.8.tar.bz2</filename>
       <date>9 Jan 2014</date>
+      <sha256>6d5f45659d13383fc8429f185cc9da0b30c7bb72dcae9baf568f0511eb7f8b68</sha256>
     </source>
     <source>
-      <filename>php-5.5.8.tar.gz</filename>
       <name>PHP 5.5.8 (tar.gz)</name>
-      <sha256>67c74a9a2357dc65f5b1701cadb574f1309c4c3a20a2a5c56aeae4c4be90f2f8</sha256>
-      <md5/>
+      <filename>php-5.5.8.tar.gz</filename>
       <date>9 Jan 2014</date>
+      <sha256>67c74a9a2357dc65f5b1701cadb574f1309c4c3a20a2a5c56aeae4c4be90f2f8</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP Development Team announces the immediate availability of PHP 5.5.8.
-This release fixes about 20 bugs against PHP 5.5.7.</p>
-
-<p>All PHP users are encouraged to upgrade to this new version.</p>
-
-<p>For source downloads of PHP 5.5.8, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.8">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.5.8. This release fixes about 20 bugs against PHP 5.5.7.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Disallowed JMP into a finally block.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added validation of class names in the autoload process.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed invalid C code in zend_strtod.c.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(list() fails to unpack yielded ArrayAccess object).</description>
+        <references>
+          <reference type="bugfix">66041</reference>
+        </references>
+      </change>
+      <change>
+        <description>(generators/throw_rethrow FAIL with ZEND_COMPILE_EXTENDED_INFO).</description>
+        <references>
+          <reference type="bugfix">65764</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fopen and O_NONBLOCK).</description>
+        <references>
+          <reference type="bugfix">61645</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zend_register_functions breaks reflection).</description>
+        <references>
+          <reference type="bugfix">66218</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Heap buffer over-read in DateInterval, CVE-2013-6712).</description>
+        <references>
+          <reference type="bugfix">66060</reference>
+          <reference type="cve">CVE-2013-6712</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DateTimeImmutable::diff does not work).</description>
+        <references>
+          <reference type="bugfix">65768</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(Passing DOMDocumentFragment to DOMDocument::saveHTML() Produces invalid Markup).</description>
+        <references>
+          <reference type="bugfix">65196</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Integer overflow in exif_read_data()).</description>
+        <references>
+          <reference type="bugfix">65873</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(128.0.0.0/16 isn't reserved any longer).</description>
+        <references>
+          <reference type="bugfix">66229</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Use freetype-config for determining freetype2 dir(s)).</description>
+        <references>
+          <reference type="bugfix">64405</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_odbc">
+      <change>
+        <description>(Stack smashing protection kills PDO/ODBC queries).</description>
+        <references>
+          <reference type="bugfix">66311</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLi">
+      <change>
+        <description>(mysqli_poll() is broken on win x64).</description>
+        <references>
+          <reference type="bugfix">65486</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPCache">
+      <change>
+        <description>Fixed revalidate_path=1 behavior to avoid caching of symlinks values.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#140](https://github.com/zendtech/ZendOptimizerPlus/issues/140) ("opcache.enable_file_override" doesn't respect "opcache.revalidate_freq".)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SNMP">
+      <change>
+        <description>Fixed SNMP_ERR_TOOBIG handling for bulk walk operations.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Use after free condition in SOAP extension).</description>
+        <references>
+          <reference type="bugfix">66112</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(ext/socket assumes AI_V4MAPPED is defined).</description>
+        <references>
+          <reference type="bugfix">65923</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XSL">
+      <change>
+        <description>(Segfault throwing an exception in a XSL registered function).</description>
+        <references>
+          <reference type="bugfix">49634</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(ZipArchive::open() ze_obj-&gt;filename_len not real).</description>
+        <references>
+          <reference type="bugfix">66321</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

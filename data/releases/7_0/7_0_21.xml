@@ -1,53 +1,224 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.21">
+<?xml version="1.0"?>
+<release version="1" id="7.0.21">
   <release>7.0.21</release>
   <date>06 Jul 2017</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>21</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.21.tar.bz2</filename>
       <name>PHP 7.0.21 (tar.bz2)</name>
+      <filename>php-7.0.21.tar.bz2</filename>
+      <date>06 Jul 2017</date>
       <sha256>2ba133c392de6f86aacced8c54e0adefd1c81d3840ac323b9926b8ed3dc6231f</sha256>
-      <md5/>
-      <date>06 Jul 2017</date>
     </source>
     <source>
-      <filename>php-7.0.21.tar.gz</filename>
       <name>PHP 7.0.21 (tar.gz)</name>
-      <sha256>f2f05f629dd02c75834ddf033916bd5ff92a720602839d81fd8b6d90e37b6225</sha256>
-      <md5/>
+      <filename>php-7.0.21.tar.gz</filename>
       <date>06 Jul 2017</date>
+      <sha256>f2f05f629dd02c75834ddf033916bd5ff92a720602839d81fd8b6d90e37b6225</sha256>
     </source>
     <source>
-      <filename>php-7.0.21.tar.xz</filename>
       <name>PHP 7.0.21 (tar.xz)</name>
-      <sha256>6713fe3024365d661593235b525235045ef81f18d0043654658c9de1bcb8b9e3</sha256>
-      <md5/>
+      <filename>php-7.0.21.tar.xz</filename>
       <date>06 Jul 2017</date>
+      <sha256>6713fe3024365d661593235b525235045ef81f18d0043654658c9de1bcb8b9e3</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.21. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Multiple [PATH=] and [HOST=] sections not properly parsed).</description>
+        <references>
+          <reference type="bugfix">74738</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Undefined constants in array properties result in broken properties).</description>
+        <references>
+          <reference type="bugfix">74658</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed misparsing of abstract unix domain socket names.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Unserialize Heap Use-After-Free (READ: 1) in zval_get_type). (CVE-2017-12934)</description>
+        <references>
+          <reference type="bugfix">74101</reference>
+          <reference type="cve">CVE-2017-12934</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</description>
+        <references>
+          <reference type="bugfix">74111</reference>
+          <reference type="cve">CVE-2017-12933</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</description>
+        <references>
+          <reference type="bugfix">74603</reference>
+          <reference type="cve">CVE-2017-11628</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</description>
+        <references>
+          <reference type="bugfix">74819</reference>
+          <reference type="cve">CVE-2017-11145</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(References to deleted XPath query results).</description>
+        <references>
+          <reference type="bugfix">69373</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Buffer over-read into uninitialized memory). (CVE-2017-7890)</description>
+        <references>
+          <reference type="bugfix">74435</reference>
+          <reference type="cve">CVE-2017-7890</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Stack Buffer Overflow in msgfmt_parse_message). (CVE-2017-11362)</description>
+        <references>
+          <reference type="bugfix">73473</reference>
+          <reference type="cve">CVE-2017-11362</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Wrong reflection on Collator::getSortKey and collator_get_sort_key).</description>
+        <references>
+          <reference type="bugfix">74705</reference>
+        </references>
+      </change>
+      <change>
+        <description>(grapheme_strpos illegal memory access).</description>
+        <references>
+          <reference type="bugfix">73634</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</description>
+        <references>
+          <reference type="cve">CVE-2017-9224</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>Add TAF callback (PR #2459).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Segfault with opcache.memory_protect and validate_timestamp).</description>
+        <references>
+          <reference type="bugfix">74663</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</description>
+        <references>
+          <reference type="bugfix">74651</reference>
+          <reference type="cve">CVE-2017-11144</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Segmentation fault in PHP7.1.1(compiled using the bundled PCRE library)).</description>
+        <references>
+          <reference type="bugfix">74087</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_OCI">
+      <change>
+        <description>Support Instant Client 12.2 in --with-pdo-oci configure option.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(Segfault when cast Reflection object to string with undefined constant).</description>
+        <references>
+          <reference type="bugfix">74673</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(null coalescing operator failing with SplFixedArray).</description>
+        <references>
+          <reference type="bugfix">74478</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Invalid Reflection signatures for random_bytes and random_int).</description>
+        <references>
+          <reference type="bugfix">74708</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap buffer overflow in substr).</description>
+        <references>
+          <reference type="bugfix">73648</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(ftp:// wrapper ignores context arg).</description>
+        <references>
+          <reference type="bugfix">74598</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PHAR">
+      <change>
+        <description>(Phar::__construct reflection incorrect).</description>
+        <references>
+          <reference type="bugfix">74386</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Incorrect conversion array with WSDL_CACHE_MEMORY).</description>
+        <references>
+          <reference type="bugfix">74679</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(stream_socket_get_name() returns '\0').</description>
+        <references>
+          <reference type="bugfix">74556</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,47 +1,242 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.14">
+<?xml version="1.0"?>
+<release version="1" id="7.2.14">
   <release>7.2.14</release>
   <date>07 Feb 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>14</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.14.tar.bz2</filename>
       <name>PHP 7.2.14 (tar.bz2)</name>
+      <filename>php-7.2.14.tar.bz2</filename>
+      <date>10 Jan 2019</date>
       <sha256>f56132d248c7bf1e0efc8a680a4b598d6ff73fc6b9c84b5d7b539ad8db7a6597</sha256>
-      <md5/>
-      <date>10 Jan 2019</date>
     </source>
     <source>
-      <filename>php-7.2.14.tar.gz</filename>
       <name>PHP 7.2.14 (tar.gz)</name>
-      <sha256>87e13d80b0c3a66bd463d1cb47dc101335884a0d192ab924f547f8aed7f70c08</sha256>
-      <md5/>
+      <filename>php-7.2.14.tar.gz</filename>
       <date>10 Jan 2019</date>
+      <sha256>87e13d80b0c3a66bd463d1cb47dc101335884a0d192ab924f547f8aed7f70c08</sha256>
     </source>
     <source>
-      <filename>php-7.2.14.tar.xz</filename>
       <name>PHP 7.2.14 (tar.xz)</name>
-      <sha256>ee3f1cc102b073578a3c53ba4420a76da3d9f0c981c02b1664ae741ca65af84f</sha256>
-      <md5/>
+      <filename>php-7.2.14.tar.xz</filename>
       <date>10 Jan 2019</date>
+      <sha256>ee3f1cc102b073578a3c53ba4420a76da3d9f0c981c02b1664ae741ca65af84f</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.14. This is a security release which also contains several minor bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.14.
-This is a security release which also contains several minor bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(memcpy with negative length via crafted DNS response). (CVE-2019-9022)</description>
+        <references>
+          <reference type="bugfix">77369</reference>
+          <reference type="cve">CVE-2019-9022</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zend_signal_startup() needs ZEND_API).</description>
+        <references>
+          <reference type="bugfix">71041</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP generates "FE_FREE" opcode on the wrong line).</description>
+        <references>
+          <reference type="bugfix">76046</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>(Serializing or unserializing COM objects crashes).</description>
+        <references>
+          <reference type="bugfix">77177</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DateTime::diff gives wrong diff when the actual diff is less than 1 second).</description>
+        <references>
+          <reference type="bugfix">77097</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Unsigned rational numbers are written out as signed rationals).</description>
+        <references>
+          <reference type="bugfix">77184</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(efree() on uninitialized Heap data in imagescale leads to use-after-free). (CVE-2016-10166)</description>
+        <references>
+          <reference type="bugfix">77269</reference>
+          <reference type="cve">CVE-2016-10166</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</description>
+        <references>
+          <reference type="bugfix">77270</reference>
+          <reference type="cve">CVE-2019-6977</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect error handling of imagecreatefromjpeg()).</description>
+        <references>
+          <reference type="bugfix">77195</reference>
+        </references>
+      </change>
+      <change>
+        <description>(auto cropping has insufficient precision).</description>
+        <references>
+          <reference type="bugfix">77198</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecropauto(&#x2026;, GD_CROP_SIDES) crops left but not right).</description>
+        <references>
+          <reference type="bugfix">77200</reference>
+        </references>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(null pointer dereference in imap_mail).</description>
+        <references>
+          <reference type="bugfix">77020</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77370</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77371</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow in multibyte match_at). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77381</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77382</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(buffer overflow in fetch_token). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77385</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77394</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77418</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(oci_pconnect with OCI_CRED_EXT not working).</description>
+        <references>
+          <reference type="bugfix">76804</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added oci_set_call_timeout() for call timeouts.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added oci_set_db_operation() for the DBOP end-to-end-tracing attribute.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(CFG assertion failure on multiple finalizing switch frees in one block).</description>
+        <references>
+          <reference type="bugfix">77215</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>Handle invalid index passed to PDOStatement::fetchColumn() as error.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</description>
+        <references>
+          <reference type="bugfix">77247</reference>
+          <reference type="cve">CVE-2019-9021</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(Unsupported IPV6_RECVPKTINFO constants on macOS).</description>
+        <references>
+          <reference type="bugfix">77136</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(Issue with re-binding on SQLite3).</description>
+        <references>
+          <reference type="bugfix">77051</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Xmlrpc">
+      <change>
+        <description>(heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</description>
+        <references>
+          <reference type="bugfix">77242</reference>
+          <reference type="cve">CVE-2019-9020</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</description>
+        <references>
+          <reference type="bugfix">77380</reference>
+          <reference type="cve">CVE-2019-9024</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-london-2018</id>
+  <title>SymfonyLive London 2018</title>
+  <start_date>2018-09-28</start_date>
+  <end_date>2018-09-28</end_date>
+  <location country=""/>
+  <summary type="text">Symfony is proud to organize the 7th edition of the British Symfony conference and to welcome the Symfony and PHP community from all over the UK.</summary>
+  <content type="markdown">Symfony is proud to organize the 7th edition of the British Symfony conference and to welcome the Symfony and PHP community from all over the UK.
+
+From September 27th to 28th 2018, over 350 engineers, developers and IT professionals will meet at Westminster, for [SymfonyLive London 2018](https://london2018.live.symfony.com/).
+
+Join us for 2 days of Symfony to share best practices, experience, knowledge, make new contacts, and hear the latest developments with the framework!</content>
+  <updated>2018-06-18T10:37:31+02:00</updated>
+  <logo width="280" height="120">87d1efc2f8af845da2d032c343ad5b6622fcc8b7a107cb3df393f8e2c4e8cad4.png</logo>
+</conference>

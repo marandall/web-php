@@ -11,6 +11,7 @@
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services\ChangelogRenderer\ChangelogRenderer;
 	use phpweb\UI\Notices\BranchReleaseNotMostRecent;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
@@ -19,6 +20,12 @@
 	
 	class ReleaseController implements ControllerInterface
 	{
+		private ChangelogRenderer $changelog_renderer;
+		
+		public function __construct(ChangelogRenderer $changelog_renderer) {
+			$this->changelog_renderer = $changelog_renderer;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -45,10 +52,10 @@
 		
 		public function __invoke(Request $request, ?callable $next): Response {
 			$release = $request->get(Release::class);
-			$branch = $request->get(Branch::class);
+			$branch  = $request->get(Branch::class);
 			
 			$version_id = $release->getVersionId();
-			$changelog = $release->getChangelogText();
+			$changelog  = $release->getChangelogText();
 			
 			/* list order is inverted so this goes at the top */
 			$release_list = new LinkPanel('Other Releases in ' . $branch->getBranchId());
@@ -85,39 +92,45 @@
 			
 			
 			?>
-            <h2>Release Announcement</h2>
-			<?php
-			echo $release->getAnnouncementHTML();
-			
-			?>
-            To download the source code for this release please view the <a href="#sources">sources</a>.
-            <br/><br/>
-			<?php
-			
-			if ($changelog !== '') {
-				?>
-                <h2>Change Log <?= htmlspecialchars($release->getVersionId()) ?></h2>
-				<?php
-				echo $changelog;
-			}
-			
-			?>
-            <a id="sources"></a>
-            <h2>Source Files <?= htmlspecialchars($release->getVersionId()) ?></h2>
-			<?php
-			foreach ($release->getSources() as $source) {
-				?>
-                <div style="margin-bottom: 5px">
-                    <a style="font-weight: bold"
-                       href="/distributions/<?= htmlspecialchars($source->getFilename()) ?>">
-						<?= htmlspecialchars($source->getName()) ?>
-                    </a>
-
-                    (<?= htmlspecialchars($source->getDate()->format('Y-m-d')) ?>)
-                    <br/>
-                    SHA256: <?= htmlspecialchars($source->getSha256()) ?>
+            <section class="r2-sec">
+                <h2>Release Announcement</h2>
+                <div>
+					<?php
+						echo $release->getAnnouncementHTML();
+					?>
+                    To download the source code for this release please view the <a href="#sources">sources</a>.
                 </div>
-				<?php
-			}
+            </section>
+
+            <section class="r2-sec">
+                <h2>Changelog</h2>
+                <div>
+					<?php $this->changelog_renderer->render($release->getModulesWithChanges()); ?>
+                </div>
+            </section>
+
+
+            <section class="r2-sec">
+                <h2>Sources</h2>
+                <div>
+					<?php foreach ($release->getSources() as $source) { ?>
+                        <div style="margin-bottom: 5px">
+                            <a style="font-weight: bold"
+                               href="/distributions/<?= htmlspecialchars($source->getFilename()) ?>">
+								<?= htmlspecialchars($source->getName()) ?>
+                            </a>
+
+                            (<?= htmlspecialchars($source->getDate()->format('Y-m-d')) ?>)
+                            <br/>
+                            SHA256: <?= htmlspecialchars($source->getSha256()) ?>
+                        </div>
+						<?php
+					}
+					?>
+                </div>
+            </section>
+			
+			<?php
+			
 		}
 	}

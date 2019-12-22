@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-conference-japan-2019</id>
+  <title>PHP Conference Japan 2019</title>
+  <start_date>2019-12-01</start_date>
+  <end_date>2019-12-01</end_date>
+  <location country=""/>
+  <summary type="text">About [PHP Conference Japan 2019](http://phpcon.php.gr.jp/2019/)</summary>
+  <content type="markdown">About [PHP Conference Japan 2019](http://phpcon.php.gr.jp/2019/)
+
+PHP Conference Japan is the biggest PHP festival in Japan held at Tokyo, with more than 1,500 attendees for 2018. This one day festival covers all topics of PHP from introductory seminar for early beginners to dedicated topics in details for wide variety of topics like frameworks, DevOps, security, or PHP internals.
+
+Conference Date / Veue
+
+2019/12/1  
+[Ota City Industrial Plaza (PiO) Reservation Center](https://www.pio-ota.net/english/)</content>
+  <updated>2019-08-08T10:29:31+00:00</updated>
+  <logo width="400" height="210">6c4737d48e3a196737e359b345aefa5635e6070672fb88a00b8d5a9d2fd85589.png</logo>
+</conference>

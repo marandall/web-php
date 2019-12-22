@@ -1,51 +1,377 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.11">
+<?xml version="1.0"?>
+<release version="1" id="7.0.11">
   <release>7.0.11</release>
   <date>15 Sep 2016</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>11</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.11.tar.bz2</filename>
       <name>PHP 7.0.11 (tar.bz2)</name>
+      <filename>php-7.0.11.tar.bz2</filename>
+      <date>15 Sep 2016</date>
       <sha256>f99b729dc1149858844b18af1e8c0de6dd1cdfdd52e22fbb4de2aa78bf9bf7f1</sha256>
-      <md5/>
-      <date>15 Sep 2016</date>
     </source>
     <source>
-      <filename>php-7.0.11.tar.gz</filename>
       <name>PHP 7.0.11 (tar.gz)</name>
-      <sha256>02d27b5d140dbad8d400a95af808e1e9ce87aa8d2a2100870734ba26e6700d79</sha256>
-      <md5/>
+      <filename>php-7.0.11.tar.gz</filename>
       <date>15 Sep 2016</date>
+      <sha256>02d27b5d140dbad8d400a95af808e1e9ce87aa8d2a2100870734ba26e6700d79</sha256>
     </source>
     <source>
-      <filename>php-7.0.11.tar.xz</filename>
       <name>PHP 7.0.11 (tar.xz)</name>
-      <sha256>d4cccea8da1d27c11b89386f8b8e95692ad3356610d571253d00ca67d524c735</sha256>
-      <md5/>
+      <filename>php-7.0.11.tar.xz</filename>
       <date>15 Sep 2016</date>
+      <sha256>d4cccea8da1d27c11b89386f8b8e95692ad3356610d571253d00ca67d524c735</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.11. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Null pointer deref in zval_delref_p).</description>
+        <references>
+          <reference type="bugfix">72944</reference>
+        </references>
+      </change>
+      <change>
+        <description>(assign_dim on string doesn't reset hval).</description>
+        <references>
+          <reference type="bugfix">72943</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memleak in zend_binary_assign_op_obj_helper).</description>
+        <references>
+          <reference type="bugfix">72911</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault with __get returned by ref).</description>
+        <references>
+          <reference type="bugfix">72813</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP Segfaults when trying to expand an infinite operator).</description>
+        <references>
+          <reference type="bugfix">72767</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP Crashes on duplicate destructor call).</description>
+        <references>
+          <reference type="bugfix">72854</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stream_socket_recvfrom read access violation).</description>
+        <references>
+          <reference type="bugfix">72857</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>(COM called from PHP does not return out parameters).</description>
+        <references>
+          <reference type="bugfix">72922</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Dba">
+      <change>
+        <description>(Cannot fetch multiple values with group in ini file).</description>
+        <references>
+          <reference type="bugfix">70825</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(Cannot upload file using ftp_put to FTPES with require_ssl_reuse).</description>
+        <references>
+          <reference type="bugfix">70195</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagesetstyle() causes OOB read for empty $styles).</description>
+        <references>
+          <reference type="bugfix">72709</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecopy does not support 1bit transparency on truecolor images).</description>
+        <references>
+          <reference type="bugfix">66005</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecopy() loses single-color transparency on palette images).</description>
+        <references>
+          <reference type="bugfix">72913</reference>
+        </references>
+      </change>
+      <change>
+        <description>(possible resource leaks in _php_image_convert()).</description>
+        <references>
+          <reference type="bugfix">68716</reference>
+        </references>
+      </change>
+    </module>
+    <module id="iconv">
+      <change>
+        <description>(iconv_substr returns false for empty strings).</description>
+        <references>
+          <reference type="bugfix">72320</reference>
+        </references>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(imap_mail null dereference).</description>
+        <references>
+          <reference type="bugfix">72852</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(grapheme_*() is not Unicode compliant on CR LF sequence).</description>
+        <references>
+          <reference type="bugfix">65732</reference>
+        </references>
+      </change>
+      <change>
+        <description>(add locale length check). (CVE-2016-7416)</description>
+        <references>
+          <reference type="bugfix">73007</reference>
+          <reference type="cve">CVE-2016-7416</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(Heap overflow in mysqlnd related to BIT fields). (CVE-2016-7412)</description>
+        <references>
+          <reference type="bugfix">72293</reference>
+          <reference type="cve">CVE-2016-7412</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>Fixed invalid handle error with Implicit Result Sets.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Binding null values triggers ORA-24816 error).</description>
+        <references>
+          <reference type="bugfix">72524</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Typo in opcache error message).</description>
+        <references>
+          <reference type="bugfix">72949</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Invalid memory access when using persistent PDO connection).</description>
+        <references>
+          <reference type="bugfix">72788</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memory leak in PDO persistent connection handling).</description>
+        <references>
+          <reference type="bugfix">72791</reference>
+        </references>
+      </change>
+      <change>
+        <description>(call to empty() on NULL result using PDO::FETCH_LAZY returns false).</description>
+        <references>
+          <reference type="bugfix">60665</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>Implemented stringify 'uniqueidentifier' fields.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>Implemented FR [#72633](http://bugs.php.net/72633) (Postgres PDO lastInsertId() should work without specifying a sequence).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Regression in pgo_pgsql).</description>
+        <references>
+          <reference type="bugfix">72759</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Out of bound when verify signature of zip phar in phar_parse_zipfile). (CVE-2016-7414)</description>
+        <references>
+          <reference type="bugfix">72928</reference>
+          <reference type="cve">CVE-2016-7414</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bound when verify signature of tar phar in phar_parse_tarfile).</description>
+        <references>
+          <reference type="bugfix">73035</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(getConstant for a array constant with constant values returns NULL/NFC/UKNOWN).</description>
+        <references>
+          <reference type="bugfix">72846</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(PHP7: session-uploadprogress kills httpd).</description>
+        <references>
+          <reference type="bugfix">72724</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SID always return "name=ID", even if session cookie exist).</description>
+        <references>
+          <reference type="bugfix">72940</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SimpleXML">
+      <change>
+        <description>(SimpleXML isset/unset do not respect namespace).</description>
+        <references>
+          <reference type="bugfix">72971</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Null coalescing operator doesn't behave as expected with SimpleXMLElement).</description>
+        <references>
+          <reference type="bugfix">72957</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Missing type check when unserializing SplArray). (CVE-2016-7417)</description>
+        <references>
+          <reference type="bugfix">73029</reference>
+          <reference type="cve">CVE-2016-7417</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(substr_compare NULL length interpreted as 0).</description>
+        <references>
+          <reference type="bugfix">55451</reference>
+        </references>
+      </change>
+      <change>
+        <description>(getimagesize returning FALSE on valid jpg).</description>
+        <references>
+          <reference type="bugfix">72278</reference>
+        </references>
+      </change>
+      <change>
+        <description>(get_browser() incorrectly parses entries with "+" sign).</description>
+        <references>
+          <reference type="bugfix">65550</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(stream_set_blocking doesn't work).</description>
+        <references>
+          <reference type="bugfix">72853</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ftps:// opendir wrapper data channel encryption fails with IIS FTP 7.5, 8.5).</description>
+        <references>
+          <reference type="bugfix">72764</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Negative ftruncate() on php://memory exhausts memory).</description>
+        <references>
+          <reference type="bugfix">71882</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>Downgraded bundled SQLite to 3.8.10.2, see [#73068](http://bugs.php.net/73068)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Sysvshm">
+      <change>
+        <description>(shm_attach null dereference).</description>
+        <references>
+          <reference type="bugfix">72858</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(wddx_deserialize use-after-free). (CVE-2016-7413)</description>
+        <references>
+          <reference type="bugfix">72860</reference>
+          <reference type="cve">CVE-2016-7413</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out-Of-Bounds Read in php_wddx_push_element). (CVE-2016-7418)</description>
+        <references>
+          <reference type="bugfix">73065</reference>
+          <reference type="cve">CVE-2016-7418</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(SEGV on unknown address zif_xml_parse).</description>
+        <references>
+          <reference type="bugfix">72085</reference>
+        </references>
+      </change>
+      <change>
+        <description>(_xml_startElementHandler() segmentation fault).</description>
+        <references>
+          <reference type="bugfix">72714</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(impossible to compile php with zip support).</description>
+        <references>
+          <reference type="bugfix">68302</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

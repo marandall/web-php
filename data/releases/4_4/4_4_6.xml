@@ -1,48 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.4.6">
+<?xml version="1.0"?>
+<release version="1" id="4.4.6">
   <release>4.4.6</release>
   <date>01 Mar 2007</date>
-  <version>
-    <major>4</major>
-    <minor>4</minor>
-    <release>6</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.4.6.tar.bz2</filename>
       <name>Source (tar.bz2)</name>
-      <sha256/>
-      <md5>5db283824310c87efb18c76b4735c4bd</md5>
+      <filename>php-4.4.6.tar.bz2</filename>
       <date/>
+      <sha256/>
     </source>
     <source>
-      <filename>php-4.4.6.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5>07c607fcf12435f0078d72fe0de4e3c0</md5>
+      <filename>php-4.4.6.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">The PHP development team would like to announce the immediate availability of PHP 4.4.6. This release addresses a crash problem with the session extension when register_globals is turned on that was introduced in PHP 4.4.5. This release comes also with the new version 7.0 of PCRE and it addresses a number of minor bugs.
 
-
-<p>
-The PHP development team would like to announce the immediate availability of
-PHP 4.4.6.  This release addresses a crash problem with the session extension
-when register_globals is turned on that was introduced in PHP 4.4.5. This
-release comes also with the new version 7.0 of PCRE and it addresses a number
-of minor bugs.
-</p>
-
-<p>
- For a full list of changes in PHP 4.4.6, see the
- <a href="/ChangeLog-4.php#4.4.6">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 4.4.6, see the [ChangeLog](/ChangeLog-4.php#4.4.6).</announcement>
   </announcements>
+  <tags/>
   <changes/>
 </release>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>early-bird-ticket-sale-for-php</id>
+  <title>Early Bird Ticket Sale for PHPConf.Asia 2016</title>
+  <start_date>2016-08-24</start_date>
+  <end_date>2016-08-24</end_date>
+  <location country=""/>
+  <summary type="text">[PHPConf.Asia 2016](https://2016.phpconf.asia) is happening in Singapore on 22-24 August 2016. Tutorial Day on 22 Aug. 2 day single track conference on 23 and 24 August.</summary>
+  <content type="markdown">[PHPConf.Asia 2016](https://2016.phpconf.asia) is happening in Singapore on 22-24 August 2016. Tutorial Day on 22 Aug. 2 day single track conference on 23 and 24 August.
+
+**Keynote Speakers:** Davey Shafik ([@dshafik](https://twitter.com/dshafik)) and Samantha Qui&#xF1;ones ([@ieatkillerbees](https://twitter.com/ieatkillerbees))
+
+***Early Bird Tickets available now!*** (valid till 5 August). Visit &lt;https://2016.phpconf.asia&gt; for more details.</content>
+  <updated>2016-07-24T14:38:59+08:00</updated>
+  <logo width="300" height="105">9ff3bda8a50eeb70cbc9d541aa5a65e2dcbe456bbabf188c55206d3ee58ef61a.png</logo>
+</conference>

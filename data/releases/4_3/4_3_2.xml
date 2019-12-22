@@ -1,77 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.3.2">
+<?xml version="1.0"?>
+<release version="1" id="4.3.2">
   <release>4.3.2</release>
   <date>29 May 2003</date>
-  <version>
-    <major>4</major>
-    <minor>3</minor>
-    <release>2</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.3.2.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.3.2.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
     <source>
-      <filename>php-4.3.2.tar.bz2</filename>
       <name>Source (tar.bz2)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.3.2.tar.bz2</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">[ [Version Fran&#xE7;aise](/releases/4_3_2_fr.php) ]
 
+ After a lengthy QA process, [PHP 4.3.2](/downloads.php) is finally out!
+ This maintenance release solves a lot of bugs found in earlier PHP versions and is a **strongly** recommended upgrade for all users of PHP.
 
+Bugfix release
+--------------
 
-<p>[ <a href="/releases/4_3_2_fr.php">Version Française</a> ]</p>
-
-<p>
- After a lengthy QA process, <a href="/downloads/">PHP 4.3.2</a> is finally out!<br/>
- This maintenance release solves a lot of bugs found in earlier PHP versions
- and is a <strong>strongly</strong> recommended upgrade for all users of PHP.
-</p>
-
-<h2>Bugfix release</h2>
-
-<p>
  PHP 4.3.2 contains, among others, following important fixes, additions and improvements:
-</p>
 
-<ul>
- <li>Fixes several potentially hazardous integer and buffer overflows.</li>
- <li>Fixes for several 64-bit problems.</li>
- <li>
-  New Apache 2.0 SAPI module (sapi/apache2handler,
-  enabled with --with-apxs2).
- </li>
- <li>
-  New session_regenerate_id() function. (Important feature
-  against malicious session planting).
- </li>
- <li>Improvements to dba extension.</li>
- <li>Improvements to thttpd SAPI module.</li>
- <li>Dropped support for GDLIB version 1.x.x (php_gd.dll) on Windows.</li>
- <li>An unix man page for CLI version of PHP.</li>
- <li>
-  New "disable_classes" php.ini option to allow administrators to
-  disable certain classes for security reasons.
- </li>
- <li>..and a <strong>HUGE</strong> amount of other bug fixes!</li>
-</ul>
+- Fixes several potentially hazardous integer and buffer overflows.
+- Fixes for several 64-bit problems.
+- New Apache 2.0 SAPI module (sapi/apache2handler, enabled with --with-apxs2).
+- New session_regenerate_id() function. (Important feature against malicious session planting).
+- Improvements to dba extension.
+- Improvements to thttpd SAPI module.
+- Dropped support for GDLIB version 1.x.x (php_gd.dll) on Windows.
+- An unix man page for CLI version of PHP.
+- New "disable_classes" php.ini option to allow administrators to disable certain classes for security reasons.
+- ..and a **HUGE** amount of other bug fixes!
 
-<p>
- For a full list of changes in PHP 4.3.2, see the
- <a href="/ChangeLog-4.php#4.3.2">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 4.3.2, see the [ChangeLog](/ChangeLog-4.php#4.3.2).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Improved dba extension (Marcus)">
+      <change>
+        <description>Added support for internal error handling of Berkeley db libraries.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Disallowed Berkeley db versions 4.1.0 to 4.1.24 due to locking problems.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Disallowed linkage of Berkeley db submodules against libraries with different major versions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Disallowed configuring of more than one Berkeley db handler.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Reenabled dba_popen() with new persistent STDIO streams.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

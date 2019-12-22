@@ -1,96 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.3.1">
+<?xml version="1.0"?>
+<release version="1" id="4.3.1">
   <release>4.3.1</release>
   <date>17 February 2003</date>
-  <version>
-    <major>4</major>
-    <minor>3</minor>
-    <release>1</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.3.1.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.3.1.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">PHP Security Advisory: CGI vulnerability in PHP version 4.3.0 
+ Issued on: February 17, 2003 Software: PHP version 4.3.0 Platforms: All The PHP Group has learned of a serious security vulnerability in the CGI SAPI of PHP version 4.3.0.
 
-<h1>
-PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
-</h1>
+Description
+-----------
 
-<dl>
- <dt>Issued on:</dt>
- <dd>February 17, 2003</dd>
- <dt>Software:</dt>
- <dd>PHP version 4.3.0</dd>
- <dt>Platforms:</dt>
- <dd>All</dd>
-</dl>
+ PHP contains code for preventing direct access to the CGI binary with configure option "--enable-force-cgi-redirect" and php.ini option "cgi.force_redirect". In PHP 4.3.0 there is a bug which renders these options useless.
 
-<p>
- The PHP Group has learned of a serious security vulnerability in
- the CGI SAPI of PHP version 4.3.0.
-</p>
+ NOTE: This bug does NOT affect any of the other SAPI modules. (such as the Apache or ISAPI modules, etc.)
 
-<h2>Description</h2>
+Impact
+------
 
-<p>
- PHP contains code for preventing direct access to the CGI binary with
- configure option "--enable-force-cgi-redirect" and php.ini option
- "cgi.force_redirect". In PHP 4.3.0 there is a bug which renders these
- options useless.
-</p>
+ Anyone with access to websites hosted on a web server which employs the CGI module may exploit this vulnerability to gain access to any file readable by the user under which the webserver runs.
 
-<p>
- NOTE: This bug does NOT affect any of the other SAPI modules.
- (such as the Apache or ISAPI modules, etc.)
-</p>
+ A remote attacker could also trick PHP into executing arbitrary PHP code if attacker is able to inject the code into files accessible by the CGI. This could be for example the web server access-logs.
 
-<h2>Impact</h2>
+Solution
+--------
 
-<p>
- Anyone with access to websites hosted on a web server which employs
- the CGI module may exploit this vulnerability to gain access to any file
- readable by the user under which the webserver runs.
-</p>
+Workarounds
+-----------
 
-<p>
- A remote attacker could also trick PHP into executing arbitrary PHP code
- if attacker is able to inject the code into files accessible by the CGI.
- This could be for example the web server access-logs.
-</p>
+None.
 
-<h2>Solution</h2>
+Credits
+-------
 
-<p>
- The PHP Group has released a new PHP version, 4.3.1, which incorporates
- a fix for the vulnerability. All users of affected PHP versions are
- encouraged to upgrade to this latest version. <a href="/downloads/">The
- downloads page</a> has the new 4.3.1 source tarballs, Windows binaries
- and source patch from 4.3.0 available for download. You will only need
- to upgrade if you're using the CGI module of PHP 4.3.0. There are no
- other bugfixes contained in this release.
-</p>
-
-<h2>Workarounds</h2>
-
-<p>None.</p>
-
-<h2>Credits</h2>
-
-<p>
- The PHP Group would like to thank Kosmas Skiadopoulos for discovering
- this vulnerability.
-</p>
-
-
-</announcement>
+ The PHP Group would like to thank Kosmas Skiadopoulos for discovering this vulnerability.</announcement>
   </announcements>
+  <tags/>
   <changes/>
 </release>

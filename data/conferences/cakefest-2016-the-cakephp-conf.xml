@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>cakefest-2016-the-cakephp-conf</id>
+  <title>CakeFest 2016 - The CakePHP Conference</title>
+  <start_date>2016-05-26</start_date>
+  <end_date>2016-05-26</end_date>
+  <location country=""/>
+  <summary type="text">Every summer we hold our annual conference dedicated to [CakePHP](http://cakephp.org). For the past 11 years, the framework has been a benchmark for PHP development, providing developers with a full stack MVC solution to build powerful applications which scale. This, coupled with an amazing community backing and thousands of plugins, makes [CakePHP](http://cakephp.org) the number one choice for those who love code.</summary>
+  <content type="markdown">Every summer we hold our annual conference dedicated to [CakePHP](http://cakephp.org). For the past 11 years, the framework has been a benchmark for PHP development, providing developers with a full stack MVC solution to build powerful applications which scale. This, coupled with an amazing community backing and thousands of plugins, makes [CakePHP](http://cakephp.org) the number one choice for those who love code.
+
+That's why we ask you join us at [CakeFest 2016](http://cakefest.org) which will be running from May 26th till May 29th, and experience open source at it's very best! As always, [CakeFest](http://cakefest.org) will consist of a two day workshop (At beginner and advanced levels) and a two day conference. This year we are in the beautiful city of Amsterdam, Netherlands.
+
+ The workshop sessions at [CakeFest](http://cakefest.org) are an ideal way to learn [CakePHP](http://cakephp.org) whether you are just starting out, or you are a seasoned developer. They are also a great way to get up to speed with the latest versions and innovations within the framework. All this, directly from the core developers themselves! The workshops will be on May 26th and May 27th.
+
+ Comprising two jam-packed days of presentations, discussions and talks on [CakePHP](http://cakephp.org) related technologies. The conference portion of [CakeFest](http://cakefest.org) is an event not to miss, for both new and old users of the framework. The conference will be on May 28th and May 29th and we have some fantastic [speakers](http://cakefest.org/schedule) lined up.
+
+[Tickets](http://cakefest.org/tickets) are selling fast, so you better grab yours while you still can!</content>
+  <updated>2016-04-05T11:30:00+00:00</updated>
+  <logo width="180" height="179">76f10e8d05dea39f821a4da32da9ffc72438a2991955521369f8518bae564a78.png</logo>
+</conference>

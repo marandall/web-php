@@ -1,55 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.29">
+<?xml version="1.0"?>
+<release version="1" id="5.6.29">
   <release>5.6.29</release>
   <date>08 Dec 2016</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>29</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.29.tar.bz2</filename>
       <name>PHP 5.6.29 (tar.bz2)</name>
+      <filename>php-5.6.29.tar.bz2</filename>
+      <date>08 Dec 2016</date>
       <sha256>499b844c8aa7be064c111692e51a093ba94e54d2d9abb01e70ea76183a1825bb</sha256>
-      <md5/>
-      <date>08 Dec 2016</date>
     </source>
     <source>
-      <filename>php-5.6.29.tar.gz</filename>
       <name>PHP 5.6.29 (tar.gz)</name>
-      <sha256>0b1b939129a7286c5a474ac2cf845b979477f26dff36639e04022def9e252574</sha256>
-      <md5/>
+      <filename>php-5.6.29.tar.gz</filename>
       <date>08 Dec 2016</date>
+      <sha256>0b1b939129a7286c5a474ac2cf845b979477f26dff36639e04022def9e252574</sha256>
     </source>
     <source>
-      <filename>php-5.6.29.tar.xz</filename>
       <name>PHP 5.6.29 (tar.xz)</name>
-      <sha256>0ff352a433f73e2c82b0d5b283b600402518569bf72a74e247f356dacbf322a7</sha256>
-      <md5/>
+      <filename>php-5.6.29.tar.xz</filename>
       <date>08 Dec 2016</date>
+      <sha256>0ff352a433f73e2c82b0d5b283b600402518569bf72a74e247f356dacbf322a7</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.29. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.29">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Add missing mysqlnd.* parameters to php.ini-*).</description>
+        <references>
+          <reference type="bugfix">64526</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Opcache segfault when using class constant to call a method).</description>
+        <references>
+          <reference type="bugfix">73402</reference>
+        </references>
+      </change>
+      <change>
+        <description>(check cached files permissions)</description>
+        <references>
+          <reference type="bugfix">69090</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(Invalid parameter in memcpy function trough openssl_pbkdf2).</description>
+        <references>
+          <reference type="bugfix">72776</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(Incorrect SQL generated for pg_copy_to()).</description>
+        <references>
+          <reference type="bugfix">73498</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Segfault (Regression for #69152)).</description>
+        <references>
+          <reference type="bugfix">73452</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(Unsetting result set may reset other result set).</description>
+        <references>
+          <reference type="bugfix">73530</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(HTTP stream wrapper should ignore HTTP 100 Continue).</description>
+        <references>
+          <reference type="bugfix">73297</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(Invalid read when wddx decodes empty boolean element). (CVE-2016-9935)</description>
+        <references>
+          <reference type="bugfix">73631</reference>
+          <reference type="cve">CVE-2016-9935</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

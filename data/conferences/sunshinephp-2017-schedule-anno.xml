@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>sunshinephp-2017-schedule-anno</id>
+  <title>SunshinePHP 2017 Schedule Announced</title>
+  <start_date>2016-11-01</start_date>
+  <end_date>2016-11-01</end_date>
+  <location country=""/>
+  <summary type="text">We are pleased to announce the [2017 SunshinePHP Schedule](http://sunshinephp.com/schedule "SunshinePHP Schedule"). Our highly diverse lineup of 45 speakers will be delivering 5 keynotes, 8 in-depth 3-hour tutorials, and 40 talks 1-hour in length over this 3 day event.</summary>
+  <content type="markdown">We are pleased to announce the [2017 SunshinePHP Schedule](http://sunshinephp.com/schedule "SunshinePHP Schedule"). Our highly diverse lineup of 45 speakers will be delivering 5 keynotes, 8 in-depth 3-hour tutorials, and 40 talks 1-hour in length over this 3 day event.
+
+SunshinePHP hit it's 5th year and will happen from February 2nd to 4th, 2017 in sunny Miami, Florida. As one of the largest community conferences in the U.S. the schedule is amazing this year. We will have a full tutorial day featuring 3-hour sessions followed by 2 days of 1-hour talks and inspirational keynotes.
+
+In addition we will also have an Uncon for attendees to share unscheduled talks, a hack event, and plenty of other fun and/or educational activities.
+
+So leave the February cold behind and come warm up in Miami, Florida for a few days of sharing and networking with other PHP folks.
+
+Ticket sales ongoing at [SunshinePHP.com](http://sunshinephp.com/register "SunshinePHP")</content>
+  <updated>2016-11-01T12:23:00+00:00</updated>
+  <logo width="300" height="106">9a53ef80813581eb1363b3f173bdc71c259e08d58e484b4dd81f6567ba6afa41.png</logo>
+</conference>

@@ -1,85 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.2.1">
+<?xml version="1.0"?>
+<release version="1" id="4.2.1">
   <release>4.2.1</release>
   <date>13 May 2002</date>
-  <version>
-    <major>4</major>
-    <minor>2</minor>
-    <release>1</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.2.1.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.2.1.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">[ [Version Fran&#xE7;aise](/releases/4_2_1_fr.php) ]
 
+Bugfix release
+--------------
 
+ This bug fix release solves a few bugs found in PHP 4.2.0. PHP 4.2.1 includes the following fixes:
 
-<p>[ <a href="/releases/4_2_1_fr.php">Version Française</a> ]</p>
+- Fix for the MySQL extension not be able to connect to a MySQL server.
+- Fix for a crash in the COM extension when using an outproc server.
+- Fix for SID logic in the session extension.
+- Fixes for the mbstring extension, including SJIS directory name handling and mb_output_buffer().
+- Fix for a bug in socket_select() that could cause unexpected behavior when using a statement like $w = $e = array($sock);
+- Almost full DOM compliance for the domxml extension, and fixes for several functions.
+- Safe_mode checks for show_source(), parse_ini_file() and rmdir().
 
-<h2>Bugfix release</h2>
+ For a full list of changes in PHP 4.2.1, see the [ChangeLog](/ChangeLog-4.php#4.2.1).
 
-<p>
- This bug fix release solves a few bugs found in PHP 4.2.0.
- PHP 4.2.1 includes the following fixes:
-</p>
+Compatibility
+-------------
 
-<ul>
- <li>Fix for the MySQL extension not be able to connect to a MySQL server.</li>
- <li>Fix for a crash in the COM extension when using an outproc server.</li>
- <li>Fix for SID logic in the session extension.</li>
- <li>
-  Fixes for the mbstring extension, including SJIS directory
-  name handling and mb_output_buffer().
- </li>
- <li>
-  Fix for a bug in socket_select() that could cause unexpected behavior when
-  using a statement like $w = $e = array($sock);
- </li>
- <li>Almost full DOM compliance for the domxml extension, and fixes for several functions.</li>
- <li>Safe_mode checks for show_source(), parse_ini_file() and rmdir().</li>
-</ul>
+ PHP 4.2.1 also has improved (but still experimental) support for Apache version 2. We do **not** recommend that you use this in a production environment, but feel free to test it and report bugs to the [bug system](http://bugs.php.net).
 
-<p>
- For a full list of changes in PHP 4.2.1, see the
- <a href="/ChangeLog-4.php#4.2.1">ChangeLog</a>.
-</p>
+External variables
+------------------
 
-<h2>Compatibility</h2>
+ We would also like to attend you on a big change in PHP 4.2.0 concerning variable handling. **External variables (from the environment, the HTTP request, cookies or the web server) are no longer registered in the global scope by default.** The preferred method of accessing these external variables is by using the new Superglobal arrays, introduced in PHP 4.1.0. More information about this change:
 
-<p>
- PHP 4.2.1 also has improved (but still experimental) support for Apache version 2.
- We do <strong>not</strong> recommend that you use this in a production environment,
- but feel free to test it and report bugs to the <a href="http://bugs.php.net">bug
- system</a>.
-</p>
-
-<h2>External variables</h2>
-
-<p>
- We would also like to attend you on a big change in PHP 4.2.0 concerning
- variable handling. <strong>External variables (from the environment, the HTTP
- request, cookies or the web server) are no longer registered in the global
- scope by default.</strong> The preferred method of accessing these external
- variables is by using the new Superglobal arrays, introduced in PHP 4.1.0.
- More information about this change:
-</p>
-
-<ul>
- <li><a href="/manual/en/language.variables.predefined.php">PHP Manual: Predefined variables</a></li>
- <li><a href="/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
-</ul>
-
-
-</announcement>
+- [PHP Manual: Predefined variables](/manual/en/language.variables.predefined.php)
+- [The PHP 4.1.0 release announcement](/release_4_1_0.php)
+- [Thomas Oertli's article on secure programming in PHP](http://www.zend.com/zend/art/art-oertli.php)</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Major update of domxml. New functions, better DOM compliance and bug fixes">
+      <change>
+        <description>Changed the old $node-&gt;append_child() to $node-&gt;append_sibling() since the new append_child() behaves correctly (= W3C standard).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added domxml functions:</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed a segfault in domxml_unlink().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added formatting option to domxml_dump_mem().</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

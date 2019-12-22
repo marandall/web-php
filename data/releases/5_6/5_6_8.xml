@@ -1,53 +1,311 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.8">
+<?xml version="1.0"?>
+<release version="1" id="5.6.8">
   <release>5.6.8</release>
   <date>16 Apr 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.8.tar.bz2</filename>
       <name>PHP 5.6.8 (tar.bz2)</name>
+      <filename>php-5.6.8.tar.bz2</filename>
+      <date>16 Apr 2015</date>
       <sha256>0af0045745d61eeb74a3ea744529a2481b27cb689da720e6c0250675043724e4</sha256>
-      <md5/>
-      <date>16 Apr 2015</date>
     </source>
     <source>
-      <filename>php-5.6.8.tar.gz</filename>
       <name>PHP 5.6.8 (tar.gz)</name>
-      <sha256>c5b1c75c5671c239473eb611129f33ac432a55a1c341990b70009a2aa3b8dbc3</sha256>
-      <md5/>
+      <filename>php-5.6.8.tar.gz</filename>
       <date>16 Apr 2015</date>
+      <sha256>c5b1c75c5671c239473eb611129f33ac432a55a1c341990b70009a2aa3b8dbc3</sha256>
     </source>
     <source>
-      <filename>php-5.6.8.tar.xz</filename>
       <name>PHP 5.6.8 (tar.xz)</name>
-      <sha256>4c417387b88e100ca306adeda8051eb9fad93dae8da983f962dabf91a14b2b7b</sha256>
-      <md5/>
+      <filename>php-5.6.8.tar.xz</filename>
       <date>16 Apr 2015</date>
+      <sha256>4c417387b88e100ca306adeda8051eb9fad93dae8da983f962dabf91a14b2b7b</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-      <p>The PHP development team announces the immediate availability of PHP
-     5.6.8. Several bugs have been fixed some of them beeing security related, like CVE-2015-1351 and CVE-2015-1352.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.8 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.8">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(php crashes with __get() and ++ operator in some cases).</description>
+        <references>
+          <reference type="bugfix">66609</reference>
+        </references>
+      </change>
+      <change>
+        <description>(get_browser() browser_name_regex returns non-utf-8 characters).</description>
+        <references>
+          <reference type="bugfix">68021</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_url fails on some partial urls).</description>
+        <references>
+          <reference type="bugfix">68917</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Per Directory Values overrides PHP_INI_SYSTEM configuration options).</description>
+        <references>
+          <reference type="bugfix">69134</reference>
+        </references>
+      </change>
+      <change>
+        <description>Additional fix for bug [#69152](http://bugs.php.net/69152) (Type confusion vulnerability in exception::getTraceAsString).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(serialize function return corrupted data when sleep has non-string values).</description>
+        <references>
+          <reference type="bugfix">69210</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Leaking VIA_HANDLER func when exception thrown in __call/... arg passing).</description>
+        <references>
+          <reference type="bugfix">69212</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault when using a generator in combination with an Iterator).</description>
+        <references>
+          <reference type="bugfix">69221</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_stream_url_wrap_http_ex() type-confusion vulnerability).</description>
+        <references>
+          <reference type="bugfix">69337</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Missing null byte checks for paths in various PHP extensions). (CVE-2015-3411, CVE-2015-3412)</description>
+        <references>
+          <reference type="bugfix">69353</reference>
+          <reference type="cve">CVE-2015-3411</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache2handler">
+      <change>
+        <description>(potential remote code execution with apache 2.4 apache2handler). (CVE-2015-3330)</description>
+        <references>
+          <reference type="bugfix">69218</reference>
+          <reference type="cve">CVE-2015-3330</reference>
+        </references>
+      </change>
+    </module>
+    <module id="cURL">
+      <change>
+        <description>Implemented FR [#69278](http://bugs.php.net/69278) (HTTP2 support).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Missing break / control flow).</description>
+        <references>
+          <reference type="bugfix">68739</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use-after-free in php_curl related to CURLOPT_FILE/_INFILE/_WRITEHEADER).</description>
+        <references>
+          <reference type="bugfix">69316</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Issues with "last day of &lt;monthname&gt;").</description>
+        <references>
+          <reference type="bugfix">69336</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Enchant">
+      <change>
+        <description>(Enchant broker plugins are in the wrong place in windows builds).</description>
+        <references>
+          <reference type="bugfix">65406</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Ereg">
+      <change>
+        <description>(NULL Pointer Dereference).</description>
+        <references>
+          <reference type="bugfix">68740</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Fileinfo on specific file causes spurious OOM and/or segfault). (CVE-2015-4604, CVE-2015-4605)</description>
+        <references>
+          <reference type="bugfix">68819</reference>
+          <reference type="cve">CVE-2015-4604</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(FILTER_FLAG_STRIP_BACKTICK ignored unless other flags are used).</description>
+        <references>
+          <reference type="bugfix">69202</reference>
+        </references>
+      </change>
+      <change>
+        <description>(FILTER_FLAG_STRIP_HIGH doesn't strip ASCII 127).</description>
+        <references>
+          <reference type="bugfix">69203</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(False detection of CJK Unified Ideographs Extension E).</description>
+        <references>
+          <reference type="bugfix">68846</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPCache">
+      <change>
+        <description>(function_exists strange behavior with OPCache on disabled function).</description>
+        <references>
+          <reference type="bugfix">69297</reference>
+        </references>
+      </change>
+      <change>
+        <description>(opcache_is_script_cached no longer works).</description>
+        <references>
+          <reference type="bugfix">69281</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free). (CVE-2015-1351)</description>
+        <references>
+          <reference type="bugfix">68677</reference>
+          <reference type="cve">CVE-2015-1351</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>, [#65137](http://bugs.php.net/65137) (Buffered crypto stream data breaks IO polling in stream_select() contexts).</description>
+        <references>
+          <reference type="bugfix">68853</reference>
+        </references>
+      </change>
+      <change>
+        <description>(openssl_pkcs7_sign handles default value incorrectly).</description>
+        <references>
+          <reference type="bugfix">69197</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Crypto servers should send client CA list).</description>
+        <references>
+          <reference type="bugfix">69215</reference>
+        </references>
+      </change>
+      <change>
+        <description>Add a check for RAND_egd to allow compiling against LibreSSL.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(PharData::extractTo fails for tarball created by BSD tar).</description>
+        <references>
+          <reference type="bugfix">64343</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phar_add_file is too restrictive on filename).</description>
+        <references>
+          <reference type="bugfix">64931</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Call to undefined method cli_arg_typ_string).</description>
+        <references>
+          <reference type="bugfix">65467</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Phar::mapPhar fails for Phars inside a path containing ".tar").</description>
+        <references>
+          <reference type="bugfix">67761</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer Over-read in unserialize when parsing Phar). (CVE-2015-2783, CVE-2015-3307)</description>
+        <references>
+          <reference type="bugfix">69324</reference>
+          <reference type="cve">CVE-2015-2783</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer Overflow when parsing tar/zip/phar in phar_set_inode). (CVE-2015-3329)</description>
+        <references>
+          <reference type="bugfix">69441</reference>
+          <reference type="cve">CVE-2015-3329</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(Null pointer dereference). (CVE-2015-1352)</description>
+        <references>
+          <reference type="bugfix">68741</reference>
+          <reference type="cve">CVE-2015-1352</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Type Confusion Infoleak Vulnerability in unserialize() with SoapFault). (CVE-2015-4599)</description>
+        <references>
+          <reference type="bugfix">69152</reference>
+          <reference type="cve">CVE-2015-4599</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NEW segfault when using SoapClient::__setSoapHeader (bisected, regression)).</description>
+        <references>
+          <reference type="bugfix">69293</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Use after free in zval_scan caused by spl_object_storage_get_gc).</description>
+        <references>
+          <reference type="bugfix">69227</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sqlite3">
+      <change>
+        <description>(SQLITE segfaults if custom collator throws an exception).</description>
+        <references>
+          <reference type="bugfix">68760</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Upgrade bundled libsqlite to 3.8.8.3).</description>
+        <references>
+          <reference type="bugfix">69287</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SQLite prepared statement use-after-free).</description>
+        <references>
+          <reference type="bugfix">66550</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -3,8 +3,6 @@
 	use phpweb\Config\Site;
 	use phpweb\Data\Languages;
 	
-	require_once __DIR__ . '/bootstrap.php';
-	
 // -*- C++ -*-
 // Compress all pages, if ext/zlib is available on the mirror
 	ini_set("zlib.output_compression", 1);

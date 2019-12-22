@@ -1,53 +1,157 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.14">
+<?xml version="1.0"?>
+<release version="1" id="5.6.14">
   <release>5.6.14</release>
   <date>01 Oct 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>14</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.14.tar.bz2</filename>
       <name>PHP 5.6.14 (tar.bz2)</name>
+      <filename>php-5.6.14.tar.bz2</filename>
+      <date>01 Oct 2015</date>
       <sha256>36f295f11641c1839a5df00e693f685fd134c65e8a1d46e8ee0abae8662b2eb0</sha256>
-      <md5/>
-      <date>01 Oct 2015</date>
     </source>
     <source>
-      <filename>php-5.6.14.tar.gz</filename>
       <name>PHP 5.6.14 (tar.gz)</name>
-      <sha256>29baf7ffca644f7f8e86028c40275b9e460342bdf9562d45f8f0498899cb738d</sha256>
-      <md5/>
+      <filename>php-5.6.14.tar.gz</filename>
       <date>01 Oct 2015</date>
+      <sha256>29baf7ffca644f7f8e86028c40275b9e460342bdf9562d45f8f0498899cb738d</sha256>
     </source>
     <source>
-      <filename>php-5.6.14.tar.xz</filename>
       <name>PHP 5.6.14 (tar.xz)</name>
-      <sha256>c8edf6b05fd8a69ebd88d90c5c0975ee168502204622ad5cfcd550bc222632d9</sha256>
-      <md5/>
+      <filename>php-5.6.14.tar.xz</filename>
       <date>01 Oct 2015</date>
+      <sha256>c8edf6b05fd8a69ebd88d90c5c0975ee168502204622ad5cfcd550bc222632d9</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.14. This is a security release. Two security bugs were fixed in this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.14 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.14">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Bundled libtool.m4 doesn't handle FreeBSD 10 when building extensions).</description>
+        <references>
+          <reference type="bugfix">70370</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>(404 on urls with '+').</description>
+        <references>
+          <reference type="bugfix">68291</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(Assigning to DOMNode::textContent does additional entity encoding).</description>
+        <references>
+          <reference type="bugfix">70001</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ldap">
+      <change>
+        <description>(Bug in ldap_search() modifies LDAP_OPT_TIMELIMIT/DEREF's values). (Tyson Andre).</description>
+        <references>
+          <reference type="bugfix">70465</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ldap timeouts not enforced). (C&#xF4;me Bernigaud).</description>
+        <references>
+          <reference type="bugfix">69574</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(mysqlnd doesn't activate TCP keep-alive when connecting to a server).</description>
+        <references>
+          <reference type="bugfix">70456</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(openssl extension does not get the DH parameters from DH key resource).</description>
+        <references>
+          <reference type="bugfix">55259</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Missing ARG_INFO for openssl_seal()).</description>
+        <references>
+          <reference type="bugfix">70395</reference>
+        </references>
+      </change>
+      <change>
+        <description>(openssl_seal fails with AES).</description>
+        <references>
+          <reference type="bugfix">60632</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Lookup for openssl.cnf causes a message box).</description>
+        <references>
+          <reference type="bugfix">68312</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(PDO constructor changes unrelated variables).</description>
+        <references>
+          <reference type="bugfix">70389</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Null pointer dereference in phar_get_fp_offset()). (CVE-2015-7803)</description>
+        <references>
+          <reference type="bugfix">69720</reference>
+          <reference type="cve">CVE-2015-7803</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Uninitialized pointer in phar_make_dirstream when zip entry filename is "/"). (CVE-2015-7804)</description>
+        <references>
+          <reference type="bugfix">70433</reference>
+          <reference type="cve">CVE-2015-7804</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phpdbg">
+      <change>
+        <description>Fix phpdbg_break_next() sometimes not breaking.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(setcookie() conditional for empty values not met).</description>
+        <references>
+          <reference type="bugfix">67131</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(HTTP stream wrapper doesn't close keep-alive connections).</description>
+        <references>
+          <reference type="bugfix">70361</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(ZipArchive::close() doesn't indicate errors).</description>
+        <references>
+          <reference type="bugfix">70322</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

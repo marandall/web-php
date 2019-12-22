@@ -1,5 +1,6 @@
-backend/GeoIP.dat
+config/
+docker/
+lib/vendor/
 .idea
 .DS_Store
 .DS_Store?
-docker

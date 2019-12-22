@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-craft-johannesburg</id>
+  <title>PHP Craft Johannesburg</title>
+  <start_date>2015-06-17</start_date>
+  <end_date>2015-06-17</end_date>
+  <location country=""/>
+  <summary type="text">Our 2nd Annual PHP Craft Conference will be hosted in Johannesburg South Africa. 2 Days of fantastic content presented by local and international speakers.</summary>
+  <content type="markdown">Our 2nd Annual PHP Craft Conference will be hosted in Johannesburg South Africa. 2 Days of fantastic content presented by local and international speakers.
+
+Our Call for Papers now open and will close 17th June 2015. We hope to see some great topics covering fancy new tools and/or best Practice &#x2014; [www.phpsouthafrica.com](http://www.phpsouthafrica.com/)</content>
+  <updated>2015-05-27T23:45:28-04:00</updated>
+  <logo width="220" height="40">767c58674599ca85ad069f091a6dd144e53f424b41759e9632504997141f8664.png</logo>
+</conference>

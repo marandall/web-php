@@ -1,85 +1,364 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.1.0">
+<?xml version="1.0"?>
+<release version="1" id="5.1.0">
   <release>5.1.0</release>
   <date>24 Nov 2005</date>
-  <version>
-    <major>5</major>
-    <minor>1</minor>
-    <release>0</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.1.0.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-5.1.0.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">PHP 5.1.0. Release Announcement
 
 
-<p>
-The PHP development team is proud to announce the release of PHP <a href="/downloads/">PHP 5.1.0</a>.<br/>
-Some of the key features of <a href="/downloads/">PHP 5.1.0</a> include:
-</p>
-<p>
-</p><ul>
-<li>A complete rewrite of date handling code, with improved timezone support.</li>
-<li>Significant performance improvements compared to PHP 5.0.X.</li>
-<li>PDO extension is now enabled by default.</li>
-<li>Over 30 new functions in various extensions and built-in functionality.</li>
-<li>Bundled libraries, PCRE and SQLite upgraded to latest versions.</li>
-<li>Over 400 various bug fixes.</li>
-<li>PEAR upgraded to version 1.4.5</li>
-</ul>
+The PHP development team is proud to announce the release of PHP [PHP 5.1.0](/downloads.php).
+Some of the key features of [PHP 5.1.0](/downloads.php) include:
 
+- A complete rewrite of date handling code, with improved timezone support.
+- Significant performance improvements compared to PHP 5.0.X.
+- PDO extension is now enabled by default.
+- Over 30 new functions in various extensions and built-in functionality.
+- Bundled libraries, PCRE and SQLite upgraded to latest versions.
+- Over 400 various bug fixes.
+- PEAR upgraded to version 1.4.5
 
-<p>
- For a full list of changes in PHP 5.1.0, see the
- <a href="/ChangeLog-5.php#5.1.0">ChangeLog</a>.
-</p>
+ For a full list of changes in PHP 5.1.0, see the [ChangeLog](/ChangeLog-5.php#5.1.0).
 
-<p>
 In addition to new features, this release includes a number of important security fixes:
-</p><ul>
-<li>Fixed a Cross Site Scripting (<a href="http://www.cgisecurity.com/articles/xss-faq.shtml">XSS</a>)
-	vulnerability in <a href="/phpinfo">phpinfo</a>() that could
-	lead f.e. to cookie exposure, when a phpinfo() script is accidently left
-	on a production server.</li>
-<li>Fixed multiple safe_mode/open_basedir bypass vulnerabilities in ext/curl
-	and ext/gd that could lead to exposure of files normally not accessible due
-	to safe_mode or open_basedir restrictions.</li>
-<li>Fixed a possible $GLOBALS overwrite problem in file upload handling,
-	extract() and import_request_variables() that could lead to unexpected
-	security holes in scripts assumed secure. (For more information, see <a href="http://www.hardened-php.net/globals-problem">here</a>).</li>
-<li>Fixed a problem when a request was terminated due to memory_limit
-	constraints during certain
-	<a href="/parse_str">parse_str</a>() calls. In some cases
-	this can result in register_globals being turned on.</li>
-<li>Fixed an issue with trailing slashes in allowed basedirs. They were ignored
-	by open_basedir checks, so that specified basedirs were handled as prefixes
-	and not as full directory names.</li>
-<li>Fixed an issue with calling <a href="/virtual">virtual</a>()
-	on Apache 2. This allowed bypassing of certain configuration directives
-	like safe_mode or open_basedir.</li>
-<li>Updated to the latest pcrelib to fix a possible integer overflow
-	vulnerability announced in <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491">CAN-2005-2491</a>.</li>
-<li>Possible header injection in mb_send_mail() function via the "To" address, the first parameter of the function.</li>
-</ul>
 
+- Fixed a Cross Site Scripting ([XSS](http://www.cgisecurity.com/articles/xss-faq.shtml)) vulnerability in [phpinfo](/phpinfo)() that could lead f.e. to cookie exposure, when a phpinfo() script is accidently left on a production server.
+- Fixed multiple safe_mode/open_basedir bypass vulnerabilities in ext/curl and ext/gd that could lead to exposure of files normally not accessible due to safe_mode or open_basedir restrictions.
+- Fixed a possible $GLOBALS overwrite problem in file upload handling, extract() and import_request_variables() that could lead to unexpected security holes in scripts assumed secure. (For more information, see [here](http://www.hardened-php.net/globals-problem)).
+- Fixed a problem when a request was terminated due to memory_limit constraints during certain [parse_str](/parse_str)() calls. In some cases this can result in register_globals being turned on.
+- Fixed an issue with trailing slashes in allowed basedirs. They were ignored by open_basedir checks, so that specified basedirs were handled as prefixes and not as full directory names.
+- Fixed an issue with calling [virtual](/virtual)() on Apache 2. This allowed bypassing of certain configuration directives like safe_mode or open_basedir.
+- Updated to the latest pcrelib to fix a possible integer overflow vulnerability announced in [CAN-2005-2491](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491).
+- Possible header injection in mb_send_mail() function via the "To" address, the first parameter of the function.
 
-<p>
-All users of PHP 5.0 and early adopters of 5.1 betas are strongly advised to upgrade to 5.1 as soon as
-possible. Furthermore, 5.1 branch obsoletes the 5.0 PHP branch.
-</p>
+All users of PHP 5.0 and early adopters of 5.1 betas are strongly advised to upgrade to 5.1 as soon as possible. Furthermore, 5.1 branch obsoletes the 5.0 PHP branch.
 
-<p><a href="/migration51">Upgrading Guide</a> is available to ease the transition from prior PHP versions.</p>
-
-
-</announcement>
+[Upgrading Guide](/migration51) is available to ease the transition from prior PHP versions.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Added several new functions to support the PostgreSQL v3 protocol introduced in PostgreSQL 7.4. (Christopher)">
+      <change>
+        <description>pg_transaction_status() - in-transaction status of a database connection.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_query_params() - execution of parameterized queries.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_prepare() - prepare named queries.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_execute() - execution of named prepared queries.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_send_query_params() - async equivalent of pg_query_params().</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_send_prepare() - async equivalent of pg_prepare().</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_send_execute() - async equivalent of pg_execute().</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_result_error_field() - highly detailed error information, most importantly the SQLSTATE error code.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_set_error_verbosity() - set verbosity of errors.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Added new functions">
+      <change>
+        <description>array_diff_key() (Andrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>array_diff_ukey() (Andrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>array_intersect_key() (Christiano Duarte)</description>
+        <references/>
+      </change>
+      <change>
+        <description>array_intersect_ukey() (Christiano Duarte)</description>
+        <references/>
+      </change>
+      <change>
+        <description>array_product() (Andrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>DomDocumentFragment::appendXML() (Christian)</description>
+        <references/>
+      </change>
+      <change>
+        <description>fputcsv() (David Sklar)</description>
+        <references/>
+      </change>
+      <change>
+        <description>htmlspecialchars_decode() (Ilia)</description>
+        <references/>
+      </change>
+      <change>
+        <description>inet_pton() (Sara)</description>
+        <references/>
+      </change>
+      <change>
+        <description>inet_ntop() (Sara)</description>
+        <references/>
+      </change>
+      <change>
+        <description>mysqli::client_info property (Georg)</description>
+        <references/>
+      </change>
+      <change>
+        <description>posix_access() (Magnus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>posix_mknod() (Magnus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>SimpleXMLElement::registerXPathNamespace() (Christian)</description>
+        <references/>
+      </change>
+      <change>
+        <description>stream_context_get_default() (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>stream_socket_enable_crypto() (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>stream_wrapper_unregister() (Sara)</description>
+        <references/>
+      </change>
+      <change>
+        <description>stream_wrapper_restore() (Sara)</description>
+        <references/>
+      </change>
+      <change>
+        <description>stream_filter_remove() (Sara)</description>
+        <references/>
+      </change>
+      <change>
+        <description>time_sleep_until() (Ilia)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Improved performance of">
+      <change>
+        <description>general execution/compilation. (Andi, Thies, Sterling, Dmitry, Marcus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>switch() statement. (Dmitry)</description>
+        <references/>
+      </change>
+      <change>
+        <description>several array functions. (Marcus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>virtual path handling by adding a realpath() cache. (Andi)</description>
+        <references/>
+      </change>
+      <change>
+        <description>variable fetches. (Andi)</description>
+        <references/>
+      </change>
+      <change>
+        <description>magic method invocations. (Marcus)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Improved mysqli extension. (Georg)">
+      <change>
+        <description>added constructor for mysqli_stmt and mysqli_result classes</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new function mysqli_get_charset()</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new function mysqli_set_charset()</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new class mysqli_driver</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new class mysqli_warning</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new class mysqli_exception</description>
+        <references/>
+      </change>
+      <change>
+        <description>added new class mysqli_sql_exception</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Improved SPL extension. (Marcus)">
+      <change>
+        <description>Moved RecursiveArrayIterator from examples into extension</description>
+        <references/>
+      </change>
+      <change>
+        <description>Moved RecursiveFilterIterator from examples into extension</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added SplObjectStorage</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made all SPL constants class constants</description>
+        <references/>
+      </change>
+      <change>
+        <description>Renamed CachingRecursiveIterator to RecursiveCachingIterator to follow Recursive&lt;*&gt;Iterator naming scheme.</description>
+        <references/>
+      </change>
+      <change>
+        <description>added standard hierarchy of Exception classes</description>
+        <references/>
+      </change>
+      <change>
+        <description>added interface Countable</description>
+        <references/>
+      </change>
+      <change>
+        <description>added interfaces Subject and SplObserver</description>
+        <references/>
+      </change>
+      <change>
+        <description>added spl_autoload*() functions</description>
+        <references/>
+      </change>
+      <change>
+        <description>converted several 5.0 examples into c code</description>
+        <references/>
+      </change>
+      <change>
+        <description>added class SplFileObject</description>
+        <references/>
+      </change>
+      <change>
+        <description>added possibility to use a string with class_parents() and class_implements(). (Andrey)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Upgraded bundled libraries">
+      <change>
+        <description>PCRE library to version 6.2. (Andrei)</description>
+        <references/>
+      </change>
+      <change>
+        <description>SQLite 3 library in ext/pdo_sqlite to 3.2.7. (Ilia)</description>
+        <references/>
+      </change>
+      <change>
+        <description>SQLite 2 library in ext/sqlite to 2.8.16. (Ilia)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Upgraded bundled libraries in Windows distribution. (Edin)">
+      <change>
+        <description>zlib 1.2.3</description>
+        <references/>
+      </change>
+      <change>
+        <description>curl 7.14.0</description>
+        <references/>
+      </change>
+      <change>
+        <description>openssl 0.9.8</description>
+        <references/>
+      </change>
+      <change>
+        <description>ming 0.3b</description>
+        <references/>
+      </change>
+      <change>
+        <description>libpq (PostgreSQL) 8.0.1</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Moved extensions to PECL">
+      <change>
+        <description>ext/cpdf (Tony, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/dio (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/fam (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/ingres_ii (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/mnogosearch (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/w32api (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/yp (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/mcve (Jani, Derick, Pierre)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/oracle (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/ovrimos (Jani, Derick, Pierre)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/pfpro (Jani, Derick, Pierre)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/dbx (Jani, Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/ircg (Jani, Derick)</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

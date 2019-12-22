@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpday-2019</id>
+  <title>phpday 2019</title>
+  <start_date>2019-05-11</start_date>
+  <end_date>2019-05-11</end_date>
+  <location country=""/>
+  <summary type="text">The Italian PHP user group GrUSP is pleased to announce the **[16th edition](https://2019.phpday.it/)** of **phpday**, taking place on May 10-11th, 2019 in Verona, Italy.</summary>
+  <content type="markdown">The Italian PHP user group GrUSP is pleased to announce the **[16th edition](https://2019.phpday.it/)** of **phpday**, taking place on May 10-11th, 2019 in Verona, Italy.
+
+It is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.
+
+Check out our great [schedule](https://2019.phpday.it/schedule.html) and get your ticket now!</content>
+  <updated>2019-05-08T09:28:01+02:00</updated>
+  <logo width="261" height="151">d975e3186fa7ad7ae859d5330b6764144340e03865419f93e6ec44b74bd914d6.png</logo>
+</conference>

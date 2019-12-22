@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-tunis-2019</id>
+  <title>SymfonyLive Tunis 2019</title>
+  <start_date>2019-04-27</start_date>
+  <end_date>2019-04-27</end_date>
+  <location country=""/>
+  <summary type="text">The SymfonyLive conference is coming to Tunis for the first time! From the 25th to the 27th of April there will be two workshop days and a conference day.</summary>
+  <content type="markdown">The SymfonyLive conference is coming to Tunis for the first time! From the 25th to the 27th of April there will be two workshop days and a conference day.
+
+Symfony fans, don't miss the opportunity to attend inspiring and exciting talks and hands-on workshops!</content>
+  <updated>2019-04-02T10:03:21+00:00</updated>
+  <logo width="280" height="108">e697e1e03ffcceb98a891ce2f64bc9e2588009950caa7398faec2c320b84f719.png</logo>
+</conference>

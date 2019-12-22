@@ -1,57 +1,275 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.4">
+<?xml version="1.0"?>
+<release version="1" id="5.4.4">
   <release>5.4.4</release>
   <date>14 June 2012</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>4</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.4.tar.bz2</filename>
       <name>PHP 5.4.4 (tar.bz2)</name>
-      <sha256/>
-      <md5>1fd98dc3f6f3805cd67bff12a26ed77f</md5>
+      <filename>php-5.4.4.tar.bz2</filename>
       <date>14 June 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.4.tar.gz</filename>
       <name>PHP 5.4.4 (tar.gz)</name>
-      <sha256/>
-      <md5>8366c3626f2275ab8c7ef5e2d6bc5bd7</md5>
+      <filename>php-5.4.4.tar.gz</filename>
       <date>14 June 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.4 binaries and source</filename>
       <name>Windows 5.4.4 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">PHP 5.4.4 fixes an security issue in the implementation of crypt() and a heap overflow in the Phar extension. Over 30 bugs were fixed
 
-
-
-<p>The PHP development team would like to announce the immediate
-availability of PHP 5.4.4. This release fixes two security related
-issues. All users of PHP are encouraged to upgrade to this release.</p>
-
-<p>PHP 5.4.4 fixes an security issue in the implementation of crypt() and a
-heap overflow in the Phar extension. Over 30 bugs were fixed</p>
-
-<p>Please note that php://fd is now only available if the CLI SAPI is used</p>
-
-<p>For source downloads of PHP 5.4.4 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.4">ChangeLog</a>.
-</p>
-
-
-</announcement>
+Please note that php://fd is now only available if the CLI SAPI is used</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description/>
+        <references/>
+      </change>
+      <change>
+        <description>Improved performance while sending error page, this also fixed bug  (Memory leak when access a non-exists file without router)</description>
+        <references>
+          <reference type="bugfix">61785</reference>
+        </references>
+      </change>
+      <change>
+        <description>(functions related to current script failed when chdir() in cli sapi)</description>
+        <references>
+          <reference type="bugfix">61546</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed missing bound check in iptcparse()</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed CVE-2012-2143</description>
+        <references>
+          <reference type="cve">CVE-2012-2143</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fix for bug [#54547](http://bugs.php.net/54547))</description>
+        <references>
+          <reference type="bugfix">62097</reference>
+        </references>
+      </change>
+      <change>
+        <description>(unexpected behavior when incrementally assigning to a member of a null object)</description>
+        <references>
+          <reference type="bugfix">62005</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Object recursion not detected for classes that implement JsonSerializable)</description>
+        <references>
+          <reference type="bugfix">61978</reference>
+        </references>
+      </change>
+      <change>
+        <description>(long overflow in realpath_cache_get())</description>
+        <references>
+          <reference type="bugfix">61991</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ZTS build doesn't accept zend.script_encoding config)</description>
+        <references>
+          <reference type="bugfix">61922</reference>
+        </references>
+      </change>
+      <change>
+        <description>(incorrect \e processing on Windows)</description>
+        <references>
+          <reference type="bugfix">61827</reference>
+        </references>
+      </change>
+      <change>
+        <description>(__clone/__destruct do not match other methods when checking access controls)</description>
+        <references>
+          <reference type="bugfix">61782</reference>
+        </references>
+      </change>
+      <change>
+        <description>('Overriding' a private static method with a different signature causes crash)</description>
+        <references>
+          <reference type="bugfix">61761</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault from array_walk modifying an array passed by reference)</description>
+        <references>
+          <reference type="bugfix">61730</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP crash when calling ob_start in request_shutdown phase)</description>
+        <references>
+          <reference type="bugfix">61728</reference>
+        </references>
+      </change>
+      <change>
+        <description>(bin2hex(hex2bin($data)) != $data)</description>
+        <references>
+          <reference type="bugfix">61660</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ini parser crashes when using ${xxxx} ini variables (without apache2))</description>
+        <references>
+          <reference type="bugfix">61650</reference>
+        </references>
+      </change>
+      <change>
+        <description>(header_remove() does not remove all headers)</description>
+        <references>
+          <reference type="bugfix">61605</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wrong equality of string numbers)</description>
+        <references>
+          <reference type="bugfix">54547</reference>
+        </references>
+      </change>
+      <change>
+        <description>([PATH=] sections incompatibility with user_ini.filename set to null)</description>
+        <references>
+          <reference type="bugfix">54197</reference>
+        </references>
+      </change>
+      <change>
+        <description>Changed php://fd to be available only for CLI</description>
+        <references/>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(CURLOPT_COOKIEFILE '' raises open_basedir restriction)</description>
+        <references>
+          <reference type="bugfix">61948</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>com_dotnet cannot be built shared</description>
+        <references>
+          <reference type="bugfix">62146</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Uninitialised value used in libmagic)</description>
+        <references>
+          <reference type="bugfix">61812</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(Uninitialised value used in libmagic)</description>
+        <references>
+          <reference type="bugfix">61812</reference>
+        </references>
+      </change>
+      <change>
+        <description>where php_stream_open_wrapper_ex tries to open a directory descriptor under windows</description>
+        <references>
+          <reference type="bugfix">61565</reference>
+        </references>
+      </change>
+      <change>
+        <description>failure caused by the posix lseek and read versions under windows in cdf_read()</description>
+        <references>
+          <reference type="bugfix">61566</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Iconv">
+      <change>
+        <description>Fixed a bug that iconv extension fails to link to the correct library when another extension makes use of a library that links to the iconv library. See [https://bugs.gentoo.org/show_bug.cgi?id=364139](https://bugs.gentoo.org/show_bug.cgi?id=364139) for detail</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Memory corruption in internal function get_icu_disp_value_src_php()</description>
+        <references>
+          <reference type="bugfix">62082</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>(json_encode() incorrectly truncates/discards information)</description>
+        <references>
+          <reference type="bugfix">61537</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LibXML">
+      <change>
+        <description>(Libxml tests failed(ht is already destroyed))</description>
+        <references>
+          <reference type="bugfix">61617</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(A parsing bug in the prepared statements can lead to access violations). (CVE-2012-3450)</description>
+        <references>
+          <reference type="bugfix">61755</reference>
+          <reference type="cve">CVE-2012-3450</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Secunia SA44335) (CVE-2012-2386)</description>
+        <references>
+          <reference type="bugfix">61065</reference>
+          <reference type="cve">CVE-2012-2386</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(file_get_contents leaks when access empty file with maxlen set)</description>
+        <references>
+          <reference type="bugfix">61961</reference>
+        </references>
+      </change>
+    </module>
+    <module id="zlib">
+      <change>
+        <description>(using ob_gzhandler will complain about headers already sent when no compression)</description>
+        <references>
+          <reference type="bugfix">61820</reference>
+        </references>
+      </change>
+      <change>
+        <description>(can't change zlib.output_compression on the fly)</description>
+        <references>
+          <reference type="bugfix">61443</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zlib.output_compression fails on refresh)</description>
+        <references>
+          <reference type="bugfix">60761</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,45 +1,107 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.20">
+<?xml version="1.0"?>
+<release version="1" id="7.2.20">
   <release>7.2.20</release>
   <date>04 Jul 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>20</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.20.tar.bz2</filename>
       <name>PHP 7.2.20 (tar.bz2)</name>
+      <filename>php-7.2.20.tar.bz2</filename>
+      <date>04 Jul 2019</date>
       <sha256>9fb829e54e54c483ae8892d1db0f7d79115cc698f2f3591a8a5e58d9410dca84</sha256>
-      <md5/>
-      <date>04 Jul 2019</date>
     </source>
     <source>
-      <filename>php-7.2.20.tar.gz</filename>
       <name>PHP 7.2.20 (tar.gz)</name>
-      <sha256>d1dbf6f299514c9aa55b2995928b798b27c21811a0447f0688993cdf36be0749</sha256>
-      <md5/>
+      <filename>php-7.2.20.tar.gz</filename>
       <date>04 Jul 2019</date>
+      <sha256>d1dbf6f299514c9aa55b2995928b798b27c21811a0447f0688993cdf36be0749</sha256>
     </source>
     <source>
-      <filename>php-7.2.20.tar.xz</filename>
       <name>PHP 7.2.20 (tar.xz)</name>
-      <sha256>eff09da83e235c2ba25c85deea1d4f663bd71d50fd51ad11e1acebe26d733494</sha256>
-      <md5/>
+      <filename>php-7.2.20.tar.xz</filename>
       <date>04 Jul 2019</date>
+      <sha256>eff09da83e235c2ba25c85deea1d4f663bd71d50fd51ad11e1acebe26d733494</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.20.
-This is a bugfix release.</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.20. This is a bugfix release.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Interface gets skipped if autoloader throws an exception).</description>
+        <references>
+          <reference type="bugfix">76980</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(segfault when accessing properties of DOMDocumentType).</description>
+        <references>
+          <reference type="bugfix">78025</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLi">
+      <change>
+        <description>(When mysqli.allow_local_infile = Off, use a meaningful error message).</description>
+        <references>
+          <reference type="bugfix">77956</reference>
+        </references>
+      </change>
+      <change>
+        <description>(bindParam incorrect processing of bool types).</description>
+        <references>
+          <reference type="bugfix">38546</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Path resolution fails if opcache disabled during request).</description>
+        <references>
+          <reference type="bugfix">78106</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(openssl_encrypt_ccm.phpt fails with OpenSSL 1.1.1c).</description>
+        <references>
+          <reference type="bugfix">78079</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(Socket_select fails when resource array contains references).</description>
+        <references>
+          <reference type="bugfix">78038</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Extract with EXTR_SKIP should skip $this).</description>
+        <references>
+          <reference type="bugfix">77135</reference>
+        </references>
+      </change>
+      <change>
+        <description>(preg_match failed).</description>
+        <references>
+          <reference type="bugfix">77937</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(zip.h not found).</description>
+        <references>
+          <reference type="bugfix">76345</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

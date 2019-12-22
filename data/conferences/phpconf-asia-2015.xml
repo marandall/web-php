@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpconf-asia-2015</id>
+  <title>PHPConf.Asia 2015</title>
+  <start_date>2015-09-22</start_date>
+  <end_date>2015-09-22</end_date>
+  <location country=""/>
+  <summary type="text">**Join us at [PHPConf.Asia 2015](http://phpconf.asia) - The First Pan-Asian PHP Conference**</summary>
+  <content type="markdown"/>
+  <updated>2015-09-04T11:29:00+08:00</updated>
+  <logo width="300" height="105">ad06e6681824d88bbdc994662fa28a6eeeabdbfac485d5f199fdedcbcb11f026.png</logo>
+</conference>

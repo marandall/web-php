@@ -1,53 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.32">
+<?xml version="1.0"?>
+<release version="1" id="5.5.32">
   <release>5.5.32</release>
   <date>04 Feb 2016</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>32</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.32.tar.bz2</filename>
       <name>PHP 5.5.32 (tar.bz2)</name>
+      <filename>php-5.5.32.tar.bz2</filename>
+      <date>04 Feb 2016</date>
       <sha256>b0f2c108db8e05db9f6366aaba9a754fd0ee31f3f86ee889561b608dfd6e92ee</sha256>
-      <md5/>
-      <date>04 Feb 2016</date>
     </source>
     <source>
-      <filename>php-5.5.32.tar.gz</filename>
       <name>PHP 5.5.32 (tar.gz)</name>
-      <sha256>419aa62a68a640192799928a29e5cd4cd5b965458223bea2b3209a68c3e95989</sha256>
-      <md5/>
+      <filename>php-5.5.32.tar.gz</filename>
       <date>04 Feb 2016</date>
+      <sha256>419aa62a68a640192799928a29e5cd4cd5b965458223bea2b3209a68c3e95989</sha256>
     </source>
     <source>
-      <filename>php-5.5.32.tar.xz</filename>
       <name>PHP 5.5.32 (tar.xz)</name>
-      <sha256>02f569dcf5bd57dd5e390ddcab8609e3957a698e2db0b793cf2c11a7e33743c9</sha256>
-      <md5/>
+      <filename>php-5.5.32.tar.xz</filename>
       <date>04 Feb 2016</date>
+      <sha256>02f569dcf5bd57dd5e390ddcab8609e3957a698e2db0b793cf2c11a7e33743c9</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.5.32. This is a security release. Several security bugs were fixed in this release.
-
-     All PHP 5.5 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.5.32 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.32">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(exec functions ignore length but look for NULL termination).</description>
+        <references>
+          <reference type="bugfix">71039</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Output of stream_get_meta_data can be falsified by its input).</description>
+        <references>
+          <reference type="bugfix">71323</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow in iptcembed()).</description>
+        <references>
+          <reference type="bugfix">71459</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>Improved fix for bug [#70976](http://bugs.php.net/70976).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>Upgraded bundled PCRE library to 8.38. (CVE-2015-8383, CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390, CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</description>
+        <references>
+          <reference type="cve">CVE-2015-8383</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Heap corruption in tar/zip/phar parser). (CVE-2016-4342)</description>
+        <references>
+          <reference type="bugfix">71354</reference>
+          <reference type="cve">CVE-2016-4342</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NULL Pointer Dereference in phar_tar_setupmetadata()).</description>
+        <references>
+          <reference type="bugfix">71391</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Stack overflow when decompressing tar archives). (CVE-2016-2554)</description>
+        <references>
+          <reference type="bugfix">71488</reference>
+          <reference type="cve">CVE-2016-2554</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(Type Confusion in WDDX Packet Deserialization).</description>
+        <references>
+          <reference type="bugfix">71335</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

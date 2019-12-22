@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-berlin-2019</id>
+  <title>SymfonyLive Berlin 2019</title>
+  <start_date>2019-09-26</start_date>
+  <end_date>2019-09-26</end_date>
+  <location country=""/>
+  <summary type="text">The SymfonyLive conference is coming back to Berlin! Join the big Symfony German community and learn all about the latest Symfony features.</summary>
+  <content type="markdown">The SymfonyLive conference is coming back to Berlin! Join the big Symfony German community and learn all about the latest Symfony features.
+
+Symfony fans, don't miss the opportunity to attend inspiring and exciting talks and hands-on workshops from the 24th to the 27th of September!</content>
+  <updated>2019-04-02T10:24:43+00:00</updated>
+  <logo width="280" height="108">4e3724fb3ac38d74541de1680711e80a914208a89b18078889664fbcc931b360.png</logo>
+</conference>

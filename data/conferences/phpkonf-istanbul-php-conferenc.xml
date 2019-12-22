@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpkonf-istanbul-php-conferenc</id>
+  <title>PHPKonf: Istanbul PHP Conference 2016</title>
+  <start_date>2016-05-21</start_date>
+  <end_date>2016-05-21</end_date>
+  <location country=""/>
+  <summary type="text">Istanbul PHP User Group is proud to announce that the PHPKonf 2016! We'll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 21st/22nd of May for a two day, double track conference in ancient city Istanbul! We&#x2019;ve something for every level of PHP developer with 2 keynotes, 28 talks and 2 panels.</summary>
+  <content type="markdown">Istanbul PHP User Group is proud to announce that the PHPKonf 2016! We'll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 21st/22nd of May for a two day, double track conference in ancient city Istanbul! We&#x2019;ve something for every level of PHP developer with 2 keynotes, 28 talks and 2 panels.
+
+ For tickets and more information: &lt;http://phpkonf.org&gt;</content>
+  <updated>2016-03-01T09:00:00+00:00</updated>
+  <logo width="296" height="110">d8ab35eef34698a211c824c280f184e8ab2c1c3b90e04efefc9b767c9125b81b.png</logo>
+</conference>

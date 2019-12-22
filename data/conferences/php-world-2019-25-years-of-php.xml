@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-world-2019-25-years-of-php</id>
+  <title>php[world] 2019 &#x2014; 25 years of PHP</title>
+  <start_date>2019-10-23</start_date>
+  <end_date>2019-10-23</end_date>
+  <location country=""/>
+  <summary type="text">PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php\[world\] conference](https://world.phparch.com/?utm_campaign=phpnet).</summary>
+  <content type="markdown">PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php\[world\] conference](https://world.phparch.com/?utm_campaign=phpnet).
+
+We have curated a [special lineup of talks, workshops, and full-day training classes](https://world.phparch.com/schedule/?utm_campaign=phpnet) for our attendees. There will also be a couple of amazing keynotes and two panels on the past and future of PHP and frameworks.
+
+It will be an amazing time, with some special events to help us all celebrate. [Tickets are currently available](https://world.phparch.com/register/?utm_campaign=phpnet) and we look forward to seeing you this fall.
+
+Washington, D.C. &#x2014; October 23-24 &#x2014; Training on October 22</content>
+  <updated>2019-07-17T16:31:10+00:00</updated>
+  <logo width="400" height="245">e7762e945beafa864ccb5d5743a472d56492ba6ca135b073c8d5449c20c527d1.png</logo>
+</conference>

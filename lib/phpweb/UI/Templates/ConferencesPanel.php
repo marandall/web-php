@@ -28,7 +28,7 @@
                         <tbody>
                         <tr>
                             <td style="width: 80px; height: 80px; background-image: url('<?= htmlspecialchars(
-		                        $conference->getImageUrl()
+		                        $conference->getLogoUrl()
 	                        ) ?>'); background-size: contain; background-position: center center; background-repeat: no-repeat">
 
                             </td>

@@ -1,45 +1,161 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.15">
+<?xml version="1.0"?>
+<release version="1" id="7.2.15">
   <release>7.2.15</release>
   <date>07 Mar 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>15</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.15.tar.bz2</filename>
       <name>PHP 7.2.15 (tar.bz2)</name>
+      <filename>php-7.2.15.tar.bz2</filename>
+      <date>07 Feb 2019</date>
       <sha256>c93e7616946a463911818c7e9f9e21276c7793fb8c7cb15877188dd0546d0554</sha256>
-      <md5/>
-      <date>07 Feb 2019</date>
     </source>
     <source>
-      <filename>php-7.2.15.tar.gz</filename>
       <name>PHP 7.2.15 (tar.gz)</name>
-      <sha256>9b13bde9f5a32d6f6bdb8b911bb55bb818d0c4073538f8dc48aa2deb560f55a3</sha256>
-      <md5/>
+      <filename>php-7.2.15.tar.gz</filename>
       <date>07 Feb 2019</date>
+      <sha256>9b13bde9f5a32d6f6bdb8b911bb55bb818d0c4073538f8dc48aa2deb560f55a3</sha256>
     </source>
     <source>
-      <filename>php-7.2.15.tar.xz</filename>
       <name>PHP 7.2.15 (tar.xz)</name>
-      <sha256>75e90012faef700dffb29311f3d24fa25f1a5e0f70254a9b8d5c794e25e938ce</sha256>
-      <md5/>
+      <filename>php-7.2.15.tar.xz</filename>
       <date>07 Feb 2019</date>
+      <sha256>75e90012faef700dffb29311f3d24fa25f1a5e0f70254a9b8d5c794e25e938ce</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.15.
-This is a bugfix release.</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.15. This is a bugfix release.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(__callStatic may get incorrect arguments).</description>
+        <references>
+          <reference type="bugfix">77339</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Disabling class causes segfault on member access).</description>
+        <references>
+          <reference type="bugfix">77494</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP crashes when parsing `(2)::class`).</description>
+        <references>
+          <reference type="bugfix">77530</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Curl">
+      <change>
+        <description>(Segfault with H2 server push).</description>
+        <references>
+          <reference type="bugfix">76675</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagescale(&#x2026;, IMG_BILINEAR_FIXED) can cause black border).</description>
+        <references>
+          <reference type="bugfix">73281</reference>
+        </references>
+      </change>
+      <change>
+        <description>(gdImageFilledArc() doesn't properly draw pies).</description>
+        <references>
+          <reference type="bugfix">73614</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagescale() may return image resource on failure).</description>
+        <references>
+          <reference type="bugfix">77272</reference>
+        </references>
+      </change>
+      <change>
+        <description>(1bpp BMPs may fail to be loaded).</description>
+        <references>
+          <reference type="bugfix">77391</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagewbmp() segfaults with very large images).</description>
+        <references>
+          <reference type="bugfix">77479</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ldap">
+      <change>
+        <description>(ldap_bind using ldaps or ldap_start_tls()=exception in libcrypto-1_1-x64.dll).</description>
+        <references>
+          <reference type="bugfix">77440</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(mb_scrub() silently truncates after a null byte).</description>
+        <references>
+          <reference type="bugfix">77454</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLnd">
+      <change>
+        <description>(In mysqlnd_ext_plugin.h the plugin methods family has no external visibility).</description>
+        <references>
+          <reference type="bugfix">75684</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(configure fails on 64-bit AIX when opcache enabled).</description>
+        <references>
+          <reference type="bugfix">77361</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(feof might hang on TLS streams in case of fragmented TLS records).</description>
+        <references>
+          <reference type="bugfix">77390</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(array_walk_recursive corrupts value types leading to PDO failure).</description>
+        <references>
+          <reference type="bugfix">77273</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(socket_recvfrom may return an invalid 'from' address on MacOS).</description>
+        <references>
+          <reference type="bugfix">76839</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(segfault about array_multisort).</description>
+        <references>
+          <reference type="bugfix">77395</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_str segfaults when inserting item into existing array).</description>
+        <references>
+          <reference type="bugfix">77439</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

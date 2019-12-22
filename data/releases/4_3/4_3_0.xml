@@ -1,126 +1,321 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.3.0">
-    <release>4.3.0</release>
-    <date>27 December 2002</date>
-    <version>
-        <major>4</major>
-        <minor>3</minor>
-        <release>0</release>
-    </version>
+<?xml version="1.0"?>
+<release version="1" id="4.3.0">
+  <release>4.3.0</release>
+  <date>27 December 2002</date>
+  <source>
     <source>
-        <source>
-            <filename>php-4.3.0.tar.gz</filename>
-            <name>Source (tar.gz)</name>
-            <sha256/>
-            <md5/>
-            <date/>
-        </source>
+      <name>Source (tar.gz)</name>
+      <filename>php-4.3.0.tar.gz</filename>
+      <date/>
+      <sha256/>
     </source>
-    <tags/>
-    <announcements>
-        <announcement lang="en">
+  </source>
+  <announcements>
+    <announcement lang="en">[ [Version Fran&#xE7;aise](/releases/4_3_0_fr.php) ]
 
+ After a long and arduous 8 months of development and testing, PHP 4.3.0 is [out](/downloads.php)! With regard to scope, time, and effort, this is the largest 4.x release of PHP, and it further elevates PHP's standing as a serious contender in the general purpose scripting language arena.
 
-            <p>[ <a href="/releases/4_3_0_fr.php">Version Française</a> ]
-            </p>
+Command line interface
+----------------------
 
-            <p>
-                After a long and arduous 8 months of development and testing, PHP 4.3.0 is
-                <a href="/downloads/">out</a>! With regard to scope, time, and effort, this
-                is the largest 4.x release of PHP, and it further elevates PHP's standing as a
-                serious contender in the general purpose scripting language arena.
-            </p>
+ This version finalizes the separate command line interface (CLI) that can be used for developing shell and desktop applications (with [PHP-GTK](http://gtk.php.net/)). The CLI is always built, but installed automatically only if CGI version is disabled via --disable-cgi switch during configuration. Alternatively, one can use **make install-cli** target. On Windows CLI can be found in **cli** folder.
 
-            <h2>Command line interface</h2>
+ CLI has a number of differences compared to other server APIs. More information can be found in the PHP Manual: [Using PHP from the command line](/features.commandline)
 
-            <p>
-                This version finalizes the separate command line interface (CLI) that can be
-                used for developing shell and desktop applications (with
-                <a href="http://gtk.php.net/">PHP-GTK</a>). The CLI is always built, but
-                installed automatically only if CGI version is disabled via --disable-cgi
-                switch during configuration. Alternatively, one can use <strong>make
-                install-cli
-            </strong> target. On Windows CLI can be found in
-                <strong>cli</strong>
-                folder.
-            </p>
+Streams
+-------
 
-            <p>
-                CLI has a number of differences compared to other server APIs. More information
-                can be found in the PHP Manual:
-                <a href="/features.commandline">Using PHP from the command line</a>
-            </p>
+ A very important "under the hood" feature is the streams API. It introduces a unified approach to the handling of files, pipes, sockets, and other I/O resources in the PHP core and extensions.
 
-            <h2>Streams</h2>
+ What this means for users is that any I/O function that works with streams (and that is almost all of them) can access built-in protocols, such as HTTP/HTTPS and FTP/FTPS, as well as custom protocols registered from PHP scripts. For more information please see: [List of Supported Protocols/Wrappers](/wrappers)
 
-            <p>
-                A very important "under the hood" feature is the streams API. It introduces a
-                unified approach to the handling of files, pipes, sockets, and other I/O
-                resources in the PHP core and extensions.
-            </p>
-            <p>
-                What this means for users is that any I/O function that works with streams
-                (and that is almost all of them) can access built-in protocols, such as
-                HTTP/HTTPS and FTP/FTPS, as well as custom protocols registered from PHP
-                scripts. For more information please see:
-                <a href="/wrappers">List
-                    of Supported Protocols/Wrappers
-                </a>
-            </p>
+New build system
+----------------
 
-            <h2>New build system</h2>
+ This iteration of the build system, among other things, replaces the slow recursive make with one global Makefile and eases the integration of proper dependencies. Automake is only needed for its aclocal tool. The build process is now more portable and less resource-consuming.
 
-            <p>
-                This iteration of the build system, among other things, replaces the slow
-                recursive make with one global Makefile and eases the integration of proper
-                dependencies. Automake is only needed for its aclocal tool. The build process is
-                now more portable and less resource-consuming.
-            </p>
+Improvements
+------------
 
-            <h2>Improvements</h2>
+PHP 4.3.0 has many improvements and enhancements:
 
-            <p>PHP 4.3.0 has many improvements and enhancements:</p>
+- **GD library is now bundled with the distribution and it is recommended to always use the bundled version**
+- vpopmail and cybermut extensions are moved to PECL
+- several deprecated extensions (aspell, ccvs, cybercash, icap) and SAPIs (fastcgi, fhttpd) are removed
+- speed improvements in a variety of string functions
+- Apache2 filter is improved, but is still considered experimental (use with PHP in prefork and not worker (thread) model since many extensions based on external libraries are not thread safe)
+- various security fixes (imap, mysql, mcrypt, file upload, gd, etc)
+- new SAPI for embedding PHP in other applications (experimental)
+- much better test suite
+- significant improvements in dba, gd, pcntl, sybase, and xslt extensions
+- debug_backtrace() should help with debugging
+- error messages now contain URLs linking to pages describing the error or function in question
+- Zend Engine has some fixes and minor performance enhancements
+- and **TONS** of other fixes, updates, new functions, etc
 
-            <ul>
-                <li>
-                    <strong>
-                        GD library is now bundled with the distribution and it is recommended
-                        to always use the bundled version
-                    </strong>
-                </li>
-                <li>vpopmail and cybermut extensions are moved to PECL</li>
-                <li>
-                    several deprecated extensions (aspell, ccvs, cybercash, icap)
-                    and SAPIs (fastcgi, fhttpd) are removed
-                </li>
-                <li>speed improvements in a variety of string functions</li>
-                <li>
-                    Apache2 filter is improved, but is still considered experimental
-                    (use with PHP in prefork and not worker (thread) model since many
-                    extensions based on external libraries are not thread safe)
-                </li>
-                <li>various security fixes (imap, mysql, mcrypt, file upload, gd, etc)</li>
-                <li>new SAPI for embedding PHP in other applications (experimental)</li>
-                <li>much better test suite</li>
-                <li>significant improvements in dba, gd, pcntl, sybase, and xslt extensions</li>
-                <li>debug_backtrace() should help with debugging</li>
-                <li>
-                    error messages now contain URLs linking to pages describing the error or
-                    function in question
-                </li>
-                <li>Zend Engine has some fixes and minor performance enhancements</li>
-                <li>and <strong>TONS</strong> of other fixes, updates, new functions, etc
-                </li>
-            </ul>
-
-            <p>
-                For the full list of changes in PHP 4.3.0, see the
-                <a href="/ChangeLog-4.php#4.3.0">ChangeLog</a>
-                file.
-            </p>
-
-
-        </announcement>
-    </announcements>
-    <changes/>
+ For the full list of changes in PHP 4.3.0, see the [ChangeLog](/ChangeLog-4.php#4.3.0) file.</announcement>
+  </announcements>
+  <tags/>
+  <changes>
+    <module id="Removed extensions: (Jan, Jani, Sebastian)">
+      <change>
+        <description>ext/aspell</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/ccvs</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/cybercash</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/icap</description>
+        <references/>
+      </change>
+      <change>
+        <description>sapi/fastcgi</description>
+        <references/>
+      </change>
+      <change>
+        <description>sapi/fhttpd</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Moved extensions to PECL (http://pear.php.net/): (James, Derick)">
+      <change>
+        <description>ext/vpopmail</description>
+        <references/>
+      </change>
+      <change>
+        <description>ext/cybermut</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Implemented features/changes requested in Bug [#16960](http://bugs.php.net/16960) (Timm)">
+      <change>
+        <description>Added a new function sybase_unbuffered_query()</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added a new function sybase_fetch_assoc()</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added sybase_set_message_handler() which enables users to handle server messages in a callback function</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added an ini entry for deadlock retries - retrying deadlocks can cause transaction state to break (sybct.deadlock_retry_count, defaults to -1 "forever").</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed sybase_fetch_object() not to return objects with numeric members</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issues with identical fieldnames</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made sybase_fetch_*() functions return correct datatypes</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made phpinfo() section more verbose</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made sybase_query() error messages more verbose</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Improved dba extension (Marcus)">
+      <change>
+        <description>Added dba_handlers() that returns an array of installed handlers and dba_list() that returns an associative array of open database files.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added bundled cdb support wich can be activated by --with-cdb without a path. The bundled version supports cdb_make that allows writing cdb files.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added optional skip parameter to dba_fetch() to support multiple key-value pairs with the same key for cdb handler.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added locking for those handlers that do not have their own locking.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for magic_quotes_runtime php.ini option.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added flatfile support what finally makes ext/db deprecated.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Made several adjustments to xslt extension (David Viner, Lehnar, Melvyn)">
+      <change>
+        <description>Added xslt_set_object and xslt_setopt function</description>
+        <references/>
+      </change>
+      <change>
+        <description>Changed backend interaction with Sablotron library</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed leak with error_print</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made xslt_make_array() always set NULL on last index to signal array end.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Made a few additions and changes to Apache 2 sapi. (Ilia)">
+      <change>
+        <description>Added apache_response_headers(), apache_note(), apache_getenv() and apache_setenv() functions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added more detailed error reporting to apache_lookup_uri() and virtual().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Renamed getallheaders() to apache_request_headers() and made an alias for BC.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added php_apache_sapi_getenv() and php_apache_sapi_get_stat().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added syntax-highlighting handling (.phps)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PHP now has a new stream system that allows it to do some clever stuff with fopen() and fsockopen(). As a result">
+      <change>
+        <description>URL wrappers natively supports https:// URLs if you have compiled OpenSSL support into PHP (shared extension does not support this).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for fopen("ftps://...", ...) which allows to connect to FTP servers via SSL. (Stefan Esser)</description>
+        <references/>
+      </change>
+      <change>
+        <description>fsockopen() adds support for ssl:// and tls:// connections via TCP/IP</description>
+        <references/>
+      </change>
+      <change>
+        <description>copy($srcfilename, $destfilename) can now be used with URL wrappers</description>
+        <references/>
+      </change>
+      <change>
+        <description>zlib wrappers/streams can be used even on systems without fopencookie()</description>
+        <references/>
+      </change>
+      <change>
+        <description>Changed 'zlib:' fopen wrapper to 'compress.zlib://' and deprecate 'zlib:' to avoid ambiguities when filenames have ':' characters. (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added 'compress.bzip2://' stream and wrapper support.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added user-space streams - it is now possible to define a class in PHP code and register it as a URL wrapper. (stream_register_wrapper)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Most extensions now support streams when passing files, which means that those extensions will now also support URL wrappers. (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added URL-wrapper support to exif. (Marcus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added memory stream support. (Marcus)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Renamed:</description>
+        <references/>
+      </change>
+      <change>
+        <description>Raw POST data is now available as "php://input" stream. (Hartmut)</description>
+        <references/>
+      </change>
+      <change>
+        <description>fopen("php://output", "wb") returns a stream that writes to the output buffer (like echo and print). (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added stream_context_create(), stream_context_set_params() and stream_context_set_option and added an optional fourth parameter to fopen() which accepts a stream context. Contexts allow sharing of information between streams (a kind of "session") and setting notification callbacks. (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made the "User-Agent" header sent by http:// and https:// wrappers configurable in php.ini or via a stream context. (Sterling)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added stream_filter_prepend() and stream_filter_append() which apply a filter to either the top or the bottom of a stream filter stack. Implemented "string.rot13" filter as an example; more filters are expected to follow in later releases and other extensions. (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added stream_select() which works like socket_select but works on streams returned by fopen(), fsockopen() and pfsockopen() instead. (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added STDIN, STDOUT and STDERR constants for CLI sapi reflecting opened streams to their respective standard I/O counterparts. (Edin)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added php.ini option "auto_detect_line_endings" which enables PHP to detect Macintosh, Unix and Dos end-of-line characters in fgets() and file(). Fixes bugs [#16521](http://bugs.php.net/16521) and [#16708](http://bugs.php.net/16708). (Wez)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed include(), require() and GD functions to work with remote files under win32.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(ImageCreateFromJPEG can't fetch from a URL). (Wez)</description>
+        <references>
+          <reference type="bugfix">18609</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Added warnings for deprecated mysql functions">
+      <change>
+        <description>mysql_create_db()</description>
+        <references/>
+      </change>
+      <change>
+        <description>mysql_drop_db()</description>
+        <references/>
+      </change>
+      <change>
+        <description>mysql_escape_string()</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Made major improvents to the pcntl extension. (Jason)">
+      <change>
+        <description>Greatly improved performance (signal callback mechanism uses ticks)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented object signal callback ability by using array($obj, $method)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added a restart parameter to pcntl_signal, which allows you to disable the default of system call restarting</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

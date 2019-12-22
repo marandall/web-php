@@ -1,60 +1,221 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.5">
+<?xml version="1.0"?>
+<release version="1" id="5.5.5">
   <release>5.5.5</release>
   <date>17 Oct 2013</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>5</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.5.tar.bz2</filename>
       <name>PHP 5.5.5 (tar.bz2)</name>
+      <filename>php-5.5.5.tar.bz2</filename>
+      <date>17 Oct 2013</date>
       <sha256>a400b324ae288eb0c9285e550fe5fd7f92c0f4e126496c3b05f9041da6cc04de</sha256>
-      <md5/>
-      <date>17 Oct 2013</date>
     </source>
     <source>
-      <filename>php-5.5.5.tar.gz</filename>
       <name>PHP 5.5.5 (tar.gz)</name>
+      <filename>php-5.5.5.tar.gz</filename>
+      <date>17 Oct 2013</date>
       <sha256>483ff2370fa3a8863e6b023383c4bcfcc3ba462137c30c5fc75043e1755b7d17</sha256>
-      <md5/>
-      <date>17 Oct 2013</date>
     </source>
     <source>
-      <filename>php-5.5.5.tar.xz</filename>
       <name>PHP 5.5.5 (tar.xz)</name>
-      <sha256>82cc9c88b946354bfe629917a85ed33d8cfc901460d432a75f823667d94f29ee</sha256>
-      <md5/>
+      <filename>php-5.5.5.tar.xz</filename>
       <date>17 Oct 2013</date>
+      <sha256>82cc9c88b946354bfe629917a85ed33d8cfc901460d432a75f823667d94f29ee</sha256>
     </source>
     <source>
-      <filename>Windows 5.5.5 binaries and source</filename>
       <name>Windows 5.5.5 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP Development Team announces the immediate availability of PHP 5.5.5.
-This release fixes about twenty bugs against PHP 5.5.4, some of them regarding the build system.</p>
-
-<p>All PHP users are encouraged to upgrade to this new version.</p>
-
-<p>For source downloads of PHP 5.5.5, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.5">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.5.5. This release fixes about twenty bugs against PHP 5.5.4, some of them regarding the build system.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Wrong behavior of static variables in closure generators).</description>
+        <references>
+          <reference type="bugfix">64979</reference>
+        </references>
+      </change>
+      <change>
+        <description>(compile time errors won't trigger auto loading).</description>
+        <references>
+          <reference type="bugfix">65322</reference>
+        </references>
+      </change>
+      <change>
+        <description>(By-ref foreach on property access of string offset segfaults).</description>
+        <references>
+          <reference type="bugfix">65821</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI Server">
+      <change>
+        <description>(built-in server treat some http headers as case-sensitive).</description>
+        <references>
+          <reference type="bugfix">65633</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault with built-in webserver and chunked transfer encoding).</description>
+        <references>
+          <reference type="bugfix">65818</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added application/pdf to PHP CLI Web Server mime types</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Datetime">
+      <change>
+        <description>(DateTime::createFromFormat() reports confusing error message).</description>
+        <references>
+          <reference type="bugfix">64157</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DateTimeImmutable::createFromFormat returns DateTime).</description>
+        <references>
+          <reference type="bugfix">65502</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Comparison for DateTimeImmutable doesn't work).</description>
+        <references>
+          <reference type="bugfix">65548</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DBA">
+      <change>
+        <description>(dba functions cast $key param to string in-place, bypassing copy on write).</description>
+        <references>
+          <reference type="bugfix">65708</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>Add RFC 6598 IPs to reserved addresses.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(FILTER_VALIDATE_URL rejects fully qualified domain names).</description>
+        <references>
+          <reference type="bugfix">64441</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(ftp_nb_continue produces segfault).</description>
+        <references>
+          <reference type="bugfix">65667</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>Ensure that the defined interpolation method is used with the generic scaling methods.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(configure script broken in 5.5.4 and 5.4.20 when enabling imap).</description>
+        <references>
+          <reference type="bugfix">65721</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPCache">
+      <change>
+        <description>(Error when Zend Opcache Optimizer is fully enabled).</description>
+        <references>
+          <reference type="bugfix">65845</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Exception not properly caught when opcache enabled).</description>
+        <references>
+          <reference type="bugfix">65665</reference>
+        </references>
+      </change>
+      <change>
+        <description>(5.5.2 crashes in _get_zval_ptr_ptr_var).</description>
+        <references>
+          <reference type="bugfix">65510</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed issue [#135](https://github.com/zendtech/ZendOptimizerPlus/issues/135) (segfault in interned strings if initial memory is too low).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added function opcache_compile_file() to load PHP scripts into cache without execution.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for GNU Hurd.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(the socket_connect() won't work with IPv6 address).</description>
+        <references>
+          <reference type="bugfix">65808</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(SplFileObject constructor make $context optional / give it a default value).</description>
+        <references>
+          <reference type="bugfix">64782</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>content-type must appear at the end of headers for 201 Location to work in http.</description>
+        <references>
+          <reference type="bugfix">61548</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLReader">
+      <change>
+        <description>Crash with clone XMLReader.</description>
+        <references>
+          <reference type="bugfix">51936</reference>
+        </references>
+      </change>
+      <change>
+        <description>XMLReader does not suppress errors.</description>
+        <references>
+          <reference type="bugfix">64230</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Build system">
+      <change>
+        <description>Race condition in shtool's mkdir -p implementation.</description>
+        <references>
+          <reference type="bugfix">51076</reference>
+        </references>
+      </change>
+      <change>
+        <description>'make test' crashes starting with 5.3.14 (missing gzencode()).</description>
+        <references>
+          <reference type="bugfix">62396</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

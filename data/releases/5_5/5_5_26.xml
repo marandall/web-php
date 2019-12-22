@@ -1,51 +1,152 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.26">
+<?xml version="1.0"?>
+<release version="1" id="5.5.26">
   <release>5.5.26</release>
   <date>11 Jun 2015</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>26</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.26.tar.bz2</filename>
       <name>PHP 5.5.26 (tar.bz2)</name>
+      <filename>php-5.5.26.tar.bz2</filename>
+      <date>11 Jun 2015</date>
       <sha256>816afffdb03ff4c542bc172a2f77f9c69b817df82d60cce05c1b4f578c2c926e</sha256>
-      <md5/>
-      <date>11 Jun 2015</date>
     </source>
     <source>
-      <filename>php-5.5.26.tar.gz</filename>
       <name>PHP 5.5.26 (tar.gz)</name>
-      <sha256>bee980d433bab99d07ee2bf6f2dcb87d746e49d57adec7d0ce7edb39306695ec</sha256>
-      <md5/>
+      <filename>php-5.5.26.tar.gz</filename>
       <date>11 Jun 2015</date>
+      <sha256>bee980d433bab99d07ee2bf6f2dcb87d746e49d57adec7d0ce7edb39306695ec</sha256>
     </source>
     <source>
-      <filename>php-5.5.26.tar.xz</filename>
       <name>PHP 5.5.26 (tar.xz)</name>
-      <sha256>97672c41cf2f95628dbffb63648147b43b23ea41b99ad22ccf5f4fe9b6e91b51</sha256>
-      <md5/>
+      <filename>php-5.5.26.tar.xz</filename>
       <date>11 Jun 2015</date>
+      <sha256>97672c41cf2f95628dbffb63648147b43b23ea41b99ad22ccf5f4fe9b6e91b51</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.5.26. Several bugs have been fixed as well as several security issues into some
-     bundled librairies (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
-
-     All PHP 5.5 users are encouraged to upgrade to this version.
-     </p>
-
-
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Conditional jump or move depends on uninitialised value in extension trait).</description>
+        <references>
+          <reference type="bugfix">69566</reference>
+        </references>
+      </change>
+      <change>
+        <description>(temp. directory is cached during multiple requests).</description>
+        <references>
+          <reference type="bugfix">66048</reference>
+        </references>
+      </change>
+      <change>
+        <description>(complex GLOB_BRACE fails on Windows).</description>
+        <references>
+          <reference type="bugfix">69628</reference>
+        </references>
+      </change>
+      <change>
+        <description>(OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</description>
+        <references>
+          <reference type="bugfix">69646</reference>
+          <reference type="cve">CVE-2015-4642</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect handling of paths with NULs). (CVE-2015-4598)</description>
+        <references>
+          <reference type="bugfix">69719</reference>
+          <reference type="cve">CVE-2015-4598</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>Improved fix for bug [#69545](http://bugs.php.net/69545) (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</description>
+        <references>
+          <reference type="cve">CVE-2015-4643</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(GD fails to build with newer libvpx).</description>
+        <references>
+          <reference type="bugfix">69479</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Iconv">
+      <change>
+        <description>(iconv with //IGNORE cuts the string).</description>
+        <references>
+          <reference type="bugfix">48147</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Litespeed SAPI">
+      <change>
+        <description>(Unchecked return value).</description>
+        <references>
+          <reference type="bugfix">68812</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mail">
+      <change>
+        <description>(mail() does not have mail header injection prevention for additional headers).</description>
+        <references>
+          <reference type="bugfix">68776</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MCrypt">
+      <change>
+        <description>Added file descriptor caching to mcrypt_create_iv().</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Memory leak with opcache.optimization_level=0xFFFFFFFF).</description>
+        <references>
+          <reference type="bugfix">69549</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</description>
+        <references>
+          <reference type="cve">CVE-2015-2325</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(phar symlink in binary directory broken).</description>
+        <references>
+          <reference type="bugfix">69680</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(segfault in php_pgsql_meta_data). (CVE-2015-4644)</description>
+        <references>
+          <reference type="bugfix">69667</reference>
+          <reference type="cve">CVE-2015-4644</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sqlite3">
+      <change>
+        <description>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416)</description>
+        <references>
+          <reference type="cve">CVE-2015-3414</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

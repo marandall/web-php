@@ -17,15 +17,15 @@
 	{
 		public function load(): array {
 			return [
-			    UiInjector::class,
-                $this
+				UiInjector::class,
+				$this,
 			];
 		}
 		
 		public function __invoke(Request $request, ?callable $next): Response {
-		    return $request->get(FreshTemplate::class)
-                ->setPageTitle('PHP - Powering The Web')
-			    ->render([$this, 'renderContents']);
+			return $request->get(FreshTemplate::class)
+				->setPageTitle('PHP - Powering The Web')
+				->render([$this, 'renderContents']);
 		}
 		
 		public function renderCustomHeader() {
@@ -72,39 +72,38 @@
             </div>
 			
 			<?php if ($promoted_video !== null) { ?>
-                <div class="r2-cbox">
-                    <div style="text-align: center">
-                        <h2>Today's Promoted Video</h2>
+                <section class="r2-sec">
+                    <h2>Today's Promoted Video</h2>
+                    <div>
+                        <table cellspacing="0" cellpadding="0" style="width: 100%">
+                            <tbody>
+                            <tr>
+                                <td style="width: 200px">
+                                    <a href="<?= htmlspecialchars($promoted_video->getWatchUrl()) ?>" target="_blank">
+                                        <img src="<?= htmlspecialchars($promoted_video->getThumbnailUri()) ?>"
+                                             alt="<?= htmlspecialchars($promoted_video->getTitle()) ?>"
+                                             style="width: 100%"/>
+                                    </a>
+                                </td>
+                                <td style="padding-left: 20px">
+                                    <div style="margin-bottom: 1em; font-weight: bold">
+										<?= nl2br(htmlspecialchars($promoted_video->getTitle())) ?>
+                                    </div>
+                                    <div style="margin-bottom: 1em">
+										<?= nl2br(htmlspecialchars($promoted_video->getDescription())) ?>
+                                    </div>
+                                    <div>
+                                        Watch at <a href="<?= htmlspecialchars($promoted_video->getWatchUrl()) ?>"
+                                                    target="_blank"><?= htmlspecialchars(
+												$promoted_video->getWatchUrl()
+											) ?></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-                    <table cellspacing="0" cellpadding="0" style="width: 100%">
-                        <tbody>
-                        <tr>
-                            <td style="width: 200px">
-                                <a href="<?= htmlspecialchars($promoted_video->getWatchUrl()) ?>" target="_blank">
-                                    <img src="<?= htmlspecialchars($promoted_video->getThumbnailUri()) ?>"
-                                         alt="<?= htmlspecialchars($promoted_video->getTitle()) ?>"
-                                         style="width: 100%"/>
-                                </a>
-                            </td>
-                            <td style="padding-left: 20px">
-                                <div style="margin-bottom: 1em; font-weight: bold">
-									<?= nl2br(htmlspecialchars($promoted_video->getTitle())) ?>
-                                </div>
-                                <div style="margin-bottom: 1em">
-									<?= nl2br(htmlspecialchars($promoted_video->getDescription())) ?>
-                                </div>
-                                <div>
-                                    Watch at <a href="<?= htmlspecialchars($promoted_video->getWatchUrl()) ?>"
-                                                target="_blank"><?= htmlspecialchars(
-											$promoted_video->getWatchUrl()
-										) ?></a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                </section>
 			<?php } ?>
 			
 			<?php
@@ -115,17 +114,18 @@
 					break;
 				}
 				?>
-                <div class="r2-cbox">
+                <section class="r2-sec">
+                    <h2><?= htmlspecialchars($article->getTitle()) ?></h2>
                     <div>
                         <time style="float: right" datetime="<?= $timestamp->format(DATE_ATOM) ?>"><?= htmlspecialchars(
 								$timestamp->format('d M Y')
 							) ?></time>
-                        <h3><?= htmlspecialchars($article->getTitle()) ?></h3>
+                        
+                        <div style="margin-bottom: 2em; clear: both; padding-top: 1em">
+		                    <?= $article->getContentsHTML() ?>
+                        </div>
                     </div>
-                    <div style="margin-bottom: 2em">
-						<?= $article->getContentsHTML() ?>
-                    </div>
-                </div>
+                </section>
 				<?php
 				
 				if ($index > 10) {

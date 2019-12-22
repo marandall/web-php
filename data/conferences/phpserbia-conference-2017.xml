@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpserbia-conference-2017</id>
+  <title>PHPSerbia Conference 2017</title>
+  <start_date>2017-05-27</start_date>
+  <end_date>2017-05-27</end_date>
+  <location country=""/>
+  <summary type="text">Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.</summary>
+  <content type="markdown">Conference that delivers high-value technical content about PHP and related web technologies, architecture, best practices and testing. Two days of amazing talks by some of the most prominent experts and professionals in the PHP world in a comfortable and professional setting.
+
+At PHPSerbia Conference, you&#x2019;ll have the unique opportunity to learn about the latest development trends and innovations, as well as to network with fellow attendees and the speakers.
+
+[conf2017.phpsrbija.rs](http://conf2017.phpsrbija.rs)</content>
+  <updated>2016-12-20T13:08:01+00:00</updated>
+  <logo width="343" height="162">1dff8ec6686faa3228b9060329e1b232da10e5d4b6597b848535cf3c3bcfd253.png</logo>
+</conference>

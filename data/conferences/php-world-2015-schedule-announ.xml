@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-world-2015-schedule-announ</id>
+  <title>php[world] 2015 Schedule Announced</title>
+  <start_date>2015-11-16</start_date>
+  <end_date>2015-11-16</end_date>
+  <location country=""/>
+  <summary type="text">The team at php\[architect\] is excited to announce the schedule for [php\[world\] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.</summary>
+  <content type="markdown">The team at php\[architect\] is excited to announce the schedule for [php\[world\] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.
+
+This year we are expanding the conference to 6 concurrent sessions so that we can cover even more material. Join us for this very unique event from November 16th through November 20th.
+
+- 5 day-long training sessions
+- 12 separate tutorials
+- 5 keynotes
+- 60 conference sessions
+- ... 5 amazing days ...</content>
+  <updated>2015-06-29T15:58:16+00:00</updated>
+  <logo width="167" height="150">71e170b937ac8ca0befda2f7e888185d99c67d38334e0a4904a5091b2d9db9ad.png</logo>
+</conference>

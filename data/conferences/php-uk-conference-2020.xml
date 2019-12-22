@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-uk-conference-2020</id>
+  <title>PHP UK Conference 2020</title>
+  <start_date>2020-02-19</start_date>
+  <end_date>2020-02-19</end_date>
+  <location country=""/>
+  <summary type="text">Conference Dates: 19-21st February 2020</summary>
+  <content type="markdown">Conference Dates: 19-21st February 2020
+
+Call for papers deadline: 15th October 2019 at midnight UTC
+
+PHP UK is pleased to announce the 15th Annual PHP UK conference; a 2-day event with 3 great tracks held at at The Brewery, in the heart of the City of London.
+
+With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up-to-date content about PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities to engage with international speakers and delegates, which makes the event one you won't want to miss.
+
+[Submit your talk here.](https://www.papercall.io/phpuk2020)</content>
+  <updated>2019-10-02T21:09:40+00:00</updated>
+  <logo width="328" height="88">7609082d4e95999843f8c8f6ad46cbcde75a119deb1cc9ee0c789a3764d4f78c.png</logo>
+</conference>

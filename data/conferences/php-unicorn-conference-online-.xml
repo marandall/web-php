@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-unicorn-conference-online-</id>
+  <title>PHP Unicorn Conference (Online)</title>
+  <start_date>2017-04-19</start_date>
+  <end_date>2017-04-19</end_date>
+  <location country=""/>
+  <summary type="text"> The [PHP Unicorn Conference](http://www.phpunicorn.com) is an online conference dedicated to the programming language PHP. You&#x2019;ll see talks from some of the world&#x2019;s more recognizable PHP experts; speaking talent so rare, we call them Unicorns.</summary>
+  <content type="markdown"> The [PHP Unicorn Conference](http://www.phpunicorn.com) is an online conference dedicated to the programming language PHP. You&#x2019;ll see talks from some of the world&#x2019;s more recognizable PHP experts; speaking talent so rare, we call them Unicorns.
+
+ It is true there are many great PHP conferences happening around the world and you should go to as many as can, but if you have a hard time getting to one or can&#x2019;t spare the time, why not let the conference come to you? The PHP Unicorn Conference comes streaming right to your computer, wherever in the world you might be.
+
+ So, join us online on May 4, 2017 for an all-day, can&#x2019;t miss PHP event and hang out with some PHP Unicorns!!!
+
+ [Call for Papers](https://www.papercall.io/phpunicorn) closes March 26th, 2017. The PHP Unicorn Conference offers speaker compensation of $500 USD per speaker. To submit a talk, please visit: &lt;https://www.papercall.io/phpunicorn&gt;.</content>
+  <updated>2017-03-15T02:45:21+00:00</updated>
+  <logo width="250" height="250">2f62f60c48c8b8dac5d0ea5a375341bfcb6229d0539afa2d23e0ce70c67f8ba6.png</logo>
+</conference>

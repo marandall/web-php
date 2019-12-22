@@ -1,48 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.3.10">
+<?xml version="1.0"?>
+<release version="1" id="7.3.10">
   <release>7.3.10</release>
   <date>26 Sep 2019</date>
-  <version>
-    <major>7</major>
-    <minor>3</minor>
-    <release>10</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.3.10.tar.bz2</filename>
       <name>PHP 7.3.10 (tar.bz2)</name>
+      <filename>php-7.3.10.tar.bz2</filename>
+      <date>26 Sep 2019</date>
       <sha256>506dd871c0fb8f00f872f53dd3b1dfa5f23a9edb4dfc521e5669c78a78c45448</sha256>
-      <md5/>
-      <date>26 Sep 2019</date>
     </source>
     <source>
-      <filename>php-7.3.10.tar.gz</filename>
       <name>PHP 7.3.10 (tar.gz)</name>
-      <sha256>fb670723a9b8fda31c89529f27e0dda289d8af4b6ce9f152c8010876639c0fb4</sha256>
-      <md5/>
+      <filename>php-7.3.10.tar.gz</filename>
       <date>26 Sep 2019</date>
+      <sha256>fb670723a9b8fda31c89529f27e0dda289d8af4b6ce9f152c8010876639c0fb4</sha256>
     </source>
     <source>
-      <filename>php-7.3.10.tar.xz</filename>
       <name>PHP 7.3.10 (tar.xz)</name>
-      <sha256>42f00a15419e05771734b7159c8d39d639b8a5a6770413adfa2615f6f923d906</sha256>
-      <md5/>
+      <filename>php-7.3.10.tar.xz</filename>
       <date>26 Sep 2019</date>
+      <sha256>42f00a15419e05771734b7159c8d39d639b8a5a6770413adfa2615f6f923d906</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.3.10. This is a security release which also contains several bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.3.10. This is a security release which also contains several bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Can't access OneDrive folder).</description>
+        <references>
+          <reference type="bugfix">78220</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Double release of doc comment on inherited shadow property).</description>
+        <references>
+          <reference type="bugfix">77922</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Parse error due to heredoc identifier followed by digit).</description>
+        <references>
+          <reference type="bugfix">78441</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Interactive mode does not support PHP 7.3-style heredoc).</description>
+        <references>
+          <reference type="bugfix">77812</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FastCGI">
+      <change>
+        <description>(FastCGI on_accept hook is not called when using named pipes on Windows).</description>
+        <references>
+          <reference type="bugfix">78469</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(fpm log prefix message includes wrong stdout/stderr notation).</description>
+        <references>
+          <reference type="bugfix">78334</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>Ensure IDNA2003 rules are used with idn_to_ascii() and idn_to_utf8() when requested.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="MBString">
+      <change>
+        <description>(Heap buffer overflow in mb_eregi).</description>
+        <references>
+          <reference type="bugfix">78559</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLnd">
+      <change>
+        <description>Fixed connect_attr issues and added the _server_host connection attribute.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(odbc_close() closes arbitrary resources).</description>
+        <references>
+          <reference type="bugfix">78473</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_MySQL">
+      <change>
+        <description>(SP call yields additional empty result set).</description>
+        <references>
+          <reference type="bugfix">41997</reference>
+        </references>
+      </change>
+    </module>
+    <module id="sodium">
+      <change>
+        <description>(Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</description>
+        <references>
+          <reference type="bugfix">78510</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

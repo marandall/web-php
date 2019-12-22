@@ -8,19 +8,31 @@
 	use phpweb\Controllers\ControllerInterface;
 	use phpweb\Controllers\Middleware\CommunityMiddleware;
 	use phpweb\Controllers\Middleware\UiInjector;
+	use phpweb\Data\Conferences\Conference;
 	use phpweb\Data\Conferences\ConferenceRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
-	use phpweb\Services;
 	use phpweb\UI\Templates\FreshTemplate;
 	
 	class ConferencesArchiveController implements ControllerInterface
 	{
+		private ConferenceInfoRenderer $conference_renderer;
+		
+		private ConferenceRepository $repository;
+		
+		public function __construct(
+			ConferenceRepository $repository,
+			ConferenceInfoRenderer $conference_renderer
+		) {
+			$this->conference_renderer = $conference_renderer;
+			$this->repository          = $repository;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
 				CommunityMiddleware::class,
-				$this
+				$this,
 			];
 		}
 		
@@ -33,13 +45,22 @@
 		
 		
 		public function renderContents() {
-			$repo = Services::get(ConferenceRepository::class);
-			$renderer = Services::get(ConferenceInfoRenderer::class);
-			
-			foreach ($repo->all() as $conference) {
+			/** @var Conference[] $found */
+			$found = [];
+			foreach ($this->repository->all() as $conference) {
 				if ($conference->getEndDate()->getTimestamp() < time()) {
-					$renderer->render($conference);
+					$found[] = $conference;
 				}
 			}
+			
+			?>
+            <div class="r2-separated-sections">
+				<?php
+					foreach ($found as $conf) {
+						$this->conference_renderer->render($conf, false);
+					}
+				?>
+            </div>
+			<?php
 		}
 	}

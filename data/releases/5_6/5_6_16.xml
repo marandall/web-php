@@ -1,54 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.16">
+<?xml version="1.0"?>
+<release version="1" id="5.6.16">
   <release>5.6.16</release>
   <date>26 Nov 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>16</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.16.tar.bz2</filename>
       <name>PHP 5.6.16 (tar.bz2)</name>
+      <filename>php-5.6.16.tar.bz2</filename>
+      <date>26 Nov 2015</date>
       <sha256>4fe6f40964c1bfaba05fc144ba20a2cdad33e11685f4f101ea5a48b98bbcd2ae</sha256>
-      <md5/>
-      <date>26 Nov 2015</date>
     </source>
     <source>
-      <filename>php-5.6.16.tar.gz</filename>
       <name>PHP 5.6.16 (tar.gz)</name>
-      <sha256>b6618df6b11a275fa28596f1775727679f8492e100f3bd488d8a8bfbfc19349f</sha256>
-      <md5/>
+      <filename>php-5.6.16.tar.gz</filename>
       <date>26 Nov 2015</date>
+      <sha256>b6618df6b11a275fa28596f1775727679f8492e100f3bd488d8a8bfbfc19349f</sha256>
     </source>
     <source>
-      <filename>php-5.6.16.tar.xz</filename>
       <name>PHP 5.6.16 (tar.xz)</name>
-      <sha256>8ef43271d9bd8cc8f8d407d3ba569de9fa14a28985ae97c76085bb50d597de98</sha256>
-      <md5/>
+      <filename>php-5.6.16.tar.xz</filename>
       <date>26 Nov 2015</date>
+      <sha256>8ef43271d9bd8cc8f8d407d3ba569de9fa14a28985ae97c76085bb50d597de98</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.16. Several bugs have been fixed.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.16">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(php-fpm 5.6 with opcache crashes when referencing a non-existent constant).</description>
+        <references>
+          <reference type="bugfix">70828</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in ini_lex () at Zend/zend_ini_scanner.l).</description>
+        <references>
+          <reference type="bugfix">70748</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(MySQLi does not provide way to disable peer certificate validation) by introducing MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT connection flag.</description>
+        <references>
+          <reference type="bugfix">68344</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(OCI int overflow).</description>
+        <references>
+          <reference type="bugfix">68298</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>(Segmentation fault on nextRowset).</description>
+        <references>
+          <reference type="bugfix">69757</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Segmentation fault if wsdl has no targetNamespace attribute).</description>
+        <references>
+          <reference type="bugfix">70875</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Segfault getting NULL offset of an ArrayObject).</description>
+        <references>
+          <reference type="bugfix">70852</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

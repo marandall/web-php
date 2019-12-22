@@ -1,50 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.24">
+<?xml version="1.0"?>
+<release version="1" id="5.3.24">
   <release>5.3.24</release>
   <date>11 Apr 2013</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>24</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.24.tar.bz2</filename>
       <name>PHP 5.3.24 (tar.bz2)</name>
-      <sha256/>
-      <md5>9820604df98c648297dcd31ffb8214e8</md5>
+      <filename>php-5.3.24.tar.bz2</filename>
       <date>11 Apr 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.3.24.tar.gz</filename>
       <name>PHP 5.3.24 (tar.gz)</name>
-      <sha256/>
-      <md5>cb0311a6a5ed6ffff8f41f713f9d8e84</md5>
+      <filename>php-5.3.24.tar.gz</filename>
       <date>11 Apr 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.3.24 binaries and source</filename>
       <name>Windows 5.3.24 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP 5.3.24. About 5 bugs were fixed. All users of PHP are encouraged to upgrade to PHP 5.4. PHP 5.3.24 is recommended for those wishing to remain on the 5.3 series.</p>
-
-<p>For source downloads of PHP 5.3.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.24">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT']).</description>
+        <references>
+          <reference type="bugfix">64370</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zend_do_fcall_common_helper_SPEC does not handle exceptions properly).</description>
+        <references>
+          <reference type="bugfix">63914</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Show class_alias In get_declared_classes()).</description>
+        <references>
+          <reference type="bugfix">62343</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>Merged PCRE 8.32.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="mysqlnd">
+      <change>
+        <description>(mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc for stmt-&gt;param_bind).</description>
+        <references>
+          <reference type="bugfix">63530</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DateTime">
+      <change>
+        <description>(Unserialize Invalid Date causes crash).</description>
+        <references>
+          <reference type="bugfix">62852</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(Zip crash intermittently).</description>
+        <references>
+          <reference type="bugfix">64452</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

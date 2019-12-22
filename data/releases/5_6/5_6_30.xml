@@ -1,62 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.30">
+<?xml version="1.0"?>
+<release version="1" id="5.6.30">
   <release>5.6.30</release>
   <date>19 Jan 2017</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>30</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.30.tar.bz2</filename>
       <name>PHP 5.6.30 (tar.bz2)</name>
+      <filename>php-5.6.30.tar.bz2</filename>
+      <date>19 Jan 2017</date>
       <sha256>a105c293fa1dbff118b5b0ca74029e6c461f8c78f49b337a2a98be9e32c27906</sha256>
-      <md5/>
-      <date>19 Jan 2017</date>
     </source>
     <source>
-      <filename>php-5.6.30.tar.gz</filename>
       <name>PHP 5.6.30 (tar.gz)</name>
-      <sha256>8bc7d93e4c840df11e3d9855dcad15c1b7134e8acf0cf3b90b932baea2d0bde2</sha256>
-      <md5/>
+      <filename>php-5.6.30.tar.gz</filename>
       <date>19 Jan 2017</date>
+      <sha256>8bc7d93e4c840df11e3d9855dcad15c1b7134e8acf0cf3b90b932baea2d0bde2</sha256>
     </source>
     <source>
-      <filename>php-5.6.30.tar.xz</filename>
       <name>PHP 5.6.30 (tar.xz)</name>
-      <sha256>a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805</sha256>
-      <md5/>
+      <filename>php-5.6.30.tar.xz</filename>
       <date>19 Jan 2017</date>
+      <sha256>a363185c786432f75e3c7ff956b49c3369c3f6906a6b10459f8d1ddc22f70805</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.30. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>
-     According to <a href="http://php.net/supported-versions.php">our release calendar</a>, this PHP 5.6 version
-     is the last planned release that contains regular bugfixes. All the consequent releases
-     will contain only security-relevant fixes, for the term of two years.
-     PHP 5.6 users that need further bugfixes are encouraged to upgrade to PHP 7.
-     </p>
-
-     <p>For source downloads of PHP 5.6.30 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.30">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(FPE when parsing a tag format). (CVE-2016-10158)</description>
+        <references>
+          <reference type="bugfix">73737</reference>
+          <reference type="cve">CVE-2016-10158</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Use after free when stream is passed to imagepng).</description>
+        <references>
+          <reference type="bugfix">73549</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DOS vulnerability in gdImageCreateFromGd2Ctx()). (CVE-2016-10167)</description>
+        <references>
+          <reference type="bugfix">73868</reference>
+          <reference type="cve">CVE-2016-10167</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Signed Integer Overflow gd_io.c). (CVE-2016-10168)</description>
+        <references>
+          <reference type="bugfix">73869</reference>
+          <reference type="cve">CVE-2016-10168</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(grapheme_extract take an extra trailing character).</description>
+        <references>
+          <reference type="bugfix">68447</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Crash while loading hostile phar archive). (CVE-2016-10159)</description>
+        <references>
+          <reference type="bugfix">73764</reference>
+          <reference type="cve">CVE-2016-10159</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memory corruption when loading hostile phar). (CVE-2016-10160)</description>
+        <references>
+          <reference type="bugfix">73768</reference>
+          <reference type="cve">CVE-2016-10160</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Seg fault when loading hostile phar). (CVE-2017-11147)</description>
+        <references>
+          <reference type="bugfix">73773</reference>
+          <reference type="cve">CVE-2017-11147</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>Reverted fix for bug [#73530](http://bugs.php.net/73530) (Unsetting result set may reset other result set).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Unserialize context shared on double class lookup).</description>
+        <references>
+          <reference type="bugfix">70213</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap out of bounds read on unserialize in finish_nested_data()). (CVE-2016-10161)</description>
+        <references>
+          <reference type="bugfix">73825</reference>
+          <reference type="cve">CVE-2016-10161</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

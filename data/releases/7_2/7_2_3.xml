@@ -1,47 +1,164 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.3">
+<?xml version="1.0"?>
+<release version="1" id="7.2.3">
   <release>7.2.3</release>
   <date>1 Mar 2018</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>3</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.3.tar.bz2</filename>
       <name>PHP 7.2.3 (tar.bz2)</name>
+      <filename>php-7.2.3.tar.bz2</filename>
+      <date>1 Mar 2018</date>
       <sha256>4a735aac0ba764dd8208ea29007d3916396c5292e003ba8d3bec49edcdd5bf92</sha256>
-      <md5/>
-      <date>1 Mar 2018</date>
     </source>
     <source>
-      <filename>php-7.2.3.tar.gz</filename>
       <name>PHP 7.2.3 (tar.gz)</name>
-      <sha256>5dc98f2266db40c5e4d9b5edf5e29e2449e819fff8321a07eb3830cf0b104bbb</sha256>
-      <md5/>
+      <filename>php-7.2.3.tar.gz</filename>
       <date>1 Mar 2018</date>
+      <sha256>5dc98f2266db40c5e4d9b5edf5e29e2449e819fff8321a07eb3830cf0b104bbb</sha256>
     </source>
     <source>
-      <filename>php-7.2.3.tar.xz</filename>
       <name>PHP 7.2.3 (tar.xz)</name>
-      <sha256>b3a94f1b562f413c0b96f54bc309706d83b29ac65d9b172bc7ed9fb40a5e651f</sha256>
-      <md5/>
+      <filename>php-7.2.3.tar.xz</filename>
       <date>1 Mar 2018</date>
+      <sha256>b3a94f1b562f413c0b96f54bc309706d83b29ac65d9b172bc7ed9fb40a5e651f</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.3. This is a security release with also contains several minor bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP
-7.2.3. This is a security release with also contains several minor bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>("stream_isatty" returns wrong value on s390x).</description>
+        <references>
+          <reference type="bugfix">75864</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache2Handler">
+      <change>
+        <description>(a simple way for segfaults in threadsafe php just with configuration).</description>
+        <references>
+          <reference type="bugfix">75882</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Timezone gets truncated when formatted).</description>
+        <references>
+          <reference type="bugfix">75857</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</description>
+        <references>
+          <reference type="bugfix">75928</reference>
+        </references>
+      </change>
+      <change>
+        <description>(calling var_dump on a DateTimeZone object modifies it).</description>
+        <references>
+          <reference type="bugfix">68406</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LDAP">
+      <change>
+        <description>(Fix LDAP path lookup on 64-bit distros).</description>
+        <references>
+          <reference type="bugfix">49876</reference>
+        </references>
+      </change>
+    </module>
+    <module id="libxml2">
+      <change>
+        <description>(use pkg-config where available).</description>
+        <references>
+          <reference type="bugfix">75871</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PGSQL">
+      <change>
+        <description>(Memory leak in pg_escape_bytea()).</description>
+        <references>
+          <reference type="bugfix">75838</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Phar::extractTo() does not accept specific directories to be extracted).</description>
+        <references>
+          <reference type="bugfix">54289</reference>
+        </references>
+      </change>
+      <change>
+        <description>(deal with leading slash while adding files correctly).</description>
+        <references>
+          <reference type="bugfix">65414</reference>
+        </references>
+      </change>
+      <change>
+        <description>(deal with leading slash when adding files correctly).</description>
+        <references>
+          <reference type="bugfix">65414</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(Unable to retrieve value of varchar(max) type).</description>
+        <references>
+          <reference type="bugfix">73725</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(opcache segfault when installing Bitrix).</description>
+        <references>
+          <reference type="bugfix">75729</reference>
+        </references>
+      </change>
+      <change>
+        <description>(file_get_contents $http_response_header variable bugged with opcache).</description>
+        <references>
+          <reference type="bugfix">75893</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Modulus value not stored in variable).</description>
+        <references>
+          <reference type="bugfix">75938</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(strange behavior of AppendIterator).</description>
+        <references>
+          <reference type="bugfix">74519</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(DNS_CAA record results contain garbage).</description>
+        <references>
+          <reference type="bugfix">75916</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</description>
+        <references>
+          <reference type="bugfix">75981</reference>
+          <reference type="cve">CVE-2018-7584</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

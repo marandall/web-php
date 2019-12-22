@@ -1,55 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.31">
+<?xml version="1.0"?>
+<release version="1" id="5.6.31">
   <release>5.6.31</release>
   <date>06 Jul 2017</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>31</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.31.tar.bz2</filename>
       <name>PHP 5.6.31 (tar.bz2)</name>
+      <filename>php-5.6.31.tar.bz2</filename>
+      <date>06 Jul 2017</date>
       <sha256>8f397169cb65f0539f3bcb04060f97770d73e19074a37bd2c58b98ebf6ecb10f</sha256>
-      <md5/>
-      <date>06 Jul 2017</date>
     </source>
     <source>
-      <filename>php-5.6.31.tar.gz</filename>
       <name>PHP 5.6.31 (tar.gz)</name>
-      <sha256>6687ed2f09150b2ad6b3780ff89715891f83a9c331e69c90241ef699dec4c43f</sha256>
-      <md5/>
+      <filename>php-5.6.31.tar.gz</filename>
       <date>06 Jul 2017</date>
+      <sha256>6687ed2f09150b2ad6b3780ff89715891f83a9c331e69c90241ef699dec4c43f</sha256>
     </source>
     <source>
-      <filename>php-5.6.31.tar.xz</filename>
       <name>PHP 5.6.31 (tar.xz)</name>
-      <sha256>c464af61240a9b7729fabe0314cdbdd5a000a4f0c9bd201f89f8628732fe4ae4</sha256>
-      <md5/>
+      <filename>php-5.6.31.tar.xz</filename>
       <date>06 Jul 2017</date>
+      <sha256>c464af61240a9b7729fabe0314cdbdd5a000a4f0c9bd201f89f8628732fe4ae4</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.31. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.31 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.31">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Performance problem with processing large post request). (CVE-2017-11142)</description>
+        <references>
+          <reference type="bugfix">73807</reference>
+          <reference type="cve">CVE-2017-11142</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap buffer overread (READ: 1) finish_nested_data from unserialize). (CVE-2017-12933)</description>
+        <references>
+          <reference type="bugfix">74111</reference>
+          <reference type="cve">CVE-2017-12933</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP INI Parsing Stack Buffer Overflow Vulnerability). (CVE-2017-11628)</description>
+        <references>
+          <reference type="bugfix">74603</reference>
+          <reference type="cve">CVE-2017-11628</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wddx_deserialize() heap out-of-bound read via php_parse_date()). (CVE-2017-11145)</description>
+        <references>
+          <reference type="bugfix">74819</reference>
+          <reference type="cve">CVE-2017-11145</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Buffer over-read into uninitialized memory). (CVE-2017-7890)</description>
+        <references>
+          <reference type="bugfix">74435</reference>
+          <reference type="cve">CVE-2017-7890</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mbstring">
+      <change>
+        <description>Add oniguruma upstream fix (CVE-2017-9224, CVE-2017-9226, CVE-2017-9227, CVE-2017-9228, CVE-2017-9229)</description>
+        <references>
+          <reference type="cve">CVE-2017-9224</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(negative-size-param (-1) in memcpy in zif_openssl_seal()). (CVE-2017-11144)</description>
+        <references>
+          <reference type="bugfix">74651</reference>
+          <reference type="cve">CVE-2017-11144</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Segmentation fault in PHP7.1.1(compiled using the bundled PCRE library)).</description>
+        <references>
+          <reference type="bugfix">74087</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</description>
+        <references>
+          <reference type="bugfix">74145</reference>
+          <reference type="cve">CVE-2017-11143</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

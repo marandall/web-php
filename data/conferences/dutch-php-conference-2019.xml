@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>dutch-php-conference-2019</id>
+  <title>Dutch PHP Conference 2019</title>
+  <start_date>2019-06-06</start_date>
+  <end_date>2019-06-06</end_date>
+  <location country=""/>
+  <summary type="text"> This year marks the 13th edition of the Dutch PHP Conference, once again hosted in the beautiful city of Amsterdam. Our tutorial day will be Thursday, June 6th, with the main 2-day conference following on the June 7 and 8. The Dutch PHP Conference is an annual web technology conference around PHP technology. Last year we&#x2019;ve invited more than 50 speakers from all around the world to share their expertise and experience with the 600+ attendees in a 3-day conference in the RAI, Amsterdam. The conference is completely in English and is focused on mobile- and web development related to PHP technology. [Conference website](https://www.phpconference.nl)- Date: June 6 - 8, 2019</summary>
+  <content type="markdown"> This year marks the 13th edition of the Dutch PHP Conference, once again hosted in the beautiful city of Amsterdam. Our tutorial day will be Thursday, June 6th, with the main 2-day conference following on the June 7 and 8. The Dutch PHP Conference is an annual web technology conference around PHP technology. Last year we&#x2019;ve invited more than 50 speakers from all around the world to share their expertise and experience with the 600+ attendees in a 3-day conference in the RAI, Amsterdam. The conference is completely in English and is focused on mobile- and web development related to PHP technology. [Conference website](https://www.phpconference.nl)- Date: June 6 - 8, 2019
+- Venue: RAI Amsterdam</content>
+  <updated>2018-11-20T14:02:37+00:00</updated>
+  <logo width="300" height="184">5efdcdf12b486264b146e41f5b07a26a9e9604e3fa14e722017f4e68f1789658.png</logo>
+</conference>

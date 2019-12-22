@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>scotlandphp</id>
+  <title>ScotlandPHP</title>
+  <start_date>2017-11-04</start_date>
+  <end_date>2017-11-04</end_date>
+  <location country=""/>
+  <summary type="text">Scotland's Original and Best PHP Conference</summary>
+  <content type="markdown">Scotland's Original and Best PHP Conference
+
+Saturday 4th November 2017, EICC, Edinburgh
+
+2 Tracks, 14 World Class Speakers, 2 Social Events, 1 Amazing Day!
+
+- Josh Holmes MICROSOFT - Opening Keynote: &#x201C;Rise of the Machines&#x201D;
+- Adam Culp ZEND - &#x201C;Clean Application Development&#x201D;
+- Amanda Folson NEXMO - &#x201C;Open Source for Closed Source Companies&#x201D;
+- Ciaran McNulty INVIQA - &#x201C;Behat Best Practices&#x201D;
+- Christian L&#xFC;ck CONSULTANT - &#x201C;Pushing the Limits of PHP with ReactPHP&#x201D;
+- Craig McCreath MTC - &#x201C;Refactoring Large Legacy Applications with Laravel&#x201D;
+- Dave Stokes ORACLE - &#x201C;MySQL 8: A New Beginning&#x201D;
+- David McKay CONSULTANT - &#x201C;What even is &#x2018;Cloud Native&#x2019;?&#x201D;
+- Matt Brunt VIVA IT - &#x201C;Content Security Policies: Let's Break Stuff&#x201D;
+- Renato Mefi ENRISE - &#x201C;GraphQL is right in front of us, let's do it!&#x201D;
+- Seb Heuer KARTENMACHEREI - &#x201D;The Myth of Untestable Code&#x201D;
+- Terrence Ryan GOOGLE - &#x201C;Containing Chaos with Kubernetes&#x201D;
+- Thomas Shone BOOKING.COM - &#x201D;Security Theatre: The State of Online Security&#x201D;
+- Meri Williams MOO.COM - Closing Keynote: &#x201C;Creating Space to be Awesome&#x201D;
+ 
+[More Information...](https://conference.scotlandphp.co.uk)
+
+Follow us on twitter: [@scotlandphp](https://www.twitter.com/scotlandphp)</content>
+  <updated>2017-10-19T17:46:40+00:00</updated>
+  <logo width="400" height="250">40d0a9b287553edc2c858ce80ae9907d0332ad2f7159be8e7a706ebfb80657ab.png</logo>
+</conference>

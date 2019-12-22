@@ -1,50 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.8">
+<?xml version="1.0"?>
+<release version="1" id="5.3.8">
   <release>5.3.8</release>
   <date>23 August 2011</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.8.tar.bz2</filename>
       <name>PHP 5.3.8 (tar.bz2)</name>
-      <sha256/>
-      <md5>704cd414a0565d905e1074ffdc1fadfb</md5>
+      <filename>php-5.3.8.tar.bz2</filename>
       <date>23 August 2011</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.3.8.tar.gz</filename>
       <name>PHP 5.3.8 (tar.gz)</name>
-      <sha256/>
-      <md5>f4ce40d5d156ca66a996dbb8a0e7666a</md5>
+      <filename>php-5.3.8.tar.gz</filename>
       <date>23 August 2011</date>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">The PHP development team would like to announce the immediate availability of PHP 5.3.8. This release fixes two issues introduced in the PHP 5.3.7 release:
 
+- Fixed bug #55439 (crypt() returns only the salt for MD5)
+- Reverted a change in timeout handling restoring PHP 5.3.6 behavior, which caused mysqlnd SSL connections to hang (Bug #55283).
 
-
-<p>The PHP development team would like to announce the immediate
-availability of PHP 5.3.8. This release fixes two issues introduced in
-the PHP 5.3.7 release:</p>
-
-<ul>
-    <li>Fixed bug #55439 (crypt() returns only the salt for MD5)</li>
-    <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
-     which caused mysqlnd SSL connections to hang (Bug #55283).</li>
-</ul>
-
-<p>All PHP users should note that the PHP 5.2 series is NOT supported
-anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</p>
-
-
-
-</announcement>
+All PHP users should note that the PHP 5.2 series is NOT supported anymore. All users are strongly encouraged to upgrade to PHP 5.3.8.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(crypt() returns only the salt for MD5). (Stas)</description>
+        <references>
+          <reference type="bugfix">55439</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>Reverted a change in timeout handling restoring PHP 5.3.6 behavior, as the new behavior caused mysqlnd SSL connections to hang ( bug [#55283](http://bugs.php.net/55283)). (Pierre, Andrey, Johannes)</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

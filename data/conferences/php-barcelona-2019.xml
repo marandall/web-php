@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-barcelona-2019</id>
+  <title>PHP.Barcelona 2019</title>
+  <start_date>2019-11-12</start_date>
+  <end_date>2019-11-12</end_date>
+  <location country=""/>
+  <summary type="text">What an incredible 2018 and 2019 for the PHP community! Part of the PHP Core Team that was working for Zend left. Some found excellent companies and they are rocking most than ever, like Nikita at JetBrains. PHP 7.4 is about to be released, and PHP 8 has been branched. Lavarel and Symfony have healthy growth. JIT is part of the imminent future, and I/O non-blocking frameworks are getting more often adopted in production.</summary>
+  <content type="markdown">What an incredible 2018 and 2019 for the PHP community! Part of the PHP Core Team that was working for Zend left. Some found excellent companies and they are rocking most than ever, like Nikita at JetBrains. PHP 7.4 is about to be released, and PHP 8 has been branched. Lavarel and Symfony have healthy growth. JIT is part of the imminent future, and I/O non-blocking frameworks are getting more often adopted in production.
+
+We've crafted the best PHP conference possible just for you. To allow you to see the future and get ready before nobody else. You'll gather top-notch speakers and an awesome community eager to share a lot of knowledge. All of this will take place in the very center of the gorgeous city of Barcelona in an excellent venue. What are you waiting for? Go get your tickets [here](https://php.barcelona/tickets)!</content>
+  <updated>2019-02-07T15:22:17+00:00</updated>
+  <logo width="400" height="98">6f2652e6df59ad87b9783a72c555a317de6a056eb7d091e7fa156d98fbd762a9.png</logo>
+</conference>

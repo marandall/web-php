@@ -1,75 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.2.13">
+<?xml version="1.0"?>
+<release version="1" id="5.2.13">
   <release>5.2.13</release>
   <date>25 Feb 2010</date>
-  <version>
-    <major>5</major>
-    <minor>2</minor>
-    <release>13</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.2.13.tar.bz2</filename>
       <name>PHP 5.2.13 (tar.bz2)</name>
-      <sha256/>
-      <md5>eb4d0766dc4fb9667f05a68b6041e7d1</md5>
+      <filename>php-5.2.13.tar.bz2</filename>
       <date>25 Feb 2010</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.2.13.tar.gz</filename>
       <name>PHP 5.2.13 (tar.gz)</name>
-      <sha256/>
-      <md5>cdf95cdc1ebccccce9c96653fd593dd4</md5>
+      <filename>php-5.2.13.tar.gz</filename>
       <date>25 Feb 2010</date>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">**Security Enhancements and Fixes in PHP 5.2.13:**
 
+- Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)
+- Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)
+- Improved LCG entropy. (Rasmus, Samy Kamkar)
 
-<p>
-The PHP development team would like to announce the immediate
-availability of PHP 5.2.13. This release focuses on improving the stability of
-the PHP 5.2.x branch with over 40 bug fixes, some of which are security related.
-All users of PHP 5.2 are encouraged to upgrade to this release.
-</p>
+**Key enhancements in PHP 5.2.13 include:**
 
-<p>
-<b>Security Enhancements and Fixes in PHP 5.2.13:</b>
-</p>
-<ul>
-	<li>Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)</li>
-	<li>Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)</li>
-	<li>Improved LCG entropy. (Rasmus, Samy Kamkar)</li>
-</ul>
+- Fixed bug #50940 Custom content-length set incorrectly in Apache sapis. (Brian France, Rasmus)
+- Fixed bug #50847 (strip_tags() removes all tags greater then 1023 bytes long). (Ilia)
+- Fixed bug #50661 (DOMDocument::loadXML does not allow UTF-16). (Rob)
+- Fixed bug #50632 (filter_input() does not return default value if the variable does not exist). (Ilia)
+- Fixed bug #50540 (Crash while running ldap_next_reference test cases). (Sriram)
+- Fixed bug #49851 (http wrapper breaks on 1024 char long headers). (Ilia)
+- Over 30 other bug fixes.
 
-<p>
-<b>Key enhancements in PHP 5.2.13 include:</b>
-</p>
-<ul>
-	<li>Fixed bug #50940 Custom content-length set incorrectly in Apache sapis.  (Brian France, Rasmus)</li>
-	<li>Fixed bug #50847 (strip_tags() removes all tags greater then 1023 bytes long). (Ilia)</li>
-	<li>Fixed bug #50661 (DOMDocument::loadXML does not allow UTF-16). (Rob)</li>
-	<li>Fixed bug #50632 (filter_input() does not return default value if the variable does not exist). (Ilia)</li>
-	<li>Fixed bug #50540 (Crash while running ldap_next_reference test cases). (Sriram)</li>
-	<li>Fixed bug #49851 (http wrapper breaks on 1024 char long headers). (Ilia)</li>
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available [here](/UPDATE_5_2.txt), detailing the changes between those releases and PHP 5.2.13.
 
-	<li>Over 30 other bug fixes.</li>
-</ul>
-
-<p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
-<a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
-and PHP 5.2.13.
-</p>
-
-<p>
- For a full list of changes in PHP 5.2.13, see the <a href="/ChangeLog-5.php#5.2.13">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 5.2.13, see the [ChangeLog](/ChangeLog-5.php#5.2.13).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Improved LCG entropy. (Rasmus, Samy Kamkar)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

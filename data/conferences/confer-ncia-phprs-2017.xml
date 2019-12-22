@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>confer-ncia-phprs-2017</id>
+  <title>Confer&#xEA;ncia PHPRS 2017</title>
+  <start_date>2017-05-12</start_date>
+  <end_date>2017-05-12</end_date>
+  <location country=""/>
+  <summary type="text">An event for the PHP Developer community of Rio Grande do Sul, focused on professional growth, exchange of experiences and networking. Strengthening language and the labor market.</summary>
+  <content type="markdown">An event for the PHP Developer community of Rio Grande do Sul, focused on professional growth, exchange of experiences and networking. Strengthening language and the labor market.
+
+From May 12 to 13, 2017, in Porto Alegre / RS-Brazil, the first day will be held workshops and the second lectures.
+
+Check out the programming at [http://conf.phprs.com.br/#schedule](http://conf.phprs.com.br/#schedule "Confer&#xEA;ncia PHPRS | 12 e 13 maio 2017")   
+ Subscriptions at [http://conf.phprs.com.br/#tickets](http://conf.phprs.com.br/#tickets "Confer&#xEA;ncia PHPRS | 12 e 13 maio 2017")</content>
+  <updated>2017-03-04T16:33:51-03:00</updated>
+  <logo width="250" height="94">b5e87b6747221ef7d42914d941f092c93b3b73c39da221fe5ce6e730adc0802d.png</logo>
+</conference>

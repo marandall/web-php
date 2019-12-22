@@ -1,103 +1,110 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.2.0">
+<?xml version="1.0"?>
+<release version="1" id="4.2.0">
   <release>4.2.0</release>
   <date>22 April 2002</date>
-  <version>
-    <major>4</major>
-    <minor>2</minor>
-    <release>0</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.2.0.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.2.0.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">After an orderly QA process, PHP 4.2.0 is [out](/downloads.php)!
+ [ [Version Fran&#xE7;aise](/releases/4_2_0_fr.php) ]
 
+External variables
+------------------
 
+ The biggest change in PHP 4.2.0 concerns variable handling. **External variables (from the environment, the HTTP request, cookies or the web server) are no longer registered in the global scope by default.** The preferred method of accessing these external variables is by using the new Superglobal arrays, introduced in PHP 4.1.0. More information about this change:
 
-<p>
- After an orderly QA process, PHP 4.2.0 is <a href="/downloads/">out</a>!<br/>
- [ <a href="/releases/4_2_0_fr.php">Version Française</a> ]
-</p>
+- [PHP Manual: Predefined variables](/variables.predefined)
+- [The PHP 4.1.0 release announcement](/releases/4_1_0.php)
+- [Thomas Oertli's article on secure programming in PHP](http://www.zend.com/zend/art/art-oertli.php)
 
-<h2>External variables</h2>
+Compatibility
+-------------
 
-<p>
- The biggest change in PHP 4.2.0 concerns variable handling. <strong>External
- variables (from the environment, the HTTP request, cookies or the web server)
- are no longer registered in the global scope by default.</strong> The preferred
- method of accessing these external variables is by using the new Superglobal
- arrays, introduced in PHP 4.1.0. More information about this change:</p>
+ The Apache Software Foundation recently released their first General Availability version of Apache 2. PHP 4.2.0 will have **EXPERIMENTAL** support for this version. You can build a DSO module for Apache 2 with --with-apxs2. We do **not** recommend that you use this in a production environment.
 
-<ul>
- <li><a href="/variables.predefined">PHP Manual: Predefined variables</a></li>
- <li><a href="/releases/4_1_0.php">The PHP 4.1.0 release announcement</a></li>
- <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
-</ul>
+ PHP 4.2.0 still lacks certain key features on Mac OS X and Darwin, and isn't officially supported by the PHP Group on these platforms. Specifically, building PHP as a dynamically loaded Apache module isn't supported at this time. PHP 4.3.0, due to be released in August, 2002, will be the first PHP release to officially support Mac OS X. It, along with future Mac OS X and Apache releases, will enable full feature parity with other PHP platforms. **Update:** [Instructions on overcoming these limitations](http://www.entropy.ch/software/macosx/php/)
 
-<h2>Compatibility</h2>
+Improvements
+------------
 
-<p>
- The Apache Software Foundation recently released their first
- General Availability version of Apache 2. PHP 4.2.0 will have
- <strong>EXPERIMENTAL</strong> support for this version. You can
- build a DSO module for Apache 2 with --with-apxs2. We do
- <strong>not</strong> recommend that you use this in a production
- environment.
-</p>
-<p>
- PHP 4.2.0 still lacks certain key features on Mac OS X and
- Darwin, and isn't officially supported by the PHP Group on
- these platforms. Specifically, building PHP as a dynamically
- loaded Apache module isn't supported at this time. PHP 4.3.0,
- due to be released in August, 2002, will be the first PHP
- release to officially support Mac OS X. It, along with future
- Mac OS X and Apache releases, will enable full feature parity
- with other PHP platforms. <strong>Update:</strong>
- <a href="http://www.entropy.ch/software/macosx/php/">Instructions on
- overcoming these limitations</a>
-</p>
+PHP 4.2.0 includes several improvements:
 
-<h2>Improvements</h2>
+- **External variables (from the environment, the HTTP request, cookies or the web server) are no longer registered as global variables**
+- Overhaul of the sockets extension
+- Highly improved performance with file uploads
+- The satellite and mailparse extensions were moved to PECL and are no longer bundled with the official PHP release
+- The posix extension has been cleaned up
+- iconv handling has been improved
+- Output buffering support, which was introduced in PHP 4.1.0 has been stabilized
+- Improved performance and stability of the domxml extension
+- New multibyte regular expression support
+- **LOTS** of fixes and new functions
 
-<p>PHP 4.2.0 includes several improvements:</p>
-
-<ul>
- <li>
-  <strong>External variables (from the environment, the HTTP request, cookies or
-  the web server) are no longer registered as global variables</strong>
- </li>
- <li>Overhaul of the sockets extension</li>
- <li>Highly improved performance with file uploads</li>
- <li>
-  The satellite and mailparse extensions were moved to PECL and are no longer
-  bundled with the official PHP release
- </li>
- <li>The posix extension has been cleaned up</li>
- <li>iconv handling has been improved</li>
- <li>
-  Output buffering support, which was introduced in PHP 4.1.0 has
-  been stabilized
- </li>
- <li>Improved performance and stability of the domxml extension</li>
- <li>New multibyte regular expression support</li>
- <li><strong>LOTS</strong> of fixes and new functions</li>
-</ul>
-
-<p>
- For a full list of changes in PHP 4.2.0,
- <a href="/ChangeLog-4.php#4.2.0">see the ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 4.2.0, [see the ChangeLog](/ChangeLog-4.php#4.2.0).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Major modifications to the Sockets Extension and its API (Jason)">
+      <change>
+        <description>Fixed numerous bugs.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added automatic host lookup capability to all functions that take addr's. example: socket_connect($sock, 'www.yahoo.com', 80);</description>
+        <references/>
+      </change>
+      <change>
+        <description>Corrected and standardized host lookup errors</description>
+        <references/>
+      </change>
+      <change>
+        <description>Modified socket_recv() behavior. [$r=socket_recv($sock, $buf, $len, $flags)]</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added socket_set_block() which changes a socket into blocking IO mode</description>
+        <references/>
+      </change>
+      <change>
+        <description>Modified socket_last_error() to not clear the last error</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added socket_clear_error() which clears the last error on a socket</description>
+        <references/>
+      </change>
+      <change>
+        <description>Removed all code pertaining to fd_sets (socket_fd_*)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Modified/Improved socket_select() to accept array of resources instead of fd_sets. example: ```</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Cleaned up the posix extension: (Markus)">
+      <change>
+        <description>Removed unwanted warning messages</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added posix_errno() and posix_strerror() for fetching error messages</description>
+        <references/>
+      </change>
+      <change>
+        <description>Changed the way posix_getgrnam() and posix_getgrgid() return their values (breaks BC but makes more sense)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Does not include functions in symbol table which aren't supported on host system.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

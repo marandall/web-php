@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-s-o-paulo-2019</id>
+  <title>SymfonyLive S&#xE3;o Paulo 2019</title>
+  <start_date>2019-05-16</start_date>
+  <end_date>2019-05-16</end_date>
+  <location country=""/>
+  <summary type="text">The SymfonyLive conference is coming to Brazil for the first time! Join the big Symfony Brazilian community and learn all about the latest Symfony features.</summary>
+  <content type="markdown">The SymfonyLive conference is coming to Brazil for the first time! Join the big Symfony Brazilian community and learn all about the latest Symfony features.
+
+Symfony fans, don't miss the opportunity to attend inspiring and exciting talks and hands-on workshops from the 14th to the 17th of May!</content>
+  <updated>2019-04-02T10:13:07+00:00</updated>
+  <logo width="280" height="108">395fa37920e9f4fb4c77e8c20822cb14ab5e07ff4c2716c7edd85247eecbbfb1.png</logo>
+</conference>

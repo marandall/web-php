@@ -1,59 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.3.4">
+<?xml version="1.0"?>
+<release version="1" id="4.3.4">
   <release>4.3.4</release>
   <date>03 November 2003</date>
-  <version>
-    <major>4</major>
-    <minor>3</minor>
-    <release>4</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.3.4.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.3.4.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">[ [Version Fran&#xE7;aise](/releases/4_3_4_fr.php) ]
+
+ After a lengthy QA process, [PHP 4.3.4](/downloads.php) is finally out!
 
 
+Bugfix release
+--------------
 
-<p>[ <a href="/releases/4_3_4_fr.php">Version Française</a> ]</p>
-
-<p>
- After a lengthy QA process, <a href="/downloads/">PHP 4.3.4</a> is finally out!<br/>
- This is a medium size maintenance release, with a fair number of bug fixes. All users
- are encouraged to upgrade to 4.3.4.
-</p>
-
-<h2>Bugfix release</h2>
-
-<p>
  PHP 4.3.4 contains, among others, following important fixes, additions and improvements:
-</p>
 
-<ul>
- <li>Fixed disk_total_space() and disk_free_space() under FreeBSD.</li>
- <li>Fixed FastCGI support on Win32.</li>
- <li>Fixed FastCGI being unable to bind to a specific IP.</li>
- <li>Fixed several bugs in mail() implementation on win32.</li>
- <li>Fixed crashes in a number of functions.</li>
- <li>Fixed compile failure on MacOSX 10.3 Panther.</li>
+- Fixed disk_total_space() and disk_free_space() under FreeBSD.
+- Fixed FastCGI support on Win32.
+- Fixed FastCGI being unable to bind to a specific IP.
+- Fixed several bugs in mail() implementation on win32.
+- Fixed crashes in a number of functions.
+- Fixed compile failure on MacOSX 10.3 Panther.
+- Over 60 various bug fixes!
 
- <li>Over 60 various bug fixes!</li>
-</ul>
-
-<p>
- For a full list of changes in PHP 4.3.4, see the
- <a href="/ChangeLog-4.php#4.3.4">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 4.3.4, see the [ChangeLog](/ChangeLog-4.php#4.3.4).</announcement>
   </announcements>
+  <tags/>
   <changes/>
 </release>

@@ -24,17 +24,17 @@
 			return $request
 				->get(FreshTemplate::class)
 				->setPageTitle('PHP Community GIT Usage')
-                ->addSidePanel(new BasicCallbackPanel('What is Git?', fn() => $this->renderPanel()))
+				->addSidePanel(new BasicCallbackPanel('What is Git?', fn() => $this->renderPanel()))
 				->render([$this, 'renderContents']);
 		}
-	
+		
 		protected function renderPanel() {
-		    ?>
+			?>
             <p>
                 You can find more information about Git and download clients for most major
                 platforms at <a href="http://git-scm.com/">the official Git site</a>.
             </p>
-            
+
             <p>
                 The <a href="http://progit.org/">Pro Git book</a> may also be useful.
             </p>
@@ -45,11 +45,13 @@
             contribute to the PHP documentation, contact the relevant
             group. You may want <a href="/developers/git/register">your own Git account</a>
             to contribute.
-            <?php
-        }
+			<?php
+		}
 		
 		public function renderContents() {
 			?>
+            <section class="r2-sec">
+                <div>
             <p>
                 If you wish to get the latest PHP source tree, you can obtain it through Git.
                 You should be warned that the Git version is a development version, and as
@@ -91,142 +93,156 @@
                 <a href="#buildconf_fail">buildconf failures</a>.
             </p>
 
-            <h2>Steps for using PHP from Git</h2>
+            </div>
+            </section>
 
-            <ol>
-                <li>
-                    You can retrieve the PHP source code from our
-                    <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
-                    command:
-                    <br><br>
-                    <code>git clone https://github.com/php/php-src.git</code>
-                    <br><br>
+            <section class="r2-sec">
+                <h2>Steps for using PHP from Git</h2>
+                <div>
+                    <ol>
+                        <li>
+                            You can retrieve the PHP source code from our
+                            <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
+                            command:
+                            <br><br>
+                            <code>git clone https://github.com/php/php-src.git</code>
+                            <br><br>
 
-                    Alternatively, you can retrieve the source code from
-                    <a href="http://git.php.net/">git.php.net</a> with this command:
-                    <br><br>
-                    <code>git clone http://git.php.net/repository/php-src.git</code>
-                    <br><br>
+                            Alternatively, you can retrieve the source code from
+                            <a href="http://git.php.net/">git.php.net</a> with this command:
+                            <br><br>
+                            <code>git clone http://git.php.net/repository/php-src.git</code>
+                            <br><br>
 
-                    You can also download a snapshot from GitHub:<br><br>
+                            You can also download a snapshot from GitHub:<br><br>
+                            <ul>
+                                <li>Go to the <a href="https://github.com/php/php-src">php-src project page</a>.</li>
+                                <li>Select the branch you're interested in from the branch dropdown.</li>
+                                <li>Click on the <strong>Download ZIP</strong> button.</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Make sure you're in the right directory to work on PHP:
+                            <br><br>
+                            <code>cd php-src</code>
+                            <br><br>
+                        </li>
+
+                        <li>
+                            You can then check out the branch you want to build, for example:
+                            <br><br>
+                            <strong>PHP 7.1</strong>:
+                            <code>git checkout PHP-7.1</code>
+                            <br>
+                            <strong>PHP 7.2</strong>:
+                            <code>git checkout PHP-7.2</code>
+                            <br>
+                            <strong>PHP 7.3</strong>:
+                            <code>git checkout PHP-7.3</code>
+                            <br>
+                            <strong>PHP 7.4</strong>:
+                            <code>git checkout PHP-7.4</code>
+                            <br>
+                            <strong>PHP HEAD</strong>:
+                            <code>git checkout master</code>
+                            <br><br>
+                        </li>
+
+                        <li>
+                            <div class="tip" style="margin: 10px 0 10px 20px;">
+                                <p>Note that certain combinations of autoconf and libtool may not
+                                    work when used together, particularly with historical versions of PHP. See
+                                    <a href="#buildconf_fail">below</a> for details.<br>
+                                    Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
+                                        called before AC_PROG_CC</code>. These messages can usually be ignored.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            Run <code>./buildconf</code> to generate the configure script. This may take several moments.
+                        </li>
+
+                        <li>
+                            From this point onwards, installation is similar to the installation of one of
+                            the official packages with one main difference &ndash; you will need
+                            <a href="#bison">a version of bison that is supported for the PHP version you want to build</a>.
+                            You may also require re2c if you intend to change any of the scanner and
+                            parser files PHP uses.
+                        </li>
+                    </ol>
+
+                    <p>
+                        There are many other things, such as the XML source code
+                        for the documentation, available via Git. See
+                        <a href="http://git.php.net/">the web-based view of the Git
+                            server</a> to see what is available.
+                    </p>
+
+                    <p>
+                        The PHP Wiki has a useful
+                        <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a>, which provides useful
+                        tips and cheatsheets for using the PHP Git repository, and if you want to
+                        become involved in developing PHP, the
+                        <a href="https://wiki.php.net/vcs/gitworkflow">Git Workflow</a> page is also
+                        likely to be of interest.
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="r2-sec">
+                <h2>PHP manual</h2>
+                <div>
+                    <p>
+                        The PHP manual is still currently hosted on SVN, although it will be migrated
+                        to Git in the future. To checkout the latest English version of the PHP
+                        manual:<br>
+                        <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
+                        <br><br>
+                        You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="r2-sec">
+                <h2>Historical Issues</h2>
+                <div>
+                    <h3 id="buildconf_fail">autoconf and libtool information for PHP 5.3 and below</h3>
+
+                    <p>
+                        There seem to be problems with libtool 1.4.2. It is suggested
+                        that you use libtool 1.4, along with autoconf 2.13 and
+                        automake 1.4. You should also ensure that autoconf, automake
+                        and libtool are installed in the same directory. libtool 1.5
+                        will not work.
+                    </p>
+
+                    <p>The following combinations are known to work with PHP 5.3 and below:</p>
                     <ul>
-                        <li>Go to the <a href="https://github.com/php/php-src">php-src project page</a>.</li>
-                        <li>Select the branch you're interested in from the branch dropdown.</li>
-                        <li>Click on the <strong>Download ZIP</strong> button.</li>
+                        <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
+                        <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
                     </ul>
-                </li>
 
-                <li>
-                    Make sure you're in the right directory to work on PHP:
-                    <br><br>
-                    <code>cd php-src</code>
-                    <br><br>
-                </li>
+                    <p>Since PHP 4.3 automake and its aclocal program are no longer needed to build PHP.</p>
 
-                <li>
-                    You can then check out the branch you want to build, for example:
-                    <br><br>
-                    <strong>PHP 7.1</strong>:
-                    <code>git checkout PHP-7.1</code>
-                    <br>
-                    <strong>PHP 7.2</strong>:
-                    <code>git checkout PHP-7.2</code>
-                    <br>
-                    <strong>PHP 7.3</strong>:
-                    <code>git checkout PHP-7.3</code>
-                    <br>
-                    <strong>PHP 7.4</strong>:
-                    <code>git checkout PHP-7.4</code>
-                    <br>
-                    <strong>PHP HEAD</strong>:
-                    <code>git checkout master</code>
-                    <br><br>
-                </li>
+                    <p>
+                        If you have multiple versions of autoconf installed on your computer, as is
+                        common for many UNIXes, you can set the PHP_AUTOCONF and PHP_AUTOHEADER
+                        variables when running buildconf to indicate which versions it should use
+                        e.g.:<br>
+                        <code>PHP_AUTOCONF=autoconf213 PHP_AUTOHEADER=autoheader213 ./buildconf</code>
+                    </p>
 
-                <li>
-                    <div class="tip" style="margin: 10px 0 10px 20px;">
-                        <p>Note that certain combinations of autoconf and libtool may not
-                            work when used together, particularly with historical versions of PHP. See
-                            <a href="#buildconf_fail">below</a> for details.<br>
-                            Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
-                                called before AC_PROG_CC</code>. These messages can usually be ignored.</p>
-                    </div>
-                </li>
+                    <h3 id="flex_fail">Zend/zend_language_scanner.c: No such file or directory</h3>
 
-                <li>
-                    Run <code>./buildconf</code> to generate the configure script. This may take several moments.
-                </li>
-
-                <li>
-                    From this point onwards, installation is similar to the installation of one of
-                    the official packages with one main difference &ndash; you will need
-                    <a href="#bison">a version of bison that is supported for the PHP version you want to build</a>.
-                    You may also require re2c if you intend to change any of the scanner and
-                    parser files PHP uses.
-                </li>
-            </ol>
-
-            <p>
-                There are many other things, such as the XML source code
-                for the documentation, available via Git. See
-                <a href="http://git.php.net/">the web-based view of the Git
-                    server</a> to see what is available.
-            </p>
-
-            <p>
-                The PHP Wiki has a useful
-                <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a>, which provides useful
-                tips and cheatsheets for using the PHP Git repository, and if you want to
-                become involved in developing PHP, the
-                <a href="https://wiki.php.net/vcs/gitworkflow">Git Workflow</a> page is also
-                likely to be of interest.
-            </p>
-
-            <h2>PHP manual</h2>
-
-            <p>
-                The PHP manual is still currently hosted on SVN, although it will be migrated
-                to Git in the future. To checkout the latest English version of the PHP
-                manual:<br>
-                <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
-                <br><br>
-                You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
-            </p>
-
-            <h2>Historical issues</h2>
-
-            <h3 id="buildconf_fail">autoconf and libtool information for PHP 5.3 and below</h3>
-
-            <p>
-                There seem to be problems with libtool 1.4.2. It is suggested
-                that you use libtool 1.4, along with autoconf 2.13 and
-                automake 1.4. You should also ensure that autoconf, automake
-                and libtool are installed in the same directory. libtool 1.5
-                will not work.
-            </p>
-
-            <p>The following combinations are known to work with PHP 5.3 and below:</p>
-            <ul>
-                <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
-                <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
-            </ul>
-
-            <p>Since PHP 4.3 automake and its aclocal program are no longer needed to build PHP.</p>
-
-            <p>
-                If you have multiple versions of autoconf installed on your computer, as is
-                common for many UNIXes, you can set the PHP_AUTOCONF and PHP_AUTOHEADER
-                variables when running buildconf to indicate which versions it should use
-                e.g.:<br>
-                <code>PHP_AUTOCONF=autoconf213 PHP_AUTOHEADER=autoheader213 ./buildconf</code>
-            </p>
-
-            <h3 id="flex_fail">Zend/zend_language_scanner.c: No such file or directory</h3>
-
-            <p>
-                PHP only supports flex 2.5.4, <strong>not</strong> later versions as they broke backwards compatibility.
-                Please note that PHP 5.3 and later do not require flex at all.
-            </p>
+                    <p>
+                        PHP only supports flex 2.5.4, <strong>not</strong> later versions as they broke backwards compatibility.
+                        Please note that PHP 5.3 and later do not require flex at all.
+                    </p>
+                </div>
+            </section>
+            
 			<?php
 		}
 	}

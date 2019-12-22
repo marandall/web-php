@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpconference-brasil-2015</id>
+  <title>PhpConference Brasil 2015</title>
+  <start_date>2015-12-02</start_date>
+  <end_date>2015-12-02</end_date>
+  <location country=""/>
+  <summary type="text">Come to the leading PHP Conference in Latin America!</summary>
+  <content type="markdown">Come to the leading PHP Conference in Latin America!
+
+ We're celebrating our 10th anniversary with a 5 days event, starting on wednesday, december 2nd, and ending on december 6th - on a beach!
+
+ This year, we'll have hands-on courses (with 8 hour duration each), practical mini-courses, talks and keynotes. The event place provide us a camping area, so you can come and stay all night long, and on december 6th - last event day -, we have the PHP Conference on Beach: a day to enjoy with event attendees.
+
+ Come to learn about PHP and improve your networking! Check out what you will see on PHP Conference Brasil 2015:
+
+- 80 activities, including talks (both national and international), courses and mini-courses;
+- Camping area;
+- PHPConference on Beach;
+- GirlPower promotion: womans have 50% off on ticket.
+ 
+ More informations at [phpconference.com.br](http://phpconference.com.br).</content>
+  <updated>2015-10-15T22:00:00-03:00</updated>
+  <logo width="350" height="263">9176f7fd8251f74b0c76de7027b5359159b68188a41bf43eb5ee4b1177cc38f8.png</logo>
+</conference>

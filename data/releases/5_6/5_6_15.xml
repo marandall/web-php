@@ -1,54 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.15">
+<?xml version="1.0"?>
+<release version="1" id="5.6.15">
   <release>5.6.15</release>
   <date>29 Oct 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>15</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.15.tar.bz2</filename>
       <name>PHP 5.6.15 (tar.bz2)</name>
+      <filename>php-5.6.15.tar.bz2</filename>
+      <date>29 Oct 2015</date>
       <sha256>11a0645c4d4b749e256da1e0d6df89dd886b5b06b83c914d942653661dbd1c38</sha256>
-      <md5/>
-      <date>29 Oct 2015</date>
     </source>
     <source>
-      <filename>php-5.6.15.tar.gz</filename>
       <name>PHP 5.6.15 (tar.gz)</name>
-      <sha256>bb2d4c226a4897b7c3659c2538a87aef7ec104f58f5ae930a263dd77fb8ebc40</sha256>
-      <md5/>
+      <filename>php-5.6.15.tar.gz</filename>
       <date>29 Oct 2015</date>
+      <sha256>bb2d4c226a4897b7c3659c2538a87aef7ec104f58f5ae930a263dd77fb8ebc40</sha256>
     </source>
     <source>
-      <filename>php-5.6.15.tar.xz</filename>
       <name>PHP 5.6.15 (tar.xz)</name>
-      <sha256>cf52e2e621e60997269663fa4bc06253191fa2a41dc9b08c8c911435b3ebcca9</sha256>
-      <md5/>
+      <filename>php-5.6.15.tar.xz</filename>
       <date>29 Oct 2015</date>
+      <sha256>cf52e2e621e60997269663fa4bc06253191fa2a41dc9b08c8c911435b3ebcca9</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.15. Several bugs have been fixed.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.15 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.15">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Segfault when binding $this of internal instance method to null).</description>
+        <references>
+          <reference type="bugfix">70681</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault for getClosure() internal method rebind with invalid $this).</description>
+        <references>
+          <reference type="bugfix">70685</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DateTimeImmutable segfault).</description>
+        <references>
+          <reference type="bugfix">70619</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mcrypt">
+      <change>
+        <description>(mcrypt_encrypt() won't return data when no IV was specified under RC4).</description>
+        <references>
+          <reference type="bugfix">70625</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(mysqli_real_query():Unknown type 245 sent by the server).</description>
+        <references>
+          <reference type="bugfix">70384</reference>
+        </references>
+      </change>
+      <change>
+        <description>segfault in mysqlnd_connect.</description>
+        <references>
+          <reference type="bugfix">70572</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Third one of segfault in gc_remove_from_buffer).</description>
+        <references>
+          <reference type="bugfix">70632</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Another Segfault in gc_remove_from_buffer()).</description>
+        <references>
+          <reference type="bugfix">70631</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in gc_remove_from_buffer()).</description>
+        <references>
+          <reference type="bugfix">70601</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed compatibility with Windows 10 (see also [#70652](http://bugs.php.net/70652)).</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

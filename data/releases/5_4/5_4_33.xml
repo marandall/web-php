@@ -1,60 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.33">
+<?xml version="1.0"?>
+<release version="1" id="5.4.33">
   <release>5.4.33</release>
   <date>18 Sep 2014</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>33</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.33.tar.bz2</filename>
       <name>PHP 5.4.33 (tar.bz2)</name>
+      <filename>php-5.4.33.tar.bz2</filename>
+      <date>18 Sep 2014</date>
       <sha256>1a75b2d0835e74b8886cd3980d9598a0e06691441bb7f91d19b74c2278e40bb5</sha256>
-      <md5/>
-      <date>18 Sep 2014</date>
     </source>
     <source>
-      <filename>php-5.4.33.tar.gz</filename>
       <name>PHP 5.4.33 (tar.gz)</name>
-      <sha256>74e542dd2f15ebbc123738a71e867d57d2996a6edb40e6ac62fcf5ab85763d19</sha256>
-      <md5/>
+      <filename>php-5.4.33.tar.gz</filename>
       <date>18 Sep 2014</date>
+      <sha256>74e542dd2f15ebbc123738a71e867d57d2996a6edb40e6ac62fcf5ab85763d19</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.33 binaries and source</filename>
       <name>Windows 5.4.33 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.33. 10 bugs were fixed in this release.
-
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>
-This release is the last planned release that contains regular bugfixes. All the consequent releases
-will contain only security-relevant fixes, for the term of one year.
-PHP 5.4 users that need further bugfixes are encouraged to upgrade to PHP 5.6 or PHP 5.5.
-</p>
-
-<p>For source downloads of PHP 5.4.33 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.33">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(glob returns error, should be empty array()).</description>
+        <references>
+          <reference type="bugfix">47358</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SIGSEGV during zend_shutdown()).</description>
+        <references>
+          <reference type="bugfix">65463</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Crash on SIGTERM in apache process).</description>
+        <references>
+          <reference type="bugfix">66036</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(socket timeouts not honored in blocking SSL reads).</description>
+        <references>
+          <reference type="bugfix">41631</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(memory leaks in DateTime constructor).</description>
+        <references>
+          <reference type="bugfix">66091</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(FPM with mod_fastcgi/apache2.4 is broken).</description>
+        <references>
+          <reference type="bugfix">67606</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>Made fontFetch's path parser thread-safe.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(Segfaults in php_wddx_serialize_var).</description>
+        <references>
+          <reference type="bugfix">67873</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zlib">
+      <change>
+        <description>(chained zlib filters silently fail with large amounts of data).</description>
+        <references>
+          <reference type="bugfix">67724</reference>
+        </references>
+      </change>
+      <change>
+        <description>(internal corruption phar error).</description>
+        <references>
+          <reference type="bugfix">67865</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,22 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="3.0.x (latest)">
+<?xml version="1.0"?>
+<release version="1" id="3.0.x (latest)">
   <release>3.0.x (latest)</release>
   <date>20 Oct 2000</date>
-  <version>
-    <major>3</major>
-    <minor>0</minor>
-    <release>0</release>
-  </version>
   <source>
     <source>
-      <filename>php-3.0.18.tar.gz</filename>
       <name>PHP 3.0.18 Source Code</name>
-      <sha256/>
-      <md5>b4b8f7f1151ce66d5f3910a066651133</md5>
+      <filename>php-3.0.18.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">PHP Function List
+
+
+ **releases/3_0_x (latest).php** doesn't exist. Closest matches:
+
+- [ncurses_flash](/manual/en/function.ncurses-flash.php)
+- [easter_date](/manual/en/function.easter-date.php)
+- [ncurses_flushinp](/manual/en/function.ncurses-flushinp.php)
+- [error_clear_last](/manual/en/function.error-clear-last.php)
+- [ncurses_slk_attr](/manual/en/function.ncurses-slk-attr.php)
+- [headers_list](/manual/en/function.headers-list.php)
+- [ncurses_slk_noutrefresh](/manual/en/function.ncurses-slk-noutrefresh.php)
+- [mcrypt_module_self_test](/manual/en/function.mcrypt-module-self-test.php)
+- [realpath](/manual/en/function.realpath.php)
+- [ncurses_slk_attron](/manual/en/function.ncurses-slk-attron.php)
+- [ncurses_getch](/manual/en/function.ncurses-getch.php)
+- [ncurses_slk_restore](/manual/en/function.ncurses-slk-restore.php)
+- [reflectionextension](/manual/en/class.reflectionextension.php)
+- [ncurses_slk_attroff](/manual/en/function.ncurses-slk-attroff.php)
+- [ncurses_slk_refresh](/manual/en/function.ncurses-slk-refresh.php)
+- [ncurses_scr_restore](/manual/en/function.ncurses-scr-restore.php)
+- [ncurses_slk_attrset](/manual/en/function.ncurses-slk-attrset.php)
+- [ncurses_wgetch](/manual/en/function.ncurses-wgetch.php)
+- [ncurses_attron](/manual/en/function.ncurses-attron.php)
+- [event_base_set](/manual/en/function.event-base-set.php)
+- [ncurses_filter](/manual/en/function.ncurses-filter.php)
+- [ncurses_addstr](/manual/en/function.ncurses-addstr.php)
+- [ncurses_pnoutrefresh](/manual/en/function.ncurses-pnoutrefresh.php)
+- [xml_parser_create_ns](/manual/en/function.xml-parser-create-ns.php)
+- [ncurses_pair_content](/manual/en/function.ncurses-pair-content.php)
+- [ncurses_wnoutrefresh](/manual/en/function.ncurses-wnoutrefresh.php)
+- [ncurses_delay_output](/manual/en/function.ncurses-delay-output.php)
+- [mcrypt_enc_self_test](/manual/en/function.mcrypt-enc-self-test.php)
+- [ingres_escape_string](/manual/en/function.ingres-escape-string.php)
+- [ibase_service_attach](/manual/en/function.ibase-service-attach.php)</announcement>
+  </announcements>
   <tags/>
-  <announcements/>
   <changes/>
 </release>

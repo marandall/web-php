@@ -1,55 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.34">
+<?xml version="1.0"?>
+<release version="1" id="5.6.34">
   <release>5.6.34</release>
   <date>01 Mar 2018</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>34</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.34.tar.bz2</filename>
       <name>PHP 5.6.34 (tar.bz2)</name>
+      <filename>php-5.6.34.tar.bz2</filename>
+      <date>01 Mar 2018</date>
       <sha256>e19f499d8cee4b0b0780361ecb6a00c41654772a754803ab9ea866b8d47cf2cd</sha256>
-      <md5/>
-      <date>01 Mar 2018</date>
     </source>
     <source>
-      <filename>php-5.6.34.tar.gz</filename>
       <name>PHP 5.6.34 (tar.gz)</name>
-      <sha256>de28251ef6d7eb945eb7b770ff668b9f978d9adad52a8c763f6ee409a96732ea</sha256>
-      <md5/>
+      <filename>php-5.6.34.tar.gz</filename>
       <date>01 Mar 2018</date>
+      <sha256>de28251ef6d7eb945eb7b770ff668b9f978d9adad52a8c763f6ee409a96732ea</sha256>
     </source>
     <source>
-      <filename>php-5.6.34.tar.xz</filename>
       <name>PHP 5.6.34 (tar.xz)</name>
-      <sha256>21453be3a045204cd2717543ef42771324f411f40962ecda4fe841930a933128</sha256>
-      <md5/>
+      <filename>php-5.6.34.tar.xz</filename>
       <date>01 Mar 2018</date>
+      <sha256>21453be3a045204cd2717543ef42771324f411f40962ecda4fe841930a933128</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.34. This is a security release. One security bug was fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.34">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</description>
+        <references>
+          <reference type="bugfix">75981</reference>
+          <reference type="cve">CVE-2018-7584</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

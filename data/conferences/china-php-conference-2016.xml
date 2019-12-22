@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>china-php-conference-2016</id>
+  <title>China PHP conference 2016</title>
+  <start_date>2016-05-14</start_date>
+  <end_date>2016-05-14</end_date>
+  <location country=""/>
+  <summary type="text">DevLink is pleased to announce the China PHP Conference 2016.</summary>
+  <content type="markdown">DevLink is pleased to announce the China PHP Conference 2016.
+
+DevLink is a group dedicated to helping developers continuous improvement. China PHP Conference 2016 face to senior PHP programmers, found for better communication in China. It will be held on 5.14-5.15 2016 for a two-days in Beijing, and we have invited Rasums Lerdorf, Xinchen Hui and other best PHP experts as speakers. There're over 10 topics foucus on PHP performance optimization in the Alibaba double-11 events; PHP development of big data analysis; Swoole cluster development, and SOA applications programming; upgraded to PHP7 experience of enterprise application.
+
+There will be more than 700 senior PHP programmers and technical managers come to attend the conference.
+
+Go to [devlink.cn](http://devlink.cn/) for tickets and more information, we are looking forward to seeing you in Beijing!</content>
+  <updated>2016-03-30T15:53:21+00:00</updated>
+  <logo width="300" height="168">4e50d9f9a66fb78f586834a21da9507825ba4e221c730ff9ab714ced69dd0db1.jpg</logo>
+</conference>

@@ -1,51 +1,268 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.5">
+<?xml version="1.0"?>
+<release version="1" id="7.0.5">
   <release>7.0.5</release>
   <date>31 Mar 2016</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>5</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.5.tar.bz2</filename>
       <name>PHP 7.0.5 (tar.bz2)</name>
+      <filename>php-7.0.5.tar.bz2</filename>
+      <date>31 Mar 2016</date>
       <sha256>2c09af7fe64537ea795f098b9b542ead407ef83f7cdc65b3787115ccbbb51de9</sha256>
-      <md5/>
-      <date>31 Mar 2016</date>
     </source>
     <source>
-      <filename>php-7.0.5.tar.gz</filename>
       <name>PHP 7.0.5 (tar.gz)</name>
-      <sha256>f9d93419031b4df663fc48f03b8a833545de8776225e46637563e2be6029908d</sha256>
-      <md5/>
+      <filename>php-7.0.5.tar.gz</filename>
       <date>31 Mar 2016</date>
+      <sha256>f9d93419031b4df663fc48f03b8a833545de8776225e46637563e2be6029908d</sha256>
     </source>
     <source>
-      <filename>php-7.0.5.tar.xz</filename>
       <name>PHP 7.0.5 (tar.xz)</name>
-      <sha256>c41f1a03c24119c0dd9b741cdb67880486e64349fc33527767f6dc28d3803abb</sha256>
-      <md5/>
+      <filename>php-7.0.5.tar.xz</filename>
       <date>31 Mar 2016</date>
+      <sha256>c41f1a03c24119c0dd9b741cdb67880486e64349fc33527767f6dc28d3803abb</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.5. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Huge pages disabled by default.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added ability to enable huge pages in Zend Memory Manager through the environment variable USE_ZEND_ALLOC_HUGE_PAGES=1.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Call-by-reference widens scope to uninvolved functions when used in switch).</description>
+        <references>
+          <reference type="bugfix">71756</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Possible crash in zend_bin_strtod, zend_oct_strtod, zend_hex_strtod).</description>
+        <references>
+          <reference type="bugfix">71729</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Global variables are reserved before execution).</description>
+        <references>
+          <reference type="bugfix">71695</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out-of-bounds access in php_url_decode in context php_stream_url_wrap_rfc2397).</description>
+        <references>
+          <reference type="bugfix">71629</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Strings used in pass-as-reference cannot be used to invoke C::$callable()).</description>
+        <references>
+          <reference type="bugfix">71622</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault on ZTS with date function (setlocale)).</description>
+        <references>
+          <reference type="bugfix">71596</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow in zend_mm_alloc_heap()).</description>
+        <references>
+          <reference type="bugfix">71535</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Leaked 1 hashtable iterators).</description>
+        <references>
+          <reference type="bugfix">71470</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ISO C does not allow extra &#x2018;;&#x2019; outside of a function).</description>
+        <references>
+          <reference type="bugfix">71575</reference>
+        </references>
+      </change>
+      <change>
+        <description>(yield from does not count EOLs).</description>
+        <references>
+          <reference type="bugfix">71724</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ReflectionMethod::getDocComment returns the wrong comment).</description>
+        <references>
+          <reference type="bugfix">71767</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_strip_whitespace() fails on some numerical values).</description>
+        <references>
+          <reference type="bugfix">71806</reference>
+        </references>
+      </change>
+      <change>
+        <description>(`php -R` (PHP_MODE_PROCESS_STDIN) is broken).</description>
+        <references>
+          <reference type="bugfix">71624</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI Server">
+      <change>
+        <description>(Support MKCALENDAR request method).</description>
+        <references>
+          <reference type="bugfix">69953</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Curl">
+      <change>
+        <description>(Support constant CURLM_ADDED_ALREADY).</description>
+        <references>
+          <reference type="bugfix">71694</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DatePeriod::getEndDate segfault).</description>
+        <references>
+          <reference type="bugfix">71635</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Buffer over-write in finfo_open with malformed magic file). (CVE-2015-8865)</description>
+        <references>
+          <reference type="bugfix">71527</reference>
+          <reference type="cve">CVE-2015-8865</reference>
+        </references>
+      </change>
+    </module>
+    <module id="libxml">
+      <change>
+        <description>(Access Violation crashes php-cgi.exe).</description>
+        <references>
+          <reference type="bugfix">71536</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mbstring">
+      <change>
+        <description>(AddressSanitizer: negative-size-param (-1) in mbfl_strcut). (CVE-2016-4073)</description>
+        <references>
+          <reference type="bugfix">71906</reference>
+          <reference type="cve">CVE-2016-4073</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>, #69526 (Executing prepared statements is succesfull only for the first two statements).</description>
+        <references>
+          <reference type="bugfix">47803</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(segmentation fault in pcre running twig tests).</description>
+        <references>
+          <reference type="bugfix">71659</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>(PDO::MSSQL forces format of datetime fields).</description>
+        <references>
+          <reference type="bugfix">54648</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Crash in php7.dll with bad phar filename).</description>
+        <references>
+          <reference type="bugfix">71625</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PharData fails to open specific file).</description>
+        <references>
+          <reference type="bugfix">71317</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid memory write in phar on filename with \0 in name). (CVE-2016-4072)</description>
+        <references>
+          <reference type="bugfix">71860</reference>
+          <reference type="cve">CVE-2016-4072</reference>
+        </references>
+      </change>
+    </module>
+    <module id="phpdbg">
+      <change>
+        <description>Fixed crash when advancing (except step) inside an internal function.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Null pointer dereference in zend_hash_str_find_bucket).</description>
+        <references>
+          <reference type="bugfix">71683</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SNMP">
+      <change>
+        <description>(php_snmp_error() Format String Vulnerability). (CVE-2016-4071)</description>
+        <references>
+          <reference type="bugfix">71704</reference>
+          <reference type="cve">CVE-2016-4071</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(private properties lost when unserializing ArrayObject).</description>
+        <references>
+          <reference type="bugfix">71617</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(array_column behaves incorrectly after foreach by reference).</description>
+        <references>
+          <reference type="bugfix">71660</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in php_raw_url_encode). (CVE-2016-4070)</description>
+        <references>
+          <reference type="bugfix">71798</reference>
+          <reference type="cve">CVE-2016-4070</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>Update bundled libzip to 1.1.2.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

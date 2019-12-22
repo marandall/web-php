@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-berlin-2018</id>
+  <title>SymfonyLive Berlin 2018</title>
+  <start_date>2018-10-24</start_date>
+  <end_date>2018-10-24</end_date>
+  <location country=""/>
+  <summary type="text">The SymfonyLive German conference is coming back to Berlin! From the 24th to the 26th of October there will be two workshop days and a conference day with two tracks.</summary>
+  <content type="markdown">The SymfonyLive German conference is coming back to Berlin! From the 24th to the 26th of October there will be two workshop days and a conference day with two tracks.
+
+Symfony German-speaking fans, don't miss the opportunity to attend inspiring and exciting talks and hands-on workshops!</content>
+  <updated>2018-06-25T13:29:40+02:00</updated>
+  <logo width="280" height="134">bf88318c7abeff185c668d607e7cd889e326069efcaf2a461c85fcd567c291cb.jpg</logo>
+</conference>

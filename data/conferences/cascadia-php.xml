@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>cascadia-php</id>
+  <title>Cascadia PHP</title>
+  <start_date>2018-09-14</start_date>
+  <end_date>2018-09-14</end_date>
+  <location country=""/>
+  <summary type="text"> Join us at Cascadia PHP for Developers by Developers. Exceptional speakers. Actionable tactics. Learning for all. Join us for a two-day, three-track conference full of forward-thinking, tactical sessions in PHP, Security, API&#x2019;s, Dev Ops, web technologies, and more.</summary>
+  <content type="markdown"> Join us at Cascadia PHP for Developers by Developers. Exceptional speakers. Actionable tactics. Learning for all. Join us for a two-day, three-track conference full of forward-thinking, tactical sessions in PHP, Security, API&#x2019;s, Dev Ops, web technologies, and more.</content>
+  <updated>2018-08-21T22:29:36+00:00</updated>
+  <logo width="250" height="143">2dbd3145bb64ace9c76372f973bdbd8c8e1b8871b4397caeacd2a5142f049e25.jpg</logo>
+</conference>

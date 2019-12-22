@@ -1,48 +1,153 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.13">
+<?xml version="1.0"?>
+<release version="1" id="7.2.13">
   <release>7.2.13</release>
   <date>06 Dec 2018</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>13</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.13.tar.bz2</filename>
       <name>PHP 7.2.13 (tar.bz2)</name>
+      <filename>php-7.2.13.tar.bz2</filename>
+      <date>06 Dec 2018</date>
       <sha256>5b4a46fb76491bcd3eee1213773382e570f6ecf9b22d623b24e2822298b3e92d</sha256>
-      <md5/>
-      <date>06 Dec 2018</date>
     </source>
     <source>
-      <filename>php-7.2.13.tar.gz</filename>
       <name>PHP 7.2.13 (tar.gz)</name>
-      <sha256>e563cee406b1ec96649c22ed2b35796cfe4e9aa9afa6eab6be4cf2fe5d724744</sha256>
-      <md5/>
+      <filename>php-7.2.13.tar.gz</filename>
       <date>06 Dec 2018</date>
+      <sha256>e563cee406b1ec96649c22ed2b35796cfe4e9aa9afa6eab6be4cf2fe5d724744</sha256>
     </source>
     <source>
-      <filename>php-7.2.13.tar.xz</filename>
       <name>PHP 7.2.13 (tar.xz)</name>
-      <sha256>14b0429abdb46b65c843e5882c9a8c46b31dfbf279c747293b8ab950c2644a4b</sha256>
-      <md5/>
+      <filename>php-7.2.13.tar.xz</filename>
       <date>06 Dec 2018</date>
+      <sha256>14b0429abdb46b65c843e5882c9a8c46b31dfbf279c747293b8ab950c2644a4b</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.13. This is a security release.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.13.
-This is a security release.</p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(ftp_close(): SSL_read on shutdown).</description>
+        <references>
+          <reference type="bugfix">77151</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault when using convert.quoted-printable-encode filter).</description>
+        <references>
+          <reference type="bugfix">77231</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI">
+      <change>
+        <description>(php-win.exe corrupts unicode symbols from cli parameters).</description>
+        <references>
+          <reference type="bugfix">77111</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(slowness regression in 7.2/7.3 (compared to 7.1)).</description>
+        <references>
+          <reference type="bugfix">77095</reference>
+        </references>
+      </change>
+    </module>
+    <module id="iconv">
+      <change>
+        <description>(Fixing 60494 ignored ICONV_MIME_DECODE_CONTINUE_ON_ERROR).</description>
+        <references>
+          <reference type="bugfix">77147</reference>
+        </references>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</description>
+        <references>
+          <reference type="bugfix">77153</reference>
+          <reference type="cve">CVE-2018-19518</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(odbc_fetch_object has incorrect type signature).</description>
+        <references>
+          <reference type="bugfix">77079</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Type inference in opcache causes side effects).</description>
+        <references>
+          <reference type="bugfix">77058</reference>
+        </references>
+      </change>
+      <change>
+        <description>(array_diff_key() - segmentation fault).</description>
+        <references>
+          <reference type="bugfix">77092</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(PharData always creates new files with mode 0666).</description>
+        <references>
+          <reference type="bugfix">77022</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</description>
+        <references>
+          <reference type="bugfix">77143</reference>
+          <reference type="cve">CVE-2018-20783</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PGSQL">
+      <change>
+        <description>(pg_convert has a broken regex for the 'TIME WITHOUT TIMEZONE' data type).</description>
+        <references>
+          <reference type="bugfix">77047</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SoapClient can't handle object references correctly).</description>
+        <references>
+          <reference type="bugfix">50675</reference>
+        </references>
+      </change>
+      <change>
+        <description>(WSDL_CACHE_MEMORY causes Segmentation fault).</description>
+        <references>
+          <reference type="bugfix">76348</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Signedness issue in SOAP when precision=-1).</description>
+        <references>
+          <reference type="bugfix">77141</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(Validate length on socket_write).</description>
+        <references>
+          <reference type="bugfix">67619</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

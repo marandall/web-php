@@ -1,50 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.18">
+<?xml version="1.0"?>
+<release version="1" id="7.1.18">
   <release>7.1.18</release>
   <date>24 May 2018</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>18</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.18.tar.bz2</filename>
       <name>PHP 7.1.18 (tar.bz2)</name>
+      <filename>php-7.1.18.tar.bz2</filename>
+      <date>24 May 2018</date>
       <sha256>580e375515ede831a6d82e13c0ec25dd08b225c6d87dfc24d7cd5f3bd542bf8e</sha256>
-      <md5/>
-      <date>24 May 2018</date>
     </source>
     <source>
-      <filename>php-7.1.18.tar.gz</filename>
       <name>PHP 7.1.18 (tar.gz)</name>
-      <sha256>07c24ae4dd59d81d3dc0ce89025ae667979150e2ee0e9e30dd89e04e31d510fb</sha256>
-      <md5/>
+      <filename>php-7.1.18.tar.gz</filename>
       <date>24 May 2018</date>
+      <sha256>07c24ae4dd59d81d3dc0ce89025ae667979150e2ee0e9e30dd89e04e31d510fb</sha256>
     </source>
     <source>
-      <filename>php-7.1.18.tar.xz</filename>
       <name>PHP 7.1.18 (tar.xz)</name>
-      <sha256>8bd91cea072ea5b368cc9b4533a1a683eb426abdacbf024bb6ffa9b799cd3b01</sha256>
-      <md5/>
+      <filename>php-7.1.18.tar.xz</filename>
       <date>24 May 2018</date>
+      <sha256>8bd91cea072ea5b368cc9b4533a1a683eb426abdacbf024bb6ffa9b799cd3b01</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.18.
-
-  All PHP 7.1 users are encouraged to upgrade to this version.
-  </p>
-
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>--with-fpm-acl wrongly tries to find libacl on FreeBSD.</description>
+        <references>
+          <reference type="bugfix">76075</reference>
+        </references>
+      </change>
+    </module>
+    <module id="intl">
+      <change>
+        <description>(Locale::parseLocale() broken with some arguments).</description>
+        <references>
+          <reference type="bugfix">74385</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(PHP-FPM sporadic crash when running Infinitewp).</description>
+        <references>
+          <reference type="bugfix">76205</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Assertion failure in file cache when unserializing empty try_catch_array).</description>
+        <references>
+          <reference type="bugfix">76275</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Opcache causes incorrect "undefined variable" errors).</description>
+        <references>
+          <reference type="bugfix">76281</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>Fixed arginfo for array_replace(_recursive) and array_merge(_recursive).</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,55 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.28">
+<?xml version="1.0"?>
+<release version="1" id="5.6.28">
   <release>5.6.28</release>
   <date>10 Nov 2016</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>28</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.28.tar.bz2</filename>
       <name>PHP 5.6.28 (tar.bz2)</name>
+      <filename>php-5.6.28.tar.bz2</filename>
+      <date>10 Nov 2016</date>
       <sha256>c55ea3f4aad5a0b65631d01c4468930fd981ad208ffcd242acdf731bcb47548f</sha256>
-      <md5/>
-      <date>10 Nov 2016</date>
     </source>
     <source>
-      <filename>php-5.6.28.tar.gz</filename>
       <name>PHP 5.6.28 (tar.gz)</name>
-      <sha256>27a47ac15e0868d51181d3909cfe3c63ae9b643a3ab40dc30a75b5b500bce500</sha256>
-      <md5/>
+      <filename>php-5.6.28.tar.gz</filename>
       <date>10 Nov 2016</date>
+      <sha256>27a47ac15e0868d51181d3909cfe3c63ae9b643a3ab40dc30a75b5b500bce500</sha256>
     </source>
     <source>
-      <filename>php-5.6.28.tar.xz</filename>
       <name>PHP 5.6.28 (tar.xz)</name>
-      <sha256>07187ba2870f89cef334cd2ad6cb801aeec5eaf283da0293a9a6be75d6786d11</sha256>
-      <md5/>
+      <filename>php-5.6.28.tar.xz</filename>
       <date>10 Nov 2016</date>
+      <sha256>07187ba2870f89cef334cd2ad6cb801aeec5eaf283da0293a9a6be75d6786d11</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.28. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.28 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.28">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(try/catch not working with two exceptions inside a same operation).</description>
+        <references>
+          <reference type="bugfix">73337</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Bz2">
+      <change>
+        <description>(crash in bzcompress function).</description>
+        <references>
+          <reference type="bugfix">73356</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Integer overflow in imageline() with antialiasing).</description>
+        <references>
+          <reference type="bugfix">73213</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagescale() is not affected by, but affects imagesetinterpolation()).</description>
+        <references>
+          <reference type="bugfix">73272</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow in gdImageScaleBilinearPalette()).</description>
+        <references>
+          <reference type="bugfix">73279</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Stack Buffer Overflow in GD dynamicGetbuf).</description>
+        <references>
+          <reference type="bugfix">73280</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Illegal write/read access caused by gdImageAALine overflow).</description>
+        <references>
+          <reference type="bugfix">72482</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagefilltoborder stackoverflow on truecolor images). (CVE-2016-9933)</description>
+        <references>
+          <reference type="bugfix">72696</reference>
+          <reference type="cve">CVE-2016-9933</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Imap">
+      <change>
+        <description>(Integer Overflow in "_php_imap_mail" leads Heap Overflow).</description>
+        <references>
+          <reference type="bugfix">73418</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Use-after-free in ArrayObject Deserialization).</description>
+        <references>
+          <reference type="bugfix">73144</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SoapServer reports Bad Request when gzipped).</description>
+        <references>
+          <reference type="bugfix">73037</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(2147483647 is fetched as string).</description>
+        <references>
+          <reference type="bugfix">73333</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(passing additional_parameters causes mail to fail).</description>
+        <references>
+          <reference type="bugfix">73203</reference>
+        </references>
+      </change>
+      <change>
+        <description>(use after free in userspace streams).</description>
+        <references>
+          <reference type="bugfix">73188</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_url return wrong hostname).</description>
+        <references>
+          <reference type="bugfix">73192</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(NULL Pointer Dereference in WDDX Packet Deserialization with PDORow). (CVE-2016-9934)</description>
+        <references>
+          <reference type="bugfix">73331</reference>
+          <reference type="cve">CVE-2016-9934</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

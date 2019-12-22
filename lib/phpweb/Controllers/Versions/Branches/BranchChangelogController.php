@@ -10,10 +10,17 @@
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services\ChangelogRenderer\ChangelogRenderer;
 	use phpweb\UI\Templates\FreshTemplate;
 	
 	class BranchChangelogController implements ControllerInterface
 	{
+		private ChangelogRenderer $changelog_renderer;
+		
+		public function __construct(ChangelogRenderer $changelog_renderer) {
+			$this->changelog_renderer = $changelog_renderer;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -36,10 +43,12 @@
 		public function renderContents(Branch $brach) {
 			foreach (array_reverse($brach->getReleasesByVersion()) as $release) {
 				?>
-				<h3>PHP <?= htmlspecialchars($release->getVersionId()) ?></h3>
-				<div style="margin-bottom: 1em">
-					<?= $release->getChangelogText() ?>
-				</div>
+                <section class="r2-sec">
+                    <h2>PHP <?= htmlspecialchars($release->getVersionId()) ?></h2>
+                    <div>
+	                    <?php $this->changelog_renderer->render($release->getModulesWithChanges()); ?>
+                    </div>
+                </section>
 				<?php
 			}
 		}

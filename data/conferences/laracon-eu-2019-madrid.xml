@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>laracon-eu-2019-madrid</id>
+  <title>Laracon EU 2019 Madrid</title>
+  <start_date>2019-05-23</start_date>
+  <end_date>2019-05-23</end_date>
+  <location country=""/>
+  <summary type="text"> We re bringing Laracon EU to Madrid on May 23rd for a new one-day event. Join speakers Adam Wathan, Matt Stauffer, and many more for a brain-crunching day of talks and community celebration.</summary>
+  <content type="markdown"> We re bringing Laracon EU to Madrid on May 23rd for a new one-day event. Join speakers Adam Wathan, Matt Stauffer, and many more for a brain-crunching day of talks and community celebration.</content>
+  <updated>2019-03-11T17:28:17+00:00</updated>
+  <logo width="250" height="250">266363194a4fb5c2e96b0ea107c33ef1648a28d73ab3b70b62adb4350e8b5141.png</logo>
+</conference>

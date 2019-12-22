@@ -1,55 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.36">
+<?xml version="1.0"?>
+<release version="1" id="5.6.36">
   <release>5.6.36</release>
   <date>26 Apr 2018</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>36</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.36.tar.bz2</filename>
       <name>PHP 5.6.36 (tar.bz2)</name>
+      <filename>php-5.6.36.tar.bz2</filename>
+      <date>26 Apr 2018</date>
       <sha256>626a0e3f5d8a0e686a2b930f0dd3a0601fe3dcb5e43dd0e8c3fab631e64e172a</sha256>
-      <md5/>
-      <date>26 Apr 2018</date>
     </source>
     <source>
-      <filename>php-5.6.36.tar.gz</filename>
       <name>PHP 5.6.36 (tar.gz)</name>
-      <sha256>06086a8b6a9964ef8009c4d9176b4eeb0c564ea39c1213f015e24f3466d2d69f</sha256>
-      <md5/>
+      <filename>php-5.6.36.tar.gz</filename>
       <date>26 Apr 2018</date>
+      <sha256>06086a8b6a9964ef8009c4d9176b4eeb0c564ea39c1213f015e24f3466d2d69f</sha256>
     </source>
     <source>
-      <filename>php-5.6.36.tar.xz</filename>
       <name>PHP 5.6.36 (tar.xz)</name>
-      <sha256>18f536bf548e909b4e980379d0c4e56d024b2b1eb1c9768fd169360491f1d6dd</sha256>
-      <md5/>
+      <filename>php-5.6.36.tar.xz</filename>
       <date>26 Apr 2018</date>
+      <sha256>18f536bf548e909b4e980379d0c4e56d024b2b1eb1c9768fd169360491f1d6dd</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.36. This is a security release. Several security bugs have been fixed
-     in this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.36">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Heap Buffer Overflow (READ: 1786) in exif_iif_add_value). (CVE-2018-10549)</description>
+        <references>
+          <reference type="bugfix">76130</reference>
+          <reference type="cve">CVE-2018-10549</reference>
+        </references>
+      </change>
+    </module>
+    <module id="iconv">
+      <change>
+        <description>(stream filter convert.iconv leads to infinite loop on invalid sequence). (CVE-2018-10546)</description>
+        <references>
+          <reference type="bugfix">76249</reference>
+          <reference type="cve">CVE-2018-10546</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LDAP">
+      <change>
+        <description>(Malicious LDAP-Server Response causes Crash). (CVE-2018-10548)</description>
+        <references>
+          <reference type="bugfix">76248</reference>
+          <reference type="cve">CVE-2018-10548</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(fix for CVE-2018-5712 may not be complete). (CVE-2018-10547)</description>
+        <references>
+          <reference type="bugfix">76129</reference>
+          <reference type="cve">CVE-2018-5712</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

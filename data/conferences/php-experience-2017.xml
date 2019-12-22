@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-experience-2017</id>
+  <title>PHP Experience 2017</title>
+  <start_date>2017-03-27</start_date>
+  <end_date>2017-03-27</end_date>
+  <location country=""/>
+  <summary type="text"/>
+  <content type="markdown"/>
+  <updated>2017-02-15T02:35:13+00:00</updated>
+  <logo width="264" height="24">39ec4213d39fba4053ca6614e9dd347f2a1efdebbe97a8c93eb77f3c301179f5.png</logo>
+</conference>

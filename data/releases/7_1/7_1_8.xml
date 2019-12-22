@@ -1,49 +1,158 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.8">
+<?xml version="1.0"?>
+<release version="1" id="7.1.8">
   <release>7.1.8</release>
   <date>03 Aug 2017</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.8.tar.bz2</filename>
       <name>PHP 7.1.8 (tar.bz2)</name>
+      <filename>php-7.1.8.tar.bz2</filename>
+      <date>03 Aug 2017</date>
       <sha256>7064a00a9450565190890c7a4be04e646e0be73b2e0f8c46ae34419f343ca2f8</sha256>
-      <md5/>
-      <date>03 Aug 2017</date>
     </source>
     <source>
-      <filename>php-7.1.8.tar.gz</filename>
       <name>PHP 7.1.8 (tar.gz)</name>
-      <sha256>63517b3264f7cb17fb58e1ce60a6cd8903160239b7cf568d52024e9cf4d6cb04</sha256>
-      <md5/>
+      <filename>php-7.1.8.tar.gz</filename>
       <date>03 Aug 2017</date>
+      <sha256>63517b3264f7cb17fb58e1ce60a6cd8903160239b7cf568d52024e9cf4d6cb04</sha256>
     </source>
     <source>
-      <filename>php-7.1.8.tar.xz</filename>
       <name>PHP 7.1.8 (tar.xz)</name>
-      <sha256>8943858738604acb33ecedb865d6c4051eeffe4e2d06f3a3c8f794daccaa2aab</sha256>
-      <md5/>
+      <filename>php-7.1.8.tar.xz</filename>
       <date>03 Aug 2017</date>
+      <sha256>8943858738604acb33ecedb865d6c4051eeffe4e2d06f3a3c8f794daccaa2aab</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.8. This is a bugfix release, with several bug fixes included.
-
-  All PHP 7.1 users are encouraged to upgrade to this version.
-  </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Loading PHP extension with already registered function name leads to a crash).</description>
+        <references>
+          <reference type="bugfix">74832</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_url() broken when query string contains colon).</description>
+        <references>
+          <reference type="bugfix">74780</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unary operator expected error on some systems).</description>
+        <references>
+          <reference type="bugfix">74761</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free in unserialize() SplFixedArray).</description>
+        <references>
+          <reference type="bugfix">73900</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Crash when crawling through network share).</description>
+        <references>
+          <reference type="bugfix">74923</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fixed incorrect poll.h include).</description>
+        <references>
+          <reference type="bugfix">74913</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fixed incorrect errno.h include).</description>
+        <references>
+          <reference type="bugfix">74906</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(property_exists returns true on unknown DateInterval property).</description>
+        <references>
+          <reference type="bugfix">74852</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(Integer overflow in oci_bind_array_by_name).</description>
+        <references>
+          <reference type="bugfix">74625</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Infinite loop in type inference when using HTMLPurifier).</description>
+        <references>
+          <reference type="bugfix">74623</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(pkcs7_en/decrypt does not work if \x0a is used in content).</description>
+        <references>
+          <reference type="bugfix">74798</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added OPENSSL_DONT_ZERO_PAD_KEY constant to prevent key padding and fix bug #71917 (openssl_open() returns junk on envelope &lt; 16 bytes) and bug #72362 (OpenSSL Blowfish encryption is incorrect for short keys).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(PDOStatement::debugDumpParams() truncates query).</description>
+        <references>
+          <reference type="bugfix">69356</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(PHP freezes with AppendIterator).</description>
+        <references>
+          <reference type="bugfix">73471</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(SQLite3::__construct() produces "out of memory" exception with invalid flags).</description>
+        <references>
+          <reference type="bugfix">74883</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(huge memleak when wddx_unserialize).</description>
+        <references>
+          <reference type="bugfix">73173</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</description>
+        <references>
+          <reference type="bugfix">74145</reference>
+          <reference type="cve">CVE-2017-11143</reference>
+        </references>
+      </change>
+    </module>
+    <module id="zlib">
+      <change>
+        <description>(dictionary option of inflate_init() does not work).</description>
+        <references>
+          <reference type="bugfix">73944</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

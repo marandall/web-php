@@ -1,50 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.3.8">
+<?xml version="1.0"?>
+<release version="1" id="4.3.8">
   <release>4.3.8</release>
   <date>13 July 2004</date>
-  <version>
-    <major>4</major>
-    <minor>3</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.3.8.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.3.8.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">PHP Development Team is would like to announce the immediate availability of [PHP 4.3.8](/downloads.php). This release is made in response to several security issues that have been discovered since the 4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
 
+Security Fixes release
+----------------------
 
-
-<!--
-<p>[ <a href="/releases/4_3_8_fr.php">Version Fran&ccedil;aise</a> ]</p>
--->
-
-<p>
- PHP Development Team is would like to announce the immediate availability of <a href="/downloads/">PHP 4.3.8</a>.
- This release is made in response to several security issues that have been discovered since the
- 4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
-</p>
-
-<h2>Security Fixes release</h2>
-
-<p>
  This release addresses several important security issues.
-</p>
 
-<p>
- For a full list of changes in PHP 4.3.8, see the
- <a href="/ChangeLog-4.php#4.3.8">ChangeLog</a>.
- </p>
-
-
-</announcement>
+ For a full list of changes in PHP 4.3.8, see the [ChangeLog](/ChangeLog-4.php#4.3.8).</announcement>
   </announcements>
+  <tags/>
   <changes/>
 </release>

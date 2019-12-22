@@ -22,6 +22,9 @@ class ServiceList extends Container
     public function __construct()
     {
         $this->services = $this->privates = [];
+        $this->syntheticIds = [
+            'phpweb\\Services\\Config\\SiteConfig' => true,
+        ];
         $this->methodMap = [
             'phpweb\\Controllers\\About\\AboutMiddleware' => 'getAboutMiddlewareService',
             'phpweb\\Controllers\\About\\ContactController' => 'getContactControllerService',
@@ -33,6 +36,7 @@ class ServiceList extends Container
             'phpweb\\Controllers\\Community\\Conferences\\Conference\\ConferenceLoaderFromUri' => 'getConferenceLoaderFromUriService',
             'phpweb\\Controllers\\Community\\Conferences\\ConferencesArchiveController' => 'getConferencesArchiveControllerService',
             'phpweb\\Controllers\\Community\\Conferences\\ConferencesIndexController' => 'getConferencesIndexControllerService',
+            'phpweb\\Controllers\\Community\\Conferences\\Tools\\ConferenceInfoRenderer' => 'getConferenceInfoRendererService',
             'phpweb\\Controllers\\Community\\Events\\CalendarController' => 'getCalendarControllerService',
             'phpweb\\Controllers\\Community\\Events\\SubmitEventController' => 'getSubmitEventControllerService',
             'phpweb\\Controllers\\Community\\Lists\\MailingListsIndexController' => 'getMailingListsIndexControllerService',
@@ -91,9 +95,18 @@ class ServiceList extends Container
             'phpweb\\Data\\Branches\\BranchRepository' => 'getBranchRepositoryService',
             'phpweb\\Data\\Conferences\\ConferenceRepository' => 'getConferenceRepositoryService',
             'phpweb\\Data\\News\\ArticlesRepository' => 'getArticlesRepositoryService',
+            'phpweb\\Data\\News\\Commands\\SyncCommand' => 'getSyncCommandService',
+            'phpweb\\Data\\News\\Utilities\\ImportFromServer' => 'getImportFromServerService',
+            'phpweb\\Data\\Release\\Commands\\ReleasesToXMLCommand' => 'getReleasesToXMLCommandService',
+            'phpweb\\Data\\Release\\Commands\\SyncReleases' => 'getSyncReleasesService',
             'phpweb\\Data\\Release\\ReleasesRepository' => 'getReleasesRepositoryService',
+            'phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer' => 'getChangelogRendererService',
+            'phpweb\\Services\\HtmlSanitizer\\HtmlSanitizer' => 'getHtmlSanitizerService',
             'phpweb\\Services\\Http\\HttpFetcher' => 'getHttpFetcherService',
             'phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory' => 'getFeedBuilderFactoryService',
+            'phpweb\\Services\\Storage\\StorageFactory' => 'getStorageFactoryService',
+            'phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter' => 'getHtmlToMarkdownConverterService',
+            'phpweb\\Services\\TextFormatting\\TextFormatter' => 'getTextFormatterService',
         ];
 
         $this->aliases = [];
@@ -184,7 +197,7 @@ class ServiceList extends Container
      */
     protected function getConferenceIndexControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Community\\Conferences\\Conference\\ConferenceIndexController'] = new \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController();
+        return $this->services['phpweb\\Controllers\\Community\\Conferences\\Conference\\ConferenceIndexController'] = new \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController(($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter())), ($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] ?? ($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] = new \phpweb\Data\Conferences\ConferenceRepository())));
     }
 
     /**
@@ -204,7 +217,7 @@ class ServiceList extends Container
      */
     protected function getConferencesArchiveControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Community\\Conferences\\ConferencesArchiveController'] = new \phpweb\Controllers\Community\Conferences\ConferencesArchiveController();
+        return $this->services['phpweb\\Controllers\\Community\\Conferences\\ConferencesArchiveController'] = new \phpweb\Controllers\Community\Conferences\ConferencesArchiveController(($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] ?? ($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] = new \phpweb\Data\Conferences\ConferenceRepository())), ($this->services['phpweb\\Controllers\\Community\\Conferences\\Tools\\ConferenceInfoRenderer'] ?? $this->getConferenceInfoRendererService()));
     }
 
     /**
@@ -214,7 +227,17 @@ class ServiceList extends Container
      */
     protected function getConferencesIndexControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Community\\Conferences\\ConferencesIndexController'] = new \phpweb\Controllers\Community\Conferences\ConferencesIndexController();
+        return $this->services['phpweb\\Controllers\\Community\\Conferences\\ConferencesIndexController'] = new \phpweb\Controllers\Community\Conferences\ConferencesIndexController(($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] ?? ($this->services['phpweb\\Data\\Conferences\\ConferenceRepository'] = new \phpweb\Data\Conferences\ConferenceRepository())), ($this->services['phpweb\\Controllers\\Community\\Conferences\\Tools\\ConferenceInfoRenderer'] ?? $this->getConferenceInfoRendererService()));
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Community\Conferences\Tools\ConferenceInfoRenderer' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Community\Conferences\Tools\ConferenceInfoRenderer
+     */
+    protected function getConferenceInfoRendererService()
+    {
+        return $this->services['phpweb\\Controllers\\Community\\Conferences\\Tools\\ConferenceInfoRenderer'] = new \phpweb\Controllers\Community\Conferences\Tools\ConferenceInfoRenderer(($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter())));
     }
 
     /**
@@ -424,7 +447,7 @@ class ServiceList extends Container
      */
     protected function getEnglishManualRouterService()
     {
-        return $this->services['phpweb\\Controllers\\Manual\\En\\EnglishManualRouter'] = new \phpweb\Controllers\Manual\En\EnglishManualRouter();
+        return $this->services['phpweb\\Controllers\\Manual\\En\\EnglishManualRouter'] = new \phpweb\Controllers\Manual\En\EnglishManualRouter(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())));
     }
 
     /**
@@ -634,7 +657,7 @@ class ServiceList extends Container
      */
     protected function getBranchChangelogControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Branches\\BranchChangelogController'] = new \phpweb\Controllers\Versions\Branches\BranchChangelogController();
+        return $this->services['phpweb\\Controllers\\Versions\\Branches\\BranchChangelogController'] = new \phpweb\Controllers\Versions\Branches\BranchChangelogController(($this->services['phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer'] ?? $this->getChangelogRendererService()));
     }
 
     /**
@@ -644,7 +667,7 @@ class ServiceList extends Container
      */
     protected function getBranchControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Branches\\BranchController'] = new \phpweb\Controllers\Versions\Branches\BranchController();
+        return $this->services['phpweb\\Controllers\\Versions\\Branches\\BranchController'] = new \phpweb\Controllers\Versions\Branches\BranchController(($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter())));
     }
 
     /**
@@ -734,7 +757,7 @@ class ServiceList extends Container
      */
     protected function getReleaseControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Releases\\ReleaseController'] = new \phpweb\Controllers\Versions\Releases\ReleaseController();
+        return $this->services['phpweb\\Controllers\\Versions\\Releases\\ReleaseController'] = new \phpweb\Controllers\Versions\Releases\ReleaseController(($this->services['phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer'] ?? $this->getChangelogRendererService()));
     }
 
     /**
@@ -798,6 +821,46 @@ class ServiceList extends Container
     }
 
     /**
+     * Gets the public 'phpweb\Data\News\Commands\SyncCommand' shared autowired service.
+     *
+     * @return \phpweb\Data\News\Commands\SyncCommand
+     */
+    protected function getSyncCommandService()
+    {
+        return $this->services['phpweb\\Data\\News\\Commands\\SyncCommand'] = new \phpweb\Data\News\Commands\SyncCommand(($this->services['phpweb\\Data\\News\\Utilities\\ImportFromServer'] ?? $this->getImportFromServerService()));
+    }
+
+    /**
+     * Gets the public 'phpweb\Data\News\Utilities\ImportFromServer' shared autowired service.
+     *
+     * @return \phpweb\Data\News\Utilities\ImportFromServer
+     */
+    protected function getImportFromServerService()
+    {
+        return $this->services['phpweb\\Data\\News\\Utilities\\ImportFromServer'] = new \phpweb\Data\News\Utilities\ImportFromServer(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())), ($this->services['phpweb\\Services\\Storage\\StorageFactory'] ?? ($this->services['phpweb\\Services\\Storage\\StorageFactory'] = new \phpweb\Services\Storage\StorageFactory())), ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] = new \phpweb\Services\TextFormatting\HtmlToMarkdownConverter())));
+    }
+
+    /**
+     * Gets the public 'phpweb\Data\Release\Commands\ReleasesToXMLCommand' shared autowired service.
+     *
+     * @return \phpweb\Data\Release\Commands\ReleasesToXMLCommand
+     */
+    protected function getReleasesToXMLCommandService()
+    {
+        return $this->services['phpweb\\Data\\Release\\Commands\\ReleasesToXMLCommand'] = new \phpweb\Data\Release\Commands\ReleasesToXMLCommand(($this->services['phpweb\\Data\\Release\\Commands\\SyncReleases'] ?? $this->getSyncReleasesService()));
+    }
+
+    /**
+     * Gets the public 'phpweb\Data\Release\Commands\SyncReleases' shared autowired service.
+     *
+     * @return \phpweb\Data\Release\Commands\SyncReleases
+     */
+    protected function getSyncReleasesService()
+    {
+        return $this->services['phpweb\\Data\\Release\\Commands\\SyncReleases'] = new \phpweb\Data\Release\Commands\SyncReleases(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())), ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] = new \phpweb\Services\TextFormatting\HtmlToMarkdownConverter())));
+    }
+
+    /**
      * Gets the public 'phpweb\Data\Release\ReleasesRepository' shared autowired service.
      *
      * @return \phpweb\Data\Release\ReleasesRepository
@@ -805,6 +868,26 @@ class ServiceList extends Container
     protected function getReleasesRepositoryService()
     {
         return $this->services['phpweb\\Data\\Release\\ReleasesRepository'] = new \phpweb\Data\Release\ReleasesRepository();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\ChangelogRenderer\ChangelogRenderer' shared autowired service.
+     *
+     * @return \phpweb\Services\ChangelogRenderer\ChangelogRenderer
+     */
+    protected function getChangelogRendererService()
+    {
+        return $this->services['phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer'] = new \phpweb\Services\ChangelogRenderer\ChangelogRenderer(($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter())));
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\HtmlSanitizer\HtmlSanitizer' shared autowired service.
+     *
+     * @return \phpweb\Services\HtmlSanitizer\HtmlSanitizer
+     */
+    protected function getHtmlSanitizerService()
+    {
+        return $this->services['phpweb\\Services\\HtmlSanitizer\\HtmlSanitizer'] = new \phpweb\Services\HtmlSanitizer\HtmlSanitizer();
     }
 
     /**
@@ -825,5 +908,35 @@ class ServiceList extends Container
     protected function getFeedBuilderFactoryService()
     {
         return $this->services['phpweb\\Services\\ReleaseFeedBuilder\\FeedBuilderFactory'] = new \phpweb\Services\ReleaseFeedBuilder\FeedBuilderFactory();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\Storage\StorageFactory' shared autowired service.
+     *
+     * @return \phpweb\Services\Storage\StorageFactory
+     */
+    protected function getStorageFactoryService()
+    {
+        return $this->services['phpweb\\Services\\Storage\\StorageFactory'] = new \phpweb\Services\Storage\StorageFactory();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\TextFormatting\HtmlToMarkdownConverter' shared autowired service.
+     *
+     * @return \phpweb\Services\TextFormatting\HtmlToMarkdownConverter
+     */
+    protected function getHtmlToMarkdownConverterService()
+    {
+        return $this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] = new \phpweb\Services\TextFormatting\HtmlToMarkdownConverter();
+    }
+
+    /**
+     * Gets the public 'phpweb\Services\TextFormatting\TextFormatter' shared autowired service.
+     *
+     * @return \phpweb\Services\TextFormatting\TextFormatter
+     */
+    protected function getTextFormatterService()
+    {
+        return $this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter();
     }
 }

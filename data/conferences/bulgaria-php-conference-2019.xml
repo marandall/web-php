@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>bulgaria-php-conference-2019</id>
+  <title>Bulgaria PHP Conference 2019</title>
+  <start_date>2019-11-08</start_date>
+  <end_date>2019-11-08</end_date>
+  <location country=""/>
+  <summary type="text">We are proud to announce the return of Bulgaria PHP Conference!</summary>
+  <content type="markdown">We are proud to announce the return of Bulgaria PHP Conference!
+
+The 2019 edition will take place from the 8th to the 10th of November in the emblematic National Palace of Culture in the heart of Sofia, Bulgaria. The conference will consist of a training day and two conference days with two tracks, an unConf, a great theme, an awesome party, exquisite food and lot's of beer (we take fun really seriously on the Balkans).
+
+Follow us on twitter [@bgphpconf](https://twitter.com/bgphpconf), on [www.bgphp.org](https://www.bgphp.org/) and on our Facebook page &lt;https://www.facebook.com/Bulgaria-PHP-Conference-792916594079571&gt; for more news!
+
+Our Call for Papers will start on the 8th of March, so, please, do apply and see you in November in Bulgaria!</content>
+  <updated>2019-03-03T13:37:07+02:00</updated>
+  <logo width="350" height="116">6e951dcb8c4bd6c74de0fa87f55d392bb214a5c46a452adae94b01f892f5c019.png</logo>
+</conference>

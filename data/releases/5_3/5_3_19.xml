@@ -1,53 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.19">
+<?xml version="1.0"?>
+<release version="1" id="5.3.19">
   <release>5.3.19</release>
   <date>22 Nov 2012</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>19</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.19.tar.bz2</filename>
       <name>PHP 5.3.19 (tar.bz2)</name>
-      <sha256/>
-      <md5>e1d2a3ec7849d4b3032bd1abf1916aa4</md5>
+      <filename>php-5.3.19.tar.bz2</filename>
       <date>22 Nov 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.3.19.tar.gz</filename>
       <name>PHP 5.3.19 (tar.gz)</name>
-      <sha256/>
-      <md5>e1bcda4f14bb39ba041297abbf18f8d1</md5>
+      <filename>php-5.3.19.tar.gz</filename>
       <date>22 Nov 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.3.19 binaries and source</filename>
       <name>Windows 5.3.19 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.3.19. About 10 bugs were fixed. All users of PHP are encouraged to upgrade to
-PHP 5.4.9. Alternatively, PHP 5.3.19 is recommended for those wishing to remain
-on the 5.3 series.</p>
-
-<p>For source downloads of PHP 5.3.19 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.19">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(PHP fails to open Windows deduplicated files).</description>
+        <references>
+          <reference type="bugfix">63241</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Handle leak in is_readable on windows).</description>
+        <references>
+          <reference type="bugfix">62444</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Libxml">
+      <change>
+        <description>(Missing context check on libxml_set_streams_context() causes memleak).</description>
+        <references>
+          <reference type="bugfix">63389</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(max_input_vars doesn't filter variables when mbstring.encoding_translation = On).</description>
+        <references>
+          <reference type="bugfix">63447</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQL">
+      <change>
+        <description>Fixed compilation failure on mixed 32/64 bit systems.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(Add ORA-00028 to the PHP_OCI_HANDLE_ERROR macro)</description>
+        <references>
+          <reference type="bugfix">63265</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Segfault in zend_gc with SF2 testsuite).</description>
+        <references>
+          <reference type="bugfix">63055</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Upgrade PCRE to 8.31).</description>
+        <references>
+          <reference type="bugfix">63284</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(buffer overflow in use of SQLGetDiagRec).</description>
+        <references>
+          <reference type="bugfix">63235</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(Emulate prepares behave strangely with PARAM_BOOL).</description>
+        <references>
+          <reference type="bugfix">62593</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Phar fails to write an openssl based signature).</description>
+        <references>
+          <reference type="bugfix">63297</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(stream_get_line() return contains delimiter string).</description>
+        <references>
+          <reference type="bugfix">63240</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

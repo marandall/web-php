@@ -1,53 +1,122 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.9">
+<?xml version="1.0"?>
+<release version="1" id="5.5.9">
   <release>5.5.9</release>
   <date>6 Feb 2014</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>9</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.9.tar.bz2</filename>
       <name>PHP 5.5.9 (tar.bz2)</name>
+      <filename>php-5.5.9.tar.bz2</filename>
+      <date>6 Feb 2014</date>
       <sha256>9d1dea5195e2bcd928416130a6e19173d02bd36fb76c382522bf145c458fbed3</sha256>
-      <md5/>
-      <date>6 Feb 2014</date>
     </source>
     <source>
-      <filename>php-5.5.9.tar.gz</filename>
       <name>PHP 5.5.9 (tar.gz)</name>
-      <sha256>ec1bf0cb3be80240049dbd92c272d4bf242a614fa5f9dcc42a15adb5fd01ccde</sha256>
-      <md5/>
+      <filename>php-5.5.9.tar.gz</filename>
       <date>6 Feb 2014</date>
+      <sha256>ec1bf0cb3be80240049dbd92c272d4bf242a614fa5f9dcc42a15adb5fd01ccde</sha256>
     </source>
     <source>
-      <filename>php-5.5.9.tar.xz</filename>
       <name>PHP 5.5.9 (tar.xz)</name>
-      <sha256>7f7a7b1189472e59b234233daab9aa9692bb5eb8404485e9a78221f75ee4664a</sha256>
-      <md5/>
+      <filename>php-5.5.9.tar.xz</filename>
       <date>6 Feb 2014</date>
+      <sha256>7f7a7b1189472e59b234233daab9aa9692bb5eb8404485e9a78221f75ee4664a</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP Development Team announces the immediate availability of PHP 5.5.9.
-This release fixes several bugs against PHP 5.5.8.</p>
-
-<p>All PHP users are encouraged to upgrade to this new version.</p>
-
-<p>For source downloads of PHP 5.5.9, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.9">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.5.9. This release fixes several bugs against PHP 5.5.8.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(copy() arginfo has changed starting from 5.4).</description>
+        <references>
+          <reference type="bugfix">66509</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Heap Overflow Vulnerability in imagecrop(), CVE-2013-7226).</description>
+        <references>
+          <reference type="bugfix">66356</reference>
+          <reference type="cve">CVE-2013-7226</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPCache">
+      <change>
+        <description>(Optimizer bug in constant string to boolean conversion).</description>
+        <references>
+          <reference type="bugfix">66474</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP crashes if opcache.interned_strings_buffer=0).</description>
+        <references>
+          <reference type="bugfix">66461</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ext/opcache/Optimizer/zend_optimizer.c has dos-style ^M as lineend).</description>
+        <references>
+          <reference type="bugfix">66298</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(PDO-pgsql cannot connect if password contains spaces).</description>
+        <references>
+          <reference type="bugfix">62479</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Readline">
+      <change>
+        <description>(readline_clear_history() with libedit causes segfault after #65714).</description>
+        <references>
+          <reference type="bugfix">66412</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Session module is sending multiple set-cookie headers when session.use_strict_mode=1).</description>
+        <references>
+          <reference type="bugfix">66469</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfaults on session_name()).</description>
+        <references>
+          <reference type="bugfix">66481</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(basename function doesn't remove drive letter).</description>
+        <references>
+          <reference type="bugfix">66395</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(__ss_family was changed on AIX 5.3).</description>
+        <references>
+          <reference type="bugfix">66381</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zend Engine">
+      <change>
+        <description>(Failed compilation of PHP extension with C++ std library using VS 2012).</description>
+        <references>
+          <reference type="bugfix">66009</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

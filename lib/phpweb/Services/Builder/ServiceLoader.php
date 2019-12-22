@@ -5,11 +5,12 @@
 	namespace phpweb\Services\Builder;
 	
 	use Psr\Container\ContainerInterface;
+	use Symfony\Component\DependencyInjection\Container;
 	
 	class ServiceLoader
 	{
-		public static function load(): ContainerInterface {
-			/** @var ContainerInterface $container */
+		public static function load(): Container {
+			/** @var Container $container */
 			static $container = null;
 			
 			if ($container === null) {

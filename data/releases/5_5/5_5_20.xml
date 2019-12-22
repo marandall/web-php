@@ -1,54 +1,174 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.20">
+<?xml version="1.0"?>
+<release version="1" id="5.5.20">
   <release>5.5.20</release>
   <date>18 Dec 2014</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>20</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.20.tar.bz2</filename>
       <name>PHP 5.5.20 (tar.bz2)</name>
+      <filename>php-5.5.20.tar.bz2</filename>
+      <date>18 Dec 2014</date>
       <sha256>f28a150d1cd8991bd1a41dce4fdff4e343d1dbe01a48b9b44bea74532ce0391a</sha256>
-      <md5/>
-      <date>18 Dec 2014</date>
     </source>
     <source>
-      <filename>php-5.5.20.tar.gz</filename>
       <name>PHP 5.5.20 (tar.gz)</name>
-      <sha256>7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295</sha256>
-      <md5/>
+      <filename>php-5.5.20.tar.gz</filename>
       <date>18 Dec 2014</date>
+      <sha256>7454e4f2dba3b08b2c88bb178e7bf704ed100f3d7ab6b83ea5046a6e4acb7295</sha256>
     </source>
     <source>
-      <filename>php-5.5.20.tar.xz</filename>
       <name>PHP 5.5.20 (tar.xz)</name>
-      <sha256>a0649450f8b0a23cd4c9ad15d0aa271d956f9516fc37b9e9dc492459b57721c8</sha256>
-      <md5/>
+      <filename>php-5.5.20.tar.xz</filename>
       <date>18 Dec 2014</date>
+      <sha256>a0649450f8b0a23cd4c9ad15d0aa271d956f9516fc37b9e9dc492459b57721c8</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.5.20. This release fixes several bugs and one CVE related to unserialization.
-
-     All PHP 5.5 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.5.20 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.20">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Some Zend headers lack appropriate extern "C" blocks).</description>
+        <references>
+          <reference type="bugfix">68091</reference>
+        </references>
+      </change>
+      <change>
+        <description>("Inconsistent insteadof definition."- incorrectly triggered).</description>
+        <references>
+          <reference type="bugfix">68185</reference>
+        </references>
+      </change>
+      <change>
+        <description>("unset($this)" can make the program crash).</description>
+        <references>
+          <reference type="bugfix">68370</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NULL pointer dereference in unserialize.c).</description>
+        <references>
+          <reference type="bugfix">68545</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use after free vulnerability in unserialize()). (CVE-2014-8142)</description>
+        <references>
+          <reference type="bugfix">68594</reference>
+          <reference type="cve">CVE-2014-8142</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>Fixed day_of_week function as it could sometimes return negative values internally.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(fpm_unix_init_main ignores log_level).</description>
+        <references>
+          <reference type="bugfix">68381</reference>
+        </references>
+      </change>
+      <change>
+        <description>(listen=9000 listens to ipv6 localhost instead of all addresses).</description>
+        <references>
+          <reference type="bugfix">68420</reference>
+        </references>
+      </change>
+      <change>
+        <description>(access.format='%R' doesn't log ipv6 address).</description>
+        <references>
+          <reference type="bugfix">68421</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP-FPM will no longer load all pools).</description>
+        <references>
+          <reference type="bugfix">68423</reference>
+        </references>
+      </change>
+      <change>
+        <description>(listen.allowed_clients is IPv4 only).</description>
+        <references>
+          <reference type="bugfix">68428</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php-fpm man page is oudated).</description>
+        <references>
+          <reference type="bugfix">68452</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Change pm.start_servers default warning to notice).</description>
+        <references>
+          <reference type="bugfix">68458</reference>
+        </references>
+      </change>
+      <change>
+        <description>(listen.allowed_clients can silently result in no allowed access).</description>
+        <references>
+          <reference type="bugfix">68463</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php-fpm conf files loading order).</description>
+        <references>
+          <reference type="bugfix">68391</reference>
+        </references>
+      </change>
+      <change>
+        <description>(access.log don't use prefix).</description>
+        <references>
+          <reference type="bugfix">68478</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mcrypt">
+      <change>
+        <description>Fixed possible read after end of buffer and use after free.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(Segmentation fault on statement deallocation).</description>
+        <references>
+          <reference type="bugfix">66584</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PDO_PGSQL::beginTransaction() wrongly throws exception when not in transaction).</description>
+        <references>
+          <reference type="bugfix">67462</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PDO::PARAM_BOOL and ATTR_EMULATE_PREPARES misbehaving).</description>
+        <references>
+          <reference type="bugfix">68351</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Segmentation fault on SoapClient::__getTypes).</description>
+        <references>
+          <reference type="bugfix">68361</reference>
+        </references>
+      </change>
+    </module>
+    <module id="zlib">
+      <change>
+        <description>(Compiling PHP with large file support will replace function gzopen by gzopen64).</description>
+        <references>
+          <reference type="bugfix">53829</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,47 +1,150 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.18">
+<?xml version="1.0"?>
+<release version="1" id="7.2.18">
   <release>7.2.18</release>
   <date>30 May 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>18</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.18.tar.bz2</filename>
       <name>PHP 7.2.18 (tar.bz2)</name>
+      <filename>php-7.2.18.tar.bz2</filename>
+      <date>02 May 2019</date>
       <sha256>fa1a27b12d1173207e81e798a48d4a7f77ba897f5c5200ac0b5d62aa8b4c4b72</sha256>
-      <md5/>
-      <date>02 May 2019</date>
     </source>
     <source>
-      <filename>php-7.2.18.tar.gz</filename>
       <name>PHP 7.2.18 (tar.gz)</name>
-      <sha256>48aeb291814f3cd3ba03c52e79e8e61896d0271fd4c228198f80a072e568f84b</sha256>
-      <md5/>
+      <filename>php-7.2.18.tar.gz</filename>
       <date>02 May 2019</date>
+      <sha256>48aeb291814f3cd3ba03c52e79e8e61896d0271fd4c228198f80a072e568f84b</sha256>
     </source>
     <source>
-      <filename>php-7.2.18.tar.xz</filename>
       <name>PHP 7.2.18 (tar.xz)</name>
-      <sha256>9970dbb3ab1298c9e6aac54bebfa841c8ad14b18eead65594a68fa841364cb8d</sha256>
-      <md5/>
+      <filename>php-7.2.18.tar.xz</filename>
       <date>02 May 2019</date>
+      <sha256>9970dbb3ab1298c9e6aac54bebfa841c8ad14b18eead65594a68fa841364cb8d</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.18. This is a security release which also contains several minor bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.18.
-This is a security release which also contains several minor bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Incorrect Date header format in built-in server).</description>
+        <references>
+          <reference type="bugfix">77794</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(Heap-buffer-overflow in _estrndup via exif_process_IFD_TAG)</description>
+        <references>
+          <reference type="bugfix">77950</reference>
+          <reference type="cve">CVE-2019-11036</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Interbase">
+      <change>
+        <description>(Impossibility of creating multiple connections to Interbase with php 7.x).</description>
+        <references>
+          <reference type="bugfix">72175</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(IntlDateFormatter::create fails in strict mode if $locale = null).</description>
+        <references>
+          <reference type="bugfix">77895</reference>
+        </references>
+      </change>
+    </module>
+    <module id="litespeed">
+      <change>
+        <description>LiteSpeed SAPI 7.3.1, better process management, new API function litespeed_finish_request().</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Mail">
+      <change>
+        <description>(Potential heap corruption in TSendMail()).</description>
+        <references>
+          <reference type="bugfix">77821</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_match does not ignore \r in regex flags).</description>
+        <references>
+          <reference type="bugfix">77827</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Disable cloning of PDO handle/connection objects).</description>
+        <references>
+          <reference type="bugfix">77849</reference>
+        </references>
+      </change>
+    </module>
+    <module id="phpdbg">
+      <change>
+        <description>(too many open files).</description>
+        <references>
+          <reference type="bugfix">76801</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpdbg segfaults on listing some conditional breakpoints).</description>
+        <references>
+          <reference type="bugfix">77800</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpdbg build fails when readline is shared).</description>
+        <references>
+          <reference type="bugfix">77805</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(ReflectionClass::getMethods(null) doesn't work).</description>
+        <references>
+          <reference type="bugfix">77772</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Different behavior: always calls destructor).</description>
+        <references>
+          <reference type="bugfix">77882</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(recursive mkdir on ftp stream wrapper is incorrect).</description>
+        <references>
+          <reference type="bugfix">77680</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Crash due to null pointer in parse_ini_string with INI_SCANNER_TYPED).</description>
+        <references>
+          <reference type="bugfix">77844</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Inconsistent substr_compare behaviour with empty haystack).</description>
+        <references>
+          <reference type="bugfix">77853</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

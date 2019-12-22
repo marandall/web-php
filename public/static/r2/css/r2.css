@@ -167,3 +167,43 @@ a:hover { text-decoration: underline; }
 .r2-manual .doctable tbody td {
     padding: 5px;
 }
+
+section.r2-sec {
+    margin-bottom: 1em;
+    clear:both;
+    background: #fafafa;
+}
+
+section.r2-sec > h2 {
+    border-bottom: 3px solid #4F5B93;
+    background-color: #8892BF;
+    color: black;
+    padding: 3px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+}
+
+section.r2-sec > div {
+    padding: 10px;
+}
+
+.r2-separated-sections section.r2-sec:not(:last-child):after {
+    content: "";
+    display: block;
+    clear: both;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.r2-separated-sections {
+
+}
+
+.r2-separated-sections > section.r2-sec > h2 {
+
+}
+
+.r2-separated-sections section  {
+}

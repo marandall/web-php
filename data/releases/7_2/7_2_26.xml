@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<release version="1" id="7.2.26">
+  <release>7.2.26</release>
+  <date>18 Dec 2019</date>
+  <source>
+    <source>
+      <name>PHP 7.2.26 (tar.bz2)</name>
+      <filename>php-7.2.26.tar.bz2</filename>
+      <date>18 Dec 2019</date>
+      <sha256>f36d86eecf57ff919d6f67b064e1f41993f62e3991ea4796038d8d99c74e847b</sha256>
+    </source>
+    <source>
+      <name>PHP 7.2.26 (tar.gz)</name>
+      <filename>php-7.2.26.tar.gz</filename>
+      <date>18 Dec 2019</date>
+      <sha256>e97d0636478bb519cd955a0c17b7970cf173063a840a83fc4afb75c22bc1bf08</sha256>
+    </source>
+    <source>
+      <name>PHP 7.2.26 (tar.xz)</name>
+      <filename>php-7.2.26.tar.xz</filename>
+      <date>18 Dec 2019</date>
+      <sha256>1dd3bc875e105f5c9d21fb4dc240670bd2c22037820ff03890f5ab883c88b78d</sha256>
+    </source>
+  </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.26. This is a security release which also contains several minor bug fixes.</announcement>
+  </announcements>
+  <tags>
+    <tag>security</tag>
+  </tags>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Buffer underflow in bc_shift_addsub). (CVE-2019-11046)</description>
+        <references>
+          <reference type="bugfix">78878</reference>
+          <reference type="cve">CVE-2019-11046</reference>
+        </references>
+      </change>
+      <change>
+        <description>(link() silently truncates after a null byte on Windows). (CVE-2019-11044)</description>
+        <references>
+          <reference type="bugfix">78862</reference>
+          <reference type="cve">CVE-2019-11044</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DirectoryIterator class silently truncates after a null byte). (CVE-2019-11045)</description>
+        <references>
+          <reference type="bugfix">78863</reference>
+          <reference type="cve">CVE-2019-11045</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(Use-after-free in exif parsing under memory sanitizer). (CVE-2019-11050)</description>
+        <references>
+          <reference type="bugfix">78793</reference>
+          <reference type="cve">CVE-2019-11050</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap-buffer-overflow READ in exif). (CVE-2019-11047)</description>
+        <references>
+          <reference type="bugfix">78910</reference>
+          <reference type="cve">CVE-2019-11047</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(GD build broken with -D SIGNED_COMPARE_SLOW).</description>
+        <references>
+          <reference type="bugfix">78849</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Segmentation fault in Locale::filterMatches).</description>
+        <references>
+          <reference type="bugfix">78804</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPcache">
+      <change>
+        <description>Fixed $x = (bool)$x; with opcache (should emit undeclared variable notice).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(array_search in $GLOBALS).</description>
+        <references>
+          <reference type="bugfix">78759</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow in pack causes out-of-bound access).</description>
+        <references>
+          <reference type="bugfix">78833</reference>
+        </references>
+      </change>
+      <change>
+        <description>(strip_tags allows / in tag name =&gt; whitelist bypass).</description>
+        <references>
+          <reference type="bugfix">78814</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
+</release>

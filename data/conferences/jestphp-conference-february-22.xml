@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>jestphp-conference-february-22</id>
+  <title>JestPHP Conference - February 22nd 2019, Mesa Arizona</title>
+  <start_date>2018-12-01</start_date>
+  <end_date>2018-12-01</end_date>
+  <location country=""/>
+  <summary type="text"> JestPHP is a 1-day, 1-track, affordable, community conference for PHP developers in Arizona and beyond. Join us for a day of learning and laughter that you will not forget.</summary>
+  <content type="markdown"> JestPHP is a 1-day, 1-track, affordable, community conference for PHP developers in Arizona and beyond. Join us for a day of learning and laughter that you will not forget.</content>
+  <updated>2019-02-01T18:59:28+00:00</updated>
+  <logo width="400" height="188">c43138b3c2effb8bb3d30c6f355839962dfaffc8e90a0ea2839ab61a33a1c569.png</logo>
+</conference>

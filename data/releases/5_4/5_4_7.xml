@@ -1,52 +1,217 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.7">
+<?xml version="1.0"?>
+<release version="1" id="5.4.7">
   <release>5.4.7</release>
   <date>13 Sep 2012</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>7</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.7.tar.bz2</filename>
       <name>PHP 5.4.7 (tar.bz2)</name>
-      <sha256/>
-      <md5>9cd421f1cc8fa8e7f215e44a1b06199f</md5>
+      <filename>php-5.4.7.tar.bz2</filename>
       <date>13 Sep 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.7.tar.gz</filename>
       <name>PHP 5.4.7 (tar.gz)</name>
-      <sha256/>
-      <md5>94661b761dcfdfdd5108e8b12e0dd4f8</md5>
+      <filename>php-5.4.7.tar.gz</filename>
       <date>13 Sep 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.7 binaries and source</filename>
       <name>Windows 5.4.7 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team would like to announce the immediate
-availability of PHP 5.4.7. Over 20 bugs were fixed. All users of PHP
-are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.4.7 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.7">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed bug (segfault while build with zts and GOTO vm-kind)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Only one directive is loaded from "Per Directory Values" Windows registry)</description>
+        <references>
+          <reference type="bugfix">62955</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_url() does not recognize //)</description>
+        <references>
+          <reference type="bugfix">62844</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stdint.h included on platform where HAVE_STDINT_H is not set)</description>
+        <references>
+          <reference type="bugfix">62829</reference>
+        </references>
+      </change>
+      <change>
+        <description>(register_shutdown_function and extending class)</description>
+        <references>
+          <reference type="bugfix">62763</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Calling exit() in a shutdown function does not return the exit value)</description>
+        <references>
+          <reference type="bugfix">62725</reference>
+        </references>
+      </change>
+      <change>
+        <description>(dangling pointers made by zend_disable_class)</description>
+        <references>
+          <reference type="bugfix">62744</reference>
+        </references>
+      </change>
+      <change>
+        <description>(munmap() is called with the incorrect length)</description>
+        <references>
+          <reference type="bugfix">62716</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault when using traits a lot)</description>
+        <references>
+          <reference type="bugfix">62358</reference>
+        </references>
+      </change>
+      <change>
+        <description>(implementing __toString and a cast to string fails)</description>
+        <references>
+          <reference type="bugfix">62328</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fatal error raised by var_export() not caught by error handler)</description>
+        <references>
+          <reference type="bugfix">51363</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Stat and Dir stream wrapper methods do not call constructor)</description>
+        <references>
+          <reference type="bugfix">40459</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(CURLINFO_PRIMARY_* AND CURLINFO_LOCAL_* not exposed)</description>
+        <references>
+          <reference type="bugfix">62912</reference>
+        </references>
+      </change>
+      <change>
+        <description>(curl_copy_handle segfault with CURLOPT_FILE)</description>
+        <references>
+          <reference type="bugfix">62839</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DateTime">
+      <change>
+        <description>(Unserialize invalid DateTime causes crash)</description>
+        <references>
+          <reference type="bugfix">62852</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>Fixed Spoofchecker not being registered on ICU 49.1</description>
+        <references/>
+      </change>
+      <change>
+        <description>(ext/intl compilation error on icu 3.4.1)</description>
+        <references>
+          <reference type="bugfix">62933</reference>
+        </references>
+      </change>
+      <change>
+        <description>(defective cloning in several intl classes)</description>
+        <references>
+          <reference type="bugfix">62915</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Installation">
+      <change>
+        <description>(php binaries installed as binary.dSYM)</description>
+        <references>
+          <reference type="bugfix">62460</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_replace should fail on trailing garbage)</description>
+        <references>
+          <reference type="bugfix">55856</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Wrong return datatype in PDO::inTransaction())</description>
+        <references>
+          <reference type="bugfix">62685</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(ReflectionClass::getTraitAliases crashes on importing trait methods as private)</description>
+        <references>
+          <reference type="bugfix">62892</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ReflectionParameter::isDefaultValueAvailable() wrong result)</description>
+        <references>
+          <reference type="bugfix">62715</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>Fixed bug (segfault due to retval is not initialized)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed bug (segfault due to PS(mod_user_implemented) not be reseted when close handler call exit)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Crash when cloning an object which inherits SplFixedArray)</description>
+        <references>
+          <reference type="bugfix">62904</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#62840](http://bugs.php.net/62840) (Add sort flag to ArrayObject::ksort)</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Seg fault or broken object references on unserialize())</description>
+        <references>
+          <reference type="bugfix">62836</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>Merged PR 121 by minitux to add support for slow request counting on PHP FPM status page</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

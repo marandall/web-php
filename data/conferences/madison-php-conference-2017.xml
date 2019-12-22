@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>madison-php-conference-2017</id>
+  <title>Madison PHP Conference 2017</title>
+  <start_date>2017-09-22</start_date>
+  <end_date>2017-09-22</end_date>
+  <location country=""/>
+  <summary type="text">Join us on Friday, September 22nd, 2017 for a full day of tutorials followed by three tracks of amazing talks on Saturday, September 23rd, 2017. Now in its fifth year, Madison PHP Conference in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run [Madison PHP user group](http://www.madisonphp.com) and is designed to offer something for attendees at all skill levels. [Madison PHP Conference 2017](http://www.madisonphpconference.com) will be two days of networking, learning, sharing, and great fun!</summary>
+  <content type="markdown">Join us on Friday, September 22nd, 2017 for a full day of tutorials followed by three tracks of amazing talks on Saturday, September 23rd, 2017. Now in its fifth year, Madison PHP Conference in Madison, Wisconsin, USA focuses on PHP, related web technologies, and professional development - everything you need to energize your career. This event is organized by the locally-run [Madison PHP user group](http://www.madisonphp.com) and is designed to offer something for attendees at all skill levels. [Madison PHP Conference 2017](http://www.madisonphpconference.com) will be two days of networking, learning, sharing, and great fun!</content>
+  <updated>2017-02-24T16:59:19+00:00</updated>
+  <logo width="250" height="250">b01207e8e7414c0e85446be151f46812de39c1e5b4d59020bef61c09608e5be5.png</logo>
+</conference>

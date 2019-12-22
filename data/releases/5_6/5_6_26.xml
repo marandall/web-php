@@ -1,55 +1,278 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.26">
+<?xml version="1.0"?>
+<release version="1" id="5.6.26">
   <release>5.6.26</release>
   <date>15 Sep 2016</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>26</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.26.tar.bz2</filename>
       <name>PHP 5.6.26 (tar.bz2)</name>
+      <filename>php-5.6.26.tar.bz2</filename>
+      <date>15 Sep 2016</date>
       <sha256>d47aab8083a4284b905777e1b45dd7735adc53be827b29f896684750ac8b6236</sha256>
-      <md5/>
-      <date>15 Sep 2016</date>
     </source>
     <source>
-      <filename>php-5.6.26.tar.gz</filename>
       <name>PHP 5.6.26 (tar.gz)</name>
-      <sha256>f76b6cc23739d9dabf875aee57d91ae73f15e88ddf78803369b8b4728b19b924</sha256>
-      <md5/>
+      <filename>php-5.6.26.tar.gz</filename>
       <date>15 Sep 2016</date>
+      <sha256>f76b6cc23739d9dabf875aee57d91ae73f15e88ddf78803369b8b4728b19b924</sha256>
     </source>
     <source>
-      <filename>php-5.6.26.tar.xz</filename>
       <name>PHP 5.6.26 (tar.xz)</name>
-      <sha256>203a854f0f243cb2810d1c832bc871ff133eccdf1ff69d32846f93bc1bef58a8</sha256>
-      <md5/>
+      <filename>php-5.6.26.tar.xz</filename>
       <date>15 Sep 2016</date>
+      <sha256>203a854f0f243cb2810d1c832bc871ff133eccdf1ff69d32846f93bc1bef58a8</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.26. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.26 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows source and binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.26">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(null pointer deref, segfault in gc_remove_zval_from_buffer (zend_gc.c:260)).</description>
+        <references>
+          <reference type="bugfix">72907</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Dba">
+      <change>
+        <description>(Bad dba_replace condition because of wrong API usage).</description>
+        <references>
+          <reference type="bugfix">71514</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cannot fetch multiple values with group in ini file).</description>
+        <references>
+          <reference type="bugfix">70825</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(Uninitialized Thumbail Data Leads To Memory Leakage in exif_process_IFD_in_TIFF).</description>
+        <references>
+          <reference type="bugfix">72926</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(Cannot upload file using ftp_put to FTPES with require_ssl_reuse).</description>
+        <references>
+          <reference type="bugfix">70195</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagecopy does not support 1bit transparency on truecolor images).</description>
+        <references>
+          <reference type="bugfix">66005</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecopy() loses single-color transparency on palette images).</description>
+        <references>
+          <reference type="bugfix">72913</reference>
+        </references>
+      </change>
+      <change>
+        <description>(possible resource leaks in _php_image_convert()).</description>
+        <references>
+          <reference type="bugfix">68716</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(add locale length check). (CVE-2016-7416)</description>
+        <references>
+          <reference type="bugfix">73007</reference>
+          <reference type="cve">CVE-2016-7416</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>(json_decode reads out of bounds).</description>
+        <references>
+          <reference type="bugfix">72787</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mbstring">
+      <change>
+        <description>(mb_substr only takes 32-bit signed integer).</description>
+        <references>
+          <reference type="bugfix">66797</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bounds heap read in mbc_to_code() / triggered by mb_ereg_match()).</description>
+        <references>
+          <reference type="bugfix">72910</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MSSQL">
+      <change>
+        <description>(Use of uninitialised value on mssql_guid_string).</description>
+        <references>
+          <reference type="bugfix">72039</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(Heap overflow in mysqlnd related to BIT fields). (CVE-2016-7412)</description>
+        <references>
+          <reference type="bugfix">72293</reference>
+          <reference type="cve">CVE-2016-7412</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(call to empty() on NULL result using PDO::FETCH_LAZY returns false).</description>
+        <references>
+          <reference type="bugfix">60665</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>Implemented FR [#72633](http://bugs.php.net/72633) (Postgres PDO lastInsertId() should work without specifying a sequence).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Regression in pgo_pgsql).</description>
+        <references>
+          <reference type="bugfix">72759</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Out of bound when verify signature of zip phar in phar_parse_zipfile). (CVE-2016-7414)</description>
+        <references>
+          <reference type="bugfix">72928</reference>
+          <reference type="cve">CVE-2016-7414</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bound when verify signature of tar phar in phar_parse_tarfile).</description>
+        <references>
+          <reference type="bugfix">73035</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Missing type check when unserializing SplArray). (CVE-2016-7417)</description>
+        <references>
+          <reference type="bugfix">73029</reference>
+          <reference type="cve">CVE-2016-7417</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(strtr out-of-bound access).</description>
+        <references>
+          <reference type="bugfix">72823</reference>
+        </references>
+      </change>
+      <change>
+        <description>(getimagesize returning FALSE on valid jpg).</description>
+        <references>
+          <reference type="bugfix">72278</reference>
+        </references>
+      </change>
+      <change>
+        <description>(get_browser() incorrectly parses entries with "+" sign).</description>
+        <references>
+          <reference type="bugfix">65550</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Negative ftruncate() on php://memory exhausts memory).</description>
+        <references>
+          <reference type="bugfix">71882</reference>
+        </references>
+      </change>
+      <change>
+        <description>(integer overflow in fgets cause heap corruption).</description>
+        <references>
+          <reference type="bugfix">73011</reference>
+        </references>
+      </change>
+      <change>
+        <description>(memory corruption in wordwrap function).</description>
+        <references>
+          <reference type="bugfix">73017</reference>
+        </references>
+      </change>
+      <change>
+        <description>(integer overflow in fgetcsv caused heap corruption).</description>
+        <references>
+          <reference type="bugfix">73045</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memory Corruption in During Deserialized-object Destruction). (CVE-2016-7411)</description>
+        <references>
+          <reference type="bugfix">73052</reference>
+          <reference type="cve">CVE-2016-7411</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(stream_set_blocking doesn't work).</description>
+        <references>
+          <reference type="bugfix">72853</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(wddx_deserialize use-after-free). (CVE-2016-7413)</description>
+        <references>
+          <reference type="bugfix">72860</reference>
+          <reference type="cve">CVE-2016-7413</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out-Of-Bounds Read in php_wddx_push_element). (CVE-2016-7418)</description>
+        <references>
+          <reference type="bugfix">73065</reference>
+          <reference type="cve">CVE-2016-7418</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(SEGV on unknown address zif_xml_parse).</description>
+        <references>
+          <reference type="bugfix">72085</reference>
+        </references>
+      </change>
+      <change>
+        <description>(integer overflow in xml_utf8_encode).</description>
+        <references>
+          <reference type="bugfix">72927</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(impossible to compile php with zip support).</description>
+        <references>
+          <reference type="bugfix">68302</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

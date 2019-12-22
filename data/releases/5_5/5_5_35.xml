@@ -1,53 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.35">
+<?xml version="1.0"?>
+<release version="1" id="5.5.35">
   <release>5.5.35</release>
   <date>31 Mar 2016</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>35</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.35.tar.bz2</filename>
       <name>PHP 5.5.35 (tar.bz2)</name>
+      <filename>php-5.5.35.tar.bz2</filename>
+      <date>28 Apr 2016</date>
       <sha256>2d648dd648e820fd64693ce72f9bf07064d147220e594e39fb9f6310238258d7</sha256>
-      <md5/>
-      <date>28 Apr 2016</date>
     </source>
     <source>
-      <filename>php-5.5.35.tar.gz</filename>
       <name>PHP 5.5.35 (tar.gz)</name>
-      <sha256>21e10a49c62ab34a7edc976af686a952e70142f19135ca8da67758e1c8c3df30</sha256>
-      <md5/>
+      <filename>php-5.5.35.tar.gz</filename>
       <date>28 Apr 2016</date>
+      <sha256>21e10a49c62ab34a7edc976af686a952e70142f19135ca8da67758e1c8c3df30</sha256>
     </source>
     <source>
-      <filename>php-5.5.35.tar.xz</filename>
       <name>PHP 5.5.35 (tar.xz)</name>
-      <sha256>9bef96634af853960be085690b2f4cea5850b749ea950942769b22b1a9f24873</sha256>
-      <md5/>
+      <filename>php-5.5.35.tar.xz</filename>
       <date>28 Apr 2016</date>
+      <sha256>9bef96634af853960be085690b2f4cea5850b749ea950942769b22b1a9f24873</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.5.35. This is a security release. Several security bugs were fixed in this release.
-
-     All PHP 5.5 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.5.35 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.35">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</description>
+        <references>
+          <reference type="bugfix">72093</reference>
+          <reference type="cve">CVE-2016-4537</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Out of bounds heap read access in exif header processing). (CVE-2016-4542, CVE-2016-4543, CVE-2016-4544)</description>
+        <references>
+          <reference type="bugfix">72094</reference>
+          <reference type="cve">CVE-2016-4542</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(libgd: signedness vulnerability). (CVE-2016-3074)</description>
+        <references>
+          <reference type="bugfix">71912</reference>
+          <reference type="cve">CVE-2016-3074</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Out-of-bounds reads in zif_grapheme_stripos with negative offset). (CVE-2016-4540, CVE-2016-4541)</description>
+        <references>
+          <reference type="bugfix">72061</reference>
+          <reference type="cve">CVE-2016-4540</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(xml_parse_into_struct segmentation fault). (CVE-2016-4539)</description>
+        <references>
+          <reference type="bugfix">72099</reference>
+          <reference type="cve">CVE-2016-4539</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

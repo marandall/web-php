@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>bulgaria-php-conference</id>
+  <title>Bulgaria PHP Conference</title>
+  <start_date>2015-03-16</start_date>
+  <end_date>2015-03-16</end_date>
+  <location country=""/>
+  <summary type="text">The Bulgaria PHP Conference is an event organized by the local PHP user group: @bgphp. This is going to be our first conference but nonetheless we have attracted a number of prominent international and local speakers ([http://www.bgphp.org/confirmed-speakers/](http://www.bgphp.org/confirmed-speakers/ "Confirmed speakers")). We expect 450 attendees from Bulgaria, the Balkans region, Europe, and other parts of the world. We welcome a diverse crowd of PHP developers who want to learn new things and share their passion for code.</summary>
+  <content type="markdown">The Bulgaria PHP Conference is an event organized by the local PHP user group: @bgphp. This is going to be our first conference but nonetheless we have attracted a number of prominent international and local speakers ([http://www.bgphp.org/confirmed-speakers/](http://www.bgphp.org/confirmed-speakers/ "Confirmed speakers")). We expect 450 attendees from Bulgaria, the Balkans region, Europe, and other parts of the world. We welcome a diverse crowd of PHP developers who want to learn new things and share their passion for code.
+
+Bulgaria is one of the fastest growing IT regions. A lot of international companies outsource their IT departments in the country. The PHP community is large and actively travels abroad to attend international summits of all kinds. The official language of the conference is English and all talks and sessions will be in English. Attendees and sponsors will be pleasantly surprised by the affordability of all services in the country. Hotel accommodation, food and even the tickets for the event are quite affordable, given the high quality of service you&#x2019;ll get in return.
+
+Take advantage of our blind bird tickets ([http://www.bgphp.org/tickets/](http://www.bgphp.org/tickets/ "PHP Bulgaria tickets")) by March 15th for only 49 EUR!.</content>
+  <updated>2015-02-25T12:53:27+01:00</updated>
+  <logo width="380" height="159">814d60553b67a2fe87bac291859bbcd3241255bbf0437f85295b488fdb55858c.png</logo>
+</conference>

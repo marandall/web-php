@@ -1,47 +1,140 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.22">
+<?xml version="1.0"?>
+<release version="1" id="7.0.22">
   <release>7.0.22</release>
   <date>03 Aug 2017</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>22</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.22.tar.bz2</filename>
       <name>PHP 7.0.22 (tar.bz2)</name>
+      <filename>php-7.0.22.tar.bz2</filename>
+      <date>03 Aug 2017</date>
       <sha256>88e0b27f69abdd12ecde81f000c5a9ea479af7218456ea7f6557edb43c6dfdde</sha256>
-      <md5/>
-      <date>03 Aug 2017</date>
     </source>
     <source>
-      <filename>php-7.0.22.tar.gz</filename>
       <name>PHP 7.0.22 (tar.gz)</name>
-      <sha256>04292eaea0eeb75e9b6a36a3db8e90a3d43f939646fd9d7d1e083e5b70884383</sha256>
-      <md5/>
+      <filename>php-7.0.22.tar.gz</filename>
       <date>03 Aug 2017</date>
+      <sha256>04292eaea0eeb75e9b6a36a3db8e90a3d43f939646fd9d7d1e083e5b70884383</sha256>
     </source>
     <source>
-      <filename>php-7.0.22.tar.xz</filename>
       <name>PHP 7.0.22 (tar.xz)</name>
-      <sha256>408c3fbc235ec940433bfac1f3ed4bf797f61b4a1693b9fb0b6a04b2c1832501</sha256>
-      <md5/>
+      <filename>php-7.0.22.tar.xz</filename>
       <date>03 Aug 2017</date>
+      <sha256>408c3fbc235ec940433bfac1f3ed4bf797f61b4a1693b9fb0b6a04b2c1832501</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.22. Several bugs have been fixed.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Loading PHP extension with already registered function name leads to a crash).</description>
+        <references>
+          <reference type="bugfix">74832</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_url() borken when query string contains colon).</description>
+        <references>
+          <reference type="bugfix">74780</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unary operator expected error on some systems).</description>
+        <references>
+          <reference type="bugfix">74761</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free in unserialize() SplFixedArray).</description>
+        <references>
+          <reference type="bugfix">73900</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fixed incorrect poll.h include).</description>
+        <references>
+          <reference type="bugfix">74913</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fixed incorrect errno.h include).</description>
+        <references>
+          <reference type="bugfix">74906</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(property_exists returns true on unknown DateInterval property).</description>
+        <references>
+          <reference type="bugfix">74852</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(Integer overflow in oci_bind_array_by_name).</description>
+        <references>
+          <reference type="bugfix">74625</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Opcache overwrites argument of GENERATOR_RETURN within finally).</description>
+        <references>
+          <reference type="bugfix">74840</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(PDOStatement::debugDumpParams() truncates query).</description>
+        <references>
+          <reference type="bugfix">69356</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(PHP freezes with AppendIterator).</description>
+        <references>
+          <reference type="bugfix">73471</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>(SQLite3::__construct() produces "out of memory" exception with invalid flags).</description>
+        <references>
+          <reference type="bugfix">74883</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Wddx">
+      <change>
+        <description>(huge memleak when wddx_unserialize).</description>
+        <references>
+          <reference type="bugfix">73173</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wddx parsing empty boolean tag leads to SIGSEGV). (CVE-2017-11143)</description>
+        <references>
+          <reference type="bugfix">74145</reference>
+          <reference type="cve">CVE-2017-11143</reference>
+        </references>
+      </change>
+    </module>
+    <module id="zlib">
+      <change>
+        <description>(dictionary option of inflate_init() does not work).</description>
+        <references>
+          <reference type="bugfix">73944</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

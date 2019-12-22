@@ -1,54 +1,164 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.9">
+<?xml version="1.0"?>
+<release version="1" id="5.6.9">
   <release>5.6.9</release>
   <date>14 May 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>9</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.9.tar.bz2</filename>
       <name>PHP 5.6.9 (tar.bz2)</name>
+      <filename>php-5.6.9.tar.bz2</filename>
+      <date>14 May 2015</date>
       <sha256>19d3b87b7b8bba3be24cf6d757d16b723a98881c3af8d15469fd25501e9abcb9</sha256>
-      <md5/>
-      <date>14 May 2015</date>
     </source>
     <source>
-      <filename>php-5.6.9.tar.gz</filename>
       <name>PHP 5.6.9 (tar.gz)</name>
-      <sha256>49527ba66357fe65bcd463dfb8dcff1b8879419f88b3c334f50696a2aceacb87</sha256>
-      <md5/>
+      <filename>php-5.6.9.tar.gz</filename>
       <date>14 May 2015</date>
+      <sha256>49527ba66357fe65bcd463dfb8dcff1b8879419f88b3c334f50696a2aceacb87</sha256>
     </source>
     <source>
-      <filename>php-5.6.9.tar.xz</filename>
       <name>PHP 5.6.9 (tar.xz)</name>
-      <sha256>1fac497b596f5e4e87d87a7ca90f8725e39a8ca3f9d7adb500fa83c4bb70a73f</sha256>
-      <md5/>
+      <filename>php-5.6.9.tar.xz</filename>
       <date>14 May 2015</date>
+      <sha256>1fac497b596f5e4e87d87a7ca90f8725e39a8ca3f9d7adb500fa83c4bb70a73f</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.9. Several bugs have been fixed.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.9 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.9">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Wrong checked for the interface by using Trait).</description>
+        <references>
+          <reference type="bugfix">69467</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid read in zend_std_get_method).</description>
+        <references>
+          <reference type="bugfix">69420</reference>
+        </references>
+      </change>
+      <change>
+        <description>("use statement [...] has no effect" depends on leading backslash).</description>
+        <references>
+          <reference type="bugfix">60022</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault in gc_remove_zval_from_buffer).</description>
+        <references>
+          <reference type="bugfix">67314</reference>
+        </references>
+      </change>
+      <change>
+        <description>(segmentation fault in destructor).</description>
+        <references>
+          <reference type="bugfix">68652</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Returning compatible sub generator produces a warning).</description>
+        <references>
+          <reference type="bugfix">69419</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_sys_readlink ignores misc errors from GetFinalPathNameByHandleA).</description>
+        <references>
+          <reference type="bugfix">69472</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP Multipart/form-data remote dos Vulnerability). (CVE-2015-4024)</description>
+        <references>
+          <reference type="bugfix">69364</reference>
+          <reference type="cve">CVE-2015-4024</reference>
+        </references>
+      </change>
+      <change>
+        <description>(str_repeat() sign mismatch based memory corruption).</description>
+        <references>
+          <reference type="bugfix">69403</reference>
+        </references>
+      </change>
+      <change>
+        <description>(CVE-2006-7243 fix regressions in 5.4+). (CVE-2015-4025)</description>
+        <references>
+          <reference type="bugfix">69418</reference>
+          <reference type="cve">CVE-2006-7243</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow in unpack()).</description>
+        <references>
+          <reference type="bugfix">69522</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4022)</description>
+        <references>
+          <reference type="bugfix">69545</reference>
+          <reference type="cve">CVE-2015-4022</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(Incorrect use of SQLColAttributes with ODBC 3.0).</description>
+        <references>
+          <reference type="bugfix">69354</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ODBC: Query with same field name from two tables returns incorrect result).</description>
+        <references>
+          <reference type="bugfix">69474</reference>
+        </references>
+      </change>
+      <change>
+        <description>(out of memory with sage odbc driver).</description>
+        <references>
+          <reference type="bugfix">69381</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(Reading empty SSL stream hangs until timeout).</description>
+        <references>
+          <reference type="bugfix">69402</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCNTL">
+      <change>
+        <description>(pcntl_exec() should not allow null char). (CVE-2015-4026)</description>
+        <references>
+          <reference type="bugfix">68598</reference>
+          <reference type="cve">CVE-2015-4026</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>Upgraded pcrelib to 8.37. (CVE-2015-2325, CVE-2015-2326)</description>
+        <references>
+          <reference type="cve">CVE-2015-2325</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Memory Corruption in phar_parse_tarfile when entry filename starts with null). (CVE-2015-4021)</description>
+        <references>
+          <reference type="bugfix">69453</reference>
+          <reference type="cve">CVE-2015-4021</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

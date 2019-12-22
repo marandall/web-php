@@ -1,56 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.34">
+<?xml version="1.0"?>
+<release version="1" id="5.4.34">
   <release>5.4.34</release>
   <date>16 Oct 2014</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>34</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.34.tar.bz2</filename>
       <name>PHP 5.4.34 (tar.bz2)</name>
+      <filename>php-5.4.34.tar.bz2</filename>
+      <date>16 Oct 2014</date>
       <sha256>57d4ea10f0c18b096a7c8fd0a98dcbe40c8f4dc94453fd3ca0a10e35fb2f8234</sha256>
-      <md5/>
-      <date>16 Oct 2014</date>
     </source>
     <source>
-      <filename>php-5.4.34.tar.gz</filename>
       <name>PHP 5.4.34 (tar.gz)</name>
-      <sha256>c8d909062ad7616cedb54dc03d85b40d40f6d4adce986ec8cabd9b8b94872096</sha256>
-      <md5/>
+      <filename>php-5.4.34.tar.gz</filename>
       <date>16 Oct 2014</date>
+      <sha256>c8d909062ad7616cedb54dc03d85b40d40f6d4adce986ec8cabd9b8b94872096</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.34 binaries and source</filename>
       <name>Windows 5.4.34 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.34. 6 security-related bugs were fixed in this release, including fixes for
-CVE-2014-3668, CVE-2014-3669 and CVE-2014-3670. Also, a fix for OpenSSL which
-produced regressions was reverted.
-
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.34 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.34">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(libmagic: don't assume char is signed).</description>
+        <references>
+          <reference type="bugfix">66242</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect last used array index copied to new array after unset).</description>
+        <references>
+          <reference type="bugfix">67985</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer overflow in unserialize() (32-bits only)). (CVE-2014-3669)</description>
+        <references>
+          <reference type="bugfix">68044</reference>
+          <reference type="cve">CVE-2014-3669</reference>
+        </references>
+      </change>
+    </module>
+    <module id="cURL">
+      <change>
+        <description>(NULL byte injection - cURL lib).</description>
+        <references>
+          <reference type="bugfix">68089</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(Heap corruption in exif_thumbnail()). (CVE-2014-3670)</description>
+        <references>
+          <reference type="bugfix">68113</reference>
+          <reference type="cve">CVE-2014-3670</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>Reverted fixes for bug [#41631](http://bugs.php.net/41631), due to regressions.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="XMLRPC">
+      <change>
+        <description>(Global buffer overflow in mkgmtime() function). (CVE-2014-3668)</description>
+        <references>
+          <reference type="bugfix">68027</reference>
+          <reference type="cve">CVE-2014-3668</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>laracon-online</id>
+  <title>Laracon Online</title>
+  <start_date>2019-03-06</start_date>
+  <end_date>2019-03-06</end_date>
+  <location country=""/>
+  <summary type="text">[Laracon Online](https://laracon.net) is the easiest and most affordable way to get the Laracon experience from anywhere in the world.</summary>
+  <content type="markdown">[Laracon Online](https://laracon.net) is the easiest and most affordable way to get the Laracon experience from anywhere in the world.
+
+We&#x2019;ve put together a full day of talks featuring some of Laravel&#x2019;s brightest minds, and streaming them directly to your home or office.
+
+These talks are brand new, never before presented at any Laracon and tickets are just $12 during early registration. Don't miss the largest Laravel event ever!</content>
+  <updated>2019-01-22T02:42:11+00:00</updated>
+  <logo width="300" height="135">ae017c834bd1f6087951bb665acc2ae5223fc2b056c9dc08ca4328bde26e3d9d.png</logo>
+</conference>

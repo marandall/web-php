@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-frameworks-day-2015</id>
+  <title>PHP Frameworks Day 2015</title>
+  <start_date>2015-10-19</start_date>
+  <end_date>2015-10-19</end_date>
+  <location country=""/>
+  <summary type="text">\#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.</summary>
+  <content type="markdown">\#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.
+
+This is the third time PHP Frameworks Day is being held and each time it grows and becomes more interesting! [Watch](https://www.youtube.com/watch?v=qPlQQqnGM-s "Watch") how we spent PHP Frameworks Day 2014.
+
+It is the largest PHP event in Ukraine. There will be exciting talks in 2 tracks. Useful networking during the breaks, coffee-breaks and delicious lunch. Our partners have prepared interesting entertainment and gifts. Moreover, we will celebrate the 20th anniversary of the PHP language at the after-party.
+
+We will discuss such topics: Phalcon 2 Framework, Docker, PPI Framework Engine, Yii Framework, how to maintain an open source project and will not forget about Symfony Framework.
+
+**Speakers:** Paul Dragoonis, Jordi Boggiano, Mikhail Bodnarchuk, Alexander Makarov, Sergey Yakovlev and the list is not final.
+
+**Venue:** Kyiv, Ramada Encore Kiev hotel, 103 Stolychne Highway
+
+**Ticket price:** UAH 1800 (~$80)
+
+Check the program on the [conference website](http://frameworksdays.com/event/php-frameworks-day-2015/page/program "conference website")</content>
+  <updated>2015-10-15T12:05:32-04:00</updated>
+  <logo width="175" height="172">fe92cb2033f5eaffca56705feafa0c2bad65e18d920916c02bde42b0c2932065.png</logo>
+</conference>

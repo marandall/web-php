@@ -11,28 +11,27 @@
 	class Release
 	{
 		/** @var string[] Language announcements */
-		private $announcements = [];
+		private array $announcements = [];
 		
 		/** @var string[] Special tags, security etc */
-		private $tags = [];
+		private array $tags = [];
 		
 		/** @var \DateTime When the release occured */
 		private $date;
 		
 		/** @var SourceFile[] List of sources */
-		private $sources = [];
+		private array $sources = [];
 		
-		/** @var string */
-		private $version_id;
+		private string $version_id;
 		
-		/** @var int */
-		private $major_ver = 0;
+		private int $major_ver = 0;
 		
-		/** @var int */
-		private $minor_ver = 0;
+		private int $minor_ver = 0;
 		
-		/** @var string */
-		private $release_ver = '';
+		private string $release_ver = '';
+		
+		/** @var ModuleWithChanges[]|null */
+		private ?array $changes = null;
 		
 		private $data;
 		
@@ -185,5 +184,24 @@
 		 */
 		public function getVersionId(): string {
 			return $this->version_id;
+		}
+		
+		/**
+		 * Returns a list of changes from the change log, keys are indexed to the module
+		 *
+		 * @return ModuleWithChanges[]
+		 */
+		
+		public function getModulesWithChanges(): array {
+			if ($this->changes !== null) {
+				return $this->changes;
+			}
+			
+			$this->changes = [];
+			foreach ($this->data['changes'] as $module_id => $changes) {
+				$this->changes[$module_id] = new ModuleWithChanges($module_id, $changes);
+			}
+			
+			return $this->changes;
 		}
 	}

@@ -1,55 +1,262 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.18">
+<?xml version="1.0"?>
+<release version="1" id="5.4.18">
   <release>5.4.18</release>
   <date>04 Jul 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>18</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.18.tar.bz2</filename>
       <name>PHP 5.4.18 (tar.bz2)</name>
-      <sha256/>
-      <md5>b2e185b46b22a48a385cf21a0dc76e65</md5>
+      <filename>php-5.4.18.tar.bz2</filename>
       <date>15 Aug 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.18.tar.gz</filename>
       <name>PHP 5.4.18 (tar.gz)</name>
-      <sha256/>
-      <md5>d0a3f55deceaec921f45f76d7b4e764b</md5>
+      <filename>php-5.4.18.tar.gz</filename>
       <date>15 Aug 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.18 binaries and source</filename>
       <name>Windows 5.4.18 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 5.4.18. About 30 bugs were fixed, including security issues CVE-2013-4113 and CVE-2013-4248.
 
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.18. About 30 bugs were fixed, including security issues CVE-2013-4113 and CVE-2013-4248.
-</p>
-
-<p><b>NOTE:</b> Please do not use this release, due to the bug in the fix for CVE-2013-4248. This bug is fixed in
-PHP 5.4.19.</p>
-
-<p>For source downloads of PHP 5.4.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.18">ChangeLog</a>.
-</p>
-
-
-</announcement>
+**NOTE:** Please do not use this release, due to the bug in the fix for CVE-2013-4248. This bug is fixed in PHP 5.4.19.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Exception not catchable when exception thrown in autoload with a namespace).</description>
+        <references>
+          <reference type="bugfix">65254</reference>
+        </references>
+      </change>
+      <change>
+        <description>(is_callable() triggers Fatal Error).</description>
+        <references>
+          <reference type="bugfix">65108</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generated configure script is malformed on OpenBSD).</description>
+        <references>
+          <reference type="bugfix">65088</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Possible XSS on "Registered stream filters" info).</description>
+        <references>
+          <reference type="bugfix">62964</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Error on serialize of ArrayObject).</description>
+        <references>
+          <reference type="bugfix">62672</reference>
+        </references>
+      </change>
+      <change>
+        <description>(variant_* functions causes crash when null given as an argument).</description>
+        <references>
+          <reference type="bugfix">62475</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_error_docref links to invalid pages).</description>
+        <references>
+          <reference type="bugfix">60732</reference>
+        </references>
+      </change>
+      <change>
+        <description>(chroot() does not get enabled).</description>
+        <references>
+          <reference type="bugfix">65226</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CGI">
+      <change>
+        <description>(Missing php-cgi man page).</description>
+        <references>
+          <reference type="bugfix">65143</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>(Cli server not responsive when responding with 422 http status code).</description>
+        <references>
+          <reference type="bugfix">65066</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(curl.cainfo doesn't appear in php.ini).</description>
+        <references>
+          <reference type="bugfix">62665</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(enabling FPM borks compile on FreeBSD).</description>
+        <references>
+          <reference type="bugfix">63983</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(FTPs memory leak with SSL).</description>
+        <references>
+          <reference type="bugfix">65228</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GMP">
+      <change>
+        <description>(Memory leak in gmp_cmp second parameter).</description>
+        <references>
+          <reference type="bugfix">65227</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Imap">
+      <change>
+        <description>(Segmentation fault after imap_reopen failure).</description>
+        <references>
+          <reference type="bugfix">64467</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Buggy grapheme_substr() on edge case).</description>
+        <references>
+          <reference type="bugfix">62759</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Offsets may be wrong for grapheme_stri* functions).</description>
+        <references>
+          <reference type="bugfix">61860</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mysqlnd">
+      <change>
+        <description>Fixed segfault in mysqlnd when doing long prepare.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(NULL valued anonymous column causes segfault in odbc_fetch_array).</description>
+        <references>
+          <reference type="bugfix">61387</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Openssl">
+      <change>
+        <description>Fixed handling null bytes in subjectAltName</description>
+        <references>
+          <reference type="cve">CVE-2013-4248</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_dblib">
+      <change>
+        <description>(PDO/dblib not working anymore ("use dbName" not sent)).</description>
+        <references>
+          <reference type="bugfix">65219</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>Fixed meta data retrieve when OID is larger than 2^31.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Missing phar man page).</description>
+        <references>
+          <reference type="bugfix">65142</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>($_SESSION[$key]["cancel_upload"] doesn't work as documented).</description>
+        <references>
+          <reference type="bugfix">62535</reference>
+        </references>
+      </change>
+      <change>
+        <description>(when session_name("123") consist only digits, should warning).</description>
+        <references>
+          <reference type="bugfix">35703</reference>
+        </references>
+      </change>
+      <change>
+        <description>(mod_files.sh does not support hash bits).</description>
+        <references>
+          <reference type="bugfix">49175</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>Implemented FR [#63472](http://bugs.php.net/63472) (Setting SO_BINDTODEVICE with socket_set_option).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(RecursiveDirectoryIterator segfault).</description>
+        <references>
+          <reference type="bugfix">65136</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memleak when calling Directory(Recursive)Iterator /Spl(Temp)FileObject ctor twice).</description>
+        <references>
+          <reference type="bugfix">61828</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SplFixedArray un-/serialize, getSize(), count() return 0, keys are strings).</description>
+        <references>
+          <reference type="bugfix">60560</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(heap corruption in xml parser). (CVE-2013-4113)</description>
+        <references>
+          <reference type="bugfix">65236</reference>
+          <reference type="cve">CVE-2013-4113</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

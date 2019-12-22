@@ -1,53 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.17">
+<?xml version="1.0"?>
+<release version="1" id="5.6.17">
   <release>5.6.17</release>
   <date>07 Jan 2016</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>17</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.17.tar.bz2</filename>
       <name>PHP 5.6.17 (tar.bz2)</name>
+      <filename>php-5.6.17.tar.bz2</filename>
+      <date>07 Jan 2016</date>
       <sha256>77b45f56a1e63e75bb22b42cfb8b438ec4083c59ce774b4d7c1685544b7add3b</sha256>
-      <md5/>
-      <date>07 Jan 2016</date>
     </source>
     <source>
-      <filename>php-5.6.17.tar.gz</filename>
       <name>PHP 5.6.17 (tar.gz)</name>
-      <sha256>f5036535651e919415f4b6589391c95e4ff48f2d391818251c45da216791aac8</sha256>
-      <md5/>
+      <filename>php-5.6.17.tar.gz</filename>
       <date>07 Jan 2016</date>
+      <sha256>f5036535651e919415f4b6589391c95e4ff48f2d391818251c45da216791aac8</sha256>
     </source>
     <source>
-      <filename>php-5.6.17.tar.xz</filename>
       <name>PHP 5.6.17 (tar.xz)</name>
-      <sha256>ea9d5749380c7c7171e131616466deacd7cb124b5010eafc34e551b0a7b0fb2c</sha256>
-      <md5/>
+      <filename>php-5.6.17.tar.xz</filename>
       <date>07 Jan 2016</date>
+      <sha256>ea9d5749380c7c7171e131616466deacd7cb124b5010eafc34e551b0a7b0fb2c</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.17. This is a security release. Several security bugs were fixed in this release.
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.17">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(configure fails utf8_to_mutf7 test).</description>
+        <references>
+          <reference type="bugfix">66909</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid opcode while using ::class as trait method paramater default value).</description>
+        <references>
+          <reference type="bugfix">70958</reference>
+        </references>
+      </change>
+      <change>
+        <description>(self::class can not be resolved with reflection for abstract class).</description>
+        <references>
+          <reference type="bugfix">70957</reference>
+        </references>
+      </change>
+      <change>
+        <description>(try{ } finally{} can create infinite chains of exceptions).</description>
+        <references>
+          <reference type="bugfix">70944</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SAPI build problem on AIX: Undefined symbol: php_register_internal_extensions).</description>
+        <references>
+          <reference type="bugfix">61751</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</description>
+        <references>
+          <reference type="bugfix">70755</reference>
+          <reference type="cve">CVE-2016-5114</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</description>
+        <references>
+          <reference type="bugfix">70976</reference>
+          <reference type="cve">CVE-2016-1903</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(LOAD DATA LOCAL INFILE / open_basedir restriction).</description>
+        <references>
+          <reference type="bugfix">68077</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SoapClient systematic out of memory error).</description>
+        <references>
+          <reference type="bugfix">70900</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(ReflectionFunction for array_unique returns wrong number of parameters).</description>
+        <references>
+          <reference type="bugfix">70960</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_Firebird">
+      <change>
+        <description>(Integer returned as a 64bit integer on X64_86).</description>
+        <references>
+          <reference type="bugfix">60052</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(Use After Free Vulnerability in WDDX Packet Deserialization).</description>
+        <references>
+          <reference type="bugfix">70661</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Session WDDX Packet Deserialization Type Confusion Vulnerability).</description>
+        <references>
+          <reference type="bugfix">70741</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLRPC">
+      <change>
+        <description>(Type Confusion Vulnerability in PHP_to_XMLRPC_worker()).</description>
+        <references>
+          <reference type="bugfix">70728</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

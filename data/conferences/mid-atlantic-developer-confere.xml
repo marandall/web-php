@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>mid-atlantic-developer-confere</id>
+  <title>Mid-Atlantic Developer Conference</title>
+  <start_date>2018-07-13</start_date>
+  <end_date>2018-07-13</end_date>
+  <location country=""/>
+  <summary type="text">We are excited to announce the [schedule](https://www.middevcon.com/schedule/) for the 1st annual [Mid-Atlantic Developer Conference](https://www.middevcon.com/) taking place this summer on July 13-14 near Baltimore, MD.</summary>
+  <content type="markdown">We are excited to announce the [schedule](https://www.middevcon.com/schedule/) for the 1st annual [Mid-Atlantic Developer Conference](https://www.middevcon.com/) taking place this summer on July 13-14 near Baltimore, MD.
+
+This is a brand new polyglot developer event designed to bring together programmers from the region for two full days of learning. We've put together an electic set of sessions and workshops for you. You'll recognize some names from the PHP community, as well as see brand new speakers at this event. We are including sessions on Caching, Hiring, Polymer, Bots, Security, Encryption, SVG, WebAssembly, GraphQL, Accessibility, Mentorship, Augmented Reality, Testing, AWS, Docker, Troubleshooting, Gherkin, Ethereum, Health and much more!
+
+We are especially excited to welcome [Jim Jagielski](https://www.middevcon.com/sessions/why-open-source-is-vital-to-development-and-developers/), core-developer of Apache and former CTO of Zend Technologies, as one of our four keynote speakers!
+
+Please join us to become part of this inaugural event! [Tickets start at just $195](https://www.middevcon.com/register/) - You won't want to miss it!</content>
+  <updated>2018-04-25T19:31:27+00:00</updated>
+  <logo width="259" height="200">bb5e6d11b74b8bdb43b70c9ed6c86df15a0fdb27966ff12492b8c209b0044af1.png</logo>
+</conference>

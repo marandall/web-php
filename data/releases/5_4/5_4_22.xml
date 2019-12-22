@@ -1,52 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.22">
+<?xml version="1.0"?>
+<release version="1" id="5.4.22">
   <release>5.4.22</release>
   <date>14 Nov 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>22</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.22.tar.bz2</filename>
       <name>PHP 5.4.22 (tar.bz2)</name>
+      <filename>php-5.4.22.tar.bz2</filename>
+      <date>14 Nov 2013</date>
       <sha256>3b8619b030e372f2b64e3a059d05a3ef3354e81f8a72923ba45475bf222f7cca</sha256>
-      <md5/>
-      <date>14 Nov 2013</date>
     </source>
     <source>
-      <filename>php-5.4.22.tar.gz</filename>
       <name>PHP 5.4.22 (tar.gz)</name>
-      <sha256>ca6e52a0ba11e9521c6a26f293a602cdc00cad1adbb4658e35b8d3f41057cbb8</sha256>
-      <md5/>
+      <filename>php-5.4.22.tar.gz</filename>
       <date>14 Nov 2013</date>
+      <sha256>ca6e52a0ba11e9521c6a26f293a602cdc00cad1adbb4658e35b8d3f41057cbb8</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.22 binaries and source</filename>
       <name>Windows 5.4.22 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.22. About 10 bugs were fixed. All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.22 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.22">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(scope resolution operator - strange behavior with $this).</description>
+        <references>
+          <reference type="bugfix">65911</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>(Segfault with built-in webserver and chunked transfer encoding).</description>
+        <references>
+          <reference type="bugfix">65818</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>Fixed crash on unknown encoding.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(ftp_nb_continue produces segfault).</description>
+        <references>
+          <reference type="bugfix">65667</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(Field name truncation if the field name is bigger than 32 characters).</description>
+        <references>
+          <reference type="bugfix">65950</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>(the socket_connect() won't work with IPv6 address).</description>
+        <references>
+          <reference type="bugfix">65808</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(var_export() does not use full precision for floating-point numbers).</description>
+        <references>
+          <reference type="bugfix">64760</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLReader">
+      <change>
+        <description>(Crash with clone XMLReader).</description>
+        <references>
+          <reference type="bugfix">51936</reference>
+        </references>
+      </change>
+      <change>
+        <description>(XMLReader does not suppress errors).</description>
+        <references>
+          <reference type="bugfix">64230</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

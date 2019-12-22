@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-developer-day-2017</id>
+  <title>PHP Developer Day 2017</title>
+  <start_date>2017-09-22</start_date>
+  <end_date>2017-09-22</end_date>
+  <location country=""/>
+  <summary type="text"> The PHP USERGROUP DRESDEN e.V. invites you to the beautiful city of Dresden, Germany for the 3rd annual PHP Developer Day.</summary>
+  <content type="markdown"> The PHP USERGROUP DRESDEN e.V. invites you to the beautiful city of Dresden, Germany for the 3rd annual PHP Developer Day.
+
+ We have 6 talks covering the following topics:
+
+- Managing the PHP toolchain
+- Middleware Web APIs in PHP 7.x
+- PostgreSQL as a NoSQL database
+- Event Sourcing
+- Prooph components
+- ReactPHP
+ 
+ Just like the past two events in 2015 and 2016 top talks, free exchange of knowledge, community and fun are the focus of the event.
+
+ Come along on **SEPTEMBER 22nd at DRESDNER VOLKSHAUS, SCH&#xDC;TZENPLATZ 14 in DRESDEN, GERMANY**
+
+ For more information visit our website at &lt;http://phpug-dresden.org/en/phpdd17.html&gt;
+
+ We're looking forward to see you!</content>
+  <updated>2017-06-29T17:24:31+02:00</updated>
+  <logo width="250" height="73">5a178b02c7e023af512304749e1cffb8b57194f41483f218720e666b693c2022.png</logo>
+</conference>

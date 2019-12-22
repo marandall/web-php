@@ -39,15 +39,19 @@
 		}
 		
 		public function getSummaryText(): string {
-			return $this->data['summary'] ?? '';
+			return $this->data['summary']['content'] ?? '';
 		}
 		
 		public function getContentsHTML(): string {
-			return $this->data['content'] ?? '';
+			return $this->data['content']['content'] ?? '';
 		}
 		
-		public function getImageUrl(): string {
-			return Site::$BaseUrl . '/static/images/news/' . $this->data['image'] ?? '';
+		public function getLogoUrl(): string {
+			if (isset($this->data['logo']['path'])) {
+				return Site::$BaseUrl . '/static/content/conferences/' . $this->data['logo']['path'] ?? '';
+			}
+			
+			return '';
 		}
 		
 		public function getWebsiteLink(): string {

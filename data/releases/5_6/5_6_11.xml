@@ -1,53 +1,202 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.11">
+<?xml version="1.0"?>
+<release version="1" id="5.6.11">
   <release>5.6.11</release>
   <date>10 Jul 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>11</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.11.tar.bz2</filename>
       <name>PHP 5.6.11 (tar.bz2)</name>
+      <filename>php-5.6.11.tar.bz2</filename>
+      <date>10 Jul 2015</date>
       <sha256>bd6b260816764c267244749ead07482120dbf8d1920ebbbb0dcb2aa411033866</sha256>
-      <md5/>
-      <date>10 Jul 2015</date>
     </source>
     <source>
-      <filename>php-5.6.11.tar.gz</filename>
       <name>PHP 5.6.11 (tar.gz)</name>
-      <sha256>85916b46c0d1f2a5315c84fb2773293f4084c3676ba4ed420d0432cbb60ff9d8</sha256>
-      <md5/>
+      <filename>php-5.6.11.tar.gz</filename>
       <date>10 Jul 2015</date>
+      <sha256>85916b46c0d1f2a5315c84fb2773293f4084c3676ba4ed420d0432cbb60ff9d8</sha256>
     </source>
     <source>
-      <filename>php-5.6.11.tar.xz</filename>
       <name>PHP 5.6.11 (tar.xz)</name>
-      <sha256>3f97dbb1c646b90e1ef638defabe429ef036f903b5baa1c34769d3de4fe62bd4</sha256>
-      <md5/>
+      <filename>php-5.6.11.tar.xz</filename>
       <date>10 Jul 2015</date>
+      <sha256>3f97dbb1c646b90e1ef638defabe429ef036f903b5baa1c34769d3de4fe62bd4</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.6.11. Five security-related issues in PHP were fixed in this release, including CVE-2015-3152.
-All PHP 5.6 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.6.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.11">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(escapeshell*() doesn't cater to !).</description>
+        <references>
+          <reference type="bugfix">69768</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use __builtin_clzl on PowerPC).</description>
+        <references>
+          <reference type="bugfix">69703</reference>
+        </references>
+      </change>
+      <change>
+        <description>(can induce segmentation fault with basic php code).</description>
+        <references>
+          <reference type="bugfix">69732</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Windows 10 reported as Windows 8).</description>
+        <references>
+          <reference type="bugfix">69642</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse_ini_file() and parse_ini_string() segmentation fault).</description>
+        <references>
+          <reference type="bugfix">69551</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpinfo() reports Professional Editions of Windows 7/8/8.1/10 as "Business").</description>
+        <references>
+          <reference type="bugfix">69781</reference>
+        </references>
+      </change>
+      <change>
+        <description>(finally in generator (yield) swallows exception in iteration).</description>
+        <references>
+          <reference type="bugfix">69740</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpinfo() does not report many Windows SKUs).</description>
+        <references>
+          <reference type="bugfix">69835</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Different arrays compare indentical due to integer key truncation).</description>
+        <references>
+          <reference type="bugfix">69892</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Can't set empty additional_headers for mail()), regression from fix to bug [#68776](http://bugs.php.net/68776).</description>
+        <references>
+          <reference type="bugfix">69874</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagegammacorrect function loses alpha channel).</description>
+        <references>
+          <reference type="bugfix">61221</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GMP">
+      <change>
+        <description>(gmp_random_range() modifies second parameter if GMP number).</description>
+        <references>
+          <reference type="bugfix">69803</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(mysqlnd is vulnerable to BACKRONYM). (CVE-2015-3152)</description>
+        <references>
+          <reference type="bugfix">69669</reference>
+          <reference type="cve">CVE-2015-3152</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_replace: * qualifier on unicode replace garbles the string).</description>
+        <references>
+          <reference type="bugfix">53823</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in preg_replace_callback).</description>
+        <references>
+          <reference type="bugfix">69864</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(PDOStatement::execute() leaks memory with DML Statements when closeCuror() is u).</description>
+        <references>
+          <reference type="bugfix">69752</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PDO-pgsql fails to connect if password contains a leading single quote).</description>
+        <references>
+          <reference type="bugfix">69362</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PDO PgSQL Incorrect binding numeric array with gaps).</description>
+        <references>
+          <reference type="bugfix">69344</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Segfault in Phar::convertToData on invalid file). (CVE-2015-5589)</description>
+        <references>
+          <reference type="bugfix">69958</reference>
+          <reference type="cve">CVE-2015-5589</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer overflow and stack smashing error in phar_fix_filepath). (CVE-2015-5590)</description>
+        <references>
+          <reference type="bugfix">69923</reference>
+          <reference type="cve">CVE-2015-5590</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SimpleXML">
+      <change>
+        <description>Refactored the fix for bug [#66084](http://bugs.php.net/66084) (simplexml_load_string() mangles empty node name).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Segfault when SplMinHeap::compare produces fatal error).</description>
+        <references>
+          <reference type="bugfix">69737</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SplFileObject setMaxLineLength).</description>
+        <references>
+          <reference type="bugfix">67805</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use-after-free vulnerability in spl_recursive_it_move_forward_ex()).</description>
+        <references>
+          <reference type="bugfix">69970</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sqlite3">
+      <change>
+        <description>(Use-after-free vulnerability in sqlite3SafetyCheckSickOrOk()).</description>
+        <references>
+          <reference type="bugfix">69972</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

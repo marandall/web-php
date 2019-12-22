@@ -9,7 +9,13 @@
     "ext-pdo": "*",
     "ext-json": "*",
     "ext-dom": "*",
-    "ext-libxml": "*"
+    "ext-libxml": "*",
+    "league/flysystem": "^1.0",
+    "guzzlehttp/guzzle": "*",
+    "ext-gd": "*",
+    "league/commonmark": "^1.1",
+    "league/html-to-markdown": "^4.9",
+    "ezyang/htmlpurifier": "^4.12"
   },
   "require-dev": {
   },

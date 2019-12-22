@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>zendcon-2017</id>
+  <title>ZendCon 2017</title>
+  <start_date>2017-09-01</start_date>
+  <end_date>2017-09-01</end_date>
+  <location country=""/>
+  <summary type="text">With over 250 million PHP applications driven by a global community of more than 5 million active developers and all enterprises adopting open source software, ZendCon 2017 brings you a curated selection of the best experts, training, and networking opportunities to embrace this vast ecosystem.</summary>
+  <content type="markdown"/>
+  <updated>2017-09-13T19:06:00+01:00</updated>
+  <logo width="305" height="113">116b8200a717406669c6a84fd5ee2c76effc232c214ba7528f2d69fca96c53d3.png</logo>
+</conference>

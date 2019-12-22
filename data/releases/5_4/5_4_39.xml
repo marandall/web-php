@@ -1,54 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.39">
+<?xml version="1.0"?>
+<release version="1" id="5.4.39">
   <release>5.4.39</release>
   <date>19 Mar 2015</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>39</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.39.tar.bz2</filename>
       <name>PHP 5.4.39 (tar.bz2)</name>
+      <filename>php-5.4.39.tar.bz2</filename>
+      <date>19 Mar 2015</date>
       <sha256>7ceb76538e709c74533210ae41148d5c01c330ac8a73220954bbc4fcae69d77e</sha256>
-      <md5/>
-      <date>19 Mar 2015</date>
     </source>
     <source>
-      <filename>php-5.4.39.tar.gz</filename>
       <name>PHP 5.4.39 (tar.gz)</name>
-      <sha256>9af5d2c3782aa94b7336401755dc44b62dc4ea881bf5e39540a4c7181b54d945</sha256>
-      <md5/>
+      <filename>php-5.4.39.tar.gz</filename>
       <date>19 Mar 2015</date>
+      <sha256>9af5d2c3782aa94b7336401755dc44b62dc4ea881bf5e39540a4c7181b54d945</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.39 binaries and source</filename>
       <name>Windows 5.4.39 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.39. Six security-related bugs were fixed in this release, including CVE-2015-0231, CVE-2015-2305 and CVE-2015-2331.
-
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.39 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.39">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Use After Free Vulnerability in unserialize()). (CVE-2015-2787)</description>
+        <references>
+          <reference type="bugfix">68976</reference>
+          <reference type="cve">CVE-2015-2787</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Per Directory Values overrides PHP_INI_SYSTEM configuration options).</description>
+        <references>
+          <reference type="bugfix">69134</reference>
+        </references>
+      </change>
+      <change>
+        <description>(move_uploaded_file allows nulls in path). (CVE-2015-2348)</description>
+        <references>
+          <reference type="bugfix">69207</reference>
+          <reference type="cve">CVE-2015-2348</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Ereg">
+      <change>
+        <description>(heap overflow vulnerability in regcomp.c). (CVE-2015-2305)</description>
+        <references>
+          <reference type="bugfix">69248</reference>
+          <reference type="cve">CVE-2015-2305</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SoapClient's __call() type confusion through unserialize()). (CVE-2015-4147, CVE-2015-4148)</description>
+        <references>
+          <reference type="bugfix">69085</reference>
+          <reference type="cve">CVE-2015-4147</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(ZIP Integer Overflow leads to writing past heap boundary). (CVE-2015-2331)</description>
+        <references>
+          <reference type="bugfix">69253</reference>
+          <reference type="cve">CVE-2015-2331</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

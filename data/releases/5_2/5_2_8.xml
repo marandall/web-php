@@ -1,54 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.2.8">
+<?xml version="1.0"?>
+<release version="1" id="5.2.8">
   <release>5.2.8</release>
   <date>08 December 2008</date>
-  <version>
-    <major>5</major>
-    <minor>2</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.2.8.tar.bz2</filename>
       <name>PHP 5.2.8 (tar.bz2)</name>
-      <sha256/>
-      <md5>8760a833cf10433d3e72271ab0d0eccf</md5>
+      <filename>php-5.2.8.tar.bz2</filename>
       <date>08 December 2008</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.2.8.tar.gz</filename>
       <name>PHP 5.2.8 (tar.gz)</name>
-      <sha256/>
-      <md5>e748cace3cfecb66fb6de9a945f98e2a</md5>
+      <filename>php-5.2.8.tar.gz</filename>
       <date>08 December 2008</date>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available [here](/UPDATE_5_2.txt), detailing the changes between those releases and PHP 5.2.8.
 
-
-<p>
-The PHP development team would like to announce the immediate availability
-of PHP 5.2.8. This release addresses a regression introduced by 5.2.7 in
-regard to the magic_quotes functionality, that was broken by an incorrect fix
-to the filter extension. All users who have upgraded to 5.2.7 are encouraged
-to upgrade to this release, alternatively you can apply a work-around for
-the bug by changing "filter.default_flags=0" in php.ini
-</p>
-
-<p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
-<a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
-and PHP 5.2.8.
-</p>
-
-<p>
- For a full list of changes in PHP 5.2.8, see the <a href="/ChangeLog-5.php#5.2.8">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For a full list of changes in PHP 5.2.8, see the [ChangeLog](/ChangeLog-5.php#5.2.8).</announcement>
   </announcements>
+  <tags/>
   <changes/>
 </release>

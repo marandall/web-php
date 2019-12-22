@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-serbia-conference-2018</id>
+  <title>PHP Serbia Conference 2018</title>
+  <start_date>2018-05-25</start_date>
+  <end_date>2018-05-25</end_date>
+  <location country=""/>
+  <summary type="text">"PHP Srbija" is happy to announce a brand new PHP Serbia Conference 2018!</summary>
+  <content type="markdown">"PHP Srbija" is happy to announce a brand new PHP Serbia Conference 2018!
+
+This year's edition features Workshop Day prior to the main 2-day event of awesome talks on PHP and related technologies presented by best speakers from all over the globe.
+
+If you are interested in speaking at PHP Serbia Conference, [our CFP](https://cfp.phpsrbija.rs/) is open until January 21st, 2018.</content>
+  <updated>2017-12-23T21:54:52+01:00</updated>
+  <logo width="300" height="223">795db8e1dd9c7870710c42a6790be8c0654c7ebc5c722bb5fc0e238b308f8844.png</logo>
+</conference>

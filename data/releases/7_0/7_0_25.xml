@@ -1,53 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.25">
+<?xml version="1.0"?>
+<release version="1" id="7.0.25">
   <release>7.0.25</release>
   <date>26 Oct 2017</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>25</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.25.tar.bz2</filename>
       <name>PHP 7.0.25 (tar.bz2)</name>
+      <filename>php-7.0.25.tar.bz2</filename>
+      <date>26 Oct 2017</date>
       <sha256>95a24d96d126a196e1550e394182b43a6460cdd2026f1a77bef01e422415cc25</sha256>
-      <md5/>
-      <date>26 Oct 2017</date>
     </source>
     <source>
-      <filename>php-7.0.25.tar.gz</filename>
       <name>PHP 7.0.25 (tar.gz)</name>
-      <sha256>081b46bf588d38c636fd6cd1dab8855b6b3e171550d1e65f770f53aede594ee7</sha256>
-      <md5/>
+      <filename>php-7.0.25.tar.gz</filename>
       <date>26 Oct 2017</date>
+      <sha256>081b46bf588d38c636fd6cd1dab8855b6b3e171550d1e65f770f53aede594ee7</sha256>
     </source>
     <source>
-      <filename>php-7.0.25.tar.xz</filename>
       <name>PHP 7.0.25 (tar.xz)</name>
-      <sha256>5cc14bd20fb2226f6d34465662425cd100441bde9042ea1cef2e4506d6ded8cc</sha256>
-      <md5/>
+      <filename>php-7.0.25.tar.xz</filename>
       <date>26 Oct 2017</date>
+      <sha256>5cc14bd20fb2226f6d34465662425cd100441bde9042ea1cef2e4506d6ded8cc</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.25. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Null pointer dereference in zend_mm_alloc_small()).</description>
+        <references>
+          <reference type="bugfix">75241</reference>
+        </references>
+      </change>
+      <change>
+        <description>(infinite loop when printing an error-message).</description>
+        <references>
+          <reference type="bugfix">75236</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect token formatting on two parse errors in one request).</description>
+        <references>
+          <reference type="bugfix">75252</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault when calling is_callable on parent).</description>
+        <references>
+          <reference type="bugfix">75220</reference>
+        </references>
+      </change>
+      <change>
+        <description>(debug info of Closures of internal functions contain garbage argument names).</description>
+        <references>
+          <reference type="bugfix">75290</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache2Handler">
+      <change>
+        <description>(error: 'zend_hash_key' has no member named 'arKey' in apache2handler).</description>
+        <references>
+          <reference type="bugfix">75311</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Out-Of-Bounds Read in timelib_meridian()). (CVE-2017-16642)</description>
+        <references>
+          <reference type="bugfix">75055</reference>
+          <reference type="cve">CVE-2017-16642</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(The parameter of UConverter::getAliases() is not optional).</description>
+        <references>
+          <reference type="bugfix">75318</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mcrypt">
+      <change>
+        <description>(arcfour encryption stream filter crashes php).</description>
+        <references>
+          <reference type="bugfix">72535</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>Fixed incorrect reference counting.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(applied upstream patch for CVE-2016-1283).</description>
+        <references>
+          <reference type="bugfix">75207</reference>
+          <reference type="cve">CVE-2016-1283</reference>
+        </references>
+      </change>
+    </module>
+    <module id="litespeed">
+      <change>
+        <description>(Binary directory doesn't get created when building only litespeed SAPI).</description>
+        <references>
+          <reference type="bugfix">75248</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Missing program prefix and suffix).</description>
+        <references>
+          <reference type="bugfix">75251</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(SplDoublyLinkedList::setIteratorMode masks intern flags).</description>
+        <references>
+          <reference type="bugfix">73629</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

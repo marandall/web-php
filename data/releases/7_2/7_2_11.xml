@@ -1,45 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.11">
+<?xml version="1.0"?>
+<release version="1" id="7.2.11">
   <release>7.2.11</release>
   <date>11 Oct 2018</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>11</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.11.tar.bz2</filename>
       <name>PHP 7.2.11 (tar.bz2)</name>
+      <filename>php-7.2.11.tar.bz2</filename>
+      <date>11 Oct 2018</date>
       <sha256>4a0d7f402d07966b37a600796283f4ca4079d955d96d5bec024dd02009d8b4c5</sha256>
-      <md5/>
-      <date>11 Oct 2018</date>
     </source>
     <source>
-      <filename>php-7.2.11.tar.gz</filename>
       <name>PHP 7.2.11 (tar.gz)</name>
-      <sha256>180c63a9647c0a50d438b6bd5c7a8e7a11bceee8ad613a59d3ef15151fc158d4</sha256>
-      <md5/>
+      <filename>php-7.2.11.tar.gz</filename>
       <date>11 Oct 2018</date>
+      <sha256>180c63a9647c0a50d438b6bd5c7a8e7a11bceee8ad613a59d3ef15151fc158d4</sha256>
     </source>
     <source>
-      <filename>php-7.2.11.tar.xz</filename>
       <name>PHP 7.2.11 (tar.xz)</name>
-      <sha256>da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985</sha256>
-      <md5/>
+      <filename>php-7.2.11.tar.xz</filename>
       <date>11 Oct 2018</date>
+      <sha256>da1a705c0bc46410e330fc6baa967666c8cd2985378fb9707c01a8e33b01d985</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.11.
-This is a bugfix release.</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.11. This is a bugfix release.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(foreach inconsistent if array modified during loop).</description>
+        <references>
+          <reference type="bugfix">76800</reference>
+        </references>
+      </change>
+      <change>
+        <description>(method_exists on SPL iterator passthrough method corrupts memory).</description>
+        <references>
+          <reference type="bugfix">76901</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(Use curl_multi_wait() so that timeouts are respected).</description>
+        <references>
+          <reference type="bugfix">76480</reference>
+        </references>
+      </change>
+    </module>
+    <module id="iconv">
+      <change>
+        <description>(iconv_mime_encode Q-encoding longer than it should be).</description>
+        <references>
+          <reference type="bugfix">66828</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(ZendOPcache.MemoryBase periodically deleted by the OS).</description>
+        <references>
+          <reference type="bugfix">76832</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Compile-time evaluation of disabled function in opcache causes segfault).</description>
+        <references>
+          <reference type="bugfix">76796</reference>
+        </references>
+      </change>
+    </module>
+    <module id="POSIX">
+      <change>
+        <description>(posix_getgrnam fails to print details of group).</description>
+        <references>
+          <reference type="bugfix">75696</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(Wrong exception being thrown when using ReflectionMethod).</description>
+        <references>
+          <reference type="bugfix">74454</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Wrong error message when fopen FTP wrapped fails to open data connection).</description>
+        <references>
+          <reference type="bugfix">73457</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Bindto IPv6 works with file_get_contents but fails with stream_socket_client).</description>
+        <references>
+          <reference type="bugfix">74764</reference>
+        </references>
+      </change>
+      <change>
+        <description>(array_reduce is slow when $carry is large array).</description>
+        <references>
+          <reference type="bugfix">75533</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLRPC">
+      <change>
+        <description>(Can't build xmlrpc with expat).</description>
+        <references>
+          <reference type="bugfix">76886</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zlib">
+      <change>
+        <description>(php_zlib_inflate_filter() may not update bytes_consumed).</description>
+        <references>
+          <reference type="bugfix">75273</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

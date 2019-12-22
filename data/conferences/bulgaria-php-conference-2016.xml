@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>bulgaria-php-conference-2016</id>
+  <title>Bulgaria PHP Conference 2016</title>
+  <start_date>2016-10-07</start_date>
+  <end_date>2016-10-07</end_date>
+  <location country=""/>
+  <summary type="text">[Bulgaria PHP Conference](http://www.bgphp.org) is the premier PHP conference, gathering PHP and frontend developers and engineers from all around Europe. Co-organized by the Bulgaria PHP User Group and SiteGround web hosting, the conference is bringing internationally renowned experts from the PHP industry to talk about APIs, Frameworks, Security, Testing, Continuous Integration, and much more!</summary>
+  <content type="markdown">[Bulgaria PHP Conference](http://www.bgphp.org) is the premier PHP conference, gathering PHP and frontend developers and engineers from all around Europe. Co-organized by the Bulgaria PHP User Group and SiteGround web hosting, the conference is bringing internationally renowned experts from the PHP industry to talk about APIs, Frameworks, Security, Testing, Continuous Integration, and much more!
+
+Highlights:
+
+- 500+ passionate attendees
+- 27 world renowned speakers
+- 4 practical workshops
+- 3 actioned-packed days
+- 1 legendary after party
+- Games, JeoPHPardy, Hackaton
+- Amazing food, swag and gifts inlcuded
+ 
+[Get your discounted ticket today.](http://www.bgphp.org/tickets/) Price increases to the regular one (129 EUR) on September 1, 2016.
+
+Still not convinced? Here are [several reasons to head to Sofia for Bulgaria PHP Conference](http://www.bgphp.org/blogpost/reasons-to-attend-bgphp/).</content>
+  <updated>2016-08-22T18:00:00+03:00</updated>
+  <logo width="365" height="140">7daf64140354d081466b60835648fddc458517a0382a2a7833924742debdd99c.png</logo>
+</conference>

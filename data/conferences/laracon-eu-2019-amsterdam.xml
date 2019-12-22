@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>laracon-eu-2019-amsterdam</id>
+  <title>Laracon EU 2019 Amsterdam</title>
+  <start_date>2019-08-28</start_date>
+  <end_date>2019-08-28</end_date>
+  <location country=""/>
+  <summary type="text"> Amsterdam is hosting the flagship Laracon EU event from August 28th-30th. This years Laracon EU brings a full-day of training workshops (Aug 28) and a new format for two days of talks and more.</summary>
+  <content type="markdown"> Amsterdam is hosting the flagship Laracon EU event from August 28th-30th. This years Laracon EU brings a full-day of training workshops (Aug 28) and a new format for two days of talks and more.</content>
+  <updated>2019-03-11T17:26:39+00:00</updated>
+  <logo width="250" height="250">266363194a4fb5c2e96b0ea107c33ef1648a28d73ab3b70b62adb4350e8b5141.png</logo>
+</conference>

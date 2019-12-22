@@ -1,48 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.32">
+<?xml version="1.0"?>
+<release version="1" id="7.1.32">
   <release>7.1.32</release>
   <date>29 Aug 2019</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>32</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.32.tar.bz2</filename>
       <name>PHP 7.1.32 (tar.bz2)</name>
+      <filename>php-7.1.32.tar.bz2</filename>
+      <date>29 Aug 2019</date>
       <sha256>d7c7a1adddc75ac17f63349e966db25930b6b3ce736640349bea9e10909cab7a</sha256>
-      <md5/>
-      <date>29 Aug 2019</date>
     </source>
     <source>
-      <filename>php-7.1.32.tar.gz</filename>
       <name>PHP 7.1.32 (tar.gz)</name>
-      <sha256>6e51a2fc610352438b2a1c40310468a1e2b5baf2fff43be77f9f408a9111590c</sha256>
-      <md5/>
+      <filename>php-7.1.32.tar.gz</filename>
       <date>29 Aug 2019</date>
+      <sha256>6e51a2fc610352438b2a1c40310468a1e2b5baf2fff43be77f9f408a9111590c</sha256>
     </source>
     <source>
-      <filename>php-7.1.32.tar.xz</filename>
       <name>PHP 7.1.32 (tar.xz)</name>
-      <sha256>7f38b5bdaae3184d325a8c70e86c010afcc33651d15faafe277a0db6d2ea2741</sha256>
-      <md5/>
+      <filename>php-7.1.32.tar.xz</filename>
       <date>29 Aug 2019</date>
+      <sha256>7f38b5bdaae3184d325a8c70e86c010afcc33651d15faafe277a0db6d2ea2741</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.1.32. This is a security release.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.32. This is a security release.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed CVE-2019-13224 (don't allow different encodings for onig_new_deluxe) (stas)</description>
+        <references>
+          <reference type="cve">CVE-2019-13224</reference>
+        </references>
+      </change>
+    </module>
+    <module id="pcre">
+      <change>
+        <description>(heap use-after-free in pcrelib) (cmb)</description>
+        <references>
+          <reference type="bugfix">75457</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

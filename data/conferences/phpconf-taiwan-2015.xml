@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpconf-taiwan-2015</id>
+  <title>PHPConf Taiwan 2015</title>
+  <start_date>2015-10-09</start_date>
+  <end_date>2015-10-09</end_date>
+  <location country=""/>
+  <summary type="text">We are honored to announce [PHPConf Taiwan 2015](http://2015.phpconf.tw) will be held in Taipei, Taiwan on Oct. 9th. As the biggest PHP event in Taiwan, PHPConf attracts hundreds of developers and users in Taiwan to share their knowledge on PHP. This year, to celebrate the 20th anniversary of the invention of PHP and the release of PHP 7, Mr. Rasmus Lerdorf, creator of PHP, and Mr. Xinchen Hui, member from the PHP core developer team, are invited to be our keynote speakers. In addition, we also invited well-known developers in Taiwan to share their expertise and experience at PHPConf. The [two-track agenda](http://2015.phpconf.tw/#schedule-section) covers various topics, including Big Data, horizontal extension, software architecture, ORM and Async I/O&#x2026; etc.</summary>
+  <content type="markdown">We are honored to announce [PHPConf Taiwan 2015](http://2015.phpconf.tw) will be held in Taipei, Taiwan on Oct. 9th. As the biggest PHP event in Taiwan, PHPConf attracts hundreds of developers and users in Taiwan to share their knowledge on PHP. This year, to celebrate the 20th anniversary of the invention of PHP and the release of PHP 7, Mr. Rasmus Lerdorf, creator of PHP, and Mr. Xinchen Hui, member from the PHP core developer team, are invited to be our keynote speakers. In addition, we also invited well-known developers in Taiwan to share their expertise and experience at PHPConf. The [two-track agenda](http://2015.phpconf.tw/#schedule-section) covers various topics, including Big Data, horizontal extension, software architecture, ORM and Async I/O&#x2026; etc.
+
+For ticketing and other information, please visit &lt;http://2015.phpconf.tw&gt;. We look forward to seeing you in Taipei this October!</content>
+  <updated>2015-09-30T09:09:09+01:00</updated>
+  <logo width="200" height="108">0d4a7c593e050611479574385523c69f9b7d8aac0031eeac670d01c741dd527c.png</logo>
+</conference>

@@ -1,51 +1,248 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.2">
+<?xml version="1.0"?>
+<release version="1" id="7.0.2">
   <release>7.0.2</release>
   <date>07 Jan 2015</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>2</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.2.tar.bz2</filename>
       <name>PHP 7.0.2 (tar.bz2)</name>
-      <sha256>9b1b75fbd9c92c6b0003b234e550965038826d11ea1f430bf279964da9da2236</sha256>
-      <md5/>
+      <filename>php-7.0.2.tar.bz2</filename>
       <date>07 Jan 2016</date>
+      <sha256>9b1b75fbd9c92c6b0003b234e550965038826d11ea1f430bf279964da9da2236</sha256>
     </source>
     <source>
-      <filename>php-7.0.2.tar.gz</filename>
       <name>PHP 7.0.2 (tar.gz)</name>
-      <sha256>040198aef3dc5f17c253c1282160aabc6a05ca0b18b3d6fc9213970363083412</sha256>
-      <md5/>
+      <filename>php-7.0.2.tar.gz</filename>
       <date>07 Jan 2015</date>
+      <sha256>040198aef3dc5f17c253c1282160aabc6a05ca0b18b3d6fc9213970363083412</sha256>
     </source>
     <source>
-      <filename>php-7.0.2.tar.xz</filename>
       <name>PHP 7.0.2 (tar.xz)</name>
-      <sha256>556121271a34c442b48e3d7fa3d3bbb4413d91897abbb92aaeced4a7df5f2ab2</sha256>
-      <md5/>
+      <filename>php-7.0.2.tar.xz</filename>
       <date>07 Jan 2015</date>
+      <sha256>556121271a34c442b48e3d7fa3d3bbb4413d91897abbb92aaeced4a7df5f2ab2</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.2. 31 reported bugs has been fixed, including 6 security related issues.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(-DGC_BENCH=1 doesn't work on PHP7).</description>
+        <references>
+          <reference type="bugfix">71165</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation Fault: cleanup_unfinished_calls).</description>
+        <references>
+          <reference type="bugfix">71163</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ZEND_MOD_CONFLICTS("xdebug") doesn't work).</description>
+        <references>
+          <reference type="bugfix">71109</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault with return type hinting).</description>
+        <references>
+          <reference type="bugfix">71092</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed bug memleak in header_register_callback.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Local object in class method stays in memory for each call).</description>
+        <references>
+          <reference type="bugfix">71067</reference>
+        </references>
+      </change>
+      <change>
+        <description>(configure fails utf8_to_mutf7 test).</description>
+        <references>
+          <reference type="bugfix">66909</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Extension tests fail on dynamic ext dependency).</description>
+        <references>
+          <reference type="bugfix">70781</reference>
+        </references>
+      </change>
+      <change>
+        <description>(No check to duplicate zend_extension).</description>
+        <references>
+          <reference type="bugfix">71089</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid numeric literal parse error within highlight_string() function).</description>
+        <references>
+          <reference type="bugfix">71086</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect HT iterator invalidation causes iterator reuse).</description>
+        <references>
+          <reference type="bugfix">71154</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Negating zero does not produce negative zero).</description>
+        <references>
+          <reference type="bugfix">52355</reference>
+        </references>
+      </change>
+      <change>
+        <description>(var_export() exports float as integer).</description>
+        <references>
+          <reference type="bugfix">66179</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unary add on negative zero produces positive zero).</description>
+        <references>
+          <reference type="bugfix">70804</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(Sementation fault when using cURL with ZTS).</description>
+        <references>
+          <reference type="bugfix">71144</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DBA">
+      <change>
+        <description>Fixed key leak with invalid resource.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(filter_input(INPUT_ENV, ..) does not work).</description>
+        <references>
+          <reference type="bugfix">71063</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>Implemented FR [#55651](http://bugs.php.net/55651) (Option to ignore the returned FTP PASV address).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(fpm_log.c memory leak and buffer overflow). (CVE-2016-5114)</description>
+        <references>
+          <reference type="bugfix">70755</reference>
+          <reference type="cve">CVE-2016-5114</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Memory Read via gdImageRotateInterpolated Array Index Out of Bounds). (CVE-2016-1903)</description>
+        <references>
+          <reference type="bugfix">70976</reference>
+          <reference type="cve">CVE-2016-1903</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(mb_send_mail: Program terminated with signal SIGSEGV, Segmentation fault).</description>
+        <references>
+          <reference type="bugfix">71066</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Define in auto_prepend_file is overwrite).</description>
+        <references>
+          <reference type="bugfix">71127</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_replace with arrays creates [0] in replace array if not already set).</description>
+        <references>
+          <reference type="bugfix">71178</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Readline">
+      <change>
+        <description>(readline_completion_function corrupts static array on second TAB).</description>
+        <references>
+          <reference type="bugfix">71094</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Session GC may not remove obsolete session data).</description>
+        <references>
+          <reference type="bugfix">71122</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(ReflectionMethod for ArrayObject constructor returns wrong number of parameters).</description>
+        <references>
+          <reference type="bugfix">71077</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Performance Degradation in ArrayIterator with large arrays).</description>
+        <references>
+          <reference type="bugfix">71153</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Heap BufferOver Flow in escapeshell functions). (CVE-2016-1904)</description>
+        <references>
+          <reference type="bugfix">71270</reference>
+          <reference type="cve">CVE-2016-1904</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(Use After Free Vulnerability in WDDX Packet Deserialization).</description>
+        <references>
+          <reference type="bugfix">70661</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Session WDDX Packet Deserialization Type Confusion Vulnerability).</description>
+        <references>
+          <reference type="bugfix">70741</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLRPC">
+      <change>
+        <description>(Type Confusion Vulnerability in PHP_to_XMLRPC_worker).</description>
+        <references>
+          <reference type="bugfix">70728</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

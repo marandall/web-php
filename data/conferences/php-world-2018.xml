@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-world-2018</id>
+  <title>php[world] 2018</title>
+  <start_date>2018-11-14</start_date>
+  <end_date>2018-11-14</end_date>
+  <location country=""/>
+  <summary type="text">We are excited to announce the [5th annual php\[world\] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php\[architect\] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.</summary>
+  <content type="markdown">We are excited to announce the [5th annual php\[world\] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php\[architect\] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.
+
+This year we have streamlined our event [schedule](https://world.phparch.com/schedule?utm_campaign=phpnet) to add in even more content for you! 40 sessions, 6 workshops, and 12 birds of a feather sessions are waiting for you at this year's php\[world\] conference.
+
+We also have two days before the conference full of full-day (and two-day) training classes taught by experts in their field. Want to learn Laravel from the maintainers of Laravel Shift and Laravel Homestead? How about all the new features coming to WordPress with Gutenberg from core WordPress contributors? This and more is available this year!
+
+ We currently have [tickets available](https://world.phparch.com/register?utm_campaign=phpnet) for purchase and look forward to seeing you this fall in D.C.</content>
+  <updated>2018-08-16T14:31:44+00:00</updated>
+  <logo width="300" height="101">0b6c69b4a128fde59a2f631855637a0b178dc63c26cd7e72fa02e8bd847262f6.png</logo>
+</conference>

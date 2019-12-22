@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>darkmira-tour-php-2018</id>
+  <title>Darkmira Tour PHP 2018</title>
+  <start_date>2018-04-14</start_date>
+  <end_date>2018-04-14</end_date>
+  <location country=""/>
+  <summary type="text">With a lot of PHP's Rockstars, Darkmira Tour PHP 2018 is a conference focused on security and quality in PHP's ecosystems, in Brazil's capital in April 14-15. During the two days of Darkmira, you can interact with all the 400 participants along the coffee breaks, demonstrations and networking, and learn a lot about the PHP's ecosystems!</summary>
+  <content type="markdown">With a lot of PHP's Rockstars, Darkmira Tour PHP 2018 is a conference focused on security and quality in PHP's ecosystems, in Brazil's capital in April 14-15. During the two days of Darkmira, you can interact with all the 400 participants along the coffee breaks, demonstrations and networking, and learn a lot about the PHP's ecosystems!
+
+For more information, visit [https://php.darkmiratour.rocks/2018](https://php.darkmiratour.rocks/2018 "Darkmira Tour PHP 2018").</content>
+  <updated>2018-03-13T11:35:08-03:00</updated>
+  <logo width="400" height="242">23338d855130b8747697e26355ca0d47641ba508e1c81cc247a5e4c9ff291961.png</logo>
+</conference>

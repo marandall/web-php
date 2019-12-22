@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>midwest-php-2015</id>
+  <title>Midwest PHP 2015</title>
+  <start_date>2015-03-14</start_date>
+  <end_date>2015-03-14</end_date>
+  <location country=""/>
+  <summary type="text">Midwest PHP is taking over beautiful Minneapolis once again this year, bringing leading experts from around the world to talk about APIs, Frameworks, Security, Version Control, Testing, Continuous Integration, and much more! Midwest PHP welcomes developers of all levels and encourages diversity - we promise there will be something for everyone. So join us March 14-15th for great talks, great people, and of course great food! Register today at &lt;http://www.midwestphp.org&gt;</summary>
+  <content type="markdown">Midwest PHP is taking over beautiful Minneapolis once again this year, bringing leading experts from around the world to talk about APIs, Frameworks, Security, Version Control, Testing, Continuous Integration, and much more! Midwest PHP welcomes developers of all levels and encourages diversity - we promise there will be something for everyone. So join us March 14-15th for great talks, great people, and of course great food! Register today at &lt;http://www.midwestphp.org&gt;</content>
+  <updated>2015-01-10T05:09:25+01:00</updated>
+  <logo width="300" height="300">42452e98ab0b21fd68bda560c45c093f4981079dd4c344297a29334ec6f69c83.png</logo>
+</conference>

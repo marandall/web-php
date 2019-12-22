@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpconf-asia-2019</id>
+  <title>PHPConf.Asia 2019</title>
+  <start_date>2019-06-24</start_date>
+  <end_date>2019-06-24</end_date>
+  <location country=""/>
+  <summary type="text">**PHPConf.Asia 2019**</summary>
+  <content type="markdown">**PHPConf.Asia 2019**
+
+Announcing PHPConf.Asia 2019 - The Pan-Asian PHP Conference - Ticket Sales are Open!
+
+The fourth pan-Asian PHP conference will take place between 24th to 26th June 2019 in Singapore - the Garden City of the East! This is a single track, 2 days Conference (24th to 25th June 2019). Followed by 1 Workshop Day on 26th June 2019.
+
+Come and meet with the fastest growing PHP communities in Asia. More than 200 attendees are expected in this single track conference.
+
+Hop over to https://2019.phpconf.asia for more details!</content>
+  <updated>2019-04-04T12:51:44+08:00</updated>
+  <logo width="300" height="105">ad06e6681824d88bbdc994662fa28a6eeeabdbfac485d5f199fdedcbcb11f026.png</logo>
+</conference>

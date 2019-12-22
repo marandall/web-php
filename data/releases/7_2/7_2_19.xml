@@ -1,47 +1,142 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.19">
+<?xml version="1.0"?>
+<release version="1" id="7.2.19">
   <release>7.2.19</release>
   <date>30 May 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>19</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.19.tar.bz2</filename>
       <name>PHP 7.2.19 (tar.bz2)</name>
+      <filename>php-7.2.19.tar.bz2</filename>
+      <date>30 May 2019</date>
       <sha256>ebd0b1f375fe07ed4925acc213d2f5ef76a61bd5de174e7b666b98421a90a099</sha256>
-      <md5/>
-      <date>30 May 2019</date>
     </source>
     <source>
-      <filename>php-7.2.19.tar.gz</filename>
       <name>PHP 7.2.19 (tar.gz)</name>
-      <sha256>1cd2266a058f3224d3cba594540045542606996f026eeef96747f27f6b3d22b6</sha256>
-      <md5/>
+      <filename>php-7.2.19.tar.gz</filename>
       <date>30 May 2019</date>
+      <sha256>1cd2266a058f3224d3cba594540045542606996f026eeef96747f27f6b3d22b6</sha256>
     </source>
     <source>
-      <filename>php-7.2.19.tar.xz</filename>
       <name>PHP 7.2.19 (tar.xz)</name>
-      <sha256>4ffa2404a88d60e993a9fe69f829ebec3eb1e006de41b6048ce5e91bbeaa9282</sha256>
-      <md5/>
+      <filename>php-7.2.19.tar.xz</filename>
       <date>30 May 2019</date>
+      <sha256>4ffa2404a88d60e993a9fe69f829ebec3eb1e006de41b6048ce5e91bbeaa9282</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.19. This is a security release which also contains several minor bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.19.
-This is a security release which also contains several minor bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(DatePeriod::__construct() with invalid recurrence count value).</description>
+        <references>
+          <reference type="bugfix">77909</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(heap-buffer-overflow on php_jpg_get16)</description>
+        <references>
+          <reference type="bugfix">77988</reference>
+          <reference type="cve">CVE-2019-11040</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(php-fpm kill -USR2 not working).</description>
+        <references>
+          <reference type="bugfix">77934</reference>
+        </references>
+      </change>
+      <change>
+        <description>(static.php.net doesn't work anymore).</description>
+        <references>
+          <reference type="bugfix">77921</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imageantialias($image, false); does not work).</description>
+        <references>
+          <reference type="bugfix">77943</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Uninitialized read in gdImageCreateFromXbm)</description>
+        <references>
+          <reference type="bugfix">77973</reference>
+          <reference type="cve">CVE-2019-11038</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Iconv">
+      <change>
+        <description>(Out-of-bounds read in iconv.c:_php_iconv_mime_decode() due to integer overflow)</description>
+        <references>
+          <reference type="bugfix">78069</reference>
+          <reference type="cve">CVE-2019-11039</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>(Use after free with json serializer).</description>
+        <references>
+          <reference type="bugfix">77843</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>Fixed possible crashes, because of inconsistent PCRE cache and opcache SHM reset.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_MySQL">
+      <change>
+        <description>(Wrong meta pdo_type for bigint on LLP64).</description>
+        <references>
+          <reference type="bugfix">77944</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(Inconsistent reflection of Closure:::__invoke()).</description>
+        <references>
+          <reference type="bugfix">75186</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Wrong warning for session.sid_bits_per_character).</description>
+        <references>
+          <reference type="bugfix">77911</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(SplFileObject::__toString() may return array).</description>
+        <references>
+          <reference type="bugfix">77024</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite">
+      <change>
+        <description>(Bypassing open_basedir restrictions via file uris).</description>
+        <references>
+          <reference type="bugfix">77967</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

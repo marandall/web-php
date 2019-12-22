@@ -1,58 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.33">
+<?xml version="1.0"?>
+<release version="1" id="7.0.33">
   <release>7.0.33</release>
   <date>10 Jan 2019</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>33</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.33.tar.bz2</filename>
       <name>PHP 7.0.33 (tar.bz2)</name>
+      <filename>php-7.0.33.tar.bz2</filename>
+      <date>06 Dec 2018</date>
       <sha256>4933ea74298a1ba046b0246fe3771415c84dfb878396201b56cb5333abe86f07</sha256>
-      <md5/>
-      <date>06 Dec 2018</date>
     </source>
     <source>
-      <filename>php-7.0.33.tar.gz</filename>
       <name>PHP 7.0.33 (tar.gz)</name>
-      <sha256>d71a6ecb6b13dc53fed7532a7f8f949c4044806f067502f8fb6f9facbb40452a</sha256>
-      <md5/>
+      <filename>php-7.0.33.tar.gz</filename>
       <date>06 Dec 2018</date>
+      <sha256>d71a6ecb6b13dc53fed7532a7f8f949c4044806f067502f8fb6f9facbb40452a</sha256>
     </source>
     <source>
-      <filename>php-7.0.33.tar.xz</filename>
       <name>PHP 7.0.33 (tar.xz)</name>
-      <sha256>ab8c5be6e32b1f8d032909dedaaaa4bbb1a209e519abb01a52ce3914f9a13d96</sha256>
-      <md5/>
+      <filename>php-7.0.33.tar.xz</filename>
       <date>06 Dec 2018</date>
+      <sha256>ab8c5be6e32b1f8d032909dedaaaa4bbb1a209e519abb01a52ce3914f9a13d96</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">Please note that according to the [PHP version support timelines](http://php.net/supported-versions.php), PHP 7.0.33 is the last scheduled release of PHP 7.0 branch. There may be additional release if we discover important security issues that warrant it, otherwise this release will be the final one in the PHP 7.0 branch. If your PHP installation is based on PHP 7.0, it may be a good time to start making the plans for the upgrade to PHP 7.1, PHP 7.2 or PHP 7.3.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-7.0.33. Five security-related issues were fixed in this release.
-All PHP 7.0 users are encouraged to upgrade to this version.
-</p>
-
-
-<p>Please note that according to the <a href="http://php.net/supported-versions.php">PHP version support timelines</a>,
-PHP 7.0.33 is the last scheduled release of PHP 7.0 branch. There may be additional release if we discover
-important security issues that warrant it, otherwise this release will be the final one in the PHP 7.0 branch.
-If your PHP installation is based on PHP 7.0, it may be a good time to start making the plans for the upgrade
-to PHP 7.1, PHP 7.2 or PHP 7.3.
-</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Segfault when using convert.quoted-printable-encode filter).</description>
+        <references>
+          <reference type="bugfix">77231</reference>
+        </references>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(null pointer dereference in imap_mail).</description>
+        <references>
+          <reference type="bugfix">77020</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imap_open allows to run arbitrary shell commands via mailbox parameter). (CVE-2018-19518)</description>
+        <references>
+          <reference type="bugfix">77153</reference>
+          <reference type="cve">CVE-2018-19518</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(PharData always creates new files with mode 0666).</description>
+        <references>
+          <reference type="bugfix">77022</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap Buffer Overflow (READ: 4) in phar_parse_pharfile). (CVE-2018-20783)</description>
+        <references>
+          <reference type="bugfix">77143</reference>
+          <reference type="cve">CVE-2018-20783</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

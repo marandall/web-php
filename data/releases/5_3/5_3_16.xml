@@ -1,53 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.16">
+<?xml version="1.0"?>
+<release version="1" id="5.3.16">
   <release>5.3.16</release>
   <date>16 Aug 2012</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>16</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.16.tar.bz2</filename>
       <name>PHP 5.3.16 (tar.bz2)</name>
-      <sha256/>
-      <md5>99cfd78531643027f60c900e792d21be</md5>
+      <filename>php-5.3.16.tar.bz2</filename>
       <date>16 Aug 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.3.16.tar.gz</filename>
       <name>PHP 5.3.16 (tar.gz)</name>
-      <sha256/>
-      <md5>59b776edeac2897ebe3712dcc94b6706</md5>
+      <filename>php-5.3.16.tar.gz</filename>
       <date>16 Aug 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.3.16 binaries and source</filename>
       <name>Windows 5.3.16 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.3.16. About 5 bugs were fixed. All users of PHP are encouraged to upgrade to
-PHP 5.4.6. Alternatively, PHP 5.3.16 is recommended for those wishing to remain
-on the 5.3 series.</p>
-
-<p>For source downloads of PHP 5.3.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.16">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(register_shutdown_function and extending class).</description>
+        <references>
+          <reference type="bugfix">62763</reference>
+        </references>
+      </change>
+      <change>
+        <description>(dangling pointers made by zend_disable_class).</description>
+        <references>
+          <reference type="bugfix">62744</reference>
+        </references>
+      </change>
+      <change>
+        <description>(munmap() is called with the incorrect length).</description>
+        <references>
+          <reference type="bugfix">62716</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php binaries installed as binary.dSYM).</description>
+        <references>
+          <reference type="bugfix">62460</reference>
+        </references>
+      </change>
+      <change>
+        <description>(--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</description>
+        <references>
+          <reference type="bugfix">60194</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CURL">
+      <change>
+        <description>(curl_copy_handle segfault with CURLOPT_FILE).</description>
+        <references>
+          <reference type="bugfix">62839</reference>
+        </references>
+      </change>
+      <change>
+        <description>(curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).</description>
+        <references>
+          <reference type="bugfix">62499</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DateTime">
+      <change>
+        <description>(Segfault in DateInterval class when extended).</description>
+        <references>
+          <reference type="bugfix">62500</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Enchant">
+      <change>
+        <description>(enchant_dict_quick_check() destroys zval, but fails to initialize it).</description>
+        <references>
+          <reference type="bugfix">62838</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Wrong return datatype in PDO::inTransaction()).</description>
+        <references>
+          <reference type="bugfix">62685</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(ReflectionParameter::isDefaultValueAvailable() wrong result).</description>
+        <references>
+          <reference type="bugfix">62715</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>Fixed bug (segfault due to retval is not initialized).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</description>
+        <references>
+          <reference type="bugfix">62616</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonycon-lisbon-2018</id>
+  <title>SymfonyCon Lisbon 2018</title>
+  <start_date>2018-12-06</start_date>
+  <end_date>2018-12-06</end_date>
+  <location country=""/>
+  <summary type="text">Symfony is proud to organize the sixth edition of the SymfonyCon, the international Symfony conference. This year, to celebrate Symfony, we decided to bring the entire community to Portugal and discover the amazing city of Lisbon. If you like Symfony and share fun with professionals, this is where you want to be on December!</summary>
+  <content type="markdown">Symfony is proud to organize the sixth edition of the SymfonyCon, the international Symfony conference. This year, to celebrate Symfony, we decided to bring the entire community to Portugal and discover the amazing city of Lisbon. If you like Symfony and share fun with professionals, this is where you want to be on December!
+
+We look forward to welcoming you to Lisbon, capital of Portugal and bordered by the Atlantic Ocean. Join us for talks, workshops, discussions and other serious work around Symfony and its environment, then sharing this very special Portuguese atmosphere... And of course, celebrate the community reunion!</content>
+  <updated>2018-06-25T14:46:40+02:00</updated>
+  <logo width="280" height="120">8c94aac089ed47dbf485c0d6e71b90cc316b0c2b5eadb231e1763dcbe7c7b1fd.png</logo>
+</conference>

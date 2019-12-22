@@ -1,53 +1,373 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.12">
+<?xml version="1.0"?>
+<release version="1" id="7.0.12">
   <release>7.0.12</release>
   <date>13 Oct 2016</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>12</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.12.tar.bz2</filename>
       <name>PHP 7.0.12 (tar.bz2)</name>
+      <filename>php-7.0.12.tar.bz2</filename>
+      <date>13 Oct 2016</date>
       <sha256>38c47294fe8fb239b0230dc63a93c3e4044f472ab93b5dff8b65feb4103a6a27</sha256>
-      <md5/>
-      <date>13 Oct 2016</date>
     </source>
     <source>
-      <filename>php-7.0.12.tar.gz</filename>
       <name>PHP 7.0.12 (tar.gz)</name>
-      <sha256>c4693cc363b4bbc7224294cc94faf3598e616cbe8540dd6975f68c7d3c52682f</sha256>
-      <md5/>
+      <filename>php-7.0.12.tar.gz</filename>
       <date>13 Oct 2016</date>
+      <sha256>c4693cc363b4bbc7224294cc94faf3598e616cbe8540dd6975f68c7d3c52682f</sha256>
     </source>
     <source>
-      <filename>php-7.0.12.tar.xz</filename>
       <name>PHP 7.0.12 (tar.xz)</name>
-      <sha256>f3d6c49e1c242e5995dec15e503fde996c327eb86cd7ec45c690e93c971b83ff</sha256>
-      <md5/>
+      <filename>php-7.0.12.tar.xz</filename>
       <date>13 Oct 2016</date>
+      <sha256>f3d6c49e1c242e5995dec15e503fde996c327eb86cd7ec45c690e93c971b83ff</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.12. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Heap Buffer Overflow in virtual_popen of zend_virtual_cwd.c).</description>
+        <references>
+          <reference type="bugfix">73025</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bounds global memory read in BF_crypt triggered by password_verify).</description>
+        <references>
+          <reference type="bugfix">72703</reference>
+        </references>
+      </change>
+      <change>
+        <description>(crypt broken when salt is 'too' long).</description>
+        <references>
+          <reference type="bugfix">73058</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid free in extension trait).</description>
+        <references>
+          <reference type="bugfix">69579</reference>
+        </references>
+      </change>
+      <change>
+        <description>(segfault on undefined function).</description>
+        <references>
+          <reference type="bugfix">73156</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP hangs if error handler throws while accessing undef const in default value).</description>
+        <references>
+          <reference type="bugfix">73163</reference>
+        </references>
+      </change>
+      <change>
+        <description>(parse error: Invalid numeric literal).</description>
+        <references>
+          <reference type="bugfix">73172</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Write out of bounds at number_format).</description>
+        <references>
+          <reference type="bugfix">73240</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free in PHP7 unserialize()).</description>
+        <references>
+          <reference type="bugfix">73147</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memcpy negative size parameter php_resolve_path).</description>
+        <references>
+          <reference type="bugfix">73189</reference>
+        </references>
+      </change>
+    </module>
+    <module id="BCmath">
+      <change>
+        <description>(memcpy negative parameter _bc_new_num_ex).</description>
+        <references>
+          <reference type="bugfix">73190</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>(Cannot pass parameter 1 by reference).</description>
+        <references>
+          <reference type="bugfix">73126</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Unserializing DateInterval object may lead to __toString invocation).</description>
+        <references>
+          <reference type="bugfix">73091</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(missing NULL check in dom_document_save_html).</description>
+        <references>
+          <reference type="bugfix">73150</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(Bad filter for the flags FILTER_FLAG_NO_RES_RANGE and FILTER_FLAG_NO_PRIV_RANGE).</description>
+        <references>
+          <reference type="bugfix">72972</reference>
+        </references>
+      </change>
+      <change>
+        <description>(default option ignored when object passed to int filter).</description>
+        <references>
+          <reference type="bugfix">73054</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagetruecolortopalette: white is duplicated in palette).</description>
+        <references>
+          <reference type="bugfix">67325</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagettftext broken on transparent background w/o alphablending).</description>
+        <references>
+          <reference type="bugfix">50194</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in gdImageWebpCtx of gd_webp.c).</description>
+        <references>
+          <reference type="bugfix">73003</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagettfbbox gives incorrect values for bounding box).</description>
+        <references>
+          <reference type="bugfix">53504</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagegd2() ignores 3rd param if 4 are given).</description>
+        <references>
+          <reference type="bugfix">73157</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagegd2() writes wrong chunk sizes on boundaries).</description>
+        <references>
+          <reference type="bugfix">73155</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagegd2(): unrecognized formats may result in corrupted files).</description>
+        <references>
+          <reference type="bugfix">73159</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecreatefromgd2() may leak memory).</description>
+        <references>
+          <reference type="bugfix">73161</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(add mitigation for ICU int overflow).</description>
+        <references>
+          <reference type="bugfix">73218</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(mb_substr only takes 32-bit signed integer).</description>
+        <references>
+          <reference type="bugfix">66797</reference>
+        </references>
+      </change>
+      <change>
+        <description>(mb_convert_variables() cannot detect recursion).</description>
+        <references>
+          <reference type="bugfix">66964</reference>
+        </references>
+      </change>
+      <change>
+        <description>(mbstring.internal_encoding doesn't inherit default_charset).</description>
+        <references>
+          <reference type="bugfix">72992</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(PHP Crashes When Modifying Array Containing MySQLi Result Data).</description>
+        <references>
+          <reference type="bugfix">72489</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Memory leak in zend_accel_blacklist_update_regexp() function).</description>
+        <references>
+          <reference type="bugfix">72982</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(Invalid path SNI_server_certs causes segfault).</description>
+        <references>
+          <reference type="bugfix">73072</reference>
+        </references>
+      </change>
+      <change>
+        <description>(crash in openssl_random_pseudo_bytes function).</description>
+        <references>
+          <reference type="bugfix">73276</reference>
+        </references>
+      </change>
+      <change>
+        <description>(crash in openssl_encrypt function).</description>
+        <references>
+          <reference type="bugfix">73275</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Bundled PCRE doesn't compile because JIT isn't supported on s390).</description>
+        <references>
+          <reference type="bugfix">73121</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap overflow in php_pcre_replace_impl).</description>
+        <references>
+          <reference type="bugfix">73174</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>(Never quote values as raw binary data).</description>
+        <references>
+          <reference type="bugfix">72414</reference>
+        </references>
+      </change>
+      <change>
+        <description>Allow \PDO::setAttribute() to set query timeouts.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Handle SQLDECIMAL/SQLNUMERIC types, which are used by later TDS versions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Add common PDO test suite.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Free error and message strings when cleaning up PDO instances.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(\PDOStatement::nextRowset() should succeed when all rows in current rowset haven't been fetched).</description>
+        <references>
+          <reference type="bugfix">67130</reference>
+        </references>
+      </change>
+      <change>
+        <description>Ignore potentially misleading dberr values.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="phpdbg">
+      <change>
+        <description>(phpdbg_prompt.c undefined reference to DL_LOAD).</description>
+        <references>
+          <reference type="bugfix">72996</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed next command not stopping when leaving function.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Session does not report invalid uid for files save handler).</description>
+        <references>
+          <reference type="bugfix">68015</reference>
+        </references>
+      </change>
+      <change>
+        <description>(session_destroy null dereference in ps_files_path_create).</description>
+        <references>
+          <reference type="bugfix">73100</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SimpleXML">
+      <change>
+        <description>(NULL pointer dereference in SimpleXMLElement::asXML()).</description>
+        <references>
+          <reference type="bugfix">73293</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Soap Server Member variables reference bug).</description>
+        <references>
+          <reference type="bugfix">71711</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Using references in arrays doesn't work like expected).</description>
+        <references>
+          <reference type="bugfix">71996</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>, Fixed bug [#73258](http://bugs.php.net/73258) (SplObjectStorage unserialize allows use of non-object as key).</description>
+        <references>
+          <reference type="bugfix">73257</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite3">
+      <change>
+        <description>Updated bundled SQLite3 to 3.14.2.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(Depacking with wrong password leaves 0 length files).</description>
+        <references>
+          <reference type="bugfix">70752</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

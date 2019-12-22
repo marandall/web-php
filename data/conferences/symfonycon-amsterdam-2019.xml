@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonycon-amsterdam-2019</id>
+  <title>SymfonyCon Amsterdam 2019</title>
+  <start_date>2019-11-21</start_date>
+  <end_date>2019-11-21</end_date>
+  <location country=""/>
+  <summary type="text"> &lt;p&gt;Symfony is proud to organize the seventh edition of the SymfonyCon, the &lt;strong&gt;international Symfony conference&lt;/strong&gt;. This year, we decided to bring the entire community to the Netherlands and discover the amazing city of &lt;strong&gt;Amsterdam&lt;/strong&gt;. If you like Symfony and share fun with professionals, this is where you want to be on November!&lt;/p&gt; &lt;p&gt;We look forward to welcoming you to Amsterdam, capital of the Netherlands. Join us for talks, workshops, discussions and other serious work around Symfony and its environment. And of course, celebrate the community reunion!&lt;/p&gt; &lt;p&gt;SymfonyCon Amsterdam is a 5-day event from November 19th to November 23rd:&lt;/p&gt; &lt;p&gt;Two-day workshop: Tuesday, November 19th and Wednesday, November 20th&lt;/p&gt; &lt;p&gt;Two-day conference: Thursday, November 21st and Friday, November 22nd&lt;/p&gt; &lt;p&gt;One hackday: Saturday, November 23rd&lt;/p&gt;</summary>
+  <content type="markdown"> &lt;p&gt;Symfony is proud to organize the seventh edition of the SymfonyCon, the &lt;strong&gt;international Symfony conference&lt;/strong&gt;. This year, we decided to bring the entire community to the Netherlands and discover the amazing city of &lt;strong&gt;Amsterdam&lt;/strong&gt;. If you like Symfony and share fun with professionals, this is where you want to be on November!&lt;/p&gt; &lt;p&gt;We look forward to welcoming you to Amsterdam, capital of the Netherlands. Join us for talks, workshops, discussions and other serious work around Symfony and its environment. And of course, celebrate the community reunion!&lt;/p&gt; &lt;p&gt;SymfonyCon Amsterdam is a 5-day event from November 19th to November 23rd:&lt;/p&gt; &lt;p&gt;Two-day workshop: Tuesday, November 19th and Wednesday, November 20th&lt;/p&gt; &lt;p&gt;Two-day conference: Thursday, November 21st and Friday, November 22nd&lt;/p&gt; &lt;p&gt;One hackday: Saturday, November 23rd&lt;/p&gt;</content>
+  <updated>2019-04-02T10:28:14+00:00</updated>
+  <logo width="280" height="106">e045f6442ea5717521335132dfb75e382ebb950023aa50a6f19fd744c11da367.png</logo>
+</conference>

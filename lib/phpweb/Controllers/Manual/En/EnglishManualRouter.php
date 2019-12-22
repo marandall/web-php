@@ -8,6 +8,7 @@
 	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services\Http\HttpFetcher;
 	use phpweb\UI\Templates\BasicPanel;
 	use phpweb\UI\Templates\FreshTemplate;
 	
@@ -19,6 +20,12 @@
 	 */
 	class EnglishManualRouter implements ControllerInterface
 	{
+		private HttpFetcher $http_fetcher;
+		
+		public function __construct(HttpFetcher $http_fetcher) {
+			$this->http_fetcher = $http_fetcher;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -30,7 +37,7 @@
 			$manual_path = $request->getAttributesBag()->getString('manual_path');
 			
 			$manual_uri = 'https://www.php.net/manual/en/' . $manual_path;
-			$contents   = @file_get_contents($manual_uri);
+			$contents   = $this->http_fetcher->fetch($manual_uri);
 			if ($contents === false) {
 				die('Manual page could not be fetched');
 			}
@@ -53,7 +60,7 @@
 			);
 			
 			if ($inner === null) {
-				return $this->badRequestResponse('Could not parse the HTML');
+				die('Could not parse the HTML');
 			}
 			
 			$menu_html = $this->clip(

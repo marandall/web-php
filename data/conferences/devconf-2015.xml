@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>devconf-2015</id>
+  <title>DevConf 2015</title>
+  <start_date>2015-06-20</start_date>
+  <end_date>2015-06-20</end_date>
+  <location country=""/>
+  <summary type="text"> DevConf 2015 in Moscow, Russia on Jun 19-20</summary>
+  <content type="markdown"> DevConf 2015 in Moscow, Russia on Jun 19-20
+
+ DevConf is the ultimate meeting place for russian-speaking web-developers, combining several language-specific conferences under one roof.
+
+ This year DevConf will include the following sections:
+
+- DevConf::PHP();
+- DevConf::Ruby();
+- DevConf::Python();
+- DevConf::Javascript();
+- DevConf::Storage();
+ 
+ Each section will feature several talks from the active contributors/authors of the language. Among the invited speakers are Dmitry Stogov (Zend), Egor Homakov (Sakurity), Sveta Smirnova (Percona), speakers from 1C, Avito, Badoo, LinguaLeo, Mail.ru, Wamba and other companies. See more details on [the official website](http://devconf.ru).</content>
+  <updated>2015-05-25T16:57:52+00:00</updated>
+  <logo width="373" height="86">908411fa41b3e26c9d64807817b58d051622cc97c3fb9cd7b3b3aa8c43924dc3.png</logo>
+</conference>

@@ -1,55 +1,400 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.6">
+<?xml version="1.0"?>
+<release version="1" id="7.0.6">
   <release>7.0.6</release>
   <date>28 Apr 2016</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>6</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.6.tar.bz2</filename>
       <name>PHP 7.0.6 (tar.bz2)</name>
+      <filename>php-7.0.6.tar.bz2</filename>
+      <date>28 Apr 2016</date>
       <sha256>14ddf192a9965c858c1e742a61456be2f34a4db87556172c0d76f08de96329b7</sha256>
-      <md5/>
-      <date>28 Apr 2016</date>
     </source>
     <source>
-      <filename>php-7.0.6.tar.gz</filename>
       <name>PHP 7.0.6 (tar.gz)</name>
-      <sha256>f6b47cb3e02530d96787ae5c7888aefbd1db6ae4164d68b88808ee6f4da94277</sha256>
-      <md5/>
+      <filename>php-7.0.6.tar.gz</filename>
       <date>28 Apr 2016</date>
+      <sha256>f6b47cb3e02530d96787ae5c7888aefbd1db6ae4164d68b88808ee6f4da94277</sha256>
     </source>
     <source>
-      <filename>php-7.0.6.tar.xz</filename>
       <name>PHP 7.0.6 (tar.xz)</name>
-      <sha256>1b237a9455e5476a425dbb9d99966bad68107747c601958cb9558a7fb49ab419</sha256>
-      <md5/>
+      <filename>php-7.0.6.tar.xz</filename>
       <date>28 Apr 2016</date>
+      <sha256>1b237a9455e5476a425dbb9d99966bad68107747c601958cb9558a7fb49ab419</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.0.6. This is a security release. Several security bugs were fixed in this release, including
+
+- CVE-2016-3078
+- CVE-2016-3074</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.6. This is a security release. Several security bugs were fixed in
-     this release, including</p>
-     <ul>
-         <li>CVE-2016-3078</li>
-         <li>CVE-2016-3074</li>
-     </ul>
-     <p>
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(_zval_dtor_func: Assertion `(arr)-&gt;gc.refcount &lt;= 1' failed).</description>
+        <references>
+          <reference type="bugfix">71930</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Crash on assert(new class{})).</description>
+        <references>
+          <reference type="bugfix">71922</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Reference is lost in "switch").</description>
+        <references>
+          <reference type="bugfix">71914</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Interfaces allow final and abstract functions).</description>
+        <references>
+          <reference type="bugfix">71871</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zend_objects_store_call_destructors operates on realloced memory, crashing).</description>
+        <references>
+          <reference type="bugfix">71859</reference>
+        </references>
+      </change>
+      <change>
+        <description>(EG(error_zval) is not handled well).</description>
+        <references>
+          <reference type="bugfix">71841</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Multiple Heap Overflows in php_raw_url_encode/ php_url_encode).</description>
+        <references>
+          <reference type="bugfix">71750</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Null coalescing operator and ArrayAccess).</description>
+        <references>
+          <reference type="bugfix">71731</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault on ZTS with gethostbyname).</description>
+        <references>
+          <reference type="bugfix">71609</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Inheritance, traits and interfaces).</description>
+        <references>
+          <reference type="bugfix">71414</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Null coalescing operator and magic).</description>
+        <references>
+          <reference type="bugfix">71359</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cannot access array keys while uksort()).</description>
+        <references>
+          <reference type="bugfix">71334</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ArrayAccess, isset() and the offsetExists method).</description>
+        <references>
+          <reference type="bugfix">69659</reference>
+        </references>
+      </change>
+      <change>
+        <description>(__debugInfo with empty string for key gives error).</description>
+        <references>
+          <reference type="bugfix">69537</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ArrayObject and isset are not friends).</description>
+        <references>
+          <reference type="bugfix">62059</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Decorated/Nested Generator is Uncloseable in Finally).</description>
+        <references>
+          <reference type="bugfix">71980</reference>
+        </references>
+      </change>
+    </module>
+    <module id="BCmath">
+      <change>
+        <description>(bcpowmod accepts negative scale and corrupts _one_ definition). (CVE-2016-4537, CVE-2016-4538)</description>
+        <references>
+          <reference type="bugfix">72093</reference>
+          <reference type="cve">CVE-2016-4537</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Curl">
+      <change>
+        <description>(CURLOPT_NOPROXY applied as long instead of string).</description>
+        <references>
+          <reference type="bugfix">71831</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DateInterval::format Segmentation fault).</description>
+        <references>
+          <reference type="bugfix">71889</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(Out of bounds heap read access in exif header processing). (CVE-2016-4542, CVE-2016-4543, CVE-2016-4544)</description>
+        <references>
+          <reference type="bugfix">72094</reference>
+          <reference type="cve">CVE-2016-4542</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(libgd: signedness vulnerability). (CVE-2016-3074)</description>
+        <references>
+          <reference type="bugfix">71912</reference>
+          <reference type="cve">CVE-2016-3074</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(IntlDateFormatter looses locale if pattern is set via constructor).</description>
+        <references>
+          <reference type="bugfix">71516</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Missing constant: IntlChar::NO_NUMERIC_VALUE).</description>
+        <references>
+          <reference type="bugfix">70455</reference>
+        </references>
+      </change>
+      <change>
+        <description>, #70452 (Inconsistencies in return values of IntlChar methods).</description>
+        <references>
+          <reference type="bugfix">70451</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Stackoverflow in datefmt_create).</description>
+        <references>
+          <reference type="bugfix">68893</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Locale::lookup incorrectly returns en or en_US if locale is empty).</description>
+        <references>
+          <reference type="bugfix">66289</reference>
+        </references>
+      </change>
+      <change>
+        <description>(selectordinal doesn't work with named parameters).</description>
+        <references>
+          <reference type="bugfix">70484</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out-of-bounds reads in zif_grapheme_stripos with negative offset). (CVE-2016-4540, CVE-2016-4541)</description>
+        <references>
+          <reference type="bugfix">72061</reference>
+          <reference type="cve">CVE-2016-4540</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(Script hangs after max_execution_time).</description>
+        <references>
+          <reference type="bugfix">63171</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(null ptr deref ZEND_RETURN_SPEC_CONST_HANDLER).</description>
+        <references>
+          <reference type="bugfix">71843</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Own PDOStatement implementation ignore __call()).</description>
+        <references>
+          <reference type="bugfix">52098</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Quotes inside comments not properly handled).</description>
+        <references>
+          <reference type="bugfix">71447</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>(dblib_handle_quoter needs to allocate an extra byte).</description>
+        <references>
+          <reference type="bugfix">71943</reference>
+        </references>
+      </change>
+      <change>
+        <description>Add DBLIB-specific attributes for controlling timeouts.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(pdo_pgsql inefficient when getColumnMeta() is used).</description>
+        <references>
+          <reference type="bugfix">62498</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(pg_fetch_object binds parameters before call constructor).</description>
+        <references>
+          <reference type="bugfix">71820</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Function pg_insert does not insert when column type = inet).</description>
+        <references>
+          <reference type="bugfix">71998</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(Nested foreach assign-by-reference creates broken variables).</description>
+        <references>
+          <reference type="bugfix">71986</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Deserializing serialized SPLObjectStorage-Object can't access properties in PHP).</description>
+        <references>
+          <reference type="bugfix">71838</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Double-free in SplDoublyLinkedList::offsetSet).</description>
+        <references>
+          <reference type="bugfix">71735</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cloned SplObjectStorage with overwritten getHash fails offsetExists()).</description>
+        <references>
+          <reference type="bugfix">67582</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SPL autoloader breaks class_exists()).</description>
+        <references>
+          <reference type="bugfix">52339</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(array_fill optimization breaks implementation).</description>
+        <references>
+          <reference type="bugfix">72116</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Returning the same var twice from __sleep() produces broken serialized data).</description>
+        <references>
+          <reference type="bugfix">71995</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unserialize crushes on restore object reference).</description>
+        <references>
+          <reference type="bugfix">71940</reference>
+        </references>
+      </change>
+      <change>
+        <description>(str_replace returns an incorrect resulting array after a foreach by reference).</description>
+        <references>
+          <reference type="bugfix">71969</reference>
+        </references>
+      </change>
+      <change>
+        <description>(header_register_callback() and register_shutdown_function()).</description>
+        <references>
+          <reference type="bugfix">71891</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Null pointer deref (segfault) in stream_context_get_default).</description>
+        <references>
+          <reference type="bugfix">71884</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unserialize accepts wrongly data).</description>
+        <references>
+          <reference type="bugfix">71840</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Wrong arrays behaviour).</description>
+        <references>
+          <reference type="bugfix">71837</reference>
+        </references>
+      </change>
+      <change>
+        <description>(substr_replace bug, string length).</description>
+        <references>
+          <reference type="bugfix">71827</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_crypt() crashes if crypt_r() does not exist or _REENTRANT is not defined).</description>
+        <references>
+          <reference type="bugfix">67512</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(xml_parse_into_struct segmentation fault). (CVE-2016-4539)</description>
+        <references>
+          <reference type="bugfix">72099</reference>
+          <reference type="cve">CVE-2016-4539</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(integer overflow in ZipArchive::getFrom*). (CVE-2016-3078)</description>
+        <references>
+          <reference type="bugfix">71923</reference>
+          <reference type="cve">CVE-2016-3078</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

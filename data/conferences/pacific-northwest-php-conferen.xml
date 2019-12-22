@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>pacific-northwest-php-conferen</id>
+  <title>Pacific Northwest PHP Conference 2015</title>
+  <start_date>2015-07-20</start_date>
+  <end_date>2015-07-20</end_date>
+  <location country=""/>
+  <summary type="text"> Our *3-day* event will be overflowing with awesome sauce as we hear from world-renowned [speakers](http://www.pnwphp.com/speakers) from the PHP community and companies like Amazon, AOL, Facebook, Google, Microsoft, Oracle, and Zend. With [topics](http://www.pnwphp.com/tags) ranging from continuous delivery to the cloud, you'll be full to the brim with new knowledge to take home</summary>
+  <content type="markdown"> Our *3-day* event will be overflowing with awesome sauce as we hear from world-renowned [speakers](http://www.pnwphp.com/speakers) from the PHP community and companies like Amazon, AOL, Facebook, Google, Microsoft, Oracle, and Zend. With [topics](http://www.pnwphp.com/tags) ranging from continuous delivery to the cloud, you'll be full to the brim with new knowledge to take home
+
+ For tickets and more information: [http://www.pnwphp.com/](http://www.pnwphp.com).</content>
+  <updated>2015-07-10T02:00:00+01:00</updated>
+  <logo width="200" height="195">a42a4e52aad9757ba9cdcfe0a1600f077ef7fd74faa1548168f1e9d655767c67.png</logo>
+</conference>

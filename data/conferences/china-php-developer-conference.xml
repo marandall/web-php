@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>china-php-developer-conference</id>
+  <title>China PHP Developer Conference</title>
+  <start_date>2017-06-10</start_date>
+  <end_date>2017-06-10</end_date>
+  <location country=""/>
+  <summary type="text">China PHP Developer Conference which organized by the DevLink will hold in Beijing on June 10th and 11th.</summary>
+  <content type="markdown">China PHP Developer Conference which organized by the DevLink will hold in Beijing on June 10th and 11th.
+
+After &#x201C;The High Performance PHP&#x201D;, It&#x2019;s the another global developer interchange activity that DevLink hosts.
+
+During this conference, we will discuss and share the topic of "The High Availability PHP"
+
+More information about the China PHP Conference at: [php2017.devlink.cn](http://php2017.devlink.cn/)</content>
+  <updated>2017-06-06T19:36:21+00:00</updated>
+  <logo width="350" height="135">ebd7116d976c769ab4ca833e13ffab1e0e13c7e09bf2393dfb712fd75102e11b.jpg</logo>
+</conference>

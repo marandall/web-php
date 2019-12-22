@@ -1,53 +1,274 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.8">
+<?xml version="1.0"?>
+<release version="1" id="7.0.8">
   <release>7.0.8</release>
   <date>23 Jun 2016</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.8.tar.bz2</filename>
       <name>PHP 7.0.8 (tar.bz2)</name>
+      <filename>php-7.0.8.tar.bz2</filename>
+      <date>23 Jun 2016</date>
       <sha256>66dc7ba388490e07b1313fe3a06b1fa822e1310585fe29f4909995f131e27c8d</sha256>
-      <md5/>
-      <date>23 Jun 2016</date>
     </source>
     <source>
-      <filename>php-7.0.8.tar.gz</filename>
       <name>PHP 7.0.8 (tar.gz)</name>
-      <sha256>1f024fa6d87594b99fa312e3185c357dcffa42e07d21c726f41d1fa6f773720b</sha256>
-      <md5/>
+      <filename>php-7.0.8.tar.gz</filename>
       <date>23 Jun 2016</date>
+      <sha256>1f024fa6d87594b99fa312e3185c357dcffa42e07d21c726f41d1fa6f773720b</sha256>
     </source>
     <source>
-      <filename>php-7.0.8.tar.xz</filename>
       <name>PHP 7.0.8 (tar.xz)</name>
-      <sha256>0a2142c458b0846f556b16da1c927d74c101aa951bb840549abe5c58584fb394</sha256>
-      <md5/>
+      <filename>php-7.0.8.tar.xz</filename>
       <date>23 Jun 2016</date>
+      <sha256>0a2142c458b0846f556b16da1c927d74c101aa951bb840549abe5c58584fb394</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.8. This is a security release. Several security bugs were fixed in
-     this release.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(If host name cannot be resolved then PHP 7 crashes).</description>
+        <references>
+          <reference type="bugfix">72218</reference>
+        </references>
+      </change>
+      <change>
+        <description>(segfault, past-the-end access).</description>
+        <references>
+          <reference type="bugfix">72221</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in nl2br()).</description>
+        <references>
+          <reference type="bugfix">72268</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in json_encode()/json_decode()/ json_utf8_to_utf16()).</description>
+        <references>
+          <reference type="bugfix">72275</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in addcslashes/addslashes).</description>
+        <references>
+          <reference type="bugfix">72400</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in Length of String-typed ZVAL).</description>
+        <references>
+          <reference type="bugfix">72403</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(strtotime seems to use both sunday and monday as start of week).</description>
+        <references>
+          <reference type="bugfix">63740</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(fastcgi_finish_request and logging environment variables).</description>
+        <references>
+          <reference type="bugfix">72308</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(pass2_no_dither out-of-bounds access).</description>
+        <references>
+          <reference type="bugfix">72298</reference>
+        </references>
+      </change>
+      <change>
+        <description>(invalid dimensions can lead to crash).</description>
+        <references>
+          <reference type="bugfix">72337</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in _gd2GetHeader() resulting in heap overflow). (CVE-2016-5766)</description>
+        <references>
+          <reference type="bugfix">72339</reference>
+          <reference type="cve">CVE-2016-5766</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NULL Pointer Dereference at _gdScaleVert).</description>
+        <references>
+          <reference type="bugfix">72407</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Integer Overflow in gdImagePaletteToTrueColor() resulting in heap overflow). (CVE-2016-5767)</description>
+        <references>
+          <reference type="bugfix">72446</reference>
+          <reference type="cve">CVE-2016-5767</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(selectordinal doesn't work with named parameters).</description>
+        <references>
+          <reference type="bugfix">70484</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mbstring">
+      <change>
+        <description>(_php_mb_regex_ereg_replace_exec - double free). (CVE-2016-5768)</description>
+        <references>
+          <reference type="bugfix">72402</reference>
+          <reference type="cve">CVE-2016-5768</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mcrypt">
+      <change>
+        <description>(Heap Overflow due to integer overflows). (CVE-2016-5769)</description>
+        <references>
+          <reference type="bugfix">72455</reference>
+          <reference type="cve">CVE-2016-5769</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(segfault after calling ERR_free_strings()).</description>
+        <references>
+          <reference type="bugfix">72140</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_replace uses int instead of size_t).</description>
+        <references>
+          <reference type="bugfix">72143</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(Segfault (core dumped) if paramno beyond bound).</description>
+        <references>
+          <reference type="bugfix">71573</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault/invalid pointer in connection with pgsql_stmt_dtor).</description>
+        <references>
+          <reference type="bugfix">72294</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(invalid free in phar_extract_file()). (CVE-2016-4473)</description>
+        <references>
+          <reference type="bugfix">72321</reference>
+          <reference type="cve">CVE-2016-4473</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phpdbg">
+      <change>
+        <description>(phpdbg fatal errors with coverage).</description>
+        <references>
+          <reference type="bugfix">72284</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(pg_pconnect/pg_connect cause use-after-free).</description>
+        <references>
+          <reference type="bugfix">72195</reference>
+        </references>
+      </change>
+      <change>
+        <description>(pg_lo_create arbitrary read).</description>
+        <references>
+          <reference type="bugfix">72197</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(range() with float step produces unexpected result).</description>
+        <references>
+          <reference type="bugfix">72017</reference>
+        </references>
+      </change>
+      <change>
+        <description>(dns_get_record returns array containing elements of type 'unknown').</description>
+        <references>
+          <reference type="bugfix">72193</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Wrong reference when serialize/unserialize an object).</description>
+        <references>
+          <reference type="bugfix">72229</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ignore_user_abort(false) has no effect).</description>
+        <references>
+          <reference type="bugfix">72300</reference>
+        </references>
+      </change>
+    </module>
+    <module id="WDDX">
+      <change>
+        <description>(Double Free Courruption in wddx_deserialize). (CVE-2016-5772)</description>
+        <references>
+          <reference type="bugfix">72340</reference>
+          <reference type="cve">CVE-2016-5772</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XML">
+      <change>
+        <description>(xml_parser_create/xml_parser_free leaks mem).</description>
+        <references>
+          <reference type="bugfix">72206</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLRPC">
+      <change>
+        <description>(use-after-free caused by get_zval_xmlrpc_type).</description>
+        <references>
+          <reference type="bugfix">72155</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(ZipArchive converts filenames to unrecoverable form).</description>
+        <references>
+          <reference type="bugfix">72258</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ZipArchive class Use After Free Vulnerability in PHP's GC algorithm and unserialize). (CVE-2016-5773)</description>
+        <references>
+          <reference type="bugfix">72434</reference>
+          <reference type="cve">CVE-2016-5773</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

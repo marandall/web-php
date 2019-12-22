@@ -1,52 +1,144 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.16">
+<?xml version="1.0"?>
+<release version="1" id="5.4.16">
   <release>5.4.16</release>
   <date>09 May 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>16</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.16.tar.bz2</filename>
       <name>PHP 5.4.16 (tar.bz2)</name>
-      <sha256/>
-      <md5>3d2c694d28861d707b2622c3cc941cff</md5>
+      <filename>php-5.4.16.tar.bz2</filename>
       <date>06 Jun 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.16.tar.gz</filename>
       <name>PHP 5.4.16 (tar.gz)</name>
-      <sha256/>
-      <md5>3940a5295872964495f9c56596272d68</md5>
+      <filename>php-5.4.16.tar.gz</filename>
       <date>06 Jun 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.16 binaries and source</filename>
       <name>Windows 5.4.16 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.16. About 15 bugs were fixed, including CVE 2013-2110. All users of PHP are encouraged to
-upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.4.16 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.16">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Heap based buffer overflow in quoted_printable_encode, CVE-2013-2110).</description>
+        <references>
+          <reference type="bugfix">64879</reference>
+          <reference type="cve">CVE-2013-2110</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use of no longer available ini directives causes crash on TS build).</description>
+        <references>
+          <reference type="bugfix">64853</reference>
+        </references>
+      </change>
+      <change>
+        <description>(compilation failure on x32).</description>
+        <references>
+          <reference type="bugfix">64729</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SegFault on zend_deactivate).</description>
+        <references>
+          <reference type="bugfix">64720</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault on memory exhaustion within function definition).</description>
+        <references>
+          <reference type="bugfix">64660</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Calendar">
+      <change>
+        <description>(Integer overflow in SndToJewish).</description>
+        <references>
+          <reference type="bugfix">64895</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(mimetype detection segfaults on mp3 file).</description>
+        <references>
+          <reference type="bugfix">64830</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>Ignore QUERY_STRING when sent in SCRIPT_FILENAME.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed some possible memory or resource leaks and possible null dereference detected by code coverity scan.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Log a warning when a syscall fails.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Add --with-fpm-systemd option to report health to systemd, and systemd_interval option to configure this. The service can now use Type=notify in the systemd unit file.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="MySQLi">
+      <change>
+        <description>(Segfault when calling fetch_object on a use_result and DB pointer has closed).</description>
+        <references>
+          <reference type="bugfix">64726</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(PHAR PHPTs intermittently crash when run on DFS, SMB or with non std tmp dir).</description>
+        <references>
+          <reference type="bugfix">64214</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SNMP">
+      <change>
+        <description>(Some IPv6 addresses get interpreted wrong).</description>
+        <references>
+          <reference type="bugfix">64765</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Truncated snmpget).</description>
+        <references>
+          <reference type="bugfix">64159</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(stream_select() fails with pipes returned by proc_open() on Windows x64).</description>
+        <references>
+          <reference type="bugfix">64770</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zend Engine">
+      <change>
+        <description>(Custom Exceptions crash when internal properties overridden).</description>
+        <references>
+          <reference type="bugfix">64821</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

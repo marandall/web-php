@@ -1,51 +1,169 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.17">
+<?xml version="1.0"?>
+<release version="1" id="5.4.17">
   <release>5.4.17</release>
   <date>04 Jul 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>17</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.17.tar.bz2</filename>
       <name>PHP 5.4.17 (tar.bz2)</name>
-      <sha256/>
-      <md5>1e027e99e2a874310fd518e87e3947af</md5>
+      <filename>php-5.4.17.tar.bz2</filename>
       <date>04 Jul 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.17.tar.gz</filename>
       <name>PHP 5.4.17 (tar.gz)</name>
-      <sha256/>
-      <md5>cc698032dcdcb9ad158edcc90fe798d6</md5>
+      <filename>php-5.4.17.tar.gz</filename>
       <date>04 Jul 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.17 binaries and source</filename>
       <name>Windows 5.4.17 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.17. About 20 bugs were fixed. All users of PHP are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.4.17 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.17">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Class loading order affects E_STRICT warning).</description>
+        <references>
+          <reference type="bugfix">64988</reference>
+        </references>
+      </change>
+      <change>
+        <description>(segfault in zend_do_fcall_common_helper_SPEC).</description>
+        <references>
+          <reference type="bugfix">64966</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in gc_zval_possible_root).</description>
+        <references>
+          <reference type="bugfix">64960</reference>
+        </references>
+      </change>
+      <change>
+        <description>(doc comments picked up from previous scanner run).</description>
+        <references>
+          <reference type="bugfix">64936</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Apache2 TS crash with get_browser()).</description>
+        <references>
+          <reference type="bugfix">64934</reference>
+        </references>
+      </change>
+      <change>
+        <description>(quoted-printable-encode stream filter incorrectly discarding whitespace).</description>
+        <references>
+          <reference type="bugfix">64166</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DateTime">
+      <change>
+        <description>(Crash when using unserialized DatePeriod instance).</description>
+        <references>
+          <reference type="bugfix">53437</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(error_log ignored when daemonize=0).</description>
+        <references>
+          <reference type="bugfix">64915</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#64764](http://bugs.php.net/64764) (add support for FPM init.d script).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>(Segmentation fault when instantiate 2 persistent PDO to the same db server).</description>
+        <references>
+          <reference type="bugfix">63176</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_DBlib">
+      <change>
+        <description>(Cannot connect to SQL Server 2008 with PDO dblib).</description>
+        <references>
+          <reference type="bugfix">63638</reference>
+        </references>
+      </change>
+      <change>
+        <description>(pdo_dblib can't connect to Azure SQL).</description>
+        <references>
+          <reference type="bugfix">64338</reference>
+        </references>
+      </change>
+      <change>
+        <description>(FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes).</description>
+        <references>
+          <reference type="bugfix">64808</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_firebird">
+      <change>
+        <description>(Firebird return wrong value for numeric field).</description>
+        <references>
+          <reference type="bugfix">64037</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cannot insert second row with null using parametrized query).</description>
+        <references>
+          <reference type="bugfix">62024</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_mysql">
+      <change>
+        <description>(getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR).</description>
+        <references>
+          <reference type="bugfix">48724</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(Buffer overflow in _pdo_pgsql_error).</description>
+        <references>
+          <reference type="bugfix">64949</reference>
+        </references>
+      </change>
+    </module>
+    <module id="pgsql">
+      <change>
+        <description>(pg_convert enum type support).</description>
+        <references>
+          <reference type="bugfix">64609</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Readline">
+      <change>
+        <description>Implement FR [#55694](http://bugs.php.net/55694) (Expose additional readline variable to prevent default filename completion).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Segfault while using RecursiveIteratorIterator on 64-bits systems).</description>
+        <references>
+          <reference type="bugfix">64997</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

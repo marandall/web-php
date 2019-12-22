@@ -1,60 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.3">
+<?xml version="1.0"?>
+<release version="1" id="5.5.3">
   <release>5.5.3</release>
   <date>22 Aug 2013</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>3</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.3.tar.bz2</filename>
       <name>PHP 5.5.3 (tar.bz2)</name>
-      <sha256/>
-      <md5>886b08ee6865d654911a6bb02ae98ee8</md5>
+      <filename>php-5.5.3.tar.bz2</filename>
       <date>22 Aug 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.5.3.tar.gz</filename>
       <name>PHP 5.5.3 (tar.gz)</name>
-      <sha256/>
-      <md5>a5dfdd41ccf539942db966310f7429da</md5>
+      <filename>php-5.5.3.tar.gz</filename>
       <date>22 Aug 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.5.3.tar.xz</filename>
       <name>PHP 5.5.3 (tar.xz)</name>
-      <sha256/>
-      <md5>437e98144ef014dfab0922a9eed36853</md5>
+      <filename>php-5.5.3.tar.xz</filename>
       <date>22 Aug 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.5.3 binaries and source</filename>
       <name>Windows 5.5.3 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP 5.5.3.
-This release fixes a bug in the patch for CVE-2013-4248 in OpenSSL module.</p>
-
-<p>All PHP users are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.5.3 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.3">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 5.5.3. This release fixes a bug in the patch for CVE-2013-4248 in OpenSSL module.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed UMR in fix for CVE-2013-4248.</description>
+        <references>
+          <reference type="cve">CVE-2013-4248</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,52 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.12">
+<?xml version="1.0"?>
+<release version="1" id="5.4.12">
   <release>5.4.12</release>
   <date>21 Feb 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>12</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.12.tar.bz2</filename>
       <name>PHP 5.4.12 (tar.bz2)</name>
-      <sha256/>
-      <md5>5c7b614242ae12e9cacca21c8ab84818</md5>
+      <filename>php-5.4.12.tar.bz2</filename>
       <date>21 Feb 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.12.tar.gz</filename>
       <name>PHP 5.4.12 (tar.gz)</name>
-      <sha256/>
-      <md5>81b20cac4f977b8764ae904302048d84</md5>
+      <filename>php-5.4.12.tar.gz</filename>
       <date>21 Feb 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.12 binaries and source</filename>
       <name>Windows 5.4.12 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team would like to announce the immediate
-availability of PHP 5.4.12. About 10 bugs were fixed. All
-users of PHP are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.4.12 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.12">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Wrong TSRM usage in zend_register_class alias).</description>
+        <references>
+          <reference type="bugfix">64099</reference>
+        </references>
+      </change>
+      <change>
+        <description>(get_html_translation_table() output incomplete with HTML_ENTITIES and ISO-8859-1).</description>
+        <references>
+          <reference type="bugfix">64011</reference>
+        </references>
+      </change>
+      <change>
+        <description>(isset() inconsistently produces a fatal error on protected property).</description>
+        <references>
+          <reference type="bugfix">63982</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Bad warning text from strpos() on empty needle).</description>
+        <references>
+          <reference type="bugfix">63943</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use after scope error in zend_compile).</description>
+        <references>
+          <reference type="bugfix">63899</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Poor efficiency of strtr() using array with keys of very different length).</description>
+        <references>
+          <reference type="bugfix">63893</reference>
+        </references>
+      </change>
+      <change>
+        <description>(zend_std_compare_objects crash on recursion).</description>
+        <references>
+          <reference type="bugfix">63882</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Magic methods called twice for unset protected properties).</description>
+        <references>
+          <reference type="bugfix">63462</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fopen follows redirects for non-3xx statuses).</description>
+        <references>
+          <reference type="bugfix">62524</reference>
+        </references>
+      </change>
+      <change>
+        <description>Support BITMAPV5HEADER in getimagesize().</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Performance improvements for various ext/date functions).</description>
+        <references>
+          <reference type="bugfix">63699</reference>
+        </references>
+      </change>
+      <change>
+        <description>Comparsion of incomplete DateTime causes SIGSEGV.</description>
+        <references>
+          <reference type="bugfix">55397</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(php with fpm fails to build on Solaris 10 or 11).</description>
+        <references>
+          <reference type="bugfix">63999</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Litespeed">
+      <change>
+        <description>(-Werror=format-security error in lsapi code).</description>
+        <references>
+          <reference type="bugfix">63228</reference>
+        </references>
+      </change>
+    </module>
+    <module id="sqlite3">
+      <change>
+        <description>(sqlite3::bindvalue and relative PHP functions aren't using sqlite3_*_int64 API).</description>
+        <references>
+          <reference type="bugfix">63921</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_OCI">
+      <change>
+        <description>(Multi-row BLOB fetches).</description>
+        <references>
+          <reference type="bugfix">57702</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in PDO_OCI on cleanup after running a long testsuite).</description>
+        <references>
+          <reference type="bugfix">52958</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_sqlite">
+      <change>
+        <description>(PDO::PARAM_INT casts to 32bit int internally even on 64bit builds in pdo_sqlite).</description>
+        <references>
+          <reference type="bugfix">63916</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

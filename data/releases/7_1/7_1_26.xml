@@ -1,51 +1,142 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.26">
+<?xml version="1.0"?>
+<release version="1" id="7.1.26">
   <release>7.1.26</release>
   <date>10 Jan 2019</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>26</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.26.tar.bz2</filename>
       <name>PHP 7.1.26 (tar.bz2)</name>
+      <filename>php-7.1.26.tar.bz2</filename>
+      <date>10 Jan 2019</date>
       <sha256>5b351ca86bc7e4600778aaf1d61ab9e4e38864efa86ab4cc4d5b02ea7f542ae6</sha256>
-      <md5/>
-      <date>10 Jan 2019</date>
     </source>
     <source>
-      <filename>php-7.1.26.tar.gz</filename>
       <name>PHP 7.1.26 (tar.gz)</name>
-      <sha256>069315d3c3f964fd165bbbb3c2fc56005813e2cf97bed05055318dcc4e775328</sha256>
-      <md5/>
+      <filename>php-7.1.26.tar.gz</filename>
       <date>10 Jan 2019</date>
+      <sha256>069315d3c3f964fd165bbbb3c2fc56005813e2cf97bed05055318dcc4e775328</sha256>
     </source>
     <source>
-      <filename>php-7.1.26.tar.xz</filename>
       <name>PHP 7.1.26 (tar.xz)</name>
-      <sha256>10b7ae634c12852fae52a22dc2262e5f12418ad59fd20da2d00d71a212235d31</sha256>
-      <md5/>
+      <filename>php-7.1.26.tar.xz</filename>
       <date>10 Jan 2019</date>
+      <sha256>10b7ae634c12852fae52a22dc2262e5f12418ad59fd20da2d00d71a212235d31</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.1.26. This is a security release which also contains several bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.26. This is a security release which also contains several bug fixes.</p>
-
-
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(memcpy with negative length via crafted DNS response). (CVE-2019-9022)</description>
+        <references>
+          <reference type="bugfix">77369</reference>
+          <reference type="cve">CVE-2019-9022</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(efree() on uninitialized Heap data in imagescale leads to use-after-free). (CVE-2016-10166)</description>
+        <references>
+          <reference type="bugfix">77269</reference>
+          <reference type="cve">CVE-2016-10166</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecolormatch Out Of Bounds Write on Heap). (CVE-2019-6977)</description>
+        <references>
+          <reference type="bugfix">77270</reference>
+          <reference type="cve">CVE-2019-6977</reference>
+        </references>
+      </change>
+    </module>
+    <module id="IMAP">
+      <change>
+        <description>(null pointer dereference in imap_mail).</description>
+        <references>
+          <reference type="bugfix">77020</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>(Buffer overflow on mb regex functions - fetch_token). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77370</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow in mb regex functions - compile_string_node). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77371</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow in multibyte match_at). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77381</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap buffer overflow due to incorrect length in expand_case_fold_string). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77382</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(buffer overflow in fetch_token). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77385</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer overflow in multibyte case folding - unicode). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77394</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Heap overflow in utf32be_mbc_to_code). (CVE-2019-9023)</description>
+        <references>
+          <reference type="bugfix">77418</reference>
+          <reference type="cve">CVE-2019-9023</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(heap buffer overflow in phar_detect_phar_fname_ext). (CVE-2019-9021)</description>
+        <references>
+          <reference type="bugfix">77247</reference>
+          <reference type="cve">CVE-2019-9021</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Xmlrpc">
+      <change>
+        <description>(heap out of bounds read in xmlrpc_decode()). (CVE-2019-9020)</description>
+        <references>
+          <reference type="bugfix">77242</reference>
+          <reference type="cve">CVE-2019-9020</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Global out of bounds read in xmlrpc base64 code). (CVE-2019-9024)</description>
+        <references>
+          <reference type="bugfix">77380</reference>
+          <reference type="cve">CVE-2019-9024</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

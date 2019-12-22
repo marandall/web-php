@@ -1,83 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.2.6">
+<?xml version="1.0"?>
+<release version="1" id="5.2.6">
   <release>5.2.6</release>
   <date>01 May 2008</date>
-  <version>
-    <major>5</major>
-    <minor>2</minor>
-    <release>6</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.2.6.tar.bz2</filename>
       <name>PHP 5.2.6 (tar.bz2)</name>
-      <sha256/>
-      <md5>7380ffecebd95c6edb317ef861229ebd</md5>
+      <filename>php-5.2.6.tar.bz2</filename>
       <date>01 May 2008</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.2.6.tar.gz</filename>
       <name>PHP 5.2.6 (tar.gz)</name>
-      <sha256/>
-      <md5>1720f95f26c506338f0dba3a51906bbd</md5>
+      <filename>php-5.2.6.tar.gz</filename>
       <date>01 May 2008</date>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">**Security Enhancements and Fixes in PHP 5.2.6:**
 
+- Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.
+- Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.
+- Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.
+- Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.
+- Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.
+- Upgraded bundled PCRE to version 7.6
 
-<p>
-The PHP development team would like to announce the immediate
-availability of PHP 5.2.6. This release focuses on improving the stability of
-the PHP 5.2.x branch with over 120 bug fixes, several of which are security related.
-All users of PHP are encouraged to upgrade to this release.
-</p>
+**Key enhancements in PHP 5.2.6 include:**
 
-<p>
-<b>Security Enhancements and Fixes in PHP 5.2.6:</b>
-</p>
-<ul>
-	<li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>
-	<li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>
-	<li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>
-	<li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>
-	<li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>
-	<li>Upgraded bundled PCRE to version 7.6</li>
-</ul>
+- Fixed two possible crashes inside the posix extension.
+- Fixed bug #44069 (Huge memory usage with concatenation using . instead of .=)
+- Fixed bug #44141 (private parent constructor callable through static function).
+- Fixed bug #43589 (a possible infinite loop in bz2_filter.c).
+- Fixed bug #43450 (Memory leak on some functions with implicit object __toString() call).
+- Fixed bug #43201 (Crash on using uninitialized vals and __get/__set).
+- Fixed bug #42978 (mismatch between number of bound params and values causes a crash in pdo_pgsql).
+- Fixed bug #42937 (__call() method not invoked when methods are called on parent from child class).
+- Fixed bug #42736 (xmlrpc_server_call_method() crashes).
+- Fixed bug #42369 (Implicit conversion to string leaks memory).
+- Fixed bug #41562 (SimpleXML memory issue).
+- Over 120 bug fixes.
 
-<p>
-<b>Key enhancements in PHP 5.2.6 include:</b>
-</p>
-<ul>
-	<li>Fixed two possible crashes inside the posix extension.</li>
-	<li>Fixed bug #44069 (Huge memory usage with concatenation using . instead of .=)</li>
-	<li>Fixed bug #44141 (private parent constructor callable through static function).</li>
-	<li>Fixed bug #43589 (a possible infinite loop in bz2_filter.c).</li>
-	<li>Fixed bug #43450 (Memory leak on some functions with implicit object __toString() call).</li>
-	<li>Fixed bug #43201 (Crash on using uninitialized vals and __get/__set).</li>
-	<li>Fixed bug #42978 (mismatch between number of bound params and values causes a crash in pdo_pgsql).</li>
-	<li>Fixed bug #42937 (__call() method not invoked when methods are called on parent from child class).</li>
-	<li>Fixed bug #42736 (xmlrpc_server_call_method() crashes).</li>
-	<li>Fixed bug #42369 (Implicit conversion to string leaks memory).</li>
-	<li>Fixed bug #41562 (SimpleXML memory issue).</li>
-	<li>Over 120 bug fixes.</li>
-</ul>
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available [here](/UPDATE_5_2.txt), detailing the changes between those releases and PHP 5.2.6.
 
-<p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
-<a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
-and PHP 5.2.6.
-</p>
-
-<p>
- For a full list of changes in PHP 5.2.6, see the <a href="/ChangeLog-5.php#5.2.6">ChangeLog</a>.
-</p>
-
-
-
-</announcement>
+ For a full list of changes in PHP 5.2.6, see the [ChangeLog](/ChangeLog-5.php#5.2.6).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed possible stack buffer overflow in FastCGI SAPI. (Andrei Nigmatulin)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Properly address incomplete multibyte chars inside escapeshellcmd() (Ilia, Stefan Esser)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed security issue detailed in CVE-2008-0599. (Rasmus)</description>
+        <references>
+          <reference type="cve">CVE-2008-0599</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz. (Ilia)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Upgraded PCRE to version 7.6 (Nuno)</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

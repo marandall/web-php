@@ -1,48 +1,216 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.17">
+<?xml version="1.0"?>
+<release version="1" id="7.0.17">
   <release>7.0.17</release>
   <date>30 Mar 2017</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>17</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.17.tar.bz2</filename>
       <name>PHP 7.0.17 (tar.bz2)</name>
+      <filename>php-7.0.17.tar.bz2</filename>
+      <date>30 Mar 2017</date>
       <sha256>aee503926b96d807692fac3e0fd64e3259788f5139819a983152679cb6e91d4b</sha256>
-      <md5/>
-      <date>30 Mar 2017</date>
     </source>
     <source>
-      <filename>php-7.0.17.tar.gz</filename>
       <name>PHP 7.0.17 (tar.gz)</name>
-      <sha256>1f42ffe9895dad746baf4a0e8d81f2272f55fdef66cf298ac911d8791ceb1e80</sha256>
-      <md5/>
+      <filename>php-7.0.17.tar.gz</filename>
       <date>30 Mar 2017</date>
+      <sha256>1f42ffe9895dad746baf4a0e8d81f2272f55fdef66cf298ac911d8791ceb1e80</sha256>
     </source>
     <source>
-      <filename>php-7.0.17.tar.xz</filename>
       <name>PHP 7.0.17 (tar.xz)</name>
-      <sha256>471c16fcdd6a5e1a37199e97bcaeea6117626229785185be7532aaa7c6ee04be</sha256>
-      <md5/>
+      <filename>php-7.0.17.tar.xz</filename>
       <date>30 Mar 2017</date>
+      <sha256>471c16fcdd6a5e1a37199e97bcaeea6117626229785185be7532aaa7c6ee04be</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.17. Several bugs have been fixed.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(PHP 7.1 Segfaults within Symfony test suite).</description>
+        <references>
+          <reference type="bugfix">73989</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of bound read - zend_mm_alloc_small).</description>
+        <references>
+          <reference type="bugfix">74084</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Performance problem with processing large post request). (CVE-2017-11142)</description>
+        <references>
+          <reference type="bugfix">73807</reference>
+          <reference type="cve">CVE-2017-11142</reference>
+        </references>
+      </change>
+      <change>
+        <description>(array_key_exists fails on arrays created by get_object_vars).</description>
+        <references>
+          <reference type="bugfix">73998</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NAN check fails on Alpine Linux with musl).</description>
+        <references>
+          <reference type="bugfix">73954</reference>
+        </references>
+      </change>
+      <change>
+        <description>(is_infinite(-INF) returns false).</description>
+        <references>
+          <reference type="bugfix">74039</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generating phar.phar core dump with gcc ASAN enabled build).</description>
+        <references>
+          <reference type="bugfix">73677</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache">
+      <change>
+        <description>(Incomplete POST does not timeout but is passed to PHP).</description>
+        <references>
+          <reference type="bugfix">61471</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Relative datetime format ignores weekday on sundays only).</description>
+        <references>
+          <reference type="bugfix">72719</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DateTime wrong when date string is negative).</description>
+        <references>
+          <reference type="bugfix">73294</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wrong timestamp when call setTimeZone multi times with UTC offset).</description>
+        <references>
+          <reference type="bugfix">73489</reference>
+        </references>
+      </change>
+      <change>
+        <description>(first/last day of' flag is not being reset).</description>
+        <references>
+          <reference type="bugfix">73858</reference>
+        </references>
+      </change>
+      <change>
+        <description>($date-&gt;modify('Friday this week') doesn't return a Friday if $date is a Sunday).</description>
+        <references>
+          <reference type="bugfix">73942</reference>
+        </references>
+      </change>
+      <change>
+        <description>(wrong day when using "this week" in strtotime).</description>
+        <references>
+          <reference type="bugfix">74057</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(php-fpm process accounting is broken with keepalive).</description>
+        <references>
+          <reference type="bugfix">69860</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Hash">
+      <change>
+        <description>(gost-crypto hash incorrect if input data contains long 0xFF sequence).</description>
+        <references>
+          <reference type="bugfix">73127</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(ReflectionFunction for imagepng is missing last two parameters).</description>
+        <references>
+          <reference type="bugfix">74031</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mysqlnd">
+      <change>
+        <description>(fetch_array broken data. Data more then MEDIUMBLOB).</description>
+        <references>
+          <reference type="bugfix">74021</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(if statement says true to a null variable).</description>
+        <references>
+          <reference type="bugfix">74152</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault with list).</description>
+        <references>
+          <reference type="bugfix">74019</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(PHP Fast CGI crashes when reading from a pfx file).</description>
+        <references>
+          <reference type="bugfix">74022</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(ReflectionFunction incorrectly reports the number of arguments).</description>
+        <references>
+          <reference type="bugfix">74148</reference>
+        </references>
+      </change>
+      <change>
+        <description>(mail.add_x_header causes RFC-breaking lone line feed).</description>
+        <references>
+          <reference type="bugfix">74005</reference>
+        </references>
+      </change>
+      <change>
+        <description>(is_callable callable name reports misleading value for anonymous classes).</description>
+        <references>
+          <reference type="bugfix">73118</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP on Linux should use /dev/urandom when getrandom is not available).</description>
+        <references>
+          <reference type="bugfix">74105</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(Invalid memory access in zend_inline_hash_func).</description>
+        <references>
+          <reference type="bugfix">73496</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stream_get_contents maxlength&gt;-1 returns empty string).</description>
+        <references>
+          <reference type="bugfix">74090</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

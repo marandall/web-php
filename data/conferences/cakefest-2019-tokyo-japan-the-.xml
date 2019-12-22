@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>cakefest-2019-tokyo-japan-the-</id>
+  <title>CakeFest 2019 Tokyo Japan, the Official CakePHP Conference</title>
+  <start_date>2019-11-07</start_date>
+  <end_date>2019-11-07</end_date>
+  <location country=""/>
+  <summary type="text"> [CakeFest 2019](https://cakefest.org) - our annual conference dedicated to CakePHP. Two full workshop days (7th and 8th November) that are an ideal way to learn as both beginners and advanced users, followed by two jam packed days of presentations, discussions and talks on CakePHP related technologies (9th and 10th November). CakeFest 2019 will be held in Tokyo, Japan - we are excited to see you there!</summary>
+  <content type="markdown"> [CakeFest 2019](https://cakefest.org) - our annual conference dedicated to CakePHP. Two full workshop days (7th and 8th November) that are an ideal way to learn as both beginners and advanced users, followed by two jam packed days of presentations, discussions and talks on CakePHP related technologies (9th and 10th November). CakeFest 2019 will be held in Tokyo, Japan - we are excited to see you there!
+
+ Check out the full schedule on [CakeFest.org](https://cakefest.org/schedule)</content>
+  <updated>2019-05-29T10:26:22+00:00</updated>
+  <logo width="320" height="228">1608bf0a610a97a260f729a6d713eba0f9d819802a8e1e261f804cc6d5b611e1.png</logo>
+</conference>

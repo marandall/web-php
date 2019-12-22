@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>devconf-2016</id>
+  <title>DevConf 2016</title>
+  <start_date>2016-06-17</start_date>
+  <end_date>2016-06-17</end_date>
+  <location country=""/>
+  <summary type="text"> DevConf 2016 in Moscow, Russia on June 17-18.</summary>
+  <content type="markdown"> DevConf 2016 in Moscow, Russia on June 17-18.
+
+ DevConf is the ultimate meeting place for russian-speaking web-developers, combining several language-specific conferences under one roof. This year the conference will take place in [Skolkovo Moscow School of Management](http://devconf.ru/ru/members/location).
+
+ DevConf 2016 will include the following sections:
+
+- DevConf::PHP();
+- DevConf::Python();
+- DevConf::Javascript();
+- DevConf::Storage();
+- DevConf::Golang();
+- DevConf::DevOps();
+- DevConf::Ruby();
+ 
+ Each section will feature several talks from the active contributors/authors of the language. Among the invited speakers are Dmitry Stogov (Zend), Ekaterina Marshalkina (Drupal), Eduard Medvedev (StackStorm), Alexander Alekseev (Postgres Professional), Sergey Petrunya (MariaDB), Vasily Soshnikov (Mail.Ru), Nik Zavarnickiy (LuaJIT), Anton Shramko (Rust), Valentin Bartenev (NGINX) and speakers from Lazada, Oracle and other companies. See more details on [the official website](http://devconf.ru).</content>
+  <updated>2016-06-06T09:10:08+00:00</updated>
+  <logo width="373" height="86">908411fa41b3e26c9d64807817b58d051622cc97c3fb9cd7b3b3aa8c43924dc3.png</logo>
+</conference>

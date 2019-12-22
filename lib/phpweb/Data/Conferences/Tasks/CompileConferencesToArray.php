@@ -20,7 +20,7 @@
 		}
 		
 		public function execute(InputInterface $input, OutputInterface $output) {
-			$base_dir = Site::GetDataDir() . '/events/conferences/';
+			$base_dir = Site::GetDataDir() . '/conferences/';
 			
 			$data = [];
 			
@@ -39,18 +39,35 @@
 					continue;
 				}
 				
+				$logo_node = $xml->logo;
+				if ((string)$logo_node) {
+					$logo_node_attr = $logo_node->attributes();
+					$image_data     = [
+						'path'   => (string)$logo_node,
+						'width'  => (int)(string)$logo_node_attr->width,
+						'height' => (int)(string)$logo_node_attr->height,
+					];
+				}
+				else {
+					$image_data = null;
+				}
+				
+				$content_node = $xml->content;
+				$content_str  = (string)$content_node;
+				printf("Content: %s\n", $content_str);
+				
 				/* data has the ID as its prefix for easier lookups */
 				$data[(string)$xml->id] = [
 					'id'         => (string)$xml->id,
 					'title'      => (string)$xml->title,
 					'start_date' => (string)$xml->start_date,
 					'end_date'   => (string)$xml->end_date,
-					'image'      => (string)$xml->image,
+					'logo'       => $image_data,
 					'website'    => (string)$xml->website,
-					'country'    => (string)$xml->country,
+					'country'    => (string)$xml->location->attributes()->country,
 					'location'   => (string)$xml->location,
-					'summary'    => (string)$xml->summary, /* summary does not allow HTML */
-					'content'    => $xml->content->asXML(),
+					'summary'    => $this->encodeText($xml->summary),
+					'content'    => $this->encodeText($xml->content),
 				];
 			}
 			
@@ -63,5 +80,12 @@
 			}
 			
 			return 0;
+		}
+		
+		private function encodeText(\SimpleXMLElement $node): array {
+			return [
+				'type'    => (string)$node->attributes()->type ?: 'text',
+				'content' => (string)$node,
+			];
 		}
 	}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpkonf-stanbul-php-conference</id>
+  <title>PHPKonf &#x130;stanbul PHP Conference 2015</title>
+  <start_date>2015-07-25</start_date>
+  <end_date>2015-07-25</end_date>
+  <location country=""/>
+  <summary type="text">&#x130;stanbul PHP User Group is proud to announce that the PHPKonf 2015! We'll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 25/26 of July for a two day, double track conference in ancient city Istanbul! We&#x2019;ve something for every level of PHP developer with 2 keynotes, 29 talks and 2 panels.</summary>
+  <content type="markdown">&#x130;stanbul PHP User Group is proud to announce that the PHPKonf 2015! We'll host some of the best speakers, awesome talk topics, latest technologies, and up to date news in PHP. Join us on 25/26 of July for a two day, double track conference in ancient city Istanbul! We&#x2019;ve something for every level of PHP developer with 2 keynotes, 29 talks and 2 panels.
+
+ For tickets and more information: &lt;http://phpkonf.org&gt;</content>
+  <updated>2015-07-04T10:00:00+00:00</updated>
+  <logo width="296" height="110">d8ab35eef34698a211c824c280f184e8ab2c1c3b90e04efefc9b767c9125b81b.png</logo>
+</conference>

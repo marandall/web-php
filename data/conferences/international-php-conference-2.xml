@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>international-php-conference-2</id>
+  <title>International PHP Conference 2015</title>
+  <start_date>2015-10-25</start_date>
+  <end_date>2015-10-25</end_date>
+  <location country=""/>
+  <summary type="text">[The International PHP Conference](https://phpconference.com) is the world&#x2019;s first PHP conference and stands since more than a decade for top-notch pragmatic expertise in PHP and web technologies. At the IPC, internationally renowned experts from the PHP industry meet up with PHP users and developers from large and small companies. Here is the place where concepts emerge and ideas are born &#x2013; the IPC signifies knowledge transfer at highest level.</summary>
+  <content type="markdown"/>
+  <updated>2015-08-31T11:33:03+02:00</updated>
+  <logo width="200" height="126">13501d084a6e081319f92d2c5173df764f99ac893ff77019b4331876ee03cd15.png</logo>
+</conference>

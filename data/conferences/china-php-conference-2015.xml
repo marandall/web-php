@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>china-php-conference-2015</id>
+  <title>China PHP Conference 2015</title>
+  <start_date>2015-06-06</start_date>
+  <end_date>2015-06-06</end_date>
+  <location country=""/>
+  <summary type="text">China PHP Conference 2015</summary>
+  <content type="markdown"/>
+  <updated>2015-05-27T23:36:31-04:00</updated>
+  <logo width="280" height="100">2137e937b2f3fbbb7d2d5be79f2388657cdda638fe02b85595e10f767c4ed912.jpg</logo>
+</conference>

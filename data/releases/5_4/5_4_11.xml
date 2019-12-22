@@ -1,52 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.11">
+<?xml version="1.0"?>
+<release version="1" id="5.4.11">
   <release>5.4.11</release>
   <date>17 Jan 2013</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>11</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.11.tar.bz2</filename>
       <name>PHP 5.4.11 (tar.bz2)</name>
-      <sha256/>
-      <md5>9975e68c22b86b013b934743ad2d2276</md5>
+      <filename>php-5.4.11.tar.bz2</filename>
       <date>17 Jan 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.4.11.tar.gz</filename>
       <name>PHP 5.4.11 (tar.gz)</name>
-      <sha256/>
-      <md5>32fa16b3abd5527316c3c076b3395914</md5>
+      <filename>php-5.4.11.tar.gz</filename>
       <date>17 Jan 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.4.11 binaries and source</filename>
       <name>Windows 5.4.11 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team would like to announce the immediate
-availability of PHP 5.4.11. About 10 bugs were fixed. All
-users of PHP are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.4.11 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.11">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Sigsegv when Exception::$trace is changed by user).</description>
+        <references>
+          <reference type="bugfix">63762</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Errors in eval()'ed code produce status code 500).</description>
+        <references>
+          <reference type="bugfix">43177</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(getenv() produces memory leak with CGI SAPI).</description>
+        <references>
+          <reference type="bugfix">63757</reference>
+        </references>
+      </change>
+      <change>
+        <description>(FILTER_VALIDATE_INT does not accept +0 and -0).</description>
+        <references>
+          <reference type="bugfix">54096</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>(json_decode does not properly decode with options parameter).</description>
+        <references>
+          <reference type="bugfix">63737</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>Update list of common mime types. Added webm, ogv, ogg.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="cURL extension">
+      <change>
+        <description>Fixed bug (segfault due to libcurl connection caching).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Memory leak when reusing curl-handle).</description>
+        <references>
+          <reference type="bugfix">63859</reference>
+        </references>
+      </change>
+      <change>
+        <description>(CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</description>
+        <references>
+          <reference type="bugfix">63795</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Can't enable hostname validation when using curl stream wrappers).</description>
+        <references>
+          <reference type="bugfix">63352</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Curlwapper is not sending http header randomly).</description>
+        <references>
+          <reference type="bugfix">55438</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

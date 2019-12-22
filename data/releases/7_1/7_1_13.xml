@@ -1,51 +1,172 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.13">
+<?xml version="1.0"?>
+<release version="1" id="7.1.13">
   <release>7.1.13</release>
   <date>4 Jan 2018</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>13</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.13.tar.bz2</filename>
       <name>PHP 7.1.13 (tar.bz2)</name>
+      <filename>php-7.1.13.tar.bz2</filename>
+      <date>4 Jan 2018</date>
       <sha256>35fda51d2d44600940185fd5818d336a79e77ab3c98e2bd075091f2f91cf98a1</sha256>
-      <md5/>
-      <date>4 Jan 2018</date>
     </source>
     <source>
-      <filename>php-7.1.13.tar.gz</filename>
       <name>PHP 7.1.13 (tar.gz)</name>
-      <sha256>12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9</sha256>
-      <md5/>
+      <filename>php-7.1.13.tar.gz</filename>
       <date>4 Jan 2018</date>
+      <sha256>12fcbf59c9eb9af215ef38815d5da39b9d74549092c34b0dfc31442699740ce9</sha256>
     </source>
     <source>
-      <filename>php-7.1.13.tar.xz</filename>
       <name>PHP 7.1.13 (tar.xz)</name>
-      <sha256>1a0b3f2fb61959b57a3ee01793a77ed3f19bde5aa90c43dcacc85ea32f64fc10</sha256>
-      <md5/>
+      <filename>php-7.1.13.tar.xz</filename>
       <date>4 Jan 2018</date>
+      <sha256>1a0b3f2fb61959b57a3ee01793a77ed3f19bde5aa90c43dcacc85ea32f64fc10</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.13. This is a bugfix release, with several bug fixes included.
-
-  All PHP 7.1 users are encouraged to upgrade to this version.
-  </p>
-
-
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Segmentation fault in 7.1.12 and 7.0.26).</description>
+        <references>
+          <reference type="bugfix">75573</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP seems incompatible with OneDrive files on demand).</description>
+        <references>
+          <reference type="bugfix">75384</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unable to clone instance when private __clone defined).</description>
+        <references>
+          <reference type="bugfix">74862</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php-process crash when is_file() is used with strings longer 260 chars).</description>
+        <references>
+          <reference type="bugfix">75074</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI Server">
+      <change>
+        <description>(Random "Invalid request (unexpected EOF)" using a router script).</description>
+        <references>
+          <reference type="bugfix">60471</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Directory does not exist).</description>
+        <references>
+          <reference type="bugfix">73830</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(libxml_disable_entity_loader setting is shared between requests).</description>
+        <references>
+          <reference type="bugfix">64938</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Potential infinite loop in gdImageCreateFromGifCtx). (CVE-2018-5711)</description>
+        <references>
+          <reference type="bugfix">75571</reference>
+          <reference type="cve">CVE-2018-5711</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>("Narrowing occurred during type inference" error).</description>
+        <references>
+          <reference type="bugfix">75608</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Interned strings buffer overflow may cause crash).</description>
+        <references>
+          <reference type="bugfix">75579</reference>
+        </references>
+      </change>
+      <change>
+        <description>("Narrowing occurred during type inference" error).</description>
+        <references>
+          <reference type="bugfix">75570</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(preg_last_error not returning error code after error).</description>
+        <references>
+          <reference type="bugfix">74183</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Reflected XSS in .phar 404 page). (CVE-2018-5712)</description>
+        <references>
+          <reference type="bugfix">74782</reference>
+          <reference type="cve">CVE-2018-5712</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(fread not free unused buffer).</description>
+        <references>
+          <reference type="bugfix">75511</reference>
+        </references>
+      </change>
+      <change>
+        <description>(mt_rand returns value outside [$min,$max]+ on 32-bit) (Remi)</description>
+        <references>
+          <reference type="bugfix">75514</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Inappropriately parsing HTTP response leads to PHP segment fault). (CVE-2018-14884)</description>
+        <references>
+          <reference type="bugfix">75535</reference>
+          <reference type="cve">CVE-2018-14884</reference>
+        </references>
+      </change>
+      <change>
+        <description>(accept EFAULT in addition to ENOSYS as indicator that getrandom() is missing).</description>
+        <references>
+          <reference type="bugfix">75409</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php_ini_scanned_files() not reporting correctly).</description>
+        <references>
+          <reference type="bugfix">73124</reference>
+        </references>
+      </change>
+      <change>
+        <description>(putenv does not work properly if parameter contains non-ASCII unicode character).</description>
+        <references>
+          <reference type="bugfix">75574</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>(Segfault with libzip 1.3.1).</description>
+        <references>
+          <reference type="bugfix">75540</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,53 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.18">
+<?xml version="1.0"?>
+<release version="1" id="5.3.18">
   <release>5.3.18</release>
   <date>18 Oct 2012</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>18</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.18.tar.bz2</filename>
       <name>PHP 5.3.18 (tar.bz2)</name>
-      <sha256/>
-      <md5>52539c19d0f261560af3c030143dfa8f</md5>
+      <filename>php-5.3.18.tar.bz2</filename>
       <date>18 Oct 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.3.18.tar.gz</filename>
       <name>PHP 5.3.18 (tar.gz)</name>
-      <sha256/>
-      <md5>ff2009aadc7c4d1444f6cd8e45f39a41</md5>
+      <filename>php-5.3.18.tar.gz</filename>
       <date>18 Oct 2012</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.3.18 binaries and source</filename>
       <name>Windows 5.3.18 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.3.18. About 10 bugs were fixed. All users of PHP are encouraged to upgrade to
-PHP 5.4.8. Alternatively, PHP 5.3.18 is recommended for those wishing to remain
-on the 5.3 series.</p>
-
-<p>For source downloads of PHP 5.3.18 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.18">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(is_callable() lies for abstract static method).</description>
+        <references>
+          <reference type="bugfix">63111</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault while load extension failed in zts-build).</description>
+        <references>
+          <reference type="bugfix">63093</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Notice: could not be converted to int when comparing some builtin classes).</description>
+        <references>
+          <reference type="bugfix">62976</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Shutdown functions not called in certain error situation).</description>
+        <references>
+          <reference type="bugfix">61767</reference>
+        </references>
+      </change>
+      <change>
+        <description>(exception threw in __autoload can not be catched).</description>
+        <references>
+          <reference type="bugfix">61442</reference>
+        </references>
+      </change>
+      <change>
+        <description>(custom error handler throwing Exception + fatal error = no shutdown function).</description>
+        <references>
+          <reference type="bugfix">60909</reference>
+        </references>
+      </change>
+    </module>
+    <module id="cURL">
+      <change>
+        <description>(file_get_contents a remote file by Curl wrapper will cause cpu Soaring).</description>
+        <references>
+          <reference type="bugfix">62085</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(startup problems fpm / php-fpm).</description>
+        <references>
+          <reference type="bugfix">62954</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PHP-FPM may segfault/hang on startup).</description>
+        <references>
+          <reference type="bugfix">62886</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Systemd integration and daemonize).</description>
+        <references>
+          <reference type="bugfix">63085</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unneccesary warnings on FPM).</description>
+        <references>
+          <reference type="bugfix">62947</reference>
+        </references>
+      </change>
+      <change>
+        <description/>
+        <references>
+          <reference type="bugfix">62887</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Add PID to php-fpm init.d script).</description>
+        <references>
+          <reference type="bugfix">62216</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(defective cloning in several intl classes).</description>
+        <references>
+          <reference type="bugfix">62915</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SOAP Error when trying to submit 2nd Element of a choice).</description>
+        <references>
+          <reference type="bugfix">50997</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Assigning to ArrayObject[null][something] overrides all undefined variables).</description>
+        <references>
+          <reference type="bugfix">62987</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

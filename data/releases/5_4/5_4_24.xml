@@ -1,53 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.24">
+<?xml version="1.0"?>
+<release version="1" id="5.4.24">
   <release>5.4.24</release>
   <date>9 Jan 2014</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>24</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.24.tar.bz2</filename>
       <name>PHP 5.4.24 (tar.bz2)</name>
+      <filename>php-5.4.24.tar.bz2</filename>
+      <date>9 Jan 2014</date>
       <sha256>97fe70eddaf5b93969714a551870fe03f6b0a387f85b83a6d63a40a76199a327</sha256>
-      <md5/>
-      <date>9 Jan 2014</date>
     </source>
     <source>
-      <filename>php-5.4.24.tar.gz</filename>
       <name>PHP 5.4.24 (tar.gz)</name>
-      <sha256>c64d6e3b428e78b44760167557e26cd16a9f83f449a255e69d5e035bdd7057ed</sha256>
-      <md5/>
+      <filename>php-5.4.24.tar.gz</filename>
       <date>9 Jan 2014</date>
+      <sha256>c64d6e3b428e78b44760167557e26cd16a9f83f449a255e69d5e035bdd7057ed</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.24 binaries and source</filename>
       <name>Windows 5.4.24 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.24. About 14 bugs were fixed.
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.24 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.24">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Added validation of class names in the autoload process.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed invalid C code in zend_strtod.c.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(fopen and O_NONBLOCK).</description>
+        <references>
+          <reference type="bugfix">61645</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Heap buffer over-read in DateInterval, CVE-2013-6712).</description>
+        <references>
+          <reference type="bugfix">66060</reference>
+          <reference type="cve">CVE-2013-6712</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect/inconsistent day of week prior to the year 1600).</description>
+        <references>
+          <reference type="bugfix">63391</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Wrong Day of Week).</description>
+        <references>
+          <reference type="bugfix">61599</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(Passing DOMDocumentFragment to DOMDocument::saveHTML() Produces invalid Markup).</description>
+        <references>
+          <reference type="bugfix">65196</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Integer overflow in exif_read_data()).</description>
+        <references>
+          <reference type="bugfix">65873</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Filter">
+      <change>
+        <description>(128.0.0.0/16 isn't reserved any longer).</description>
+        <references>
+          <reference type="bugfix">66229</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Use freetype-config for determining freetype2 dir(s)).</description>
+        <references>
+          <reference type="bugfix">64405</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_odbc">
+      <change>
+        <description>(Stack smashing protection kills PDO/ODBC queries).</description>
+        <references>
+          <reference type="bugfix">66311</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SNMP">
+      <change>
+        <description>Fixed SNMP_ERR_TOOBIG handling for bulk walk operations.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="XSL">
+      <change>
+        <description>(Segfault throwing an exception in a XSL registered function).</description>
+        <references>
+          <reference type="bugfix">49634</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(ZipArchive::open() ze_obj-&gt;filename_len not real).</description>
+        <references>
+          <reference type="bugfix">66321</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

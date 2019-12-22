@@ -73,51 +73,61 @@
 			}
 			
 			?>
-			The Ondřej Surý PPA (Personal Package Archive) is a common way of installing specific versions
-			of the PHP runtime on Ubuntu using the APT package manager.
-			<br/><br/>
+            <section class="r2-sec">
+                <div>
+                    The Ondřej Surý PPA (Personal Package Archive) is a common way of installing specific versions
+                    of the PHP runtime on Ubuntu using the APT package manager.
+                    <br/><br/>
+
+                    <strong>This is an unofficial source and is not maintained by PHP.net. Use at your own risk.</strong>
+                </div>
+            </section>
 			
-			<strong>This is an unofficial source and is not maintained by PHP.net. Use at your own risk.</strong>
-			<br/><br/>
+            <section class="r2-sec">
+                <h2>Installation Guide</h2>
+                <div>
+                    Before you can begin using PHP versions from this repository you must first add the PPA to your
+                    list of allowed sources:
+                    <br/><br/>
+                    <div style="background-color: lightgoldenrodyellow; font-family: 'Courier New'; padding: 1em">
+                        sudo add-apt-repository ppa:ondrej/php<br/>
+                        sudo apt-get update<br ><br />
+
+                        # To update these modules use the installation helper below <br />
+		                <?= htmlspecialchars(implode(' ', $commands)) ?>
+                    </div>
+                </div>
+            </section>
 			
-			<h3>Installation Guide</h3>
-			Before you can begin using PHP versions from this repository you must first add the PPA to your
-			list of allowed sources:
-			<br/><br/>
-			<div style="background-color: lightgoldenrodyellow; font-family: 'Courier New'; padding: 1em">
-				sudo add-apt-repository ppa:ondrej/php<br/>
-				sudo apt-get update<br ><br />
-				
-				# To update these modules use the installation helper below <br />
-				<?= htmlspecialchars(implode(' ', $commands)) ?>
-			</div>
-			<br/>
-			
-			<h3>Installation Helper</h3>
-			This tool will help you create a command that will install PHP modules from the Ondřej Surý PPA.
-			<form method="get" >
-				<h4>CGI Methods</h4>
-				<?php foreach (self::CGI_LIST as $cgi) { ?>
-					<div>
-						<input name="m[]" type="checkbox" value="<?= htmlspecialchars($cgi) ?>"
-						       <?= (in_array($cgi, $modules_selected, true) ? 'checked="checked"' : '') ?>/>
-						<?= htmlspecialchars($cgi) ?>
-					</div>
-				<?php } ?>
-				
-				<h4>Extensions</h4>
-				<?php foreach (self::MODULE_LIST as $cgi => $label) { ?>
-					<div>
-						<input name="m[]" type="checkbox" value="<?= htmlspecialchars($cgi) ?>"
-						       <?= (in_array($cgi, $modules_selected, true) ? 'checked="checked"' : '') ?>/>
-						<?= htmlspecialchars($label) ?>
-					</div>
-				<?php } ?>
-				<br />
-				
-				<input type="submit" value="Generate Commands"/>
-			</form>
-			
+            <section class="r2-sec">
+                <h2>Installation Helper</h2>
+                <div>
+                    This tool will help you create a command that will install PHP modules from the Ondřej Surý PPA.
+                    <form method="get" >
+                        <h4>CGI Methods</h4>
+		                <?php foreach (self::CGI_LIST as $cgi) { ?>
+                            <div>
+                                <input name="m[]" type="checkbox" value="<?= htmlspecialchars($cgi) ?>"
+				                       <?= (in_array($cgi, $modules_selected, true) ? 'checked="checked"' : '') ?>/>
+				                <?= htmlspecialchars($cgi) ?>
+                            </div>
+		                <?php } ?>
+
+                        <h4>Extensions</h4>
+		                <?php foreach (self::MODULE_LIST as $cgi => $label) { ?>
+                            <div>
+                                <input name="m[]" type="checkbox" value="<?= htmlspecialchars($cgi) ?>"
+				                       <?= (in_array($cgi, $modules_selected, true) ? 'checked="checked"' : '') ?>/>
+				                <?= htmlspecialchars($label) ?>
+                            </div>
+		                <?php } ?>
+                        <br />
+
+                        <input type="submit" value="Generate Commands"/>
+                    </form>
+                </div>
+            </section>
+
 			<?php
 		}
 	}

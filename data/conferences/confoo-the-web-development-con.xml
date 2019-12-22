@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>confoo-the-web-development-con</id>
+  <title>ConFoo: THE web development conference you don&#x2019;t want to miss!</title>
+  <start_date>2018-03-07</start_date>
+  <end_date>2018-03-07</end_date>
+  <location country=""/>
+  <summary type="text">ConFoo is a multi-technology conference specifically crafted for web developers. With 150+ presentations by local and international speakers, this conference offers outstanding diversity of content to expand your knowledge, increase your productivity and boost your development skills.</summary>
+  <content type="markdown">ConFoo is a multi-technology conference specifically crafted for web developers. With 150+ presentations by local and international speakers, this conference offers outstanding diversity of content to expand your knowledge, increase your productivity and boost your development skills.
+
+ **See you in Montreal on March 7-8-9!**There are still a few tickets left. [Book yours today](https://confoo.ca/en/yul2018/register) for the 3-day conference. Interested in Angular, Symfony or Unit Testing? We have you covered. Grab your ticket for a special two-day [training](https://confoo.ca/en/yul2018/training) on March 5-6.
+
+ **ConFoo is:**- 2 days of training.
+- 3 days of conferences.
+- Over 150 presentations by amazing international speakers.
+- Focused on pragmatic solutions for web developers.
+- Great content and amazing experience.
+- You get to meet like-minded people from the developer world!</content>
+  <updated>2018-02-14T17:46:24+00:00</updated>
+  <logo width="320" height="168">1dc4c92f1d7a5795933da5637e75e04d1fa96a44d8acf8642440985df19cd56c.png</logo>
+</conference>

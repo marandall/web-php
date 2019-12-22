@@ -1,46 +1,174 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.12">
+<?xml version="1.0"?>
+<release version="1" id="5.5.12">
   <release>5.5.12</release>
   <date>30 Apr 2014</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>12</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.12.tar.bz2</filename>
       <name>PHP 5.5.12 (tar.bz2)</name>
-      <sha256>519ee29e28532782676f3d8e31a808ffbfee383e0279ccc8cbd2b12ed53c2335</sha256>
-      <md5/>
+      <filename>php-5.5.12.tar.bz2</filename>
       <date>30 Apr 2014</date>
+      <sha256>519ee29e28532782676f3d8e31a808ffbfee383e0279ccc8cbd2b12ed53c2335</sha256>
     </source>
     <source>
-      <filename>php-5.5.12.tar.gz</filename>
       <name>PHP 5.5.12 (tar.gz)</name>
-      <sha256>a10c6e6ce1145762d6c15ca7ce1aeaab69662c197d24e1294c2519aa85c97bd6</sha256>
-      <md5/>
+      <filename>php-5.5.12.tar.gz</filename>
       <date>30 Apr 2014</date>
+      <sha256>a10c6e6ce1145762d6c15ca7ce1aeaab69662c197d24e1294c2519aa85c97bd6</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP Development Team announces the immediate availability of PHP 5.5.12.
-This release fixes several bugs against PHP 5.5.11, as well as CVE-2014-0185 regarding PHP-FPM.</p>
-
-<p>All PHP users are encouraged to upgrade to this new version.</p>
-
-<p>For source downloads of PHP 5.5.12, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.12">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.5.12. This release fixes several bugs against PHP 5.5.11, as well as CVE-2014-0185 regarding PHP-FPM.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Out of memory on command stream_get_contents).</description>
+        <references>
+          <reference type="bugfix">61019</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</description>
+        <references>
+          <reference type="bugfix">64330</reference>
+        </references>
+      </change>
+      <change>
+        <description>(exit in stream filter produces segfault).</description>
+        <references>
+          <reference type="bugfix">66182</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fpassthru broken).</description>
+        <references>
+          <reference type="bugfix">66736</reference>
+        </references>
+      </change>
+      <change>
+        <description>(getimagesize should recognize BMP files with negative heighty).</description>
+        <references>
+          <reference type="bugfix">67024</reference>
+        </references>
+      </change>
+      <change>
+        <description>(substr_compare broke by previous change).</description>
+        <references>
+          <reference type="bugfix">67043</reference>
+        </references>
+      </change>
+    </module>
+    <module id="cURL">
+      <change>
+        <description>(curl_exec returns differently than curl_multi_getcontent).</description>
+        <references>
+          <reference type="bugfix">66562</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(__wakeup of DateTime segfaults when invalid object data is supplied).</description>
+        <references>
+          <reference type="bugfix">66721</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Embed">
+      <change>
+        <description>(php5embed.lib isn't provided anymore).</description>
+        <references>
+          <reference type="bugfix">65715</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Memory corruption in fileinfo ext / bigendian).</description>
+        <references>
+          <reference type="bugfix">66987</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(unknown entry 'priority' in php-fpm.conf).</description>
+        <references>
+          <reference type="bugfix">66482</reference>
+        </references>
+      </change>
+      <change>
+        <description>(possible privilege escalation due to insecure default configuration). (CVE-2014-0185)).</description>
+        <references>
+          <reference type="bugfix">67060</reference>
+          <reference type="cve">CVE-2014-0185</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Json">
+      <change>
+        <description>(Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</description>
+        <references>
+          <reference type="bugfix">66021</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LDAP">
+      <change>
+        <description>Fixed issue with null bytes in LDAP bindings.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="mysqli">
+      <change>
+        <description>Fixed problem in mysqli_commit()/mysqli_rollback() with second parameter (extra comma) and third parameters (lack of escaping).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Openssl">
+      <change>
+        <description>(memory leak in openssl_seal()).</description>
+        <references>
+          <reference type="bugfix">66942</reference>
+        </references>
+      </change>
+      <change>
+        <description>(memory leak in openssl_open()).</description>
+        <references>
+          <reference type="bugfix">66952</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SimpleXML">
+      <change>
+        <description>(simplexml_load_string() mangles empty node name).</description>
+        <references>
+          <reference type="bugfix">66084</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite">
+      <change>
+        <description>(Updated bundled libsqlite to 3.8.4.3)</description>
+        <references>
+          <reference type="bugfix">66967</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XSL">
+      <change>
+        <description>(&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://")</description>
+        <references>
+          <reference type="bugfix">53965</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache2 Handler SAPI">
+      <change>
+        <description>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue https://issues.apache.org/bugzilla/show_bug.cgi?id=56120)</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

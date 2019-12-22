@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>zendcon-2016</id>
+  <title>ZendCon 2016</title>
+  <start_date>2016-10-18</start_date>
+  <end_date>2016-10-18</end_date>
+  <location country=""/>
+  <summary type="text">With over 250 million PHP applications and websites driven by a global community of more than 5 million active developers, ZendCon 2016 brings you a curated selection of the best experts, training, and networking opportunities to help you become a PHP authority.</summary>
+  <content type="markdown">With over 250 million PHP applications and websites driven by a global community of more than 5 million active developers, ZendCon 2016 brings you a curated selection of the best experts, training, and networking opportunities to help you become a PHP authority.
+
+In its 12th year, ZendCon offers authoritative sessions, in-depth technical tutorials, exhibit hall activities, and informal opportunities to spotlight the best in enterprise PHP development, the latest for PHP 7, and innovations on many open source technologies related to the web.
+
+Experience web development with the very best to accelerate great PHP.
+
+Register Now at [http://www.zendcon.com/register-now](http://www.zendcon.com/register-now "ZendCon 2016")</content>
+  <updated>2016-08-16T12:23:00+00:00</updated>
+  <logo width="305" height="107">36cbeba9acab34d7a9b9c16a1e9a3ced8c6c26a1c27f9c9774c976e6fd6f5250.png</logo>
+</conference>

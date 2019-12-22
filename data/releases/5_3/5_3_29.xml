@@ -1,68 +1,231 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.3.29">
+<?xml version="1.0"?>
+<release version="1" id="5.3.29">
   <release>5.3.29</release>
   <date>14 Aug 2014</date>
-  <version>
-    <major>5</major>
-    <minor>3</minor>
-    <release>29</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.3.29.tar.bz2</filename>
       <name>PHP 5.3.29 (tar.bz2)</name>
+      <filename>php-5.3.29.tar.bz2</filename>
+      <date>14 Aug 2014</date>
       <sha256>c4e1cf6972b2a9c7f2777a18497d83bf713cdbecabb65d3ff62ba441aebb0091</sha256>
-      <md5/>
-      <date>14 Aug 2014</date>
     </source>
     <source>
-      <filename>php-5.3.29.tar.gz</filename>
       <name>PHP 5.3.29 (tar.gz)</name>
+      <filename>php-5.3.29.tar.gz</filename>
+      <date>14 Aug 2014</date>
       <sha256>57cf097de3d6c3152dda342f62b1b2e9c988f4cfe300ccfe3c11f3c207a0e317</sha256>
-      <md5/>
-      <date>14 Aug 2014</date>
     </source>
     <source>
-      <filename>php-5.3.29.tar.xz</filename>
       <name>PHP 5.3.29 (tar.xz)</name>
-      <sha256>8438c2f14ab8f3d6cd2495aa37de7b559e33b610f9ab264f0c61b531bf0c262d</sha256>
-      <md5/>
+      <filename>php-5.3.29.tar.xz</filename>
       <date>14 Aug 2014</date>
+      <sha256>8438c2f14ab8f3d6cd2495aa37de7b559e33b610f9ab264f0c61b531bf0c262d</sha256>
     </source>
     <source>
-      <filename>Windows 5.3.29 binaries and source</filename>
       <name>Windows 5.3.29 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">PHP 5.3.29 contains about 25 potentially security related fixes backported from PHP 5.4 and 5.5.
 
-
-
-     <p>The PHP development team announces the immediate availability of
-     PHP 5.3.29. This release marks the <strong>end of life</strong> of the <strong>PHP 5.3 series</strong>.
-     Future releases of this series are <strong>not planned</strong>. All PHP 5.3 users are
-     encouraged to upgrade to the current stable version of PHP 5.5 or
-     previous stable version of PHP 5.4, which are supported till at least
-     2016 and 2015 respectively.</p>
-
-     <p>PHP 5.3.29 contains about 25 potentially security related fixes
-	     backported from PHP 5.4 and 5.5.</p>
-
-     <p>For source downloads of PHP 5.3.29, please visit our <a href="http://www.php.net/downloads/">downloads page</a>. Windows
-     binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>. The list of changes is recorded in
-     the <a href="http://www.php.net/ChangeLog-5.php#5.3.29">ChangeLog</a>.</p>
-
-     <p>For helping your migration to newer versions please refer to our migration
-     guides for updates from <a href="http://php.net/migration54">PHP 5.3 to
-	     5.4</a> and from <a href="http://php.net/migration55">PHP 5.4 to 5.5</a>.</p>
-
-
-</announcement>
+For helping your migration to newer versions please refer to our migration guides for updates from [PHP 5.3 to 5.4](http://php.net/migration54) and from [PHP 5.4 to 5.5](http://php.net/migration55).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Segmentation fault with ArrayObject unset).</description>
+        <references>
+          <reference type="bugfix">66127</reference>
+        </references>
+      </change>
+      <change>
+        <description>(spl_fixedarray_resize integer overflow).</description>
+        <references>
+          <reference type="bugfix">67247</reference>
+        </references>
+      </change>
+      <change>
+        <description>(printf out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67249</reference>
+        </references>
+      </change>
+      <change>
+        <description>(iptcparse out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67250</reference>
+        </references>
+      </change>
+      <change>
+        <description>(convert_uudecode out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67252</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in recursiveDirectoryIterator).</description>
+        <references>
+          <reference type="bugfix">67359</reference>
+        </references>
+      </change>
+      <change>
+        <description>(insecure temporary file use in the configure script). (CVE-2014-3981)</description>
+        <references>
+          <reference type="bugfix">67390</reference>
+          <reference type="cve">CVE-2014-3981</reference>
+        </references>
+      </change>
+      <change>
+        <description>(putenv with empty variable may lead to crash).</description>
+        <references>
+          <reference type="bugfix">67399</reference>
+        </references>
+      </change>
+      <change>
+        <description>(unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion)</description>
+        <references>
+          <reference type="bugfix">67492</reference>
+          <reference type="cve">CVE-2014-3515</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</description>
+        <references>
+          <reference type="bugfix">67498</reference>
+          <reference type="cve">CVE-2014-4721</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>Fixed missing type checks in com_event_sink.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Heap buffer over-read in DateInterval). (CVE-2013-6712)</description>
+        <references>
+          <reference type="bugfix">66060</reference>
+          <reference type="cve">CVE-2013-6712</reference>
+        </references>
+      </change>
+      <change>
+        <description>(date_parse_from_format out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67251</reference>
+        </references>
+      </change>
+      <change>
+        <description>(timelib_meridian_with_check out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67253</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Integer overflow in exif_read_data()).</description>
+        <references>
+          <reference type="bugfix">65873</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Fileinfo crashes with powerpoint files).</description>
+        <references>
+          <reference type="bugfix">66307</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</description>
+        <references>
+          <reference type="bugfix">67326</reference>
+          <reference type="cve">CVE-2014-0207</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</description>
+        <references>
+          <reference type="bugfix">67327</reference>
+          <reference type="cve">CVE-2014-0238</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</description>
+        <references>
+          <reference type="bugfix">67328</reference>
+          <reference type="cve">CVE-2014-0237</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: mconvert incorrect handling of truncated pascal string size)</description>
+        <references>
+          <reference type="bugfix">67410</reference>
+          <reference type="cve">CVE-2014-3478</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_check_stream_offset insufficient boundary check)</description>
+        <references>
+          <reference type="bugfix">67411</reference>
+          <reference type="cve">CVE-2014-3479</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_count_chain insufficient boundary check)</description>
+        <references>
+          <reference type="bugfix">67412</reference>
+          <reference type="cve">CVE-2014-3480</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_read_property_info insufficient boundary check)</description>
+        <references>
+          <reference type="bugfix">67413</reference>
+          <reference type="cve">CVE-2014-3487</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(Locale::parseLocale Double Free).</description>
+        <references>
+          <reference type="bugfix">67349</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</description>
+        <references>
+          <reference type="bugfix">67397</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Network">
+      <change>
+        <description>(Fix potential segfault in dns_get_record()). (CVE-2014-4049)</description>
+        <references>
+          <reference type="bugfix">67432</reference>
+          <reference type="cve">CVE-2014-4049</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>Fixed missing type checks in OpenSSL options.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>Fixed missing type checks in php_session_create_id.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,46 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.23">
+<?xml version="1.0"?>
+<release version="1" id="7.2.23">
   <release>7.2.23</release>
   <date>26 Sep 2019</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>23</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.23.tar.bz2</filename>
       <name>PHP 7.2.23 (tar.bz2)</name>
+      <filename>php-7.2.23.tar.bz2</filename>
+      <date>26 Sep 2019</date>
       <sha256>a17af3643d29d7e730f977e3776dc3e325d5ca00b361e41dbfc2368ebad5430d</sha256>
-      <md5/>
-      <date>26 Sep 2019</date>
     </source>
     <source>
-      <filename>php-7.2.23.tar.gz</filename>
       <name>PHP 7.2.23 (tar.gz)</name>
-      <sha256>b32b426c84ff45154d6c11f00aff433bcac831a5c0a09bf0297075eefaea8fcc</sha256>
-      <md5/>
+      <filename>php-7.2.23.tar.gz</filename>
       <date>26 Sep 2019</date>
+      <sha256>b32b426c84ff45154d6c11f00aff433bcac831a5c0a09bf0297075eefaea8fcc</sha256>
     </source>
     <source>
-      <filename>php-7.2.23.tar.xz</filename>
       <name>PHP 7.2.23 (tar.xz)</name>
-      <sha256>74e045ec8ff26290db6a3688826dcdf43b87bc509e508e9cb76dab742804ca14</sha256>
-      <md5/>
+      <filename>php-7.2.23.tar.xz</filename>
       <date>26 Sep 2019</date>
+      <sha256>74e045ec8ff26290db6a3688826dcdf43b87bc509e508e9cb76dab742804ca14</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.2.23. This is a bugfix release.</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.23. This is a bugfix release.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Can't access OneDrive folder).</description>
+        <references>
+          <reference type="bugfix">78220</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generator incorrectly reports non-releasable $this as GC child).</description>
+        <references>
+          <reference type="bugfix">78412</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FastCGI">
+      <change>
+        <description>(FastCGI on_accept hook is not called when using named pipes on Windows).</description>
+        <references>
+          <reference type="bugfix">78469</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLnd">
+      <change>
+        <description>Fixed connect_attr issues and added the _server_host connection attribute.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(odbc_close() closes arbitrary resources).</description>
+        <references>
+          <reference type="bugfix">78473</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_MySQL">
+      <change>
+        <description>(SP call yields additional empty result set).</description>
+        <references>
+          <reference type="bugfix">41997</reference>
+        </references>
+      </change>
+    </module>
+    <module id="sodium">
+      <change>
+        <description>(Partially uninitialized buffer returned by sodium_crypto_generichash_init()).</description>
+        <references>
+          <reference type="bugfix">78510</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(SplObject isCloneable() returns true but errs on clone).</description>
+        <references>
+          <reference type="bugfix">72884</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>cakefest-2017-nyc-the-official</id>
+  <title>CakeFest 2017 NYC, the Official CakePHP Conference</title>
+  <start_date>2017-06-08</start_date>
+  <end_date>2017-06-08</end_date>
+  <location country=""/>
+  <summary type="text"> [CakeFest](https://cakefest.org) is organized for developers, managers and interested newcomers alike. Bringing a world of unique skill and talent together in a celebration and learning environment around the worlds most popular PHP framework.</summary>
+  <content type="markdown"> [CakeFest](https://cakefest.org) is organized for developers, managers and interested newcomers alike. Bringing a world of unique skill and talent together in a celebration and learning environment around the worlds most popular PHP framework.
+
+ Celebrating over eleven years of success in the PHP and web development community, [CakePHP&#x2019;s 2017 conference](http://cakefest.org) will be an event not to miss.
+
+ With two workshop days (8th/9th June) as well as two jam-packed conference days (10th/11th June), this is an open source conference not to miss out on!
+
+[CakeFest](https://cakefest.org) is on the lookout for sponsors - keen for more information? Contact us via &lt;CakeFest@cakephp.org&gt; for more!
+
+Are you a speaker looking for a new and interesting conference to speak at? [CakeFest 2017 NYC](https://cakefest.org) is the place for you! A lot of things interest us, so why not come join in! CFP closes 15th March and Speakers will be announced before 31st March 2017
+
+[Tickets](https://cakefest.org/tickets) are selling fast, so you better grab yours while you still can!</content>
+  <updated>2017-02-21T09:19:04+00:00</updated>
+  <logo width="320" height="228">1608bf0a610a97a260f729a6d713eba0f9d819802a8e1e261f804cc6d5b611e1.png</logo>
+</conference>

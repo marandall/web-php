@@ -1,82 +1,1674 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.0">
+<?xml version="1.0"?>
+<release version="1" id="5.6.0">
   <release>5.6.0</release>
   <date>28 Aug 2014</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>0</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.0.tar.bz2</filename>
       <name>PHP 5.6.0 (tar.bz2)</name>
+      <filename>php-5.6.0.tar.bz2</filename>
+      <date>28 Aug 2014</date>
       <sha256>097af1be34fc73965e6f8401fd10e73eb56e1969ed4ffd691fb7e91606d0fc09</sha256>
-      <md5/>
-      <date>28 Aug 2014</date>
     </source>
     <source>
-      <filename>php-5.6.0.tar.gz</filename>
       <name>PHP 5.6.0 (tar.gz)</name>
-      <sha256>284b85376c630a6a7163e5278d64b8526fa1324fe5fd5d21174b54e2c056533f</sha256>
-      <md5/>
+      <filename>php-5.6.0.tar.gz</filename>
       <date>28 Aug 2014</date>
+      <sha256>284b85376c630a6a7163e5278d64b8526fa1324fe5fd5d21174b54e2c056533f</sha256>
     </source>
     <source>
-      <filename>php-5.6.0.tar.xz</filename>
       <name>PHP 5.6.0 (tar.xz)</name>
-      <sha256>8fc5411cd05cc6cc663247e588931fe67b1dc0e42550fa28ab2c943ad84eda02</sha256>
-      <md5/>
+      <filename>php-5.6.0.tar.xz</filename>
       <date>28 Aug 2014</date>
+      <sha256>8fc5411cd05cc6cc663247e588931fe67b1dc0e42550fa28ab2c943ad84eda02</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.6.0. This new version comes with new features, some backward incompatible changes and many improvements.
 
+**The main features of PHP 5.6.0 include:**
 
+- [Constant scalar expressions](http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs).
+- [Variadic functions](http://php.net/functions.arguments#functions.variable-arg-list) and argument unpacking using the `...` operator.
+- [Exponentiation using the `**` operator](http://php.net/language.operators.arithmetic).
+- [Function and constant importing](http://php.net/migration56.new-features#migration56.new-features.use) with the [use keyword](http://php.net/language.namespaces.importing).
+- [phpdbg](http://phpdbg.com/docs) as an interactive integrated debugger SAPI.
+- [php://input](http://php.net/wrappers#wrappers.php.input) is now reusable, and `$HTTP_RAW_POST_DATA` is deprecated.
+- [GMP](http://php.net/book.gmp) objects now support operator overloading.
+- File uploads larger than 2 gigabytes in size are now accepted.
 
-<p>The PHP Development Team announces the immediate availability of PHP 5.6.0.
-This new version comes with new features, some backward incompatible changes and many improvements.
-</p>
+For a full list of new features, you may read [the new features chapter of the migration guide](http://php.net/migration56.new-features).
 
-<p><b>The main features of PHP 5.6.0 include:</b></p>
-<ul>
- <li><a href="http://php.net/migration56.new-features#migration56.new-features.const-scalar-exprs">Constant scalar expressions</a>.</li>
- <li><a href="http://php.net/functions.arguments#functions.variable-arg-list">Variadic functions</a> and argument unpacking using the <code>...</code> operator.</li>
-<li><a href="http://php.net/language.operators.arithmetic">Exponentiation using the <code>**</code> operator</a>.</li>
- <li><a href="http://php.net/migration56.new-features#migration56.new-features.use">Function and constant importing</a> with the <a href="http://php.net/language.namespaces.importing">use keyword</a>.</li>
- <li><a href="http://phpdbg.com/docs">phpdbg</a> as an interactive integrated debugger SAPI.</li>
- <li><a href="http://php.net/wrappers#wrappers.php.input">php://input</a> is now reusable, and <code>$HTTP_RAW_POST_DATA</code> is deprecated.</li>
- <li><a href="http://php.net/book.gmp">GMP</a> objects now support operator overloading.</li>
- <li>File uploads larger than 2 gigabytes in size are now accepted.</li>
-</ul>
+**PHP 5.6.0 also introduces changes that affect compatibility:**
 
-<p>For a full list of new features, you may read <a href="http://php.net/migration56.new-features">the new features chapter of the migration guide</a>.</p>
+- Array keys won't be overwritten when defining an array as a property of a class via an array literal.
+- [json_decode()](http://php.net/function.json-decode) is more strict in JSON syntax parsing.
+- Stream wrappers now verify peer certificates and host names by default when using SSL/TLS.
+- [GMP](http://php.net/book.gmp) resources are now objects.
+- [Mcrypt](http://php.net/book.mcrypt) functions now require valid keys and IVs.
 
-<p>
-<b>PHP 5.6.0 also introduces changes that affect compatibility:</b>
-</p>
-
-<ul>
- <li>Array keys won't be overwritten when defining an array as a property of a class via an array literal.</li>
- <li><a href="http://php.net/function.json-decode">json_decode()</a> is more strict in JSON syntax parsing.</li>
- <li>Stream wrappers now verify peer certificates and host names by default when using SSL/TLS.</li>
- <li><a href="http://php.net/book.gmp">GMP</a> resources are now objects.</li>
- <li><a href="http://php.net/book.mcrypt">Mcrypt</a> functions now require valid keys and IVs.</li>
-</ul>
-
-<p>
- For users upgrading from PHP 5.5, <a href="http://php.net/migration56">a full migration guide</a> is available, detailing the changes between 5.5 and 5.6.0.
-</p>
-
-<p>For source downloads of PHP 5.6.0, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The full list of changes is available in the <a href="http://www.php.net/ChangeLog-5.php#5.6.0">ChangeLog</a>.
-</p>
-
-
-</announcement>
+ For users upgrading from PHP 5.5, [a full migration guide](http://php.net/migration56) is available, detailing the changes between 5.5 and 5.6.0.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Added constant scalar expressions syntax.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added dedicated syntax for variadic functions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for argument unpacking to complement the variadic syntax.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added an exponentiation operator (**).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added phpdbg SAPI.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added unified default encoding.</description>
+        <references/>
+      </change>
+      <change>
+        <description>The php://input stream is now re-usable and can be used concurrently with enable_post_data_reading=0.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added use function and use const..</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added a function for timing attack safe string comparison.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added the __debugInfo() magic method to allow userland classes to implement the get_debug_info API previously available only to extensions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added gost-crypto (CryptoPro S-box) hash algorithm.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Stream wrappers verify peer certificates and host names by default in encrypted client streams.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Uploads equal or greater than 2GB in size are now accepted.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(incorrect push to the empty array).</description>
+        <references>
+          <reference type="bugfix">67693</reference>
+        </references>
+      </change>
+      <change>
+        <description>Removed inconsistency regarding behaviour of array in constants at run-time.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(eval with parse error causes segmentation fault in generator).</description>
+        <references>
+          <reference type="bugfix">67497</reference>
+        </references>
+      </change>
+      <change>
+        <description>(strtr with empty array crashes).</description>
+        <references>
+          <reference type="bugfix">67151</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Windows 8.1/Server 2012 R2 reported as Windows 8/Server 2012).</description>
+        <references>
+          <reference type="bugfix">67407</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect behavior with nested "finally" blocks).</description>
+        <references>
+          <reference type="bugfix">66608</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#34407](http://bugs.php.net/34407) (ucwords and Title Case).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(make install fails to install libphp5.so on FreeBSD 10.0).</description>
+        <references>
+          <reference type="bugfix">67091</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memory leak with immediately dereferenced array in class constant).</description>
+        <references>
+          <reference type="bugfix">67368</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in highlight_file()/highlight_string()).</description>
+        <references>
+          <reference type="bugfix">67468</reference>
+        </references>
+      </change>
+      <change>
+        <description>(phpinfo() Type Confusion Information Leak Vulnerability). (CVE-2014-4721)</description>
+        <references>
+          <reference type="bugfix">67498</reference>
+          <reference type="cve">CVE-2014-4721</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php://input temp file will be located in sys_temp_dir instead of upload_tmp_dir).</description>
+        <references>
+          <reference type="bugfix">67551</reference>
+        </references>
+      </change>
+      <change>
+        <description>(array_splice all elements, then []= gives wrong index).</description>
+        <references>
+          <reference type="bugfix">67169</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php://input regression).</description>
+        <references>
+          <reference type="bugfix">67198</reference>
+        </references>
+      </change>
+      <change>
+        <description>(spl_fixedarray_resize integer overflow).</description>
+        <references>
+          <reference type="bugfix">67247</reference>
+        </references>
+      </change>
+      <change>
+        <description>(iptcparse out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67250</reference>
+        </references>
+      </change>
+      <change>
+        <description>(convert_uudecode out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67252</reference>
+        </references>
+      </change>
+      <change>
+        <description>(printf out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67249</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#64744](http://bugs.php.net/64744) (Differentiate between member function call on a null and non-null, non-objects).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Autoloader isn't called if two method definitions don't match).</description>
+        <references>
+          <reference type="bugfix">67436</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Closures do not correctly capture the late bound class (static::) in some cases).</description>
+        <references>
+          <reference type="bugfix">66622</reference>
+        </references>
+      </change>
+      <change>
+        <description>(insecure temporary file use in the configure script). (CVE-2014-3981)</description>
+        <references>
+          <reference type="bugfix">67390</reference>
+          <reference type="cve">CVE-2014-3981</reference>
+        </references>
+      </change>
+      <change>
+        <description>(dtrace breaks argument unpack).</description>
+        <references>
+          <reference type="bugfix">67392</reference>
+        </references>
+      </change>
+      <change>
+        <description>(header('Location: foo') will override a 308-399 response code).</description>
+        <references>
+          <reference type="bugfix">67428</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SIGSEGV when using count() on an object implementing Countable).</description>
+        <references>
+          <reference type="bugfix">67433</reference>
+        </references>
+      </change>
+      <change>
+        <description>(putenv with empty variable may lead to crash).</description>
+        <references>
+          <reference type="bugfix">67399</reference>
+        </references>
+      </change>
+      <change>
+        <description>Expose get_debug_info class hook as __debugInfo() magic method.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented unified default encoding (RFC: https://wiki.php.net/rfc/default_encoding).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added T_POW (**) operator (RFC: https://wiki.php.net/rfc/pow-operator).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Improved IS_VAR operands fetching.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Improved empty string handling. Now ZE uses an interned string instead of allocation new empty string each time.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented internal operator overloading (RFC: https://wiki.php.net/rfc/operator_overloading_gmp).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Made calls from incompatible context issue an E_DEPRECATED warning instead of E_STRICT (phase 1 of RFC: https://wiki.php.net/rfc/incompat_ctx).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Uploads equal or greater than 2GB in size are now accepted.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Reduced POST data memory usage by 200-300%. Changed INI setting always_populate_raw_post_data to throw a deprecation warning when enabling and to accept -1 for never populating the $HTTP_RAW_POST_DATA global variable, which will be the default in future PHP versions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented dedicated syntax for variadic functions (RFC: https://wiki.php.net/rfc/variadics).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Improving multi-threaded scalability by using emalloc/efree/estrdup (Anatol, Dmitry)</description>
+        <references>
+          <reference type="bugfix">50333</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented constant scalar expressions (with support for constants) (RFC: https://wiki.php.net/rfc/const_scalar_exprs).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Segfault with finally).</description>
+        <references>
+          <reference type="bugfix">65784</reference>
+        </references>
+      </change>
+      <change>
+        <description>(copy() arginfo has changed starting from 5.4).</description>
+        <references>
+          <reference type="bugfix">66509</reference>
+        </references>
+      </change>
+      <change>
+        <description>Allow zero length comparison in substr_compare() (Tjerk)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(proc_open() changes environment array) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">60602</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Out of memory on command stream_get_contents).</description>
+        <references>
+          <reference type="bugfix">61019</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stream_socket_server() creates wrong Abstract Namespace UNIX sockets).</description>
+        <references>
+          <reference type="bugfix">64330</reference>
+        </references>
+      </change>
+      <change>
+        <description>(exit in stream filter produces segfault).</description>
+        <references>
+          <reference type="bugfix">66182</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fpassthru broken).</description>
+        <references>
+          <reference type="bugfix">66736</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cannot use T_POW in const expression) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">66822</reference>
+        </references>
+      </change>
+      <change>
+        <description>(substr_compare broke by previous change) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">67043</reference>
+        </references>
+      </change>
+      <change>
+        <description>(copy() doesn't work when destination filename is created by tempnam()).</description>
+        <references>
+          <reference type="bugfix">65701</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unexpected array indexing in class's static property).</description>
+        <references>
+          <reference type="bugfix">66015</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added (constant) string/array dereferencing to static scalar expressions to complete the set; now possible thanks to [#66015](http://bugs.php.net/66015) being fixed.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Update reflection information for unserialize() function).</description>
+        <references>
+          <reference type="bugfix">66568</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Composer.phar install/update fails).</description>
+        <references>
+          <reference type="bugfix">66660</reference>
+        </references>
+      </change>
+      <change>
+        <description>(getimagesize should recognize BMP files with negative height).</description>
+        <references>
+          <reference type="bugfix">67024</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Countable interface prevents using 2nd parameter ($mode) of count() function).</description>
+        <references>
+          <reference type="bugfix">67064</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Echoing unserialized "SplFileObject" crash).</description>
+        <references>
+          <reference type="bugfix">67072</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Remove reference to Windows 95).</description>
+        <references>
+          <reference type="bugfix">67033</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache2 Handler SAPI">
+      <change>
+        <description>Fixed Apache log issue caused by APR's lack of support for %zu (APR issue https://issues.apache.org/bugzilla/show_bug.cgi?id=56120).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>Added some MIME types to the CLI web server.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Missing MIME types for XML/XSL files).</description>
+        <references>
+          <reference type="bugfix">67079</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Empty header causes PHP built-in web server to hang).</description>
+        <references>
+          <reference type="bugfix">66830</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Unable to access to apache_request_headers() elements).</description>
+        <references>
+          <reference type="bugfix">67594</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#67429](http://bugs.php.net/67429) (CLI server is missing some new HTTP response codes).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(built-in web-server segfaults on startup).</description>
+        <references>
+          <reference type="bugfix">67406</reference>
+        </references>
+      </change>
+    </module>
+    <module id="COM">
+      <change>
+        <description>(DOTNET is successful once per server run) (Aidas Kasparas)</description>
+        <references>
+          <reference type="bugfix">41577</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed missing type checks in com_event_sink (Yussuf Khalil, Stas).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Special Character via COM Interface (CP_UTF8)).</description>
+        <references>
+          <reference type="bugfix">66431</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Curl">
+      <change>
+        <description>Implemented FR [#65646](http://bugs.php.net/65646) (re-enable CURLOPT_FOLLOWLOCATION with open_basedir or safe_mode).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Check for openssl.cafile ini directive when loading CA certs.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Remove cURL close policy related constants as these have no effect and are no longer used in libcurl.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Can't reset CURLOPT_CUSTOMREQUEST to default behaviour) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">66109</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fix compilation on libcurl versions between 7.10.5 and 7.12.2, inclusive.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(CURLOPT_INFILE doesn't allow reset).</description>
+        <references>
+          <reference type="bugfix">64247</reference>
+        </references>
+      </change>
+      <change>
+        <description>(curl_exec returns differently than curl_multi_getcontent).</description>
+        <references>
+          <reference type="bugfix">66562</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Heap buffer over-read in DateInterval). (CVE-2013-6712)</description>
+        <references>
+          <reference type="bugfix">66060</reference>
+          <reference type="cve">CVE-2013-6712</reference>
+        </references>
+      </change>
+      <change>
+        <description>(memory leaks in DateTime constructor) (Tjerk).</description>
+        <references>
+          <reference type="bugfix">66091</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Serialize of DateTime truncates fractions of second).</description>
+        <references>
+          <reference type="bugfix">67308</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed regression in fix for [#67118](http://bugs.php.net/67118) (constructor can't be called twice).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(date_parse_from_format out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67251</reference>
+        </references>
+      </change>
+      <change>
+        <description>(timelib_meridian_with_check out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67253</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added DateTimeImmutable::createFromMutable to create a DateTimeImmutable object from an existing DateTime (mutable) object (Derick)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(__wakeup of DateTime segfaults when invalid object data is supplied).</description>
+        <references>
+          <reference type="bugfix">66721</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DateTime constructor crash with invalid data).</description>
+        <references>
+          <reference type="bugfix">67118</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</description>
+        <references>
+          <reference type="bugfix">67081</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Embed">
+      <change>
+        <description>(php5embed.lib isn't provided anymore). (Anatol).</description>
+        <references>
+          <reference type="bugfix">65715</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Segfault in cdf.c). (CVE-2014-3587)</description>
+        <references>
+          <reference type="bugfix">67716</reference>
+          <reference type="cve">CVE-2014-3587</reference>
+        </references>
+      </change>
+      <change>
+        <description>(extensive backtracking in rule regular expression). (CVE-2014-3538)</description>
+        <references>
+          <reference type="bugfix">67705</reference>
+          <reference type="cve">CVE-2014-3538</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</description>
+        <references>
+          <reference type="bugfix">67327</reference>
+          <reference type="cve">CVE-2014-0238</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</description>
+        <references>
+          <reference type="bugfix">67328</reference>
+          <reference type="cve">CVE-2014-0237</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_read_short_sector insufficient boundary check). (CVE-2014-0207)</description>
+        <references>
+          <reference type="bugfix">67326</reference>
+          <reference type="cve">CVE-2014-0207</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: NULL pointer deference flaw by processing certain CDF files). (CVE-2014-0236)</description>
+        <references>
+          <reference type="bugfix">67329</reference>
+          <reference type="cve">CVE-2014-0236</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: mconvert incorrect handling of truncated pascal string size). (CVE-2014-3478)</description>
+        <references>
+          <reference type="bugfix">67410</reference>
+          <reference type="cve">CVE-2014-3478</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_check_stream_offset insufficient boundary check). (CVE-2014-3479)</description>
+        <references>
+          <reference type="bugfix">67411</reference>
+          <reference type="cve">CVE-2014-3479</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_count_chain insufficient boundary check). (CVE-2014-3480)</description>
+        <references>
+          <reference type="bugfix">67412</reference>
+          <reference type="cve">CVE-2014-3480</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: cdf_read_property_info insufficient boundary check). (CVE-2014-3487)</description>
+        <references>
+          <reference type="bugfix">67413</reference>
+          <reference type="cve">CVE-2014-3487</reference>
+        </references>
+      </change>
+      <change>
+        <description>Upgraded to libmagic-5.17 (Anatol)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(file: infinite recursion). (CVE-2014-1943)</description>
+        <references>
+          <reference type="bugfix">66731</reference>
+          <reference type="cve">CVE-2014-1943</reference>
+        </references>
+      </change>
+      <change>
+        <description>(out-of-bounds memory access in fileinfo). (CVE-2014-2270)</description>
+        <references>
+          <reference type="bugfix">66820</reference>
+          <reference type="cve">CVE-2014-2270</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: extensive backtracking in awk rule regular expression). (CVE-2013-7345)</description>
+        <references>
+          <reference type="bugfix">66946</reference>
+          <reference type="cve">CVE-2013-7345</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Memory corruption in fileinfo ext / bigendian).</description>
+        <references>
+          <reference type="bugfix">66987</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Solaris 10 is missing strcasestr and needs substitute).</description>
+        <references>
+          <reference type="bugfix">66907</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fileinfo crashes with powerpoint files).</description>
+        <references>
+          <reference type="bugfix">66307</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(revised fix 67541, broke mod_fastcgi BC).</description>
+        <references>
+          <reference type="bugfix">67606</reference>
+        </references>
+      </change>
+      <change>
+        <description>(error_log=syslog ignored).</description>
+        <references>
+          <reference type="bugfix">67530</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php links to systemd libraries without using pkg-config).</description>
+        <references>
+          <reference type="bugfix">67635</reference>
+        </references>
+      </change>
+      <change>
+        <description>(syslog cannot be set in pool configuration).</description>
+        <references>
+          <reference type="bugfix">67531</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fix Apache 2.4.10+ SetHandler proxy:fcgi:// incompatibilities).</description>
+        <references>
+          <reference type="bugfix">67541</reference>
+        </references>
+      </change>
+      <change>
+        <description>Included apparmor support in fpm (RFC: https://wiki.php.net/rfc/fpm_change_hat).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added clear_env configuration directive to disable clearenv() call.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(unknown entry 'priority' in php-fpm.conf).</description>
+        <references>
+          <reference type="bugfix">66482</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php-fpm reload leaks epoll_create() file descriptor).</description>
+        <references>
+          <reference type="bugfix">66908</reference>
+        </references>
+      </change>
+      <change>
+        <description>(sapi/fpm: possible privilege escalation due to insecure default configuration). (CVE-2014-0185)</description>
+        <references>
+          <reference type="bugfix">67060</reference>
+          <reference type="cve">CVE-2014-0185</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(Null byte injection possible with imagexxx functions). (CVE-2014-5120)</description>
+        <references>
+          <reference type="bugfix">67730</reference>
+          <reference type="cve">CVE-2014-5120</reference>
+        </references>
+      </change>
+      <change>
+        <description>(php-gd 'c_color' NULL pointer dereference). (CVE-2014-2497)</description>
+        <references>
+          <reference type="bugfix">66901</reference>
+          <reference type="cve">CVE-2014-2497</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imageaffinematrixget missing check of parameters).</description>
+        <references>
+          <reference type="bugfix">67248</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed imagettftext to load the correct character map rather than the last one.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Heap Overflow Vulnerability in imagecrop()). (CVE-2013-7226)</description>
+        <references>
+          <reference type="bugfix">66356</reference>
+          <reference type="cve">CVE-2013-7226</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecrop(): insufficient fix for NULL defer). (CVE-2013-7327)</description>
+        <references>
+          <reference type="bugfix">66815</reference>
+          <reference type="cve">CVE-2013-7327</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid 2nd argument crashes imageaffinematrixget).</description>
+        <references>
+          <reference type="bugfix">66869</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagescale - poor quality of scaled image).</description>
+        <references>
+          <reference type="bugfix">66887</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagescale segfault).</description>
+        <references>
+          <reference type="bugfix">66890</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagescale ignore method argument).</description>
+        <references>
+          <reference type="bugfix">66893</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GMP">
+      <change>
+        <description>(invalid argument crashes gmp_testbit) (Pierre)</description>
+        <references>
+          <reference type="bugfix">66872</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed crashes in serialize/unserialize.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Moved GMP to use object as the underlying structure and implemented various improvements based on this.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added gmp_root() and gmp_rootrem() functions for calculating nth roots.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Hash">
+      <change>
+        <description>Added gost-crypto (CryptoPro S-box) GOST hash algo.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Missing FNV1a32 and FNV1a64 hash functions). (Michael M Slusarz).</description>
+        <references>
+          <reference type="bugfix">66698</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented timing attack safe string comparison function (RFC: https://wiki.php.net/rfc/timing_attack).</description>
+        <references/>
+      </change>
+      <change>
+        <description>hash_pbkdf2() now works correctly if the $length argument is not specified.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>(A reproductible crash in UConverter when given invalid encoding) (Stas)</description>
+        <references>
+          <reference type="bugfix">66873</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Wrong argument type hint for function intltz_from_date_time_zone).</description>
+        <references>
+          <reference type="bugfix">66921</reference>
+        </references>
+      </change>
+      <change>
+        <description>(NumberFormatter::parse() resets LC_NUMERIC setting).</description>
+        <references>
+          <reference type="bugfix">67052</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Locale::parseLocale Double Free).</description>
+        <references>
+          <reference type="bugfix">67349</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Buffer overflow in locale_get_display_name and uloc_getDisplayName (libicu 4.8.1)).</description>
+        <references>
+          <reference type="bugfix">67397</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>Fixed case part of bug [#64874](http://bugs.php.net/64874) ("json_decode handles whitespace and case-sensitivity incorrectly")</description>
+        <references/>
+      </change>
+      <change>
+        <description>(JsonSerializeable couldn't implement on module extension) (chobieeee@php.net)</description>
+        <references>
+          <reference type="bugfix">65753</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Blank line inside empty array/object when JSON_PRETTY_PRINT is set).</description>
+        <references>
+          <reference type="bugfix">66021</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ldap">
+      <change>
+        <description>Added new function ldap_modify_batch().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue with null bytes in LDAP bindings.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="litespeed">
+      <change>
+        <description>(-Werror=format-security error in lsapi code).</description>
+        <references>
+          <reference type="bugfix">63228</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mail">
+      <change>
+        <description>(Don't add newline after X-PHP-Originating-Script) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">66535</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mcrypt">
+      <change>
+        <description>No longer allow invalid key sizes, invalid IV sizes or missing required IV in mcrypt_encrypt, mcrypt_decrypt and the deprecated mode functions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Use /dev/urandom as the default source for mcrypt_create_iv().</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Mbstring">
+      <change>
+        <description>Upgraded to oniguruma 5.9.5 (Anatol)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(mb_regex_encoding mismatch).</description>
+        <references>
+          <reference type="bugfix">67199</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Milter">
+      <change>
+        <description>(php-milter does not build and crashes randomly).</description>
+        <references>
+          <reference type="bugfix">67715</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mysqli">
+      <change>
+        <description>Added new function mysqli_get_links_stats() as well as new INI variable mysqli.rollback_on_cached_plink of type bool (Andrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Segfault in mysqli_stmt::bind_result() when link closed) (Remi)</description>
+        <references>
+          <reference type="bugfix">66762</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed building against an external libmysqlclient.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="mysqlnd">
+      <change>
+        <description>Disabled flag for SP OUT variables for 5.5+ servers as they are not natively supported by the overlying APIs.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added a new fetching mode to mysqlnd.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for gb18030 from MySQL 5.7.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Network">
+      <change>
+        <description>(segfault in dns_get_record). (CVE-2014-3597)</description>
+        <references>
+          <reference type="bugfix">67717</reference>
+          <reference type="cve">CVE-2014-3597</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fix potential segfault in dns_get_record()). (CVE-2014-4049)</description>
+        <references>
+          <reference type="bugfix">67432</reference>
+          <reference type="cve">CVE-2014-4049</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>(Improve performance of multi-row OCI_RETURN_LOB queries) (Perrier, Chris Jones)</description>
+        <references>
+          <reference type="bugfix">66875</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(odbc_fetch_into returns junk at end of multi-byte char fields).</description>
+        <references>
+          <reference type="bugfix">60616</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>Fixed missing type checks in OpenSSL options (Yussuf Khalil, Stas).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(TLS connections fail behind HTTP proxy).</description>
+        <references>
+          <reference type="bugfix">67609</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed broken build against OpenSSL older than 0.9.8 where ECDH unavailable.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Subject altNames doesn't support wildcard matching).</description>
+        <references>
+          <reference type="bugfix">67666</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fall back to crypto_type from context if not specified explicitly in stream_socket_enable_crypto).</description>
+        <references>
+          <reference type="bugfix">67224</reference>
+        </references>
+      </change>
+      <change>
+        <description>(certificates validity parsing does not work past 2050).</description>
+        <references>
+          <reference type="bugfix">65698</reference>
+        </references>
+      </change>
+      <change>
+        <description>(openssl_x509_parse warning with V_ASN1_GENERALIZEDTIME).</description>
+        <references>
+          <reference type="bugfix">66636</reference>
+        </references>
+      </change>
+      <change>
+        <description>Peer certificates now verified by default in client socket operations (RFC: https://wiki.php.net/rfc/tls-peer-verification).</description>
+        <references/>
+      </change>
+      <change>
+        <description>New openssl.cafile and openssl.capath ini directives.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added crypto_method option for the ssl stream context.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added certificate fingerprint support.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added explicit TLSv1.1 and TLSv1.2 stream transports.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(CN_match gives false positive).</description>
+        <references>
+          <reference type="bugfix">65729</reference>
+        </references>
+      </change>
+      <change>
+        <description>Peer name verification matches SAN DNS names for certs using the Subject Alternative Name x509 extension.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed segfault when built against OpenSSL&gt;=1.0.1 (Daniel Lowrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added SPKAC support.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fallback to Windows CA cert store for peer verification if no openssl.cafile ini directive or "cafile" SSL context option specified in Windows.</description>
+        <references/>
+      </change>
+      <change>
+        <description>The openssl.cafile and openssl.capath ini directives introduced in alpha2 now have PHP_INI_PERDIR accessibility (was PHP_INI_ALL).</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "peer_name" SSL context option replaces "CN_match" (which still works as before but triggers E_DEPRECATED).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed segfault when accessing non-existent context for client SNI use (Daniel Lowrey)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Add EC key support to php_openssl_is_private_key).</description>
+        <references>
+          <reference type="bugfix">66501</reference>
+        </references>
+      </change>
+      <change>
+        <description>(add new boolean "verify_peer_name" SSL context option allowing clients to verify cert names separately from the cert itself). "verify_peer_name" is enabled by default for client streams.</description>
+        <references>
+          <reference type="bugfix">47030</reference>
+        </references>
+      </change>
+      <change>
+        <description>("cafile" SSL context option now supports stream wrappers).</description>
+        <references>
+          <reference type="bugfix">65538</reference>
+        </references>
+      </change>
+      <change>
+        <description>New openssl_get_cert_locations() function to aid CA file and peer verification debugging.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Encrypted stream wrappers now disable TLS compression by default.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "capture_session_meta" SSL context option allows encrypted client and server streams access to negotiated protocol/cipher information.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "honor_cipher_order" SSL context option allows servers to prioritize cipher suites of their choosing when negotiating SSL/TLS handshakes.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "single_ecdh_use" and "single_dh_use" SSL context options allow for improved forward secrecy in encrypted stream servers.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "dh_param" SSL context option allows stream servers control over the parameters when negotiating DHE cipher suites.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "ecdh_curve" SSL context option allowing stream servers to specify the curve to use when negotiating ephemeral ECDHE ciphers (defaults to NIST P-256).</description>
+        <references/>
+      </change>
+      <change>
+        <description>New "rsa_key_size" SSL context option gives stream servers control over the key size (in bits) used for RSA key agreements.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Crypto methods for encrypted client and server streams now use bitwise flags for fine-grained protocol support.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added new tlsv1.0 stream wrapper to specify TLSv1 client/server method. tls wrapper now negotiates TLSv1, TLSv1.1 or TLSv1.2.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Encrypted client streams now enable SNI by default.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Encrypted streams now prioritize ephemeral key agreement and high strength ciphers by default.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New OPENSSL_DEFAULT_STREAM_CIPHERS constant exposes default cipher list.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New STREAM_CRYPTO_METHOD_* constants for enhanced control over the crypto methods negotiated encrypted server/client sessions.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Encrypted stream servers now automatically mitigate potential DoS vector arising from client-initiated TLS renegotiation. New "reneg_limit", "reneg_window" and "reneg_limit_callback" SSL context options for custom renegotiation limiting control.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed memory leak in windows cert verification on verify failure.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Peer certificate capturing via SSL context options now functions even if peer verification fails.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Encrypted TLS servers now support the server name indication TLS extension via the new "SNI_server_certs" SSL context option.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Default disgest algo is still MD5, switch to SHA1).</description>
+        <references>
+          <reference type="bugfix">66833</reference>
+        </references>
+      </change>
+      <change>
+        <description>(memory leak in openssl_seal()).</description>
+        <references>
+          <reference type="bugfix">66942</reference>
+        </references>
+      </change>
+      <change>
+        <description>(memory leak in openssl_open()).</description>
+        <references>
+          <reference type="bugfix">66952</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Fix broken build when extension built separately).</description>
+        <references>
+          <reference type="bugfix">66840</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OPcache">
+      <change>
+        <description>Added an optimization of class constants and constant calls to some internal functions (Laruence, Dmitry)</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added an optimization pass to convert FCALL_BY_NAME into DO_FCALL.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added an optimization pass to merged identical constants (and related cache_slots) in op_array-&gt;literals table.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added script level constant replacement optimization pass.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added function opcache_is_script_cached().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added information about interned strings usage.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(php-cgi work with opcache, may be segmentation fault happen) (Dmitry, Laruence)</description>
+        <references>
+          <reference type="bugfix">67215</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Ungreedy and min/max quantifier bug, applied patch from the upstream).</description>
+        <references>
+          <reference type="bugfix">67238</reference>
+        </references>
+      </change>
+      <change>
+        <description>Upgraded to PCRE 8.34.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added support for (*MARK) backtracking verbs.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="pgsql">
+      <change>
+        <description>(Error in code "form" instead of "from", pgsql.c, line 756), which affected builds against libpq &lt; 7.3.</description>
+        <references>
+          <reference type="bugfix">67550</reference>
+        </references>
+      </change>
+      <change>
+        <description>pg_insert()/pg_select()/pg_update()/pg_delete() are no longer EXPERIMENTAL.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented FR [#25854](http://bugs.php.net/25854) (Return value for pg_insert should be resource instead of bool).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented FR [#41146](http://bugs.php.net/41146) (Add "description" with exteneded flag pg_meta_data(). pg_meta_data(resource $conn, string $table [, bool extended]) It also made pg_meta_data() return "is enum" always).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Read-only access to the socket stream underlying database connections is exposed via a new pg_socket() function to allow read/write polling when establishing asynchronous connections and executing queries in non-blocking applications.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Asynchronous connections are now possible using the PGSQL_CONNECT_ASYNC flag in conjunction with a new pg_connect_poll() function and connection polling status constants.</description>
+        <references/>
+      </change>
+      <change>
+        <description>New pg_flush() and pg_consume_input() functions added to manually complete non-blocking reads/writes to underlying connection sockets.</description>
+        <references/>
+      </change>
+      <change>
+        <description>pg_version() returns full report which obtained by PQparameterStatus().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added pg_lo_truncate().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added 64bit large object support for PostgreSQL 9.3 and later.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Cannot build against libpq 7.3).</description>
+        <references>
+          <reference type="bugfix">67555</reference>
+        </references>
+      </change>
+    </module>
+    <module id="phpdbg">
+      <change>
+        <description>(Compilation fails for phpdbg when the build directory != src directory).</description>
+        <references>
+          <reference type="bugfix">67575</reference>
+        </references>
+      </change>
+      <change>
+        <description>(readline feature not enabled when build with libedit).</description>
+        <references>
+          <reference type="bugfix">67499</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed issue [#94](https://github.com/krakjoe/phpdbg/issues/94) (List behavior is inconsistent).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#97](https://github.com/krakjoe/phpdbg/issues/97) (The prompt should always ensure it is on a newline).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#98](https://github.com/krakjoe/phpdbg/issues/98) (break if does not seem to work).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#99](https://github.com/krakjoe/phpdbg/issues/99) (register function has the same behavior as run).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#100](https://github.com/krakjoe/phpdbg/issues/100) (No way to list the current stack/frames) (Help entry was missing).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed bug which caused phpdbg to fail immediately on startup in non-debug builds.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(phpdbg uses non-standard TIOCGWINSZ).</description>
+        <references>
+          <reference type="bugfix">67212</reference>
+        </references>
+      </change>
+      <change>
+        <description>Included phpdbg sapi (RFC: https://wiki.php.net/rfc/phpdbg).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added watchpoints (watch command).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Renamed some commands (next =&gt; continue and how to step).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed issue [#85](https://github.com/krakjoe/phpdbg/issues/85) (Added stdin/stdout/stderr constants and their php:// wrappers).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>('pdo/php_pdo_error.h' not copied to the include dir).</description>
+        <references>
+          <reference type="bugfix">66604</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO-ODBC">
+      <change>
+        <description>(PDO-ODBC changes for 64-bit).</description>
+        <references>
+          <reference type="bugfix">50444</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_pgsql">
+      <change>
+        <description>(PDO_pgsql: add pg_get_notify support).</description>
+        <references>
+          <reference type="bugfix">42614</reference>
+        </references>
+      </change>
+      <change>
+        <description>(pgsqlCopyFromFile, pgsqlCopyToArray use Postgres &lt; 7.3 syntax).</description>
+        <references>
+          <reference type="bugfix">63657</reference>
+        </references>
+      </change>
+      <change>
+        <description>Cleaned up code by increasing the requirements to libpq versions providing PQexecParams, PQprepare, PQescapeStringConn, PQescapeByteaConn. According to the release notes that means 8.0.8+ or 8.1.4+.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Deprecated PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT, an undocument constant effectively equivalent to PDO::ATTR_EMULATE_PREPARES.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Added PDO::PGSQL_ATTR_DISABLE_PREPARES constant to execute the queries without preparing them, while still passing parameters separately from the command text using PQexecParams.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO_firebird">
+      <change>
+        <description>(memory corruption in error handling) (Popa)</description>
+        <references>
+          <reference type="bugfix">66071</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</description>
+        <references>
+          <reference type="bugfix">64498</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Redirection loop on nginx with FPM).</description>
+        <references>
+          <reference type="bugfix">67587</reference>
+        </references>
+      </change>
+    </module>
+    <module id="readline">
+      <change>
+        <description>(Interactive mode doesn't force a newline before the prompt).</description>
+        <references>
+          <reference type="bugfix">55496</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Save command history when exiting interactive shell with control-c).</description>
+        <references>
+          <reference type="bugfix">67496</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>Implemented FR [#67713](http://bugs.php.net/67713) (loosen the restrictions on ReflectionClass::newInstanceWithoutConstructor()).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>(Regression in session_regenerate_id()).</description>
+        <references>
+          <reference type="bugfix">67694</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed missing type checks in php_session_create_id (Yussuf Khalil, Stas).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Session raises E_NOTICE when session name variable is array).</description>
+        <references>
+          <reference type="bugfix">66827</reference>
+        </references>
+      </change>
+      <change>
+        <description>(session.hash_function silently fallback to default md5) (Yasuo)</description>
+        <references>
+          <reference type="bugfix">65315</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#17860](http://bugs.php.net/17860) (Session write short circuit).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented FR [#20421](http://bugs.php.net/20421) (session_abort() and session_reset() function).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Remove session_gc() and session_serializer_name() wich were introduced in the first 5.6.0 alpha.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SimpleXML">
+      <change>
+        <description>(simplexml_load_string() mangles empty node name) (Anatol)</description>
+        <references>
+          <reference type="bugfix">66084</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite">
+      <change>
+        <description>Updated the bundled libsqlite to the version 3.8.3.1 (Anatol)</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Updated bundled libsqlite to 3.8.4.3).</description>
+        <references>
+          <reference type="bugfix">66967</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>Implemented FR [#49898](http://bugs.php.net/49898) (Add SoapClient::__getCookies()).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>Revert fix for [#67064](http://bugs.php.net/67064) (BC issues).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(ArrayIterator use-after-free due to object change during sorting). (CVE-2014-4698)</description>
+        <references>
+          <reference type="bugfix">67539</reference>
+          <reference type="cve">CVE-2014-4698</reference>
+        </references>
+      </change>
+      <change>
+        <description>(SPL Iterators use-after-free). (CVE-2014-4670)</description>
+        <references>
+          <reference type="bugfix">67538</reference>
+          <reference type="cve">CVE-2014-4670</reference>
+        </references>
+      </change>
+      <change>
+        <description>(unserialize() SPL ArrayObject / SPLObjectStorage Type Confusion). (CVE-2014-3515)</description>
+        <references>
+          <reference type="bugfix">67492</reference>
+          <reference type="cve">CVE-2014-3515</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segfault in recursiveDirectoryIterator).</description>
+        <references>
+          <reference type="bugfix">67359</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Segmentation fault with ArrayObject unset).</description>
+        <references>
+          <reference type="bugfix">66127</reference>
+        </references>
+      </change>
+      <change>
+        <description>Implemented FR [#67453](http://bugs.php.net/67453) (Allow to unserialize empty data).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(empty() does not work on classes that extend ArrayObject) (Tjerk)</description>
+        <references>
+          <reference type="bugfix">66834</reference>
+        </references>
+      </change>
+      <change>
+        <description>(RegexIterator::INVERT_MATCH does not invert).</description>
+        <references>
+          <reference type="bugfix">66702</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>Implemented FR [#65634](http://bugs.php.net/65634) (HTTP wrapper is very slow with protocol_version 1.1).</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented Change crypt() behavior w/o salt RFC. (Yasuo) https://wiki.php.net/rfc/crypt_function_salt</description>
+        <references/>
+      </change>
+      <change>
+        <description>Implemented FR [#49824](http://bugs.php.net/49824) (Change array_fill() to allow creating empty array).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(http:// wrapper doesn't follow 308 redirects).</description>
+        <references>
+          <reference type="bugfix">67430</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Tokenizer">
+      <change>
+        <description>(token_name() does not return name for T_POW and T_POW_EQUAL token).</description>
+        <references>
+          <reference type="bugfix">67395</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XMLReader">
+      <change>
+        <description>(XMLReader::getAttribute/No/Ns methods inconsistency).</description>
+        <references>
+          <reference type="bugfix">55285</reference>
+        </references>
+      </change>
+    </module>
+    <module id="XSL">
+      <change>
+        <description>(&lt;xsl:include&gt; cannot find files with relative paths when loaded with "file://").</description>
+        <references>
+          <reference type="bugfix">53965</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zip">
+      <change>
+        <description>update libzip to version 0.11.2. PHP doesn't use any ilibzip private symbol anymore.</description>
+        <references/>
+      </change>
+      <change>
+        <description>new method ZipArchive::setPassword($password).</description>
+        <references/>
+      </change>
+      <change>
+        <description>add --with-libzip option to build with system libzip.</description>
+        <references/>
+      </change>
+      <change>
+        <description/>
+        <references/>
+      </change>
+    </module>
+    <module id="Zlib">
+      <change>
+        <description>(internal corruption phar error). Mike</description>
+        <references>
+          <reference type="bugfix">67865</reference>
+        </references>
+      </change>
+      <change>
+        <description>(chained zlib filters silently fail with large amounts of data).</description>
+        <references>
+          <reference type="bugfix">67724</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

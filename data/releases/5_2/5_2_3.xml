@@ -1,88 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.2.3">
+<?xml version="1.0"?>
+<release version="1" id="5.2.3">
   <release>5.2.3</release>
   <date>31 May 2007</date>
-  <version>
-    <major>5</major>
-    <minor>2</minor>
-    <release>3</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.2.3.tar.bz2</filename>
       <name>Source (tar.bz2)</name>
-      <sha256/>
-      <md5>eb50b751c8e1ced05bd012d5a0e4dec3</md5>
+      <filename>php-5.2.3.tar.bz2</filename>
       <date/>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.2.3.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5>df79b04d63fc4c1ccb6d8ea58a9cf3ac</md5>
+      <filename>php-5.2.3.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
+    <announcement lang="en">**Security Enhancements and Fixes in PHP 5.2.3:**
 
+- Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)
+- Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)
+- Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)
+- Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)
+- Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.
+- Added mysql_set_charset() to allow runtime altering of connection encoding.
 
-<p>
-The PHP development team would like to announce the immediate availability
-of PHP 5.2.3. This release continues to improve the security and the
-stability of the 5.X branch as well as addressing two regressions introduced
-by the previous 5.2 releases. These regressions relate to the timeout
-handling over non-blocking SSL connections and the lack of
-HTTP_RAW_POST_DATA in certain conditions. All users are encouraged to
-upgrade to this release.
-</p>
+**The key improvements of PHP 5.2.3 include:**
 
-<p>
-<b>Security Enhancements and Fixes in PHP 5.2.3:</b>
-</p>
-<ul>
-	<li>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</li>
-	<li>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</li>
-	<li>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</li>
-	<li>Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
-	<li>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</li>
-	<li>Added mysql_set_charset() to allow runtime altering of connection encoding.</li>
-</ul>
+- Improved compilation of heredocs and interpolated strings.
+- Optimized out a couple of per-request syscalls.
+- Optimized digest generation in md5() and sha1() functions.
+- Fixed bug #41236 (Regression in timeout handling of non-blocking SSL connections during reads and writes)
+- Fixed bug #39542 (Behavior of require/include different to
+- Fixed bug #41293 (Fixed creation of HTTP_RAW_POST_DATA when there is no default post handler)
+- Fixed bug #41347 (checkdnsrr() segfaults on empty hostname)
+- Fixed bug #41353 (crash in openssl_pkcs12_read() on invalid input)
+- Fixed bug #41403 (json_decode cannot decode floats if localeconv decimal_point is not '.')
+- Fixed bug #41421 (Uncaught exception from a stream wrapper segfaults)
+- Fixed bug #41504 (json_decode() incorrectly decodes JSON arrays with empty string keys).
+- Over 40 bug fixes.
 
-<p>
-<b>The key improvements of PHP 5.2.3 include:</b>
-</p>
-<ul>
-	<li>Improved compilation of heredocs and interpolated strings.</li>
-	<li>Optimized out a couple of per-request syscalls.</li>
-	<li>Optimized digest generation in md5() and sha1() functions.</li>
+For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available [here](/UPDATE_5_2.txt), detailing the changes between those releases and PHP 5.2.3.
 
-	<li>Fixed bug #41236 (Regression in timeout handling of non-blocking SSL connections during reads and writes)</li>
-	<li>Fixed bug #39542 (Behavior of require/include different to 
-	</li><li>Fixed bug #41293 (Fixed creation of HTTP_RAW_POST_DATA when there is no default post handler)</li>
-	<li>Fixed bug #41347 (checkdnsrr() segfaults on empty hostname)</li>
-	<li>Fixed bug #41353 (crash in openssl_pkcs12_read() on invalid input)</li>
-	<li>Fixed bug #41403 (json_decode cannot decode floats if localeconv decimal_point is not '.')</li>
-	<li>Fixed bug #41421 (Uncaught exception from a stream wrapper segfaults)</li>
-	<li>Fixed bug #41504 (json_decode() incorrectly decodes JSON arrays with empty string keys).</li>
-
-	<li>Over 40 bug fixes.</li>
-</ul>
-
-<p>
-For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
-<a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
-and PHP 5.2.3.
-</p>
-
-<p>
- For a full list of changes in PHP 5.2.3, see the <a href="/ChangeLog-5.php#5.2.3">ChangeLog</a>.
-</p>
-
-
-
-</announcement>
+ For a full list of changes in PHP 5.2.3, see the [ChangeLog](/ChangeLog-5.php#5.2.3).</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</description>
+        <references>
+          <reference type="cve">CVE-2007-2872</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</description>
+        <references>
+          <reference type="cve">CVE-2007-2756</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</description>
+        <references>
+          <reference type="cve">CVE-2007-1900</reference>
+        </references>
+      </change>
+      <change>
+        <description>(open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</description>
+        <references>
+          <reference type="bugfix">41492</reference>
+        </references>
+      </change>
+      <change>
+        <description>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</description>
+        <references>
+          <reference type="cve">CVE-2007-1887</reference>
+        </references>
+      </change>
+      <change>
+        <description>Added mysql_set_charset() to allow runtime altering of connection encoding.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

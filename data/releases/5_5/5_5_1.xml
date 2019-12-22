@@ -1,64 +1,229 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.1">
+<?xml version="1.0"?>
+<release version="1" id="5.5.1">
   <release>5.5.1</release>
   <date>18 Jul 2013</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>1</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.1.tar.bz2</filename>
       <name>PHP 5.5.1 (tar.bz2)</name>
-      <sha256/>
-      <md5>e6520ba8f86e03451f1e9226ca2be681</md5>
+      <filename>php-5.5.1.tar.bz2</filename>
       <date>18 Jul 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.5.1.tar.gz</filename>
       <name>PHP 5.5.1 (tar.gz)</name>
-      <sha256/>
-      <md5>a7d9598c0e60b47960b8e803e51c4309</md5>
+      <filename>php-5.5.1.tar.gz</filename>
       <date>18 Jul 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>php-5.5.1.tar.xz</filename>
       <name>PHP 5.5.1 (tar.xz)</name>
-      <sha256/>
-      <md5>365403c216d22255c3aa57fe54944f8e</md5>
+      <filename>php-5.5.1.tar.xz</filename>
       <date>18 Jul 2013</date>
+      <sha256/>
     </source>
     <source>
-      <filename>Windows 5.5.1 binaries and source</filename>
       <name>Windows 5.5.1 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-<p>
-The PHP development team is proud to announce the immediate availability
-of PHP <a href="http://php.net/downloads.php#v5.5.1">5.5.1</a>.
-This release fixes several bugs.
-</p>
-
-<p>The PHP development team announces the immediate availability of PHP
-5.5.1. About 20 bugs were fixed, including a security fix in the XML parser (Bug #65236).
-All users of PHP are encouraged to upgrade to this release.</p>
-
-<p>For source downloads of PHP 5.5.1 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.1">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP development team is proud to announce the immediate availability of PHP [5.5.1](http://php.net/downloads.php#v5.5.1). This release fixes several bugs.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Exception not catchable when exception thrown in autoload with a namespace).</description>
+        <references>
+          <reference type="bugfix">65254</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generated configure script is malformed on OpenBSD).</description>
+        <references>
+          <reference type="bugfix">65088</reference>
+        </references>
+      </change>
+      <change>
+        <description>(is_callable() triggers Fatal Error).</description>
+        <references>
+          <reference type="bugfix">65108</reference>
+        </references>
+      </change>
+      <change>
+        <description>(yield / exit segfault).</description>
+        <references>
+          <reference type="bugfix">65035</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generator + autoload + syntax error = segfault).</description>
+        <references>
+          <reference type="bugfix">65161</reference>
+        </references>
+      </change>
+      <change>
+        <description>(chroot() does not get enabled).</description>
+        <references>
+          <reference type="bugfix">65226</reference>
+        </references>
+      </change>
+      <change>
+        <description>hex2bin() raises E_WARNING for invalid hex string.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="OPcache">
+      <change>
+        <description>(Segfault in zval_mark_grey (zend_gc.c)).</description>
+        <references>
+          <reference type="bugfix">64827</reference>
+        </references>
+      </change>
+      <change>
+        <description>OPcache is now compatible with LiteSpeed SAPI.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="CGI">
+      <change>
+        <description>(Missing php-cgi man page).</description>
+        <references>
+          <reference type="bugfix">65143</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CLI server">
+      <change>
+        <description>(Cli server not responsive when responding with 422 http status code).</description>
+        <references>
+          <reference type="bugfix">65066</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DateTime">
+      <change>
+        <description>(strftime() returns insufficient-length string under multibyte locales).</description>
+        <references>
+          <reference type="bugfix">65184</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(bgcolor does not use the same format as the input image with imagerotate).</description>
+        <references>
+          <reference type="bugfix">65070</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecreatefrom... crashes with user streams).</description>
+        <references>
+          <reference type="bugfix">65060</reference>
+        </references>
+      </change>
+      <change>
+        <description>(imagecreatefromjpeg fails with URL).</description>
+        <references>
+          <reference type="bugfix">65084</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fix gdImageCreateFromWebpCtx and use same logic to load WebP image that other formats.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Intl">
+      <change>
+        <description>Add IntlCalendar::setMinimalDaysInFirstWeek()/intlcal_set_minimal_days_in_first_week().</description>
+        <references/>
+      </change>
+      <change>
+        <description>Fixed trailing space in name of constant IntlCalendar::FIELD_FIELD_COUNT.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Buggy grapheme_substr() on edge case).</description>
+        <references>
+          <reference type="bugfix">62759</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Offsets may be wrong for grapheme_stri* functions).</description>
+        <references>
+          <reference type="bugfix">61860</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OCI8">
+      <change>
+        <description>Bump PECL package info version check to allow PECL installs with PHP 5.5+.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="PDO">
+      <change>
+        <description>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Pgsql">
+      <change>
+        <description>pg_unescape_bytea() raises E_WARNING for invalid inputs.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Missing phar man page).</description>
+        <references>
+          <reference type="bugfix">65142</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Session">
+      <change>
+        <description>Added optional create_sid() argument to session_set_save_handler(), SessionHandler and new SessionIdInterface.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Sockets">
+      <change>
+        <description>[#63472](http://bugs.php.net/63472)Setting SO_BINDTODEVICE with socket_set_option.</description>
+        <references/>
+      </change>
+      <change>
+        <description>Allowed specifying paths in the abstract namespace for the functions socket_bind(), socket_connect() and socket_sendmsg().</description>
+        <references/>
+      </change>
+      <change>
+        <description>sendmsg() ancillary data construction for SCM_RIGHTS is faulty.</description>
+        <references>
+          <reference type="bugfix">65260</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>RecursiveDirectoryIterator segfault.</description>
+        <references>
+          <reference type="bugfix">65136</reference>
+        </references>
+      </change>
+      <change>
+        <description>Memleak when calling Directory(Recursive)Iterator/Spl(Temp)FileObject ctor twice.</description>
+        <references>
+          <reference type="bugfix">61828</reference>
+        </references>
+      </change>
+    </module>
+    <module id="CGI/FastCGI SAPI">
+      <change>
+        <description>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

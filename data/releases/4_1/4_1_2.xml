@@ -1,22 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="4.1.2">
+<?xml version="1.0"?>
+<release version="1" id="4.1.2">
   <release>4.1.2</release>
   <date>12 March 2002</date>
-  <version>
-    <major>4</major>
-    <minor>1</minor>
-    <release>2</release>
-  </version>
   <source>
     <source>
-      <filename>php-4.1.2.tar.gz</filename>
       <name>Source (tar.gz)</name>
-      <sha256/>
-      <md5/>
+      <filename>php-4.1.2.tar.gz</filename>
       <date/>
+      <sha256/>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">PHP Function List
+
+
+ **releases/4_1_2.php** doesn't exist. Closest matches:
+
+- [sem_release](/manual/en/function.sem-release.php)
+- [ncurses_putp](/manual/en/function.ncurses-putp.php)
+- [trader_ppo](/manual/en/function.trader-ppo.php)
+- [event_base_loop](/manual/en/function.event-base-loop.php)
+- [reflectionclass](/manual/en/class.reflectionclass.php)
+- [restore_include_path](/manual/en/function.restore-include-path.php)
+- [ncurses_flushinp](/manual/en/function.ncurses-flushinp.php)
+- [trader_ht_phasor](/manual/en/function.trader-ht-phasor.php)
+- [ncurses_scr_dump](/manual/en/function.ncurses-scr-dump.php)
+- [ncurses_prefresh](/manual/en/function.ncurses-prefresh.php)
+- [yaf_request_http](/manual/en/class.yaf-request-http.php)
+- [stream_resolve_include_path](/manual/en/function.stream-resolve-include-path.php)
+- [ncurses_top_panel](/manual/en/function.ncurses-top-panel.php)
+- [ncurses_typeahead](/manual/en/function.ncurses-typeahead.php)
+- [stripslashes](/manual/en/function.stripslashes.php)
+- [ncurses_new_panel](/manual/en/function.ncurses-new-panel.php)
+- [get_class_methods](/manual/en/function.get-class-methods.php)
+- [ncurses_del_panel](/manual/en/function.ncurses-del-panel.php)
+- [trader_linearreg_slope](/manual/en/function.trader-linearreg-slope.php)
+- [parle_parser](/manual/en/class.parle-parser.php)
+- [ncurses_inch](/manual/en/function.ncurses-inch.php)
+- [px_create_fp](/manual/en/function.px-create-fp.php)
+- [session_save_path](/manual/en/function.session-save-path.php)
+- [ncurses_slk_touch](/manual/en/function.ncurses-slk-touch.php)
+- [ncurses_beep](/manual/en/function.ncurses-beep.php)
+- [ncurses_echo](/manual/en/function.ncurses-echo.php)
+- [ncurses_init_pair](/manual/en/function.ncurses-init-pair.php)
+- [ncurses_hide_panel](/manual/en/function.ncurses-hide-panel.php)
+- [ncurses_show_panel](/manual/en/function.ncurses-show-panel.php)
+- [runkit_class_adopt](/manual/en/function.runkit-class-adopt.php)</announcement>
+  </announcements>
   <tags/>
-  <announcements/>
   <changes/>
 </release>

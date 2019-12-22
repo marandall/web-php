@@ -12,6 +12,7 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
+	use phpweb\Services\TextFormatting\TextFormatter;
 	use phpweb\Tools\ReleaseTableRenderer;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
@@ -19,6 +20,12 @@
 	
 	class BranchController implements ControllerInterface
 	{
+		private TextFormatter $formatter;
+		
+		public function __construct(TextFormatter $formatter) {
+			$this->formatter = $formatter;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -53,7 +60,7 @@
 			
 			$initial = $branch->getInitialRelease();
 			if ($initial) {
-				echo $initial->getAnnouncementHTML();
+				echo $this->formatter->format($initial->getAnnouncementHTML());
 			}
 			?>
 			

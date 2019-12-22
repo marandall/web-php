@@ -1,54 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.36">
+<?xml version="1.0"?>
+<release version="1" id="5.4.36">
   <release>5.4.36</release>
   <date>18 Dec 2014</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>36</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.36.tar.bz2</filename>
       <name>PHP 5.4.36 (tar.bz2)</name>
+      <filename>php-5.4.36.tar.bz2</filename>
+      <date>18 Dec 2014</date>
       <sha256>b0951608c3e8afb978a624c7f79a889980210f5258f666c1d997bd6491e13241</sha256>
-      <md5/>
-      <date>18 Dec 2014</date>
     </source>
     <source>
-      <filename>php-5.4.36.tar.gz</filename>
       <name>PHP 5.4.36 (tar.gz)</name>
-      <sha256>e11851662222765d6ab6e671adc983c657d5358a183856b43a5bad0c612d2959</sha256>
-      <md5/>
+      <filename>php-5.4.36.tar.gz</filename>
       <date>18 Dec 2014</date>
+      <sha256>e11851662222765d6ab6e671adc983c657d5358a183856b43a5bad0c612d2959</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.36 binaries and source</filename>
       <name>Windows 5.4.36 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.36. Two security-related bugs were fixed in this release, including the fix for CVE-2014-8142.
-
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.36 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.36">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Upgraded crypt_blowfish to version 1.3.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(NULL pointer dereference in unserialize.c).</description>
+        <references>
+          <reference type="bugfix">68545</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use after free vulnerability in unserialize()). (CVE-2014-8142)</description>
+        <references>
+          <reference type="bugfix">68594</reference>
+          <reference type="cve">CVE-2014-8142</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mcrypt">
+      <change>
+        <description>Fixed possible read after end of buffer and use after free.</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,49 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.0.18">
+<?xml version="1.0"?>
+<release version="1" id="7.0.18">
   <release>7.0.18</release>
   <date>13 Apr 2017</date>
-  <version>
-    <major>7</major>
-    <minor>0</minor>
-    <release>18</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.0.18.tar.bz2</filename>
       <name>PHP 7.0.18 (tar.bz2)</name>
+      <filename>php-7.0.18.tar.bz2</filename>
+      <date>13 Apr 2017</date>
       <sha256>b20cc63d507032b39d8bb14cb64784e460b0e47997e90a8704b703bcbb233fd1</sha256>
-      <md5/>
-      <date>13 Apr 2017</date>
     </source>
     <source>
-      <filename>php-7.0.18.tar.gz</filename>
       <name>PHP 7.0.18 (tar.gz)</name>
-      <sha256>e0fb336749d72e6c9cfcebb9b48497f004fa99f93b68c21cb3eb657053665e1d</sha256>
-      <md5/>
+      <filename>php-7.0.18.tar.gz</filename>
       <date>13 Apr 2017</date>
+      <sha256>e0fb336749d72e6c9cfcebb9b48497f004fa99f93b68c21cb3eb657053665e1d</sha256>
     </source>
     <source>
-      <filename>php-7.0.18.tar.xz</filename>
       <name>PHP 7.0.18 (tar.xz)</name>
-      <sha256>679cffcdf2495dee5ab89bda595e678a1096136678b3a1d08f1f57ba347c234d</sha256>
-      <md5/>
+      <filename>php-7.0.18.tar.xz</filename>
       <date>13 Apr 2017</date>
+      <sha256>679cffcdf2495dee5ab89bda595e678a1096136678b3a1d08f1f57ba347c234d</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     7.0.18. Several bugs have been fixed.
-
-     All PHP 7.0 users are encouraged to upgrade to this version.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(falsely exits with "Out of Memory" when using USE_ZEND_ALLOC=0).</description>
+        <references>
+          <reference type="bugfix">73370</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Leak with instance method calling static method with referenced return).</description>
+        <references>
+          <reference type="bugfix">73960</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Build problems after 7.0.17 release: undefined reference to `isfinite').</description>
+        <references>
+          <reference type="bugfix">74265</reference>
+        </references>
+      </change>
+      <change>
+        <description>(yield fromLABEL is over-greedy).</description>
+        <references>
+          <reference type="bugfix">74302</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Apache">
+      <change>
+        <description>Reverted patch for bug #61471, fixes bug #74318.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Swatch time value incorrect for dates before 1970).</description>
+        <references>
+          <reference type="bugfix">72096</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(LIBXML_NOWARNING flag ingnored on loadHTML*).</description>
+        <references>
+          <reference type="bugfix">74004</reference>
+        </references>
+      </change>
+    </module>
+    <module id="iconv">
+      <change>
+        <description>(iconv fails to fail on surrogates).</description>
+        <references>
+          <reference type="bugfix">74230</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(fwrite() on non-blocking SSL sockets doesn't work).</description>
+        <references>
+          <reference type="bugfix">72333</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO MySQL">
+      <change>
+        <description>(Expose MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT to PDO interface).</description>
+        <references>
+          <reference type="bugfix">71003</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Streams">
+      <change>
+        <description>(Correctly fail on invalid IP address ports).</description>
+        <references>
+          <reference type="bugfix">74216</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Zlib">
+      <change>
+        <description>(deflate_add can allocate too much memory).</description>
+        <references>
+          <reference type="bugfix">74240</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

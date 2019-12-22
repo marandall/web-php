@@ -1,53 +1,147 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.29">
+<?xml version="1.0"?>
+<release version="1" id="5.4.29">
   <release>5.4.29</release>
   <date>29 May 2014</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>29</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.29.tar.bz2</filename>
       <name>PHP 5.4.29 (tar.bz2)</name>
+      <filename>php-5.4.29.tar.bz2</filename>
+      <date>29 May 2014</date>
       <sha256>62ce3ca063cf04f6065eeac82117e43b44e20487bc0a0a8d05436e17a0b1e2a7</sha256>
-      <md5/>
-      <date>29 May 2014</date>
     </source>
     <source>
-      <filename>php-5.4.29.tar.gz</filename>
       <name>PHP 5.4.29 (tar.gz)</name>
-      <sha256>9fa51d3e44783802ea51b910719ad524a8994524f7cf7307f683fe89191bc401</sha256>
-      <md5/>
+      <filename>php-5.4.29.tar.gz</filename>
       <date>29 May 2014</date>
+      <sha256>9fa51d3e44783802ea51b910719ad524a8994524f7cf7307f683fe89191bc401</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.29 binaries and source</filename>
       <name>Windows 5.4.29 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.29. 16 bugs were fixed in this release, including two security issues in fileinfo extension.
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.29 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.29">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Special Character via COM Interface (CP_UTF8)).</description>
+        <references>
+          <reference type="bugfix">66431</reference>
+        </references>
+      </change>
+      <change>
+        <description>(copy() doesn't work when destination filename is created by tempnam()).</description>
+        <references>
+          <reference type="bugfix">65701</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Echoing unserialized "SplFileObject" crash).</description>
+        <references>
+          <reference type="bugfix">67072</reference>
+        </references>
+      </change>
+      <change>
+        <description>(usage of memcpy() with overlapping src and dst in zend_exceptions.c).</description>
+        <references>
+          <reference type="bugfix">67245</reference>
+        </references>
+      </change>
+      <change>
+        <description>(spl_fixedarray_resize integer overflow).</description>
+        <references>
+          <reference type="bugfix">67247</reference>
+        </references>
+      </change>
+      <change>
+        <description>(printf out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67249</reference>
+        </references>
+      </change>
+      <change>
+        <description>(iptcparse out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67250</reference>
+        </references>
+      </change>
+      <change>
+        <description>(convert_uudecode out-of-bounds read). (Stas)</description>
+        <references>
+          <reference type="bugfix">67252</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(Fileinfo crashes with powerpoint files).</description>
+        <references>
+          <reference type="bugfix">66307</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: CDF infinite loop in nelements DoS). (CVE-2014-0238)</description>
+        <references>
+          <reference type="bugfix">67327</reference>
+          <reference type="cve">CVE-2014-0238</reference>
+        </references>
+      </change>
+      <change>
+        <description>(fileinfo: fileinfo: numerous file_printf calls resulting in performance degradation). (CVE-2014-0237)</description>
+        <references>
+          <reference type="bugfix">67328</reference>
+          <reference type="cve">CVE-2014-0237</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(DateTime constructor crash with invalid data).</description>
+        <references>
+          <reference type="bugfix">67118</reference>
+        </references>
+      </change>
+      <change>
+        <description>(date_parse_from_format out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67251</reference>
+        </references>
+      </change>
+      <change>
+        <description>(timelib_meridian_with_check out-of-bounds read).</description>
+        <references>
+          <reference type="bugfix">67253</reference>
+        </references>
+      </change>
+    </module>
+    <module id="DOM">
+      <change>
+        <description>(DOMDocumentType-&gt;internalSubset returns entire DOCTYPE tag, not only the subset).</description>
+        <references>
+          <reference type="bugfix">67081</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(php-fpm reload leaks epoll_create() file descriptor).</description>
+        <references>
+          <reference type="bugfix">66908</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>($phar-&gt;buildFromDirectory can't compress file with an accent in its name).</description>
+        <references>
+          <reference type="bugfix">64498</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

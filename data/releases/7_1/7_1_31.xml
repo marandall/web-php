@@ -1,49 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.31">
+<?xml version="1.0"?>
+<release version="1" id="7.1.31">
   <release>7.1.31</release>
   <date>01 Aug 2019</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>31</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.31.tar.bz2</filename>
       <name>PHP 7.1.31 (tar.bz2)</name>
+      <filename>php-7.1.31.tar.bz2</filename>
+      <date>01 Aug 2019</date>
       <sha256>767573c2b732e78cc647602ec61fc948941a941a4071db59b522cf5e076825dd</sha256>
-      <md5/>
-      <date>01 Aug 2019</date>
     </source>
     <source>
-      <filename>php-7.1.31.tar.gz</filename>
       <name>PHP 7.1.31 (tar.gz)</name>
-      <sha256>ea0558735653b9ce63e9cea41dd8f0d0b90dba6c39d39dd9a6aad5cc58b0bdfc</sha256>
-      <md5/>
+      <filename>php-7.1.31.tar.gz</filename>
       <date>01 Aug 2019</date>
+      <sha256>ea0558735653b9ce63e9cea41dd8f0d0b90dba6c39d39dd9a6aad5cc58b0bdfc</sha256>
     </source>
     <source>
-      <filename>php-7.1.31.tar.xz</filename>
       <name>PHP 7.1.31 (tar.xz)</name>
-      <sha256>5cb53b63592ec4361f0ab12c684b10430344821a024881a387ead4299df78fa5</sha256>
-      <md5/>
+      <filename>php-7.1.31.tar.xz</filename>
       <date>01 Aug 2019</date>
+      <sha256>5cb53b63592ec4361f0ab12c684b10430344821a024881a387ead4299df78fa5</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.1.31. This is a security release.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.31. This is a security release.</p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Upgraded to SQLite 3.28.0.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</description>
+        <references>
+          <reference type="bugfix">78256</reference>
+          <reference type="cve">CVE-2019-11042</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</description>
+        <references>
+          <reference type="bugfix">78222</reference>
+          <reference type="cve">CVE-2019-11041</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Potential UAF in Phar RSHUTDOWN).</description>
+        <references>
+          <reference type="bugfix">77919</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

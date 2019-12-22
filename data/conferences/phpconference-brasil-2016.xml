@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpconference-brasil-2016</id>
+  <title>PhpConference Brasil 2016</title>
+  <start_date>2016-12-07</start_date>
+  <end_date>2016-12-07</end_date>
+  <location country=""/>
+  <summary type="text"> Come to the leading PHP Conference in Latin America!</summary>
+  <content type="markdown"> Come to the leading PHP Conference in Latin America!
+
+ The 11th edition of PhpConference Brasil will happen between December 7th (Wednesday) and December 11th (Sunday).
+
+ The last event day will be reserved for participants to rest and improve their networking.
+
+ This year we'll have hands-on courses (8 hour duration each), practical mini-courses (4 hour duration each), talks and keynotes.
+
+ The event venue provide us a camping area, so you can come and stay all night long.
+
+ Come to learn about PHP and improve your networking! More informations at [www.phpconference.com.br](http://www.phpconference.com.br).</content>
+  <updated>2016-10-26T10:22:11-02:00</updated>
+  <logo width="350" height="263">9176f7fd8251f74b0c76de7027b5359159b68188a41bf43eb5ee4b1177cc38f8.png</logo>
+</conference>

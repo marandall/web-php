@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-fwdays-2019</id>
+  <title>PHP fwdays 2019</title>
+  <start_date>2019-06-01</start_date>
+  <end_date>2019-06-01</end_date>
+  <location country=""/>
+  <summary type="text">We are excited to announce the 7th edition of [PHP fwdays](https://fwdays.com/en/event/php-fwdays-2019) conference - the biggest PHP conf of Ukraine, which will be held on June 1st, 2019 in Kyiv.</summary>
+  <content type="markdown">We are excited to announce the 7th edition of [PHP fwdays](https://fwdays.com/en/event/php-fwdays-2019) conference - the biggest PHP conf of Ukraine, which will be held on June 1st, 2019 in Kyiv.
+
+ Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Meet our Keynote speaker Fabien Potencier, together with Marco Pivetta, Michelle Sanver, Tom&#xE1;&#x161; Votruba, Nikola Po&#x161;a, and 12 international and local speakers.   
+ Join more than 800 developers from all over the world to learn, discuss and solve.
+
+Check out the [final agenda](https://fwdays.com/en/event/php-fwdays-2019#program-event) and get a ticket right away!</content>
+  <updated>2019-05-27T23:30:01+02:00</updated>
+  <logo width="175" height="171">a1613c6c43554b8ef4759c45090cbbfab4041642507c44c7f51cf30473a5b2e2.png</logo>
+</conference>

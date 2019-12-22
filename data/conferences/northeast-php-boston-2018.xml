@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>northeast-php-boston-2018</id>
+  <title>Northeast PHP Boston 2018</title>
+  <start_date>2018-09-19</start_date>
+  <end_date>2018-09-19</end_date>
+  <location country=""/>
+  <summary type="text">Join us September 19-21 for this year's PHP, Web Development, and UX Conference by [Northeast PHP](http://2018.northeastphp.org/). We're returning to Boston and will be hosted at Wayfair HQ in historic Copley Square.</summary>
+  <content type="markdown">Join us September 19-21 for this year's PHP, Web Development, and UX Conference by [Northeast PHP](http://2018.northeastphp.org/). We're returning to Boston and will be hosted at Wayfair HQ in historic Copley Square.
+
+Our schedule has been announced and this year's has another great lineup of talks for the PHP community, including a security hackathon, IBM sponsored event night, keynote by PJ Hagerty, and a full day workshop covering application development using containers by Red Hat.
+
+Other highlights include a keynote by Ethan Zuckerman, Director of the Center for Civic Media and Associate Professor of the Practice, MIT Media Lab -- and one of the founders of Tripod, an early participatory media company.</content>
+  <updated>2018-08-09T21:41:10-04:00</updated>
+  <logo width="160" height="160">989d5c4ce8de736c5ca88449171f00b4f91e293d10c5f54967b764a766cc898a.png</logo>
+</conference>

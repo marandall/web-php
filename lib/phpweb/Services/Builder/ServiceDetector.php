@@ -7,6 +7,7 @@
 	use phpweb\Config\Site;
 	use phpweb\Controllers\ControllerInterface;
 	use phpweb\Controllers\MiddlewareInterface;
+	use phpweb\Services\Config\SiteConfig;
 	use Symfony\Component\DependencyInjection\ContainerBuilder;
 	use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 	
@@ -30,7 +31,7 @@
 					$ref = new \ReflectionClass($class_id);
 					printf("Loading class %s...\n", $class_id);
 					
-					if ($ref->isSubclassOf(InjectableService::class) || $ref->isSubclassOf(MiddlewareInterface::class) || $ref->isSubclassOf(ControllerInterface::class) ) {
+					if ($ref->isSubclassOf(InjectableService::class) || $ref->isSubclassOf(MiddlewareInterface::class) || $ref->isSubclassOf(ControllerInterface::class) || $ref->isSubclassOf(PublicService::class) ) {
 						// printf( "  [OK] Registering in container\n");
 						
 						$builder
@@ -44,6 +45,11 @@
 					printf("!! Cannot load %s\n", $class_id);
 				}
 			}
+			
+			/* site config is synthetic */
+			$builder->register(SiteConfig::class, SiteConfig::class)
+				->setPublic(true)
+				->setSynthetic(true);
 			
 			$builder->compile();
 			$dumper = new PhpDumper($builder);

@@ -1,47 +1,183 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.2.8">
+<?xml version="1.0"?>
+<release version="1" id="7.2.8">
   <release>7.2.8</release>
   <date>19 Jul 2018</date>
-  <version>
-    <major>7</major>
-    <minor>2</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.2.8.tar.bz2</filename>
       <name>PHP 7.2.8 (tar.bz2)</name>
+      <filename>php-7.2.8.tar.bz2</filename>
+      <date>19 Jul 2018</date>
       <sha256>1f8068f520a60fff3db19be1b849f0c02a33a0fd8b34b7ae05556ef682187ee6</sha256>
-      <md5/>
-      <date>19 Jul 2018</date>
     </source>
     <source>
-      <filename>php-7.2.8.tar.gz</filename>
       <name>PHP 7.2.8 (tar.gz)</name>
-      <sha256>a0cb9bf2f78498fc090eb553df03cdacc198785dec0818efa7a1804c2b7a8722</sha256>
-      <md5/>
+      <filename>php-7.2.8.tar.gz</filename>
       <date>19 Jul 2018</date>
+      <sha256>a0cb9bf2f78498fc090eb553df03cdacc198785dec0818efa7a1804c2b7a8722</sha256>
     </source>
     <source>
-      <filename>php-7.2.8.tar.xz</filename>
       <name>PHP 7.2.8 (tar.xz)</name>
-      <sha256>53ba0708be8a7db44256e3ae9fcecc91b811e5b5119e6080c951ffe7910ffb0f</sha256>
-      <md5/>
+      <filename>php-7.2.8.tar.xz</filename>
       <date>19 Jul 2018</date>
+      <sha256>53ba0708be8a7db44256e3ae9fcecc91b811e5b5119e6080c951ffe7910ffb0f</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.2.8. This is a security release which also contains several minor bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-<p>The PHP development team announces the immediate availability of PHP 7.2.8.
-This is a security release which also contains several minor bug fixes.</p>
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(PHP hangs on 'illegal string offset on string references with an error handler).</description>
+        <references>
+          <reference type="bugfix">76534</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Object creation leaks memory when executed over HTTP).</description>
+        <references>
+          <reference type="bugfix">76520</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Chain of mixed exceptions and errors does not serialize properly).</description>
+        <references>
+          <reference type="bugfix">76502</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Undefined property: DateInterval::$f).</description>
+        <references>
+          <reference type="bugfix">76462</reference>
+        </references>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(heap use after free in _php_stream_free). (CVE-2018-12882)</description>
+        <references>
+          <reference type="bugfix">76409</reference>
+          <reference type="cve">CVE-2018-12882</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Int Overflow lead to Heap OverFlow in exif_thumbnail_extract of exif.c). (CVE-2018-14883)</description>
+        <references>
+          <reference type="bugfix">76423</reference>
+          <reference type="cve">CVE-2018-14883</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap-buffer-overflow (READ of size 48) while reading exif data). (CVE-2018-14851)</description>
+        <references>
+          <reference type="bugfix">76557</reference>
+          <reference type="cve">CVE-2018-14851</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(Vulnerability in php-fpm by changing stdin to non-blocking).</description>
+        <references>
+          <reference type="bugfix">73342</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GMP">
+      <change>
+        <description>(Integer Underflow when unserializing GMP and possible other classes).</description>
+        <references>
+          <reference type="bugfix">74670</reference>
+        </references>
+      </change>
+    </module>
+    <module id="intl">
+      <change>
+        <description>(get_debug_info handler for BreakIterator shows wrong type).</description>
+        <references>
+          <reference type="bugfix">76556</reference>
+        </references>
+      </change>
+    </module>
+    <module id="mbstring">
+      <change>
+        <description>(Integer overflow and excessive memory usage in mb_strimwidth).</description>
+        <references>
+          <reference type="bugfix">76532</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Opcache causes empty return value).</description>
+        <references>
+          <reference type="bugfix">76477</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PGSQL">
+      <change>
+        <description>(pg_fetch_result did not fetch the next row).</description>
+        <references>
+          <reference type="bugfix">76548</reference>
+        </references>
+      </change>
+    </module>
+    <module id="phpdbg">
+      <change>
+        <description>Fix arginfo wrt. optional/required parameters.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Reflection">
+      <change>
+        <description>(PHP crashes with core dump when throwing exception in error handler).</description>
+        <references>
+          <reference type="bugfix">76536</reference>
+        </references>
+      </change>
+      <change>
+        <description>(ReflectionProperty#getValue() incorrectly works with inherited classes).</description>
+        <references>
+          <reference type="bugfix">75231</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(array_merge_recursive() is duplicating sub-array keys).</description>
+        <references>
+          <reference type="bugfix">76505</reference>
+        </references>
+      </change>
+      <change>
+        <description>(getimagesize with $imageinfo returns false).</description>
+        <references>
+          <reference type="bugfix">71848</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Win32">
+      <change>
+        <description>(windows linkinfo lacks openbasedir check). (CVE-2018-15132)</description>
+        <references>
+          <reference type="bugfix">76459</reference>
+          <reference type="cve">CVE-2018-15132</reference>
+        </references>
+      </change>
+    </module>
+    <module id="ZIP">
+      <change>
+        <description>(OPSYS_Z_CPM defined instead of OPSYS_CPM).</description>
+        <references>
+          <reference type="bugfix">76461</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

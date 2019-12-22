@@ -1,50 +1,199 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.3.8">
+<?xml version="1.0"?>
+<release version="1" id="7.3.8">
   <release>7.3.8</release>
   <date>01 Aug 2019</date>
-  <version>
-    <major>7</major>
-    <minor>3</minor>
-    <release>8</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.3.8.tar.bz2</filename>
       <name>PHP 7.3.8 (tar.bz2)</name>
+      <filename>php-7.3.8.tar.bz2</filename>
+      <date>01 Aug 2019</date>
       <sha256>d566c630175d9fa84a98d3c9170ec033069e9e20c8d23dea49ae2a976b6c76f5</sha256>
-      <md5/>
-      <date>01 Aug 2019</date>
     </source>
     <source>
-      <filename>php-7.3.8.tar.gz</filename>
       <name>PHP 7.3.8 (tar.gz)</name>
-      <sha256>31af3eff3337fb70733c9b02a3444c3dae662ecab20aeec7fdc3c42e22071490</sha256>
-      <md5/>
+      <filename>php-7.3.8.tar.gz</filename>
       <date>01 Aug 2019</date>
+      <sha256>31af3eff3337fb70733c9b02a3444c3dae662ecab20aeec7fdc3c42e22071490</sha256>
     </source>
     <source>
-      <filename>php-7.3.8.tar.xz</filename>
       <name>PHP 7.3.8 (tar.xz)</name>
-      <sha256>f6046b2ae625d8c04310bda0737ac660dc5563a8e04e8a46c1ee24ea414ad5a5</sha256>
-      <md5/>
+      <filename>php-7.3.8.tar.xz</filename>
       <date>01 Aug 2019</date>
+      <sha256>f6046b2ae625d8c04310bda0737ac660dc5563a8e04e8a46c1ee24ea414ad5a5</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.3.8. This is a security release which also contains several bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.3.8. This is a security release which also contains several bug fixes.</p>
-
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>Added syslog.filter=raw option.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Segfault in built-in webserver).</description>
+        <references>
+          <reference type="bugfix">78212</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(discrepency between time and microtime).</description>
+        <references>
+          <reference type="bugfix">69044</reference>
+        </references>
+      </change>
+      <change>
+        <description>Updated timelib to 2018.02.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="EXIF">
+      <change>
+        <description>(heap-buffer-overflow on exif_process_user_comment). (CVE-2019-11042)</description>
+        <references>
+          <reference type="bugfix">78256</reference>
+          <reference type="cve">CVE-2019-11042</reference>
+        </references>
+      </change>
+      <change>
+        <description>(heap-buffer-overflow on exif_scan_thumbnail). (CVE-2019-11041)</description>
+        <references>
+          <reference type="bugfix">78222</reference>
+          <reference type="cve">CVE-2019-11041</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>(FTP with SSL memory leak).</description>
+        <references>
+          <reference type="bugfix">78039</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Libxml">
+      <change>
+        <description>(libxml_disable_entity_loader settings is shared between requests (cgi-fcgi)).</description>
+        <references>
+          <reference type="bugfix">78279</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LiteSpeed">
+      <change>
+        <description>Updated to LiteSpeed SAPI V7.4.3 (increased response header count limit from 100 to 1000, added crash handler to cleanly shutdown PHP request, added CloudLinux mod_lsapi mode).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(After "POST data can't be buffered", using php://input makes huge tmp files).</description>
+        <references>
+          <reference type="bugfix">76058</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Openssl">
+      <change>
+        <description>(Segmentation fault upon stream_socket_accept of exported socket-to-stream).</description>
+        <references>
+          <reference type="bugfix">78231</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Failure to detect smart branch in DFA pass).</description>
+        <references>
+          <reference type="bugfix">78341</reference>
+        </references>
+      </change>
+      <change>
+        <description>(file cache strips last character of uname hash).</description>
+        <references>
+          <reference type="bugfix">78189</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Opcache stats for cache hits are capped at 32bit NUM).</description>
+        <references>
+          <reference type="bugfix">78202</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Invalid result of if-else).</description>
+        <references>
+          <reference type="bugfix">78271</reference>
+        </references>
+      </change>
+      <change>
+        <description>(opcache_get_configuration doesn't list all directives).</description>
+        <references>
+          <reference type="bugfix">78291</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>(Array cross-border reading in PCRE).</description>
+        <references>
+          <reference type="bugfix">78338</reference>
+        </references>
+      </change>
+      <change>
+        <description>(PCRE2 version check in configure fails for "##.##-xxx" version strings).</description>
+        <references>
+          <reference type="bugfix">78197</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PDO_Sqlite">
+      <change>
+        <description>(SegFault when reuse statement after schema has changed).</description>
+        <references>
+          <reference type="bugfix">78192</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(Potential UAF in Phar RSHUTDOWN).</description>
+        <references>
+          <reference type="bugfix">77919</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phpdbg">
+      <change>
+        <description>(Include unexistent file memory leak).</description>
+        <references>
+          <reference type="bugfix">78297</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SQLite">
+      <change>
+        <description>Upgraded to SQLite 3.28.0.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(touch() does not handle dates after 2038 in PHP 64-bit).</description>
+        <references>
+          <reference type="bugfix">78241</reference>
+        </references>
+      </change>
+      <change>
+        <description>(password_hash uses weak options for argon2).</description>
+        <references>
+          <reference type="bugfix">78269</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

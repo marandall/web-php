@@ -1,49 +1,148 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.3.9">
+<?xml version="1.0"?>
+<release version="1" id="7.3.9">
   <release>7.3.9</release>
   <date>29 Aug 2019</date>
-  <version>
-    <major>7</major>
-    <minor>3</minor>
-    <release>9</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.3.9.tar.bz2</filename>
       <name>PHP 7.3.9 (tar.bz2)</name>
+      <filename>php-7.3.9.tar.bz2</filename>
+      <date>29 Aug 2019</date>
       <sha256>a39c9709a8c9eb7ea8ac4933ef7a78b92f7e5735a405c8b8e42ee39541d963c4</sha256>
-      <md5/>
-      <date>29 Aug 2019</date>
     </source>
     <source>
-      <filename>php-7.3.9.tar.gz</filename>
       <name>PHP 7.3.9 (tar.gz)</name>
-      <sha256>5ecc1b1ad7228ed2e99a970c45358871644fcab1d9fd079a7b129326a7bde42d</sha256>
-      <md5/>
+      <filename>php-7.3.9.tar.gz</filename>
       <date>29 Aug 2019</date>
+      <sha256>5ecc1b1ad7228ed2e99a970c45358871644fcab1d9fd079a7b129326a7bde42d</sha256>
     </source>
     <source>
-      <filename>php-7.3.9.tar.xz</filename>
       <name>PHP 7.3.9 (tar.xz)</name>
-      <sha256>4007f24a39822bef2805b75c625551d30be9eeed329d52eb0838fa5c1b91c1fd</sha256>
-      <md5/>
+      <filename>php-7.3.9.tar.xz</filename>
       <date>29 Aug 2019</date>
+      <sha256>4007f24a39822bef2805b75c625551d30be9eeed329d52eb0838fa5c1b91c1fd</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en">The PHP development team announces the immediate availability of PHP 7.3.9. This is a security release which also contains several bug fixes.</announcement>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.3.9. This is a security release which also contains several bug fixes.</p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Buffer overflow in zendparse).</description>
+        <references>
+          <reference type="bugfix">78363</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Cast to object confuses GC, causes crash).</description>
+        <references>
+          <reference type="bugfix">78379</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Generator incorrectly reports non-releasable $this as GC child).</description>
+        <references>
+          <reference type="bugfix">78412</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Curl">
+      <change>
+        <description>(Bad cURL resources returned by curl_multi_info_read()).</description>
+        <references>
+          <reference type="bugfix">77946</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Exif">
+      <change>
+        <description>(Exif crash (bus error) due to wrong alignment and invalid cast).</description>
+        <references>
+          <reference type="bugfix">78333</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FPM">
+      <change>
+        <description>(Use-after-free in FPM master event handling).</description>
+        <references>
+          <reference type="bugfix">77185</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Iconv">
+      <change>
+        <description>(Bus error in configure test for iconv //IGNORE).</description>
+        <references>
+          <reference type="bugfix">78342</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LiteSpeed">
+      <change>
+        <description>Updated to LiteSpeed SAPI V7.5 (Fixed clean shutdown).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="MBString">
+      <change>
+        <description>(Oniguruma 6.9.3 fixes CVEs). (CVE-2019-13224)</description>
+        <references>
+          <reference type="bugfix">78380</reference>
+          <reference type="cve">CVE-2019-13224</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MySQLnd">
+      <change>
+        <description>(MariaDB server version incorrectly detected).</description>
+        <references>
+          <reference type="bugfix">78179</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Empty row pocket).</description>
+        <references>
+          <reference type="bugfix">78213</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Assertion failure in dce_live_ranges() when silencing is used).</description>
+        <references>
+          <reference type="bugfix">77191</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(Bus error from stream_copy_to_stream (file -&gt; SSL stream) with invalid length).</description>
+        <references>
+          <reference type="bugfix">69100</reference>
+        </references>
+      </change>
+      <change>
+        <description>(atime and mtime mismatch).</description>
+        <references>
+          <reference type="bugfix">78282</reference>
+        </references>
+      </change>
+      <change>
+        <description>(improper memory deallocation on stream_get_contents() with fixed length buffer).</description>
+        <references>
+          <reference type="bugfix">78326</reference>
+        </references>
+      </change>
+      <change>
+        <description>(strip_tags no longer handling nested php tags).</description>
+        <references>
+          <reference type="bugfix">78346</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

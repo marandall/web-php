@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>confoo-2015-become-a-master</id>
+  <title>ConFoo 2015 - Become a Master</title>
+  <start_date>2015-02-18</start_date>
+  <end_date>2015-02-18</end_date>
+  <location country=""/>
+  <summary type="text">We want you to learn as much as possible during the three days of conference. We do that through quality and variety of both content and speakers, as well as creating a fun and friendly atmosphere.</summary>
+  <content type="markdown">We want you to learn as much as possible during the three days of conference. We do that through quality and variety of both content and speakers, as well as creating a fun and friendly atmosphere.
+
+We have presentations for any level, from beginner to advanced. You'll learn about the backend and frontend, web and mobile, information systems and games, hard and soft skills, as well as many related topics.
+
+We have speakers from many different countries and industries. They brings unique perspectives that you won't find in your backyard. How often will you talk tech with someone from Taiwan or Saudi Arabia? How often will you learn from people who build robots or write their own programming language?
+
+If your goal is to learn and meet interesting people, then ConFoo is the conference for you! Take advantage of our [$190 early bird discount](http://confoo.ca).</content>
+  <updated>2015-01-06T18:15:50+00:00</updated>
+  <logo width="350" height="157">15dbcf748b6ec10876a8b2f329c2dd48b8923c394d1cb43925eb29ff1ab7477d.jpg</logo>
+</conference>

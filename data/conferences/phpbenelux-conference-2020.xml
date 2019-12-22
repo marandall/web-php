@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpbenelux-conference-2020</id>
+  <title>PHPBenelux Conference 2020</title>
+  <start_date>2020-01-24</start_date>
+  <end_date>2020-01-24</end_date>
+  <location country=""/>
+  <summary type="text">PHPBenelux Conference is the annual event for the PHP community from Belgium, the Netherlands, Luxembourg and beyond where great content is delivered by experts from all parts of the world and knowledge shared during our amazing socials.</summary>
+  <content type="markdown">PHPBenelux Conference is the annual event for the PHP community from Belgium, the Netherlands, Luxembourg and beyond where great content is delivered by experts from all parts of the world and knowledge shared during our amazing socials.
+
+Make sure you join us on January 24 and 25, 2020 for our 11th edition of the conference. With a stellar line-up of speakers we bring you amazing knowledge in our legendary venue in Antwerp, Belgium. Get [your tickets](https://shop.phpbenelux.eu "PHPBenelux Ticket Shop") today!
+
+Looking forward seeing you all there!</content>
+  <updated>2019-12-18T13:36:24+00:00</updated>
+  <logo width="350" height="92">035e3aaee09c28a0e9cddb069fe833c3ade0c6870112aa25e3d7e33a7501e94d.png</logo>
+</conference>

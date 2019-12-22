@@ -1,52 +1,122 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="7.1.15">
+<?xml version="1.0"?>
+<release version="1" id="7.1.15">
   <release>7.1.15</release>
   <date>1 Mar 2018</date>
-  <version>
-    <major>7</major>
-    <minor>1</minor>
-    <release>15</release>
-  </version>
   <source>
     <source>
-      <filename>php-7.1.15.tar.bz2</filename>
       <name>PHP 7.1.15 (tar.bz2)</name>
+      <filename>php-7.1.15.tar.bz2</filename>
+      <date>1 Mar 2018</date>
       <sha256>e117a54738e9485de5fc75673d39dbe937dd87f0f9cc9e281960ef9b961adcbd</sha256>
-      <md5/>
-      <date>1 Mar 2018</date>
     </source>
     <source>
-      <filename>php-7.1.15.tar.gz</filename>
       <name>PHP 7.1.15 (tar.gz)</name>
-      <sha256>0669c68a52cbd2f1cfa83354918ed03b0bcaa34ed9bafaee7dfd343461b881d4</sha256>
-      <md5/>
+      <filename>php-7.1.15.tar.gz</filename>
       <date>1 Mar 2018</date>
+      <sha256>0669c68a52cbd2f1cfa83354918ed03b0bcaa34ed9bafaee7dfd343461b881d4</sha256>
     </source>
     <source>
-      <filename>php-7.1.15.tar.xz</filename>
       <name>PHP 7.1.15 (tar.xz)</name>
-      <sha256>0e17192fb43532e4ebaa190ecec9c7e59deea7dadb7dab67b19c2081a68bd817</sha256>
-      <md5/>
+      <filename>php-7.1.15.tar.xz</filename>
       <date>1 Mar 2018</date>
+      <sha256>0e17192fb43532e4ebaa190ecec9c7e59deea7dadb7dab67b19c2081a68bd817</sha256>
     </source>
   </source>
+  <announcements>
+    <announcement lang="en"/>
+  </announcements>
   <tags>
     <tag>security</tag>
   </tags>
-  <announcements>
-    <announcement lang="en">
-
-
-
-  <p>The PHP development team announces the immediate availability of PHP
-  7.1.15. This is a security fix release, containing one security fix and many bug fixes.
-
-  All PHP 7.1 users are encouraged to upgrade to this version.
-  </p>
-
-
-
-</announcement>
-  </announcements>
-  <changes/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(a simple way for segfaults in threadsafe php just with configuration).</description>
+        <references>
+          <reference type="bugfix">75882</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Timezone gets truncated when formatted).</description>
+        <references>
+          <reference type="bugfix">75857</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Argument 2 for `DateTimeZone::listIdentifiers()` should accept `null`).</description>
+        <references>
+          <reference type="bugfix">75928</reference>
+        </references>
+      </change>
+      <change>
+        <description>(calling var_dump on a DateTimeZone object modifies it).</description>
+        <references>
+          <reference type="bugfix">68406</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PGSQL">
+      <change>
+        <description>Fixed #75838 (Memory leak in pg_escape_bytea()).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="ODBC">
+      <change>
+        <description>(Unable to retrieve value of varchar(max) type).</description>
+        <references>
+          <reference type="bugfix">73725</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LDAP">
+      <change>
+        <description>(Fix LDAP path lookup on 64-bit distros).</description>
+        <references>
+          <reference type="bugfix">49876</reference>
+        </references>
+      </change>
+    </module>
+    <module id="libxml2">
+      <change>
+        <description>(use pkg-config where available).</description>
+        <references>
+          <reference type="bugfix">75871</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(deal with leading slash when adding files correctly).</description>
+        <references>
+          <reference type="bugfix">65414</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(strange behavior of AppendIterator).</description>
+        <references>
+          <reference type="bugfix">74519</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Standard">
+      <change>
+        <description>(DNS_CAA record results contain garbage).</description>
+        <references>
+          <reference type="bugfix">75916</reference>
+        </references>
+      </change>
+      <change>
+        <description>(stack-buffer-overflow while parsing HTTP response). (CVE-2018-7584)</description>
+        <references>
+          <reference type="bugfix">75981</reference>
+          <reference type="cve">CVE-2018-7584</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

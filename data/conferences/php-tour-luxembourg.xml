@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-tour-luxembourg</id>
+  <title>PHP Tour Luxembourg</title>
+  <start_date>2015-05-12</start_date>
+  <end_date>2015-05-12</end_date>
+  <location country=""/>
+  <summary type="text">For the first time, the PHP Tour will take place outside of France: AFUP and the locale branch of Luxembourg will welcome you at the Abbey of Neum&#xFC;nster, a historical venue in the heart of Luxembourg City. English speakers? Come and join us, many talks will be proposed in english.</summary>
+  <content type="markdown"/>
+  <updated>2015-03-19T15:33:43+00:00</updated>
+  <logo width="380" height="143">ecd8924c00ae5ade16ca5eadfd668f5c9cdf2c3953a9d43b517d3b94b259412c.png</logo>
+</conference>

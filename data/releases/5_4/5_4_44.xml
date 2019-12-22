@@ -1,57 +1,111 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.4.44">
+<?xml version="1.0"?>
+<release version="1" id="5.4.44">
   <release>5.4.44</release>
   <date>06 Aug 2015</date>
-  <version>
-    <major>5</major>
-    <minor>4</minor>
-    <release>44</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.4.44.tar.bz2</filename>
       <name>PHP 5.4.44 (tar.bz2)</name>
+      <filename>php-5.4.44.tar.bz2</filename>
+      <date>06 Aug 2015</date>
       <sha256>8dd59e5ce9248cf36ac3de5412a518b8b24c01ace6c46ce3d12e4ce981a3856d</sha256>
-      <md5/>
-      <date>06 Aug 2015</date>
     </source>
     <source>
-      <filename>php-5.4.44.tar.gz</filename>
       <name>PHP 5.4.44 (tar.gz)</name>
-      <sha256>1799998e48da3d8f34722840628e18789e26ea21741d4e498ade6749b3266602</sha256>
-      <md5/>
+      <filename>php-5.4.44.tar.gz</filename>
       <date>06 Aug 2015</date>
+      <sha256>1799998e48da3d8f34722840628e18789e26ea21741d4e498ade6749b3266602</sha256>
     </source>
     <source>
-      <filename>Windows 5.4.44 binaries and source</filename>
       <name>Windows 5.4.44 binaries and source</name>
-      <sha256/>
-      <md5/>
+      <filename/>
       <date/>
+      <sha256/>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP development team announces the immediate availability of PHP
-5.4.44. 11 security-related issues were fixed in this release.
-All PHP 5.4 users are encouraged to upgrade to this version.
-</p>
-
-<p>For source downloads of PHP 5.4.44 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.4.44">ChangeLog</a>.
-</p>
-
-<p>Please note that PHP 5.4 branch is nearing the end of its <a href="http://php.net/supported-versions.php">support timeframe</a>. Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4.
-If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.
-</p>
-
-
-</announcement>
+    <announcement lang="en">Please note that PHP 5.4 branch is nearing the end of its [support timeframe](http://php.net/supported-versions.php). Either September or October release, depending on discovered issues, will be the last official release of PHP 5.4. If your PHP installation is based on PHP 5.4, it may be a good time to start making the plans for the upgrade.</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Remotely triggerable stack exhaustion via recursive method calls).</description>
+        <references>
+          <reference type="bugfix">69793</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Different arrays compare indentical due to integer key truncation).</description>
+        <references>
+          <reference type="bugfix">69892</reference>
+        </references>
+      </change>
+      <change>
+        <description>(unserialize() could lead to unexpected methods execution / NULL pointer deref).</description>
+        <references>
+          <reference type="bugfix">70121</reference>
+        </references>
+      </change>
+    </module>
+    <module id="OpenSSL">
+      <change>
+        <description>(openssl_random_pseudo_bytes() is not cryptographically secure). (CVE-2015-8867)</description>
+        <references>
+          <reference type="bugfix">70014</reference>
+          <reference type="cve">CVE-2015-8867</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>Improved fix for bug [#69441](http://bugs.php.net/69441).</description>
+        <references/>
+      </change>
+      <change>
+        <description>(Files extracted from archive may be placed outside of destination directory). (CVE-2015-6833)</description>
+        <references>
+          <reference type="bugfix">70019</reference>
+          <reference type="cve">CVE-2015-6833</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SOAP">
+      <change>
+        <description>(SoapClient info leak / null pointer dereference via multiple type confusions).</description>
+        <references>
+          <reference type="bugfix">70081</reference>
+        </references>
+      </change>
+    </module>
+    <module id="SPL">
+      <change>
+        <description>(Dangling pointer in the unserialization of ArrayObject items). (CVE-2015-6832)</description>
+        <references>
+          <reference type="bugfix">70068</reference>
+          <reference type="cve">CVE-2015-6832</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free Vulnerability in unserialize() with SPLArrayObject). (CVE-2015-6831)</description>
+        <references>
+          <reference type="bugfix">70166</reference>
+          <reference type="cve">CVE-2015-6831</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free Vulnerability in unserialize() with SplObjectStorage). (CVE-2015-6831)</description>
+        <references>
+          <reference type="bugfix">70168</reference>
+          <reference type="cve">CVE-2015-6831</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Use After Free Vulnerability in unserialize() with SplDoublyLinkedList). (CVE-2015-6831)</description>
+        <references>
+          <reference type="bugfix">70169</reference>
+          <reference type="cve">CVE-2015-6831</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

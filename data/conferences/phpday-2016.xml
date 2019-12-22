@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phpday-2016</id>
+  <title>phpDay 2016</title>
+  <start_date>2016-05-13</start_date>
+  <end_date>2016-05-13</end_date>
+  <location country=""/>
+  <summary type="text"> The Italian PHP user group GrUSP is pleased to announce the 13th edition of the Italian phpDay conference, taking place on May 13th and 14th, 2016 in Verona. phpDay is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</summary>
+  <content type="markdown"> The Italian PHP user group GrUSP is pleased to announce the 13th edition of the Italian phpDay conference, taking place on May 13th and 14th, 2016 in Verona. phpDay is the first historic Italian conference dedicated solely to PHP development, technologies and management. It is aimed to IT managers, developers and innovators. Each year it renews the opportunity to link to new business partners.</content>
+  <updated>2016-04-18T10:35:47+02:00</updated>
+  <logo width="250" height="120">189ef349b50bc023b8d5f97abc77d1a814c3dc139b7abefa495154ed86b91f50.png</logo>
+</conference>

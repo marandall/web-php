@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>2015-northeast-php-conference</id>
+  <title>2015 Northeast PHP Conference</title>
+  <start_date>2015-08-23</start_date>
+  <end_date>2015-08-23</end_date>
+  <location country=""/>
+  <summary type="text"> **The speaker lineup has been decided!**</summary>
+  <content type="markdown"/>
+  <updated>2015-07-23T21:13:00+02:00</updated>
+  <logo width="160" height="160">989d5c4ce8de736c5ca88449171f00b4f91e293d10c5f54967b764a766cc898a.png</logo>
+</conference>

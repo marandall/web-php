@@ -1,54 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.6.10">
+<?xml version="1.0"?>
+<release version="1" id="5.6.10">
   <release>5.6.10</release>
   <date>11 Jun 2015</date>
-  <version>
-    <major>5</major>
-    <minor>6</minor>
-    <release>10</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.6.10.tar.bz2</filename>
       <name>PHP 5.6.10 (tar.bz2)</name>
+      <filename>php-5.6.10.tar.bz2</filename>
+      <date>11 Jun 2015</date>
       <sha256>0a579c81c724ea41815eee0caa8ea7d8eeb302458519d8cc4fc5b055577c8c45</sha256>
-      <md5/>
-      <date>11 Jun 2015</date>
     </source>
     <source>
-      <filename>php-5.6.10.tar.gz</filename>
       <name>PHP 5.6.10 (tar.gz)</name>
-      <sha256>7759d6e178be524085e1482921748c14d11cbd0a133ba8aabb96c391ce7ed3fc</sha256>
-      <md5/>
+      <filename>php-5.6.10.tar.gz</filename>
       <date>11 Jun 2015</date>
+      <sha256>7759d6e178be524085e1482921748c14d11cbd0a133ba8aabb96c391ce7ed3fc</sha256>
     </source>
     <source>
-      <filename>php-5.6.10.tar.xz</filename>
       <name>PHP 5.6.10 (tar.xz)</name>
-      <sha256>1af720c955b0a57aa47606e928616e84c78868aff2a5f269c70601a77d6da8c1</sha256>
-      <md5/>
+      <filename>php-5.6.10.tar.xz</filename>
       <date>11 Jun 2015</date>
+      <sha256>1af720c955b0a57aa47606e928616e84c78868aff2a5f269c70601a77d6da8c1</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-     <p>The PHP development team announces the immediate availability of PHP
-     5.6.10. Several bugs have been fixed as well as several security issues into some
-     bundled librairies (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416, CVE-2015-2325 and CVE-2015-2326).
-
-     All PHP 5.6 users are encouraged to upgrade to this version.
-     </p>
-
-     <p>For source downloads of PHP 5.6.10 please visit our <a href="http://www.php.net/downloads/">downloads page</a>,
-     Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-     The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.6.10">ChangeLog</a>.
-     </p>
-
-
-</announcement>
+    <announcement lang="en"/>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(temp. directory is cached during multiple requests).</description>
+        <references>
+          <reference type="bugfix">66048</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Conditional jump or move depends on uninitialised value in extension trait).</description>
+        <references>
+          <reference type="bugfix">69566</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Strange generator+exception+variadic crash).</description>
+        <references>
+          <reference type="bugfix">69599</reference>
+        </references>
+      </change>
+      <change>
+        <description>(complex GLOB_BRACE fails on Windows).</description>
+        <references>
+          <reference type="bugfix">69628</reference>
+        </references>
+      </change>
+      <change>
+        <description>Fixed POST data processing slowdown due to small input buffer size on Windows.</description>
+        <references/>
+      </change>
+      <change>
+        <description>(OS command injection vulnerability in escapeshellarg). (CVE-2015-4642)</description>
+        <references>
+          <reference type="bugfix">69646</reference>
+          <reference type="cve">CVE-2015-4642</reference>
+        </references>
+      </change>
+      <change>
+        <description>(Incorrect handling of paths with NULs). (CVE-2015-4598)</description>
+        <references>
+          <reference type="bugfix">69719</reference>
+          <reference type="cve">CVE-2015-4598</reference>
+        </references>
+      </change>
+    </module>
+    <module id="FTP">
+      <change>
+        <description>Improved fix for bug [#69545](http://bugs.php.net/69545) (Integer overflow in ftp_genlist() resulting in heap overflow). (CVE-2015-4643)</description>
+        <references>
+          <reference type="cve">CVE-2015-4643</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(GD fails to build with newer libvpx).</description>
+        <references>
+          <reference type="bugfix">69479</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Iconv">
+      <change>
+        <description>(iconv with //IGNORE cuts the string).</description>
+        <references>
+          <reference type="bugfix">48147</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Litespeed SAPI">
+      <change>
+        <description>(Unchecked return value).</description>
+        <references>
+          <reference type="bugfix">68812</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Mail">
+      <change>
+        <description>(mail() does not have mail header injection prevention for additional headers).</description>
+        <references>
+          <reference type="bugfix">68776</reference>
+        </references>
+      </change>
+    </module>
+    <module id="MCrypt">
+      <change>
+        <description>Added file descriptor caching to mcrypt_create_iv().</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Opcache">
+      <change>
+        <description>(Memory leak with opcache.optimization_level=0xFFFFFFFF).</description>
+        <references>
+          <reference type="bugfix">69549</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Phar">
+      <change>
+        <description>(phar symlink in binary directory broken).</description>
+        <references>
+          <reference type="bugfix">69680</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Postgres">
+      <change>
+        <description>(segfault in php_pgsql_meta_data). (CVE-2015-4644)</description>
+        <references>
+          <reference type="bugfix">69667</reference>
+          <reference type="cve">CVE-2015-4644</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Sqlite3">
+      <change>
+        <description>Upgrade bundled sqlite to 3.8.10.2. (CVE-2015-3414, CVE-2015-3415, CVE-2015-3416)</description>
+        <references>
+          <reference type="cve">CVE-2015-3414</reference>
+        </references>
+      </change>
+    </module>
+  </changes>
 </release>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>symfonylive-warszawa-2019</id>
+  <title>SymfonyLive Warszawa 2019</title>
+  <start_date>2019-06-13</start_date>
+  <end_date>2019-06-13</end_date>
+  <location country=""/>
+  <summary type="text">The SymfonyLive conference is coming to Warsaw (Poland) for the first time! Join the big Symfony Polish community and learn all about the latest Symfony features.</summary>
+  <content type="markdown">The SymfonyLive conference is coming to Warsaw (Poland) for the first time! Join the big Symfony Polish community and learn all about the latest Symfony features.
+
+Symfony fans, don't miss the opportunity to attend inspiring and exciting talks and hands-on workshops from the 11th to the 14th of June!</content>
+  <updated>2019-04-02T10:21:12+00:00</updated>
+  <logo width="280" height="108">437679fffb50a80e24780011238dc3c9d295633c1e0be274ebccca5cfea687ca.png</logo>
+</conference>

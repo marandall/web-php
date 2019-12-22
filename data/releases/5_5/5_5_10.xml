@@ -1,47 +1,112 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<release id="5.5.10">
+<?xml version="1.0"?>
+<release version="1" id="5.5.10">
   <release>5.5.10</release>
   <date>6 Mar 2014</date>
-  <version>
-    <major>5</major>
-    <minor>5</minor>
-    <release>10</release>
-  </version>
   <source>
     <source>
-      <filename>php-5.5.10.tar.bz2</filename>
       <name>PHP 5.5.10 (tar.bz2)</name>
-      <sha256>bb34e61f8e6f56c612867bfe85d144d5045cd5e44497539bc126a4e8c6795419</sha256>
-      <md5/>
+      <filename>php-5.5.10.tar.bz2</filename>
       <date>6 Mar 2014</date>
+      <sha256>bb34e61f8e6f56c612867bfe85d144d5045cd5e44497539bc126a4e8c6795419</sha256>
     </source>
     <source>
-      <filename>php-5.5.10.tar.gz</filename>
       <name>PHP 5.5.10 (tar.gz)</name>
-      <sha256>abf751810593844e0897007797210828b193a213d9b204f203e0331019cadb90</sha256>
-      <md5/>
+      <filename>php-5.5.10.tar.gz</filename>
       <date>6 Mar 2014</date>
+      <sha256>abf751810593844e0897007797210828b193a213d9b204f203e0331019cadb90</sha256>
     </source>
   </source>
-  <tags/>
   <announcements>
-    <announcement lang="en">
-
-
-
-<p>The PHP Development Team announces the immediate availability of PHP 5.5.10.
-This release fixes several bugs against PHP 5.5.9, as well as CVE-2014-1943, CVE-2014-2270
-and CVE-2013-7327</p>
-
-<p>All PHP users are encouraged to upgrade to this new version.</p>
-
-<p>For source downloads of PHP 5.5.10, please visit our <a href="http://www.php.net/downloads/">downloads page</a>.
-Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes is recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.5.10">ChangeLog</a>.
-</p>
-
-
-</announcement>
+    <announcement lang="en">The PHP Development Team announces the immediate availability of PHP 5.5.10. This release fixes several bugs against PHP 5.5.9, as well as CVE-2014-1943, CVE-2014-2270 and CVE-2013-7327</announcement>
   </announcements>
-  <changes/>
+  <tags/>
+  <changes>
+    <module id="Core">
+      <change>
+        <description>(Allow multiple paths in php_ini_scanned_path).</description>
+        <references>
+          <reference type="bugfix">66574</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Date">
+      <change>
+        <description>(Allow the DateTimeZone constructor to accept timezones per offset too).</description>
+        <references>
+          <reference type="bugfix">45528</reference>
+        </references>
+      </change>
+      <change>
+        <description>(some time zone offsets not recognized by timezone_name_from_abbr)</description>
+        <references>
+          <reference type="bugfix">44780</reference>
+        </references>
+      </change>
+      <change>
+        <description>(DateTime::setTimezone can not set timezones without ID)</description>
+        <references>
+          <reference type="bugfix">45543</reference>
+        </references>
+      </change>
+    </module>
+    <module id="Fileinfo">
+      <change>
+        <description>(file: infinite recursion (CVE-2014-1943)).</description>
+        <references>
+          <reference type="bugfix">66731</reference>
+          <reference type="cve">CVE-2014-1943</reference>
+        </references>
+      </change>
+      <change>
+        <description>(out-of-bounds memory access in fileinfo (CVE-2014-2270)).</description>
+        <references>
+          <reference type="bugfix">66820</reference>
+          <reference type="cve">CVE-2014-2270</reference>
+        </references>
+      </change>
+    </module>
+    <module id="GD">
+      <change>
+        <description>(imagecrop(): insufficient fix for NULL defer (CVE-2013-7327)).</description>
+        <references>
+          <reference type="bugfix">66815</reference>
+          <reference type="cve">CVE-2013-7327</reference>
+        </references>
+      </change>
+    </module>
+    <module id="JSON">
+      <change>
+        <description>(JsonSerializeable couldn't implement on module extension).</description>
+        <references>
+          <reference type="bugfix">65753</reference>
+        </references>
+      </change>
+    </module>
+    <module id="LDAP">
+      <change>
+        <description>Implemented ldap_modify_batch (https://wiki.php.net/rfc/ldap_modify_batch).</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Openssl">
+      <change>
+        <description>(Add EC key support to php_openssl_is_private_key).</description>
+        <references>
+          <reference type="bugfix">66501</reference>
+        </references>
+      </change>
+    </module>
+    <module id="PCRE">
+      <change>
+        <description>Upgraded to PCRE 8.34.</description>
+        <references/>
+      </change>
+    </module>
+    <module id="Pgsql">
+      <change>
+        <description>Added warning for dangerous client encoding and remove possible injections for pg_insert()/pg_update()/pg_delete()/pg_select().</description>
+        <references/>
+      </change>
+    </module>
+  </changes>
 </release>
