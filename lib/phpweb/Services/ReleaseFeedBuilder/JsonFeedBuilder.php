@@ -21,13 +21,21 @@
 					$sources[] = (object)$source->toArray();
 				}
 				
-				$output[] = (object)[
+				$changes = [];
+				foreach ($release->getModulesWithChanges() as $module_id => $module) {
+					foreach ($module->getChanges() as $change) {
+						$changes[$module_id][] = $change->toArray();
+					}
+				}
+				
+				$output[$release->getVersionId()] = (object)[
 					'release' => $release->getVersionId(),
 					'date'    => $release->getDate()->format('Y-m-d'),
 					'source'  => $sources,
+					'changes' => $changes,
 				];
 			}
 			
-			return new Response(json_encode($output), 200, ['Content-Type' => 'application/json']);
+			return new Response(json_encode($output, JSON_PRETTY_PRINT), 200, ['Content-Type' => 'application/json']);
 		}
 	}

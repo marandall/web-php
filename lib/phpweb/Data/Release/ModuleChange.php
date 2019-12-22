@@ -19,4 +19,8 @@
 		public function getReferences(): array {
 			return $this->data['references'] ?? [];
 		}
+		
+		public function toArray(): array {
+			return $this->data;
+		}
 	}

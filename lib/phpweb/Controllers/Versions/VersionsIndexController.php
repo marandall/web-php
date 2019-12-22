@@ -54,25 +54,34 @@
 			);
 			
 			?>
-            <p>
-                This is the human-readable index of every version of PHP. There are also various APIs available
-                to allow you to read the data programmatically such as <a href="api/releases.atom" target="_blank">releases.atom</a>
-                and <a href="api/supported.atom" target="_blank">supported.atom</a>.
-            </p>
+            <section class="r2-sec">
+                <div>
+                    <p>
+                        This is the human-readable index of every version of PHP. There are also various APIs available
+                        to allow you to read the data programmatically such as <a href="api/releases.atom" target="_blank">releases.atom</a>
+                        and <a href="api/supported.atom" target="_blank">supported.atom</a>.
+                    </p>
+                </div>
+            </section>
 			<?php
 			
 			foreach ($branches as $branch) {
 				?>
-                <h2>PHP <?= htmlspecialchars($branch->getBranchId()) ?></h2>
-                <p>
-                    For more information about PHP <?= htmlspecialchars($branch->getBranchId()) ?> please see
-                    the <a href="<?= htmlspecialchars($branch->getUrl()) ?>"><?= htmlspecialchars(
-							$branch->getBranchId()
-						) ?> Branch Page</a>.
-                </p>
-				
+                <section class="r2-sec">
+                    <h2>PHP <?= htmlspecialchars($branch->getBranchId()) ?></h2>
+                    <div>
+                        <p>
+                            For more information about PHP <?= htmlspecialchars($branch->getBranchId()) ?> please see
+                            the <a href="<?= htmlspecialchars($branch->getUrl()) ?>"><?= htmlspecialchars(
+				                    $branch->getBranchId()
+			                    ) ?> Branch Page</a>.
+                        </p>
+                        <?php
+                        Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
+                        ?>
+                    </div>
+                </section>
 				<?php
-				Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
 			}
 		}
 	}

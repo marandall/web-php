@@ -20,7 +20,8 @@
 	{
 		public function sanitize(string $html): string {
 			$config = \HTMLPurifier_Config::createDefault();
-			$config->set('HTML.AllowedAttributes', '*.class,a.href,img.src');
+			$config->set('HTML.AllowedAttributes', '*.class,a.href,img.src,span.style');
+			$config->set('CSS.AllowedProperties', 'background-color');
 			
 			$purifier = new \HTMLPurifier($config);
 			return $purifier->purify($html);

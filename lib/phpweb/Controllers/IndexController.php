@@ -58,10 +58,20 @@
                                    style="color: black">PHP <?= htmlspecialchars($branch->getBranchId()) ?></a>
                             </div>
 
-                            <div><?= htmlspecialchars($latest->getVersionId()) ?></div>
-                            <div style="margin-bottom: 0.5em">Released <?= htmlspecialchars(
+                            <div>
+                                <a href="<?= htmlspecialchars($latest->getUrl())?>" style="color: black"><?= htmlspecialchars($latest->getVersionId()) ?></a>
+                                <?php
+                                    if ($latest->getDate()->getTimestamp() > (time() - 3600 * 24 * 7)) {
+                                        echo '<span style="color: red">New!</span>';
+                                    }
+                                ?>
+                            </div>
+                            
+                            <div style="margin-bottom: 0.5em">
+                                Released <?= htmlspecialchars(
 									$latest->getDate()->format('d M Y')
-								) ?></div>
+								) ?>
+                            </div>
 
                             <a href="<?= htmlspecialchars($branch->getUrl()) ?>" style="display: block; padding: 10px"
                                class="r2-hover-gray-2">Find out more</a>
