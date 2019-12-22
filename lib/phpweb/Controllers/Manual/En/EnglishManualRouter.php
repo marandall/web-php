@@ -8,6 +8,7 @@
 	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\Services\HtmlSanitizer\HtmlSanitizer;
 	use phpweb\Services\Http\HttpFetcher;
 	use phpweb\UI\Templates\BasicPanel;
 	use phpweb\UI\Templates\FreshTemplate;
@@ -22,8 +23,11 @@
 	{
 		private HttpFetcher $http_fetcher;
 		
-		public function __construct(HttpFetcher $http_fetcher) {
-			$this->http_fetcher = $http_fetcher;
+		private HtmlSanitizer $html_sanitizer;
+		
+		public function __construct(HttpFetcher $http_fetcher, HtmlSanitizer $html_sanitizer) {
+			$this->http_fetcher   = $http_fetcher;
+			$this->html_sanitizer = $html_sanitizer;
 		}
 		
 		public function load(): array {
@@ -85,10 +89,10 @@
 				->addSidePanel(new BasicPanel('Navigation', $menu_html))
 				->setPageTitle((string)$refname)
 				->render(
-					static function () use ($inner) {
-					echo '<div class="r2-manual">' . $inner . '</div>';
-				}
-			);
+					function () use ($inner) {
+						echo '<div class="r2-manual">' . $this->html_sanitizer->sanitize($inner) . '</div>';
+					}
+				);
 		}
 		
 		private function clip(string $contents, string $start_tag, string $end_tag, int $clip): ?string {

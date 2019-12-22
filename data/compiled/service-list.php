@@ -447,7 +447,7 @@ class ServiceList extends Container
      */
     protected function getEnglishManualRouterService()
     {
-        return $this->services['phpweb\\Controllers\\Manual\\En\\EnglishManualRouter'] = new \phpweb\Controllers\Manual\En\EnglishManualRouter(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())));
+        return $this->services['phpweb\\Controllers\\Manual\\En\\EnglishManualRouter'] = new \phpweb\Controllers\Manual\En\EnglishManualRouter(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())), ($this->services['phpweb\\Services\\HtmlSanitizer\\HtmlSanitizer'] ?? ($this->services['phpweb\\Services\\HtmlSanitizer\\HtmlSanitizer'] = new \phpweb\Services\HtmlSanitizer\HtmlSanitizer())));
     }
 
     /**
