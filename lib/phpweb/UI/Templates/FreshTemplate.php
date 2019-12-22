@@ -240,10 +240,10 @@
 			<?php ($this->header_callback)($this) ?>
 
             <div class="r2-outer" style="width: 100%; line-height: 1.5">
-                <div class="r2-inner r2-layout-width" style="padding: 10px">
+                <div class="r2-inner r2-layout-width" style="padding-top: 10px">
                     <div class="r2-layout-grid" >
-                        <div class="r2-inner-left" style="background-color: #ffffff">
-                            <div style="padding: 10px; padding-left: 0; padding-top: 0">
+                        <div class="r2-inner-left" style="background-color: #ffffff; max-width: 100%">
+                            <div >
 								
 								<?php foreach ($this->error_panels as $panel) { ?>
                                     <div style="margin-bottom; 1em; background-color: darkred; color: white; padding: 1em">

@@ -239,12 +239,13 @@ h1 {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        box-sizing: border-box;
     }
 
     .r2-layout-grid {
         display: grid;
         grid-template-columns: auto 330px;
-        grid-column-gap: 10px
+        grid-column-gap: 1em;
     }
 }
 
@@ -253,11 +254,13 @@ h1 {
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
+        box-sizing: border-box;
     }
 
     .r2-layout-grid {
         display: grid;
         grid-template-rows: auto;
-        grid-column-gap: 0px
+        grid-template-columns: 100%;
+        grid-column-gap: 0;
     }
 }
