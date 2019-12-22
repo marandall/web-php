@@ -213,7 +213,7 @@
             <body>
 
             <nav id="head-nav" class="navbar">
-                <div class="navbar-inner clearfix" style="width: 1200px; margin-left: auto; margin-right: auto">
+                <div class="navbar-inner clearfix r2-layout-width">
                     <a href="/" class="brand"><img src="/static/images/logos/php-logo.svg" width="48" height="24"
                                                    alt="php"></a>
                     <div id="mainmenu-toggle-overlay"></div>
@@ -240,8 +240,8 @@
 			<?php ($this->header_callback)($this) ?>
 
             <div class="r2-outer" style="width: 100%; line-height: 1.5">
-                <div class="r2-inner" style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
-                    <div style="display: grid; grid-template-columns: auto 330px;  grid-column-gap: 10px">
+                <div class="r2-inner r2-layout-width" style="padding: 10px">
+                    <div class="r2-layout-grid" >
                         <div class="r2-inner-left" style="background-color: #ffffff">
                             <div style="padding: 10px; padding-left: 0; padding-top: 0">
 								
@@ -296,8 +296,7 @@
 				?>
                 <div style="line-height: 1em; display: none; width: 100%; height: 200px; background-color: #eeeeee; position: fixed; top: 48px; left: 0; right: 0; z-index: 10000"
                      class="nav-<?= $nav_id ?> top-menu" data-menu="<?= $nav_id ?>">
-                    <div class="inner-align"
-                         style="width: 1200px; margin-left: auto; margin-right: auto; padding: 10px">
+                    <div class="inner-align r2-layout-width" style="padding: 10px">
                         <div style="display: flex; flex-direction: row">
 							<?php foreach ($header['sections'] as $category_label => $links) { ?>
                                 <div style="padding: 10px; width: 200px">
@@ -378,8 +377,8 @@
 		private function renderHeader() {
 			?>
             <div style="background: #f2f2f2">
-                <div style="width: 1200px; margin-left: auto; margin-right: auto; background: #f2f2f2">
-                    <h1 style="margin: 0; padding: 0; padding-top: 15px; padding-bottom: 15px; color: black"><?= htmlspecialchars(
+                <div class="r2-layout-width" style="background: #f2f2f2">
+                    <h1 style="margin: 0; padding-top: 15px; padding-bottom: 15px; color: black"><?= htmlspecialchars(
 							$this->page_title
 						) ?></h1>
                 </div>
