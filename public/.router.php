@@ -154,6 +154,8 @@
 		exit();
 	}
 	
+	$services = ServiceLoader::load();
+	
 	try {
 		$handler = null;
 		$route   = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'] ?? 'GET', $uri);
@@ -175,29 +177,30 @@
 			$handler = new \phpweb\Controllers\NotFoundController();
 		}
 		else {
-			$services = ServiceLoader::load();
-			
 			if (class_exists($route[1])) {
 				$handler = $services->get($route[1]);
 			}
 			else {
 				die('class ' . $route[1] . ' does not exist');
 			}
-			
-			/* process will kick off the middleware using the setup list */
-			if ($handler instanceof ControllerInterface) {
-				$middlewares = [];
-				foreach ($handler->load() as $mw) {
-					if (is_string($mw)) {
-						$middlewares[] = $services->get($mw);
-					}
-					else {
-						$middlewares[] = $mw;
-					}
+		}
+		
+		/*
+		 * If the handler exposes ControllerInterface, then it contains a middleware list that
+		 * we are going to want to process first
+		 */
+		if ($handler instanceof ControllerInterface) {
+			$middlewares = [];
+			foreach ($handler->load() as $mw) {
+				if (is_string($mw)) {
+					$middlewares[] = $services->get($mw);
 				}
-				
-				$handler = new RunnerAlias($middlewares);
+				else {
+					$middlewares[] = $mw;
+				}
 			}
+			
+			$handler = new RunnerAlias($middlewares);
 		}
 		
 		$visitor = new Visitor($_COOKIE);
@@ -211,7 +214,7 @@
 			$visitor
 		);
 		
-		$response = $handler($request);
+		$response = $handler($request, null);
 		$response->write();
 	}
 	catch (\Throwable $ex) {

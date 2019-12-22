@@ -58,31 +58,45 @@
 					break;
 			}
 			
-			$initial = $branch->getInitialRelease();
-			if ($initial) {
-				echo $this->formatter->format($initial->getAnnouncementHTML());
-			}
 			?>
+			<section class="r2-sec">
+				<div>
+					<?php
+						$initial = $branch->getInitialRelease();
+						if ($initial) {
+							echo $this->formatter->format($initial->getAnnouncementHTML());
+						}
+					
+						if ($branch->isSupported()) { ?>
+						<div style="text-align: center; margin-bottom: 1em">
+							<a href="./install/"
+							   style="text-align: center; padding: 20px; background: #dddddd; margin: 10px; display: inline-block; width: 50%; font-size: large">
+								Download / Install PHP <?= htmlspecialchars($branch->getBranchId()) ?>
+							</a>
+						</div>
+					<?php } ?>
+				</div>
+			</section>
 			
-			<?php if ($branch->isSupported()) { ?>
-                <div style="text-align: center; margin-bottom: 1em">
-                    <a href="./install/"
-                       style="text-align: center; padding: 20px; background: #dddddd; margin: 10px; display: inline-block; width: 50%; font-size: large">
-                        Download / Install PHP <?= htmlspecialchars($branch->getBranchId()) ?>
-                    </a>
+			
+
+            <section class="r2-sec">
+                <a id="history"></a>
+                <h2>Version History</h2>
+                <div>
+	                <p>
+		
+		                The following <?= count($branch->getReleasesByVersion()) ?> versions of PHP
+		                <?= htmlspecialchars($branch->getBranchId()) ?> have been released:
+	                </p>
+					<?php
+						Services::get(ReleaseTableRenderer::class)->render(
+							array_reverse($branch->getReleasesByVersion())
+						);
+					?>
                 </div>
-			<?php } ?>
-
-            <a id="history"></a>
-            <h3>Version History</h3>
-
-            <div style="margin-bottom: 1em;">
-                The following <?= count($branch->getReleasesByVersion()) ?> versions of PHP <?= htmlspecialchars(
-					$branch->getBranchId()
-				) ?> have been released:
-            </div>
+            </section>
 			
 			<?php
-			Services::get(ReleaseTableRenderer::class)->render(array_reverse($branch->getReleasesByVersion()));
 		}
 	}

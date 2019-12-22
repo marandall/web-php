@@ -52,34 +52,49 @@
 				'refs'     => 'set',
 				'class'    => 'reference',
 				'install'  => 'chapter',
+				'migration73' => 'sect1',
+				'migration74' => 'sect1'
 			];
 			
 			$seg    = explode('.', $manual_path);
 			$prefix = $seg[0];
 			
-			$inner = $this->clip(
-				$contents, '<div id="' . $manual_path . '" class="' . ($map[$prefix] ?? 'reference') . '">',
-				'<section id="usernotes">',
-				-6
-			);
-			
-			if ($inner === null) {
-				die('Could not parse the HTML');
+			try {
+				$inner = $this->clip(
+					$contents,
+					'<div id="' . $manual_path . '" class="' . ($map[$prefix] ?? 'reference') . '">',
+					'<section id="usernotes">',
+					-6
+				);
+			}
+			catch (\DomainException $ex) {
+				$inner = 'Not Found';
 			}
 			
-			$menu_html = $this->clip(
-				$contents,
-				"<aside class='layout-menu'>",
-				'</aside>',
-				0
-			);
 			
-			$refname = $this->clip(
-				$contents,
-				'<h1 class="refname">',
-				'</h1>',
-				0
-			);
+			try {
+				$menu_html = $this->clip(
+					$contents,
+					"<aside class='layout-menu'>",
+					'</aside>',
+					0
+				);
+			}
+			catch (\DomainException $ex) {
+				$menu_html = '';
+			}
+			
+			try {
+				$refname = $this->clip(
+					$contents,
+					'<h1 class="refname">',
+					'</h1>',
+					0
+				);
+			}
+			catch (\DomainException $ex) {
+				$refname = '';
+			}
 			
 			/* prevents title duplication */
 			$inner = str_replace('<h1 class="refname">' . $refname . '</h1>', '', $inner);
@@ -98,26 +113,18 @@
 		private function clip(string $contents, string $start_tag, string $end_tag, int $clip): ?string {
 			$st_find = strpos($contents, $start_tag);
 			if ($st_find === false) {
-				return null;
+				throw new \DomainException('Could not find opening tag: ' . $start_tag);
 			}
 			
 			$st_close = strpos($contents, $end_tag, $st_find + strlen($start_tag));
 			if ($st_close === false) {
-				return null;
+				throw new \DomainException('Could not find closing tag: ' . $end_tag);
 			}
 			
 			return substr(
 				$contents,
 				$st_find + strlen($start_tag),
 				$st_close - $st_find - strlen($start_tag) - $clip // required for final </div>,
-			);
-		}
-		
-		private function badRequestResponse(string $error): Response {
-			return $this->render(
-				static function () use ($error) {
-					echo 'Cannot handle that page - ' . htmlspecialchars($error);
-				}
 			);
 		}
 	}
