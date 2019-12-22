@@ -757,7 +757,7 @@ class ServiceList extends Container
      */
     protected function getReleaseControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Releases\\ReleaseController'] = new \phpweb\Controllers\Versions\Releases\ReleaseController(($this->services['phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer'] ?? $this->getChangelogRendererService()));
+        return $this->services['phpweb\\Controllers\\Versions\\Releases\\ReleaseController'] = new \phpweb\Controllers\Versions\Releases\ReleaseController(($this->services['phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer'] ?? $this->getChangelogRendererService()), ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter())));
     }
 
     /**

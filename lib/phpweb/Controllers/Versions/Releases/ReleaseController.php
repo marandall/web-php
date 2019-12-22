@@ -12,6 +12,7 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services\ChangelogRenderer\ChangelogRenderer;
+	use phpweb\Services\TextFormatting\TextFormatter;
 	use phpweb\UI\Notices\BranchReleaseNotMostRecent;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
@@ -22,8 +23,11 @@
 	{
 		private ChangelogRenderer $changelog_renderer;
 		
-		public function __construct(ChangelogRenderer $changelog_renderer) {
+		private TextFormatter $text_formatter;
+		
+		public function __construct(ChangelogRenderer $changelog_renderer, TextFormatter $text_formatter) {
 			$this->changelog_renderer = $changelog_renderer;
+			$this->text_formatter = $text_formatter;
 		}
 		
 		public function load(): array {
@@ -95,9 +99,7 @@
             <section class="r2-sec">
                 <h2>Release Announcement</h2>
                 <div>
-					<?php
-						echo $release->getAnnouncementHTML();
-					?>
+					<?= $this->text_formatter->format($release->getAnnouncementHTML()) ?>
                     To download the source code for this release please view the <a href="#sources">sources</a>.
                 </div>
             </section>
