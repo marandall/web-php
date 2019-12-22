@@ -45,7 +45,7 @@
 		public function renderContents() {
 			$found = $this->repository->upcoming()
 			?>
-			<div class="r2-separated-sections">
+			<div>
 				<?php
 					foreach ($found as $conf) {
 						$this->conference_renderer->render($conf, false);

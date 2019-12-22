@@ -23,7 +23,7 @@
 			?>
             <section class="r2-sec">
                 <h2>
-                    <a href="<?= htmlspecialchars($conference->getUri()) ?>" style="color: white">
+                    <a href="<?= htmlspecialchars($conference->getUri()) ?>" >
 						<?= htmlspecialchars($conference->getTitle()) ?>
                     </a>
                 </h2>

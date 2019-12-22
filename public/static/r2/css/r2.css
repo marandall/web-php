@@ -183,25 +183,22 @@ a:hover {
 }
 
 section.r2-sec {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     clear: both;
-    background: #fafafa;
 }
 
 section.r2-sec > h2 {
-    border-bottom: 3px solid #4F5B93;
-    background-color: #8892BF;
-    color: black;
-    padding: 3px;
-    padding-left: 5px;
-    font-size: 14px;
+    color: #4F5B93;
     font-weight: bold;
-    color: white;
-    margin-bottom: 0;
+    margin: 10px 0 0px;
+    border-bottom: 3px solid #4F5B93;
+    padding: 0 0 0 0px;
 }
 
 section.r2-sec > div {
-    padding: 10px;
+    padding: 0px;
+    background: #ffffff;
+    padding-top: 20px;
 
     /* SHA256 strings making a mockery of responsive design */
     word-wrap: break-word;
@@ -232,7 +229,7 @@ section.r2-sec > div {
  */
 
 h1 {
-    padding-left: 10px;
+    padding-left: 0px;
     box-sizing: border-box;;
 }
 
@@ -249,6 +246,19 @@ h1 {
         display: grid;
         grid-template-columns: auto 330px;
         grid-column-gap: 1em;
+    }
+}
+
+
+@media(max-width:1250px) {
+    h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .r2-inner-left {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
