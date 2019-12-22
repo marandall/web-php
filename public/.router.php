@@ -177,8 +177,12 @@
 			$handler = new \phpweb\Controllers\NotFoundController();
 		}
 		else {
-			if (class_exists($route[1])) {
-				$handler = $services->get($route[1]);
+			$class_id = $route[1];
+			if ($services->has($class_id)) {
+				$handler = $services->get($class_id);
+			}
+			else if (class_exists($class_id)) {
+				$handler = new $class_id();
 			}
 			else {
 				die('class ' . $route[1] . ' does not exist');
