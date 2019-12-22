@@ -190,15 +190,15 @@ section.r2-sec {
 section.r2-sec > h2 {
     color: #4F5B93;
     font-weight: bold;
-    margin: 10px 0 0px;
+    margin: 00px 0 0px;
     border-bottom: 3px solid #4F5B93;
-    padding: 0 0 0 0px;
+    padding: 0 0 0 10px;
 }
 
 section.r2-sec > div {
     padding: 0px;
-    background: #ffffff;
-    padding-top: 20px;
+    background: #fafafa;
+    padding: 10px;
 
     /* SHA256 strings making a mockery of responsive design */
     word-wrap: break-word;
