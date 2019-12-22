@@ -202,6 +202,9 @@ section.r2-sec > h2 {
 
 section.r2-sec > div {
     padding: 10px;
+
+    /* SHA256 strings making a mockery of responsive design */
+    word-wrap: break-word;
 }
 
 .r2-separated-sections section.r2-sec:not(:last-child):after {
