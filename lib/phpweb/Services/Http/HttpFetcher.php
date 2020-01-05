@@ -11,6 +11,12 @@
 	
 	class HttpFetcher implements InjectableService
 	{
+		private Client $client;
+		
+		public function __construct() {
+			$this->client = new Client();
+		}
+		
 		/**
 		 * @throws FetchException
 		 */
@@ -20,7 +26,7 @@
 				return file_get_contents($tmp);
 			}
 			
-			$client = new Client();
+			$client = $this->client;
 			try {
 				$content = $client->get($url)->getBody()->getContents();
 			}

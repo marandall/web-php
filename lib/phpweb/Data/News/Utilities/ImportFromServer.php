@@ -45,7 +45,7 @@
 				$archives = $this->loadXmlUrl($this->base_uri . '/archive/archive.xml');
 			}
 			catch (FetchException $ex) {
-				$logger->critical('Cannot load archive.xml');
+				$logger->critical('Cannot load archive.xml; ' . $ex->getMessage());
 				return false;
 			}
 			
