@@ -34,7 +34,7 @@ while(($ln = fgets($fp)) !== false) {
 		// next entry - we're done
 		break;
 	}
-
+	
 	if ($ln == "\n") {
 		$module = 'Core';
 		continue;
