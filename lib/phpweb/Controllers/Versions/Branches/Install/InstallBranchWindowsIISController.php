@@ -145,7 +145,8 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/unzip.png" alt="Unzip"/>
+                        <img style="max-width: 100%"
+                             src="/static/tutorials/install_iis/unzip.png" alt="Unzip"/>
                     </p>
                 </div>
             </section>
@@ -173,7 +174,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/ini_example.png" alt="Example INI"/>
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/ini_example.png" alt="Example INI"/>
                     </p>
 
                     <p>
@@ -204,7 +205,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/iis_admin_panel.png" alt="IIS Admin Panel"/>
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/iis_admin_panel.png" alt="IIS Admin Panel"/>
                     </p>
 
                     <p>
@@ -219,7 +220,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/iis_fastcgi_application.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/iis_fastcgi_application.png"
                              alt="IIS Admin Panel FastCGI"/>
                     </p>
 
@@ -240,7 +241,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/iis_fastcgi_application_done.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/iis_fastcgi_application_done.png"
                              alt="IIS Admin Panel FastCGI"/>
                     </p>
                 </div>
@@ -259,7 +260,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/iis_handler_mappings.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/iis_handler_mappings.png"
                              alt="IIS Admin Panel Handlers"/>
                     </p>
 
@@ -291,7 +292,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/iis_add_module_mapping.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/iis_add_module_mapping.png"
                              alt="IIS Admin Panel Module Mapping"/>
                     </p>
                     <p>
@@ -320,7 +321,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/info_file.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/info_file.png"
                              alt="IIS Admin Panel Module Mapping"/>
                     </p>
 
@@ -338,7 +339,7 @@
 
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/phpinfo.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/phpinfo.png"
                              alt="PHP Info Panel"/>
                     </p>
                 </div>
@@ -395,7 +396,7 @@
                     </p>
 
                     <p style="text-align: center">
-                        <img src="/static/tutorials/install_iis/extensions.png"
+                        <img style="max-width: 100%" src="/static/tutorials/install_iis/extensions.png"
                              alt="PHP Extensions"/>
                     </p>
 
