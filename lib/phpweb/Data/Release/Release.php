@@ -4,23 +4,30 @@
 	
 	namespace phpweb\Data\Release;
 	
+	use DateTimeImmutable;
 	use phpweb\Config\Site;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\Branches;
 	
 	class Release
 	{
-		/** @var string[] Language announcements */
+		/** @var Announcement[] - Language announcements */
 		private array $announcements = [];
 		
-		/** @var string[] Special tags, security etc */
+		/** @var string[] - Special tags, security etc */
 		private array $tags = [];
 		
-		/** @var \DateTime When the release occured */
-		private $date;
+		/** @var \DateTimeImmutable - When the release occured */
+		private DateTimeImmutable $date;
 		
-		/** @var SourceFile[] List of sources */
+		/** @var SourceFile[] - List of sources */
 		private array $sources = [];
+		
+		/** @var WindowsBuild[] */
+		private $windows_builds = [];
+		
+		/** @var string - What stability of the release */
+		private string $stage = '';
 		
 		private string $version_id;
 		
@@ -30,34 +37,58 @@
 		
 		private string $release_ver = '';
 		
-		/** @var ModuleWithChanges[]|null */
+		/** @var ChangedModule[]|null */
 		private ?array $changes = null;
 		
 		private $data;
 		
-		public function __construct(string $version_id, array $data) {
-			if (($data['announcement'] ?? '') === true) {
-				$this->announcements['en'] = true;
+		public static function FromJson($data) {
+			$release        = new Release($data->version);
+			$release->date  = new DateTimeImmutable($data->date);
+			$release->stage = $data->stage ?? 'stable';
+			
+			foreach (($data->announcements ?? []) as $lang_id => $announcement_data) {
+				$ann                                     = new Announcement($lang_id, $announcement_data);
+				$release->announcements[$ann->getLang()] = $ann;
 			}
 			
-			$this->tags = $data['tags'] ?? [];
-			$this->date = new \DateTime($data['date']);
-			
-			foreach (($data['source'] ?? []) as $source) {
-				$this->sources[] = new SourceFile($source);
+			foreach (($data->source->files ?? []) as $file_data) {
+				$release->sources[] = SourceFile::FromJson($file_data);
 			}
 			
-			$eq                = explode('.', $version_id, 3);
-			$this->major_ver   = (int)($eq[0] ?? 0);
-			$this->minor_ver   = (int)($eq[1] ?? 0);
-			$this->release_ver = $eq[2] ?? '';
+			foreach (($data->changes->modules ?? []) as $module_id => $module_changes) {
+				$release->changes[$module_id] = ChangedModule::FromJson($module_id, $module_changes);
+			}
 			
-			$this->data       = $data;
-			$this->version_id = $version_id;
+			foreach (($data->windows_builds ?? []) as $build_tag => $build_info) {
+				$release->windows_builds[$build_tag] = WindowsBuild::FromJson($build_info);
+			}
+			
+			foreach (($data->tags ?? []) as $tag) {
+				$release->tags[] = $tag;
+			}
+			
+			return $release;
+		}
+		
+		public function __construct(string $version_id) {
+			$p                 = explode('.', $version_id);
+			$this->major_ver   = (int)$p[0];
+			$this->minor_ver   = (int)$p[1];
+			$this->release_ver = $p[2];
+			$this->version_id  = $version_id;
+		}
+		
+		public static function __set_state($an_array) {
+			$rel = new Release($an_array['version_id']);
+			foreach ($an_array as $k => $v) {
+				$rel->{$k} = $v;
+			}
+			return $rel;
 		}
 		
 		/**
-		 * @return string[]
+		 * @return Announcement[]
 		 */
 		public function getAnnouncements(): array {
 			return $this->announcements;
@@ -71,10 +102,10 @@
 		}
 		
 		/**
-		 * @return \DateTime
+		 * @return \DateTimeImmutable
 		 */
-		public function getDate(): \DateTime {
-			return clone $this->date;
+		public function getDate(): \DateTimeImmutable {
+			return $this->date;
 		}
 		
 		/**
@@ -125,8 +156,8 @@
 			return $this->major_ver . '.' . $this->minor_ver;
 		}
 		
-		public function getAnnouncementHTML(): string {
-			return $this->data['announcements']['en']['content'] ?? '';
+		public function getAnnouncement(string $lang = 'en'): ?Announcement {
+			return $this->announcements[$lang] ?? null;
 		}
 		
 		/**
@@ -189,19 +220,17 @@
 		/**
 		 * Returns a list of changes from the change log, keys are indexed to the module
 		 *
-		 * @return ModuleWithChanges[]
+		 * @return ChangedModule[]
 		 */
 		
 		public function getModulesWithChanges(): array {
-			if ($this->changes !== null) {
-				return $this->changes;
-			}
-			
-			$this->changes = [];
-			foreach ($this->data['changes'] as $module_id => $changes) {
-				$this->changes[$module_id] = new ModuleWithChanges($module_id, $changes);
-			}
-			
-			return $this->changes;
+			return $this->changes ?? [];
+		}
+		
+		/**
+		 * @return WindowsBuild[]
+		 */
+		public function getWindowsBuilds(): array {
+			return $this->windows_builds;
 		}
 	}

@@ -4,27 +4,33 @@
 	
 	namespace phpweb\Data\Release;
 	
+	use DateTimeImmutable;
 	use phpweb\Config\Site;
 	
 	class SourceFile
 	{
-		/** @var string */
-		private $filename;
+		/* provides __set_state */
+		use Restorable;
 		
 		/** @var string */
-		private $name;
+		private string $filename;
 		
 		/** @var string */
-		private $sha256;
+		private string $name;
 		
-		/** @var \DateTime */
-		private $date;
+		/** @var string */
+		private string $sha256;
 		
-		public function __construct(array $data) {
-			$this->filename = $data['filename'] ?? '';
-			$this->name     = $data['name'] ?? '';
-			$this->sha256   = $data['sha256'] ?? '';
-			$this->date     = new \DateTime($data['date'] ?? '1970-01-01');
+		/** @var DateTimeImmutable */
+		private DateTimeImmutable $date;
+		
+		public static function FromJson(object $data): self {
+			$file = new static();
+			$file->filename = $data->filename ?? '';
+			$file->name     = $data->name ?? '';
+			$file->sha256   = $data->sha256 ?? '';
+			$file->date     = new \DateTimeImmutable($data->date ?? '1970-01-01');
+			return $file;
 		}
 		
 		public function getName(): string {
@@ -35,7 +41,7 @@
 			return $this->sha256;
 		}
 		
-		public function getDate(): \DateTime {
+		public function getDate(): \DateTimeImmutable {
 			return $this->date;
 		}
 		

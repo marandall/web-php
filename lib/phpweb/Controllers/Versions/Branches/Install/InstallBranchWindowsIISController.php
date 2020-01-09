@@ -9,6 +9,8 @@
 	use phpweb\Controllers\Middleware\UiReleasesMiddleware;
 	use phpweb\Controllers\Versions\Branches\BranchLoaderMiddleware;
 	use phpweb\Data\Branches\Branch;
+	use phpweb\Data\Release\Release;
+	use phpweb\Data\Release\WindowsBuild;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\UI\Templates\FreshTemplate;
@@ -26,13 +28,22 @@
 		
 		public function __invoke(Request $request, ?callable $next): Response {
 			$branch = $request->get(Branch::class);
+			
+			/* wanting the last version with windows downloads, may not be the very last release though */
+			$latest_windows_release = null;
+			foreach ($branch->getReleasesByVersion() as $release) {
+				if (count($release->getWindowsBuilds()) !== 0) {
+					$latest_windows_release = $release;
+				}
+			}
+			
 			return $request
 				->get(FreshTemplate::class)
 				->setPageTitle('Install ' . $branch->getBranchId() . ' on Windows + IIS')
-				->render(fn() => $this->renderContents($branch));
+				->render(fn() => $this->renderContents($branch, $latest_windows_release));
 		}
 		
-		public function renderContents(Branch $branch) {
+		public function renderContents(Branch $branch, ?Release $latest_windows_release) {
 			?>
             <section class="r2-sec">
                 <div>
@@ -42,14 +53,12 @@
                     </p>
                     <p>
                         If you're wanting to run PHP <?= htmlspecialchars($branch->getBranchId()) ?> on Windows using
-                        IIS (Internet Information Services) then you will first need to download the ZIP file from the
-                        <a href="https://windows.php.net">windows.php.net</a> server.
+                        IIS (Internet Information Services) then you will first need to <a href="#downloads">download</a> one of the ZIP files below.
                     </p>
 
                     <p>
                         Please pay attention to the additional download and install requirements for the Visual Studio
-                        Runtime
-                        Environment as without these you may encounter an error when attempting to run PHP.
+                        Runtime Environment as without these you may encounter an error when attempting to run PHP.
                     </p>
 
                     <p>
@@ -57,6 +66,68 @@
                         local site with suitable permissions.
                     </p>
                 </div>
+            </section>
+
+            <section class="r2-sec">
+                <a id="downloads"></a>
+                <h2>Windows Downloads (Release <?= htmlspecialchars($latest_windows_release->getVersionId()) ?>)</h2>
+                <div>
+                    <p>
+                        This list only shows the non thread-safe builds that are suitable for using with
+                        the FastCGI setup described on this page.
+                    </p>
+                    <p>
+                        If you would like to see a complete list of Windows downloads
+                        for PHP <?= htmlspecialchars($latest_windows_release->getVersionId()) ?>, including
+                        thread-safe and debug &amp; development kits, please
+                        <a href="<?= htmlspecialchars($latest_windows_release->getUrl() . 'install/windows-downloads')?>">
+                            see here.
+                        </a>
+                    </p>
+                    <p>
+                    <ul>
+						<?php foreach ($latest_windows_release->getWindowsBuilds() as $build) {
+							if (strpos($build->getBuildName(), 'nts-') === false) {
+								continue;
+							}
+							?>
+                            <li>
+                                <div style="font-size: larger; font-weight: bold">
+									<?= htmlspecialchars($build->getLabel()) ?>
+                                </div>
+								<?php foreach ($build->getFiles() as $file) {
+									if ($file->getName() !== 'zip') {
+										continue;
+									}
+									?>
+                                    <div style="margin-bottom: 1em">
+                                        <div>
+                                            <a href="<?= htmlspecialchars($file->getUrl()) ?>" target="_blank">
+												<?= htmlspecialchars($file->getPath()) ?>
+                                            </a>
+                                        </div>
+                                        <div style="font-family: 'Courier New'; font-size: smaller; word-wrap: break-word; margin-bottom: 1em">
+                                            SHA256: <?= htmlspecialchars($file->getSha256()) ?>
+                                        </div>
+
+                                        <div style="font-weight: bold">Dependencies</div>
+                                        <ol>
+											<?php foreach ($build->getDependencies() as $dependency) { ?>
+                                                <li>
+                                                    <a href="<?= htmlspecialchars($dependency->getUrl())?>" target="_blank">
+                                                        <?= htmlspecialchars($dependency->getLabel()) ?>
+                                                    </a>
+                                                </li>
+											<?php } ?>
+                                        </ol>
+                                    </div>
+								<?php } ?>
+                            </li>
+						<?php } ?>
+                    </ul>
+                    </p>
+                </div>
+
             </section>
 
             <section class="r2-sec">

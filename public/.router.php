@@ -39,93 +39,94 @@
 	];
 	
 	$routes = [
-		'/'                                                       => \phpweb\Controllers\IndexController::class,
+		'/'                                                                   => \phpweb\Controllers\IndexController::class,
 		
 		/* there are several static files which live in the root, all get passed through the same controller  */
-		'/crossdomain.xml'                                        => \phpweb\Controllers\StaticRootAssetController::class,
-		'/robots.txt'                                             => \phpweb\Controllers\StaticRootAssetController::class,
-		'/favicon.ico'                                            => \phpweb\Controllers\StaticRootAssetController::class,
-		'/opensearch.xml'                                         => \phpweb\Controllers\StaticRootAssetController::class,
+		'/crossdomain.xml'                                                    => \phpweb\Controllers\StaticRootAssetController::class,
+		'/robots.txt'                                                         => \phpweb\Controllers\StaticRootAssetController::class,
+		'/favicon.ico'                                                        => \phpweb\Controllers\StaticRootAssetController::class,
+		'/opensearch.xml'                                                     => \phpweb\Controllers\StaticRootAssetController::class,
 		
 		/* moar */
-		'/docs.php'                                               => \phpweb\Controllers\DocsController::class,
-		'/security-note.php'                                      => \phpweb\Controllers\SecurityNoteController::class,
-		'/supported-versions.php'                                 => \phpweb\Controllers\Versions\SupportedVersionsController::class,
-		'/support.php'                                            => \phpweb\Controllers\SupportController::class,
-		'/software.php'                                           => \phpweb\Controllers\SoftwareController::class,
-		'/sites.php'                                              => \phpweb\Controllers\About\SitesController::class,
-		'/thanks.php'                                             => \phpweb\Controllers\ThanksController::class,
-		'/get-involved.php'                                       => \phpweb\Controllers\Developers\GetInvolvedController::class,
-		'/elephpant.php'                                          => \phpweb\Controllers\ElephpantController::class,
+		'/docs.php'                                                           => \phpweb\Controllers\DocsController::class,
+		'/security-note.php'                                                  => \phpweb\Controllers\SecurityNoteController::class,
+		'/supported-versions.php'                                             => \phpweb\Controllers\Versions\SupportedVersionsController::class,
+		'/support.php'                                                        => \phpweb\Controllers\SupportController::class,
+		'/software.php'                                                       => \phpweb\Controllers\SoftwareController::class,
+		'/sites.php'                                                          => \phpweb\Controllers\About\SitesController::class,
+		'/thanks.php'                                                         => \phpweb\Controllers\ThanksController::class,
+		'/get-involved.php'                                                   => \phpweb\Controllers\Developers\GetInvolvedController::class,
+		'/elephpant.php'                                                      => \phpweb\Controllers\ElephpantController::class,
 		
 		/* everything in distribution gets redirected to main website */
-		'/distributions/{path}'                                   => \phpweb\Controllers\DistroRedirectController::class,
+		'/distributions/{path}'                                               => \phpweb\Controllers\DistroRedirectController::class,
 		
 		/* about pages */
-		'/about/privacy.php'                                      => \phpweb\Controllers\About\PrivacyController::class,
-		'/about/copyright.php'                                    => \phpweb\Controllers\About\ContactController::class,
-		'/about/credits.php'                                      => \phpweb\Controllers\About\CopyrightController::class,
-		'/about/contact.php'                                      => \phpweb\Controllers\About\ContactController::class,
-		'/about/sitemap.php'                                      => \phpweb\Controllers\About\SitemapController::class,
-		'/about/sitemap.xml'                                      => \phpweb\Controllers\About\SitemapXMLController::class,
+		'/about/privacy.php'                                                  => \phpweb\Controllers\About\PrivacyController::class,
+		'/about/copyright.php'                                                => \phpweb\Controllers\About\ContactController::class,
+		'/about/credits.php'                                                  => \phpweb\Controllers\About\CopyrightController::class,
+		'/about/contact.php'                                                  => \phpweb\Controllers\About\ContactController::class,
+		'/about/sitemap.php'                                                  => \phpweb\Controllers\About\SitemapController::class,
+		'/about/sitemap.xml'                                                  => \phpweb\Controllers\About\SitemapXMLController::class,
 		
 		/* developers */
-		'/developers/'                                             => \phpweb\Controllers\Developers\GetInvolvedController::class,
-		'/developers/tools/build-setup'                           => \phpweb\Controllers\Developers\Tools\BuildSetupController::class,
-		'/developers/git/'                                        => \phpweb\Controllers\Developers\Git\GitController::class,
-		'/developers/git/register'                                => \phpweb\Controllers\Developers\Git\RegisterGitAccountController::class,
+		'/developers/'                                                        => \phpweb\Controllers\Developers\GetInvolvedController::class,
+		'/developers/tools/build-setup'                                       => \phpweb\Controllers\Developers\Tools\BuildSetupController::class,
+		'/developers/git/'                                                    => \phpweb\Controllers\Developers\Git\GitController::class,
+		'/developers/git/register'                                            => \phpweb\Controllers\Developers\Git\RegisterGitAccountController::class,
 		
 		/* community + developers section */
-		'/community/'                                             => \phpweb\Controllers\Developers\GetInvolvedController::class,
-		'/community/events/calendar'                              => \phpweb\Controllers\Community\Events\CalendarController::class,
-		'/community/events/submit'                                => \phpweb\Controllers\Community\Events\SubmitEventController::class,
-		'/community/conferences/'                                 => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
-		'/community/conferences/archive'                          => \phpweb\Controllers\Community\Conferences\ConferencesArchiveController::class,
-		'/community/conferences/{conference}/'                    => \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController::class,
-		'/community/videos/'                                      => \phpweb\Controllers\Community\Videos\VideosIndexController::class,
-		'/community/lists/'                                       => \phpweb\Controllers\Community\Lists\MailingListsIndexController::class,
-		'/community/lists/unsubscribe'                            => \phpweb\Controllers\Community\Lists\UnsubscribeController::class,
+		'/community/'                                                         => \phpweb\Controllers\Developers\GetInvolvedController::class,
+		'/community/events/calendar'                                          => \phpweb\Controllers\Community\Events\CalendarController::class,
+		'/community/events/submit'                                            => \phpweb\Controllers\Community\Events\SubmitEventController::class,
+		'/community/conferences/'                                             => \phpweb\Controllers\Community\Conferences\ConferencesIndexController::class,
+		'/community/conferences/archive'                                      => \phpweb\Controllers\Community\Conferences\ConferencesArchiveController::class,
+		'/community/conferences/{conference}/'                                => \phpweb\Controllers\Community\Conferences\Conference\ConferenceIndexController::class,
+		'/community/videos/'                                                  => \phpweb\Controllers\Community\Videos\VideosIndexController::class,
+		'/community/lists/'                                                   => \phpweb\Controllers\Community\Lists\MailingListsIndexController::class,
+		'/community/lists/unsubscribe'                                        => \phpweb\Controllers\Community\Lists\UnsubscribeController::class,
 		
 		/* search terms */
-		'/search/search.php'                                      => \phpweb\Controllers\Search\SearchController::class,
-		'/search/manual.php'                                      => \phpweb\Controllers\Search\SearchManualController::class,
+		'/search/search.php'                                                  => \phpweb\Controllers\Search\SearchController::class,
+		'/search/manual.php'                                                  => \phpweb\Controllers\Search\SearchManualController::class,
 		
 		/* manual data */
-		'/manual/help-translate.php'                              => \phpweb\Controllers\Manual\HelpTranslateController::class,
-		'/manual/php4.php'                                        => \phpweb\Controllers\Manual\PHP4ManualArchiveController::class,
-		'/manual/php3.php'                                        => \phpweb\Controllers\Manual\PHP3ManualArchiveController::class,
-		'/manual/en/{manual_path}.php'                            => \phpweb\Controllers\Manual\En\EnglishManualRouter::class,
+		'/manual/help-translate.php'                                          => \phpweb\Controllers\Manual\HelpTranslateController::class,
+		'/manual/php4.php'                                                    => \phpweb\Controllers\Manual\PHP4ManualArchiveController::class,
+		'/manual/php3.php'                                                    => \phpweb\Controllers\Manual\PHP3ManualArchiveController::class,
+		'/manual/en/{manual_path}.php'                                        => \phpweb\Controllers\Manual\En\EnglishManualRouter::class,
 		
 		/* release information */
-		'/versions/'                                              => \phpweb\Controllers\Versions\VersionsIndexController::class,
-		'/versions/{major:\d+}.{minor:\d+}.{patch}/'              => \phpweb\Controllers\Versions\Releases\ReleaseController::class,
-		'/versions/{major:\d+}.{minor:\d+}/'                      => \phpweb\Controllers\Versions\Branches\BranchController::class,
-		'/versions/{major:\d+}.{minor:\d+}/changelog'             => \phpweb\Controllers\Versions\Branches\BranchChangelogController::class,
-		'/versions/{major:\d+}.{minor:\d+}/install/'              => \phpweb\Controllers\Versions\Branches\Install\BranchInstallController::class,
-		'/versions/{major:\d+}.{minor:\d+}/install/ubuntu_ppa'    => \phpweb\Controllers\Versions\Branches\Install\InstallBranchFromPPAController::class,
-		'/versions/{major:\d+}.{minor:\d+}/install/iis'           => \phpweb\Controllers\Versions\Branches\Install\InstallBranchWindowsIISController::class,
-		'/versions/{major:\d+}.{minor:\d+}/install/docker'        => \phpweb\Controllers\Versions\Branches\Install\InstallBranchDockerController::class,
-		'/versions/{major:\d+}.{minor:\d+}/install/source'        => \phpweb\Controllers\Versions\Branches\Install\InstallBranchSourceController::class,
-		'/versions/{major:\d+}.{minor:\d+}/api/releases.{format}' => \phpweb\Controllers\Versions\Branches\BranchAtomFeedController::class,
-		'/versions/supported.php'                                 => \phpweb\Controllers\Versions\SupportedVersionsController::class,
-		'/versions/eol.php'                                       => \phpweb\Controllers\Versions\EOLController::class,
-		'/versions/api/supported.{format}'                        => \phpweb\Controllers\Versions\API\SupportedReleaseFeedController::class,
-		'/versions/api/releases.{format}'                         => \phpweb\Controllers\Versions\API\AllReleasesFeedController::class,
-		'/versions/api/supported_chart.svg'                       => \phpweb\Controllers\Versions\API\SupportedVersionGraphController::class,
+		'/versions/'                                                          => \phpweb\Controllers\Versions\VersionsIndexController::class,
+		'/versions/{major:\d+}.{minor:\d+}.{patch}/'                          => \phpweb\Controllers\Versions\Releases\ReleaseController::class,
+		'/versions/{major:\d+}.{minor:\d+}.{patch}/install/windows-downloads' => \phpweb\Controllers\Versions\Releases\Install\WindowsDownloadsController::class,
+		'/versions/{major:\d+}.{minor:\d+}/'                                  => \phpweb\Controllers\Versions\Branches\BranchController::class,
+		'/versions/{major:\d+}.{minor:\d+}/changelog'                         => \phpweb\Controllers\Versions\Branches\BranchChangelogController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/'                          => \phpweb\Controllers\Versions\Branches\Install\BranchInstallController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/ubuntu_ppa'                => \phpweb\Controllers\Versions\Branches\Install\InstallBranchFromPPAController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/iis'                       => \phpweb\Controllers\Versions\Branches\Install\InstallBranchWindowsIISController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/docker'                    => \phpweb\Controllers\Versions\Branches\Install\InstallBranchDockerController::class,
+		'/versions/{major:\d+}.{minor:\d+}/install/source'                    => \phpweb\Controllers\Versions\Branches\Install\InstallBranchSourceController::class,
+		'/versions/{major:\d+}.{minor:\d+}/api/releases.{format}'             => \phpweb\Controllers\Versions\Branches\BranchAtomFeedController::class,
+		'/versions/supported.php'                                             => \phpweb\Controllers\Versions\SupportedVersionsController::class,
+		'/versions/eol.php'                                                   => \phpweb\Controllers\Versions\EOLController::class,
+		'/versions/api/supported.{format}'                                    => \phpweb\Controllers\Versions\API\SupportedReleaseFeedController::class,
+		'/versions/api/releases.{format}'                                     => \phpweb\Controllers\Versions\API\AllReleasesFeedController::class,
+		'/versions/api/supported_chart.svg'                                   => \phpweb\Controllers\Versions\API\SupportedVersionGraphController::class,
 		
 		/* misc security that should probably be put in an archive */
-		'/security/crypt_blowfish.php'                            => \phpweb\Controllers\Security\BlowfishArchiveController::class,
+		'/security/crypt_blowfish.php'                                        => \phpweb\Controllers\Security\BlowfishArchiveController::class,
 		
 		/* general downloads */
-		'/downloads/'                                             => \phpweb\Controllers\Downloads\DownloadsIndexController::class,
-		'/downloads/logos'                                        => \phpweb\Controllers\Downloads\LogosController::class,
-		'/downloads/gpg-keys'                                     => \phpweb\Controllers\Downloads\GpgKeysController::class,
+		'/downloads/'                                                         => \phpweb\Controllers\Downloads\DownloadsIndexController::class,
+		'/downloads/logos'                                                    => \phpweb\Controllers\Downloads\LogosController::class,
+		'/downloads/gpg-keys'                                                 => \phpweb\Controllers\Downloads\GpgKeysController::class,
 		
 		
 		/* licensing */
-		'/license/'                                               => \phpweb\Controllers\License\LicenseIndexController::class,
-		'/license/contrib-guidelines-code.php'                    => \phpweb\Controllers\License\ContributorGuidelinesController::class,
-		'/license/distrib-guidelines-code'                        => \phpweb\Controllers\License\DistributionGuidelinesController::class,
+		'/license/'                                                           => \phpweb\Controllers\License\LicenseIndexController::class,
+		'/license/contrib-guidelines-code.php'                                => \phpweb\Controllers\License\ContributorGuidelinesController::class,
+		'/license/distrib-guidelines-code'                                    => \phpweb\Controllers\License\DistributionGuidelinesController::class,
 	
 	];
 	

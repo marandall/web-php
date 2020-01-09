@@ -27,7 +27,7 @@
 		
 		public function __construct(ChangelogRenderer $changelog_renderer, TextFormatter $text_formatter) {
 			$this->changelog_renderer = $changelog_renderer;
-			$this->text_formatter = $text_formatter;
+			$this->text_formatter     = $text_formatter;
 		}
 		
 		public function load(): array {
@@ -99,8 +99,21 @@
             <section class="r2-sec">
                 <h2>Release Announcement</h2>
                 <div>
-					<?= $this->text_formatter->format($release->getAnnouncementHTML()) ?>
+					<?php
+						if ($release->getAnnouncement('en') !== null) {
+							echo '<p>';
+							echo $this->text_formatter->format($release->getAnnouncement('en')->getContent());
+							echo '</p>';
+						}
+					?>
+	                
                     To download the source code for this release please view the <a href="#sources">sources</a>.
+					
+					<?php if (count($release->getWindowsBuilds()) !== 0) { ?>
+                        A full list of Windows downloads is available <a href="./install/windows-downloads">here</a>.
+					<?php } ?>
+	               
+	               
                 </div>
             </section>
 

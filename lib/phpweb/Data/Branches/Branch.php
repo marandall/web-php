@@ -53,10 +53,10 @@
 		/**
 		 * Finds when the first production release was released
 		 *
-		 * @return \DateTime|null
+		 * @return \DateTimeImmutable|null
 		 */
 		
-		public function getReleaseDate(): ?\DateTime {
+		public function getReleaseDate(): ?\DateTimeImmutable {
 			$initial = $this->getInitialRelease();
 			return $initial ? $initial->getDate() : null;
 		}
@@ -83,10 +83,10 @@
 		/**
 		 * Calculates the end of security updates date
 		 *
-		 * @return \DateTime|null
+		 * @return \DateTimeImmutable|null
 		 */
 		
-		public function getEolSecurityDate(): ?\DateTime {
+		public function getEolSecurityDate(): ?\DateTimeImmutable {
 			if (version_compare($this->getBranchId(), '5.3', '<')) {
 				return clone $this->getLatestRelease()->getDate();
 			}
@@ -97,7 +97,8 @@
 			}
 			
 			$date = clone $initial->getDate();
-			$date->add(new \DateInterval('P3Y'));
+			$date = $date->add(new \DateInterval('P3Y'));
+			
 			return $date;
 		}
 		
@@ -137,11 +138,11 @@
 			$bugs_eol     = $initial->getDate()->add(new \DateInterval('P2Y'));
 			$cur          = new \DateTime();
 			
-			if ($bugs_eol > $cur) {
+			if ($bugs_eol->getTimestamp() > $cur->getTimestamp()) {
 				return StabilityEnum::STABLE;
 			}
 			
-			if ($security_eol > $cur) {
+			if ($security_eol->getTimestamp() > $cur->getTimestamp()) {
 				return StabilityEnum::SECURITY;
 			}
 			

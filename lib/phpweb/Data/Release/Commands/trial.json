@@ -1,0 +1,196 @@
+{
+  "4.0": {
+    "releases": {
+      "4.0.0": {
+        "version": "4.0.0",
+        "date": "2000-05-22",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_0.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)\n- [ncurses_hide_panel](\/manual\/en\/function.ncurses-hide-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)"
+        },
+        "tags": [],0
+        .0
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.0.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.1": {
+        "version": "4.0.1",
+        "date": "2000-06-28",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_1.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)\n- [ncurses_move_panel](\/manual\/en\/function.ncurses-move-panel.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.1.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            },
+            {
+              "name": "4.0.1pl2 Source (tar.gz)",
+              "filename": "php-4.0.1pl2.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.2": {
+        "version": "4.0.2",
+        "date": "2000-08-29",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_2.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [ncurses_hide_panel](\/manual\/en\/function.ncurses-hide-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)\n- [ncurses_move_panel](\/manual\/en\/function.ncurses-move-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.2.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.3": {
+        "version": "4.0.3",
+        "date": "2000-10-11",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_3.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_hide_panel](\/manual\/en\/function.ncurses-hide-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.3.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            },
+            {
+              "name": "4.0.3pl1 Source (tar.gz)",
+              "filename": "php-4.0.3pl1.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.4": {
+        "version": "4.0.4",
+        "date": "2000-12-19",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_4.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)\n- [ncurses_move_panel](\/manual\/en\/function.ncurses-move-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.4.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            },
+            {
+              "name": "4.0.4pl1 Source (tar.gz)",
+              "filename": "php-4.0.4pl1.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.5": {
+        "version": "4.0.5",
+        "date": "2001-04-30",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_5.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [ncurses_hide_panel](\/manual\/en\/function.ncurses-hide-panel.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)\n- [ncurses_move_panel](\/manual\/en\/function.ncurses-move-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.5.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      },
+      "4.0.6": {
+        "version": "4.0.6",
+        "date": "2001-06-23",
+        "stage": "stable",
+        "changes": {
+          "modules": []
+        },
+        "announcements": {
+          "en": "PHP Function List\n\n\n **releases\/4_0_6.php** doesn't exist. Closest matches:\n\n- [sem_release](\/manual\/en\/function.sem-release.php)\n- [ncurses_putp](\/manual\/en\/function.ncurses-putp.php)\n- [trader_ppo](\/manual\/en\/function.trader-ppo.php)\n- [reflectionclass](\/manual\/en\/class.reflectionclass.php)\n- [event_base_loop](\/manual\/en\/function.event-base-loop.php)\n- [restore_include_path](\/manual\/en\/function.restore-include-path.php)\n- [ncurses_scr_dump](\/manual\/en\/function.ncurses-scr-dump.php)\n- [trader_ht_phasor](\/manual\/en\/function.trader-ht-phasor.php)\n- [ncurses_prefresh](\/manual\/en\/function.ncurses-prefresh.php)\n- [ncurses_flushinp](\/manual\/en\/function.ncurses-flushinp.php)\n- [yaf_request_http](\/manual\/en\/class.yaf-request-http.php)\n- [session_save_path](\/manual\/en\/function.session-save-path.php)\n- [parle_parser](\/manual\/en\/class.parle-parser.php)\n- [ncurses_top_panel](\/manual\/en\/function.ncurses-top-panel.php)\n- [ncurses_typeahead](\/manual\/en\/function.ncurses-typeahead.php)\n- [ncurses_del_panel](\/manual\/en\/function.ncurses-del-panel.php)\n- [ncurses_slk_touch](\/manual\/en\/function.ncurses-slk-touch.php)\n- [get_class_methods](\/manual\/en\/function.get-class-methods.php)\n- [trader_linearreg_slope](\/manual\/en\/function.trader-linearreg-slope.php)\n- [ncurses_init_pair](\/manual\/en\/function.ncurses-init-pair.php)\n- [px_create_fp](\/manual\/en\/function.px-create-fp.php)\n- [ncurses_new_panel](\/manual\/en\/function.ncurses-new-panel.php)\n- [ncurses_inch](\/manual\/en\/function.ncurses-inch.php)\n- [stripslashes](\/manual\/en\/function.stripslashes.php)\n- [stream_resolve_include_path](\/manual\/en\/function.stream-resolve-include-path.php)\n- [ncurses_beep](\/manual\/en\/function.ncurses-beep.php)\n- [ncurses_echo](\/manual\/en\/function.ncurses-echo.php)\n- [ncurses_show_panel](\/manual\/en\/function.ncurses-show-panel.php)\n- [runkit_class_adopt](\/manual\/en\/function.runkit-class-adopt.php)\n- [ncurses_move_panel](\/manual\/en\/function.ncurses-move-panel.php)"
+        },
+        "tags": [],
+        "source": {
+          "files": [
+            {
+              "name": "Source (tar.gz)",
+              "filename": "php-4.0.6.tar.gz",
+              "date": "2001-01-01",
+              "sha256": "",
+              "md5": ""
+            }
+          ]
+        },
+        "windows_builds": {}
+      }
+    }
+  }
+}

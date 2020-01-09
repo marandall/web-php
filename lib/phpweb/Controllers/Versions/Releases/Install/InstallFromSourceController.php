@@ -2,7 +2,7 @@
 	
 	declare(strict_types=1);
 	
-	namespace phpweb\Controllers\Versions\Release\Install;
+	namespace phpweb\Controllers\Versions\Releases\Install;
 	
 	use phpweb\Controllers\ControllerInterface;
 	use phpweb\Controllers\Middleware\UiInjector;

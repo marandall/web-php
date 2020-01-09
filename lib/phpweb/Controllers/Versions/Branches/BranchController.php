@@ -63,8 +63,8 @@
 				<div>
 					<?php
 						$initial = $branch->getInitialRelease();
-						if ($initial) {
-							echo $this->formatter->format($initial->getAnnouncementHTML());
+						if ($initial && $initial->getAnnouncement('en')) {
+							echo $this->formatter->format($initial->getAnnouncement('en')->getContent());
 						}
 					
 						if ($branch->isSupported()) { ?>

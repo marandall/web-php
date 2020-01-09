@@ -11,6 +11,8 @@
 	use phpweb\Data\Release\ReleasesRepository;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
+	use phpweb\UI\Templates\FreshTemplate;
+	use phpweb\UI\Templates\LinkPanel;
 	
 	class ReleaseLoaderMiddleware implements MiddlewareInterface
 	{

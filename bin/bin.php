@@ -11,7 +11,6 @@
 		$handler_classes = [
 			\phpweb\Data\Conferences\Tasks\CompileConferencesToArray::class,
 			\phpweb\Data\Conferences\Tasks\ExtractTasksFromNews::class,
-			\phpweb\Data\Release\Commands\ReleasesToXMLCommand::class,
 			\phpweb\Data\Release\Commands\CompileReleasesCommand::class,
 			\phpweb\Data\Videos\Commands\AddYoutubeVideoCommand::class,
 			\phpweb\Data\Videos\Commands\CompileVideosCommand::class,

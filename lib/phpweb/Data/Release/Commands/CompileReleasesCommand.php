@@ -4,7 +4,9 @@
 	
 	namespace phpweb\Data\Release\Commands;
 	
+	use JsonException;
 	use phpweb\Config\Site;
+	use phpweb\Data\Release\Release;
 	use Symfony\Component\Console\Command\Command;
 	use Symfony\Component\Console\Input\InputInterface;
 	use Symfony\Component\Console\Output\OutputInterface;
@@ -18,84 +20,30 @@
 		}
 		
 		public function execute(InputInterface $input, OutputInterface $output) {
-			$base_dir = Site::GetDataDir() . '/releases';
-			$results  = [];
+			$base_dir = Site::GetDataDir() . '/compiled';
 			
-			foreach (scandir($base_dir, SCANDIR_SORT_NONE) as $branch_file) {
-				$branch_dir = $base_dir . '/' . $branch_file;
-				if (!is_dir($branch_dir) || $branch_dir[0] === '.') {
-					continue;
-				}
-				
-				foreach (scandir($branch_dir, SCANDIR_SORT_NONE) as $file) {
-					$path = $branch_dir . '/' . $file;
-					if (!is_file($path) || substr($file, -4) !== '.xml') {
-						continue;
-					}
-					
-					$xml     = simplexml_load_string(file_get_contents($path));
-					$version = (string)$xml->release;
-					
-					$sources_array = [];
-					foreach ($xml->source->source as $source) {
-						$sources_array[] = [
-							'name'     => (string)$source->name,
-							'filename' => (string)$source->filename,
-							'sha256'   => (string)$source->sha256,
-							'md5'      => (string)$source->md5,
-							'date'     => (string)$source->date,
-						];
-					}
-					
-					$announcements = [];
-					foreach ($xml->announcements->announcement as $announcement) {
-						$lang = (string)$announcement->attributes()->lang;
-						
-						$announcements[$lang ?: 'en'] = [
-							'format'  => 'html',
-							'content' => (string)$announcement,
-						];
-					}
-					
-					$tags = [];
-					foreach ($xml->tags->children() as $tag) {
-						$tags[] = (string)$tag;
-					}
-					
-					
-					$modules_data = [];
-					foreach ($xml->changes->children() as $xml_module) {
-						$module_id = (string)$xml_module->attributes()->id;
-						foreach ($xml_module->change as $xml_change) {
-							$references = [];
-							foreach ($xml_change->references->reference as $ref) {
-								$ref_attr     = $ref->attributes();
-								$references[] = ['type' => (string)$ref_attr->type, 'value' => (string)$ref];
-							}
-							
-							$modules_data[$module_id][] = [
-								'description' => (string)$xml_change->description,
-								'references'  => $references,
-							];
-						}
-					}
-					
-					$results[$version] = [
-						'version'       => $version,
-						'date'          => (string)$xml->date,
-						'source'        => $sources_array,
-						'tags'          => $tags,
-						'announcements' => $announcements,
-						'changes'       => $modules_data,
-					];
+			$releases = [];
+			$json_str = file_get_contents('https://php-meta.markrandall.uk/releases/releases.json');
+			
+			try {
+				$json = json_decode($json_str, false, 128, JSON_THROW_ON_ERROR);
+			}
+			catch (JsonException $ex) {
+				$output->writeln('Import failed; ' . $ex->getMessage());
+				return 1;
+			}
+
+			foreach ($json as $branch_id => $branch_data) {
+				foreach ($branch_data->releases as $release_version => $release_data) {
+					$releases[$release_version] = Release::FromJson($release_data);
 				}
 			}
 			
-			$output_str  = '<?php return ' . var_export($results, true) . ';';
-			$output_path = Site::GetDataDir() . '/compiled/releases.php';
+			$exportable = '<?php return ' . var_export($releases, true) . ';';
+			$export_path = Site::GetDataDir() . '/compiled/releases.php';
 			
-			if (!is_file($output_path) || file_get_contents($output_path) !== $output_str) {
-				file_put_contents($output_path, $output_str);
+			if (!file_exists($export_path) || file_get_contents($export_path) !== $export_path) {
+				file_put_contents($export_path, $exportable);
 			}
 			
 			return 0;

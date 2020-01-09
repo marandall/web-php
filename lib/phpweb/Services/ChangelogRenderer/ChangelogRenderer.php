@@ -4,7 +4,7 @@
 	
 	namespace phpweb\Services\ChangelogRenderer;
 	
-	use phpweb\Data\Release\ModuleWithChanges;
+	use phpweb\Data\Release\ChangedModule;
 	use phpweb\Services\Builder\InjectableService;
 	use phpweb\Services\TextFormatting\TextFormatter;
 	
@@ -17,7 +17,7 @@
 		}
 		
 		/**
-		 * @param ModuleWithChanges[] $modules
+		 * @param ChangedModule[] $modules
 		 */
 		public function render(array $modules) {
 			$lines = ['<ul>'];
@@ -29,17 +29,20 @@
 					$refs = [];
 					
 					foreach ($change->getReferences() as $ref_data) {
-						if ($ref_data['type'] === 'bugfix') {
-							$bug_id = (int)$ref_data['value'];
+						$ref_type = $ref_data->getType();
+						$ref_value = $ref_data->getValue();
+						
+						if ($ref_type === 'bugfix') {
+							$bug_id = (int)$ref_value;
 							$refs[] = sprintf('<a href="https://bugs.php.net/%d" target="_blank" style="display: inline-block; padding: 2px; background-color: darkgreen; color: white; border-radius: 3px; padding-left: 4px; padding-right: 4px; font-size: smaller; margin-right: 5px; ">Fix %d</a>', $bug_id, $bug_id);
 						}
-						else if ($ref_data['type'] === 'cve') {
-							$cve_id = $ref_data['value'];
+						else if ($ref_type === 'cve') {
+							$cve_id = $ref_value;
 							$refs[] = sprintf('<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=%s" target="_blank" style="display: inline-block; padding: 2px; background-color: red; color: white; border-radius: 3px; padding-left: 4px; padding-right: 4px; font-size: smaller; margin-right: 5px">%s</a>', htmlspecialchars($cve_id), htmlspecialchars($cve_id));
 						}
 					}
 					
-					$lines[] = '<li style="margin-bottom: 3px">' . implode('', $refs) . ' ' . htmlspecialchars($change->getContent()) . '</li>';
+					$lines[] = '<li style="margin-bottom: 3px">' . implode('', $refs) . ' ' . htmlspecialchars($change->getDescription()) . '</li>';
 				}
 				
 				$lines[] = '</ul>';

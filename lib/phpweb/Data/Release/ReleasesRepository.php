@@ -22,14 +22,13 @@
 			}
 			
 			$source_path = Site::GetDataDir() . '/compiled/releases.php';
+			
+			$mt = microtime(true);
 			$source_data = require $source_path;
+			$this->cache = $source_data;
 			
-			$output = [];
-			foreach ($source_data as $release_id => $data) {
-				$output[$release_id] = new Release($release_id, $data);
-			}
-			
-			return $this->cache = $output;
+			header('X-Import-Time: ' . (microtime(true) - $mt));
+			return $this->cache;
 		}
 		
 		public function find(string $release_version): ?Release {
