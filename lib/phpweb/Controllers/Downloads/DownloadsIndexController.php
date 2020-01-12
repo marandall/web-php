@@ -8,17 +8,28 @@
 	use phpweb\Controllers\Middleware\UiInjector;
 	use phpweb\Data\Branches\Branch;
 	use phpweb\Data\Branches\Branches;
+	use phpweb\Data\Branches\BranchRepository;
 	use phpweb\Data\Branches\InstallHelpers\HelperSearch;
 	use phpweb\Data\StabilityEnum;
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
+	use phpweb\UI\Notices\BranchNoticeFactory;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Templates\BasicCallbackPanel;
 	use phpweb\UI\Templates\FreshTemplate;
 	
 	class DownloadsIndexController  implements ControllerInterface
 	{
+		private BranchRepository $branch_repository;
+		
+		private BranchNoticeFactory $branch_notice_factory;
+		
+		public function __construct(BranchRepository $branch_repository, BranchNoticeFactory $branch_notice_factory) {
+			$this->branch_repository = $branch_repository;
+			$this->branch_notice_factory = $branch_notice_factory;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -46,6 +57,9 @@
                 You can download the source code directly from PHP.net and compile it yourself,
                 or use one of our interactive guides to help you install it.
             </p>
+            <p>
+                If you're using Windows, you can <a href="/downloads/windows">download precompiled binaries</a>.
+            </p>
             <?php
         }
 		
@@ -64,18 +78,9 @@
 		
 		public function renderContents() {
 			$SHOW_COUNT = 4;
+			$branches = $this->branch_repository->supportedByBranchDescending();
 			
-			/** @var Branch[] $branches */
-			$branches = [];
-			foreach (Branches::GetBranches() as $branch_id => $branch) {
-				if (!$branch->isSupported()) {
-					continue;
-				}
-				
-				$branches[] = $branch;
-			}
-			
-			foreach (array_reverse($branches) as $index => $branch) {
+			foreach ($branches as $index => $branch) {
 				$latest = $branch->getLatestRelease();
 				if ($latest === null) {
 					continue;
@@ -91,10 +96,10 @@
                     <div>
 	                    <?php
 		                    $helpers = Services::get(HelperSearch::class)->findHelpers($branch);
-		                    $support = $branch->getStability();
-		                    if ($support === StabilityEnum::SECURITY) {
-			                    (new BranchSecurityOnlyNotice($branch))->draw();
-		                    }
+		                    
+		                    foreach ($this->branch_notice_factory->find($branch) as $notice) {
+		                        $notice->draw();
+                            }
 	                    ?>
 
                         View the release announcement and changelog for

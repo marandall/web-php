@@ -6,10 +6,9 @@
 	
 	use phpweb\Data\Branches\Branch;
 	
-	class BranchSecurityOnlyNotice
+	class BranchSecurityOnlyNotice implements NoticeInterface
 	{
-		/** @var Branch */
-		private $branch;
+		private Branch $branch;
 		
 		public function __construct(Branch $branch) {
 			$this->branch = $branch;

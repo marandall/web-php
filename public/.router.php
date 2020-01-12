@@ -119,6 +119,7 @@
 		
 		/* general downloads */
 		'/downloads/'                                                         => \phpweb\Controllers\Downloads\DownloadsIndexController::class,
+		'/downloads/windows'                                                  => \phpweb\Controllers\Downloads\WindowsController::class,
 		'/downloads/logos'                                                    => \phpweb\Controllers\Downloads\LogosController::class,
 		'/downloads/gpg-keys'                                                 => \phpweb\Controllers\Downloads\GpgKeysController::class,
 		

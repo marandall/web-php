@@ -233,4 +233,8 @@
 		public function getWindowsBuilds(): array {
 			return $this->windows_builds;
 		}
+		
+		public function isStable(): bool {
+			return $this->stage === 'stable';
+		}
 	}

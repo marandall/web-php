@@ -52,6 +52,7 @@ class ServiceList extends Container
             'phpweb\\Controllers\\Downloads\\DownloadsIndexController' => 'getDownloadsIndexControllerService',
             'phpweb\\Controllers\\Downloads\\GpgKeysController' => 'getGpgKeysControllerService',
             'phpweb\\Controllers\\Downloads\\LogosController' => 'getLogosControllerService',
+            'phpweb\\Controllers\\Downloads\\WindowsController' => 'getWindowsControllerService',
             'phpweb\\Controllers\\ElephpantController' => 'getElephpantControllerService',
             'phpweb\\Controllers\\IndexController' => 'getIndexControllerService',
             'phpweb\\Controllers\\License\\ContributorGuidelinesController' => 'getContributorGuidelinesControllerService',
@@ -87,7 +88,8 @@ class ServiceList extends Container
             'phpweb\\Controllers\\Versions\\Branches\\Install\\InstallBranchSourceController' => 'getInstallBranchSourceControllerService',
             'phpweb\\Controllers\\Versions\\Branches\\Install\\InstallBranchWindowsIISController' => 'getInstallBranchWindowsIISControllerService',
             'phpweb\\Controllers\\Versions\\EOLController' => 'getEOLControllerService',
-            'phpweb\\Controllers\\Versions\\Release\\Install\\InstallFromSourceController' => 'getInstallFromSourceControllerService',
+            'phpweb\\Controllers\\Versions\\Releases\\Install\\InstallFromSourceController' => 'getInstallFromSourceControllerService',
+            'phpweb\\Controllers\\Versions\\Releases\\Install\\WindowsDownloadsController' => 'getWindowsDownloadsControllerService',
             'phpweb\\Controllers\\Versions\\Releases\\ReleaseController' => 'getReleaseControllerService',
             'phpweb\\Controllers\\Versions\\Releases\\ReleaseLoaderMiddleware' => 'getReleaseLoaderMiddlewareService',
             'phpweb\\Controllers\\Versions\\SupportedVersionsController' => 'getSupportedVersionsControllerService',
@@ -97,8 +99,6 @@ class ServiceList extends Container
             'phpweb\\Data\\News\\ArticlesRepository' => 'getArticlesRepositoryService',
             'phpweb\\Data\\News\\Commands\\SyncCommand' => 'getSyncCommandService',
             'phpweb\\Data\\News\\Utilities\\ImportFromServer' => 'getImportFromServerService',
-            'phpweb\\Data\\Release\\Commands\\ReleasesToXMLCommand' => 'getReleasesToXMLCommandService',
-            'phpweb\\Data\\Release\\Commands\\SyncReleases' => 'getSyncReleasesService',
             'phpweb\\Data\\Release\\ReleasesRepository' => 'getReleasesRepositoryService',
             'phpweb\\Services\\ChangelogRenderer\\ChangelogRenderer' => 'getChangelogRendererService',
             'phpweb\\Services\\HtmlSanitizer\\HtmlSanitizer' => 'getHtmlSanitizerService',
@@ -107,6 +107,7 @@ class ServiceList extends Container
             'phpweb\\Services\\Storage\\StorageFactory' => 'getStorageFactoryService',
             'phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter' => 'getHtmlToMarkdownConverterService',
             'phpweb\\Services\\TextFormatting\\TextFormatter' => 'getTextFormatterService',
+            'phpweb\\UI\\Notices\\BranchNoticeFactory' => 'getBranchNoticeFactoryService',
         ];
 
         $this->aliases = [];
@@ -367,7 +368,7 @@ class ServiceList extends Container
      */
     protected function getDownloadsIndexControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Downloads\\DownloadsIndexController'] = new \phpweb\Controllers\Downloads\DownloadsIndexController();
+        return $this->services['phpweb\\Controllers\\Downloads\\DownloadsIndexController'] = new \phpweb\Controllers\Downloads\DownloadsIndexController(($this->services['phpweb\\Data\\Branches\\BranchRepository'] ?? ($this->services['phpweb\\Data\\Branches\\BranchRepository'] = new \phpweb\Data\Branches\BranchRepository())), ($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] ?? ($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] = new \phpweb\UI\Notices\BranchNoticeFactory())));
     }
 
     /**
@@ -388,6 +389,16 @@ class ServiceList extends Container
     protected function getLogosControllerService()
     {
         return $this->services['phpweb\\Controllers\\Downloads\\LogosController'] = new \phpweb\Controllers\Downloads\LogosController();
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Downloads\WindowsController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Downloads\WindowsController
+     */
+    protected function getWindowsControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Downloads\\WindowsController'] = new \phpweb\Controllers\Downloads\WindowsController(($this->services['phpweb\\Data\\Branches\\BranchRepository'] ?? ($this->services['phpweb\\Data\\Branches\\BranchRepository'] = new \phpweb\Data\Branches\BranchRepository())), ($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] ?? ($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] = new \phpweb\UI\Notices\BranchNoticeFactory())));
     }
 
     /**
@@ -687,7 +698,7 @@ class ServiceList extends Container
      */
     protected function getBranchInstallControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Branches\\Install\\BranchInstallController'] = new \phpweb\Controllers\Versions\Branches\Install\BranchInstallController();
+        return $this->services['phpweb\\Controllers\\Versions\\Branches\\Install\\BranchInstallController'] = new \phpweb\Controllers\Versions\Branches\Install\BranchInstallController(($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] ?? ($this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] = new \phpweb\UI\Notices\BranchNoticeFactory())));
     }
 
     /**
@@ -741,13 +752,23 @@ class ServiceList extends Container
     }
 
     /**
-     * Gets the public 'phpweb\Controllers\Versions\Release\Install\InstallFromSourceController' shared autowired service.
+     * Gets the public 'phpweb\Controllers\Versions\Releases\Install\InstallFromSourceController' shared autowired service.
      *
-     * @return \phpweb\Controllers\Versions\Release\Install\InstallFromSourceController
+     * @return \phpweb\Controllers\Versions\Releases\Install\InstallFromSourceController
      */
     protected function getInstallFromSourceControllerService()
     {
-        return $this->services['phpweb\\Controllers\\Versions\\Release\\Install\\InstallFromSourceController'] = new \phpweb\Controllers\Versions\Release\Install\InstallFromSourceController();
+        return $this->services['phpweb\\Controllers\\Versions\\Releases\\Install\\InstallFromSourceController'] = new \phpweb\Controllers\Versions\Releases\Install\InstallFromSourceController();
+    }
+
+    /**
+     * Gets the public 'phpweb\Controllers\Versions\Releases\Install\WindowsDownloadsController' shared autowired service.
+     *
+     * @return \phpweb\Controllers\Versions\Releases\Install\WindowsDownloadsController
+     */
+    protected function getWindowsDownloadsControllerService()
+    {
+        return $this->services['phpweb\\Controllers\\Versions\\Releases\\Install\\WindowsDownloadsController'] = new \phpweb\Controllers\Versions\Releases\Install\WindowsDownloadsController();
     }
 
     /**
@@ -841,26 +862,6 @@ class ServiceList extends Container
     }
 
     /**
-     * Gets the public 'phpweb\Data\Release\Commands\ReleasesToXMLCommand' shared autowired service.
-     *
-     * @return \phpweb\Data\Release\Commands\ReleasesToXMLCommand
-     */
-    protected function getReleasesToXMLCommandService()
-    {
-        return $this->services['phpweb\\Data\\Release\\Commands\\ReleasesToXMLCommand'] = new \phpweb\Data\Release\Commands\ReleasesToXMLCommand(($this->services['phpweb\\Data\\Release\\Commands\\SyncReleases'] ?? $this->getSyncReleasesService()));
-    }
-
-    /**
-     * Gets the public 'phpweb\Data\Release\Commands\SyncReleases' shared autowired service.
-     *
-     * @return \phpweb\Data\Release\Commands\SyncReleases
-     */
-    protected function getSyncReleasesService()
-    {
-        return $this->services['phpweb\\Data\\Release\\Commands\\SyncReleases'] = new \phpweb\Data\Release\Commands\SyncReleases(($this->services['phpweb\\Services\\Http\\HttpFetcher'] ?? ($this->services['phpweb\\Services\\Http\\HttpFetcher'] = new \phpweb\Services\Http\HttpFetcher())), ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] ?? ($this->services['phpweb\\Services\\TextFormatting\\HtmlToMarkdownConverter'] = new \phpweb\Services\TextFormatting\HtmlToMarkdownConverter())));
-    }
-
-    /**
      * Gets the public 'phpweb\Data\Release\ReleasesRepository' shared autowired service.
      *
      * @return \phpweb\Data\Release\ReleasesRepository
@@ -938,5 +939,15 @@ class ServiceList extends Container
     protected function getTextFormatterService()
     {
         return $this->services['phpweb\\Services\\TextFormatting\\TextFormatter'] = new \phpweb\Services\TextFormatting\TextFormatter();
+    }
+
+    /**
+     * Gets the public 'phpweb\UI\Notices\BranchNoticeFactory' shared autowired service.
+     *
+     * @return \phpweb\UI\Notices\BranchNoticeFactory
+     */
+    protected function getBranchNoticeFactoryService()
+    {
+        return $this->services['phpweb\\UI\\Notices\\BranchNoticeFactory'] = new \phpweb\UI\Notices\BranchNoticeFactory();
     }
 }

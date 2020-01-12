@@ -117,7 +117,7 @@ Register Now at [http://www.zendcon.com/register-now](http://www.zendcon.com/reg
     'end_date' => '2019-08-28',
     'logo' => 
     array (
-      'path' => '861dfd66b28b412b7ad3835a314022ffa781afb5c43f3edb9c1e69d939fe3d28.png',
+      'path' => '53d9bdfc6ea836e3d6d4173b9c1b830d436475de64ff72d4c311dbcb0f91c1f2.png',
       'width' => 205,
       'height' => 72,
     ),
@@ -855,7 +855,7 @@ Follow us on twitter: [@scotlandphp](https://www.twitter.com/scotlandphp)',
     'end_date' => '2019-11-08',
     'logo' => 
     array (
-      'path' => '04ad0776f389061685e59f9381b7bfe6b333835098be6fafd270e2cfafd073f0.png',
+      'path' => '325bb9106fcf173e84fed5f65384477e1d5fb935fd393ff60ced6d50a558f80f.png',
       'width' => 288,
       'height' => 332,
     ),
@@ -917,7 +917,7 @@ Follow us on twitter: [@scotlandphp](https://www.twitter.com/scotlandphp)',
     'end_date' => '2020-06-03',
     'logo' => 
     array (
-      'path' => 'cfe3887bbd10610a163527efa18e3b0823820fe836814ac1219550195ae6d503.png',
+      'path' => '498fd919131c8b64bb6c538801a1861b4d1b34828534c0dd58b12066be568c8c.png',
       'width' => 350,
       'height' => 150,
     ),
@@ -1116,6 +1116,48 @@ Get your ticket now at: <https://conf.phpsc.com.br/>.',
  For tickets and more information: <http://phpkonf.org>',
     ),
   ),
+  'phperkaigi-2020' => 
+  array (
+    'id' => 'phperkaigi-2020',
+    'title' => 'PHPerKaigi 2020',
+    'start_date' => '2020-02-09',
+    'end_date' => '2020-02-09',
+    'logo' => 
+    array (
+      'path' => '716ace91951d5d69e962b31402d66590e4f8fb5fd996d4b2ac64131c2adc3dcd.png',
+      'width' => 246,
+      'height' => 245,
+    ),
+    'website' => '',
+    'country' => '',
+    'location' => '',
+    'summary' => 
+    array (
+      'type' => 'text',
+      'content' => '**PHPerKaigi 2020, Nerima, Tokyo, Japan**',
+    ),
+    'content' => 
+    array (
+      'type' => 'markdown',
+      'content' => '**PHPerKaigi 2020, Nerima, Tokyo, Japan**
+
+**Date: Feb 09 - 11, 2020**
+
+PHPerKaigi is a conference for all of the PHPer, that who using php now on, who used php in purpose, who want to use in future, and who like php. In this we sharing know-how to php and "**#love**" to it.
+
+The conference consists of talk sessions by public speakers. In addition to we have "Interactive Round Table" discuss specific themes, unconference, social gathering and so on for all of developers from all from Japan. Let\'s talk about PHP!
+
+Follow us on twitter [@phperkaigi](https://twitter.com/phperkaigi), [#phperkaigi](https://twitter.com/search?q=%23phperkaigi).
+
+<https://phperkaigi.jp/2020/>
+
+Note:
+
+*Kaigi* means meeting in Japanese.
+
+*PHPer* means PHP lovers.',
+    ),
+  ),
   'phperkaigi-2019' => 
   array (
     'id' => 'phperkaigi-2019',
@@ -1124,7 +1166,7 @@ Get your ticket now at: <https://conf.phpsc.com.br/>.',
     'end_date' => '2019-03-29',
     'logo' => 
     array (
-      'path' => 'da4fcfea2ebc59c5c8d7adebb3ef1c5f6af6e688e5e7451bf37944a919c5e4bc.png',
+      'path' => 'bfaeea7a7aa289722b2ad0f6a0ecd410ae9a0f811c7ef1ff3fb3804aad3edf9c.png',
       'width' => 400,
       'height' => 210,
     ),
@@ -1145,13 +1187,13 @@ PHPerKaigi is conference for all of the PHPer, that who using php now on, who us
 
 The conference consist of talk sessions by public speakers. In addition to We have "Interactive Round Table" discuss specific themes, unconference, social gathering and so on for all of developers from all from Japan. Let\'s talking about PHP!
 
-Follow us on twitter [@phperkaigi](https://twitter.com/phperkaigi), [\\#phperkaigi](https://twitter.com/search?q=%23phperkaigi).
+Follow us on twitter [@phperkaigi](https://twitter.com/phperkaigi), [#phperkaigi](https://twitter.com/search?q=%23phperkaigi).
 
 Note:
 
-\\*Kaigi\\* means meeting in Japanese.
+*Kaigi* means meeting in Japanese.
 
-\\*PHPer\\* means PHP lovers.',
+*PHPer* means PHP lovers.',
     ),
   ),
   'phpdetroit-conference-2018' => 
@@ -1192,7 +1234,7 @@ We look forward to seeing you in Detroit, and making the first ever [PHPDetroit 
     'end_date' => '2019-05-11',
     'logo' => 
     array (
-      'path' => 'd975e3186fa7ad7ae859d5330b6764144340e03865419f93e6ec44b74bd914d6.png',
+      'path' => '0e143f215b5c83e9f832219a864fcc85ebe691c22fc1f888090919b8bed4ba8d.png',
       'width' => 261,
       'height' => 151,
     ),
@@ -1222,7 +1264,7 @@ Check out our great [schedule](https://2019.phpday.it/schedule.html) and get you
     'end_date' => '2018-05-11',
     'logo' => 
     array (
-      'path' => 'd975e3186fa7ad7ae859d5330b6764144340e03865419f93e6ec44b74bd914d6.png',
+      'path' => '0e143f215b5c83e9f832219a864fcc85ebe691c22fc1f888090919b8bed4ba8d.png',
       'width' => 261,
       'height' => 151,
     ),
@@ -1381,7 +1423,7 @@ For ticketing and other information, please visit <http://2015.phpconf.tw>. We l
     'end_date' => '2019-06-24',
     'logo' => 
     array (
-      'path' => 'ad06e6681824d88bbdc994662fa28a6eeeabdbfac485d5f199fdedcbcb11f026.png',
+      'path' => '57a4a32fd0427a53666bddddf34059eb3ee14a435f9c1aa7d227459b8cbb87e9.png',
       'width' => 300,
       'height' => 105,
     ),
@@ -1441,7 +1483,7 @@ Hop over to https://2019.phpconf.asia for more details!',
     'end_date' => '2020-01-24',
     'logo' => 
     array (
-      'path' => '035e3aaee09c28a0e9cddb069fe833c3ade0c6870112aa25e3d7e33a7501e94d.png',
+      'path' => '1ee1195b5bbc884e2c118e35743b2f85653d6380f85b8d53ccaa1518978a7105.png',
       'width' => 350,
       'height' => 92,
     ),
@@ -1471,7 +1513,7 @@ Looking forward seeing you all there!',
     'end_date' => '2019-10-23',
     'logo' => 
     array (
-      'path' => 'e7762e945beafa864ccb5d5743a472d56492ba6ca135b073c8d5449c20c527d1.png',
+      'path' => 'cc6fef17e3aa246e2b62bc414ba240d4b1e69b64dec7543ce88f1d2c9ddc9ebe.png',
       'width' => 400,
       'height' => 245,
     ),
@@ -1481,12 +1523,12 @@ Looking forward seeing you all there!',
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php\\[world\\] conference](https://world.phparch.com/?utm_campaign=phpnet).',
+      'content' => 'PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php[world] conference](https://world.phparch.com/?utm_campaign=phpnet).',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php\\[world\\] conference](https://world.phparch.com/?utm_campaign=phpnet).
+      'content' => 'PHP has been around for 25 years this fall and we will be celebrating this momentous landmark at the annual [php[world] conference](https://world.phparch.com/?utm_campaign=phpnet).
 
 We have curated a [special lineup of talks, workshops, and full-day training classes](https://world.phparch.com/schedule/?utm_campaign=phpnet) for our attendees. There will also be a couple of amazing keynotes and two panels on the past and future of PHP and frameworks.
 
@@ -1513,14 +1555,14 @@ Washington, D.C. — October 23-24 — Training on October 22',
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'We are excited to announce the [5th annual php\\[world\\] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php\\[architect\\] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.',
+      'content' => 'We are excited to announce the [5th annual php[world] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php[architect] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'We are excited to announce the [5th annual php\\[world\\] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php\\[architect\\] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.
+      'content' => 'We are excited to announce the [5th annual php[world] conference](https://world.phparch.com/?utm_campaign=phpnet), produced by the publishers of [php[architect] magazine](https://www.phparch.com). As always, it is taking place over two days in November (14th-15th) in the Washington D.C. area.
 
-This year we have streamlined our event [schedule](https://world.phparch.com/schedule?utm_campaign=phpnet) to add in even more content for you! 40 sessions, 6 workshops, and 12 birds of a feather sessions are waiting for you at this year\'s php\\[world\\] conference.
+This year we have streamlined our event [schedule](https://world.phparch.com/schedule?utm_campaign=phpnet) to add in even more content for you! 40 sessions, 6 workshops, and 12 birds of a feather sessions are waiting for you at this year\'s php[world] conference.
 
 We also have two days before the conference full of full-day (and two-day) training classes taught by experts in their field. Want to learn Laravel from the maintainers of Laravel Shift and Laravel Homestead? How about all the new features coming to WordPress with Gutenberg from core WordPress contributors? This and more is available this year!
 
@@ -1597,12 +1639,12 @@ We also have two days before the conference full of full-day (and two-day) train
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'The team at php\\[architect\\] is excited to announce the schedule for [php\\[world\\] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.',
+      'content' => 'The team at php[architect] is excited to announce the schedule for [php[world] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'The team at php\\[architect\\] is excited to announce the schedule for [php\\[world\\] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.
+      'content' => 'The team at php[architect] is excited to announce the schedule for [php[world] 2015](https://world.phparch.com)! As always our conference is designed to bring all the various PHP communities together in one place to learn from each other. We will have separate tracks for PHP, Drupal, WordPress, Magento, Joomla!, Zend Framework, Symfony, Laravel, and CakePHP.
 
 This year we are expanding the conference to 6 concurrent sessions so that we can cover even more material. Join us for this very unique event from November 16th through November 20th.
 
@@ -1653,7 +1695,7 @@ This year we are expanding the conference to 6 concurrent sessions so that we ca
     'end_date' => '2020-02-19',
     'logo' => 
     array (
-      'path' => '7609082d4e95999843f8c8f6ad46cbcde75a119deb1cc9ee0c789a3764d4f78c.png',
+      'path' => 'a68c1ca6dba587332a8982ab513f974423bfa47deb1110068aa9191bf809ed8e.png',
       'width' => 328,
       'height' => 88,
     ),
@@ -1723,18 +1765,18 @@ With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliv
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'We are announcing some exciting changes to [php\\[tek\\]](https://tek.phparch.com/?utm_campaign=phpnet2019) in 2019, our 14th consecutive year for this event!',
+      'content' => 'We are announcing some exciting changes to [php[tek]](https://tek.phparch.com/?utm_campaign=phpnet2019) in 2019, our 14th consecutive year for this event!',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'We are announcing some exciting changes to [php\\[tek\\]](https://tek.phparch.com/?utm_campaign=phpnet2019) in 2019, our 14th consecutive year for this event!
+      'content' => 'We are announcing some exciting changes to [php[tek]](https://tek.phparch.com/?utm_campaign=phpnet2019) in 2019, our 14th consecutive year for this event!
 
 Once again we\'ll be taking place in [Atlanta](https://tek.phparch.com/venue/?utm_campaign=phpnet2019) in May, but this year we are moving to 3 full days of conference sessions: May 21-23
 
 However, the significant change is in us creating a curated educational experience for our attendees, with all brand new talks being made just for this event.
 
-You see this year we organized php\\[tek\\] into a [series of tracks](https://tek.phparch.com/tracks/?utm_campaign=phpnet2019), each dedicated to teaching you in-depth information about a specific topic. Leading these tracks are hand-selected [track chairs](https://tek.phparch.com/speakers/?utm_campaign=phpnet2019), chosen for their knowledge in the field and excellent presenters. They are all working together to create a unique curriculum to take your skills to the next level.
+You see this year we organized php[tek] into a [series of tracks](https://tek.phparch.com/tracks/?utm_campaign=phpnet2019), each dedicated to teaching you in-depth information about a specific topic. Leading these tracks are hand-selected [track chairs](https://tek.phparch.com/speakers/?utm_campaign=phpnet2019), chosen for their knowledge in the field and excellent presenters. They are all working together to create a unique curriculum to take your skills to the next level.
 
 Each track’s design is a [series of new talks](https://tek.phparch.com/schedule/?utm_campaign=phpnet2019) that flow together smoothly, and yet, you can drop in/out of a track throughout the day as needed. Each session is in a 1-hr timeslot. You can choose to sit in one room all day and learn a topic from beginning to end or bounce between the various tracks, putting together a unique learning experience tailored to your needs. The choice is yours.
 
@@ -1761,12 +1803,12 @@ See you in Atlanta!',
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'We are excited to announce the [full schedule](https://tek.phparch.com/schedule?utm_campaign=phpnet) for the 13th annual [php\\[tek\\]](https://tek.phparch.com/?utm_campaign=phpnet), the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.',
+      'content' => 'We are excited to announce the [full schedule](https://tek.phparch.com/schedule?utm_campaign=phpnet) for the 13th annual [php[tek]](https://tek.phparch.com/?utm_campaign=phpnet), the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'We are excited to announce the [full schedule](https://tek.phparch.com/schedule?utm_campaign=phpnet) for the 13th annual [php\\[tek\\]](https://tek.phparch.com/?utm_campaign=phpnet), the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.
+      'content' => 'We are excited to announce the [full schedule](https://tek.phparch.com/schedule?utm_campaign=phpnet) for the 13th annual [php[tek]](https://tek.phparch.com/?utm_campaign=phpnet), the premier PHP conference experience. The 2018 edition will be better than ever, now taking place in Downtown Atlanta, GA. The main conference is two days: May 31 and June 1, while we will have a workshop day on May 30, and a day of Training Classes on May 29th.
 
 There is an [amazing list of sessions](https://tek.phparch.com/schedule?utm_campaign=phpnet) that have been put together for you, including:
 
@@ -1777,7 +1819,7 @@ There is an [amazing list of sessions](https://tek.phparch.com/schedule?utm_camp
  
 This is all being provided by [39 different speakers](https://tek.phparch.com/speakers?utm_campaign=phpnet) from around the world, including speakers from companies like MailChimp, Oracle, MongoDB, Etsy, Salesforce, Google, and Mozilla.
 
-We sincerely look forward to seeing you in Atlanta this May! It\'s going to be the best [php\\[tek\\]](https://tek.phparch.com/?utm_campaign=phpnet) ever!',
+We sincerely look forward to seeing you in Atlanta this May! It\'s going to be the best [php[tek]](https://tek.phparch.com/?utm_campaign=phpnet) ever!',
     ),
   ),
   'php-tek-2017-atlanta' => 
@@ -1824,7 +1866,7 @@ We sincerely look forward to seeing you in Atlanta this May! It\'s going to be t
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'The team at [php\\[architect\\]](https://www.phparch.com) is excited this year to bring you the 11th edition of one of the longest running PHP conference in the world: [php\\[tek\\] 2016](https://tek.phparch.com) — running from May 23th-27th.',
+      'content' => 'The team at [php[architect]](https://www.phparch.com) is excited this year to bring you the 11th edition of one of the longest running PHP conference in the world: [php[tek] 2016](https://tek.phparch.com) — running from May 23th-27th.',
     ),
     'content' => 
     array (
@@ -1862,6 +1904,38 @@ This year\'s edition features Workshop Day prior to the main 2-day event of awes
 If you are interested in speaking at PHP Serbia Conference, [our CFP](https://cfp.phpsrbija.rs/) is open until January 21st, 2018.',
     ),
   ),
+  'php-russia-2020' => 
+  array (
+    'id' => 'php-russia-2020',
+    'title' => 'PHP Russia 2020',
+    'start_date' => '2020-05-15',
+    'end_date' => '2020-05-15',
+    'logo' => 
+    array (
+      'path' => '4320e4460fa8333347c17a1ed90039161e0a1bffda1dcd573e747215fdec22c8.png',
+      'width' => 250,
+      'height' => 250,
+    ),
+    'website' => '',
+    'country' => '',
+    'location' => '',
+    'summary' => 
+    array (
+      'type' => 'text',
+      'content' => 'PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow. Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.',
+    ),
+    'content' => 
+    array (
+      'type' => 'markdown',
+      'content' => 'PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow. Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.
+
+We expect 600+ attendees and 20+ speakers!
+
+Our audience consists of applications developers, API developers, CTO’s, CEO’s, fullstack developers, etc.
+
+The program is designed by the developer community, representatives of large companies from Runet and around the world, and by tech developers and community activists. The selection of talks is multi-layered and complex — the Program Committee selects the best talks from the received applications unanimously according to several criteria.',
+    ),
+  ),
   'php-russia-2019' => 
   array (
     'id' => 'php-russia-2019',
@@ -1870,7 +1944,7 @@ If you are interested in speaking at PHP Serbia Conference, [our CFP](https://cf
     'end_date' => '2019-05-17',
     'logo' => 
     array (
-      'path' => '30c0fdfdea3e455c653f89c21b20dffcc64a02cc5aa848c7c45d08a4fd88263d.png',
+      'path' => '84a8a9093592f9a7720ceafc8559b2569f5c4f4120325ea1626a549bb7c6d3c8.png',
       'width' => 250,
       'height' => 250,
     ),
@@ -1932,7 +2006,7 @@ The conference starts with a [tutorial day](http://conference.phpnw.org.uk/phpnw
     'end_date' => '2019-06-01',
     'logo' => 
     array (
-      'path' => 'a1613c6c43554b8ef4759c45090cbbfab4041642507c44c7f51cf30473a5b2e2.png',
+      'path' => 'b68192c4137e7b6a556b0927b47c0b8a5e2cfa6d35756e44fc6336eef530f51d.png',
       'width' => 175,
       'height' => 171,
     ),
@@ -1949,7 +2023,7 @@ The conference starts with a [tutorial day](http://conference.phpnw.org.uk/phpnw
       'type' => 'markdown',
       'content' => 'We are excited to announce the 7th edition of [PHP fwdays](https://fwdays.com/en/event/php-fwdays-2019) conference - the biggest PHP conf of Ukraine, which will be held on June 1st, 2019 in Kyiv.
 
- Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Meet our Keynote speaker Fabien Potencier, together with Marco Pivetta, Michelle Sanver, Tomáš Votruba, Nikola Poša, and 12 international and local speakers.   
+ Three parallel tracks and community discussions are all dedicated to PHP development, tools and issues to be solved. Meet our Keynote speaker Fabien Potencier, together with Marco Pivetta, Michelle Sanver, Tomáš Votruba, Nikola Poša, and 12 international and local speakers. 
  Join more than 800 developers from all over the world to learn, discuss and solve.
 
 Check out the [final agenda](https://fwdays.com/en/event/php-fwdays-2019#program-event) and get a ticket right away!',
@@ -1963,7 +2037,7 @@ Check out the [final agenda](https://fwdays.com/en/event/php-fwdays-2019#program
     'end_date' => '2019-12-24',
     'logo' => 
     array (
-      'path' => 'a1613c6c43554b8ef4759c45090cbbfab4041642507c44c7f51cf30473a5b2e2.png',
+      'path' => 'b68192c4137e7b6a556b0927b47c0b8a5e2cfa6d35756e44fc6336eef530f51d.png',
       'width' => 175,
       'height' => 171,
     ),
@@ -2003,12 +2077,12 @@ You are welcome to submit the talk via [Call For Papers](https://php.cfp.fwdays.
     'summary' => 
     array (
       'type' => 'text',
-      'content' => '\\#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.',
+      'content' => '#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => '\\#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.
+      'content' => '#fwdays invites everybody interested in PHP topic to attend PHP Frameworks Day 2015 conference on October 17.
 
 This is the third time PHP Frameworks Day is being held and each time it grows and becomes more interesting! [Watch](https://www.youtube.com/watch?v=qPlQQqnGM-s "Watch") how we spent PHP Frameworks Day 2014.
 
@@ -2207,12 +2281,12 @@ Save the date: **Saturday, October 6th.**
     'summary' => 
     array (
       'type' => 'text',
-      'content' => ' It’s been a long time coming … Back in 2004 php\\[architect\\] ran a conference-cruise, and ever since we’ve heard people asking for us to repeat the event. We figured that 12 years was long enough of a wait. Therefore we’d like to announce [php\\[cruise\\] happening in 2016](https://cruise.phparch.com)! This 7 day long conference-cruise will be a unique event for the PHP community. Completely immersive and giving you, the attendee, a hands-on experience not to be matched!',
+      'content' => ' It’s been a long time coming … Back in 2004 php[architect] ran a conference-cruise, and ever since we’ve heard people asking for us to repeat the event. We figured that 12 years was long enough of a wait. Therefore we’d like to announce [php[cruise] happening in 2016](https://cruise.phparch.com)! This 7 day long conference-cruise will be a unique event for the PHP community. Completely immersive and giving you, the attendee, a hands-on experience not to be matched!',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => ' It’s been a long time coming … Back in 2004 php\\[architect\\] ran a conference-cruise, and ever since we’ve heard people asking for us to repeat the event. We figured that 12 years was long enough of a wait. Therefore we’d like to announce [php\\[cruise\\] happening in 2016](https://cruise.phparch.com)! This 7 day long conference-cruise will be a unique event for the PHP community. Completely immersive and giving you, the attendee, a hands-on experience not to be matched!
+      'content' => ' It’s been a long time coming … Back in 2004 php[architect] ran a conference-cruise, and ever since we’ve heard people asking for us to repeat the event. We figured that 12 years was long enough of a wait. Therefore we’d like to announce [php[cruise] happening in 2016](https://cruise.phparch.com)! This 7 day long conference-cruise will be a unique event for the PHP community. Completely immersive and giving you, the attendee, a hands-on experience not to be matched!
 
  You can learn more about the conference, the cruise, [how the pricing is structured](https://cruise.phparch.com/pricing/), and what talks we will be having by [exploring our website](https://cruise.phparch.com). And please if you have any questions don’t hesitate to contact us.
 
@@ -2255,7 +2329,7 @@ Our Call for Papers now open and will close 17th June 2015. We hope to see some 
     'end_date' => '2019-12-01',
     'logo' => 
     array (
-      'path' => '6c4737d48e3a196737e359b345aefa5635e6070672fb88a00b8d5a9d2fd85589.png',
+      'path' => 'd3f42a7aae36ef06a34a4819006f05c5c6ee98c8709404fdd3308df9556abb1e.png',
       'width' => 400,
       'height' => 210,
     ),
@@ -2276,7 +2350,7 @@ PHP Conference Japan is the biggest PHP festival in Japan held at Tokyo, with mo
 
 Conference Date / Veue
 
-2019/12/1  
+2019/12/1
 [Ota City Industrial Plaza (PiO) Reservation Center](https://www.pio-ota.net/english/)',
     ),
   ),
@@ -2288,7 +2362,7 @@ Conference Date / Veue
     'end_date' => '2019-04-15',
     'logo' => 
     array (
-      'path' => 'bafe305ccc7a282f62a18e549525451f7637cd79a159125210f1bac922c2a7b8.png',
+      'path' => 'e2889c1c44f3233ff8bd94418f88ca9df2e24d02356467c155a37dfe564e1f42.png',
       'width' => 250,
       'height' => 250,
     ),
@@ -2314,7 +2388,7 @@ Conference Date / Veue
     'end_date' => '2019-10-04',
     'logo' => 
     array (
-      'path' => '91ca0d9b09ae58a9fdf8ed59dd380e6d3911284b975fb7a2a277a514d766a4c7.png',
+      'path' => '2c9349e6519e0b39dca6abab20065537a4ef6429522f7683a0dc26a4153adaa1.png',
       'width' => 247,
       'height' => 77,
     ),
@@ -2331,8 +2405,8 @@ Conference Date / Veue
       'type' => 'markdown',
       'content' => 'Thanks to the support of PHP Usergroup Dresden, our conference will be held in the Federal Republic of Germany. phpCE is an event addressed to a vast group of developers and PHP enthusiasts from Central Europe. We hope that you enjoy our diverse [line-up](https://2019.phpce.eu/en/#agenda) and it will turn out to be so interesting that you too will want to join us. In addition, for the first time we will meet at... the cinema!
 
-**Location and dates:**  
-**October 4, 2019** - the Workshop Day in the **Pullman Dresden Newa** hotel,  
+**Location and dates:**
+**October 4, 2019** - the Workshop Day in the **Pullman Dresden Newa** hotel,
 **October 5-6, 2019** - Conference Days in the **UFA Kristallpalast** multiplex.
 
 Tickets are still available under [2019.phpce.eu/#tickets](https://2019.phpce.eu/en/#tickets). Welcome!',
@@ -2649,7 +2723,7 @@ Please join us to become part of this inaugural event! [Tickets start at just $1
       'type' => 'markdown',
       'content' => 'Join us on Saturday, November 14th, 2015 for a one day, three track conference in Madison, Wisconsin, USA that focuses on PHP and related web technologies. This event is organized by Madison PHP and is designed to offer something to attendees at all skill levels. It will be a day of networking, learning, sharing, and great fun!
 
-Our Call for Papers is open until August 4th, 2015:  
+Our Call for Papers is open until August 4th, 2015:
 <http://cfp.madisonphpconference.com/>',
     ),
   ),
@@ -2661,7 +2735,7 @@ Our Call for Papers is open until August 4th, 2015:
     'end_date' => '2019-02-14',
     'logo' => 
     array (
-      'path' => '4c17980c9275e71737840bdbb29af99454d3fd0fb036a22eafb5766eaa14d9fb.png',
+      'path' => '530c503cdb3e852a8d23e1dfc0a2fb5f338c912d8b6d5d816c72a6ce8699200f.png',
       'width' => 300,
       'height' => 319,
     ),
@@ -2687,7 +2761,7 @@ Our Call for Papers is open until August 4th, 2015:
     'end_date' => '2018-12-15',
     'logo' => 
     array (
-      'path' => '4c17980c9275e71737840bdbb29af99454d3fd0fb036a22eafb5766eaa14d9fb.png',
+      'path' => '530c503cdb3e852a8d23e1dfc0a2fb5f338c912d8b6d5d816c72a6ce8699200f.png',
       'width' => 300,
       'height' => 319,
     ),
@@ -2781,7 +2855,7 @@ Thanks to the generous support of our sponsors year after year we\'re able to pr
     'end_date' => '2019-10-04',
     'logo' => 
     array (
-      'path' => 'bb856717c07f92699773313645cfa8f515c96a41a97d17c2fab9412a89801bd5.png',
+      'path' => 'bc42dfb58b052fa4118225fcb142238893f56ff5bfd7784f8742abc0035403cb.png',
       'width' => 250,
       'height' => 250,
     ),
@@ -2826,10 +2900,10 @@ Thanks to the generous support of our sponsors year after year we\'re able to pr
 
 [LaravelConf Taiwan 2019](https://laravelconf.tw/) is for anyone who is passionate about building web applications, or anyone who is sharing better experiences about PHP developments.
 
-   
+ 
 LaravelConf Taiwan 2019 brings PHP developers, Laravel framework lovers, and experts together and hosts 10 sessions in multiple track conference on July 13, 2019.
 
-   
+ 
 **Our focus this year is:**
 
 - Laravel core concepts
@@ -2838,10 +2912,10 @@ LaravelConf Taiwan 2019 brings PHP developers, Laravel framework lovers, and exp
 - The best practices about system architecture
 - The magic things about Laravel packages
  
-   
+ 
 Come to enjoy the knowledge and socialize with other Laravel artisans.
 
-   
+ 
 For more infromation: [https://laravelconf.tw](https://laravelconf.tw/)
 
 Our facebook page: [https://www.facebook.com/laravelconftw](https://www.facebook.com/laravelconftw/)',
@@ -2874,12 +2948,12 @@ Our facebook page: [https://www.facebook.com/laravelconftw](https://www.facebook
 
 Come and enjoy inspirational talks and making friends with enthusiastic developers like you!
 
-   
+ 
 Date: July 8, 2018
 
 Location: No. 11, Zhongshan South Road, Zhongzheng District, Taipei City, 100 Taiwan
 
-   
+ 
 Check out [more information](https://laravelconf.tw/) and get your [ticket](https://laravel-dojo.kktix.cc/events/laravelconftw2018) now!',
     ),
   ),
@@ -2910,23 +2984,23 @@ Check out [more information](https://laravelconf.tw/) and get your [ticket](http
 
 [LaravelConf Taiwan 2017](https://laravelconf.tw/) is for anyone who is passionate about building web-application, or anyone who is trying to make better experience on teamwork.
 
-   
+ 
 LaravelConf Taiwan 2017 brings Laravel developers and enthusiasts together and hosts one workshop, one case study and 12 sessions in multi-track conference on 29th, June to 1st, July 2017.
 
 The workshop on the 29th, June 2017 is for hand-on training of beginners in Laravel.
 
 The main sessions and case study takes place on the 1st, July 2017.
 
-   
+ 
 **Our focus this year are:**
 
 - Laravel core concepts
 - More fluent teamwork by using Laravel
  
-   
+ 
 Come to enjoy the knowledge and socialize with other Laravel artisan.
 
-   
+ 
 For more infromation: [https://laravelconf.tw](https://laravelconf.tw/)
 
 Our facebook page: [https://www.facebook.com/laravelconftw](https://www.facebook.com/laravelconftw/)',
@@ -2970,7 +3044,7 @@ These talks are brand new, never before presented at any Laracon and tickets are
     'end_date' => '2019-05-23',
     'logo' => 
     array (
-      'path' => '266363194a4fb5c2e96b0ea107c33ef1648a28d73ab3b70b62adb4350e8b5141.png',
+      'path' => '938a8f8e56df7e086989df8ea5383f231b2c3fd79e99690b9aff6ebeee8ac4d8.png',
       'width' => 250,
       'height' => 250,
     ),
@@ -2996,7 +3070,7 @@ These talks are brand new, never before presented at any Laracon and tickets are
     'end_date' => '2019-08-28',
     'logo' => 
     array (
-      'path' => '266363194a4fb5c2e96b0ea107c33ef1648a28d73ab3b70b62adb4350e8b5141.png',
+      'path' => '938a8f8e56df7e086989df8ea5383f231b2c3fd79e99690b9aff6ebeee8ac4d8.png',
       'width' => 250,
       'height' => 250,
     ),
@@ -3153,7 +3227,7 @@ phpDay is the first historic Italian conference dedicated solely to PHP developm
     'end_date' => '2020-06-25',
     'logo' => 
     array (
-      'path' => '058dbcbcc04df3c9c1a6f8bf3f9d045c16ef64eb091d5616aa69556b8bf1dec2.png',
+      'path' => '1ef3b2da11d854b0c80b9912b78bdb49eed8d5a782093f1fde7ed77dde8e4212.png',
       'width' => 320,
       'height' => 196,
     ),
@@ -3503,7 +3577,7 @@ If your goal is to learn and meet interesting people, then ConFoo is the confere
 
 From May 12 to 13, 2017, in Porto Alegre / RS-Brazil, the first day will be held workshops and the second lectures.
 
-Check out the programming at [http://conf.phprs.com.br/#schedule](http://conf.phprs.com.br/#schedule "Conferência PHPRS | 12 e 13 maio 2017")   
+Check out the programming at [http://conf.phprs.com.br/#schedule](http://conf.phprs.com.br/#schedule "Conferência PHPRS | 12 e 13 maio 2017") 
  Subscriptions at [http://conf.phprs.com.br/#tickets](http://conf.phprs.com.br/#tickets "Conferência PHPRS | 12 e 13 maio 2017")',
     ),
   ),
@@ -3515,7 +3589,7 @@ Check out the programming at [http://conf.phprs.com.br/#schedule](http://conf.ph
     'end_date' => '2019-08-19',
     'logo' => 
     array (
-      'path' => '2f939c584f8b3d3cfeeea5675595d0783ea1dbf989ef3108a818384377618ce2.png',
+      'path' => '50af83b41fe0a26acbe9a1c3b682fa52c41346a18ebc903a1e001abdd3065e56.png',
       'width' => 400,
       'height' => 247,
     ),
@@ -3525,12 +3599,12 @@ Check out the programming at [http://conf.phprs.com.br/#schedule](http://conf.ph
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'We are excited to announce the speaker lineup for [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19). Now for the 3rd year the team behind the original php\\[cruise\\] is bringing a conference to the open seas. [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19) is a premiere conference experience, giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th for a 5 day cruise that also visits Princess Cays and Nassau!',
+      'content' => 'We are excited to announce the speaker lineup for [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19). Now for the 3rd year the team behind the original php[cruise] is bringing a conference to the open seas. [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19) is a premiere conference experience, giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th for a 5 day cruise that also visits Princess Cays and Nassau!',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'We are excited to announce the speaker lineup for [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19). Now for the 3rd year the team behind the original php\\[cruise\\] is bringing a conference to the open seas. [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19) is a premiere conference experience, giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th for a 5 day cruise that also visits Princess Cays and Nassau!
+      'content' => 'We are excited to announce the speaker lineup for [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19). Now for the 3rd year the team behind the original php[cruise] is bringing a conference to the open seas. [CoderCruise 2019](https://www.codercruise.com/?utm_campaign=ccphp19) is a premiere conference experience, giving you an exclusive connection to your fellow community members. It will set sail from Port Canaveral on August 19th for a 5 day cruise that also visits Princess Cays and Nassau!
 
 Ticket sales are currently open and just like last year we\'ve negotiated a low rate for our participants that is all inclusive, [starting as low as $435](https://www.codercruise.com/register/?utm_campaign=ccphp19) per person (including 5-day cruise, food, drink **and the conference**!)',
     ),
@@ -3553,12 +3627,12 @@ Ticket sales are currently open and just like last year we\'ve negotiated a low 
     'summary' => 
     array (
       'type' => 'text',
-      'content' => 'The team behind the original php\\[cruise\\] is once again bringing a conference to the open seas. [CoderCruise 2018](https://www.codercruise.com/) is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!',
+      'content' => 'The team behind the original php[cruise] is once again bringing a conference to the open seas. [CoderCruise 2018](https://www.codercruise.com/) is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!',
     ),
     'content' => 
     array (
       'type' => 'markdown',
-      'content' => 'The team behind the original php\\[cruise\\] is once again bringing a conference to the open seas. [CoderCruise 2018](https://www.codercruise.com/) is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!
+      'content' => 'The team behind the original php[cruise] is once again bringing a conference to the open seas. [CoderCruise 2018](https://www.codercruise.com/) is be a premiere conference experience, giving you have an exclusive connection to your fellow community members. It is setting sail from Ft. Lauderdale on August 30th for an extended weekend 5-day cruise that also visits Half Moon Cay and Nassau!
 
 This year we\'ve managed to negotiate a much cheaper overall rate for our participants, starting as low as $410 per person (including the 5-day cruise, food, drink, the conference, and all taxes and fees wrapped into one package!)
 
@@ -3689,7 +3763,7 @@ Go to [devlink.cn](http://devlink.cn/) for tickets and more information, we are 
     'end_date' => '2019-11-07',
     'logo' => 
     array (
-      'path' => '1608bf0a610a97a260f729a6d713eba0f9d819802a8e1e261f804cc6d5b611e1.png',
+      'path' => '0c0c65eff3bf8bbeaff9099fa73af5d356dcb20a81d4481b053ba3fd952efcd6.png',
       'width' => 320,
       'height' => 228,
     ),
@@ -3717,7 +3791,7 @@ Go to [devlink.cn](http://devlink.cn/) for tickets and more information, we are 
     'end_date' => '2018-06-14',
     'logo' => 
     array (
-      'path' => '1608bf0a610a97a260f729a6d713eba0f9d819802a8e1e261f804cc6d5b611e1.png',
+      'path' => '0c0c65eff3bf8bbeaff9099fa73af5d356dcb20a81d4481b053ba3fd952efcd6.png',
       'width' => 320,
       'height' => 228,
     ),
@@ -3753,7 +3827,7 @@ Are you a speaker looking for a new and interesting conference to speak at? [Cak
     'end_date' => '2017-06-08',
     'logo' => 
     array (
-      'path' => '1608bf0a610a97a260f729a6d713eba0f9d819802a8e1e261f804cc6d5b611e1.png',
+      'path' => '0c0c65eff3bf8bbeaff9099fa73af5d356dcb20a81d4481b053ba3fd952efcd6.png',
       'width' => 320,
       'height' => 228,
     ),
@@ -3853,7 +3927,7 @@ Take advantage of our blind bird tickets ([http://www.bgphp.org/tickets/](http:/
     'end_date' => '2019-11-08',
     'logo' => 
     array (
-      'path' => '6e951dcb8c4bd6c74de0fa87f55d392bb214a5c46a452adae94b01f892f5c019.png',
+      'path' => '540995e1cea5a0f27b27729c55909647f64b351231f3acd58efa3319369b72a9.png',
       'width' => 350,
       'height' => 116,
     ),

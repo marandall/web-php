@@ -15,7 +15,8 @@
     "ext-gd": "*",
     "league/commonmark": "^1.1",
     "league/html-to-markdown": "^4.9",
-    "ezyang/htmlpurifier": "^4.12"
+    "ezyang/htmlpurifier": "^4.12",
+    "robmorgan/phinx": "0.11.4"
   },
   "require-dev": {
   },

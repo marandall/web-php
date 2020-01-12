@@ -6,10 +6,9 @@
 	
 	use phpweb\Data\Branches\Branch;
 	
-	class BranchUnsupportedNotice
+	class BranchUnsupportedNotice implements NoticeInterface
 	{
-		/** @var Branch */
-		private $branch;
+		private Branch $branch;
 		
 		public function __construct(Branch $branch) {
 			$this->branch = $branch;
@@ -22,10 +21,9 @@
 				<span style="font-weight: bold">Advisory:</span>
 				PHP <?= htmlspecialchars($branch->getBranchId()) ?> is no longer officially supported as of
 				<?= htmlspecialchars($branch->getEolSecurityDate()->format('d M Y')) ?>.
-                <br /><br />
                 
-                If you are
-				using this version it is highly recommended that you make plans to upgrade to the latest version of PHP.
+                If you are using this version it is highly recommended that you
+                make plans to upgrade to the latest version of PHP.
 			</div>
 			<?php
 		}

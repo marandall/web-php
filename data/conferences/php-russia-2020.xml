@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>php-russia-2020</id>
+  <title>PHP Russia 2020</title>
+  <start_date>2020-05-15</start_date>
+  <end_date>2020-05-15</end_date>
+  <location country=""/>
+  <summary type="text">PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow. Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.</summary>
+  <content type="markdown">PHP Russia is the only Russian confenrence focused on PHP. It will be held in Moscow. Main topics are PHP ecosytem (PHP itself, standards, frameworks, libraries and OpenSource) and major players experience in building complex projects using best practices and modern approaches.
+
+We expect 600+ attendees and 20+ speakers!
+
+Our audience consists of applications developers, API developers, CTO&#x2019;s, CEO&#x2019;s, fullstack developers, etc.
+
+The program is designed by the developer community, representatives of large companies from Runet and around the world, and by tech developers and community activists. The selection of talks is multi-layered and complex &#x2014; the Program Committee selects the best talks from the received applications unanimously according to several criteria.</content>
+  <updated>2020-01-11T17:37:37+00:00</updated>
+  <logo width="250" height="250">4320e4460fa8333347c17a1ed90039161e0a1bffda1dcd573e747215fdec22c8.png</logo>
+</conference>

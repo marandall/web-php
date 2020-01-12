@@ -29,8 +29,6 @@
 			foreach ($classes as $class_id => $class_path) {
 				try {
 					$ref = new \ReflectionClass($class_id);
-					printf("Loading class %s...\n", $class_id);
-					
 					if ($ref->isSubclassOf(InjectableService::class) || $ref->isSubclassOf(MiddlewareInterface::class) || $ref->isSubclassOf(ControllerInterface::class) || $ref->isSubclassOf(PublicService::class) ) {
 						// printf( "  [OK] Registering in container\n");
 						

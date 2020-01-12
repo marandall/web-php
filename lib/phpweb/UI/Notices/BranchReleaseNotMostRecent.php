@@ -6,10 +6,9 @@
 	
 	use phpweb\Data\Release\Release;
 	
-	class BranchReleaseNotMostRecent
+	class BranchReleaseNotMostRecent implements NoticeInterface
 	{
-		/** @var Release */
-		private $release;
+		private Release $release;
 		
 		public function __construct(Release $release) {
 			$this->release = $release;

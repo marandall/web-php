@@ -14,12 +14,19 @@
 	use phpweb\Framework\Request;
 	use phpweb\Framework\Response;
 	use phpweb\Services;
+	use phpweb\UI\Notices\BranchNoticeFactory;
 	use phpweb\UI\Notices\BranchSecurityOnlyNotice;
 	use phpweb\UI\Notices\BranchUnsupportedNotice;
 	use phpweb\UI\Templates\FreshTemplate;
 	
 	class BranchInstallController implements ControllerInterface
 	{
+		private BranchNoticeFactory $branch_notice_factory;
+		
+		public function __construct(BranchNoticeFactory $branch_notice_factory) {
+			$this->branch_notice_factory = $branch_notice_factory;
+		}
+		
 		public function load(): array {
 			return [
 				UiInjector::class,
@@ -38,18 +45,11 @@
 		}
 		
 		public function renderContents(Branch $branch) {
-			switch ($branch->getStability()) {
-				case StabilityEnum::SECURITY:
-					(new BranchSecurityOnlyNotice($branch))->draw();
-					break;
-				
-				case StabilityEnum::UNSUPPORTED:
-					(new BranchUnsupportedNotice($branch))->draw();
-					break;
+			foreach ($this->branch_notice_factory->find($branch) as $notice) {
+				$notice->draw();
 			}
 			
 			$latest = $branch->getLatestRelease();
-			
 			$helpers = Services::get(HelperSearch::class)->findHelpers($branch);
 			
 			?>

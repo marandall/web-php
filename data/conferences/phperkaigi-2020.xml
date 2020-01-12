@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<conference version="1">
+  <id>phperkaigi-2020</id>
+  <title>PHPerKaigi 2020</title>
+  <start_date>2020-02-09</start_date>
+  <end_date>2020-02-09</end_date>
+  <location country=""/>
+  <summary type="text">**PHPerKaigi 2020, Nerima, Tokyo, Japan**</summary>
+  <content type="markdown">**PHPerKaigi 2020, Nerima, Tokyo, Japan**
+
+**Date: Feb 09 - 11, 2020**
+
+PHPerKaigi is a conference for all of the PHPer, that who using php now on, who used php in purpose, who want to use in future, and who like php. In this we sharing know-how to php and "**#love**" to it.
+
+The conference consists of talk sessions by public speakers. In addition to we have "Interactive Round Table" discuss specific themes, unconference, social gathering and so on for all of developers from all from Japan. Let's talk about PHP!
+
+Follow us on twitter [@phperkaigi](https://twitter.com/phperkaigi), [#phperkaigi](https://twitter.com/search?q=%23phperkaigi).
+
+&lt;https://phperkaigi.jp/2020/&gt;
+
+Note:
+
+*Kaigi* means meeting in Japanese.
+
+*PHPer* means PHP lovers.</content>
+  <updated>2020-01-12T05:44:45+00:00</updated>
+  <logo width="246" height="245">716ace91951d5d69e962b31402d66590e4f8fb5fd996d4b2ac64131c2adc3dcd.png</logo>
+</conference>

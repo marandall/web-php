@@ -53,7 +53,14 @@
 				$href = (string)$included->attributes()->href;
 				printf("%s\n", $href);
 				
-				$atom = $this->loadXmlUrl($this->base_uri . '/archive/' . $href);
+				try {
+					$atom = $this->loadXmlUrl($this->base_uri . '/archive/' . $href);
+				}
+				catch (FetchException $ex) {
+					$logger->warning('Unable to fetch item, skipping because: ' . $ex->getMessage());
+					continue;
+				}
+				
 				$logger->notice('Loading ' . (string)$atom->title);
 				
 				$category = (string)$atom->category->attributes()->term;

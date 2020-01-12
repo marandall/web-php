@@ -5,8 +5,25 @@
 	namespace phpweb\Data\Release;
 	
 	
+	use League\Flysystem\File;
+	
 	class WindowsBuild
 	{
+		/* provides __set_state */
+		use Restorable;
+		
+		/** @var string - This is the internal build */
+		private string $build_name;
+		
+		/** @var string -  This is what is shown to the user */
+		private string $label;
+		
+		/** @var WindowsBuildFile[] */
+		private array $files;
+		
+		/** @var WindowsBuildDependency[] */
+		private array $dependencies;
+		
 		/**
 		 * @return string
 		 */
@@ -34,20 +51,6 @@
 		public function getDependencies(): array {
 			return $this->dependencies;
 		}
-		/* provides __set_state */
-		use Restorable;
-		
-		/** @var string - This is the internal build */
-		private string $build_name;
-		
-		/** @var string -  This is what is shown to the user */
-		private string $label;
-		
-		/** @var WindowsBuildFile[] */
-		private array $files;
-		
-		/** @var WindowsBuildDependency[] */
-		private array $dependencies;
 		
 		public static function FromJson(object $data): self {
 			$build = new static();
@@ -63,5 +66,15 @@
 			}
 			
 			return $build;
+		}
+		
+		public function getDownloadZip(): ?WindowsBuildFile {
+			foreach ($this->files as $file) {
+				if ($file->getName() === 'zip') {
+					return $file;
+				}
+			}
+			
+			return null;
 		}
 	}

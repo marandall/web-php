@@ -174,4 +174,19 @@
 		public function getUrl(): string {
 			return Site::$BaseUrl . '/versions/' . $this->major_ver . '.' . $this->minor_ver . '/';
 		}
+		
+		/**
+		 * Finds the last stable release which has windows downloads associated with it.
+		 *
+		 * @return Release|null
+		 */
+		public function getLatestWindowsRelease(): ?Release {
+			foreach (array_reverse($this->releases) as $release) {
+				if ($release->isStable() && count($release->getWindowsBuilds()) !== 0) {
+					return $release;
+				}
+			}
+			
+			return null;
+		}
 	}

@@ -22,7 +22,7 @@
 		 */
 		public function fetch(string $url): string {
 			$tmp = sys_get_temp_dir() . '/' . hash('sha256', $url) . '.tmp1';
-			if (file_exists($tmp)) {
+			if (file_exists($tmp) && filemtime($tmp) > time() - 300) {
 				return file_get_contents($tmp);
 			}
 			
@@ -60,7 +60,7 @@
 		public function fetchXml(string $uri): \SimpleXMLElement {
 			$xml = @simplexml_load_string($this->fetch($uri));
 			if ($xml === false) {
-				throw new FetchException('Could not parse content as XML');
+				throw new FetchException('Could not parse content of ' . $uri . ' as XML');
 			}
 			
 			return $xml;
