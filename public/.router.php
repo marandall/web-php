@@ -17,9 +17,13 @@
 	$afilename = realpath($afilename);
 	$len       = strlen($_SERVER["DOCUMENT_ROOT"]);
 	
-	
 	if (isset($_SERVER['HTTP_HOST'])) {
-		Site::$BaseUrl = ($_SERVER['REQUEST_SCHEME'] ?? (($_SERVER['SECURE'] ?? 'off') === 'on' ? 'https' : 'http')) . '://' . $_SERVER['HTTP_HOST'];
+		$is_secure = (
+			($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? null) === 'https' ||
+			($_SERVER['SECURE'] ?? null) === 'on'
+		);
+		
+		Site::$BaseUrl = ($is_secure ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
 	}
 	else {
 		Site::$BaseUrl = substr($_SERVER['STATIC_ROOT'], 0, -1);
